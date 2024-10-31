@@ -1,0 +1,87 @@
+/***
+GLOBAL DEFINITION 项目本地全局定义
+🚫 WARNING : 不可删除！
+***/
+
+/***
+dark layout variable
+***/
+@bgColorDark: #1f2937;
+@colorDark: #c8c8c8;
+@bgColorDark1: #111827;
+@colorDark1: #ffffff;
+@activeColorDark: #7879d0;
+@inputBgDark: #000000;
+@selectBgDark: #1f2937;
+@darksideWidth: 333px;
+@darksideTopHeight: 200px;
+@navItemBg: #0f2222;
+
+@darkMapW: 1024px;
+@darkMapH: 896px;
+@darkImgPadding: 35px;
+
+.scrollbar(@width: 4px, @color: #eee, @bg: #fafafa, @radius: 6px) {
+    &::-webkit-scrollbar {
+        width: @width;
+    }
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-track-piece {
+        background-color: @bg;
+        border-radius: @radius;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: @color;
+        border-radius: @radius;
+    }
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-corner,
+    &::-webkit-resizer {
+        display: none;
+    }
+}
+@fontColor: #787878;
+@img: "https://img.jx3box.com/";
+
+@q_yellow: #ff0;
+@refine: #7ee3a3;
+@q_score_orange: #ff9600;
+
+.u-no-data {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    width: 100%;
+}
+
+.u-msg-yellow {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border: 1px solid #faebcc;
+    padding: 8px 14px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+// 品质颜色
+// 橙色品质：ffa500
+@q_orange: #ffa500;
+// 紫色品质：ff2dff
+@q_purple: #ff2dff;
+// 蓝色品质：007eff
+@q_blue: #007eff;
+// 绿色品质：00d24b
+@q_green: #00d24b;
+.isQuality-2 {
+    color: @q_green;
+}
+.isQuality-3 {
+    color: @q_blue;
+}
+.isQuality-4 {
+    color: @q_purple;
+}
+.isQuality-5 {
+    color: @q_orange;
+}
