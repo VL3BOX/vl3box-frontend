@@ -1,0 +1,338 @@
+.p-exterior {
+    .pt(40px);
+    .flex();
+    gap: 30px;
+    .comLayout {
+        .r(20px);
+        box-shadow: 0px 0px 10px 0px rgba(243, 202, 162, 0.9);
+    }
+    .comTrTime {
+        .pointer();
+        transition: 0.2s all;
+    }
+    .m-left {
+        .w(280px);
+        .m-author {
+            .comLayout();
+            .pr();
+            padding: 20px 15px;
+            background-image: url(../../img/exterior/house/atcard.png);
+            background-size: cover;
+            .u-avatar {
+                .db();
+                .size(80px);
+                background-color: black;
+                .r(50%);
+            }
+            .u-icon {
+                .pa();
+                .rt(10px);
+                .w(18px);
+                .comTrTime();
+                fill: #000000;
+                fill-opacity: 0.3;
+                &:hover {
+                    fill: #da8029;
+                    fill-opacity: 1;
+                }
+                &:active {
+                    fill: #da8029;
+                    fill-opacity: 0.5;
+                }
+            }
+        }
+        .m-sidebar_warehouse {
+            background-color: #f6d8ba;
+            padding: 14px;
+            .comLayout();
+            .mt(30px);
+            .m-top {
+                .flex();
+                .flex(y);
+                justify-content: space-between;
+                .m-top_left {
+                    .flex();
+                    .flex(y);
+                    .u-icon {
+                        .w(20px);
+                        .mr(6px);
+                    }
+                    .u-title {
+                        .color(#da8029);
+                        .fz(16px);
+                        .bold();
+                    }
+                }
+                .m-top_right {
+                    .flex();
+                    .flex(y);
+                    .u-icon {
+                        width: 18px;
+                        stroke: #da8029;
+                        .comTrTime();
+                        &:last-child {
+                            .ml(10px);
+                        }
+                        &:hover {
+                            stroke: #ffffff;
+                        }
+                    }
+                }
+            }
+            .u-update {
+                .mt(4px);
+                .color(#da8029);
+                .fz(10px);
+                font-family: Outfit;
+            }
+            .m-price {
+                padding: 20px;
+                background-color: #ffffff;
+                .mt(10px);
+                .r(10px);
+                .m-item {
+                    .color(#000000);
+                    .fz(12px);
+                    .pr();
+                    span {
+                        vertical-align: middle;
+                    }
+                    .u-value {
+                        font-family: Outfit;
+                        .fz(16px);
+                        b {
+                            .color(#DA8029);
+                        }
+                    }
+                    .u-unit {
+                        .pa();
+                        .rt(0,50%);
+                        transform: translateY(-50%);
+                    }
+                    &:last-child {
+                        .mt(16px);
+                    }
+                }
+            }
+        }
+        .m-list {
+            background-color: #ffffff;
+            padding: 10px;
+            .mt(10px);
+            .r(10px);
+            .m-page {
+                .flex();
+                justify-content: space-between;
+                .u-item {
+                    .x();
+                    .fz(14px,18px);
+                    .bold();
+                    .pointer();
+                    .color(#808080);
+                    font-family: Outfit;
+                    &.act {
+                        .color(#da8029);
+                    }
+                }
+            }
+            .m-goods {
+                .mt(10px);
+                .flex();
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    }
+    .m-center {
+        flex: 1;
+        .m-layout {
+            .r(100px);
+            background-color: #ffffff;
+            box-shadow: 0px 0px 14px 0px rgba(243, 202, 162, 0.9);
+        }
+        .m-search {
+            .flex();
+            .m-layout();
+            .u-search__input {
+                flex: 1;
+                border: none;
+                background-color: transparent;
+                .fz(14px);
+                .color(#000000);
+                padding: 0 20px;
+            }
+            .m-search__icon {
+                padding: 5px 0;
+                background-color: #da8029;
+                .w(85px);
+                .r(100px);
+                .flex();
+                justify-content: center;
+                .u-icon {
+                    .size(30px);
+                }
+            }
+        }
+        .m-index {
+            .mt(30px);
+            .m-layout();
+            .r(20px);
+            padding: 20px;
+            .pt(0);
+            .m-box {
+                .m-title {
+                    .color(#000000);
+                    .fz(20px,30px);
+                    .bold();
+                    .flex();
+                    gap: 10px;
+                    padding: 20px 0;
+                    .u-icon {
+                        .size(30px);
+                    }
+                }
+                .m-list {
+                    .flex();
+                    gap: 20px;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+    .m-right {
+        .w(280px);
+        .flex();
+        flex-direction: column;
+        gap: 30px;
+        .m-top {
+            .flex();
+            justify-content: space-between;
+            .m-fold {
+                .size(60px);
+                .flex();
+                .flex(y);
+                justify-content: center;
+                .r(100px);
+                box-shadow: 0px 0px 10px 0px rgba(42, 167, 175, 0.4);
+                background-color: #2aa7af;
+                .comTrTime();
+                .u-icon {
+                    .size(30px);
+                    .comTrTime();
+                    fill: #ffffff;
+                }
+                &:hover {
+                    box-shadow: 0px 0px 10px 0px #2aa7af;
+                    .u-icon {
+                        fill: #ffdb5a;
+                    }
+                }
+            }
+            .m-wbl {
+                .w(200px);
+                .flex();
+                .flex(y);
+                justify-content: center;
+                .r(100px);
+                background-color: #ffdb5a;
+                box-shadow: 0px 0px 10px 0px rgba(255, 219, 90, 0.4);
+                .comTrTime();
+                &:hover {
+                    box-shadow: 0px 0px 10px 0px #ffdb5a;
+                }
+                .u-wbl {
+                    .w(161px);
+                }
+            }
+        }
+        .m-box {
+            .r(20px);
+            background-color: #2aa7af;
+            box-shadow: 0px 0px 10px 0px rgba(42, 167, 175, 0.25);
+            padding: 14px;
+            .m-title {
+                .flex();
+                gap: 4px;
+                font-family: Outfit;
+                .color(#ffffff);
+                .fz(14px,18px);
+                .bold();
+                .u-icon {
+                    .size(18px);
+                }
+            }
+            .m-list {
+                .mt(10px);
+                .flex();
+                flex-direction: column;
+                gap: 10px;
+                .m-rank {
+                    .r(10px);
+                    background-color: #fff;
+                    padding: 10px;
+                    .flex();
+                    .flex(y);
+                    justify-content: space-between;
+                    .comTrTime();
+                    .m-img {
+                        .flex();
+                        .flex(y);
+                        gap: 10px;
+                        .color(#000000);
+                        .fz(14px,18px);
+                        overflow: hidden; /* 确保超出容器的内容被裁剪 */
+                        white-space: nowrap; /* 确保文本在一行内显示 */
+                        text-overflow: ellipsis; /* 超出部分显示省略号 */
+                        .u-img {
+                            .size(14px);
+                            background-color: #000000;
+                        }
+                    }
+                    .m-info {
+                        .flex();
+                        gap: 2px;
+                        .fz(12px,15px);
+                        .u-price {
+                            color: #000000;
+                        }
+                        .u-line {
+                            .size(15px);
+                        }
+                        .u-range {
+                            font-family: Outfit;
+                            .bold();
+                            &.u-rise {
+                                .color(#FF0000);
+                            }
+                            &.u-fall {
+                                .color(#07c046);
+                            }
+                        }
+                    }
+                    &:hover {
+                        box-shadow: 0px 0px 6px 0px #fff;
+                    }
+                }
+                .m-news {
+                    .r(10px);
+                    overflow: hidden;
+                    background-color: #ffffff;
+                    .comTrTime();
+                    .u-img {
+                        background-color: #dfdfdf;
+                        .h(112px);
+                    }
+                    .u-title {
+                        padding: 10px;
+                        .color(#000000);
+                        .fz(14px,18px);
+                        .bold();
+                    }
+                    &:hover {
+                        box-shadow: 0px 0px 10px 0px #fff;
+                    }
+                }
+            }
+        }
+    }
+}
