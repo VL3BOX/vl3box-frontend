@@ -1,0 +1,15 @@
+{
+    "cms": {
+        "newbie": "新手易用",
+        "advanced": "进阶推荐",
+        "recommended": "编辑精选",
+        "geek": "骨灰必备"
+    },
+    "colors": {
+        "newbie": "#6f42c1",
+        "advanced": "#6f42c1",
+        "recommended": "#6f42c1",
+        "geek": "#6f42c1",
+        "fallacy": "#c00"
+    }
+}
