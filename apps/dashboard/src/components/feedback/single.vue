@@ -1,0 +1,370 @@
+<template>
+    <div class="m-feed-single" v-if="data">
+        <main class="m-single-content" v-loading="loading">
+            <div class="m-type">
+                <span class="u-status" :style="{ backgroundColor: statusColors[data.status] }">{{
+                    statusMap[data.status]
+                }}</span>
+                <div class="u-type">
+                    <span class="u-value">{{ types[data.type] }}</span>
+                    <span class="u-value">{{ subtypes[data.subtype] }}</span>
+                </div>
+                <el-button size="mini" @click="showVisible" v-if="isTeammate">处理</el-button>
+            </div>
+            <div class="m-block m-user">
+                <div class="u-subblock">
+                    <span class="u-label">提交人：</span>
+                    <a class="u-item u-user" :href="authorLink(data.user.id)" target="_blank">
+                        <img class="u-user-avatar" :src="showAvatar(data.user.avatar)" />
+                        <span class="u-user-name">{{ data.user.display_name }}</span>
+                    </a>
+                </div>
+                <span class="u-time u-subblock">提交时间：{{ formateTime(data.created_at) }}</span>
+            </div>
+            <div class="m-block m-dev">
+                <div class="u-subblock">
+                    <span class="u-label">分配至：</span>
+                    <div class="u-list u-list-assign" v-if="data.assign_user && data.assign_user.length">
+                        <a
+                            class="u-item u-assign"
+                            :href="authorLink(assign.id)"
+                            target="_blank"
+                            v-for="assign in data.assign_user"
+                            :key="assign.id"
+                        >
+                            <img class="u-assign-avatar" :src="showAvatar(assign.avatar)" />
+                            <span class="u-assign-name">{{ assign.display_name }}</span>
+                        </a>
+                    </div>
+                    <div class="u-list u-list-assign" v-else>
+                        <a class="u-item u-assign" :href="authorLink(1)" target="_blank">
+                            <img
+                                class="u-assign-avatar"
+                                :src="showAvatar('https://oss.jx3box.com/upload/avatar/2021/3/18/6568744.png')"
+                            />
+                            <span class="u-assign-name">JX3BOX</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-subblock">
+                    <span class="u-label">关联仓库：</span>
+                    <div class="u-list u-list-repo">
+                        <a
+                            class="u-repo u-item"
+                            :href="formateGithub(data.repository)"
+                            v-if="data.repository"
+                            target="_blank"
+                        >
+                            <img class="u-repo-icon" src="../../assets/img/feedback/github.svg" alt="" />
+                            <span class="u-repo-name">{{ data.repository }}</span>
+                        </a>
+                        <div class="u-null" v-else>-</div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-block m-refer" v-if="data.refer">
+                <div class="u-subblock">
+                    <span class="u-label">来源：</span>
+                    <a class="u-item u-user" :href="data.refer" target="_blank">
+                        {{ data.refer }}
+                    </a>
+                </div>
+            </div>
+            <div class="m-content m-textarea">
+                <el-divider content-position="left"><i class="el-icon-edit-outline"></i> 反馈内容</el-divider>
+                <div class="u-detail">
+                    <span v-html="sanitizedHTML(data.content)"></span>
+                </div>
+            </div>
+            <div class="m-attachment m-textarea">
+                <el-divider content-position="left"><i class="el-icon-picture-outline-round"></i> 附件截图</el-divider>
+                <div class="u-detail">
+                    <div class="u-img" v-for="(img, index) in data.images" :key="index">
+                        <el-image :src="img" lazy :preview-src-list="data.images"></el-image>
+                    </div>
+                </div>
+            </div>
+            <div class="m-feedback-thx">
+                <el-divider content-position="left"
+                    ><i class="el-icon-coin"></i> 反馈回馈
+                    <el-button v-if="isAdmin" size="mini" class="u-thx-trigger" type="success" @click="onThx"
+                        >品鉴</el-button
+                    ></el-divider
+                >
+                <div class="u-thx-table">
+                    <el-table size="mini" stripe border :data="thxData">
+                        <el-table-column label="参与打赏" prop="ext_operate_user_info">
+                            <template #default="{ row }">
+                                <div class="m-user">
+                                    <img class="u-gift" svg-inline :src="giftUrl" />
+                                    <a class="u-item u-user" :href="authorLink(row.ext_operate_user_info.id)" target="_blank">
+                                        <img class="u-user-avatar" :src="showAvatar(row.ext_operate_user_info.avatar)" />
+                                        <span class="u-user-name">{{ row.ext_operate_user_info.display_name }}</span>
+                                    </a>
+                                </div>
+                            </template>
+                        </el-table-column>
+                        <el-table-column label="盒币" prop="count">
+                            <template #default="{row}">
+                                <span class="u-count">+{{row.count}}</span>
+                            </template>
+                        </el-table-column>
+                        <el-table-column label="寄语" prop="remark"></el-table-column>
+                        <el-table-column label="时间" prop="created_at">
+                            <template #default="{row, $index}">
+                                <time :datetime="row.created_at">{{ row.created_at }}</time>
+
+                                <span class="u-delete" v-if="isSuperAdmin" @click="recovery(row, $index)">
+                                    <i class="el-icon-delete"></i>撤销
+                                </span>
+                            </template>
+                        </el-table-column>
+                    </el-table>
+                </div>
+            </div>
+            <div class="m-reply" v-if="done">
+                <el-divider content-position="left"><i class="el-icon-chat-line-square"></i> 回复处理</el-divider>
+                <Comment :id="id" category="feedback" order="desc" />
+            </div>
+        </main>
+
+        <el-dialog :visible.sync="visible" title="处理" width="750px">
+            <el-form :model="formData" :rules="rules" label-position="top">
+                <el-form-item label="关联处理人">
+                    <el-select
+                        placeholder="请选择关联处理人"
+                        filterable
+                        v-model="formData.assign"
+                        multiple
+                        style="width: 100%"
+                    >
+                        <el-option
+                            v-for="item in teammates"
+                            :key="item.id"
+                            :label="item.teammate_info.display_name"
+                            :value="item.user_id"
+                        >
+                            <div class="m-teammate">
+                                <div class="m-user">
+                                    <img class="u-avatar" :src="showAvatar(item.teammate_info.user_avatar)" />
+                                    <span class="u-name">{{ item.teammate_info.display_name }}</span>
+                                    <span class="u-user-id">(ID: {{ item.user_id }})</span>
+                                </div>
+                                <div class="m-duty">
+                                    <span class="u-duty" v-if="item.duty">{{ formateDuty(item.duty) }} | </span>
+                                    <span class="u-remark">{{ item.remark }}</span>
+                                </div>
+                            </div>
+                        </el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item label="仓库">
+                    <el-input placeholder="请输入仓库" v-model="formData.repository"></el-input>
+                </el-form-item>
+                <el-form-item label="状态">
+                    <el-radio-group v-model="formData.status">
+                        <el-radio-button :label="0">待处理</el-radio-button>
+                        <el-radio-button :label="1">已指派</el-radio-button>
+                        <el-radio-button :label="2">已处理</el-radio-button>
+                        <el-radio-button :label="3">已结束</el-radio-button>
+                    </el-radio-group>
+                </el-form-item>
+            </el-form>
+            <span slot="footer" class="dialog-footer">
+                <el-button size="small" @click="visible = false">取 消</el-button>
+                <el-button size="small" type="primary" @click="confirm">确 定</el-button>
+            </span>
+        </el-dialog>
+
+        <Homework
+            v-model="showThx"
+            title="反馈回馈"
+            :postType="postType"
+            :postId="id"
+            client="std"
+            :userId="data.user_id"
+            :article-id="~~id"
+            category="feedback"
+            @updateRecord="loadRecord"
+        ></Homework>
+    </div>
+</template>
+
+<script>
+import DOMPurify from "dompurify";
+import { getFeedback, updateFeedback } from "@/service/feedback";
+import { getTeammates } from "@/service/index";
+import { types, subtypes, statusMap, statusColors } from "@/assets/data/feedback.json";
+import { showAvatar, authorLink } from "@jx3box/jx3box-common/js/utils";
+import moment from "moment";
+import Comment from "@jx3box/jx3box-comment-ui/src/Comment.vue";
+// 打赏相关
+import { getPostBoxcoinRecords, recoveryBoxcoin } from "@/service/thx.js";
+import Homework from "@jx3box/jx3box-common-ui/src/interact/Homework.vue";
+import User from "@jx3box/jx3box-common/js/user";
+import AdminGift from "@jx3box/jx3box-common-ui/assets/img/widget/admin_gift.svg";
+export default {
+    name: "FeedbackSingle",
+    components: {
+        Comment,
+        Homework,
+    },
+    data() {
+        return {
+            data: "",
+
+            loading: false,
+
+            types,
+            subtypes,
+            statusMap,
+            statusColors,
+
+            done: false,
+            visible: false,
+
+            formData: {
+                assign: [],
+                repository: "",
+                status: 0,
+            },
+            rules: {},
+            teammates: [],
+
+            // 打赏相关
+            thxData: [],
+            showThx: false,
+            postType: "feedback",
+            giftUrl: AdminGift,
+        };
+    },
+    computed: {
+        id() {
+            return this.$route.params.id;
+        },
+        isTeammate() {
+            return this.$store.state.isTeammate;
+        },
+        isAdmin() {
+            return User.isAdmin();
+        },
+        isSuperAdmin() {
+            return User.isSuperAdmin();
+        },
+    },
+    watch: {
+        id: {
+            immediate: true,
+            handler(val) {
+                val && this.getData();
+            },
+        },
+    },
+    mounted() {
+        this.loadTeammates();
+
+        this.loadRecord();
+    },
+    methods: {
+        async getData() {
+            try {
+                this.loading = true;
+                let res = await getFeedback(this.id);
+                this.data = res.data.data;
+                this.data.content = this.data.content.replace(/\n/g, "<br>");
+                this.formData.repository = this.data?.repository || "";
+                this.formData.assign = this.data?.assign?.filter((item) => item) || [];
+                this.formData.status = this.data?.status || 0;
+                this.done = true;
+            } catch (e) {
+                console.log(e);
+            } finally {
+                this.loading = false;
+            }
+        },
+        async loadTeammates() {
+            try {
+                let res = await getTeammates();
+                this.teammates = res.data.data.filter(
+                    (item) => item.group && ["mp", "developer", "designer"].includes(item.group)
+                );
+            } catch (e) {
+                console.log(e);
+            }
+        },
+        back() {
+            this.$router.go(-1);
+        },
+        authorLink,
+        showAvatar,
+        formateTime(time) {
+            return moment(time).format("YYYY-MM-DD HH:mm:ss");
+        },
+        formateGithub(val) {
+            return `https://github.com/JX3BOX/${val}`;
+        },
+        formateDuty(val) {
+            return (
+                (val &&
+                    val.reduce((prev, curr) => {
+                        return prev + " | " + curr;
+                    })) ||
+                ""
+            );
+        },
+
+        confirm() {
+            updateFeedback(this.id, {
+                assign: this.formData.assign.map((item) => item),
+                repository: this.formData.repository,
+                status: this.formData.status,
+            })
+                .then((res) => {
+                    this.$message.success("处理成功");
+                    this.visible = false;
+                    this.getData();
+                })
+                .catch((e) => {
+                    this.$message.error(e.message);
+                });
+        },
+        showVisible() {
+            this.formData.repository = this.data.repository;
+            this.formData.assign = this.data?.assign?.filter((item) => item) || [];
+            this.visible = true;
+        },
+        sanitizedHTML(html) {
+            return DOMPurify.sanitize(html);
+        },
+
+        // 打赏相关
+        onThx() {
+            this.showThx = true;
+        },
+        loadRecord() {
+            getPostBoxcoinRecords(this.postType, this.id, { pageSize: 12, pageIndex: 1 }).then((res) => {
+                this.thxData = res.data.data?.list || [];
+            });
+        },
+        recovery: function (item, i) {
+            this.$alert("是否确定撤销该评分？", "确认", {
+                confirmButtonText: "确定",
+                callback: (action) => {
+                    if (action == "confirm") {
+                        recoveryBoxcoin(item.id).then(() => {
+                            this.$message({
+                                message: "撤销成功",
+                                type: "success",
+                            });
+                            this.list.splice(i, 1);
+                        });
+                    }
+                },
+            });
+        },
+    },
+};
+</script>
+<style lang="less">
+@import "~@/assets/css/feedback_single.less";
+</style>

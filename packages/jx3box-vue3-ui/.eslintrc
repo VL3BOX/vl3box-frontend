@@ -1,0 +1,21 @@
+{
+    "root": true,
+    "env": {
+        "node": true
+    },
+    "parser": "vue-eslint-parser",
+    "extends": ["plugin:vue/vue3-essential", "eslint:recommended"],
+    "rules": {
+        "vue/multi-word-component-names": [
+            "error",
+            {
+                "ignores": ["Item"]
+            }
+        ],
+        "no-useless-escape": "off"
+    },
+    "globals": {
+        "defineOptions": "writable",
+        "tinyMCE": true
+    }
+}

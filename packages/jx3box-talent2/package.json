@@ -1,0 +1,46 @@
+{
+  "name": "@jx3box/jx3box-talent2",
+  "version": "1.5.9",
+  "description": "origin talent",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "update": "npm --registry https://registry.npmjs.org install @jx3box/jx3box-common@latest",
+    "talent": "node ./tools/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JX3BOX/jx3box-talent2.git"
+  },
+  "author": "kaviilee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JX3BOX/jx3box-talent2/issues"
+  },
+  "homepage": "https://github.com/JX3BOX/jx3box-talent2#readme",
+  "dependencies": {
+    "@jx3box/jx3box-common": "workspace:*",
+    "@vue/compiler-sfc": "^3.1.5",
+    "ansi-escapes": "^5.0.0",
+    "cli-color": "^2.0.3",
+    "less": "^4.1.1",
+    "moment": "^2.29.4",
+    "papaparse": "^5.3.2",
+    "progress": "^2.0.3",
+    "vue": "2.6.14"
+  },
+  "devDependencies": {
+    "@jx3box/jx3box-data": "workspace:*",
+    "axios": "^0.19.0",
+    "csv": "^5.3.2",
+    "csv-generate": "^3.2.4",
+    "csv-parse": "^4.8.2",
+    "csv-writer": "^1.5.0",
+    "fs-extra": "^10.0.0",
+    "glob": "^7.1.6",
+    "iconv-lite": "^0.5.2",
+    "lodash": "^4.17.21"
+  }
+}

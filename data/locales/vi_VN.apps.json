@@ -1,0 +1,2565 @@
+{
+    "author/src/components/Battle.vue": {
+        "无标题": "Không có tiêu đề"
+    },
+    "author/src/components/Collection.vue": {
+        "无标题": "Không có tiêu đề"
+    },
+    "author/src/components/DBM.vue": {
+        "无标题": "Không có tiêu đề"
+    },
+    "author/src/components/Emotions.vue": {
+        "月前": "vài tháng trước",
+        "周前": "vài tuần trước",
+        "天前": "vài ngày trước",
+        "小时前": "vài giờ trước",
+        "分钟前": "vài phút trước",
+        "刚刚": "vừa mới"
+    },
+    "author/src/components/Info.vue": {
+        "举报": "Báo cáo",
+        "操作": "Thao tác",
+        "请填写禁言/解除禁言原因": "Vui lòng điền lý do cấm phát ngôn/gỡ bỏ cấm phát ngôn",
+        "请输入内容": "Vui lòng nhập nội dung",
+        "取 消": "Hủy",
+        "确 定": "Xác nhận",
+        "解除禁言": "gỡ bỏ cấm phát ngôn",
+        "禁言": "cấm phát ngôn",
+        "确定": "Xác nhận",
+        "吗？": "không?",
+        "消息": "Tin nhắn",
+        "操作成功": "Thao tác thành công"
+    },
+    "author/src/components/Jokes.vue": {
+        "无标题": "Không có tiêu đề"
+    },
+    "author/src/components/Me.vue": {
+        "匿名": "Ẩn danh",
+        "签约作者": "Tác giả kí hợp đồng",
+        "当前经验": "Kinh nghiệm hiện tại",
+        "加入于": "Gia nhập vào",
+        "推栏ID": "ID Khuôn khổ",
+        "推栏ID：": "ID Khuôn khổ:",
+        "直播间：": "Phòng trực tiếp:",
+        "专业版会员用户": "Người dùng chuyên nghiệp",
+        "高级版会员用户": "Người dùng cao cấp"
+    },
+    "author/src/components/Namespace.vue": {
+        "无标题": "Không có tiêu đề",
+        "这个词条没有任何描述": "Mục này không có mô tả"
+    },
+    "author/src/components/Paper.vue": {
+        "无标题": "Không có tiêu đề"
+    },
+    "author/src/components/Post.vue": {
+        "无标题": "Không có tiêu đề",
+        "这个作者很懒,什么都没有留下": "Tác giả này rất lười, không để lại bất cứ điều gì"
+    },
+    "author/src/components/Primary.vue": {
+        "最新作品": "Tác phẩm mới nhất",
+        "百科贡献": "Đóng góp bách khoa",
+        "配装方案": "Phương án phối trang",
+        "文集小册": "Bộ sưu tập",
+        "剑三题目": "Đề tài Kiếm Tam",
+        "剑三试卷": "Đề thi Kiếm Tam",
+        "TA的铭牌": "Bảng hiệu của TA",
+        "TA的趣图": "Thú đồ của TA",
+        "TA的骚话": "Chuyện phiếm của TA"
+    },
+    "author/src/components/Pz.vue": {
+        "无标题": "Không có tiêu đề",
+        "这个配装没有任何描述": "Trang bị này không có mô tả nào",
+        "匿名": "Ẩn danh"
+    },
+    "author/src/components/Question.vue": {
+        "无标题": "Không có tiêu đề"
+    },
+    "author/src/components/Topic.vue": {
+        "无标题": "Không có tiêu đề"
+    },
+    "author/src/components/Wiki.vue": {
+        "无标题": "Không có tiêu đề",
+        "百科": "Bách khoa"
+    },
+    "author/src/components/item_plan.vue": {
+        "无标题": "Không có tiêu đề",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "物品清单": "Danh sách vật phẩm",
+        "装备清单": "Danh sách trang bị"
+    },
+    "author/src/views/Birthday.vue": {
+        "祝": "Mừng sinh nhật"
+    },
+    "author/src/views/Index.vue": {
+        "魔盒": "Hộp ma thuật"
+    },
+    "author/src/views/certificate.vue": {
+        "获得时间：": "Thời gian nhận được:",
+        "打印证书": "In chứng nhận",
+        "团长：": "Đội trưởng:",
+        "副本名称：": "Tên bản sao:"
+    },
+    "bps/src/components/cms-single.vue": {
+        "评论": "Bình luận",
+        "作者没有开启评论功能": "Tác giả chưa bật chức năng bình luận"
+    },
+    "bps/src/components/dps-form.vue": {
+        "心法": "Tâm pháp",
+        "请选择心法": "Vui lòng chọn tâm pháp",
+        "关联作品": "Tác phẩm liên quan",
+        "输入关键词进行搜索": "Nhập từ khóa để tìm kiếm",
+        "客户端": "Khách hàng",
+        "请选择客户端": "Vui lòng chọn client",
+        "类型": "Loại",
+        "请选择类型": "Vui lòng chọn loại",
+        "贡献者": "Người đóng góp",
+        "请输入除自己外的其余贡献者魔盒UID，用半角逗号,隔开": "Vui lòng nhập UID của các người đóng góp khác ngoài bản thân, sử dụng dấu phẩy (,) để phân tách",
+        "备注": "Ghi chú",
+        "提交": "Gửi",
+        "取消": "Hủy",
+        "（非必填）": "(Không bắt buộc)",
+        "请输入名称": "Vui lòng nhập tên",
+        "请输入链接": "Vui lòng nhập liên kết",
+        "编辑计算器申请": "Yêu cầu chỉnh sửa máy tính",
+        "新增计算器申请": "Yêu cầu thêm máy tính",
+        "提交成功": "Gửi thành công"
+    },
+    "bps/src/components/group.vue": {
+        "群": "Nhóm",
+        "暂无相关群组": "Chưa có nhóm liên quan",
+        "复制成功": "Sao chép thành công",
+        "浏览器不支持": "Trình duyệt không hỗ trợ"
+    },
+    "bps/src/components/skill-change.vue": {
+        "该资料片暂无技改详解": "Tài liệu mở rộng này chưa có giải thích chi tiết về kỹ thuật",
+        "暂无描述": "Chưa có mô tả"
+    },
+    "bps/src/components/tabs.vue": {
+        "职业攻略": "Chiến lược nghề nghiệp",
+        "权威白皮书": "Sách trắng uy tín",
+        "精品区": "Khu vực chất lượng cao",
+        "优质作品": "Tác phẩm chất lượng",
+        "技能系数": "Hệ số kỹ năng",
+        "技能大全": "Tổng hợp kỹ năng",
+        "签约": "Ký hợp đồng",
+        "秘籍大全": "Tổng hợp bí kíp",
+        "技能合集": "Tập hợp kỹ năng",
+        "技改历史": "Lịch sử sửa đổi kỹ thuật",
+        "急速阈值": "Ngưỡng cấp tốc",
+        "DPS计算器": "Máy tính DPS",
+        "门派天梯": "Bảng xếp hạng môn phái",
+        "作品小册": "Bộ sưu tập tác phẩm",
+        "源码解析": "Phân tích mã nguồn",
+        "源码分析": "Phân tích mã nguồn",
+        "门派群组": "Nhóm môn phái",
+        "背景故事": "Câu chuyện nền"
+    },
+    "bps/src/layout/AppLayout.vue": {
+        "职业专栏": "Chuyên mục chức nghiệp"
+    },
+    "bps/src/layout/CollectionLayout.vue": {
+        "剑三小册": "Tập sách Kiếm Tam",
+        "管理": "Quản lý"
+    },
+    "bps/src/layout/ListLayout.vue": {
+        "职业专栏": "Chuyên mục chức nghiệp"
+    },
+    "bps/src/layout/SingleLayout.vue": {
+        "职业专栏": "Chuyên mục chức nghiệp"
+    },
+    "bps/src/views/Dps.vue": {
+        "提交计算器": "Gửi máy tính",
+        "请输入关键词..": "Vui lòng nhập từ khóa..",
+        "搜索": "Tìm kiếm",
+        "没有找到对应的DPS计算器，请重新搜索": "Không tìm thấy máy tính DPS tương ứng, vui lòng tìm kiếm lại",
+        "心法": "Tâm pháp",
+        "名称": "Tên",
+        "编辑推荐": "Đề xuất của biên tập viên",
+        "作者": "Tác giả",
+        "计算器类型": "Loại máy tính",
+        "编辑": "Chỉnh sửa",
+        "更新时间": "Thời gian cập nhật"
+    },
+    "bps/src/views/HasteStd.vue": {
+        "技能设定": "Cài đặt kỹ năng",
+        "技能时间": "Thời gian kỹ năng",
+        "表示技能正读条时间，或持续性伤害技能的每跳时间，或引导读条的每跳时间": "Biểu thị thời gian đọc thanh kỹ năng chính, hoặc thời gian mỗi lần của kỹ năng gây sát thương liên tục, hoặc thời gian mỗi lần của kỹ năng dẫn đường",
+        "跳数": "Số lần nhảy",
+        "表示相应技能跳数，正读条为 1 跳，引导读条为造成伤害的次数": "Biểu thị số lần nhảy của kỹ năng tương ứng, đọc thanh chính là 1 lần nhảy, đọc thanh dẫn đường là số lần gây sát thương",
+        "额外加速奇穴": "Kỳ huyệt tăng tốc bổ sung",
+        "选择可以额外提供加速的奇穴": "Chọn kỳ huyệt có thể cung cấp thêm tốc độ",
+        "选择可以额外提供突破上限的加速的奇穴": "Chọn kỳ huyệt có thể cung cấp thêm tốc độ vượt qua giới hạn",
+        "计算结果": "Kết quả tính toán",
+        "本应用基于胖叔叔加速宝典应用拓展维护更新": "Ứng dụng này dựa trên bản mở rộng và cập nhật của ứng dụng Sổ tay tăng tốc của Bàn thúc thúc",
+        "无": "Không",
+        "读条时间(秒)": "Thời gian đọc thanh (giây)",
+        "所需加速率": "Tốc độ tăng tốc yêu cầu",
+        "最终加速率": "Tốc độ tăng tốc cuối cùng",
+        "所需加速等级": "Cấp độ tăng tốc yêu cầu",
+        "加速系数更新为？（看不懂请不要乱动）": "Hệ số tăng tốc cập nhật thành? (Nếu không hiểu, xin đừng thay đổi)",
+        "翰墨永誓【万花-八层-挥毫墨意期间】": "Hàn mặc vĩnh thệ 【Vạn Hoa - 8 tầng - Trong thời gian Huy Hào Mặc Ý】",
+        "枕上【七秀-五层】": "Chẩm thượng 【Thất Tú - 5 tầng】",
+        "盈袖【七秀-繁音急节期间】": "Doanh tụ 【Thất Tú - Trong thời gian Phồn Âm Cấp Tiết】",
+        "余寒映日【七秀-余寒映日期间】": "Dư hàn ánh nhật 【Thất Tú - Trong thời gian Dư Hàn Ánh Nhật】",
+        "蛊虫狂暴【五毒-蛊虫狂暴期间】": "Cổ trùng cuồng bạo 【Ngũ Độc - Trong thời gian Cổ Trùng Cuồng Bạo】",
+        "冰丝【五毒-三层】": "Băng ty 【Ngũ Độc - 3 tầng】",
+        "妙镜惊寂【明教-五层】": "Diệu kính kinh tịch 【Minh Giáo - 5 tầng】",
+        "如风【藏剑-山居剑意心法】": "Như phong 【Tàng Kiếm - Tâm pháp Sơn Cư Kiếm Ý】",
+        "破国【天策-纵轻骑期间】": "Phá quốc 【Thiên Sách - Trong thời gian Tung Khinh Kỵ】",
+        "用御【苍云-擎盾状态】": "Dụng ngự 【Thương Vân - Trạng thái Kình Thuẫn】",
+        "矢尽兵穷【苍云-四层-在野期间】": "Thỉ tận binh cùng 【Thương Vân - 4 tầng - Trong thời gian Tại Dã】",
+        "物化天行【蓬莱，荡伞状态】": "Vật hóa thiên hành 【Bồng Lai - Trạng thái Đãng Tản】",
+        "聚精凝神【唐门-心无旁骛期间】": "Tụ tinh ngưng thần 【Đường Môn - Trong thời gian Tâm Vô Bàng Vũ】",
+        "高山流水【长歌-高山流水期间】": "Cao sơn lưu thủy 【Trường Ca - Trong thời gian Cao Sơn Lưu Thủy】",
+        "沃土【通用-八层-万花春泥期间】": "Ốc thổ 【Thông dụng - 8 tầng - Trong thời gian Vạn Hoa Xuân Nê】",
+        "避奚【北天药宗-凌然天风期间】": "Tị hề 【Bắc Thiên Dược Tông - Trong thời gian Lăng Nhiên Thiên Phong】"
+    },
+    "bps/src/views/Highlights.vue": {
+        "发布作品": "Đăng tác phẩm",
+        "请输入搜索内容": "Vui lòng nhập nội dung tìm kiếm",
+        "关键词": "Từ khóa",
+        "全部": "Tất cả",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm"
+    },
+    "bps/src/views/Index.vue": {
+        "发布作品": "Đăng tác phẩm",
+        "请输入搜索内容": "Vui lòng nhập nội dung tìm kiếm",
+        "电脑": "Máy tính",
+        "手机": "Điện thoại di động",
+        "关键词": "Từ khóa",
+        "类型": "Loại",
+        "只看无界": "Chỉ xem không giới hạn",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm"
+    },
+    "bps/src/views/Kungfu.vue": {
+        "当前心法暂无此类技能": "Tâm pháp hiện tại không có kỹ năng loại này"
+    },
+    "bps/src/views/Ladder.vue": {
+        "门派天梯榜": "Bảng xếp hạng môn phái",
+        "请选择": "Vui lòng chọn",
+        "全部": "Tất cả",
+        "只显示最低": "Chỉ hiển thị mức thấp nhất",
+        "只显示最高": "Chỉ hiển thị mức cao nhất",
+        "只看门派": "Chỉ xem môn phái",
+        "江湖": "Giang Hồ",
+        "天策": "Thiên Sách",
+        "万花": "Vạn Hoa",
+        "纯阳": "Thuần Dương",
+        "七秀": "Thất Tú",
+        "少林": "Thiểu Lâm",
+        "藏剑": "Tàng Kiếm",
+        "丐帮": "Cái Bang",
+        "明教": "Minh Giáo",
+        "五毒": "Ngũ Độc",
+        "唐门": "Đường Môn",
+        "苍云": "Thương Vân",
+        "长歌": "Trưởng Ca",
+        "霸刀": "Bá Đao",
+        "蓬莱": "Bồng Lai",
+        "凌雪": "Lăng Tuyết",
+        "衍天": "Diễn Thiên",
+        "药宗": "Dược Tông",
+        "刀宗": "Đao Tông",
+        "万灵": "Vạn Linh"
+    },
+    "bps/src/views/Lua.vue": {
+        "文件夹": "Thư mục",
+        "无界": "Không giới hạn",
+        "请输入关键词": "Vui lòng nhập từ khóa",
+        "搜索": "Tìm kiếm",
+        "本功能仅内部作者可见，仅作为攻略写作的参考资料。禁止外传，违者后果自负！(本功能需要额外独立申请授权)": "Chức năng này chỉ hiển thị cho các tác giả nội bộ và chỉ dùng làm tài liệu tham khảo cho việc viết hướng dẫn. Cấm phát tán, người vi phạm phải chịu trách nhiệm! (Chức năng này cần phải xin cấp phép độc lập bổ sung)",
+        "文件列表": "Danh sách tệp",
+        "返 回": "Quay lại",
+        "没有查看权限，仅签约作者可见。": "Không có quyền xem, chỉ tác giả ký hợp đồng mới thấy."
+    },
+    "bps/src/views/Recipe.vue": {
+        "请输入关键词..": "Vui lòng nhập từ khóa..",
+        "搜索": "Tìm kiếm",
+        "技能名称": "Tên kỹ năng",
+        "秘籍名称": "Tên bí kíp",
+        "秘籍描述": "Mô tả bí kíp",
+        "消耗": "Tiêu hao",
+        "任务来源": "Nguồn nhiệm vụ",
+        "书籍来源": "Nguồn sách",
+        "碑铭来源": "Nguồn bia ký",
+        "备注": "Ghi chú",
+        "百科": "Bách khoa",
+        "查看百科": "Xem bách khoa"
+    },
+    "bps/src/views/Single.vue": {
+        "心法": "Tâm pháp",
+        "资料片": "Tài liệu mở rộng",
+        "其它": "Khác",
+        "未知": "Không xác định"
+    },
+    "bps/src/views/SkillStd.vue": {
+        "技能": "Kỹ năng",
+        "该心法技能数据暂缺，请通过侧边栏切换心法": "Dữ liệu kỹ năng của tâm pháp này hiện chưa có, vui lòng thay đổi tâm pháp khác",
+        "奇穴": "Kỳ huyệt",
+        "该心法奇穴数据暂缺，请通过侧边栏切换心法": "Dữ liệu kỳ huyệt của tâm pháp này hiện chưa có, vui lòng thay đổi tâm pháp khác",
+        "阵法": "Trận pháp",
+        "该心法阵法数据暂缺，请通过侧边栏切换心法": "Dữ liệu trận pháp của tâm pháp này hiện chưa có, vui lòng thay đổi tâm pháp khác"
+    },
+    "bps/src/views/Story.vue": {
+        "门派背景": "Bối cảnh môn phái",
+        "门派事记": "Sự kiện môn phái",
+        "门派人物": "Nhân vật môn phái",
+        "没有相关资料": "Không có tài liệu liên quan"
+    },
+    "fb/src/layouts/AppLayout.vue": {
+        "日志分析": "Phân tích nhật ký",
+        "团队统计": "Thống kê đoàn đội",
+        "团队管理": "Quản lý đoàn đội",
+        "数据构建": "Xây dựng dữ liệu",
+        "八荒衡鉴": "Đánh giá bát hoang",
+        "百战异闻录": "Ghi chép chiến trận bách chiến"
+    },
+    "fb/src/layouts/ListLayout.vue": {
+        "副本专栏": "Chuyên mục phó bản"
+    },
+    "fb/src/layouts/SingleLayout.vue": {
+        "副本专栏": "Chuyên mục phó bản"
+    },
+    "fb/src/components/cms-single.vue": {
+        "评论": "Bình luận",
+        "作者没有开启评论功能": "Tác giả chưa bật tính năng bình luận"
+    },
+    "fb/src/components/minirank.vue": {
+        "全服排行": "Xếp hạng toàn máy chủ",
+        "查看更多": "Xem thêm"
+    },
+    "fb/src/components/tabs.vue": {
+        "副本攻略": "Hướng dẫn phó bản",
+        "开荒首发": "Khai phá đầu tiên",
+        "副本掉落": "Vật phẩm rơi trong phó bản",
+        "瑰石列表": "Danh sách ngọc quý",
+        "副本成就": "Thành tựu phó bản",
+        "秘境传说": "Truyền thuyết bí cảnh",
+        "首领数据": "Dữ liệu thủ lĩnh",
+        "特殊机制": "Cơ chế đặc biệt",
+        "高阶技巧": "Kỹ thuật cao cấp",
+        "技能数据": "Dữ liệu kỹ năng",
+        "签约": "Ký kết",
+        "源码分析": "Phân tích mã nguồn"
+    },
+    "fb/src/components/team-recruit.vue": {
+        "团队招募": "Tuyển dụng đoàn đội",
+        "查看更多": "Xem thêm"
+    },
+    "fb/src/views/Attr.vue": {
+        "穿透": "Xuyên thấu",
+        "穿刺": "Xuyên thích",
+        "贯体": "Quán thể"
+    },
+    "fb/src/views/Bahuang.vue": {
+        "八荒衡鉴模拟器": "Mô phỏng Bát Hoang Hành Giám",
+        "我的预设": "Cài đặt của tôi",
+        "秘术": "Bí thuật",
+        "秘技": "Bí kỹ",
+        "绝学": "Cực học",
+        "方案名称": "Tên phương án",
+        "方案描述": "Mô tả phương án",
+        "取 消": "Hủy bỏ",
+        "保 存": "Lưu",
+        "秘术选择最多12个现已达上限！": "Bí thuật chọn tối đa 12 cái, hiện đã đạt giới hạn!",
+        "秘技选择最多4个现已达上限！": "Bí kỹ chọn tối đa 4 cái, hiện đã đạt giới hạn!",
+        "秘术最多可激活6个！": "Bí thuật tối đa có thể kích hoạt 6 cái!",
+        "预设方案": "Phương án cài đặt",
+        "编辑方案": "Chỉnh sửa phương án",
+        "编辑成功": "Chỉnh sửa thành công",
+        "保存成功": "Lưu thành công",
+        "请先登录": "Vui lòng đăng nhập trước",
+        "提示": "Gợi ý",
+        "确认使用该方案，操作会覆盖当前?": "Xác nhận sử dụng phương án này, thao tác sẽ ghi đè lên hiện tại?",
+        "确定": "Xác nhận",
+        "取消": "Hủy bỏ",
+        "成功": "Thành công",
+        "方案设置成功": "Cài đặt phương án thành công"
+    },
+    "fb/src/views/Cj.vue": {
+        "没有找到相关条目": "Không tìm thấy mục liên quan"
+    },
+    "fb/src/views/Drop_v2.vue": {
+        "全部": "Tất cả",
+        "没有相关条目": "Không có mục liên quan"
+    },
+    "fb/src/views/Gem.vue": {
+        "请输入关键词": "Vui lòng nhập từ khóa",
+        "搜索": "Tìm kiếm",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm",
+        "复制成功": "Sao chép thành công",
+        "复制物品名称成功": "Sao chép tên vật phẩm thành công",
+        "复制失败": "Sao chép thất bại",
+        "请手动复制": "Vui lòng sao chép thủ công"
+    },
+    "fb/src/views/Index.vue": {
+        "发布作品": "Đăng tác phẩm",
+        "请输入搜索内容": "Vui lòng nhập nội dung tìm kiếm",
+        "关键词": "Từ khóa",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm"
+    },
+    "fb/src/views/Lua.vue": {
+        "请输入关键词": "Vui lòng nhập từ khóa",
+        "搜索": "Tìm kiếm",
+        "本功能仅内部作者可见，仅作为攻略写作的参考资料。禁止外传，违者后果自负！(本功能需要额外独立申请授权)": "Chức năng này chỉ dành cho tác giả nội bộ, chỉ dùng làm tài liệu tham khảo cho việc viết hướng dẫn. Cấm phát tán ra ngoài, vi phạm sẽ tự chịu trách nhiệm! (Chức năng này cần phải xin cấp phép riêng)",
+        "文件列表": "Danh sách tệp",
+        "返 回": "Trở lại",
+        "没有查看权限，仅签约作者可见。": "Không có quyền xem, chỉ tác giả ký hợp đồng mới có thể xem."
+    },
+    "fb/src/views/Npc_v1.vue": {
+        "请输入NPC名称或ID": "Vui lòng nhập tên hoặc ID NPC",
+        "搜索": "Tìm kiếm",
+        "只看首领": "Chỉ xem boss",
+        "强度": "Cường độ",
+        "血量": "Máu",
+        "内力": "Nội lực",
+        "跑速": "Tốc độ chạy",
+        "范围": "Phạm vi",
+        "识破": "Nhận diện",
+        "闪避": "Tránh né",
+        "招架": "Đỡ đòn",
+        "防御": "Phòng ngự",
+        "外功防御": "Ngoại công phòng ngự",
+        "混元防御": "Hỗn Nguyên phòng ngự",
+        "阳性防御": "Dương tính phòng ngự",
+        "阴性防御": "Âm tính phòng ngự",
+        "毒性防御": "Độc tính phòng ngự",
+        "会心": "Bạo kích",
+        "外攻会心": "Ngoại công bạo kích",
+        "内攻会心": "Nội công bạo kích",
+        "外功会心": "Ngoại công bạo kích",
+        "混元会心": "Hỗn Nguyên bạo kích",
+        "阳性会心": "Dương tính bạo kích",
+        "阴性会心": "Âm tính bạo kích",
+        "毒性会心": "Độc tính bạo kích",
+        "命中": "Trúng đích",
+        "外功命中": "Ngoại công trúng đích",
+        "混元命中": "Hỗn Nguyên trúng đích",
+        "阳性命中": "Dương tính trúng đích",
+        "阴性命中": "Âm tính trúng đích",
+        "毒性命中": "Độc tính trúng đích",
+        "该副本没有找到相关条目，全图搜索请前往剑三数据库": "Không tìm thấy mục liên quan trong phụ bản này, để tìm kiếm hãy đến Cơ sở dữ liệu Kiếm Tam",
+        "应用": "Ứng dụng",
+        "加载更多": "Tải thêm"
+    },
+    "fb/src/views/Rank.vue": {
+        "剑网3跨区服副本通关百强榜": "Bảng xếp hạng 100 đoàn đội vượt phó bản liên khu của Kiếm Tam",
+        "联合推栏表彰活动·": "Hoạt động khen thưởng liên kết",
+        "活动规则与举报": "Quy tắc hoạt động và báo cáo",
+        "工作室成绩将不予显示，官方认定代打成绩将不予显示，超过1周未认领的团队成绩将不予显示，认领请加团长QQ群": "Thành tích của phòng làm việc sẽ không được hiển thị, thành tích được xác định chính thức là chơi thuê sẽ không được hiển thị, thành tích của đoàn đội chưa được xác nhận quá 1 tuần sẽ không được hiển thị, để xác nhận vui lòng tham gia nhóm QQ của trưởng đoàn",
+        "排名": "Xếp hạng",
+        "队长": "Đội trưởng",
+        "服务器": "Máy chủ",
+        "达成时间": "Thời gian hoàn thành",
+        "击杀用时": "Thời gian tiêu diệt",
+        "成员名单": "Danh sách thành viên",
+        "状态": "Trạng thái",
+        "用时": "Thời gian",
+        "无团员数据": "Không có dữ liệu thành viên",
+        "公示期": "Thời gian công bố",
+        "当前副本没有活动": "Hiện tại không có hoạt động trong phó bản này"
+    },
+    "fb/src/views/Skill_v1.vue": {
+        "请输入技能名称": "Vui lòng nhập tên kỹ năng",
+        "搜索": "Tìm kiếm",
+        "没有找到相关条目": "Không tìm thấy mục liên quan"
+    },
+    "fb/src/views/Story.vue": {
+        "基本信息": "Thông tin cơ bản",
+        "名称": "Tên",
+        "地图ID": "ID bản đồ",
+        "资料片": "Bản mở rộng",
+        "最低等级要求": "Yêu cầu cấp độ tối thiểu",
+        "入口": "Lối vào",
+        "简介": "Giới thiệu",
+        "首领传说": "Truyền thuyết thủ lĩnh",
+        "查看技能": "Xem kỹ năng",
+        "收起": "Thu gọn",
+        "展开": "Mở rộng",
+        "没有相关信息": "Không có thông tin liên quan",
+        "副本地图": "Bản đồ phó bản",
+        "未找到相关信息": "Không tìm thấy thông tin liên quan"
+    },
+    "macro/src/layout/AppLayout.vue": {
+        "宏编辑器": "Trình chỉnh sửa macro",
+        "经脉模拟器": "Mô phỏng kinh mạch",
+        "奇穴模拟器": "Mô phỏng kỳ huyệt",
+        "镇派模拟器": "Mô phỏng trấn phái"
+    },
+    "macro/src/layout/ListLayout.vue": {
+        "云端宏": "Macro đám mây"
+    },
+    "macro/src/layout/SingleLayout.vue": {
+        "云端宏": "Macro đám mây"
+    },
+    "macro/src/components/cms-single.vue": {
+        "评论": "Bình luận",
+        "作者没有开启评论功能": "Tác giả đã không bật chức năng bình luận"
+    },
+    "macro/src/components/common-header.vue": {
+        "发布作品": "Đăng tác phẩm",
+        "请输入搜索内容": "Nhập nội dung tìm kiếm",
+        "关键词": "Từ khóa",
+        "语言": "Ngôn ngữ",
+        "只看无界": "Chỉ xem không giới hạn"
+    },
+    "macro/src/components/feed.vue": {
+        "云端宏复制成功": "Sao chép macro đám mây thành công"
+    },
+    "macro/src/components/macro.vue": {
+        "复制宏内容": "Sao chép nội dung macro",
+        "转化为繁体": "Chuyển đổi sang chữ phồn thể",
+        "转换为简体": "Chuyển đổi sang chữ giản thể",
+        "复制云端宏": "Sao chép macro đám mây",
+        "默认存在1分钟缓存，如需要即时生效请点击此按钮": "Mặc định có bộ nhớ cache 1 phút, nếu cần hiệu lực ngay lập tức vui lòng nhấn nút này",
+        "云端同步刷新": "Đồng bộ đám mây làm mới",
+        "自动感谢": "Tự động cảm ơn",
+        "字数：": "Số lượng từ:",
+        "糟糕，这个宏是空的！": "Ôi không, macro này trống rỗng!",
+        "复制宏成功": "Sao chép macro thành công"
+    },
+    "macro/src/components/tabs.vue": {
+        "云端宏": "Macro trên đám mây",
+        "轻松同步": "Đồng bộ dễ dàng",
+        "我的宏仓库": "Kho macro của tôi",
+        "个人宏仓库": "Kho macro cá nhân",
+        "私人专属": "Riêng tư",
+        "我收藏的宏": "Macro tôi đã lưu",
+        "宏收藏夹": "Danh sách macro yêu thích",
+        "亲友分享的宏": "Macro được bạn bè chia sẻ",
+        "亲友的宏": "Macro của bạn bè",
+        "排行榜": "Bảng xếp hạng",
+        "全新上线": "Mới ra mắt",
+        "即将推出": "Sắp ra mắt"
+    },
+    "macro/src/views/Bucket.vue": {
+        "自用宏将会被设置为仅私有，不论私有或公开游戏内均可以云端加载。": "Macro cá nhân sẽ được thiết lập là chỉ riêng tư, có thể tải lên đám mây dù là riêng tư hay công khai trong trò chơi.",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm",
+        "使用私有宏仓库，请先": "Để sử dụng kho macro cá nhân, vui lòng",
+        "登录": "Đăng nhập",
+        "云端宏": "Macro trên đám mây",
+        "查看详情": "Xem chi tiết"
+    },
+    "macro/src/views/Fav.vue": {
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm",
+        "使用宏收藏夹，请先": "Để sử dụng danh sách yêu thích macro, vui lòng",
+        "登录": "Đăng nhập",
+        "云端宏": "Macro trên đám mây",
+        "查看详情": "Xem chi tiết"
+    },
+    "macro/src/views/Index.vue": {
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm",
+        "云端宏": "Macro đám mây",
+        "查看详情": "Xem chi tiết"
+    },
+    "macro/src/views/Landspace.vue": {
+        "此处仅显示亲友设置为“仅亲友可见”的宏。": "Chỉ hiển thị các macro được thiết lập là 'Chỉ bạn bè có thể xem'.",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm",
+        "使用亲友限定分享仓库，请先": "Để sử dụng kho lưu trữ chia sẻ hạn chế cho bạn bè, vui lòng",
+        "登录": "đăng nhập",
+        "云端宏": "Macro trên đám mây",
+        "查看详情": "Xem chi tiết"
+    },
+    "macro/src/views/MacroEditor.vue": {
+        "智能宏编辑器": "Trình chỉnh sửa macro thông minh",
+        "宏语法参考手册": "Sổ tay tham khảo cú pháp macro",
+        "快捷插入": "Chèn nhanh",
+        "释放方式": "Cách giải phóng",
+        "释放": "Giải phóng",
+        "强制施放": "Thi triển bắt buộc",
+        "技能名": "Tên kỹ năng",
+        "条件释放": "Giải phóng theo điều kiện",
+        "点击查看实际逻辑关系": "Nhấn để xem mối quan hệ logic thực tế",
+        "实际逻辑": "Logic thực tế",
+        "确 定": "Xác nhận",
+        "并且": "Và",
+        "或": "Hoặc",
+        "判断项目": "Các mục điều kiện",
+        "自身有增减益效果": "Bản thân có hiệu ứng tăng giảm",
+        "自身有增减益效果层数": "Số lớp hiệu ứng tăng giảm của bản thân",
+        "目标有增减益效果": "Mục tiêu có hiệu ứng tăng giảm",
+        "目标有增减益效果层数": "Số lớp hiệu ứng tăng giảm của mục tiêu",
+        "自身增减益效果持续时间": "Thời gian hiệu lực của hiệu ứng tăng giảm bản thân",
+        "目标增减益效果持续时间": "Thời gian hiệu lực của hiệu ứng tăng giảm mục tiêu",
+        "自身不存在某增减益效果": "Bản thân không có hiệu ứng tăng giảm nào đó",
+        "目标不存在某增减益效果": "Mục tiêu không có hiệu ứng tăng giảm nào đó",
+        "生命值和最大血量的比值": "Tỷ lệ giữa điểm số sức khỏe và máu tối đa",
+        "内力值和最大内力值的比值": "Tỷ lệ giữa điểm nội lực và nội lực tối đa",
+        "剑气/尘身刀气/战意/怒气值": "Giá trị kiếm khí / khí đao / ý chiến / giận dữ",
+        "纯阳气点/少林禅那/七秀剑舞值": "Điểm khí thuần dương / Thiền pháp Thiếu Lâm / Giá trị vũ điệu kiếm Bảy Hoa",
+        "神机/竹雾刀气/格挡值": "Giá trị cơ khí thần / khí đao sương tre / giá trị chặn",
+        "日灵/金屏刀气值": "Giá trị linh hồn mặt trời / khí đao màn vàng",
+        "月魂值": "Giá trị Nguyệt hồn",
+        "满日状态": "Trạng thái Mãn Nhật",
+        "满月状态": "Trạng thái Mãn Nguyệt",
+        "充能技能的当前充能层数": "Số lớp tích năng của kỹ năng đang được nạp",
+        "该宏最后一次释放的技能": "Kỹ năng được phóng thích lần cuối bởi macro này",
+        "周围3尺以内敌人数量": "Số lượng kẻ địch trong phạm vi 3 thước",
+        "技能调息完成": "Kỹ năng đã hồi xong",
+        "药性点数": "Điểm dược tính",
+        "名称": "Tên",
+        "值": "Giá trị",
+        "插入": "Chèn",
+        "宏编辑区": "Khu vực chỉnh sửa macro",
+        "按下Tab键即可自动联想补全": "Nhấn phím Tab để tự động hoàn thành",
+        "（还可写": "(Còn lại",
+        "字）": "chữ)"
+    },
+    "macro/src/views/Rank.vue": {
+        "云端宏": "Macro đám mây",
+        "7天": "7 ngày",
+        "30天": "30 ngày",
+        "昨日": "Hôm qua",
+        "前日": "Hôm kia",
+        "趋势": "Xu hướng"
+    },
+    "macro/src/views/Single.vue": {
+        "心法": "Tâm pháp",
+        "资料片": "Dữ liệu mở rộng",
+        "武学序列": "Chuỗi võ học",
+        "复制": "Sao chép",
+        "编码": "Mã hóa",
+        "复制奇穴文字": "Sao chép văn bản kỳ huyệt",
+        "复制奇穴序列": "Sao chép chuỗi kỳ huyệt",
+        "急速": "Cấp tốc",
+        "配装": "Trang bị",
+        "宏": "Macro",
+        "镇派": "Trấn phái",
+        "奇穴": "Kỳ huyệt",
+        "未知": "Không rõ",
+        "错误": "Lỗi",
+        "奇穴编码解析失败": "Phân tích mã kỳ huyệt thất bại"
+    },
+    "macro/src/views/Talent.vue": {
+        "奇穴模拟器": "Mô phỏng kỳ huyệt",
+        "选择版本": "Chọn phiên bản",
+        "请选择游戏版本": "Vui lòng chọn phiên bản trò chơi",
+        "返回": "Quay lại",
+        "我的预设": "Cài đặt sẵn của tôi",
+        "选择心法": "Chọn tâm pháp",
+        "配置奇穴": "Cấu hình kỳ huyệt",
+        "奇穴编码": "Mã kỳ huyệt",
+        "粘贴编码亦可自动解析奇穴": "Dán mã cũng có thể tự động phân tích kỳ huyệt",
+        "点击复制": "Nhấp để sao chép",
+        "配装编码": "Mã trang bị",
+        "配装器编码": "Mã bộ trang bị",
+        "另存为": "Lưu thành"
+    },
+    "pvx/src/components/Nav_v5.vue": {
+        "玩家创作类栏目": "Chuyên mục sáng tạo của người chơi",
+        "捏脸数据": "Dữ liệu khuôn mặt",
+        "体型数据": "Dữ liệu hình thể",
+        "家园蓝图": "Bản vẽ gia viên",
+        "图鉴百科类栏目": "Chuyên mục bách khoa toàn thư",
+        "外观大全": "Bách khoa ngoại quan",
+        "奇遇大全": "Bách khoa kỳ ngộ",
+        "宠物大全": "Bách khoa thú cưng",
+        "坐骑大全": "Bách khoa tọa kỵ",
+        "家具大全": "Bách khoa gia cụ",
+        "声望大全": "Bách khoa danh vọng",
+        "书籍大全": "Bách khoa thư tịch",
+        "考试大全": "Bách khoa thi cử",
+        "信息查询类栏目": "Chuyên mục tra cứu thông tin",
+        "技艺助手": "Trợ lý kỹ năng",
+        "价格走势": "Xu hướng giá cả",
+        "活动告示": "Thông báo hoạt động",
+        "创意": "Sáng tạo",
+        "图鉴": "Đồ giám",
+        "信息": "Thông tin",
+        "菜": "Danh",
+        "单": "sách"
+    },
+    "search/src/components/All.vue": {
+        "筛选": "Lọc",
+        "无标题": "Không có tiêu đề",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm",
+        "来源": "Nguồn",
+        "客户端": "Client",
+        "作者": "Tác giả",
+        "分类": "Phân loại"
+    },
+    "search/src/components/Author.vue": {
+        "反馈建议": "Góp ý và đề xuất",
+        "加载更多": "Tải thêm"
+    },
+    "search/src/components/Bottom.vue": {
+        "反馈建议": "Góp ý và đề xuất"
+    },
+    "search/src/components/Cj.vue": {
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm"
+    },
+    "search/src/components/Item.vue": {
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm"
+    },
+    "search/src/components/Post.vue": {
+        "无标题": "Không có tiêu đề",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm"
+    },
+    "search/src/components/Search.vue": {
+        "请输入内容": "Vui lòng nhập nội dung",
+        "请选择": "Vui lòng chọn",
+        "全部": "Tất cả",
+        "作品": "Tác phẩm",
+        "百科": "Bách khoa",
+        "用户": "Người dùng",
+        "谷歌": "Google"
+    },
+    "search/src/components/Top.vue": {
+        "搜索中心": "Trung tâm tìm kiếm"
+    },
+    "search/src/components/Wiki.vue": {
+        "无标题": "Không có tiêu đề",
+        "匿名": "Ẩn danh",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm"
+    },
+    "wiki/src/components/relations.vue": {
+        "关联成就": "Thành tựu liên quan",
+        "同BOSS下的其它成就": "Các thành tựu khác cùng thuộc BOSS",
+        "BOSS属性参考": "Tham khảo thuộc tính BOSS",
+        "数据加载中...": "Đang tải dữ liệu...",
+        "数据加载异常": "Lỗi tải dữ liệu",
+        "暂无相关成就": "Chưa có thành tựu liên quan",
+        "首领": "Thủ lĩnh"
+    },
+    "wiki/src/components/wiki-comment.vue": {
+        "回复": "Trả lời",
+        "收起": "Thu gọn",
+        "昵称：": "Biệt danh:",
+        "提交": "Gửi",
+        "发布评论异常，请联系管理员": "Lỗi khi đăng bình luận, vui lòng liên hệ quản trị viên"
+    },
+    "wiki/src/components/wiki-comments.vue": {
+        "暂无记录": "Chưa có ghi chép",
+        "百科评论": "Bình luận bách khoa",
+        "数据加载中...": "Đang tải dữ liệu...",
+        "数据加载异常": "Lỗi tải dữ liệu",
+        "暂无评论": "Chưa có bình luận",
+        "回复": "Trả lời",
+        "昵称：": "Tên hiển thị:",
+        "提交": "Gửi",
+        "请先填写评论内容再尝试提交": "Vui lòng nhập nội dung bình luận trước khi thử gửi",
+        "提交成功，请等待审核": "Gửi thành công, vui lòng chờ phê duyệt"
+    },
+    "wiki/src/components/wiki-diff.vue": {
+        "版本对比": "So sánh phiên bản",
+        "版本选择": "Lựa chọn phiên bản",
+        "关闭": "Đóng"
+    },
+    "wiki/src/components/wiki-panel.vue": {
+        "参与贡献": "Tham gia đóng góp",
+        "综合难度": "Độ khó tổng hợp",
+        "热度": "Độ hot",
+        "更新时间": "Thời gian cập nhật"
+    },
+    "wiki/src/components/wiki-revisions.vue": {
+        "历史版本": "Phiên bản lịch sử",
+        "版本对比": "So sánh phiên bản",
+        "数据加载中": "Đang tải dữ liệu",
+        "数据加载异常": "Lỗi tải dữ liệu",
+        "暂无数据": "Chưa có dữ liệu",
+        "版本": "Phiên bản",
+        "更新时间": "Thời gian cập nhật",
+        "贡献者": "Người đóng góp",
+        "修订说明": "Ghi chú sửa đổi"
+    },
+    "wiki/src/views/game.vue": {
+        "您的浏览器版本太低,将无法正常使用本应用": "Phiên bản trình duyệt của bạn quá cũ, không thể sử dụng ứng dụng này một cách bình thường"
+    },
+    "author/src/components/newComponents/Data.vue": {
+        "配装": "Trang bị",
+        "战斗": "Chiến đấu",
+        "插件": "Plugin"
+    },
+    "author/src/components/newComponents/Exam.vue": {
+        "题目": "Đề mục",
+        "试卷": "Bài thi"
+    },
+    "author/src/components/newComponents/Fallow.vue": {
+        "捏脸": "Tạo hình khuôn mặt",
+        "体型": "Thể hình",
+        "试卷": "Bài thi",
+        "题目": "Đề mục"
+    },
+    "author/src/components/newComponents/Left.vue": {
+        "TA的作品": "Tác phẩm của TA",
+        "作品": "Tác phẩm",
+        "百科": "Bách khoa",
+        "数据": "Dữ liệu",
+        "休闲": "Giải trí",
+        "其他": "Khác"
+    },
+    "author/src/components/newComponents/Me.vue": {
+        "匿名": "Ẩn danh",
+        "当前经验": "Kinh nghiệm hiện tại",
+        "签约作者": "Tác giả ký hợp đồng",
+        "发消息": "Gửi tin nhắn",
+        "举报": "Báo cáo",
+        "拉黑": "Chặn",
+        "关注TA": "Theo dõi TA",
+        "取消关注": "Hủy theo dõi",
+        "已关注": "Đã theo dõi",
+        "加入于": "Gia nhập vào",
+        "粉丝数": "Số lượng người theo dõi",
+        "取消拉黑": "Bỏ chặn",
+        "专业版会员用户": "Người dùng chuyên nghiệp",
+        "高级版会员用户": "Người dùng cao cấp",
+        "复制成功": "Sao chép thành công",
+        "复制内容：": "Nội dung sao chép:",
+        "复制失败": "Sao chép thất bại",
+        "请手动复制": "Vui lòng sao chép thủ công",
+        "关注成功": "Theo dõi thành công",
+        "确定不再关注此人？": "Bạn có chắc chắn không muốn theo dõi người này nữa không?",
+        "提示": "Gợi ý",
+        "确定": "Xác nhận",
+        "取消": "Hủy",
+        "取关成功": "Hủy theo dõi thành công",
+        "确定要拉黑此人？": "Bạn có chắc chắn muốn chặn người này không?",
+        "拉黑成功": "Chặn thành công",
+        "操作成功": "Hoạt động thành công",
+        "万": "vạn"
+    },
+    "author/src/components/newComponents/Other.vue": {
+        "帖子": "Bài viết",
+        "回帖": "Trả lời",
+        "小册": "Bộ sưu tập",
+        "试卷": "Bài thi",
+        "题目": "Đề mục",
+        "铭牌": "Biển tên",
+        "趣图": "Thú đồ",
+        "骚话": "Chuyện phiếm"
+    },
+    "author/src/components/newComponents/Primary.vue": {
+        "TA的签名": "Chữ ký của TA",
+        "这个人太懒了~没有写签名。": "Thiếu hiệp này quá lười, không viết chữ ký.",
+        "TA的信息": "Thông tin của TA"
+    },
+    "bps/src/components/collection/collection_admin.vue": {
+        "管理面板": "Bảng quản lý",
+        "可见性变更": "Thay đổi khả năng nhìn thấy",
+        "元信息": "Thông tin metadata",
+        "请输入小册标题": "Vui lòng nhập tiêu đề cuốn sách nhỏ",
+        "标题": "Tiêu đề",
+        "请输入作者uid": "Vui lòng nhập UID tác giả",
+        "作者": "Tác giả",
+        "提交": "Gửi",
+        "取消": "Hủy",
+        "更新成功": "Cập nhật thành công"
+    },
+    "bps/src/components/collection/collection_item.vue": {
+        "最后更新于": "Cập nhật lần cuối vào"
+    },
+    "bps/src/components/collection/collection_list.vue": {
+        "创建小册": "Tạo bộ sưu tập",
+        "请输入搜索内容": "Vui lòng nhập nội dung tìm kiếm",
+        "搜索": "Tìm kiếm",
+        "没有找到相关条目": "Không tìm thấy mục liên quan"
+    },
+    "bps/src/components/collection/collection_single.vue": {
+        "管理面板": "Bảng quản lý",
+        "可见性变更": "Thay đổi khả năng nhìn thấy",
+        "元信息": "Thông tin metadata",
+        "请输入小册标题": "Vui lòng nhập tiêu đề cuốn sách nhỏ",
+        "标题": "Tiêu đề",
+        "请输入作者uid": "Vui lòng nhập UID tác giả",
+        "作者": "Tác giả",
+        "提交": "Gửi",
+        "取消": "Hủy",
+        "更新成功": "Cập nhật thành công"
+    },
+    "bps/src/components/skill/skill_item.vue": {
+        "距离": "Khoảng cách",
+        "武器": "Vũ khí",
+        "消耗内力": "Tiêu hao nội lực",
+        "秘籍": "Bí kíp",
+        "百科": "Bách khoa"
+    },
+    "bps/src/components/skill/skill_wiki.vue": {
+        "技能百科": "Bách khoa kỹ năng",
+        "完善技能百科": "Hoàn thiện bách khoa kỹ năng",
+        "本次修订由": "Lần sửa đổi này được thực hiện bởi",
+        "提交于": "Gửi vào",
+        "更多信息": "Thêm thông tin",
+        "暂无百科，我要": "Chưa có bách khoa, tôi muốn",
+        "完善百科": "Hoàn thiện bách khoa"
+    },
+    "bps/src/components/list/list_item.vue": {
+        "无界": "Không giới hạn",
+        "无标题": "Không có tiêu đề",
+        "已推送": "Đã được đẩy lên",
+        "推送": "Đẩy lên",
+        "小册": "Bộ sưu tập",
+        "主题": "Chủ đề",
+        "匿名": "Ẩn danh"
+    },
+    "bps/src/components/list/list_nav.vue": {
+        "心法导航": "Điều hướng tâm pháp",
+        "全部心法": "Tất cả tâm pháp",
+        "在线应用": "Ứng dụng trực tuyến",
+        "配装模拟器": "Máy mô phỏng trang bị",
+        "加速阈值": "Ngưỡng cấp tốc",
+        "DPS计算器": "Máy tính DPS"
+    },
+    "bps/src/components/list/list_side.vue": {
+        "作者交流群": "Nhóm trao đổi của tác giả",
+        "点击复制": "Nhấp để sao chép",
+        "推荐小册": "Đề xuất bộ sưu tập",
+        "JBSCI期刊": "Tạp chí JBSCI"
+    },
+    "bps/src/components/list/mini_ladder.vue": {
+        "天梯榜": "Thiên thang bảng",
+        "查看更多": "Xem thêm",
+        "请选择": "Vui lòng chọn"
+    },
+    "bps/src/components/list/rec_table.vue": {
+        "当前版本编辑推荐": "Đề xuất của biên tập viên cho phiên bản hiện tại"
+    },
+    "index/src/components/festival/children.vue": {
+        "六一儿童节": "Quốc tế thiếu nhi"
+    },
+    "index/src/components/festival/christmas.vue": {
+        "圣诞节快乐": "Giáng sinh"
+    },
+    "index/src/components/festival/flipScreen.vue": {
+        "   ": "Tết trung thu"
+    },
+    "index/src/components/festival/lanternFestival.vue": {
+        "元宵节快乐!": "Lễ hội đèn lồng!"
+    },
+    "index/src/components/festival/springFestival.vue": {
+        "新年快乐!": "Chúc mừng năm mới!"
+    },
+    "index/src/components/v4/important_msg.vue": {
+        "重要通知": "Thông báo quan trọng",
+        "确定收到": "Xác nhận đã nhận"
+    },
+    "index/src/components/v4/jx3world.vue": {
+        "江湖快报": "Giang hồ khoái báo",
+        "本周百战地图": "Bản đồ bách chiến tuần này",
+        "大战": "Đại chiến",
+        "战场": "Chiến trường",
+        "声望日常": "Danh vọng nhật thường",
+        "武林通鉴·秘境": "Vũ lâm thông giám · Bí cảnh",
+        "武林通鉴·团队秘境": "Vũ lâm thông giám · Đoàn đội bí cảnh",
+        "世界首领": "Thủ lĩnh thế giới",
+        "节日活动": "Hoạt động ngày lễ",
+        "特殊活动": "Hoạt động đặc thù"
+    },
+    "index/src/components/v3/box.vue": {
+        "魔盒矩阵": "Điều hướng ứng dụng",
+        "换行": "Hàng mới",
+        "隐藏": "Ẩn",
+        "显示": "Hiển thị",
+        "恢复默认": "Khôi phục mặc định",
+        "重新同步": "Đồng bộ lại",
+        "自定义": "Tùy chỉnh",
+        "保存": "Lưu"
+    },
+    "index/src/components/v3/community.vue": {
+        "最新讨论": "Thảo luận mới nhất",
+        "查看全部": "Xem tất cả",
+        "全部": "Tất cả",
+        "匿名": "Ẩn danh",
+        "查看更多": "Xem thêm",
+        "无内容": "Không có nội dung",
+        "[图片]": "[Hình ảnh]"
+    },
+    "index/src/components/v3/face.vue": {
+        "妆造推荐": "Khuyến nghị",
+        "查看全部": "Xem tất cả"
+    },
+    "index/src/components/v3/feedback.vue": {
+        "反馈中心": "Trung tâm phản hồi",
+        "盒子娘": "Xem tất cả",
+        "Bug反馈、建议意见、投诉举报": "Phản hồi lỗi, đề xuất, khiếu nại, báo cáo",
+        "使劲戳盒子娘": "Chọc vào hạp tử nương"
+    },
+    "index/src/components/v3/jx3code.vue": {
+        "今日福利": "Phúc lợi hôm nay",
+        "复制成功": "Sao chép thành công"
+    },
+    "index/src/components/v3/jx3servers.vue": {
+        "开服状态": "Trạng thái máy chủ",
+        "查看更多": "Xem tất cả"
+    },
+    "index/src/components/v3/jx3world.vue": {
+        "江湖快报": "Giang hồ khoái báo",
+        "名望": "Danh vọng",
+        "日常": "Nhật thường",
+        "休闲": "Hưu nhàn"
+    },
+    "index/src/components/v3/news.vue": {
+        "最新动态": "Tin tức",
+        "查看全部": "Xem tất cả",
+        "全部": "Tất cả",
+        "游戏": "Trò chơi",
+        "技改": "Kỹ thuật",
+        "魔盒": "JX3BOX"
+    },
+    "index/src/components/v3/posts.vue": {
+        "最新作品": "Mới nhất tác phẩm",
+        "查看全部": "Xem tất cả",
+        "全部": "Tất cả",
+        "匿名": "Ẩn danh",
+        "无标题": "Không tiêu đề",
+        "查看更多": "Xem thêm",
+        "宏库": "Macro",
+        "职业": "Môn phái",
+        "竞技": "Đối kháng",
+        "副本": "Phó bản",
+        "工具": "Công cụ",
+        "茶馆": "Trà quán",
+        "成就": "Thành tựu",
+        "物品": "Vật phẩm",
+        "任务": "Nhiệm vụ",
+        "通识": "Thông thức"
+    },
+    "index/src/components/v3/slider.vue": {
+        "魔盒电视台": "Truyền hình",
+        "剑网3魔盒": "JX3BOX"
+    },
+    "index/src/components/index/calendar.vue": {
+        "那年今日": "Ngày này năm ấy"
+    },
+    "index/src/components/index/contact.vue": {
+        "JX3BOX魔盒": "JX3BOX",
+        "关注我们": "Theo dõi",
+        "微信公众号": "Wechat",
+        "剑三魔盒": "JX3BOX",
+        "官方微博": "Weibo"
+    },
+    "index/src/components/index/daily.vue": {
+        "年": "/",
+        "月": "/",
+        "日": "/",
+        "官方微博": "Weibo",
+        "JX3BOX魔盒": "JX3BOX",
+        "微信公众号": "WeChat",
+        "剑三魔盒": "JX3BOX"
+    },
+    "index/src/components/index/database.vue": {
+        "数据库版本": "Phiên bản cơ sở dữ liệu",
+        "访问数据库": "Truy cập cơ sở dữ liệu",
+        "数据加载中...": "Đang tải dữ liệu..."
+    },
+    "index/src/components/index/face.vue": {
+        "最新捏脸": "Khuôn mặt mới nhất",
+        "查看全部": "Xem tất cả"
+    },
+    "index/src/components/index/joke.vue": {
+        "今日骚话": "Chuyện phiếm hôm nay",
+        "匿名": "Ẩn danh"
+    },
+    "index/src/views/about/Article.vue": {
+        "关于我们": "Về chúng tôi",
+        "用户协议": "Thỏa thuận người dùng",
+        "隐私政策": "Chính sách bảo mật",
+        "创作公约": "Hiệp ước sáng tác",
+        "创作激励": "Khuyến khích sáng tác"
+    },
+    "fb/src/components/bahuang/drawer.vue": {
+        "我的预设方案": "Kế hoạch dự phòng của tôi",
+        "修改名称": "Sửa tên",
+        "保存": "Lưu",
+        "取消": "Hủy bỏ",
+        "使用": "Sử dụng",
+        "删除": "Xóa",
+        "当前没有任何预设方案": "Hiện tại không có bất kỳ kế hoạch dự phòng nào",
+        "成功": "Thành công",
+        "修改成功": "Sửa thành công",
+        "确认删除": "Xác nhận xóa",
+        "提示": "Gợi ý",
+        "确定": "Đồng ý",
+        "删除成功": "Xóa thành công"
+    },
+    "fb/src/components/bahuang/right.vue": {
+        "心决": "Tâm quyết",
+        "请选择门派": "Vui lòng chọn môn phái",
+        "尚未选择": "Chưa chọn",
+        "秘术": "Bí thuật",
+        "左键选择激活，右键可删除秘术": "Chuột trái để chọn kích hoạt, chuột phải để xóa bí thuật",
+        "已激活秘术": "Bí thuật đã kích hoạt",
+        "秘技": "Bí kỹ",
+        "右键可删除秘技": "Chuột phải để xóa bí kỹ",
+        "绝技": "Tuyệt kỹ",
+        "保存为预设": "Lưu thành cài đặt sẵn",
+        "另存为": "Lưu thành"
+    },
+    "fb/src/components/bahuang/skill.vue": {
+        "主动技能": "Kỹ năng chủ động",
+        "被动招式": "Chiêu thức bị động"
+    },
+    "fb/src/components/drop/drop_item.vue": {
+        "类": "loại",
+        "需要等级": "Yêu cầu cấp độ",
+        "品质等级": "Cấp độ phẩm chất",
+        "适用门派:": "Môn phái áp dụng:",
+        "类型:": "Loại:"
+    },
+    "fb/src/components/single/single.vue": {
+        "副本": "Phó bản",
+        "其它": "Khác"
+    },
+    "fb/src/components/list/list_item.vue": {
+        "无标题": "Không có tiêu đề",
+        "已推送": "Đã đẩy",
+        "推送": "Đẩy",
+        "首领": "Thủ lĩnh",
+        "模式": "Chế độ",
+        "匿名": "Ẩn danh"
+    },
+    "fb/src/components/list/list_nav.vue": {
+        "选择副本": "Chọn phó bản",
+        "全部": "Tất cả",
+        "全部模式": "Tất cả chế độ",
+        "全部首领": "Tất cả thủ lĩnh",
+        "在线应用": "Ứng dụng trực tuyến",
+        "八荒衡鉴": "Bát Hoang Hành Giám",
+        "百战查询": "Tra cứu Bách Chiến",
+        "数据下载": "Tải dữ liệu",
+        "战斗统计": "Thống kê chiến đấu",
+        "日志分析": "Phân tích nhật ký",
+        "团队平台": "Nền tảng đội nhóm",
+        "秘境百强": "Bách cường Mật Cảnh"
+    },
+    "fb/src/components/list/list_side.vue": {
+        "全服团长交流群": "Nhóm trò chuyện trưởng đoàn toàn máy chủ",
+        "点击复制": "Nhấn để sao chép"
+    },
+    "fb/src/components/list/mini_ladder.vue": {
+        "秘境百强榜": "Bảng xếp hạng bách cường mật cảnh",
+        "查看更多": "Xem thêm",
+        "请选择": "Vui lòng chọn",
+        "当前榜单暂无数据": "Bảng xếp hạng hiện tại chưa có dữ liệu"
+    },
+    "fb/src/components/list/team_act.vue": {
+        "团队招募": "Tuyển thành viên đội",
+        "查看更多": "Xem thêm"
+    },
+    "fb/src/components/baizhan/SkillForm.vue": {
+        "技能等级": "Cấp độ kỹ năng",
+        "请选择技能重数": "Vui lòng chọn số lần kỹ năng",
+        "第": "Thứ",
+        "重": "Lần",
+        "技能CD": "Thời gian hồi kỹ năng",
+        "请选择技能CD": "Vui lòng chọn thời gian hồi kỹ năng",
+        "三级 - 60秒": "Cấp 3 - 60 giây",
+        "二级 - 30秒": "Cấp 2 - 30 giây",
+        "一级 - 10秒": "Cấp 1 - 10 giây",
+        "被动技能": "Kỹ năng bị động",
+        "伤害": "Sát thương",
+        "请填写伤害数值": "Vui lòng điền giá trị sát thương",
+        "精力消耗": "Tiêu hao tinh lực",
+        "请填写精力消耗": "Vui lòng điền tiêu hao tinh lực",
+        "耐力消耗": "Tiêu hao nội lực",
+        "请填写耐力消耗": "Vui lòng điền tiêu hao nội lực",
+        "精力打击": "Đòn đánh tinh lực",
+        "请填写精力打击": "Vui lòng điền đòn đánh tinh lực",
+        "耐力打击": "Đòn đánh nội lực",
+        "请填写耐力打击": "Vui lòng điền đòn đánh nội lực",
+        "攻略链接": "Liên kết hướng dẫn",
+        "请填写攻略链接": "Vui lòng điền liên kết hướng dẫn",
+        "备注": "Ghi chú",
+        "请填写备注": "Vui lòng điền ghi chú",
+        "取消": "Hủy",
+        "确": "Xác nhận"
+    },
+    "fb/src/components/baizhan/baizhan_comment.vue": {
+        "讨论评价": "Thảo luận và đánh giá",
+        "攻略": "Chiến lược"
+    },
+    "fb/src/components/baizhan/boss_filter.vue": {
+        "筛选": "Lọc",
+        "快速选择": "Chọn nhanh",
+        "输入关键词搜索": "Nhập từ khóa để tìm kiếm"
+    },
+    "fb/src/components/baizhan/boss_index.vue": {
+        "精英首领": "Thủ lĩnh tinh anh",
+        "首领": "Thủ lĩnh",
+        "相关攻略": "Hướng dẫn liên quan",
+        "查看全部": "Xem tất cả"
+    },
+    "fb/src/components/baizhan/boss_raider.vue": {
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm"
+    },
+    "fb/src/components/baizhan/list_item.vue": {
+        "无标题": "Không có tiêu đề"
+    },
+    "fb/src/components/baizhan/main_tabs.vue": {
+        "地图": "Bản đồ",
+        "数据": "Dữ liệu",
+        "信息": "Thông tin",
+        "更新时间：": "Cập nhật thời gian：",
+        "持续时间：": "Thời gian duy trì：",
+        "导出中...": "Đang xuất...",
+        "导出图片": "Xuất ảnh",
+        "百战地图": "Bản đồ bách chiến",
+        "技能列表": "Danh sách kỹ năng",
+        "首领数据": "Dữ liệu thủ lĩnh"
+    },
+    "fb/src/components/baizhan/map_filter.vue": {
+        "筛选": "Lọc",
+        "常用": "Thường dùng",
+        "特殊效果": "Hiệu ứng đặc biệt",
+        "首领": "Thủ lĩnh",
+        "百战地图": "Bản đồ bách chiến",
+        "技能列表": "Danh sách kỹ năng",
+        "首领信息": "Thông tin thủ lĩnh",
+        "特殊效果 & 精英首领": "Hiệu ứng đặc biệt & Thủ lĩnh tinh anh",
+        "全部效果": "Tất cả hiệu ứng",
+        "额外奖励": "Phần thưởng thêm",
+        "骰子提升": "Tăng cường xúc xắc",
+        "骰子减弱": "Giảm sức xúc xắc",
+        "秒杀首领": "Giết thủ lĩnh tức thì",
+        "格子前进": "Tiến về ô",
+        "格子后退": "Lùi về ô",
+        "逆向移动": "Di chuyển ngược",
+        "稀有提高": "Tăng độ hiếm"
+    },
+    "fb/src/components/baizhan/map_index.vue": {
+        "下载": "Tải xuống"
+    },
+    "fb/src/components/baizhan/map_level_info.vue": {
+        "第": "Lớp",
+        "层": "Tầng",
+        "层数效果": "Hiệu ứng tầng",
+        "当前层没有特殊效果": "Tầng hiện tại không có hiệu ứng đặc biệt"
+    },
+    "fb/src/components/baizhan/map_raider.vue": {
+        "相关攻略": "Hướng dẫn liên quan",
+        "查看全部": "Xem tất cả",
+        "暂无攻略": "Chưa có hướng dẫn"
+    },
+    "fb/src/components/baizhan/map_side.vue": {
+        "全服团长交流群": "Nhóm trò chuyện trưởng đoàn toàn máy chủ",
+        "点击复制": "Nhấn để sao chép",
+        "百战异闻录": "Ghi chép chiến trận bách chiến",
+        "最后更新时间": "Thời gian cập nhật cuối cùng"
+    },
+    "fb/src/components/baizhan/map_simple.vue": {
+        "本周出现位置": "Vị trí xuất hiện trong tuần này"
+    },
+    "fb/src/components/baizhan/skill_filter.vue": {
+        "筛选": "Lọc",
+        "请输入技能名称": "Vui lòng nhập tên kỹ năng",
+        "效果": "Hiệu quả",
+        "颜色": "Màu sắc",
+        "消耗": "Tiêu hao",
+        "首领": "Thủ lĩnh",
+        "全部首领": "Tất cả thủ lĩnh",
+        "未知": "Không xác định"
+    },
+    "fb/src/components/baizhan/skill_info.vue": {
+        "掉落来源": "Nguồn rơi",
+        "未知": "Không xác định",
+        "技能信息": "Thông tin kỹ năng",
+        "占用": "Chiếm dụng",
+        "破绽": "Khe hở",
+        "技能介绍": "Giới thiệu kỹ năng",
+        "查看详细数据": "Xem dữ liệu chi tiết"
+    },
+    "fb/src/components/baizhan/skill_list.vue": {
+        "技能": "Kỹ năng",
+        "首领": "Thủ lĩnh",
+        "占用": "Chiếm dụng",
+        "破绽": "Sơ hở",
+        "效果": "Hiệu quả",
+        "详细数据": "Dữ liệu chi tiết"
+    },
+    "fb/src/components/baizhan/skill_reward.vue": {
+        "技能掉落": "Rơi kỹ năng"
+    },
+    "fb/src/components/skill/skill_item.vue": {
+        "未知": "Không xác định",
+        "穿透": "Xuyên thấu",
+        "穿刺": "Xuyên giáp",
+        "伤害值": "Giá trị sát thương",
+        "复制成功": "Sao chép thành công",
+        "复制内容 : ": "Nội dung sao chép:",
+        "复制失败": "Sao chép thất bại",
+        "请手动复制": "Vui lòng sao chép thủ công"
+    },
+    "fb/src/components/skill/skill_item_props.vue": {
+        "无限制": "Không giới hạn",
+        "最多": "Tối đa",
+        "人": "người",
+        "秒": "giây"
+    },
+    "macro/src/components/talent/schema.vue": {
+        "点击自动复制": "Nhấp để sao chép tự động",
+        "点击复制": "Nhấp để sao chép",
+        "奇穴编码复制成功": "Sao chép mã kỳ huyệt thành công"
+    },
+    "macro/src/components/talent/talent_drawer.vue": {
+        "我的预设方案": "Kế hoạch đã đặt của tôi",
+        "修改名称": "Sửa đổi tên",
+        "保存": "Lưu",
+        "取消": "Hủy",
+        "使用": "Sử dụng",
+        "删除": "Xóa",
+        "当前没有任何预设方案": "Hiện tại không có kế hoạch đã đặt nào",
+        "成功": "Thành công",
+        "修改成功": "Sửa đổi thành công",
+        "提示": "Thông báo",
+        "确定": "Xác nhận",
+        "预设方案删除成功": "Xóa kế hoạch đã đặt thành công",
+        "是否删除": "Có chắc chắn xóa không?"
+    },
+    "macro/src/components/list/Info.vue": {
+        "云端宏": "Macro trực tuyến",
+        "我的宏": "Macro của tôi",
+        "收藏夹": "Mục yêu thích",
+        "亲友宏": "Macro bạn bè",
+        "排行榜": "Bảng xếp hạng"
+    },
+    "macro/src/components/list/list_item.vue": {
+        "草稿": "Bản thảo",
+        "无界": "Không giới hạn",
+        "繁體": "Phồn thể",
+        "无标题": "Không tiêu đề",
+        "已推送": "Đã đẩy lên",
+        "推送": "Đẩy lên",
+        "点击快捷查看 · ": "Nhấp để xem nhanh ·",
+        "未命名": "Chưa đặt tên",
+        "匿名": "Ẩn danh"
+    },
+    "macro/src/components/list/list_nav.vue": {
+        "心法导航": "Hướng dẫn tâm pháp",
+        "全部心法": "Tất cả",
+        "在线应用": "Ứng dụng trực tuyến",
+        "配装模拟器": "Mô phỏng trang bị",
+        "奇穴模拟器": "Mô phỏng kỳ huyệt",
+        "镇派模拟器": "Mô phỏng trấn phái",
+        "云宏编辑器": "Chỉnh sửa macro trực tuyến",
+        "冰心诀": "Băng Tâm Quyết",
+        "云裳心经": "Vân Thường Tâm Kih",
+        "花间游": "Hoa Gian Du",
+        "离经易道": "Ly Kinh Dị Đạo",
+        "毒经": "Độc Kinh",
+        "补天诀": "Bổ Thiên Quyết",
+        "莫问": "Mạc Vấn",
+        "相知": "Tương Tri",
+        "傲血战意": "Ngạo Huyết Chiến",
+        "铁牢律": "Thiết Lao Luật",
+        "易筋经": "Dị Cân Kinh",
+        "洗髓经": "Tẩy Tuỷ Kinh",
+        "焚影圣诀": "Phần Ảnh Thánh Quết",
+        "明尊琉璃体": "Minh Tôn Lưu Ly Tể",
+        "分山劲": "Phân Sơn Kình",
+        "铁骨衣": "Thiết Cốt Y",
+        "紫霞功": "Tử Hà Công",
+        "太虚剑意": "Thái Hư Kiếm Ý",
+        "天罗诡道": "Thiên La Nguỵ Đạo",
+        "惊羽诀": "Kinh Vũ Quyết",
+        "问水诀": "Vấn Thuỷ Quyết",
+        "山居剑意": "Sơn Cư Kiếm Ý",
+        "笑尘诀": "Tiếu Trần Quyết",
+        "北傲诀": "Bắc Ngạo Quyết",
+        "凌海诀": "Lăng Hải Quyết",
+        "隐龙诀": "Ẩn Long Quyết",
+        "太玄经": "Thái Huyền Kinh",
+        "无方": "Vô Phương",
+        "灵素": "Linh Tố",
+        "孤锋诀": "Cô Phong Quyết",
+        "山海心诀": "Sơn Hải Tâm Quyết",
+        "通用": "Thông Dụng"
+    },
+    "macro/src/components/list/list_side.vue": {
+        "宏作者交流群": "Nhóm tác giả macro",
+        "点击复制": "Nhấn để sao chép",
+        "帮助文档": "Tài liệu hướng dẫn",
+        "入门帮助": "Hỗ trợ nhập môn",
+        "发布指南": "Hướng dẫn đăng bài",
+        "辅助工具": "Công cụ hỗ trợ"
+    },
+    "macro/src/components/list/minirank.vue": {
+        "排行榜": "Bảng xếp hạng",
+        "查看更多": "Xem thêm"
+    },
+    "macro/src/components/list/rec_table.vue": {
+        "当前版本编辑推荐": "Đề xuất chỉnh sửa phiên bản hiện tại"
+    },
+    "macro/src/components/meridians/dahe.vue": {
+        "冲脉": "Xung mạch"
+    },
+    "macro/src/components/meridians/detail.vue": {
+        "第": "Đệ",
+        "重": "Trùng",
+        "当前重：": "Trùng hiện tại:",
+        "此招式已练到最高境界。": "Chiêu thức này đã luyện đến cảnh giới cao nhất.",
+        "需要等级：": "Yêu cầu cấp độ:",
+        "消耗修为：": "Tiêu hao tu vi:",
+        "成功率：": "Tỉ lệ thành công:",
+        "需要已经打通：": "Cần đã thông qua:"
+    },
+    "macro/src/components/meridians/henggu.vue": {
+        "冲脉": "Xung mạch"
+    },
+    "macro/src/components/meridians/mingmen.vue": {
+        "督脉": "Đốc mạch"
+    },
+    "macro/src/components/meridians/qixue.vue": {
+        "经外奇穴": "Kinh ngoại kỳ huyệt"
+    },
+    "macro/src/components/meridians/qugu.vue": {
+        "任脉": "Nhâm mạch"
+    },
+    "macro/src/components/meridians/tianchong.vue": {
+        "带脉": "Đới mạch"
+    },
+    "macro/src/components/meridians/weidao.vue": {
+        "带脉": "Đới mạch"
+    },
+    "macro/src/components/meridians/xuanshu.vue": {
+        "督脉": "Đốc mạch"
+    },
+    "macro/src/components/meridians/yaoshu.vue": {
+        "督脉": "Đốc mạch"
+    },
+    "macro/src/components/meridians/yutang.vue": {
+        "任脉": "Nhâm mạch"
+    },
+    "macro/src/components/single/pz.vue": {
+        "点击查看配装详情": "Nhấp để xem chi tiết trang bị",
+        "未命名": "Chưa đặt tên"
+    },
+    "macro/src/components/single/single.vue": {
+        "心法": "Tâm pháp",
+        "资料片": "Bản mở rộng",
+        "宏": "Macro",
+        "复制": "Sao chép",
+        "编码": "Mã hóa",
+        "复制奇穴文字": "Sao chép văn bản kỳ huyệt",
+        "复制奇穴序列": "Sao chép chuỗi kỳ huyệt",
+        "急速": "Cấp tốc",
+        "配装": "Trang bị",
+        "错误": "Lỗi",
+        "奇穴编码解析失败": "Phân tích mã kỳ huyệt thất bại"
+    },
+    "macro/src/components/single/single_side.vue": {
+        "云端宏": "Macro đám mây",
+        "如何使用? ": "Cách sử dụng?",
+        "通用": "Chung"
+    },
+    "pvx/src/components/body/item.vue": {
+        "编辑推荐": "Đề cử",
+        "可新建": "Khả dụng",
+        "付费": "Trả phí",
+        "匿名": "Ẩn danh",
+        "热门": "Phổ biến",
+        "推荐": "Đề xuất",
+        "精选": "Chọn lọc"
+    },
+    "pvx/src/components/common/toolbar.vue": {
+        "请输入搜索内容": "Nhập nội dung tìm kiếm",
+        "全部": "Tất cả",
+        "成男": "Đại nam",
+        "成女": "Đại nữ",
+        "正太": "Shota",
+        "萝莉": "Loli"
+    },
+    "pvx/src/components/face/item.vue": {
+        "创意": "Sáng tạo",
+        "玩家创作类栏目": "Góc sáng tạo của người chơi",
+        "捏脸数据": "Dữ liệu khuôn mặt",
+        "体型数据": "Hình thể nhân vật",
+        "家园蓝图": "Bản thiết kế gia viên",
+        "图鉴百科类栏目": "Thư viện kiến thức",
+        "外观大全": "Bộ sưu tập ngoại hình",
+        "奇遇大全": "Bách khoa kỳ ngộ",
+        "宠物大全": "Bách khoa thú cưng",
+        "坐骑大全": "Bách khoa tọa kỵ",
+        "家具大全": "Bách khoa gia cụ",
+        "声望大全": "Bách khoa danh vọng",
+        "书籍大全": "Bách khoa thư tịch",
+        "考试大全": "Bách khoa thi cử",
+        "信息查询类栏目": "Tra cứu thông tin",
+        "技艺助手": "Trợ lý kỹ năng",
+        "价格走势": "Xu hướng giá cả",
+        "活动告示": "Thông báo sự kiện",
+        "写实": "thực tế",
+        "写意": "ý tưởng",
+        "可新建": "khả dụng",
+        "推荐": "đề xuất",
+        "匿名": "ẩn danh"
+    },
+    "pvx/src/components/face/tabs.vue": {
+        "全部": "Tất cả",
+        "成男": "Đại nam",
+        "成女": "Đại nữ",
+        "正太": "Shota",
+        "萝莉": "Loli",
+        "有图": "Có ảnh",
+        "捏脸码": "Mã khuôn mặt",
+        "写实": "Thực tế",
+        "写意": "Ý tưởng",
+        "精选": "Đề xuất",
+        "免费": "Miễn phí",
+        "可新建": "Khả dụng",
+        "数据解析": "Phân tích dữ liệu",
+        "发布作品": "Xuất bản",
+        "加载更多": "Xem thêm",
+        "查看全部": "Xem tất cả"
+    },
+    "pvx/src/components/pet/tabs.vue": {
+        "全部地图": "Tất cả",
+        "地图": "Địa điểm",
+        "来源": "Nguồn"
+    },
+    "pvx/src/components/pvx/Adventure.vue": {
+        "查看更多": "Xem thêm",
+        "绝世奇遇": "Kỳ ngộ tuyệt thế",
+        "普通奇遇": "Kỳ ngộ thông thường",
+        "宠物奇遇": "Kỳ ngộ thú cưng"
+    },
+    "pvx/src/views/book/Index.vue": {
+        "名称": "Tên",
+        "类型": "Loại",
+        "套书": "Bộ sách",
+        "描述": "Mô tả",
+        "来源": "Nguồn",
+        "共": "tổng cộng",
+        "本": "quyển",
+        "查看全部": "Xem tất cả",
+        "加载更多": "Xem thêm",
+        "最近阅读": "Đọc gần đây",
+        "杂集": "Tạp văn",
+        "道学": "Đạo học",
+        "佛学": "Phật học",
+        "列表": "Danh sách",
+        "卡片": "Thẻ",
+        "全部": "Tất cả"
+    },
+    "pvx/src/views/book/Single.vue": {
+        "返回列表": "Trở về",
+        "书籍信息": "Thông tin sách",
+        "来源：": "Nguồn:",
+        "秘境": "Bí cảnh",
+        "商店": "Cửa hàng",
+        "任务": "Nhiệm vụ",
+        "查看位置": "Xem vị trí",
+        "所属套书：": "Bộ sách thuộc:",
+        "阅读等级：": "Cấp độ đọc:",
+        "抄录要求": "Yêu cầu sao chép",
+        "角色等级：": "Cấp độ nhân vật:",
+        "杂集等级：": "Cấp độ tạp văn:",
+        "道学等级：": "Cấp độ đạo học:",
+        "佛学等级：": "Cấp độ phật học:",
+        "精力消耗：": "Tiêu hao tinh lực:",
+        "所需材料：": "Nguyên liệu cần thiết:",
+        "继续": "Tiếp tục",
+        "返回": "Trở về",
+        "古风": "Cổ phong",
+        "现代": "Hiện đại",
+        "套书·": "Bộ sách·",
+        "该套书有成就": "Bộ sách này có thành tựu",
+        "碑铭信息": "Thông tin bia sách",
+        "书籍": "Sách",
+        "碑铭位置": "Vị trí bia sách"
+    },
+    "pvx/src/views/body/List.vue": {
+        "没找到对应的体型，请重新选择条件或关键词搜索": "Không tìm thấy hình thể tương ứng, vui lòng chọn lại điều kiện hoặc tìm kiếm bằng từ khóa khác",
+        "没有找到相关的体型": "Không tìm thấy hình thể liên quan",
+        "全部体型": "Tất cả hình thể",
+        "成男体型": "Hình thể đại nam",
+        "成女体型": "Hình thể đại nữ",
+        "正太体型": "Hình thể shota",
+        "萝莉体型": "Hình thể loli",
+        "查看全部": "Xem tất cả",
+        "加载更多": "Xem thêm"
+    },
+    "pvx/src/views/face/List.vue": {
+        "成男脸型": "Khuôn mặt đại nam",
+        "成女脸型": "Khuôn mặt đại nữ",
+        "正太脸型": "Khuôn mặt shota",
+        "萝莉脸型": "Khuôn mặt loli",
+        "加载更多": "Xem thêm",
+        "查看全部": "Xem tất cả",
+        "没找到对应的捏脸，请重新选择条件或关键词搜索": "Không tìm thấy tạo hình khuôn mặt tương ứng, vui lòng chọn lại điều kiện hoặc tìm kiếm từ khóa",
+        "没有找到相关的捏脸": "Không tìm thấy tạo hình khuôn mặt liên quan"
+    },
+    "pvx/src/views/face/Single.vue": {
+        "下载": "Tải xuống",
+        "下载数据": "Tải dữ liệu",
+        "关于作者": "Về tác giả",
+        "原创": "Nguyên tác",
+        "发布作品": "Phát hành",
+        "售价：": "Giá bán:",
+        "备注：": "Ghi chú:",
+        "复制捏脸码": "Sao chép mã mặt",
+        "已下架": "Đã gỡ xuống",
+        "数据分析将在购买后解锁": "Phân tích dữ liệu sẽ được mở khóa sau khi mua",
+        "数据列表": "Danh sách dữ liệu",
+        "无": "Không",
+        "无标题": "Không tiêu đề",
+        "更新时间：": "Thời gian cập nhật:",
+        "独家数据分析": "Phân tích dữ liệu",
+        "盒币": "xu",
+        "编辑": "Chỉnh sửa",
+        "编辑推荐": "Chỉnh sửa đề xuất",
+        "荣登头条": "Lên trang đầu",
+        "讨论": "Thảo luận",
+        "该数据含游戏内收费项目，总计约": "Dữ liệu này chứa các mục tính phí trong game, tổng cộng khoảng",
+        "该脸型于": "Mặt này đã",
+        "该脸型数据暂无图片": "Dữ liệu mặt này tạm thời không có hình ảnh",
+        "说明": "Giải thích",
+        "购买": "Mua",
+        "返回列表": "Trở về danh sách",
+        "通宝": "thông bảo",
+        "金箔": "kim",
+        "首发": "Phát hành đầu tiên"
+    },
+    "pvx/src/views/index/Index.vue": {
+        "创意": "Sáng tạo",
+        "玩家创作类栏目": "Góc sáng tạo của người chơi",
+        "捏脸数据": "Dữ liệu khuôn mặt",
+        "体型数据": "Hình thể nhân vật",
+        "家园蓝图": "Bản thiết kế gia viên",
+        "图鉴百科类栏目": "Thư viện kiến thức",
+        "外观大全": "Bộ sưu tập ngoại hình",
+        "奇遇大全": "Bách khoa kỳ ngộ",
+        "宠物大全": "Bách khoa thú cưng",
+        "坐骑大全": "Bách khoa tọa kỵ",
+        "家具大全": "Bách khoa gia cụ",
+        "声望大全": "Bách khoa danh vọng",
+        "书籍大全": "Bách khoa thư tịch",
+        "考试大全": "Bách khoa thi cử",
+        "信息查询类栏目": "Tra cứu thông tin",
+        "技艺助手": "Trợ lý kỹ năng",
+        "价格走势": "Xu hướng giá cả",
+        "活动告示": "Thông báo sự kiện"
+    },
+    "pvx/src/views/pet/PetList.vue": {
+        "今日福缘": "Phúc duyên hôm nay",
+        "查看全部": "Xem tất cả",
+        "加载更多": "Tải thêm",
+        "没有找到相关宠物": "Không tìm thấy thú cưng liên quan",
+        "所有途径": "Tất cả các cách",
+        "世界奇遇": "Kỳ ngộ thế giới",
+        "积分回馈": "Phản hồi điểm tích lũy",
+        "秘境奇遇": "Kỳ ngộ bí cảnh",
+        "门派特有": "Đặc biệt của môn phái",
+        "游戏活动": "Hoạt động trò chơi",
+        "限时宠物": "Thú cưng giới hạn thời gian",
+        "运营活动": "Hoạt động vận hành",
+        "所有种类": "Tất cả các loại",
+        "水族": "Thủy tộc",
+        "禽鸟": "Cầm điểu",
+        "走兽": "Tẩu thú",
+        "机关": "Cơ quan"
+    },
+    "pvx/src/views/pvg/Gonggao.vue": {
+        "速览": "Tổng quan",
+        "日历": "Lịch sự kiện",
+        "开服状态": "Trạng thái máy chủ",
+        "良好": "Ổn định",
+        "繁忙": "Đông đúc",
+        "爆满": "Quá tải",
+        "维护": "Bảo trì"
+    },
+    "tool/src/components/database/dbm_item.vue": {
+        "私有": "Riêng tư",
+        "等级": "Cấp độ",
+        "地图": "Bản đồ",
+        "备注": "Ghi chú",
+        "引用": "Trích dẫn",
+        "查看引用源": "Xem nguồn trích dẫn",
+        "解析导入": "Phân tích và nhập"
+    },
+    "tool/src/components/database/detail.vue": {
+        "返回": "Quay lại",
+        "引用的元数据": "Siêu dữ liệu trích dẫn",
+        "评论": "Nhận xét"
+    },
+    "tool/src/components/database/filter.vue": {
+        "筛选条件": "Điều kiện lọc",
+        "重制": "Trọng chế",
+        "缘起": "Duyên khởi",
+        "名称": "Tên",
+        "请输入 ID 或 名称": "Vui lòng nhập ID hoặc Tên",
+        "等级": "Cấp độ",
+        "请输入等级": "Vui lòng nhập cấp độ",
+        "地图": "Bản đồ",
+        "请输入NPC所在地图": "Vui lòng nhập bản đồ nơi NPC ở",
+        "添加查询条件": "Thêm điều kiện tìm kiếm",
+        "精确匹配": "Khớp chính xác",
+        "搜索": "Tìm kiếm"
+    },
+    "tool/src/components/database/list.vue": {
+        "最新数据": "Dữ liệu mới nhất",
+        "引用指数": "Chỉ số trích dẫn",
+        "加载更多": "Tải thêm",
+        "没有找到符合条件的条目": "Không tìm thấy mục phù hợp với điều kiện"
+    },
+    "tool/src/components/database/star.vue": {
+        "我的收藏": "Danh sách yêu thích của tôi",
+        "暂无收藏项目噢": "Chưa có mục yêu thích nào"
+    },
+    "tool/src/components/database/tabs.vue": {
+        "技能": "Kỹ năng",
+        "交互物件": "Đối tượng tương tác"
+    },
+    "tool/src/components/database/versions.vue": {
+        "数据库版本": "Phiên bản cơ sở dữ liệu",
+        "数据加载中...": "Đang tải dữ liệu...",
+        "更新于": "Cập nhật vào"
+    },
+    "tool/src/components/design/emotion.vue": {
+        "剑三表情包": "Gói biểu cảm Kiếm Tam",
+        "下载压缩包": "Tải gói nén",
+        "下载QQ表情包": "Tải gói biểu cảm QQ"
+    },
+    "tool/src/components/design/fav.vue": {
+        "收藏图标": "Biểu tượng yêu thích",
+        "没有收藏的图标，请搜索图标进行添加。": "Chưa có biểu tượng yêu thích, vui lòng tìm kiếm biểu tượng để thêm vào."
+    },
+    "tool/src/components/design/icon_view.vue": {
+        "输入搜索条件，按 enter 进行搜索": "Nhập điều kiện tìm kiếm và nhấn enter để tìm",
+        "类别": "Loại",
+        "子类别": "Danh mục con",
+        "标签": "Nhãn",
+        "文件": "Tệp"
+    },
+    "tool/src/components/design/icons.vue": {
+        "剑三图标库": "Thư viện biểu tượng Kiếm Tam",
+        "探索模式": "Chế độ khám phá",
+        "浏览模式": "Chế độ duyệt",
+        "图标库": "Thư viện biểu tượng",
+        "收藏图标": "Biểu tượng yêu thích"
+    },
+    "tool/src/components/design/item.vue": {
+        "点击快速复制": "Nhấn để sao chép nhanh"
+    },
+    "tool/src/components/design/map.vue": {
+        "世界地图": "Bản đồ thế giới",
+        "交通路线": "Tuyến giao thông",
+        "周边城镇": "Các thị trấn xung quanh",
+        "周边秘境": "Các bí cảnh xung quanh",
+        "地图": "Bản đồ",
+        "所有地图": "Tất cả bản đồ"
+    },
+    "tool/src/components/design/nav.vue": {
+        "剑三图标库": "Thư viện biểu tượng Kiếm Tam",
+        "剑三表情包": "Gói biểu cảm Kiếm Tam",
+        "剑三地图库": "Thư viện bản đồ Kiếm Tam",
+        "魔盒矢量库": "Thư viện hình vector Magic Box",
+        "魔盒壁纸库": "Thư viện hình nền Magic Box"
+    },
+    "tool/src/components/design/search.vue": {
+        "输入搜索条件，例如：3089、1-100、幽月乱花": "Nhập điều kiện tìm kiếm, ví dụ: 3089, 1-100, Nhị Nguyệt Loạn Hoa",
+        "输入单个数字，例如1，返回IconID为1的图标；": "Nhập một số, ví dụ 1, trả về biểu tượng có IconID là 1;",
+        "输入多个数字，例如2,4,6（支持中英文逗号“,”,顿号“、”,斜杠“/”,竖杠“|”），返回IconID分别为2,4,6的三个图标；": "Nhập nhiều số, ví dụ 2,4,6 (hỗ trợ dấu phẩy “,”, dấu chấm “、”, dấu gạch chéo “/”, dấu gạch đứng “|”), trả về ba biểu tượng có IconID lần lượt là 2,4,6;",
+        "输入范围区间，例如1~100或1-100，返回IconID从1至100的100个图标；": "Nhập khoảng phạm vi, ví dụ 1~100 hoặc 1-100, trả về 100 biểu tượng có IconID từ 1 đến 100;",
+        "可以同时输入多个数字和多个范围，例如2,3,11-14,17，返回IconID分别为2,3,11,12,13,14,17的7个图标；": "Có thể nhập đồng thời nhiều số và nhiều phạm vi, ví dụ 2,3,11-14,17, trả về 7 biểu tượng có IconID lần lượt là 2,3,11,12,13,14,17;",
+        "输入单个图标名称，可以根据名称模糊搜索相关图标，例如：幽月、幽月乱花。": "Nhập tên một biểu tượng, có thể tìm kiếm biểu tượng liên quan theo tên, ví dụ: Nhị Nguyệt, Nhị Nguyệt Loạn Hoa.",
+        "每次上限500个": "Giới hạn 500 biểu tượng mỗi lần",
+        "以下为部分图标展示，请在上方自定义搜索范围，点击图标即可收藏。": "Dưới đây là một số biểu tượng, vui lòng tùy chỉnh phạm vi tìm kiếm ở trên, nhấp vào biểu tượng để yêu thích.",
+        "没有找到对应的图标，请重新输入关键词搜索图标。": "Không tìm thấy biểu tượng tương ứng, vui lòng nhập lại từ khóa để tìm kiếm biểu tượng.",
+        "查询后500个": "500 biểu tượng sau khi tìm kiếm"
+    },
+    "tool/src/components/design/vector.vue": {
+        "点击下载": "Nhấn để tải xuống"
+    },
+    "tool/src/components/design/wallpaper.vue": {
+        "点击查看原图": "Nhấn để xem ảnh gốc"
+    },
+    "tool/src/components/list/list_item.vue": {
+        "无标题": "Không có tiêu đề",
+        "已推送": "Đã được gửi",
+        "推送": "Gửi",
+        "这个作者很懒,什么都没有留下": "Tác giả này rất lười, không để lại gì cả"
+    },
+    "tool/src/components/list/list_nav.vue": {
+        "工具作者交流群": "Nhóm tác giả công cụ",
+        "点击复制": "Nhấn để sao chép",
+        "在线应用": "Ứng dụng trực tuyến",
+        "数据构建": "Xây dựng dữ liệu",
+        "数据库大全": "Danh sách cơ sở dữ liệu",
+        "美术资源": "Tài nguyên mỹ thuật",
+        "用户配置数据": "Dữ liệu cấu hình người dùng"
+    },
+    "tool/src/components/list/list_side.vue": {
+        "工具作者交流群": "Nhóm tác giả công cụ",
+        "点击复制": "Nhấn để sao chép",
+        "魔盒文档": "Tài liệu Magic Box",
+        "发布指南": "Hướng dẫn đăng",
+        "版规与要求": "Quy tắc và yêu cầu diễn đàn",
+        "API文档": "Tài liệu API",
+        "入门指南": "Hướng dẫn bắt đầu",
+        "热门搜索": "Tìm kiếm phổ biến"
+    },
+    "tool/src/components/list/list_tabs.vue": {
+        "全部资源": "Tất cả tài nguyên",
+        "工具资源": "Tài nguyên công cụ",
+        "权威白皮书": "Sách trắng uy tín",
+        "插件数据": "Dữ liệu plugin",
+        "优质作品": "Tác phẩm chất lượng cao",
+        "学习笔札": "Ghi chú học tập",
+        "魔盒文档": "Tài liệu Magic Box",
+        "魔盒助手": "Trợ lý Magic Box"
+    },
+    "tool/src/components/list/list_top.vue": {
+        "公告": "Thông báo"
+    },
+    "tool/src/components/list/minirank.vue": {
+        "排行榜": "Bảng xếp hạng",
+        "查看更多": "Xem thêm",
+        "综合": "Tổng hợp",
+        "下载": "Tải về",
+        "订阅": "Đăng ký",
+        "收藏": "Yêu thích"
+    },
+    "tool/src/components/list/rec_table.vue": {
+        "工具版公告与推荐置顶": "Thông báo và đề xuất nổi bật của bản công cụ"
+    },
+    "tool/src/components/single/single.vue": {
+        "类型": "Loại"
+    },
+    "tool/src/components/single/single_dat.vue": {
+        "类型": "Loại",
+        "默认存在1分钟缓存，如需要即时生效请点击此按钮": "Mặc định có bộ nhớ đệm trong 1 phút, nếu cần hiệu lực ngay lập tức, vui lòng nhấp vào nút này",
+        "云端同步刷新": "Đồng bộ đám mây và làm mới",
+        "本地下载": "Tải xuống cục bộ",
+        "数据类型：": "Loại dữ liệu:",
+        "默认数据下载": "Tải dữ liệu mặc định",
+        "下载": "Tải về"
+    },
+    "tool/src/components/single/single_meta.vue": {
+        "暂无资源": "Chưa có tài nguyên",
+        "前往下载": "Đi tới trang tải xuống",
+        "特别说明": "Lưu ý đặc biệt",
+        "快捷举报": "Báo cáo nhanh"
+    },
+    "wiki/src/components/cj/achievement-count.vue": {
+        "常规成就数": "Thành tựu thường",
+        "常规资历数": "Điểm thành tựu thường",
+        "五甲成就数": "Thành tựu Ngũ giáp",
+        "五甲资历数": "Điểm thành tựu Ngũ giáp"
+    },
+    "wiki/src/components/cj/achievement-single.vue": {
+        "修订时间：": "Thời gian sửa đổi:",
+        "综合难度：": "Độ khó tổng hợp:",
+        "取消完成": "Hủy bỏ hoàn thành",
+        "称号前缀：": "Tiền tố danh hiệu:",
+        "称号后缀：": "Hậu tố danh hiệu:",
+        "已完成": "Đã hoàn thành",
+        "待完成": "Chưa hoàn thành",
+        "设为完成": "Đánh dấu hoàn thành",
+        "请先在侧边栏选择虚拟角色": "Vui lòng chọn nhân vật ảo trong thanh bên trước",
+        "警告": "Cảnh báo",
+        "确定": "Xác nhận",
+        "操作成功": "Thao tác thành công",
+        "已将该成就标记为已完成": "Đã đánh dấu thành tựu này là hoàn thành",
+        "已将该成就标记为待完成": "Đã đánh dấu thành tựu này là chờ hoàn thành"
+    },
+    "wiki/src/components/cj/extend.vue": {
+        "各区服成就群": "Các nhóm thành tựu",
+        "申请展示": "Đăng ký hiển thị"
+    },
+    "wiki/src/components/cj/notice.vue": {
+        "公告": "Thông báo"
+    },
+    "wiki/src/components/cj/relations.vue": {
+        "公告": "Thông báo",
+        "关联成就": "Thành tựu liên quan",
+        "同BOSS下的其它成就": "Các thành tựu khác dưới cùng BOSS",
+        "BOSS属性参考": "Tham khảo thuộc tính BOSS",
+        "数据加载中": "Đang tải dữ liệu",
+        "数据加载异常": "Lỗi tải dữ liệu",
+        "暂无相关成就": "Chưa có thành tựu liên quan",
+        "首领": "Thủ lĩnh"
+    },
+    "wiki/src/components/cj/sidebar.vue": {
+        "请选择当前角色": "Vui lòng chọn nhân vật hiện tại",
+        "角色": "Nhân vật",
+        "请先在游戏中同步成就": "Vui lòng đồng bộ thành tựu trong game trước",
+        "虚拟角色即为魔盒账号本身，可自定义进度": "Nhân vật ảo chính là tài khoản Ma Hộp, có thể tùy chỉnh tiến độ",
+        "虚拟角色": "Nhân vật ảo",
+        "只看未完成": "Chỉ xem chưa hoàn thành",
+        "<虚拟角色>": "<nhân vật ảo>",
+        "常规成就": "Thành tựu thường",
+        "五甲成就": "Thành tựu Ngũ Giáp",
+        "其他板块": "Các phần khác",
+        "最新成就": "Thành tựu mới nhất",
+        "待攻略成就": "Thành tựu chờ hướng dẫn",
+        "奇遇成就": "Thành tựu kỳ ngộ",
+        "珍奇成就": "Thành tựu quý hiếm"
+    },
+    "wiki/src/components/common/counter.vue": {
+        "待攻略成就": "Thành tựu chờ hướng dẫn",
+        "待攻略物品": "Vật phẩm chờ hướng dẫn",
+        "待攻略任务": "Nhiệm vụ chờ hướng dẫn"
+    },
+    "wiki/src/components/common/menu.vue": {
+        "成就": "Thành tựu",
+        "物品": "Vật phẩm",
+        "任务": "Nhiệm vụ",
+        "通识": "Kiến thức chung"
+    },
+    "wiki/src/components/common/post-list.vue": {
+        "最近攻略": "Hướng dẫn gần đây"
+    },
+    "wiki/src/components/common/qr-code.vue": {
+        "二维码": "QR",
+        "扫一扫即可访问": "Quét để truy cập",
+        "扫一扫手机访问": "Quét mã trên điện thoại di động để truy cập"
+    },
+    "wiki/src/components/common/rank.vue": {
+        "排行榜": "Bảng xếp hạng",
+        "成就": "Thành tựu",
+        "物品": "Vật phẩm",
+        "任务": "Nhiệm vụ",
+        "通识": "Thông thức",
+        "技能": "Kỹ năng"
+    },
+    "wiki/src/components/common/search.vue": {
+        "输入关键词「回车」进行搜索": "Nhập từ khóa và nhấn 'Enter' để tìm kiếm",
+        "返回": "Trở lại",
+        "关键词": "Từ khóa",
+        "搜索": "Tìm kiếm"
+    },
+    "wiki/src/components/quest/nav.vue": {
+        "输入关键字": "Nhập từ khóa",
+        "新手村": "Tân thủ thôn",
+        "门派": "Môn phái",
+        "测试": "Trắc thí",
+        "主城": "Chủ thành",
+        "老主城": "Lão chủ thành",
+        "野外": "Dã ngoại",
+        "老野外": "Lão dã ngoại",
+        "小队秘境": "Tiểu đội bí cảnh",
+        "阵营": "Trận doanh",
+        "战场": "Chiến trường",
+        "团队秘境": "Đoàn đội bí cảnh",
+        "竞技场": "Cạnh kỹ trường",
+        "其他": "Kỳ tha",
+        "帮会": "Bang hội",
+        "帮会战场": "Bang hội chiến trường"
+    },
+    "wiki/src/components/item/equip.vue": {
+        "配装ID:": "Mã trang bị"
+    },
+    "wiki/src/components/item/item-breadcrumb.vue": {
+        "物品总数": "Tổng số vật phẩm",
+        "破败物品数": "Số lượng tàn phẩm",
+        "普通物品数": "Số lượng thường phẩm",
+        "精巧物品数": "Số lượng tinh phẩm",
+        "卓越物品数": "Số lượng tuyệt phẩm",
+        "珍奇物品数": "Số lượng trân kỳ phẩm",
+        "稀世物品数": "Số lượng thần phẩm"
+    },
+    "wiki/src/components/item/item-price-chart.vue": {
+        "今日均价": "Giá trung bình hôm nay",
+        "今日最低价": "Giá thấp nhất hôm nay",
+        "今日最高价": "Giá cao nhất hôm nay",
+        "暂无记录": "Chưa có ghi chép"
+    },
+    "wiki/src/components/item/item-prices.vue": {
+        "物品": "Vật phẩm",
+        "等级": "Cấp độ",
+        "上传时间": "Thời gian cập nhật",
+        "服务器": "Máy chủ",
+        "一口价 (总价)": "Giá mua ngay (Tổng giá)",
+        "一口价 (单价)": "Giá mua ngay (Đơn giá)",
+        "暂无记录": "Chưa có ghi chép"
+    },
+    "wiki/src/components/item/items.vue": {
+        "暂无记录": "Chưa có ghi chép",
+        "搜索记录中": "Lịch sử tìm kiếm"
+    },
+    "wiki/src/components/item/my-items.vue": {
+        "收藏物品": "Vật phẩm sưu tầm",
+        "暂无收藏物品": "Chưa có vật phẩm sưu tầm nào"
+    },
+    "wiki/src/components/item/my-plans.vue": {
+        "我的清单": "Danh sách của tôi",
+        "创建": "Tạo",
+        "删除": "Xóa",
+        "编辑": "Chỉnh sửa",
+        "暂无物品清单记录": "Chưa có ghi chép danh sách vật phẩm",
+        "请先进行登录": "Vui lòng đăng nhập",
+        "请输入清单名称": "Vui lòng nhập tên danh sách",
+        "创建清单": "Tạo danh sách",
+        "确定": "Xác nhận",
+        "取消": "Hủy bỏ",
+        "创建成功": "Tạo thành công"
+    },
+    "wiki/src/components/item/plan-search.vue": {
+        "返回": "Trở lại",
+        "输入物品清单名称「回车」进行搜索": "Nhập tên danh mục, “Enter” để tìm kiếm",
+        "搜索": "Tìm kiếm"
+    },
+    "wiki/src/components/item/plan.vue": {
+        "请输入清单关键字": "Vui lòng nhập từ khóa danh sách",
+        "子清单": "Danh sách con",
+        "暂无清单": "Chưa có danh sách",
+        "请输入新清单名称": "Vui lòng nhập tên danh sách mới",
+        "取消": "Hủy bỏ",
+        "确定": "Xác nhận",
+        "创建新清单": "Tạo danh sách mới",
+        "加入清单": "Thêm vào danh sách",
+        "新增清单成功": "Thêm danh sách thành công",
+        "新增清单成功，物品已添加": "Thêm danh sách thành công, đồ vật đã được thêm vào"
+    },
+    "wiki/src/components/item/price-chart.vue": {
+        "今日均价": "Giá trung bình hôm nay",
+        "今日最低价": "Giá thấp nhất hôm nay",
+        "今日最高价": "Giá cao nhất hôm nay",
+        "暂无记录": "Chưa có ghi chép"
+    },
+    "wiki/src/components/item/price-tabs.vue": {
+        "全服价格": "Giá toàn server",
+        "请选择服务器": "Vui lòng chọn server",
+        "前五低价区服": "Top 5 server giá thấp nhất",
+        "价格波动": "Biến động giá",
+        "近期价格": "Giá gần đây"
+    },
+    "wiki/src/components/item/price.vue": {
+        "价格波动": "Biến động giá",
+        "服务器": "Máy chủ",
+        "请选择服务器": "Vui lòng chọn máy chủ",
+        "近期价格": "Giá gần đây"
+    },
+    "wiki/src/components/item/prices.vue": {
+        "物品": "Vật phẩm",
+        "等级": "Cấp độ",
+        "上传时间": "Thời gian cập nhật",
+        "服务器": "Máy chủ",
+        "一口价 (总价)": "Giá mua ngay (Tổng giá)",
+        "一口价 (单价)": "Giá mua ngay (Đơn giá)",
+        "暂无记录": "Chưa có ghi chép"
+    },
+    "wiki/src/components/item/relation-plans.vue": {
+        "清单名称": "Tên danh sách",
+        "描述": "Mô tả",
+        "作者": "Tác giả",
+        "更新日期": "Ngày cập nhật"
+    },
+    "wiki/src/components/item/sidebar.vue": {
+        "全部": "Tất cả"
+    },
+    "wiki/src/components/item/star-mark-items.vue": {
+        "交易趋势": "Xu hướng giao dịch",
+        "请选择服务器": "Vui lòng chọn máy chủ",
+        "搜索..": "Tìm kiếm...",
+        "今日：": "Hôm nay:",
+        "昨日：": "Hôm qua:",
+        "前日：": "Ngày hôm trước:",
+        "暂无价目": "Chưa có giá"
+    },
+    "wiki/src/components/knowledge/entry.vue": {
+        "便捷入口": "Điều hướng nhanh",
+        "成就百科": "Bách khoa thành tựu",
+        "物品百科": "Bách khoa vật phẩm",
+        "宠物百科": "Bách khoa sủng vật",
+        "任务百科": "Bách khoa nhiệm vụ"
+    },
+    "wiki/src/components/knowledge/guide.vue": {
+        "玩法指南": "Hướng dẫn cách chơi",
+        "查看更多": "Xem thêm"
+    },
+    "wiki/src/components/knowledge/hot.vue": {
+        "查看更多": "Xem thêm",
+        "暂无热门事件": "Chưa có sự kiện hot",
+        "热门剧情": "Cốt truyện hot"
+    },
+    "wiki/src/components/knowledge/jargon.vue": {
+        "术语大全": "Tổng hợp thuật ngữ",
+        "查看更多": "Xem thêm"
+    },
+    "wiki/src/components/knowledge/list-item.vue": {
+        "最后修订：": "Lần sửa đổi cuối cùng:",
+        "最后更新于": "Cập nhật cuối cùng vào"
+    },
+    "wiki/src/components/knowledge/recent.vue": {
+        "最新更新": "Cập nhật mới nhất"
+    },
+    "wiki/src/views/cj/adventure.vue": {
+        "成就攻略": "Chiến lược thành tựu"
+    },
+    "wiki/src/views/cj/detail.vue": {
+        "成就攻略": "Chiến lược thành tựu",
+        "完善成就攻略": "Hoàn thiện chiến lược thành tựu",
+        "暂无缘起攻略，以下为重制攻略，仅作参考，": "Chưa có chiến lược khởi đầu, dưới đây là chiến lược tái tạo, chỉ mang tính chất tham khảo,",
+        "参与修订": "Tham gia chỉnh sửa",
+        "本次修订由": "Chỉnh sửa lần này bởi",
+        "提交于": "Nộp vào",
+        "参与打赏": "Tham gia đóng góp",
+        "暂无攻略，我要": "Chưa có chiến lược, tôi muốn",
+        "完善攻略": "Hoàn thiện chiến lược"
+    },
+    "wiki/src/views/cj/home.vue": {
+        "便捷入口": "Điều hướng nhanh",
+        "游戏内看百科": "Xem bách khoa trong game",
+        "隐藏成就": "Ẩn tàng thành tựu",
+        "奇遇大全": "Bách khoa kỳ ngộ",
+        "宠物大全": "Bách khoa sủng vật",
+        "坐骑大全": "Bách khoa tọa kỵ",
+        "家具大全": "Bách khoa gia cụ",
+        "书籍大全": "Bách khoa thư tịch",
+        "热门成就": "Thành tựu phổ biến",
+        "最新成就": "Thành tựu mới nhất",
+        "查看更多": "Xem thêm"
+    },
+    "wiki/src/views/cj/newest.vue": {
+        "暂无记录": "Chưa có ghi chép"
+    },
+    "wiki/src/views/cj/normal.vue": {
+        "全选": "Chọn tất cả",
+        "批量设为完成": "Đánh dấu hoàn thành hàng loạt",
+        "批量取消完成": "Hủy đánh dấu hoàn thành hàng loạt",
+        "操作成功": "Thao tác thành công",
+        "已将选中成就标记为已完成": "Đã đánh dấu thành tựu được chọn là đã hoàn thành",
+        "已将选中成就标记为待完成": "Đã đánh dấu thành tựu được chọn là đang chờ hoàn thành"
+    },
+    "wiki/src/views/cj/out-print.vue": {
+        "暂无记录": "Chưa có ghi chép"
+    },
+    "wiki/src/views/cj/rare.vue": {
+        "暂无记录": "Chưa có ghi chép"
+    },
+    "wiki/src/views/cj/search.vue": {
+        "暂无记录": "Chưa có ghi chép",
+        "全选": "Chọn tất cả",
+        "批量设为完成": "Đánh dấu hoàn thành hàng loạt",
+        "批量取消完成": "Hủy đánh dấu hoàn thành hàng loạt",
+        "操作成功": "Thao tác thành công",
+        "已将选中成就标记为已完成": "Đã đánh dấu thành tựu được chọn là đã hoàn thành",
+        "已将选中成就标记为待完成": "Đã đánh dấu thành tựu được chọn là đang chờ hoàn thành"
+    },
+    "wiki/src/views/cj/waiting.vue": {
+        "所有成就都已经有了各自的攻略，以下是一些比较老旧的成就攻略": "Tất cả thành tựu đều đã có chiến lược riêng, dưới đây là một số chiến lược thành tựu cũ",
+        "暂无记录": "Chưa có ghi chép"
+    },
+    "wiki/src/views/item/detail.vue": {
+        "不绑定": "Không giới hạn",
+        "装备后绑定": "Ràng buộc sau khi trang bị",
+        "拾取后绑定": "Ràng buộc sau khi nhặt",
+        "未知": "Không xác định",
+        "制作原料": "Nguyên liệu chế tạo",
+        "拾取绑定": "Nhặt sẽ khóa",
+        "可否交易": "Có thể giao dịch",
+        "可以": "Có",
+        "不可以": "Không",
+        "回购价格": "Giá mua lại",
+        "品质等级": "Cấp chất lượng",
+        "品质": "Chất lượng",
+        "可否堆叠": "Có thể chồng",
+        "最大拥有数": "Số lượng tối đa",
+        "限时有效": "Hạn sử dụng",
+        "门派": "Môn phái",
+        "心法": "Tâm pháp",
+        "属性": "Thuộc tính",
+        "获得途径": "Cách thu được",
+        "可否附魔": "Có thể phù phép",
+        "可否收集": "Có thể thu thập",
+        "可否染色": "Có thể nhuộm màu",
+        "可否分解": "Có thể phân rã",
+        "可否摧毁": "Có thể phá hủy",
+        "可否分享": "Có thể chia sẻ",
+        "耐久度": "Độ bền",
+        "消耗品": "Tiêu hao phẩm",
+        "全服价格": "Giá cả toàn server",
+        "请选择服务器": "Vui lòng chọn server",
+        "前五低价区服": "Top 5 server giá thấp nhất",
+        "价格波动": "Biến động giá",
+        "近期价格": "Giá gần đây",
+        "物品攻略": "Chiến lược vật phẩm",
+        "完善物品攻略": "Hoàn thiện chiến lược vật phẩm",
+        "暂无缘起攻略，以下为重制攻略，仅作参考，": "Chưa có chiến lược khởi đầu, dưới đây là chiến lược tái tạo, chỉ mang tính chất tham khảo,",
+        "参与修订": "Tham gia chỉnh sửa",
+        "本次修订由": "Chỉnh sửa lần này bởi",
+        "提交于": "Nộp vào",
+        "参与打赏": "Tham gia đóng góp",
+        "暂无攻略，我要": "Chưa có chiến lược, tôi muốn",
+        "完善攻略": "Hoàn thiện chiến lược"
+    },
+    "wiki/src/views/item/home.vue": {
+        "便捷入口": "Điều hướng nhanh",
+        "游戏内看百科": "Xem bách khoa trong game",
+        "五行石合成": "Tổng hợp Ngũ hành thạch",
+        "技艺助手": "Trợ lý kỹ năng",
+        "价格走势": "Xu hướng giá cả",
+        "物品清单": "Danh sách vật phẩm",
+        "最新物品": "Vật phẩm mới nhất",
+        "暂无物品清单": "Chưa có danh sách vật phẩm",
+        "最热物品": "Vật phẩm phổ biến nhất",
+        "最新攻略": "Hướng dẫn mới nhất",
+        "综合难度：": "Độ khó tổng hợp:",
+        "暂无攻略": "Chưa có hướng dẫn"
+    },
+    "wiki/src/views/item/index.vue": {
+        "物品百科": "Bách khoa vật phẩm",
+        "绑定类型": "Loại trói buộc",
+        "所属门派": "Môn phái thuộc về",
+        "白字类型": "Loại trắng",
+        "绿字类型": "Loại xanh",
+        "获取方式": "Cách thu thập",
+        "物品类型": "Loại vật phẩm",
+        "最低品质": "Phẩm chất thấp nhất",
+        "最高品质": "Phẩm chất cao nhất",
+        "不绑定": "Không khóa khi nhặt",
+        "装备后绑定": "Khóa sau khi trang bị",
+        "拾取后绑定": "Khóa sau khi nhặt",
+        "输入物品名称（可适配中括号形式）/物品描述「回车」进行搜索": "Nhập tên đồ vật (có thể sử dụng dạng ngoặc vuông) / mô tả đồ vật「Enter」để tìm kiếm"
+    },
+    "wiki/src/views/item/item-fav.vue": {
+        "取消收藏": "Hủy bỏ",
+        "收藏": "Yêu thích",
+        "网络请求异常": "Truy cập mạng đang lỗi"
+    },
+    "wiki/src/views/item/plan-detail.vue": {
+        "返回列表": "Trở về danh sách",
+        "编辑": "Chỉnh sửa",
+        "删除": "Xóa",
+        "简介": "Giới thiệu",
+        "作者很懒什么也没写": "Tác giả lười biếng không viết gì cả",
+        "匿名": "Ẩn danh",
+        "最后更新于": "Cập nhật lần cuối vào",
+        "暂无物品": "Chưa có vật phẩm",
+        "确认是否删除该物品清单？": "Bạn có chắc chắn muốn xóa danh sách vật phẩm này không?",
+        "提示": "Nhắc nhở",
+        "确定": "Xác nhận",
+        "取消": "Hủy bỏ",
+        "删除成功": "Xóa thành công",
+        "武器": "Vũ khí",
+        "暗器": "Ám khí",
+        "帽子": "Mạo tử",
+        "上衣": "Thượng y",
+        "腰带": "Yêu đới",
+        "护腕": "Hộ oản",
+        "下装": "Hạ trang",
+        "鞋子": "Hài tử",
+        "项链": "Hạng liên",
+        "腰坠": "Yêu trụy",
+        "戒指": "Giới chỉ"
+    },
+    "wiki/src/views/item/plan-edit.vue": {
+        "编辑清单": "Chỉnh sửa danh sách",
+        "标题": "Tiêu đề",
+        "请输入物品清单的标题": "Vui lòng nhập tiêu đề cho danh sách vật phẩm",
+        "可见性": "Hiển thị",
+        "公开": "Công khai",
+        "私有": "Riêng tư",
+        "描述": "Mô tả",
+        "简单说明一下你的物品清单": "Mô tả ngắn gọn về danh sách vật phẩm của bạn",
+        "清单": "Danh sách",
+        "道具清单": "Danh sách vật phẩm",
+        "装备清单": "Danh sách trang bị",
+        "新增分组": "Thêm nhóm mới",
+        "请输入物品名称": "Vui lòng nhập tên vật phẩm",
+        "输入物品名称进行搜索": "Nhập tên vật phẩm để tìm kiếm",
+        "子清单标题（选填）": "Tiêu đề danh sách con (tùy chọn)",
+        "数量：": "Số lượng:",
+        "数字": "Số",
+        "拖拽所需道具到此处": "Kéo và thả vật phẩm cần thiết vào đây",
+        "保存": "Lưu",
+        "提交成功": "Gửi thành công"
+    },
+    "wiki/src/views/item/plan-list.vue": {
+        "物品清单": "Danh sách vật phẩm",
+        "请输入搜索内容": "Vui lòng nhập nội dung tìm kiếm",
+        "关键词": "Từ khóa",
+        "匿名": "Ẩn danh",
+        "没有对应的物品清单": "Chưa có danh sách vật phẩm tương ứng"
+    },
+    "wiki/src/views/item/search.vue": {
+        "暂无记录": "Chưa có ghi chép",
+        "，在": "tại",
+        "全部分类下搜索": "Tìm kiếm trong tất cả các phân loại"
+    },
+    "wiki/src/views/item/waiting.vue": {
+        "所有任务都已经有了各自的攻略，以下是一些比较老旧的成就攻略": "Tất cả nhiệm vụ đều đã có chiến lược riêng, dưới đây là một số chiến lược thành tựu cũ"
+    },
+    "wiki/src/views/quest/home.vue": {
+        "便捷入口": "Điều hướng nhanh",
+        "任务百科": "Nhiệm vụ bách khoa",
+        "游戏内看百科": "Xem bách khoa trong game",
+        "科举题库": "Ngân hàng đề thi khoa cử",
+        "声望大全": "Bách khoa danh vọng",
+        "书籍大全": "Bách khoa thư tịch",
+        "日常活动": "Hoạt động nhật thường",
+        "热门任务": "Nhiệm vụ phổ biến",
+        "最新任务": "Nhiệm vụ mới nhất",
+        "查看更多": "Xem thêm",
+        "最新攻略": "Hướng dẫn mới nhất"
+    },
+    "wiki/src/views/quest/newest.vue": {
+        "起始地图": "Bản đồ khởi đầu",
+        "任务名称": "Tên nhiệm vụ",
+        "可接等级": "Cấp độ có thể nhận",
+        "任务目标": "Mục tiêu nhiệm vụ",
+        "任务奖励": "Phần thưởng nhiệm vụ"
+    },
+    "wiki/src/views/quest/quest.vue": {
+        "任务百科": "Bách khoa nhiệm vụ",
+        "查看任务链需要键入完整任务名或任务ID哦": "Để xem chuỗi nhiệm vụ, bạn cần nhập tên nhiệm vụ đầy đủ hoặc ID nhiệm vụ.",
+        "查看任务链": "Xem chuỗi nhiệm vụ",
+        "支持任务名称精确或模糊搜索": "Hỗ trợ tìm kiếm nhiệm vụ theo tên chính xác hoặc mơ hồ",
+        "支持任务相关物品名称精确搜索": "Hỗ trợ tìm kiếm tên đồ vật liên quan đến nhiệm vụ chính xác",
+        "支持成就名称精确搜索": "Hỗ trợ tìm kiếm tên thành tựu chính xác",
+        "称呼": "Danh xưng",
+        "体型": "Thể hình",
+        "确定": "Xác nhận",
+        "输入任务关键字（可包括中括号），「回车」进行搜索": "Nhập từ khóa nhiệm vụ (có thể bao gồm ngoặc vuông),「Enter」để tìm kiếm"
+    },
+    "wiki/src/views/quest/search-result.vue": {
+        "起始地图": "Bản đồ khởi đầu",
+        "任务名称": "Tên nhiệm vụ",
+        "可接等级": "Cấp độ có thể nhận",
+        "任务目标": "Mục tiêu nhiệm vụ",
+        "任务奖励": "Phần thưởng nhiệm vụ"
+    },
+    "wiki/src/views/quest/single.vue": {
+        "可分享任务": "Nhiệm vụ có thể chia sẻ",
+        "可协助任务": "Nhiệm vụ có thể hỗ trợ",
+        "任务起点": "Điểm bắt đầu nhiệm vụ",
+        "任务终点": "Điểm kết thúc nhiệm vụ",
+        "任务目标": "Mục tiêu nhiệm vụ",
+        "击杀": "Tiêu diệt",
+        "该目标可共享击杀": "Mục tiêu này có thể chia sẻ tiêu diệt",
+        "收集": "Thu thập",
+        "任务描述": "Mô tả nhiệm vụ",
+        "提供物品": "Cung cấp vật phẩm",
+        "任务奖励": "Phần thưởng nhiệm vụ",
+        "任务文案": "Văn bản nhiệm vụ",
+        "任务地图": "Bản đồ nhiệm vụ",
+        "任务攻略": "Hướng dẫn nhiệm vụ",
+        "完善任务攻略": "Hoàn thiện hướng dẫn nhiệm vụ",
+        "暂无缘起攻略，以下为重制攻略，仅作参考，": "Hiện chưa có hướng dẫn ban đầu, dưới đây là hướng dẫn tái chế, chỉ mang tính tham khảo,",
+        "参与修订": "Tham gia chỉnh sửa",
+        "本次修订由": "Lần chỉnh sửa này được thực hiện bởi",
+        "提交于": "Gửi vào",
+        "参与打赏": "Tham gia đánh giá",
+        "暂无攻略，我要": "Hiện chưa có hướng dẫn, tôi muốn",
+        "完善攻略": "Hoàn thiện hướng dẫn",
+        "未知": "Không xác định",
+        "交互物品": "Vật phẩm tương tác",
+        "物品": "Vật phẩm"
+    },
+    "wiki/src/views/quest/waiting.vue": {
+        "起始地图": "Bản đồ khởi đầu",
+        "任务名称": "Tên nhiệm vụ",
+        "可接等级": "Cấp độ có thể nhận",
+        "任务目标": "Mục tiêu nhiệm vụ",
+        "任务奖励": "Phần thưởng nhiệm vụ"
+    },
+    "wiki/src/views/knowledge/knowledge.vue": {
+        "通识百科": "Kiến thức phổ thông"
+    },
+    "index/src/components/v4/world/activity.vue": {
+        "周常": "Hàng tuần",
+        "活动": "Hoạt động"
+    },
+    "index/src/components/v4/world/celebrity.vue": {
+        "名望": "Danh vọng",
+        "时间": "Thời gian",
+        "地点": "Địa điểm",
+        "阶段": "Giai đoạn",
+        "特殊事件": "Đặc thù sự kiện",
+        "云从社": "Vân Tòng Xã",
+        "楚天社": "Sở Thiên Xã"
+    },
+    "index/src/components/v4/world/daily.vue": {
+        "日常": "Nhật thường",
+        "活动": "Hoạt động",
+        "区服": "Khu vực",
+        "项目": "Hạng mục"
+    },
+    "index/src/components/v4/world/daily_new.vue": {
+        "日常": "Nhật thường",
+        "大战": "Đại chiến",
+        "战场": "Chiến trường",
+        "声望日常": "Danh vọng nhật thường",
+        "武林通鉴·秘境": "Vũ lâm thông giám · Bí cảnh",
+        "武林通鉴·团队秘境": "Vũ lâm thông giám · Đoàn đội bí cảnh",
+        "世界首领": "Thủ lĩnh thế giới",
+        "节日活动": "Hoạt động lễ hội",
+        "特殊活动": "Hoạt động đặc thù"
+    },
+    "index/src/components/v4/world/furniture.vue": {
+        "园宅会赛·本期": "Viên trạch hội tái - Bản kỳ",
+        "园宅会赛·下期": "Viên trạch hội tái - Hạ kỳ"
+    },
+    "index/src/components/v4/world/horse.vue": {
+        "chituTip": "<p>CD: 周二7点 ~ 下周一7点。</p><p>地图: 黑戈壁、阴山大草原、鲲鹏岛。</p><p>必备: <卦文龟甲>交大战时有几率获得，赤兔刷新后再到信使处领取，有效期8天。</p>",
+        "diluTip": "<p>CD: 每周一次，周一、三、五、六、日 10点 ~ 24点期间随机开启。</p><p>地图: 随机刷新于某一野外场景。</p>"
+    },
+    "index/src/components/v4/world/lucky_pet.vue": {
+        "宠物": "Sủng vật"
+    },
+    "index/src/components/v4/world/meirentu.vue": {
+        "美人图": "Mỹ nhân đồ",
+        "今日暂无画像": "Hôm nay tạm thời chưa có chân dung",
+        "无": "Không"
+    },
+    "index/src/components/v4/world/reputation.vue": {
+        "家园声望": "Danh vọng gia viên"
+    },
+    "index/src/views/about/components/AboutText.vue": {
+        "编辑": "Biên tập"
+    },
+    "index/src/views/about/components/Member.vue": {
+        "暂无介绍": "Chưa có giới thiệu",
+        "产品": "Sản phẩm",
+        "设计": "Thiết kế",
+        "运营": "Vận hành",
+        "开发": "Phát triển",
+        "编审": "Biên tập"
+    },
+    "index/src/views/about/components/SubNav.vue": {
+        "关于我们": "Về chúng tôi"
+    },
+    "pvx/src/components/book/result/book_item.vue": {
+        "其它": "Khác",
+        "阅读": "Đọc",
+        "杂集": "Tạp văn",
+        "道学": "Đạo học",
+        "佛学": "Phật học"
+    },
+    "tool/src/components/database/item/buff.vue": {
+        "引用指数": "Chỉ số trích dẫn",
+        "点击快速复制": "Nhấn để sao chép nhanh",
+        "收起属性": "Thu gọn thuộc tính",
+        "查看属性": "Xem thuộc tính",
+        "收藏数据": "Lưu dữ liệu",
+        "取消收藏": "Hủy lưu",
+        "在线构建": "Xây dựng trực tuyến"
+    },
+    "tool/src/components/database/item/doodad.vue": {
+        "引用指数": "Chỉ số trích dẫn",
+        "点击快速复制": "Nhấn để sao chép nhanh",
+        "地图": "Bản đồ",
+        "说明": "Giải thích",
+        "类型": "Loại",
+        "收起属性": "Thu gọn thuộc tính",
+        "查看属性": "Xem thuộc tính",
+        "收藏数据": "Lưu dữ liệu",
+        "取消收藏": "Hủy lưu",
+        "在线构建": "Xây dựng trực tuyến"
+    },
+    "tool/src/components/database/item/npc.vue": {
+        "强度": "Cường độ",
+        "引用指数": "Chỉ số trích dẫn",
+        "点击快速复制": "Nhấn để sao chép nhanh",
+        "血量": "Máu (Huyết lượng)",
+        "内力": "Nội lực",
+        "跑速": "Tốc độ chạy",
+        "范围": "Phạm vi",
+        "识破": "Nhận diện (Thức phá)",
+        "闪避": "Tránh né (Thiểm tỵ)",
+        "招架": "Đỡ đòn (Chiêu giá)",
+        "防御": "Phòng ngự",
+        "外功防御": "Ngoại công phòng ngự",
+        "混元防御": "Hỗn nguyên phòng ngự",
+        "阳性防御": "Dương tính phòng ngự",
+        "阴性防御": "Âm tính phòng ngự",
+        "毒性防御": "Độc tính phòng ngự",
+        "会心": "Bạo kích (Hội tâm)",
+        "外功会心": "Ngoại công bạo kích (Ngoại công hội tâm)",
+        "混元会心": "Hỗn nguyên bạo kích (Hỗn nguyên hội tâm)",
+        "阳性会心": "Dương tính bạo kích (Dương tính hội tâm)",
+        "阴性会心": "Âm tính bạo kích (Âm tính hội tâm)",
+        "毒性会心": "Độc tính bạo kích (Độc tính hội tâm)",
+        "命中": "Trúng đích (Mệnh trung)",
+        "外功命中": "Ngoại công trúng đích (Ngoại công mệnh trung)",
+        "混元命中": "Hỗn nguyên trúng đích (Hỗn nguyên mệnh trung)",
+        "阳性命中": "Dương tính trúng đích (Dương tính mệnh trung)",
+        "阴性命中": "Âm tính trúng đích (Âm tính mệnh trung)",
+        "毒性命中": "Độc tính trúng đích (Độc tính mệnh trung)",
+        "收起属性": "Thu gọn thuộc tính",
+        "查看属性": "Xem thuộc tính",
+        "收藏数据": "Lưu dữ liệu",
+        "取消收藏": "Hủy lưu",
+        "在线构建": "Xây dựng trực tuyến"
+    },
+    "tool/src/components/database/item/skill.vue": {
+        "引用指数": "Chỉ số trích dẫn",
+        "点击快速复制": "Nhấn để sao chép nhanh",
+        "收起属性": "Thu gọn thuộc tính",
+        "查看属性": "Xem thuộc tính",
+        "收藏数据": "Lưu dữ liệu",
+        "取消收藏": "Hủy lưu",
+        "在线构建": "Xây dựng trực tuyến"
+    },
+    "wiki/src/components/quest/home/newest-post.vue": {
+        "综合难度：": "Độ khó tổng hợp:",
+        "未知任务": "Nhiệm vụ chưa biết"
+    },
+    "wiki/src/components/quest/result/quest-card.vue": {
+        "该任务是活动任务": "Nhiệm vụ này là nhiệm vụ sự kiện",
+        "该任务仅": "Nhiệm vụ này chỉ",
+        "门派可接取": "Có thể nhận bởi môn phái",
+        "金钱": "Kim tiền",
+        "阅历": "Kinh nghiệm",
+        "侠行点": "Điểm hiệp hành",
+        "威名点": "Điểm danh vọng",
+        "帮会资金": "Bang hội tư kim",
+        "精力": "Tinh lực",
+        "载具资源": "Tài nguyên phương tiện",
+        "声望": "Danh vọng",
+        "成就": "Thành tựu",
+        "修为": "Tu vi"
+    },
+    "wiki/src/components/quest/single/notice.vue": {
+        "特别说明": "Thông báo đặc biệt"
+    },
+    "wiki/src/components/quest/single/point-reward.vue": {
+        "图标背景": "Nền biểu tượng",
+        "图标": "Biểu tượng",
+        "战阶积分": "Điểm chiến giai",
+        "威名点": "Điểm danh vọng",
+        "精力": "Tinh lực",
+        "侠行点": "Điểm hiệp hành",
+        "修为": "Tu luyện",
+        "帮会资金": "Bang hội kim",
+        "载具资源": "Tài nguyên phương tiện",
+        "成就": "Thành tích",
+        "技能": "Kỹ năng",
+        "未知奖励": "Phần thưởng không xác định"
+    },
+    "wiki/src/components/quest/single/quest-chain.vue": {
+        "任务链": "Chuỗi nhiệm vụ",
+        "任务分支": "Nhánh nhiệm vụ"
+    },
+    "wiki/src/components/quest/single/quest-dialog.vue": {
+        "接任务对话": "Đối thoại nhận nhiệm vụ",
+        "任务完成对话": "Đối thoại hoàn thành nhiệm vụ",
+        "任务进行中": "Đang tiến hành nhiệm vụ",
+        "任务完成": "Nhiệm vụ hoàn thành"
+    },
+    "wiki/src/components/quest/single/quest-map.vue": {
+        "任务地图图片": "Hình ảnh bản đồ nhiệm vụ",
+        "未知地图": "Bản đồ chưa biết",
+        "任务开始点": "Điểm bắt đầu nhiệm vụ",
+        "任务结束点": "Điểm kết thúc nhiệm vụ",
+        "需要物品": "Cần vật phẩm",
+        "进度": "Tiến độ",
+        "击杀怪物": "Tiêu diệt quái vật",
+        "其它": "Khác",
+        "坐标": "Tọa độ",
+        "交互物品": "Vật phẩm tương tác",
+        "其他": "Khác"
+    },
+    "wiki/src/components/quest/single/reward-item.vue": {
+        "获得金钱：": "Nhận tiền:",
+        "获得阅历：": "Nhận kinh nghiệm:",
+        "获得声望：": "Nhận danh vọng:",
+        "你将获得以下全部道具（根据门派）：": "Bạn sẽ nhận được tất cả các vật phẩm sau đây (theo môn phái):",
+        "你将获得以下全部道具：": "Bạn sẽ nhận được tất cả các vật phẩm sau đây:",
+        "你可以在以下道具中选择一种：": "Bạn có thể chọn một trong các vật phẩm sau:"
+    }
+}

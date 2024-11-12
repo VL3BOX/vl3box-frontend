@@ -1,0 +1,406 @@
+.active-icon {
+    border: 2px solid #a5ffd0;
+    box-shadow: 0 0 5px rgb(47, 251, 178, 0.8);
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+.p-martial-arts {
+    display: flex;
+    background: #1a2b22;
+    padding: 20px;
+    .pt(70px);
+    border-radius: 8px;
+    .pr();
+    .m-client {
+        .pa();
+        .lt(20px);
+        .flex();
+        .r(6px);
+        background-color: #2e4946;
+        border: 2px solid #67aba0;
+        padding: 5px 0;
+        .u-fixed {
+            .pa();
+            .lt(-2px);
+            .r(6px);
+            .size(50%,30px);
+            border: 2px solid #a5ffd0;
+            box-shadow: 0 0 5px #2ffbb2;
+            transition: 0.2s all;
+            &.u-fixed__r {
+                left: calc(50% - 2px);
+            }
+        }
+        .u-client {
+            .color(#ffffff);
+            .fz(14px,20px);
+            padding: 0 20px;
+            .pr();
+            z-index: 2;
+            .pointer();
+        }
+    }
+
+    .m-martial-skills {
+        flex: 1;
+    }
+    .m-martial-skill {
+        .u-title {
+            // 竖体显示
+            writing-mode: tb-rl;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .u-title-name {
+            z-index: 1;
+            color: #fff;
+            font-size: 12px;
+        }
+        .u-title-img {
+            width: 24px;
+            height: 71px;
+            position: absolute;
+        }
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        // border: 1px solid rgb(40,107,113);
+        padding: 4px 0;
+        position: relative;
+
+        .u-name {
+            display: block;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            // overflow: hidden;
+            white-space: nowrap;
+            // width: 48px;
+        }
+    }
+    .m-skills {
+        gap: 20px;
+        max-width: 800px;
+        width: 100%;
+        .flex;
+        // display: grid;
+        // grid-template-columns: repeat(11, 56px);
+
+        .m-connect {
+            .flex;
+            .flex(y);
+            margin: 0 -20px;
+            .u-img {
+                .w(20px);
+                .mt(-15px);
+            }
+        }
+    }
+
+    .m-skill {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+
+        &.is-right {
+            grid-column-start: 6;
+        }
+
+        .m-skill-icon {
+            .pr();
+            .w(fit-content);
+            margin: 0 auto;
+            .u-skill-icon {
+                .size(48px);
+                box-sizing: border-box;
+                border: 2px solid #1a2b22;
+                &.isWuJie {
+                    border: 2px solid #2a9998;
+                    background-color: #045756;
+                    border-radius: 50%;
+                }
+            }
+
+            .u-icon {
+                position: absolute;
+                left: -8px;
+                bottom: 0;
+                transform: rotate(-90deg);
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+
+            .u-icon-audio {
+                background-color: #70c4b0;
+                border-radius: 100%;
+                position: absolute;
+                right: -5px;
+                bottom: 2px;
+                .size(15px);
+                cursor: pointer;
+            }
+
+            .u-icon-switch {
+                position: absolute;
+                right: -7px;
+                top: -6px;
+                .size(19px);
+                cursor: pointer;
+            }
+        }
+
+        .u-skill.active {
+            .u-skill-icon {
+                .active-icon;
+            }
+            .u-name {
+                color: #a5ffd0;
+                text-shadow: 0 0 3px #2ffbb2;
+            }
+        }
+    }
+
+    .u-not-mount {
+        filter: grayscale(100%);
+    }
+
+    .m-martial-extend {
+        width: 300px;
+
+        .m-mount-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 50px;
+        }
+
+        .m-pasv {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-shrink: 0;
+            margin-right: 20px;
+            .u-pasv-pic {
+                border: 2px solid #67aba0;
+                background-color: #2e4946;
+                padding: 3px;
+                box-sizing: border-box;
+            }
+
+            .u-name {
+                display: block;
+                color: #fff;
+                font-size: 12px;
+                line-height: 1.8;
+                text-align: center;
+                // overflow: hidden;
+                white-space: nowrap;
+                // width: 48px;
+                margin-top: 4px;
+            }
+
+            &.active {
+                .u-name {
+                    color: #a5ffd0;
+                    text-shadow: 0 0 3px #2ffbb2;
+                }
+                .u-pasv-pic {
+                    .active-icon;
+                }
+            }
+        }
+
+        .u-pasv-pic {
+            display: block;
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            box-shadow: inset 0 0 1px rgb(0 0 0 / 20%);
+            cursor: pointer;
+            flex-basis: 48px;
+        }
+        .u-title {
+            font-size: 14px;
+            // 竖体显示
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        &.hidden {
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (max-width: @smallpc) {
+    .p-martial-arts {
+        max-width: 1560px;
+        overflow-x: auto;
+        // .scrollbar();
+    }
+}
+
+@media screen and (max-width: @phone) {
+    .p-martial-arts {
+        flex-direction: column;
+        gap: 20px;
+        .m-martial-skills {
+            flex: 1;
+        }
+        .m-martial-extend {
+            width: 100%;
+        }
+    }
+
+    .w-qixue-box {
+        padding-right: 0;
+    }
+}
+
+.m-recipe-pop {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: rgb(47, 60, 57) !important;
+    opacity: 0.9;
+
+    .u-recipe-item {
+        cursor: pointer;
+    }
+    .u-icon {
+        // width: 32px;
+        height: 32px;
+        border-radius: 2px;
+    }
+
+    .u-name {
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .isQuality-null {
+        color: #bbb;
+    }
+}
+
+.m-audio-pop {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: rgb(47, 60, 57) !important;
+    opacity: 0.9;
+
+    .u-audio {
+        .pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+.m-skill-pop {
+    padding: 1px !important;
+    border: 1px solid #68817e !important;
+    background: none !important;
+    border-radius: 0 !important;
+}
+
+.m-pasv-pop {
+    border: 1px solid #68817e !important;
+    border-radius: 0 !important;
+    padding: 10px !important;
+    .pr;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    .u-name,
+    .u-desc {
+        color: @q_yellow;
+        font-size: 14px;
+    }
+    .u-subtitle {
+        color: #fff;
+    }
+
+    .m-zhenfa-info {
+        .flex;
+        gap: 10px;
+        align-items: center;
+
+        .u-desc {
+            padding-left: 5.5em;
+            text-indent: -5em;
+            .fz(14px, 1.2);
+            display: flex;
+            gap: 4px;
+            flex-direction: column;
+        }
+
+        .u-desc div:last-of-type {
+            color: #bbb !important;
+        }
+    }
+    .u-zhenfa-bg {
+        min-width: 148px;
+        height: 128px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .u-pic {
+        display: block;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.p-special-skill {
+    background: #1a2b22;
+    padding: 20px;
+    border-radius: 8px;
+    height: 518px;
+}
+.check-special-skill {
+    position: relative;
+    .check-special-skill-icon {
+        position: absolute;
+        left: 45%;
+        color: #e3e3e3;
+        line-height: 17px;
+        top: 3px;
+        cursor: pointer;
+        .m-el-icon {
+            position: relative;
+            top: 3px;
+            left: 8px;
+        }
+    }
+}
+
+// 品质颜色
+// 橙色品质：ffa500
+@q_orange: #ffa500;
+// 紫色品质：ff2dff
+@q_purple: #ff2dff;
+// 蓝色品质：007eff
+@q_blue: #007eff;
+// 绿色品质：00d24b
+@q_green: #00d24b;
+.isQuality-2 {
+    color: @q_green;
+}
+.isQuality-3 {
+    color: @q_blue;
+}
+.isQuality-4 {
+    color: @q_purple;
+}
+.isQuality-5 {
+    color: @q_orange;
+}

@@ -1,0 +1,104 @@
+// .blink(@time:0.5s){
+//   @keyframes fadeOut{
+//       0%{opacity:1;}
+//       50%{opacity:0.4;}
+//       100%{opacity:1;}
+//   }
+//   animation-name:fadeOut;
+//   animation-duration:@time;
+//   animation-timing-function:ease-out;
+//   animation-fill-mode:forwards;
+//   animation-iteration-count: infinite;
+// }
+.m-petmap-warpper {
+  overflow: auto;
+  margin: 0.3rem;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  .m-petmap {
+    .pr;
+    .auto(x);
+    .x(left);
+    user-select: none;
+
+    .m-petmap-img {
+      .z(1);
+      .pa;
+      .lt(0);
+      .size(100%);
+    }
+
+    .m-petmap-popover {
+      .pa;
+      .db;
+      .z(2);
+      .mt(4.5px);
+      .ml(-4.5px);
+    }
+
+    .m-petmap-point {
+      .db;
+      .pointer;
+      .w(8px);
+      .h(8px);
+      background-color: #f44a22;
+      border: 1px solid #000a;
+    }
+
+    .m-map-switch {
+      .pa;
+      .flex;
+      .full(x);
+      .z(3);
+      .r(10px);
+      .auto(x);
+      .lt(20px, 30px);
+      color: white;
+      user-select: none;
+
+      .m-map-switch__item {
+        .pointer;
+        .mr(20px);
+        display: flex;
+        align-items: center;
+
+        b {
+          .pr;
+          .size(12px);
+          .mr(5px);
+          .r(50%);
+          border: 1px solid;
+
+          &.active:after {
+            content: "";
+            .pa;
+            .size(6px);
+            .r(50%);
+            .lt(50%, 50%);
+            margin: -3px 0 0 -3px;
+            background: white;
+            opacity: 0.8;
+          }
+        }
+
+        span {
+          .fz(18px);
+          .nobreak;
+          text-shadow: 0 0 1px;
+        }
+      }
+    }
+  }
+}
+
+.m-poi-info {
+  text-align: center;
+
+  p {
+    margin: 0.125rem;
+  }
+}

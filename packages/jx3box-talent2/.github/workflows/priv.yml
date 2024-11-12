@@ -1,0 +1,24 @@
+name: Public NPM package to private registry
+
+on:
+  push:
+    branches:
+      - i18n
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 20
+      - name: Setup token for NPM registry
+        run : |
+          echo "@jx3box:registry=${GITHUB_SERVER_URL}/api/packages/vl3box/npm/" > .npmrc
+          GIT_HOSTNAME=$(echo "$GITHUB_API_URL" | sed 's|.*://\([^/]*\)/.*|\1|') 
+          echo "//${GIT_HOSTNAME}/api/packages/vl3box/npm/:_authToken=$NODE_AUTH_TOKEN" >> .npmrc
+          npm unpublish --force || true # Force delete package if not or existed
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GT_NPM_TOKEN}}
+      - run: npm publish --access public

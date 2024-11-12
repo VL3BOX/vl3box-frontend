@@ -1,0 +1,70 @@
+{
+    "name": "@jx3box/jx3box-facedat",
+    "version": "2.6.2",
+    "description": "JX3BOX Facedat viewer",
+    "main": "index.js",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "node+": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+        "inspect": "vue inspect > output.js",
+        "update": "npm install @jx3box/jx3box-common@latest @jx3box/jx3box-data@latest",
+        "face": "node ./tools/face/decal.js && node ./tools/face/decoration.js && node ./tools/face/range.js",
+        "facev2": "node ./tools/newface/bones.js && node ./tools/newface/decalV2.js && node ./tools/newface/decalDetail.js",
+        "body": "node ./tools/body/group.js && node ./tools/body/field_range.js"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential"
+        ],
+        "rules": {},
+        "parserOptions": {
+            "parser": "babel-eslint"
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    "dependencies": {
+        "@jx3box/jx3box-build-common": "workspace:*",
+        "@jx3box/jx3box-common": "workspace:*",
+        "@jx3box/jx3box-data": "workspace:*",
+        "axios": "^0.19.2",
+        "core-js": "^3.6.5",
+        "crc-32": "^1.2.0",
+        "csslab": "^4.0.3",
+        "element-ui": "^2.13.2",
+        "file-saver": "^2.0.5",
+        "glob": "^10.2.7",
+        "iconv-lite": "^0.6.3",
+        "ini": "^2.0.0",
+        "jquery": "^3.5.1",
+        "lodash": "^4.17.15",
+        "luadata": "^1.0.2",
+        "prismjs": "^1.20.0",
+        "vue": "^2.6.11"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-optional-chaining": "^7.14.5",
+        "@vue/cli-plugin-babel": "~4.3.0",
+        "@vue/cli-plugin-eslint": "~4.3.0",
+        "@vue/cli-plugin-vuex": "^4.0.0",
+        "@vue/cli-service": "~4.3.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "less": "^3.0.4",
+        "lua-json": "^1.0.0"
+
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JX3BOX/jx3box-editor.git"
+    }
+}

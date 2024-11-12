@@ -1,0 +1,49 @@
+{
+    "key": "events",
+    "title": "剑网3",
+    "keys": "jx3box,剑三box,剑三魔盒,剑三宏,剑三插件,剑三辅助,副本攻略,副本解包,团队监控,捏脸数据,剑3数据库,成就百科,剑三成就,剑3,剑网3",
+    "desc": "JX3BOX - 剑三魔盒是一个以剑网3游戏为主的专业攻略资源站，这里干货满满，大神多多，为你的武侠江湖之路助力",
+    "suffix": " » 魔盒（JX3BOX） - 一站式剑网3资源工具站",
+    "events": [
+        {
+            "key": "jianyuxiadao",
+            "title": "剑与侠道"
+        },
+        {
+            "key": "welcome",
+            "title": "剑网3欢迎你"
+        },
+        {
+            "key": "2023yaoxiu",
+            "title": "剑网3妖秀节"
+        },
+        {
+            "key": "gaokao",
+            "title": "剑三高考"
+        },
+        {
+            "key": "namespace",
+            "title": "剑三铭牌"
+        },
+        {
+            "key": "poems",
+            "title": "剑三诗词大会"
+        },
+        {
+            "key": "jx3dat",
+            "title": "数据大师赛"
+        },
+        {
+            "key": "jbsci",
+            "title": "JBSCI期刊"
+        },
+        {
+            "key": "mid_autumn",
+            "title": "中秋诗词"
+        },
+        {
+            "key": "bigbang",
+            "title": "剑三年度十大事件"
+        }
+    ]
+}

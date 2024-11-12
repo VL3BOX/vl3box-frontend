@@ -1,0 +1,59 @@
+name: Build and deploy to GitHub pages
+on:
+    push:
+        branches:
+            - i18n
+jobs:
+    build:
+        runs-on: ubuntu-22.04
+        permissions:
+            contents: read
+            packages: write
+            deployments: write
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: pnpm/action-setup@v3
+              with:
+                  version: 8
+
+            - name: lowercase github.repository
+              run: |
+                  echo "GITHUB_REPO=`echo ${{github.repository}} | tr '[:upper:]' '[:lower:]'`" >>${GITHUB_ENV}
+
+            # - uses: actions/setup-node@v3
+            #   with:
+            #       node-version: "16.x"
+            #       registry-url: "https://gitlab.com/api/v4/groups/${{ secrets.GL_GROUP_ID }}/-/packages/npm/"
+            #       scope: "@jx3box"
+            # - run: |
+            #       rm -f package-lock.json yarn.lock
+            #       npm install && npm run build
+            #   env:
+            #       NODE_AUTH_TOKEN: ""
+
+            # - run: cp .github/pnpm-lock.yaml pnpm-lock.yaml
+            - uses: actions/setup-node@v4
+              with:
+                  #   node-version-file: '.nvmrc'
+                  node-version: 16
+                  # cache: "pnpm"
+                  registry-url: "${GITHUB_SERVER_URL}/api/packages/vl3box/npm/"
+                  scope: "@jx3box"
+            
+            - name: build package
+              run: |
+                rm -f package-lock.json yarn.lock
+                pnpm install --shamefully-hoist=true
+                pnpm build
+
+            - name: Push to vl3box/vl3box
+              run: |
+                  git clone https://${{ secrets.GH_REPO_TOKEN }}@${GITHUB_SERVER_URL#https://}/vl3box/vl3box.git && cd vl3box && git checkout i18n-prev
+                  git config user.name "VL3BOX Admin" && git config user.email "admin@vl3box.com"
+                  git config --global http.postBuffer 157286400
+                  rm -rf dist/static/${{ github.event.repository.name }}
+                  mv ../dist dist/static/${{ github.event.repository.name }}
+                  # git add . && git commit -m "Update dist/static/${{ github.event.repository.name }}"
+                  git add . && git commit --amend --no-edit
+                  git push -f origin i18n-prev

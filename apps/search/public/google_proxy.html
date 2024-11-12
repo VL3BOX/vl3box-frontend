@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .gsc-control-cse {
+                padding-top: 0;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js"></script>
+        <script>
+            //❌失败:vpn异常通知
+                //超时计时5秒
+                var request_time = new Date();
+                var timeout = 5000;
+                var timer = setTimeout(() => {
+                    throw new Error("加载超时");
+                }, timeout);
+                //超时没有成功通知
+                window.onerror = function(msg, url, lineNo, columnNo, error) {
+                    window.parent.postMessage({code:0,error}, "*");
+                    return true;
+                };
+
+            //✔️成功:动态传递iframe高度
+                //挂载google回调
+                window.__gcse || (window.__gcse = {});
+                window.__gcse.searchCallbacks = {
+                    web: {
+                        rendered: "renderSuccess"
+                    }
+                };
+
+                //成功回调
+                function renderSuccess(name, q, promos, results) {
+                    //清除计时器
+                    clearTimeout(timer);
+                    var postMsgToParent = function(){
+                        let H = document.body.scrollHeight;
+                        console.log(`[Proxy msg] ${H}`);
+                        window.parent.postMessage({code:1,H}, "*");
+                    }
+                    //当存在图片时,确保图片加载后重设高度
+                    $('.gs-image').length ? 
+                    $('.gs-image').on('load',postMsgToParent) :
+                    postMsgToParent()
+                }
+        </script>
+    </head>
+    <body>
+        <div class="gcse-searchresults-only"></div>
+        <script
+            id="gcse-script"
+            onreadystatechange="test" 
+            src="https://cse.google.com/cse.js?cx=011450975203877314992:itycvatvhcp"
+        ></script>
+    </body>
+</html>

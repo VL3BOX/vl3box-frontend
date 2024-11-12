@@ -1,0 +1,8 @@
+node_modules
+.github
+docs
+.gitignore
+.npmignore
+test
+raw
+package-lock.json

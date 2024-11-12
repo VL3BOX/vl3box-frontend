@@ -1,0 +1,22 @@
+{
+    "name": "@jx3box/jx3box-macro",
+    "version": "1.0.1",
+    "description": "剑三宏语法高亮",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JX3BOX/jx3box-macro.git"
+    },
+    "dependencies": {
+        "@jx3box/jx3box-common": "workspace:*",
+        "jquery": "^3.5.1"
+    },
+    "devDependencies": {
+        "csslab": "^4.0.3",
+        "less": "^3.11.1"
+    },
+    "scripts": {
+        "update": "npm --registry https://registry.npmjs.org install @jx3box/jx3box-common@latest",
+        "build": "npx lessc ./macro.less ./macro.css"
+    }
+}

@@ -1,0 +1,1494 @@
+{
+    "jx3box-common-ui/src/App.vue": {
+        "频道名称": "Tên kênh",
+        "通用组件": "Thành phần chung",
+        "添加用户": "Thêm người dùng",
+        "用户POP": "POP người dùng",
+        "作业组件": "Thành phần công việc",
+        "jx3dat测试标题": "Tiêu đề kiểm tra jx3dat",
+        "传入标题": "Truyền tiêu đề",
+        "CMS作品": "Tác phẩm CMS",
+        "临时测试": "Kiểm tra tạm thời",
+        "Markdown": "Markdown",
+        "仅小册": "Chỉ sách nhỏ",
+        "仅联合创作者": "Chỉ cộng tác viên liên kết",
+        "小册和联合创作者": "Sách nhỏ và cộng tác viên liên kết",
+        "无小册和联合创作者": "Không có sách nhỏ và cộng tác viên liên kết",
+        "百科组件": "Thành phần bách khoa",
+        "通识正文": "Nội dung kiến thức phổ thông",
+        "完善通识": "Cải thiện kiến thức phổ thông",
+        "查看更多": "Xem thêm",
+        "正文内容": "Nội dung chính",
+        "头像": "Ảnh đại diện",
+        "红豆沙做馅儿，精致细腻的广式月饼。": "Nhân đậu đỏ, bánh trung thu Quảng Đông tinh xảo và mịn màng."
+    },
+    "jx3box-common-ui/src/Author.vue": {
+        "私信": "Thư riêng"
+    },
+    "jx3box-common-ui/src/Box.vue": {
+        "首页": "Trang chính",
+        "收起": "Thu gọn"
+    },
+    "jx3box-common-ui/src/Box2.vue": {
+        "收起": "Thu gọn"
+    },
+    "jx3box-common-ui/src/Breadcrumb.vue": {
+        "发布": "Đăng bài",
+        "反馈": "Phản hồi"
+    },
+    "jx3box-common-ui/src/Footer.vue": {
+        "关于我们": "Về chúng tôi",
+        "帮助文档": "Tài liệu trợ giúp",
+        "代码仓库": "Mã nguồn",
+        "反馈建议": "Góp ý và phản hồi"
+    },
+    "jx3box-common-ui/src/Github_REPO.vue": {
+        "提建议 | 发现Bug": "Đề xuất | Phát hiện BUG"
+    },
+    "jx3box-common-ui/src/LeftSidebar.vue": {
+        "收起侧边栏": "Thu gọn thanh bên",
+        "打开侧边栏": "Mở rộng thanh bên"
+    },
+    "jx3box-common-ui/src/RightSidebar.vue": {
+        "收起侧边栏": "Thu gọn thanh bên",
+        "打开侧边栏": "Mở rộng thanh bên"
+    },
+    "jx3box-comment-ui/src/Comment.vue": {
+        "作业模式": "Chế độ làm việc",
+        "排序模式：": "Chế độ sắp xếp:",
+        "最后靠前": "Mới nhất",
+        "最早靠前": "Cũ nhất",
+        "获赞靠前": "Nhiều lượt thích nhất",
+        "开启过滤": "Bộ lọc",
+        "开启过滤后，仅设为显示的评论可被其他人所见": "Sau khi bật bộ lọc, chỉ những bình luận được thiết lập để hiển thị mới có thể được người khác nhìn thấy",
+        "删除成功!": "Xóa thành công!",
+        "操作成功!": "Thao tác thành công!",
+        "评论成功!": "Bình luận thành công!",
+        "评论失败": "Bình luận thất bại"
+    },
+    "jx3box-editor/src/Article.vue": {
+        "加载全部": "Tải tất cả"
+    },
+    "jx3box-editor/src/BoxResource.vue": {
+        "魔盒资源": "Tài nguyên Hộp Ma",
+        "魔盒资源库": "Kho tài nguyên Hộp Ma",
+        "重制": "Trọng chế",
+        "缘起": "Duyên khởi",
+        "关键词": "Từ khóa",
+        "精确匹配": "Khớp chính xác",
+        "魔盒用户": "Người dùng Hộp Ma",
+        "用户": "Người dùng",
+        "共找到": "Tìm thấy tổng cộng",
+        "条记录": "bản ghi",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "连招": "Liên chiêu",
+        "剑三趣图": "Hình ảnh thú vị Kiếm Tam",
+        "趣图": "Hình ảnh thú vị",
+        "信纸": "Giấy viết thư",
+        "加载更多": "Tải thêm",
+        "请输入搜索条件查询": "Vui lòng nhập điều kiện tìm kiếm",
+        "取": "Lấy",
+        "请输入 ID 或 名称": "Vui lòng nhập ID hoặc tên",
+        "请选择一个用户": "Vui lòng chọn một người dùng",
+        "您的等级不足或无权限（Lv2以上可用）": "Cấp độ của bạn không đủ hoặc không có quyền (chỉ có sẵn từ cấp 2 trở lên)",
+        "消息": "Tin nhắn"
+    },
+    "jx3box-editor/src/Equip.vue": {
+        "配装ID": "ID trang bị"
+    },
+    "jx3box-editor/src/GameText.vue": {
+        "，持续": ", kéo dài",
+        "分钟。": "phút.",
+        "分钟": "phút",
+        "秒": "giây"
+    },
+    "jx3box-editor/src/Item.vue": {
+        "精炼等级：": "Cấp độ tinh luyện:",
+        "唯一": "Độc nhất",
+        "限时时间：": "Thời gian giới hạn:",
+        "最大拥有数：": "Số lượng tối đa sở hữu:",
+        "近身武器": "Vũ khí cận chiến",
+        "远程武器": "Vũ khí tầm xa",
+        "观赏提高": "Tăng tính thẩm mỹ",
+        "实用提高": "Tăng tính hữu ích",
+        "坚固提高": "Tăng độ bền",
+        "风水提高": "Tăng phong thủy",
+        "趣味提高": "Tăng tính thú vị",
+        "镶嵌孔：": "Lỗ chèn:",
+        "只能镶嵌五彩石": "Chỉ có thể khảm đá ngũ sắc",
+        "最大耐久度": "Độ bền tối đa",
+        "品质等级": "Cấp độ phẩm chất",
+        "装备分数": "Điểm trang bị",
+        "推荐门派：": "Môn phái đề xuất:",
+        "使用间隔": "Khoảng cách sử dụng",
+        "外观名称：": "Tên ngoại hình:",
+        "外观：": "Ngoại hình:",
+        "该物品可以放入账号储物箱共享。": "Vật phẩm này có thể được đặt vào kho tài khoản để chia sẻ.",
+        "该装备未精炼、镶嵌、附魔、穿戴前可以放入账号储物箱共享。": "Trang bị này có thể được đặt vào kho tài khoản để chia sẻ trước khi được tinh luyện, tương khảm, phụ ma, mặc vào.",
+        "可交互": "Có thể tương tác",
+        "可缩放": "Có thể phóng to/thu nhỏ",
+        "倍": "lần",
+        "物品来源：": "Nguồn gốc vật phẩm:"
+    },
+    "jx3box-editor/src/Npc.vue": {
+        "强度": "Cường độ",
+        "血量": "Máu",
+        "内力": "Nội lực",
+        "范围": "Phạm vi",
+        "识破": "Thức phá",
+        "闪避": "Né tránh",
+        "招架": "Đỡ đòn",
+        "防御": "Phòng thủ",
+        "外功防御": "Phòng thủ ngoại công",
+        "混元防御": "Phòng thủ hỗn nguyên",
+        "阳性防御": "Phòng thủ dương tính",
+        "阴性防御": "Phòng thủ âm tính",
+        "毒性防御": "Phòng thủ độc tính",
+        "会心": "Hội tâm",
+        "外功会心": "Hội tâm ngoại công",
+        "混元会心": "Hội tâm hỗn nguyên",
+        "阳性会心": "Hội tâm dương tính",
+        "阴性会心": "Hội tâm âm tính",
+        "毒性会心": "Hội tâm độc tính",
+        "命中": "Chính xác",
+        "外功命中": "Chính xác ngoại công",
+        "混元命中": "Chính xác hỗn nguyên",
+        "阳性命中": "Chính xác dương tính",
+        "阴性命中": "Chính xác âm tính",
+        "毒性命中": "Chính xác độc tính"
+    },
+    "jx3box-editor/src/Resource.vue": {
+        "剑三资源": "Tài nguyên Kiếm Tam",
+        "剑三数据库": "Cơ sở dữ liệu Kiếm Tam",
+        "重制": "Trọng chế",
+        "缘起": "Duyên khởi",
+        "请输入 ID 或 名称": "Vui lòng nhập ID hoặc tên",
+        "ID／名称": "ID/Tên",
+        "精确匹配": "Khớp chính xác",
+        "仅对Buff/Skill有效": "Chỉ có hiệu lực với Buff/Kỹ năng",
+        "共找到": "Tìm thấy tổng cộng",
+        "条记录": "bản ghi",
+        "插入模式：": "Chế độ chèn:",
+        "简版": "Phiên bản đơn giản",
+        "完整版": "Phiên bản đầy đủ",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "技能": "Kỹ năng",
+        "物品": "Vật phẩm",
+        "等级：": "Cấp độ:",
+        "地图：": "Bản đồ:",
+        "血量：": "Khí huyết:",
+        "内力：": "Nội lực:",
+        "图标": "Biểu tượng",
+        "加载更多": "Tải thêm",
+        "请输入搜索条件查询": "Vui lòng nhập điều kiện tìm kiếm",
+        "取 消": "Hủy bỏ",
+        "插 入": "Chèn",
+        "确 定": "Xác nhận"
+    },
+    "jx3box-editor/src/Upload.vue": {
+        "清空": "Xóa hết",
+        "取 消": "Hủy bỏ",
+        "插 入": "Chèn",
+        "确 定": "Xác nhận",
+        "一次最多同时上传": "Mỗi lần có thể tải lên tối đa",
+        "个文件（单个文件不超过": "tệp (mỗi tệp không vượt quá",
+        "M），格式限常见的图片、文档、数据表及压缩包": "MB), chỉ chấp nhận các định dạng hình ảnh, tài liệu, bảng dữ liệu và tệp nén thông thường",
+        "上传附件": "Tải lên tệp đính kèm"
+    },
+    "jx3box-editor/src/UploadAlbum.vue": {
+        "批量上传图片": "Tải lên hình ảnh hàng loạt",
+        "当前没有任何图片": "Hiện không có hình ảnh nào"
+    },
+    "jx3box-vue3-ui/src/App.vue": {
+        "频道名称": "Tên kênh"
+    },
+    "jx3box-vue3-ui/src/Box.vue": {
+        "首页": "Trang chính",
+        "收起": "Thu gọn"
+    },
+    "jx3box-vue3-ui/src/Breadcrumb.vue": {
+        "发布": "Đăng bài",
+        "反馈": "Phản hồi"
+    },
+    "jx3box-vue3-ui/src/Footer.vue": {
+        "关于我们": "Về chúng tôi",
+        "帮助文档": "Tài liệu trợ giúp",
+        "代码仓库": "Mã nguồn",
+        "反馈建议": "Góp ý và phản hồi"
+    },
+    "jx3box-vue3-ui/src/LeftSidebar.vue": {
+        "收起侧边栏": "Thu gọn thanh bên",
+        "打开侧边栏": "Mở rộng thanh bên"
+    },
+    "jx3box-vue3-ui/src/RightSidebar.vue": {
+        "收起侧边栏": "Thu gọn thanh bên",
+        "打开侧边栏": "Mở rộng thanh bên"
+    },
+    "jx3box-common-ui/src/author/AuthorFans.vue": {
+        "粉丝榜": "Danh sách người hâm mộ",
+        "累计打赏": "Tổng số tiền thưởng",
+        "金箔": "Vàng lá",
+        "本赛季共": "Tổng cộng mùa này",
+        "人为TA赠礼": "Quà tặng cho TA"
+    },
+    "jx3box-common-ui/src/author/AuthorFollow.vue": {
+        "已粉": "Đã theo dõi",
+        "关注": "Theo dõi",
+        "取消关注": "Bỏ theo dõi",
+        "万": "vạn",
+        "关注成功": "Theo dõi thành công",
+        "确定不再关注此人？": "Xác nhận không theo dõi người này nữa?",
+        "提示": "Gợi ý",
+        "确定": "Xác nhận",
+        "取消": "Hủy bỏ",
+        "取关成功": "Bỏ theo dõi thành công"
+    },
+    "jx3box-common-ui/src/author/AuthorGift.vue": {
+        "赠礼": "Quà tặng",
+        "金箔": "Vàng lá",
+        "充值": "Nạp tiền",
+        "赠送": "Tặng",
+        "寄语": "Lời nhắn",
+        "请输入寄语（必填）": "Vui lòng nhập lời nhắn (bắt buộc)",
+        "取 消": "Hủy bỏ",
+        "确 定": "Xác nhận",
+        "不能给自己赠送礼物": "Không thể tặng quà cho chính mình",
+        "作者没有开启接受礼物": "Tác giả chưa mở chức năng nhận quà",
+        "正在处理中": "Đang được xử lý",
+        "赠送成功": "Tặng quà thành công",
+        "辛苦，感谢！": "Công việc vất vả, cảm ơn!",
+        "交易繁忙，请稍后再试": "Giao dịch bận, vui lòng thử lại sau"
+    },
+    "jx3box-common-ui/src/author/AuthorInfo.vue": {
+        "签约作者": "Tác giả ký hợp đồng",
+        "未知": "Không xác định",
+        "经验值：": "Kinh nghiệm:",
+        "专业版会员": "Thành viên chuyên nghiệp",
+        "高级版会员": "Thành viên cao cấp"
+    },
+    "jx3box-common-ui/src/author/AuthorLink.vue": {
+        "房间号：": "Số phòng:"
+    },
+    "jx3box-common-ui/src/author/AuthorMedals.vue": {
+        "作者荣誉": "Danh hiệu tác giả"
+    },
+    "jx3box-common-ui/src/author/AuthorMsg.vue": {
+        "短消息": "Tin nhắn ngắn"
+    },
+    "jx3box-common-ui/src/author/AuthorPosts.vue": {
+        "最新作品": "Tác phẩm mới nhất",
+        "/无标题": "/Không có tiêu đề"
+    },
+    "jx3box-common-ui/src/author/AuthorTeams.vue": {
+        "所在团队": "Đội hiện tại"
+    },
+    "jx3box-common-ui/src/author/UserPop.vue": {
+        "请输入用户 UID 或者昵称进行搜索": "Vui lòng nhập UID hoặc biệt danh của người dùng để tìm kiếm",
+        "搜索": "Tìm kiếm",
+        "未找到匹配项": "Không tìm thấy mục khớp",
+        "请输入搜索条件": "Vui lòng nhập điều kiện tìm kiếm",
+        "取 消": "Hủy bỏ",
+        "确 定": "Xác nhận",
+        "用户不存在 或 UID不正确": "Người dùng không tồn tại hoặc UID không chính xác",
+        "提醒": "Nhắc nhở",
+        "确定": "Xác nhận"
+    },
+    "jx3box-common-ui/src/filters/clientBy.vue": {
+        "全部": "Tất cả",
+        "剑三": "Kiếm Tam",
+        "缘起": "Duyên khởi"
+    },
+    "jx3box-common-ui/src/filters/markBy.vue": {
+        "全部": "Tất cả",
+        "新手易用": "Tân thủ",
+        "进阶推荐": "Nâng cao",
+        "编辑精选": "Đề xuất",
+        "骨灰必备": "Cao thủ",
+        "精选": "Chọn lọc"
+    },
+    "jx3box-common-ui/src/filters/menuBy.vue": {
+        "全部": "Tất cả",
+        "筛选": "Sàng lọc"
+    },
+    "jx3box-common-ui/src/filters/orderBy.vue": {
+        "排序": "Sắp xếp",
+        "最后更新": "Cập nhật mới nhất",
+        "最早发布": "Phát hành sớm nhất",
+        "收藏最多": "Yêu thích nhất",
+        "点赞最多": "Nhiều lượt thích nhất",
+        "下载最多": "Tải về nhiều nhất"
+    },
+    "jx3box-common-ui/src/filters/tagBy.vue": {
+        "全部": "Tất cả"
+    },
+    "jx3box-common-ui/src/filters/topicBy.vue": {
+        "全部": "Tất cả"
+    },
+    "jx3box-common-ui/src/filters/zlpBy.vue": {
+        "全部": "Tất cả",
+        "资料片": "Gói dữ liệu",
+        "雾海寻龙": "Vụ Hải Tầm Long",
+        "血战天策": "Huyết Chiến Thiên Sách",
+        "万灵当歌": "Vạn Linh Đương Ca",
+        "群侠万变": "Quần Hiệp Vạn Biến",
+        "安史之乱": "An Sử Chi Loạn",
+        "日月明尊": "Nhật Nguyệt Minh Tôn",
+        "横刀断浪": "Hoành Đao Đoạn Lãng",
+        "剑湖神宫": "Kiếm Hồ Thần Cung",
+        "巴蜀风云": "Ba Thục Phong Vân",
+        "江湖无限": "Giang Hồ Vô Hạn",
+        "五毒现世": "Ngũ Độc Hiện Thế",
+        "圣殿云起": "Thánh Điện Vân Khởi",
+        "北天药宗": "Bắc Thiên Dược Tông",
+        "白帝风云": "Bạch Đế Phong Vân",
+        "藏剑山庄": "Tàng Kiếm Sơn Trang",
+        "物华天宝": "Vật Hoa Thiên Bảo",
+        "其它": "Khác"
+    },
+    "jx3box-common-ui/src/bread/Admin.vue": {
+        "管理面板": "Bảng điều khiển quản lý",
+        "状态变更": "Thay đổi trạng thái",
+        "可见性变更": "Thay đổi khả năng hiển thị",
+        "推荐角标": "Dấu hiệu đề xuất",
+        "高亮置顶": "Nổi bật và ghim lên đầu",
+        "置顶": "Ghim lên đầu",
+        "开启高亮": "Bật nổi bật",
+        "预览高亮效果": "Xem trước hiệu ứng nổi bật",
+        "精选": "Chọn lọc",
+        "封面海报": "Áo bìa poster",
+        "海报地址": "Địa chỉ poster",
+        "元信息": "Thông tin metadata",
+        "请选择板块": "Vui lòng chọn mục",
+        "板块": "Mục",
+        "类型": "Loại",
+        "请选择": "Vui lòng chọn",
+        "主题": "Chủ đề",
+        "提交": "Gửi",
+        "取消": "Hủy",
+        "请输入作者ID": "Vui lòng nhập ID tác giả",
+        "作者ID": "ID tác giả",
+        "移除海报": "Xóa hình ảnh bìa",
+        "默认": "Mặc định",
+        "草稿": "Bản nháp",
+        "待审核": "Chờ duyệt",
+        "删除": "Xóa",
+        "设置成功": "Cài đặt thành công",
+        "上传失败": "Tải lên không thành công"
+    },
+    "jx3box-common-ui/src/bread/AdminDirectMessage.vue": {
+        "私信": "Tin nhắn riêng",
+        "请输入私信内容": "Vui lòng nhập nội dung tin nhắn riêng",
+        "管理私信": "Quản lý tin nhắn riêng",
+        "确定": "Xác nhận",
+        "取消": "Hủy bỏ",
+        "运营通知：": "Thông báo quản lý:",
+        "私信成功": "Tin nhắn riêng đã gửi thành công"
+    },
+    "jx3box-common-ui/src/bread/AdminDrop.vue": {
+        "管理": "Quản lý",
+        "设置": "Cài đặt",
+        "编辑": "Chỉnh sửa",
+        "私信": "Tin nhắn riêng",
+        "转移": "Chuyển giao",
+        "推送": "Đẩy thông báo",
+        "请输入私信内容": "Vui lòng nhập nội dung tin nhắn",
+        "管理私信": "Quản lý tin nhắn riêng",
+        "确定": "Xác nhận",
+        "取消": "Hủy bỏ",
+        "运营通知：": "Thông báo từ quản lý:",
+        "私信成功": "Tin nhắn thành công"
+    },
+    "jx3box-common-ui/src/bread/Adminbutton.vue": {
+        "管理": "Quản lý"
+    },
+    "jx3box-common-ui/src/bread/CommunityAdmin.vue": {
+        "管理面板": "Bảng điều khiển quản lý",
+        "信息设置": "Cài đặt thông tin",
+        "请选择": "Vui lòng chọn",
+        "请输入标题": "Vui lòng nhập tiêu đề",
+        "标签": "Thẻ",
+        "请输入作者ID": "Vui lòng nhập ID tác giả",
+        "作者ID": "ID tác giả",
+        "封面海报": "Ảnh bìa",
+        "海报地址": "Địa chỉ ảnh bìa",
+        "移除海报": "Gỡ bỏ ảnh bìa",
+        "高亮置顶": "Nổi bật và ghim",
+        "置顶：": "Ghim:",
+        "全局置顶": "Ghim toàn cục",
+        "版内置顶": "Ghim trong khu vực",
+        "精选：": "Chọn lọc:",
+        "高亮：": "Nổi bật:",
+        "预览高亮效果": "Xem trước hiệu ứng nổi bật",
+        "删除帖子": "Xóa bài viết",
+        "转为待审核": "Chuyển thành chờ xét duyệt",
+        "提交修改": "Gửi sửa đổi",
+        "取消": "Hủy bỏ",
+        "上传失败": "Tải lên không thành công",
+        "删除成功!": "Xóa thành công!",
+        "提示": "Gợi ý",
+        "确定": "Xác nhận",
+        "此操作将 删除 该数据, 是否继续?": "Hành động này sẽ xóa dữ liệu này, bạn có chắc chắn tiếp tục không?",
+        "ID不存在!": "ID không tồn tại!",
+        "操作成功!": "Hành động thành công!",
+        "此操作将该数据转为 待审核 状态, 是否继续?": "Hành động này sẽ chuyển dữ liệu này thành trạng thái chờ xét duyệt, bạn có chắc chắn tiếp tục không?",
+        "操作成功": "Hành động thành công"
+    },
+    "jx3box-common-ui/src/bread/DesignTask.vue": {
+        "快捷推送": "Gửi nhanh",
+        "标题": "Tiêu đề",
+        "请输入标题": "Vui lòng nhập tiêu đề",
+        "类型": "Loại",
+        "请选择类型": "Vui lòng chọn loại",
+        "版本": "Phiên bản",
+        "备注": "Ghi chú",
+        "请输入备注": "Vui lòng nhập ghi chú",
+        "星级": "Sao",
+        "近期推送": "Gửi gần đây",
+        "推送时间": "Thời gian gửi",
+        "推送人": "Người gửi",
+        "当前文章暂无历史推送": "Bài viết hiện tại không có gửi lịch sử",
+        "取 消": "Hủy",
+        "确 定": "Xác nhận",
+        "剑三": "Kiếm Tam",
+        "缘起": "Duyên khởi",
+        "无界": "Vô giới",
+        "体服": "Thí nghiệm",
+        "提交成功": "Gửi thành công"
+    },
+    "jx3box-common-ui/src/bread/ListAdmin.vue": {
+        "管理": "Quản lý",
+        "管理主题": "Quản lý chủ đề",
+        "主题管理": "Quản lý chủ đề",
+        "下架": "Gỡ xuống",
+        "上架": "Đưa lên",
+        "修改": "Sửa đổi",
+        "删除": "Xóa",
+        "暂无主题": "Chưa có chủ đề",
+        "新增": "Thêm mới",
+        "关闭": "Đóng",
+        "此操作将删除该主题, 是否继续?": "Hành động này sẽ xóa chủ đề này, bạn có chắc chắn muốn tiếp tục không?",
+        "提示": "Gợi ý",
+        "确定": "Xác nhận",
+        "取消": "Hủy bỏ",
+        "删除成功!": "Xóa thành công!",
+        "更新成功!": "Cập nhật thành công!",
+        "请输入主题名称": "Vui lòng nhập tên chủ đề",
+        "新增主题": "Thêm mới chủ đề",
+        "主题名称不能为空": "Tên chủ đề không được để trống",
+        "修改主题": "Sửa chủ đề",
+        "修改成功!": "Sửa thành công!"
+    },
+    "jx3box-common-ui/src/bread/MoveToCommunityDialog.vue": {
+        "迁移至论坛": "Chuyển đến diễn đàn",
+        "分类": "Danh mục",
+        "请选择帖子分类": "Vui lòng chọn phân loại bài viết",
+        "简介": "Giới thiệu",
+        "请输入内容": "Vui lòng nhập nội dung",
+        "附图": "Hình ảnh đính kèm",
+        "封面": "Ảnh bìa",
+        "请确认此操作不可逆": "Vui lòng xác nhận rằng hành động này không thể hoàn tác",
+        "我已确认此操作不可逆": "Tôi đã xác nhận rằng hành động này không thể hoàn tác",
+        "取 消": "Hủy bỏ",
+        "确 定": "Xác nhận",
+        "请选择分类": "Vui lòng chọn phân loại",
+        "文章ID不存在!": "ID bài viết không tồn tại",
+        "请选择分类!": "Vui lòng chọn phân loại",
+        "操作成功": "Thao tác thành công"
+    },
+    "jx3box-common-ui/src/header/asset.vue": {
+        "等级": "Cấp độ",
+        "盒币": "Tiền hộp",
+        "兑换通宝": "Đổi Thông bảo",
+        "金箔": "Kim Phủ",
+        "充值": "Nạp tiền",
+        "提现": "Rút tiền",
+        "银铛": "Ngân Đăng",
+        "兑礼": "Đổi quà",
+        "抽奖": "Rút thăm",
+        "卡密": "Mã thẻ",
+        "查看": "Xem"
+    },
+    "jx3box-common-ui/src/header/clientSwitch.vue": {
+        "剑三": "Kiếm Tam",
+        "缘起": "Duyên khởi"
+    },
+    "jx3box-common-ui/src/header/gameSwitch.vue": {
+        "剑三": "Kiếm Tam",
+        "缘起": "Duyên khởi"
+    },
+    "jx3box-common-ui/src/header/logo.vue": {
+        "点击展开魔盒矩阵": "Nhấn để mở rộng Ma hạp ứng dụng",
+        "魔盒": "Ma hạp"
+    },
+    "jx3box-common-ui/src/header/message.vue": {
+        "消息中心": "Trung tâm tin nhắn"
+    },
+    "jx3box-common-ui/src/header/nav.vue": {
+        "快捷导航": "Điều hướng nhanh"
+    },
+    "jx3box-common-ui/src/header/publish.vue": {
+        "创作中心": "Trung tâm sáng tác"
+    },
+    "jx3box-common-ui/src/header/search.vue": {
+        "搜索..": "Tìm kiếm..."
+    },
+    "jx3box-common-ui/src/header/shop.vue": {
+        "积分商城": "Trung tâm mua sắm"
+    },
+    "jx3box-common-ui/src/header/user.vue": {
+        "注册": "Đăng ký",
+        "登录": "Đăng nhập",
+        "签到成功": "Đăng ký thành công"
+    },
+    "jx3box-common-ui/src/header/userInfo.vue": {
+        "个人中心": "Trung tâm cá nhân",
+        "消息中心": "Trung tâm tin nhắn",
+        "发布中心": "Trung tâm đăng bài",
+        "退出登录": "Đăng xuất",
+        "签约作者": "Tác giả ký hợp đồng",
+        "专业版账号": "Tài khoản phiên bản chuyên nghiệp",
+        "（有效期至：": "（Hiệu lực đến:",
+        "魔盒UID：": "UID Hộp Ma:",
+        "资料设置": "Cài đặt hồ sơ",
+        "主题风格": "Phong cách chủ đề",
+        "收藏订阅": "Danh sách yêu thích và đăng ký",
+        "角色管理": "Quản lý vai trò",
+        "已购资源": "Tài nguyên đã mua",
+        "订单中心": "Trung tâm đơn hàng",
+        "反馈帮助": "Phản hồi và trợ giúp",
+        "成功": "Thành công",
+        "登出成功": "Đăng xuất thành công",
+        "匿名": "Ẩn danh"
+    },
+    "jx3box-common-ui/src/header/vip.vue": {
+        "会员中心": "Trung tâm thành viên"
+    },
+    "jx3box-common-ui/src/interact/Down.vue": {
+        "下载": "Tải xuống"
+    },
+    "jx3box-common-ui/src/interact/Fav.vue": {
+        "取消收藏": "Bỏ theo dõi",
+        "收藏": "Theo dõi",
+        "网络请求异常": "Lỗi mạng"
+    },
+    "jx3box-common-ui/src/interact/Fav2.vue": {
+        "已收藏": "Đã được yêu thích",
+        "收藏": "Yêu thích"
+    },
+    "jx3box-common-ui/src/interact/Feed.vue": {
+        "订阅": "Theo dõi",
+        "取消订阅": "Hủy theo dõi"
+    },
+    "jx3box-common-ui/src/interact/Homework.vue": {
+        "本月状态": "Tình trạng tháng này",
+        "已用": "Đã sử dụng",
+        "剩余": "Còn lại",
+        "总计": "Tổng cộng",
+        "当前拥有盒币": "Hiện có hộp tiền",
+        "打赏": "Đưa tiền thưởng",
+        "品鉴": "Đánh giá",
+        "盒币": "Hộp tiền",
+        "自定义": "Tùy chỉnh",
+        "输入自定义数量": "Nhập số lượng tùy chỉnh",
+        "寄语": "Lời nhắn",
+        "请输入寄语（必填）": "Vui lòng nhập lời nhắn (bắt buộc)",
+        "插入当前版本": "Chèn phiên bản hiện tại",
+        "取 消": "Hủy bỏ",
+        "确 定": "Xác nhận",
+        "不错，加油！": "Tốt lắm, cố gắng nhé!",
+        "批改作业": "Chấm điểm bài tập",
+        "操作成功": "Hoạt động thành công",
+        "获取失败": "Lấy dữ liệu thất bại"
+    },
+    "jx3box-common-ui/src/interact/Like.vue": {
+        "喜欢": "Thích"
+    },
+    "jx3box-common-ui/src/interact/Like2.vue": {
+        "点赞": "Thích"
+    },
+    "jx3box-common-ui/src/interact/Print.vue": {
+        "打印 | 保存PDF": "In | Lưu PDF",
+        "错误": "Lỗi",
+        "请先阅读完全文以加载所有图片": "Vui lòng đọc hết nội dung để tải tất cả hình ảnh"
+    },
+    "jx3box-common-ui/src/interact/QRcode.vue": {
+        "二维码": "Mã QR",
+        "扫一扫即可访问": "Quét mã để truy cập",
+        "扫一扫手机访问": "Quét điện thoại để truy cập"
+    },
+    "jx3box-common-ui/src/interact/Share2.vue": {
+        "分享": "Chia sẻ",
+        "将文章链接贴": "Dán liên kết bài viết",
+        "微信扫一扫分享": "Quét mã WeChat để chia sẻ"
+    },
+    "jx3box-common-ui/src/interact/Sharing.vue": {
+        "分享": "Chia sẻ"
+    },
+    "jx3box-common-ui/src/interact/batchReward.vue": {
+        "批量打赏": "Tặng thưởng hàng loạt",
+        "品鉴评分": "Đánh giá phẩm",
+        "本月状态": "Tình trạng tháng này",
+        "已用": "Đã sử dụng",
+        "剩余": "Còn lại",
+        "总计": "Tổng cộng",
+        "品鉴": "Phẩm",
+        "盒币": "Hộp tiền",
+        "寄语": "Lời nhắn",
+        "请输入寄语（必填）": "Vui lòng nhập lời nhắn (bắt buộc)",
+        "插入当前版本": "Chèn phiên bản hiện tại",
+        "取 消": "Hủy bỏ",
+        "确 定": "Xác nhận"
+    },
+    "jx3box-common-ui/src/interact/boxcoin_admin.vue": {
+        "品鉴": "Đánh giá phẩm",
+        "品鉴评分": "Đánh giá phẩm",
+        "本月状态": "Tình trạng tháng này",
+        "已用": "Đã sử dụng",
+        "剩余": "Còn lại",
+        "总计": "Tổng cộng",
+        "盒币": "Hộp tiền",
+        "自定义": "Tùy chỉnh",
+        "输入自定义数量": "Nhập số lượng tùy chỉnh",
+        "寄语": "Lời nhắn",
+        "请输入寄语（必填）": "Vui lòng nhập lời nhắn (bắt buộc)",
+        "插入当前版本": "Chèn phiên bản hiện tại",
+        "取": "Lấy",
+        "确": "Xác nhận",
+        "操作成功": "Hoạt động thành công",
+        "获取失败": "Lấy dữ liệu thất bại",
+        "辛苦，感谢！": "Cảm ơn sự chăm chỉ của bạn!"
+    },
+    "jx3box-common-ui/src/interact/boxcoin_records.vue": {
+        "参与打赏": "Tham gia thưởng",
+        "收益作者": "Tác giả nhận thu nhập",
+        "盒币": "Hộp tiền",
+        "寄语": "Lời nhắn",
+        "打赏": "Thưởng",
+        "品鉴": "Đánh giá",
+        "撤销": "Hủy bỏ",
+        "是否确定撤销该评分？": "Bạn có chắc chắn muốn hủy bỏ đánh giá này không?",
+        "确认": "Xác nhận",
+        "确定": "Đồng ý",
+        "撤销成功": "Hủy bỏ thành công"
+    },
+    "jx3box-common-ui/src/interact/boxcoin_user.vue": {
+        "投币": "Bỏ xu",
+        "投币打赏": "Bỏ xu để thưởng",
+        "当前拥有盒币": "Số hộp xu hiện có",
+        "打赏": "Thưởng",
+        "盒币": "Hộp xu",
+        "自定义": "Tùy chỉnh",
+        "输入自定义数量": "Nhập số lượng tùy chỉnh",
+        "寄语": "Gửi lời nhắn",
+        "请输入寄语（必填）": "Vui lòng nhập lời nhắn (bắt buộc)",
+        "取 消": "Hủy",
+        "确 定": "Xác nhận",
+        "辛苦了，谢谢大大！": "Cảm ơn bạn đã vất vả!",
+        "操作成功": "Hoạt động thành công"
+    },
+    "jx3box-common-ui/src/single/Collection.vue": {
+        "该作品已被收录至作者的剑三小册": "Tác phẩm này đã được đưa vào bộ sưu tập của tác giả về Kiếm Tam"
+    },
+    "jx3box-common-ui/src/single/Creators.vue": {
+        "联合创作": "Sáng tác hợp tác",
+        "编辑当前作品": "Chỉnh sửa tác phẩm hiện tại"
+    },
+    "jx3box-common-ui/src/single/PostCollection.vue": {
+        "关联": "Liên kết"
+    },
+    "jx3box-common-ui/src/single/PostGuide.vue": {
+        "上一篇": "Bài trước",
+        "下一篇": "Bài tiếp theo"
+    },
+    "jx3box-common-ui/src/single/PostHeader.vue": {
+        "原创": "Tác phẩm gốc",
+        "无界": "Vô giới",
+        "适用客户端": "Ứng dụng phù hợp",
+        "累计字数": "Tổng số từ",
+        "编辑": "Chỉnh sửa",
+        "发布日期:": "Ngày phát hành:",
+        "最后更新:": "Cập nhật lần cuối:",
+        "无标题": "Không tiêu đề",
+        "匿名": "Ẩn danh"
+    },
+    "jx3box-common-ui/src/single/Thx.vue": {
+        "所有原创作品，著作权归作者所有，所有未经授权的非署名转载或抄袭将有权追究法律责任，所有法律事务由专聘律师代理。": "Tất cả các tác phẩm gốc đều thuộc quyền sở hữu của tác giả. Mọi hành vi sao chép hoặc xuất bản không có sự cho phép và không ghi tên sẽ bị truy cứu trách nhiệm pháp lý. Tất cả các vấn đề pháp lý sẽ được đại diện bởi luật sư chuyên trách.",
+        "签约作者独家特约稿件，及所有魔盒官方评分作品用户一经兑现则视为有偿付费稿件，所有商业稿件的转载引用需同时征得魔盒平台授权。": "Các bài viết đặc biệt và độc quyền của tác giả ký hợp đồng, cũng như các tác phẩm được đánh giá bởi Magic Box, khi được thực hiện sẽ được coi là bài viết có trả phí. Việc sao chép hoặc trích dẫn bất kỳ bài viết thương mại nào đều cần phải được sự cho phép của nền tảng Magic Box."
+    },
+    "jx3box-common-ui/src/single/cms-single.vue": {
+        "评论": "Bình luận",
+        "作者没有开启评论功能": "Tác giả chưa bật tính năng bình luận"
+    },
+    "jx3box-common-ui/src/single/right-affix.vue": {
+        "去评论": "Đi đến bình luận",
+        "回到顶部": "Quay về đầu trang"
+    },
+    "jx3box-common-ui/src/upload/upload_banner.vue": {
+        "移除": "Loại bỏ",
+        "用于展示tips": "Dùng để hiển thị tips",
+        "图片大小不能超过": "Kích thước ảnh không được vượt quá",
+        "上传成功": "Tải lên thành công"
+    },
+    "jx3box-common-ui/src/wiki/GamePrice.vue": {
+        "砖": "Gạch",
+        "金": "Vàng",
+        "银": "Bạc",
+        "铜": "Đồng"
+    },
+    "jx3box-common-ui/src/wiki/WikiComment.vue": {
+        "回复": "Trả lời",
+        "收起": "Thu gọn",
+        "昵称：": "Biệt danh:",
+        "提交": "Gửi",
+        "发布评论异常，请联系管理员": "Có lỗi khi đăng bình luận, vui lòng liên hệ quản trị viên"
+    },
+    "jx3box-common-ui/src/wiki/WikiComments.vue": {
+        "百科评论": "Bình luận bách khoa",
+        "数据加载中": "Đang tải dữ liệu",
+        "数据加载异常": "Lỗi tải dữ liệu",
+        "暂无评论": "Chưa có bình luận",
+        "回复": "Trả lời",
+        "昵称：": "Biệt danh:",
+        "提交": "Gửi",
+        "请先填写评论内容再尝试提交": "Vui lòng nhập nội dung bình luận trước khi thử gửi",
+        "提交成功，请等待审核": "Gửi thành công, vui lòng chờ xét duyệt"
+    },
+    "jx3box-common-ui/src/wiki/WikiPanel.vue": {
+        "参与贡献": "Tham gia đóng góp",
+        "综合难度": "Độ khó tổng hợp",
+        "热度": "Mức độ phổ biến",
+        "更新时间": "Thời gian cập nhật"
+    },
+    "jx3box-common-ui/src/wiki/WikiRevisions.vue": {
+        "历史版本": "Phiên bản lịch sử",
+        "数据加载中": "Đang tải dữ liệu",
+        "数据加载异常": "Lỗi tải dữ liệu",
+        "暂无数据": "Chưa có dữ liệu",
+        "版本": "Phiên bản",
+        "更新时间": "Thời gian cập nhật",
+        "贡献者": "Người đóng góp",
+        "修订说明": "Mô tả sửa đổi"
+    },
+    "jx3box-comment-ui/src/components/boxcoin-records.vue": {
+        "打赏记录": "Ghi chép khen thưởng"
+    },
+    "jx3box-comment-ui/src/components/comment-and-reply-subcomponents-content.vue": {
+        "点赞": "Thích",
+        "已赞": "Đã thích",
+        "回复": "Trả lời",
+        "删除": "Xóa",
+        "拉入黑洞后，仅评论者自己独自可见": "Sau khi đưa vào hố đen, chỉ có người bình luận mới nhìn thấy",
+        "黑洞": "Hố đen",
+        "置顶": "Ghim",
+        "取消置顶": "Bỏ ghim",
+        "加精": "Tăng cường",
+        "取消加精": "Bỏ tăng cường",
+        "批改作业": "Chấm bài",
+        "显示": "Hiển thị",
+        "隐藏": "Ẩn",
+        "提交": "Gửi",
+        "收起": "Thu gọn",
+        "确定删除该评论吗？": "Bạn có chắc chắn muốn xóa bình luận này không?",
+        "确定隐藏该评论吗？": "Bạn có chắc chắn muốn ẩn bình luận này không?",
+        "提示": "Nhắc nhở",
+        "确定": "Đồng ý",
+        "取消": "Hủy"
+    },
+    "jx3box-comment-ui/src/components/comment-and-reply-subcomponents-reply-list.vue": {
+        "收起": "Thu gọn",
+        "查看更多": "Xem thêm"
+    },
+    "jx3box-comment-ui/src/components/comment-and-reply.vue": {
+        "人字榜800线无名小侠": "Danh sách nhân vật, 800 dòng, hiệp khách vô danh",
+        "卷面分：": "Điểm số trang:",
+        "置顶": "Ghim lên đầu",
+        "精华": "Tinh hoa",
+        "悄悄话": "Lời thì thầm",
+        "评论成功!": "Bình luận thành công!",
+        "删除成功!": "Xóa thành công!"
+    },
+    "jx3box-comment-ui/src/components/comment-input-form.vue": {
+        "参与讨论...": "Tham gia thảo luận...",
+        "悄悄话": "Lời thì thầm",
+        "勾选悄悄话后仅作者和你可见，并且不可再变更状态": "Sau khi chọn Lời thì thầm, chỉ tác giả và bạn mới nhìn thấy, và không thể thay đổi trạng thái",
+        "发表评论": "Viết bình luận"
+    },
+    "jx3box-comment-ui/src/components/quick-reply.vue": {
+        "快捷回复": "Trả lời nhanh"
+    },
+    "jx3box-comment-ui/src/components/reply-list-item-comment-content-simple.vue": {
+        "回复": "Trả lời",
+        "点赞": "Thích",
+        "已赞": "Đã thích",
+        "删除": "Xóa",
+        "拉入黑洞后，仅评论者自己独自可见": "Sau khi đưa vào hố đen, chỉ có người bình luận mới nhìn thấy",
+        "黑洞": "Hố đen",
+        "确定删除该评论吗？": "Bạn có chắc chắn muốn xóa bình luận này không?",
+        "确定隐藏该评论吗？": "Bạn có chắc chắn muốn ẩn bình luận này không?",
+        "提示": "Nhắc nhở",
+        "确定": "Đồng ý",
+        "取消": "Hủy"
+    },
+    "jx3box-comment-ui/src/components/reply-list-item-reply-form.vue": {
+        "回复": "Trả lời",
+        "输入回复...": "Nhập câu trả lời...",
+        "提交": "Gửi",
+        "收起": "Thu gọn"
+    },
+    "jx3box-comment-ui/src/components/upload.vue": {
+        "最多上传 ": "Tối đa tải lên",
+        " 张 ": "bức ảnh định dạng",
+        " 格式图片，单张图片不能超过": ", mỗi hình không được vượt quá",
+        "单张图片大小不能超过": "Kích thước hình ảnh không được vượt quá",
+        "图片上传失败!": "Tải lên hình ảnh thất bại!",
+        "张图片！": "hình ảnh!"
+    },
+    "jx3box-editor/src/components/Author.vue": {
+        "签约作者": "Tác giả ký hợp đồng",
+        "未知": "Không xác định",
+        "经验值：": "Kinh nghiệm:",
+        "专业版会员": "Thành viên chuyên nghiệp",
+        "高级版会员": "Thành viên cao cấp"
+    },
+    "jx3box-editor/src/components/Combo.vue": {
+        "门派武学": "Võ học môn phái",
+        "全部技能": "Tất cả kỹ năng",
+        "共找到": "Tìm thấy tổng cộng",
+        "条记录": "bản ghi",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm",
+        "请输入搜索条件查询": "Vui lòng nhập điều kiện tìm kiếm",
+        "已选技能": "Kỹ năng đã chọn",
+        "移除": "Gỡ bỏ",
+        "设置备注": "Cài đặt ghi chú",
+        "备注": "Ghi chú",
+        "输入备注": "Nhập ghi chú",
+        "文字颜色": "Màu chữ",
+        "文字大小": "Kích thước chữ",
+        "文字粗细": "Độ dày chữ",
+        "预览": "Xem trước",
+        "示例文字": "Chữ mẫu",
+        "取 消": "Hủy bỏ",
+        "确 定": "Xác nhận",
+        "设置为无GCD技能": "Đặt thành kỹ năng không có GCD",
+        "设置为有GCD技能": "Đặt thành kỹ năng có GCD",
+        "图标大小": "Kích thước biểu tượng",
+        "取消下划线": "Hủy gạch chân",
+        "设置下划线": "Đặt gạch chân"
+    },
+    "jx3box-editor/src/components/LetterDemo.vue": {
+        "我是抬头": "Tôi ngẩng đầu lên",
+        "明月几时有，把酒问青天。": "Trăng sáng khi nào có, nâng chén hỏi trời xanh."
+    },
+    "jx3box-editor/src/components/PostAuthor.vue": {
+        "作者": "Tác giả",
+        "更新": "Cập nhật",
+        "信息": "Tin tức"
+    },
+    "jx3box-editor/src/components/SkillMartial.vue": {
+        "旗舰端": "Phiên bản kỳ hạm",
+        "无界端": "Phiên bản vô giới",
+        "奇穴技能": "Kỹ năng kỳ huyệt",
+        "江湖轻功": "Khinh công giang hồ",
+        "门派技能": "Kỹ năng môn phái",
+        "通用技能": "Kỹ năng thông dụng"
+    },
+    "jx3box-vue3-ui/src/author/AuthorFans.vue": {
+        "粉丝榜": "Danh sách người hâm mộ",
+        "累计打赏": "Tổng số tiền thưởng",
+        "金箔": "Vàng lá",
+        "本赛季共": "Tổng cộng mùa này",
+        "人为TA赠礼": "Quà tặng cho TA"
+    },
+    "jx3box-vue3-ui/src/author/AuthorFollow.vue": {
+        "已粉": "Đã theo dõi",
+        "关注": "Theo dõi",
+        "取消关注": "Bỏ theo dõi",
+        "万": "vạn",
+        "关注成功": "Theo dõi thành công",
+        "确定不再关注此人？": "Xác nhận không theo dõi người này nữa?",
+        "提示": "Gợi ý",
+        "确定": "Xác nhận",
+        "取消": "Hủy bỏ",
+        "取关成功": "Bỏ theo dõi thành công"
+    },
+    "jx3box-vue3-ui/src/author/AuthorGift.vue": {
+        "赠礼": "Quà tặng",
+        "金箔": "Vàng lá",
+        "充值": "Nạp tiền",
+        "赠送": "Tặng",
+        "寄语": "Lời nhắn",
+        "请输入寄语（必填）": "Vui lòng nhập lời nhắn (bắt buộc)",
+        "取 消": "Hủy bỏ",
+        "确 定": "Xác nhận",
+        "不能给自己赠送礼物": "Không thể tặng quà cho chính mình",
+        "作者没有开启接受礼物": "Tác giả chưa mở chức năng nhận quà",
+        "正在处理中": "Đang được xử lý",
+        "赠送成功": "Tặng quà thành công",
+        "辛苦，感谢！": "Công việc vất vả, cảm ơn!",
+        "交易繁忙，请稍后再试": "Giao dịch bận, vui lòng thử lại sau"
+    },
+    "jx3box-vue3-ui/src/author/AuthorInfo.vue": {
+        "签约作者": "Tác giả ký hợp đồng",
+        "未知": "Không xác định",
+        "经验值：": "Kinh nghiệm:",
+        "专业版会员": "Thành viên chuyên nghiệp",
+        "高级版会员": "Thành viên cao cấp"
+    },
+    "jx3box-vue3-ui/src/author/AuthorLink.vue": {
+        "房间号：": "Số phòng:"
+    },
+    "jx3box-vue3-ui/src/author/AuthorMedals.vue": {
+        "作者荣誉": "Danh hiệu tác giả"
+    },
+    "jx3box-vue3-ui/src/author/AuthorMsg.vue": {
+        "短消息": "Tin nhắn ngắn"
+    },
+    "jx3box-vue3-ui/src/author/AuthorPosts.vue": {
+        "最新作品": "Tác phẩm mới nhất",
+        "/无标题": "/Không có tiêu đề"
+    },
+    "jx3box-vue3-ui/src/author/AuthorTeams.vue": {
+        "所在团队": "Đội hiện tại"
+    },
+    "jx3box-vue3-ui/src/author/UserPop.vue": {
+        "请输入用户 UID 或者昵称进行搜索": "Vui lòng nhập UID hoặc biệt danh của người dùng để tìm kiếm",
+        "搜索": "Tìm kiếm",
+        "未找到匹配项": "Không tìm thấy mục khớp",
+        "请输入搜索条件": "Vui lòng nhập điều kiện tìm kiếm",
+        "取 消": "Hủy bỏ",
+        "确 定": "Xác nhận",
+        "用户不存在 或 UID不正确": "Người dùng không tồn tại hoặc UID không chính xác",
+        "提醒": "Nhắc nhở",
+        "确定": "Xác nhận"
+    },
+    "jx3box-vue3-ui/src/bread/Admin.vue": {
+        "管理面板": "Bảng điều khiển quản lý",
+        "状态变更": "Thay đổi trạng thái",
+        "可见性变更": "Thay đổi khả năng hiển thị",
+        "推荐角标": "Dấu hiệu đề xuất",
+        "高亮置顶": "Nổi bật và ghim lên đầu",
+        "置顶": "Ghim lên đầu",
+        "开启高亮": "Bật nổi bật",
+        "预览高亮效果": "Xem trước hiệu ứng nổi bật",
+        "精选": "Chọn lọc",
+        "封面海报": "Áo bìa poster",
+        "海报地址": "Địa chỉ poster",
+        "元信息": "Thông tin metadata",
+        "请选择板块": "Vui lòng chọn mục",
+        "板块": "Mục",
+        "类型": "Loại",
+        "请选择": "Vui lòng chọn",
+        "主题": "Chủ đề",
+        "提交": "Gửi",
+        "取消": "Hủy",
+        "请输入作者ID": "Vui lòng nhập ID tác giả",
+        "作者ID": "ID tác giả",
+        "移除海报": "Xóa hình ảnh bìa",
+        "默认": "Mặc định",
+        "草稿": "Bản nháp",
+        "待审核": "Chờ duyệt",
+        "删除": "Xóa",
+        "设置成功": "Cài đặt thành công",
+        "上传失败": "Tải lên không thành công"
+    },
+    "jx3box-vue3-ui/src/bread/AdminButton.vue": {
+        "管理": "Quản lý"
+    },
+    "jx3box-vue3-ui/src/bread/AdminDirectMessage.vue": {
+        "私信": "Tin nhắn riêng",
+        "请输入私信内容": "Vui lòng nhập nội dung tin nhắn riêng",
+        "管理私信": "Quản lý tin nhắn riêng",
+        "确定": "Xác nhận",
+        "取消": "Hủy bỏ",
+        "运营通知：": "Thông báo quản lý:",
+        "私信成功": "Tin nhắn riêng đã gửi thành công"
+    },
+    "jx3box-vue3-ui/src/bread/AdminDrop.vue": {
+        "管理": "Quản lý",
+        "设置": "Cài đặt",
+        "编辑": "Chỉnh sửa",
+        "私信": "Tin nhắn riêng",
+        "转移": "Chuyển giao",
+        "推送": "Đẩy thông báo",
+        "请输入私信内容": "Vui lòng nhập nội dung tin nhắn",
+        "管理私信": "Quản lý tin nhắn riêng",
+        "确定": "Xác nhận",
+        "取消": "Hủy bỏ",
+        "运营通知：": "Thông báo từ quản lý:",
+        "私信成功": "Tin nhắn thành công"
+    },
+    "jx3box-vue3-ui/src/bread/DesignTask.vue": {
+        "快捷推送": "Gửi nhanh",
+        "标题": "Tiêu đề",
+        "请输入标题": "Vui lòng nhập tiêu đề",
+        "类型": "Loại",
+        "请选择类型": "Vui lòng chọn loại",
+        "版本": "Phiên bản",
+        "备注": "Ghi chú",
+        "请输入备注": "Vui lòng nhập ghi chú",
+        "星级": "Sao",
+        "近期推送": "Gửi gần đây",
+        "推送时间": "Thời gian gửi",
+        "推送人": "Người gửi",
+        "当前文章暂无历史推送": "Bài viết hiện tại không có gửi lịch sử",
+        "取 消": "Hủy",
+        "确 定": "Xác nhận",
+        "剑三": "Kiếm Tam",
+        "缘起": "Duyên khởi",
+        "无界": "Vô giới",
+        "体服": "Thí nghiệm",
+        "提交成功": "Gửi thành công"
+    },
+    "jx3box-vue3-ui/src/comment/CommentContent.vue": {
+        "点赞": "Thích",
+        "已赞": "Đã thích",
+        "回复": "Trả lời",
+        "删除": "Xóa",
+        "拉入黑洞后，仅评论者自己独自可见": "Sau khi đưa vào hố đen, chỉ có người bình luận mới nhìn thấy",
+        "黑洞": "Hố đen",
+        "置顶": "Ghim",
+        "取消置顶": "Bỏ ghim",
+        "加精": "Tăng cường",
+        "取消加精": "Bỏ tăng cường",
+        "批改作业": "Chấm bài",
+        "显示": "Hiển thị",
+        "隐藏": "Ẩn",
+        "提交": "Gửi",
+        "收起": "Thu gọn",
+        "确定删除该评论吗？": "Bạn có chắc chắn muốn xóa bình luận này không?",
+        "确定隐藏该评论吗？": "Bạn có chắc chắn muốn ẩn bình luận này không?",
+        "提示": "Nhắc nhở",
+        "确定": "Đồng ý",
+        "取消": "Hủy"
+    },
+    "jx3box-vue3-ui/src/comment/CommentContentSimple.vue": {
+        "回复": "Trả lời",
+        "点赞": "Thích",
+        "已赞": "Đã thích",
+        "删除": "Xóa",
+        "拉入黑洞后，仅评论者自己独自可见": "Sau khi đưa vào hố đen, chỉ có người bình luận mới nhìn thấy",
+        "黑洞": "Hố đen",
+        "确定删除该评论吗？": "Bạn có chắc chắn muốn xóa bình luận này không?",
+        "确定隐藏该评论吗？": "Bạn có chắc chắn muốn ẩn bình luận này không?",
+        "提示": "Nhắc nhở",
+        "确定": "Đồng ý",
+        "取消": "Hủy"
+    },
+    "jx3box-vue3-ui/src/comment/CommentInputForm.vue": {
+        "参与讨论...": "Tham gia thảo luận...",
+        "悄悄话": "Lời thì thầm",
+        "勾选悄悄话后仅作者和你可见，并且不可再变更状态": "Sau khi chọn Lời thì thầm, chỉ tác giả và bạn mới nhìn thấy, và không thể thay đổi trạng thái",
+        "发表评论": "Viết bình luận"
+    },
+    "jx3box-vue3-ui/src/comment/CommentWithReply.vue": {
+        "人字榜800线无名小侠": "Danh sách nhân vật, 800 dòng, hiệp khách vô danh",
+        "卷面分：": "Điểm số trang:",
+        "置顶": "Ghim lên đầu",
+        "精华": "Tinh hoa",
+        "悄悄话": "Lời thì thầm",
+        "评论成功!": "Bình luận thành công!",
+        "删除成功!": "Xóa thành công!"
+    },
+    "jx3box-vue3-ui/src/comment/QuickReply.vue": {
+        "快捷回复": "Trả lời nhanh"
+    },
+    "jx3box-vue3-ui/src/comment/ReplyForReply.vue": {
+        "回复": "Trả lời",
+        "输入回复...": "Nhập câu trả lời...",
+        "提交": "Gửi",
+        "收起": "Thu gọn"
+    },
+    "jx3box-vue3-ui/src/comment/ReplyList.vue": {
+        "收起": "Thu gọn",
+        "查看更多": "Xem thêm"
+    },
+    "jx3box-vue3-ui/src/comment/Upload.vue": {
+        "最多上传 ": "Tối đa tải lên",
+        " 张 ": "bức ảnh định dạng",
+        " 格式图片，单张图片不能超过": ", mỗi hình không được vượt quá",
+        "单张图片大小不能超过": "Kích thước hình ảnh không được vượt quá",
+        "图片上传失败!": "Tải lên hình ảnh thất bại!",
+        "张图片！": "hình ảnh!"
+    },
+    "jx3box-vue3-ui/src/editor/Article.vue": {
+        "加载全部": "Tải tất cả"
+    },
+    "jx3box-vue3-ui/src/editor/BoxResource.vue": {
+        "魔盒资源": "Tài nguyên Hộp Ma",
+        "魔盒资源库": "Kho tài nguyên Hộp Ma",
+        "重制": "Trọng chế",
+        "缘起": "Duyên khởi",
+        "关键词": "Từ khóa",
+        "精确匹配": "Khớp chính xác",
+        "魔盒用户": "Người dùng Hộp Ma",
+        "用户": "Người dùng",
+        "共找到": "Tìm thấy tổng cộng",
+        "条记录": "bản ghi",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "连招": "Liên chiêu",
+        "剑三趣图": "Hình ảnh thú vị Kiếm Tam",
+        "趣图": "Hình ảnh thú vị",
+        "信纸": "Giấy viết thư",
+        "加载更多": "Tải thêm",
+        "请输入搜索条件查询": "Vui lòng nhập điều kiện tìm kiếm",
+        "取": "Lấy",
+        "请输入 ID 或 名称": "Vui lòng nhập ID hoặc tên",
+        "请选择一个用户": "Vui lòng chọn một người dùng",
+        "您的等级不足或无权限（Lv2以上可用）": "Cấp độ của bạn không đủ hoặc không có quyền (chỉ có sẵn từ cấp 2 trở lên)",
+        "消息": "Tin nhắn"
+    },
+    "jx3box-vue3-ui/src/editor/Resource.vue": {
+        "剑三资源": "Tài nguyên Kiếm Tam",
+        "剑三数据库": "Cơ sở dữ liệu Kiếm Tam",
+        "重制": "Trọng chế",
+        "缘起": "Duyên khởi",
+        "请输入 ID 或 名称": "Vui lòng nhập ID hoặc tên",
+        "ID／名称": "ID/Tên",
+        "精确匹配": "Khớp chính xác",
+        "仅对Buff/Skill有效": "Chỉ có hiệu lực với Buff/Kỹ năng",
+        "共找到": "Tìm thấy tổng cộng",
+        "条记录": "bản ghi",
+        "插入模式：": "Chế độ chèn:",
+        "简版": "Phiên bản đơn giản",
+        "完整版": "Phiên bản đầy đủ",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "技能": "Kỹ năng",
+        "物品": "Vật phẩm",
+        "等级：": "Cấp độ:",
+        "地图：": "Bản đồ:",
+        "血量：": "Khí huyết:",
+        "内力：": "Nội lực:",
+        "图标": "Biểu tượng",
+        "加载更多": "Tải thêm",
+        "请输入搜索条件查询": "Vui lòng nhập điều kiện tìm kiếm",
+        "取 消": "Hủy bỏ",
+        "插 入": "Chèn",
+        "确 定": "Xác nhận"
+    },
+    "jx3box-vue3-ui/src/editor/Upload.vue": {
+        "清空": "Xóa hết",
+        "取 消": "Hủy bỏ",
+        "插 入": "Chèn",
+        "确 定": "Xác nhận",
+        "一次最多同时上传": "Mỗi lần có thể tải lên tối đa",
+        "个文件（单个文件不超过": "tệp (mỗi tệp không vượt quá",
+        "M），格式限常见的图片、文档、数据表及压缩包": "MB), chỉ chấp nhận các định dạng hình ảnh, tài liệu, bảng dữ liệu và tệp nén thông thường",
+        "上传附件": "Tải lên tệp đính kèm"
+    },
+    "jx3box-vue3-ui/src/editor/UploadAlum.vue": {
+        "批量上传图片": "Tải lên hình ảnh hàng loạt",
+        "当前没有任何图片": "Hiện không có hình ảnh nào"
+    },
+    "jx3box-vue3-ui/src/interact/BoxcoinAdmin.vue": {
+        "品鉴": "Đánh giá phẩm",
+        "品鉴评分": "Đánh giá phẩm",
+        "本月状态": "Tình trạng tháng này",
+        "已用": "Đã sử dụng",
+        "剩余": "Còn lại",
+        "总计": "Tổng cộng",
+        "盒币": "Hộp tiền",
+        "自定义": "Tùy chỉnh",
+        "输入自定义数量": "Nhập số lượng tùy chỉnh",
+        "寄语": "Lời nhắn",
+        "请输入寄语（必填）": "Vui lòng nhập lời nhắn (bắt buộc)",
+        "插入当前版本": "Chèn phiên bản hiện tại",
+        "取": "Lấy",
+        "确": "Xác nhận",
+        "操作成功": "Hoạt động thành công",
+        "获取失败": "Lấy dữ liệu thất bại",
+        "辛苦，感谢！": "Cảm ơn sự chăm chỉ của bạn!"
+    },
+    "jx3box-vue3-ui/src/interact/BoxcoinRecords.vue": {
+        "参与打赏": "Tham gia thưởng",
+        "收益作者": "Tác giả nhận thu nhập",
+        "盒币": "Hộp tiền",
+        "寄语": "Lời nhắn",
+        "打赏": "Thưởng",
+        "品鉴": "Đánh giá",
+        "撤销": "Hủy bỏ",
+        "是否确定撤销该评分？": "Bạn có chắc chắn muốn hủy bỏ đánh giá này không?",
+        "确认": "Xác nhận",
+        "确定": "Đồng ý",
+        "撤销成功": "Hủy bỏ thành công"
+    },
+    "jx3box-vue3-ui/src/interact/BoxcoinUser.vue": {
+        "投币": "Bỏ xu",
+        "投币打赏": "Bỏ xu để thưởng",
+        "当前拥有盒币": "Số hộp xu hiện có",
+        "打赏": "Thưởng",
+        "盒币": "Hộp xu",
+        "自定义": "Tùy chỉnh",
+        "输入自定义数量": "Nhập số lượng tùy chỉnh",
+        "寄语": "Gửi lời nhắn",
+        "请输入寄语（必填）": "Vui lòng nhập lời nhắn (bắt buộc)",
+        "取 消": "Hủy",
+        "确 定": "Xác nhận",
+        "辛苦了，谢谢大大！": "Cảm ơn bạn đã vất vả!",
+        "操作成功": "Hoạt động thành công"
+    },
+    "jx3box-vue3-ui/src/interact/Fav.vue": {
+        "已收藏": "Đã theo dõi",
+        "收藏": "Theo dõi"
+    },
+    "jx3box-vue3-ui/src/interact/Like.vue": {
+        "点赞": "Thích"
+    },
+    "jx3box-vue3-ui/src/interact/Share.vue": {
+        "分享": "Chia sẻ",
+        "将文章链接贴": "Dán liên kết bài viết",
+        "微信扫一扫分享": "Quét mã WeChat để chia sẻ"
+    },
+    "jx3box-vue3-ui/src/header/Asset.vue": {
+        "等级": "Cấp độ",
+        "盒币": "Tiền hộp",
+        "兑换通宝": "Đổi Thông bảo",
+        "金箔": "Kim Phủ",
+        "充值": "Nạp tiền",
+        "提现": "Rút tiền",
+        "银铛": "Ngân Đăng",
+        "兑礼": "Đổi quà",
+        "抽奖": "Rút thăm",
+        "卡密": "Mã thẻ",
+        "查看": "Xem"
+    },
+    "jx3box-vue3-ui/src/header/ClientSwitch.vue": {
+        "剑三": "Kiếm Tam",
+        "缘起": "Duyên khởi"
+    },
+    "jx3box-vue3-ui/src/header/GameSwitch.vue": {
+        "剑三": "Kiếm Tam",
+        "缘起": "Duyên khởi"
+    },
+    "jx3box-vue3-ui/src/header/Logo.vue": {
+        "点击展开魔盒矩阵": "Nhấn để mở rộng Ma hạp ứng dụng",
+        "魔盒": "Ma hạp"
+    },
+    "jx3box-vue3-ui/src/header/Message.vue": {
+        "消息中心": "Trung tâm tin nhắn"
+    },
+    "jx3box-vue3-ui/src/header/Nav.vue": {
+        "快捷导航": "Điều hướng nhanh"
+    },
+    "jx3box-vue3-ui/src/header/Publish.vue": {
+        "创作中心": "Trung tâm sáng tác"
+    },
+    "jx3box-vue3-ui/src/header/Search.vue": {
+        "搜索..": "Tìm kiếm..."
+    },
+    "jx3box-vue3-ui/src/header/Shop.vue": {
+        "积分商城": "Trung tâm mua sắm"
+    },
+    "jx3box-vue3-ui/src/header/User.vue": {
+        "注册": "Đăng ký",
+        "登录": "Đăng nhập",
+        "签到成功": "Đăng ký thành công"
+    },
+    "jx3box-vue3-ui/src/header/UserInfo.vue": {
+        "个人中心": "Trung tâm cá nhân",
+        "消息中心": "Trung tâm tin nhắn",
+        "发布中心": "Trung tâm đăng bài",
+        "退出登录": "Đăng xuất",
+        "签约作者": "Tác giả ký hợp đồng",
+        "专业版账号": "Tài khoản phiên bản chuyên nghiệp",
+        "（有效期至：": "（Hiệu lực đến:",
+        "魔盒UID：": "UID Hộp Ma:",
+        "资料设置": "Cài đặt hồ sơ",
+        "主题风格": "Phong cách chủ đề",
+        "收藏订阅": "Danh sách yêu thích và đăng ký",
+        "角色管理": "Quản lý vai trò",
+        "已购资源": "Tài nguyên đã mua",
+        "订单中心": "Trung tâm đơn hàng",
+        "反馈帮助": "Phản hồi và trợ giúp",
+        "成功": "Thành công",
+        "登出成功": "Đăng xuất thành công",
+        "匿名": "Ẩn danh"
+    },
+    "jx3box-vue3-ui/src/header/Vip.vue": {
+        "会员中心": "Trung tâm thành viên"
+    },
+    "jx3box-vue3-ui/src/single/Author.vue": {
+        "私信": "Thư riêng"
+    },
+    "jx3box-vue3-ui/src/single/Collection.vue": {
+        "该作品已被收录至作者的剑三小册": "Tác phẩm này đã được đưa vào bộ sưu tập của tác giả về Kiếm Tam"
+    },
+    "jx3box-vue3-ui/src/single/Comment.vue": {
+        "作业模式": "Chế độ làm việc",
+        "排序模式：": "Chế độ sắp xếp:",
+        "最后靠前": "Mới nhất",
+        "最早靠前": "Cũ nhất",
+        "获赞靠前": "Nhiều lượt thích nhất",
+        "开启过滤": "Bộ lọc",
+        "开启过滤后，仅设为显示的评论可被其他人所见": "Sau khi bật bộ lọc, chỉ những bình luận được thiết lập để hiển thị mới có thể được người khác nhìn thấy",
+        "删除成功!": "Xóa thành công!",
+        "操作成功!": "Thao tác thành công!",
+        "评论成功!": "Bình luận thành công!",
+        "评论失败": "Bình luận thất bại"
+    },
+    "jx3box-vue3-ui/src/single/Creators.vue": {
+        "联合创作": "Sáng tác hợp tác",
+        "编辑当前作品": "Chỉnh sửa tác phẩm hiện tại"
+    },
+    "jx3box-vue3-ui/src/single/PostHeader.vue": {
+        "原创": "Tác phẩm gốc",
+        "无界": "Vô giới",
+        "适用客户端": "Ứng dụng phù hợp",
+        "累计字数": "Tổng số từ",
+        "编辑": "Chỉnh sửa",
+        "发布日期:": "Ngày phát hành:",
+        "最后更新:": "Cập nhật lần cuối:",
+        "无标题": "Không tiêu đề",
+        "匿名": "Ẩn danh"
+    },
+    "jx3box-vue3-ui/src/single/SimpleThx.vue": {
+        "打赏记录": "Lịch sử nhận thưởng"
+    },
+    "jx3box-vue3-ui/src/single/Thx.vue": {
+        "所有原创作品，著作权归作者所有，所有未经授权的非署名转载或抄袭将有权追究法律责任，所有法律事务由专聘律师代理。": "Tất cả các tác phẩm gốc đều thuộc quyền sở hữu của tác giả. Mọi hành vi sao chép hoặc xuất bản không có sự cho phép và không ghi tên sẽ bị truy cứu trách nhiệm pháp lý. Tất cả các vấn đề pháp lý sẽ được đại diện bởi luật sư chuyên trách.",
+        "签约作者独家特约稿件，及所有魔盒官方评分作品用户一经兑现则视为有偿付费稿件，所有商业稿件的转载引用需同时征得魔盒平台授权。": "Các bài viết đặc biệt và độc quyền của tác giả ký hợp đồng, cũng như các tác phẩm được đánh giá bởi Magic Box, khi được thực hiện sẽ được coi là bài viết có trả phí. Việc sao chép hoặc trích dẫn bất kỳ bài viết thương mại nào đều cần phải được sự cho phép của nền tảng Magic Box."
+    },
+    "jx3box-vue3-ui/src/single/cms-single.vue": {
+        "评论": "Bình luận",
+        "作者没有开启评论功能": "Tác giả chưa bật tính năng bình luận"
+    },
+    "jx3box-vue3-ui/src/filters/clientBy.vue": {
+        "全部": "Tất cả",
+        "剑三": "Kiếm Tam",
+        "缘起": "Duyên khởi"
+    },
+    "jx3box-vue3-ui/src/filters/markBy.vue": {
+        "全部": "Tất cả",
+        "新手易用": "Tân thủ",
+        "进阶推荐": "Nâng cao",
+        "编辑精选": "Đề xuất",
+        "骨灰必备": "Cao thủ",
+        "精选": "Chọn lọc"
+    },
+    "jx3box-vue3-ui/src/filters/menuBy.vue": {
+        "全部": "Tất cả",
+        "筛选": "Sàng lọc"
+    },
+    "jx3box-vue3-ui/src/filters/orderBy.vue": {
+        "排序": "Sắp xếp",
+        "最后更新": "Cập nhật mới nhất",
+        "最早发布": "Phát hành sớm nhất",
+        "收藏最多": "Yêu thích nhất",
+        "点赞最多": "Nhiều lượt thích nhất",
+        "下载最多": "Tải về nhiều nhất"
+    },
+    "jx3box-vue3-ui/src/filters/tagBy.vue": {
+        "全部": "Tất cả"
+    },
+    "jx3box-vue3-ui/src/filters/topicBy.vue": {
+        "全部": "Tất cả"
+    },
+    "jx3box-vue3-ui/src/filters/zlpBy.vue": {
+        "全部": "Tất cả",
+        "资料片": "Bản cập nhật",
+        "雾海寻龙": "Vụ Hải Tầm Long",
+        "血战天策": "Huyết Chiến Thiên Sách",
+        "万灵当歌": "Vạn Linh Đương Ca",
+        "群侠万变": "Quần Hiệp Vạn Biến",
+        "安史之乱": "An Sử Chi Loạn",
+        "日月明尊": "Nhật Nguyệt Minh Tôn",
+        "横刀断浪": "Hoành Đao Đoạn Lãng",
+        "剑湖神宫": "Kiếm Hồ Thần Cung",
+        "巴蜀风云": "Ba Thục Phong Vân",
+        "江湖无限": "Giang Hồ Vô Hạn",
+        "五毒现世": "Ngũ Độc Hiện Thế",
+        "圣殿云起": "Thánh Điện Vân Khởi",
+        "北天药宗": "Bắc Thiên Dược Tông",
+        "白帝风云": "Bạch Đế Phong Vân",
+        "藏剑山庄": "Tàng Kiếm Sơn Trang",
+        "物华天宝": "Vật Hoa Thiên Bảo",
+        "其它": "Khác"
+    },
+    "jx3box-vue3-ui/src/editor/components/Author.vue": {
+        "签约作者": "Tác giả ký hợp đồng",
+        "未知": "Không xác định",
+        "经验值：": "Kinh nghiệm: ",
+        "专业版会员": "Thành viên chuyên nghiệp",
+        "高级版会员": "Thành viên cao cấp"
+    },
+    "jx3box-vue3-ui/src/editor/components/Combo.vue": {
+        "共找到": "Tìm thấy tổng cộng",
+        "条记录": "bản ghi",
+        "没有找到相关条目": "Không tìm thấy mục liên quan",
+        "加载更多": "Tải thêm",
+        "请输入搜索条件查询": "Vui lòng nhập điều kiện tìm kiếm",
+        "已选技能": "Kỹ năng đã chọn",
+        "移除": "Gỡ bỏ",
+        "设置为无GCD技能": "Đặt thành kỹ năng không có GCD",
+        "设置为有GCD技能": "Đặt thành kỹ năng có GCD"
+    },
+    "jx3box-vue3-ui/src/editor/components/Equip.vue": {
+        "配装ID": "ID trang bị"
+    },
+    "jx3box-vue3-ui/src/editor/components/GameText.vue": {
+        "，持续": ", kéo dài",
+        "分钟。": "phút.",
+        "分钟": "phút",
+        "秒": "giây"
+    },
+    "jx3box-vue3-ui/src/editor/components/Item.vue": {
+        "精炼等级：": "Cấp độ tinh luyện:",
+        "唯一": "Độc nhất",
+        "限时时间：": "Thời gian giới hạn:",
+        "最大拥有数：": "Số lượng tối đa sở hữu:",
+        "近身武器": "Vũ khí cận chiến",
+        "远程武器": "Vũ khí tầm xa",
+        "观赏提高": "Tăng tính thẩm mỹ",
+        "实用提高": "Tăng tính hữu ích",
+        "坚固提高": "Tăng độ bền",
+        "风水提高": "Tăng phong thủy",
+        "趣味提高": "Tăng tính thú vị",
+        "镶嵌孔：": "Lỗ chèn:",
+        "只能镶嵌五彩石": "Chỉ có thể khảm đá ngũ sắc",
+        "最大耐久度": "Độ bền tối đa",
+        "品质等级": "Cấp độ phẩm chất",
+        "装备分数": "Điểm trang bị",
+        "推荐门派：": "Môn phái đề xuất:",
+        "使用间隔": "Khoảng cách sử dụng",
+        "外观名称：": "Tên ngoại hình:",
+        "外观：": "Ngoại hình:",
+        "该物品可以放入账号储物箱共享。": "Vật phẩm này có thể được đặt vào kho tài khoản để chia sẻ.",
+        "该装备未精炼、镶嵌、附魔、穿戴前可以放入账号储物箱共享。": "Trang bị này có thể được đặt vào kho tài khoản để chia sẻ trước khi được tinh luyện, tương khảm, phụ ma, mặc vào.",
+        "可交互": "Có thể tương tác",
+        "可缩放": "Có thể phóng to/thu nhỏ",
+        "倍": "lần",
+        "物品来源：": "Nguồn gốc vật phẩm:"
+    },
+    "jx3box-vue3-ui/src/editor/components/Npc.vue": {
+        "强度": "Cường độ",
+        "血量": "Máu",
+        "内力": "Nội lực",
+        "范围": "Phạm vi",
+        "识破": "Thức phá",
+        "闪避": "Né tránh",
+        "招架": "Đỡ đòn",
+        "防御": "Phòng thủ",
+        "外功防御": "Phòng thủ ngoại công",
+        "混元防御": "Phòng thủ hỗn nguyên",
+        "阳性防御": "Phòng thủ dương tính",
+        "阴性防御": "Phòng thủ âm tính",
+        "毒性防御": "Phòng thủ độc tính",
+        "会心": "Hội tâm",
+        "外功会心": "Hội tâm ngoại công",
+        "混元会心": "Hội tâm hỗn nguyên",
+        "阳性会心": "Hội tâm dương tính",
+        "阴性会心": "Hội tâm âm tính",
+        "毒性会心": "Hội tâm độc tính",
+        "命中": "Chính xác",
+        "外功命中": "Chính xác ngoại công",
+        "混元命中": "Chính xác hỗn nguyên",
+        "阳性命中": "Chính xác dương tính",
+        "阴性命中": "Chính xác âm tính",
+        "毒性命中": "Chính xác độc tính"
+    },
+    "jx3box-vue3-ui/src/editor/components/PostAuthor.vue": {
+        "作者": "Tác giả",
+        "更新": "Cập nhật",
+        "信息": "Tin tức"
+    }
+}

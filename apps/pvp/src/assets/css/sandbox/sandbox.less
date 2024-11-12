@@ -1,0 +1,67 @@
+.m-pvp-sandbox-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .m-pvp-sandbox__content {
+        padding-top: 20px;
+        overflow-x: auto;
+    }
+    .m-extend {
+        width: 100%;
+        border-left: 1px solid #eee;
+        box-sizing: border-box;
+        overflow-y: auto;
+        border-left: 0;
+    }
+
+    .m-strategy-box {
+        min-height: 200px;
+        margin-bottom: 20px;
+        position: relative;
+        .m-strategy-content {
+            position: absolute;
+            top: 0;
+        }
+    }
+    .m-strategy-page {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 20px);
+        position: absolute;
+        top: 10px;
+        z-index: 2;
+        .u-icon {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+        .page-disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    }
+
+    .m-sandbox-intro {
+        .mt(20px);
+
+        .u-tab-icon {
+            .pr;
+            top: 2px;
+            margin-right: 2px;
+        }
+
+        .el-tabs__content {
+            p {
+                .fz(14px,2) !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @smallpc) {
+    .m-pvp-sandbox-content {
+        .m-sandbox-map {
+            overflow-x: auto;
+        }
+    }
+}
