@@ -1,0 +1,87 @@
+//父级节点
+.el-tree-node__content {
+    .fz(14px, 28px);
+    .h(28px);
+    user-select: none;
+    color: #0366d6;
+}
+
+//子级节点
+.is-leaf + .el-tree-node__label {
+    &:before {
+        content: "» ";
+        color: #3d454d;
+        .mr(5px);
+    }
+}
+
+.is-current {
+    & > .el-tree-node__content {
+        .bold;
+    }
+}
+
+.el-tree-node__label {
+    .w(100%);
+    box-sizing: border-box;
+    line-height: 14px;
+    text-wrap: wrap;
+
+    .u-count {
+        font-size: 13px;
+        color: #888;
+        margin-left: 5px;
+        font-style: normal;
+    }
+}
+
+.el-tree-node__expand-icon.is-leaf {
+    .none;
+}
+
+.m-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .h(100%);
+
+    @search-input-height: 50px;
+
+    .m-menus-panel {
+        .w(100%);
+        .h(calc(~"100% - 30px -" @search-input-height));
+        overflow-y: auto;
+        overflow-x: hidden;
+        .scrollbar();
+    }
+
+    .m-menus {
+        background-color: transparent;
+    }
+
+    .m-filters {
+        .flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        padding-right: 5px;
+        box-sizing: border-box;
+        .el-checkbox {
+            .flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+        .u-completed-num {
+            font-style: italic;
+            color: #0366d6;
+            font-size: 14px;
+        }
+        .u-total-num {
+            color: gray;
+            font-size: 14px;
+        }
+    }
+}
