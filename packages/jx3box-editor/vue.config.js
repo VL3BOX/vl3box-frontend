@@ -1,111 +1,134 @@
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue2';
-import path from 'path';
-import { JX3BOX } from "@jx3box/jx3box-common";
-import pkg from './package.json';
+const path = require('path');
+const pkg = require("./package.json");
+const { JX3BOX } = require("@jx3box/jx3box-common");
+const webpack = require('webpack')
 
-export default defineConfig({
-    plugins: [
-        vue()
-    ],
+module.exports = {
 
-    // Define static file paths
-    base:
-        // FOR Localhost => development
+    //❤️ Multiple pages ~
+    pages: {
+        article: {
+            title: '文章内容渲染',
+            entry: 'demo/A.js',
+            template: 'public/article.html',
+            filename: 'index.html',
+        },
+        tinymce: {
+            title: 'Tinymce编辑器',
+            entry: 'demo/T.js',
+            template: 'public/tinymce.html',
+            filename: 'tinymce/index.html',
+        },
+        markdown: {
+            title: 'Markdown编辑器',
+            entry: 'demo/M.js',
+            template: 'public/article.html',
+            filename: 'markdown/index.html',
+        },
+        article_markdown: {
+            title: 'Markdown文章内容渲染',
+            entry: 'demo/MarkdownArticleDemo.js',
+            template: 'public/article.html',
+            filename: 'article_markdown/index.html',
+        },
+    },
+
+
+    //❤️ define path for static files ~
+    publicPath:
+        //FOR Localhost => development
         (process.env.NODE_ENV === 'development' && '/') ||
 
-        // BY origin
+        //BY origin
         (process.env.STATIC_PATH === "origin" && `${JX3BOX.__staticPath["origin"]}${pkg.name}/`) ||
 
-        // BY github
+        //BY github
         (process.env.STATIC_PATH === "github" && `${JX3BOX.__staticPath["github"]}${pkg.name}/`) ||
 
-        // BY jsdelivr
+        //BY jsdelivr
         (process.env.STATIC_PATH === "jsdelivr" && `${JX3BOX.__staticPath["jsdelivr"]}${pkg.name}@gh-pages/`) ||
 
-        // BY OSS => CDN
+        //BY OSS=>CDN
         (process.env.STATIC_PATH === "mirror" && `${JX3BOX.__staticPath["mirror"]}${pkg.name}/`) ||
 
-        // BY relative path
+        //BY relative path
         (process.env.STATIC_PATH === "repo" && `/${pkg.name}/`) ||
 
-        // BY root path or bind a domain
-        (process.env.STATIC_PATH === 'root' && '/') ||
+        //BY root path or bind a domain
+        (process.env.STATIC_PATH == 'root' && '/') ||
 
-        // for lost
+        //for lost
         '/',
 
-    // Proxy configuration
-    server: {
+    //❤️ Porxy ~
+    devServer: {
         proxy: {
-            '/api/cms': {
-                target: process.env['DEV_SERVER'] === 'true' ? 'http://localhost:7100' : 'https://cms.jx3box.com',
-                changeOrigin: true,
-                configure: (proxy) => {
-                    proxy.on('proxyReq', (proxyReq) => {
-                        proxyReq.setHeader('origin', '');
-                    });
+            "/api/cms": {
+                "target": process.env["DEV_SERVER"] == "true" ? "http://localhost:7100" : "https://cms.jx3box.com",
+                "onProxyReq": function (request) {
+                    request.setHeader("origin", "");
+                }
+            },
+            "/api/team": {
+                target: "https://team.api.jx3box.com",
+                onProxyReq: function (request) {
+                    request.setHeader("origin", "");
                 },
             },
-            '/api/team': {
-                target: 'https://team.api.jx3box.com',
-                changeOrigin: true,
-                configure: (proxy) => {
-                    proxy.on('proxyReq', (proxyReq) => {
-                        proxyReq.setHeader('origin', '');
-                    });
-                },
-            },
-            '/api': {
-                target: 'https://next2.jx3box.com',
-                changeOrigin: true,
-                configure: (proxy) => {
-                    proxy.on('proxyReq', (proxyReq) => {
-                        proxyReq.setHeader('origin', '');
-                    });
+            "/api": {
+                target: "https://next2.jx3box.com",
+                onProxyReq: function (request) {
+                    request.setHeader("origin", "");
                 },
             },
         }
     },
 
-    // CSS preprocessor options
-    css: {
-        preprocessorOptions: {
-            less: {
-                additionalData: `
-                    @import "${path.resolve(__dirname, './node_modules/csslab/base.less')}";
-                    @import "${path.resolve(__dirname, './node_modules/@jx3box/jx3box-common/css/var.less')}";
-                `,
-            }
+    chainWebpack: config => {
+
+        //💘 html-webpack-plugin ~
+        // Multiple pages disable the block below
+        // config.plugin("html").tap(args => {
+        //     args[0].meta = {                            //------设置SEO信息
+        //         Keywords: Setting.keys,
+        //         Description: Setting.desc
+        //     };
+        //     args[0].title = Setting.title + SEO.title;  //------自动添加标题后缀
+        //     return args;
+        // });
+
+
+        //💝 in-line small imgs ~
+        config.module
+            .rule("images")
+            .use("url-loader")
+            .loader("url-loader")
+            .tap(options => Object.assign(options, { limit: 10240 }));
+
+
+        //💝 in-line svg imgs ~
+        config.module
+            .rule("vue")
+            .use("vue-svg-inline-loader")
+            .loader("vue-svg-inline-loader")
+
+
+        //💖 import common less var * mixin ~
+        const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+        var preload_styles = []
+        preload_styles.push(
+            path.resolve(__dirname, './node_modules/csslab/base.less'),
+            path.resolve(__dirname, './node_modules/@jx3box/jx3box-common/css/var.less'),
+            // path.resolve(__dirname, './src/assets/css/var.less')
+        )
+        function addStyleResource(rule) {
+            rule.use('style-resource')
+                .loader('style-resources-loader')
+                .options({
+                    patterns: preload_styles,
+                })
         }
-    },
+        types.forEach(type => addStyleResource(config.module.rule('less').oneOf(type)));
 
-    // Optimize dependencies to include specific modules
-    optimizeDeps: {
-        include: ['xss']
     },
-
-    // Configure Vite to handle multiple pages
-    build: {
-        rollupOptions: {
-            input: {
-                article: path.resolve(__dirname, 'demo/A.js'),
-                tinymce: path.resolve(__dirname, 'demo/T.js'),
-                markdown: path.resolve(__dirname, 'demo/M.js'),
-                article_markdown: path.resolve(__dirname, 'demo/MarkdownArticleDemo.js')
-            },
-            output: {
-                entryFileNames: ({ name }) => `${name}/index.html`
-            }
-        }
-    },
-
-    // Inlining small images and SVGs
-    assetsInclude: [
-        '**/*.svg',
-        '**/*.png',
-        '**/*.jpg',
-        '**/*.jpeg',
-        '**/*.gif',
-    ],
-});
+};
