@@ -3,7 +3,7 @@ packages:
   - "apps/author"
   - "apps/bbs"
   - "apps/bps"
-  # - "apps/dashboard"
+  - "apps/dashboard"
   - "apps/event"
   - "apps/fb"
   - "apps/index"
