@@ -61,94 +61,6 @@ importers:
         specifier: ^2.7.16
         version: 2.7.16
 
-  apps/account:
-    dependencies:
-      '@jx3box/jx3box-common':
-        specifier: workspace:*
-        version: link:../../packages/jx3box-common
-      '@jx3box/jx3box-common-ui':
-        specifier: workspace:*
-        version: link:../../packages/jx3box-common-ui
-      axios:
-        specifier: ^0.19.2
-        version: 0.19.2
-      core-js:
-        specifier: ^3.4.3
-        version: 3.39.0
-      csslab:
-        specifier: ^4.0.3
-        version: 4.0.4
-      element-ui:
-        specifier: ^2.13.0
-        version: 2.15.14(vue@2.7.16)
-      lodash:
-        specifier: ^4.17.15
-        version: 4.17.21
-      moment:
-        specifier: ^2.24.0
-        version: 2.30.1
-      register-service-worker:
-        specifier: ^1.6.2
-        version: 1.7.2
-      sterilizer:
-        specifier: 0.0.3
-        version: 0.0.3
-      urijs:
-        specifier: ^1.19.2
-        version: 1.19.11
-      uuid:
-        specifier: ^7.0.3
-        version: 7.0.3
-      vue-router:
-        specifier: ^3.1.3
-        version: 3.6.5(vue@2.7.16)
-      vuex:
-        specifier: ^3.1.2
-        version: 3.6.2(vue@2.7.16)
-    devDependencies:
-      '@babel/plugin-proposal-optional-chaining':
-        specifier: ^7.21.0
-        version: 7.21.0(@babel/core@7.26.0)
-      babel-eslint:
-        specifier: ^10.0.3
-        version: 10.1.0(eslint@5.16.0)
-      cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
-      eslint:
-        specifier: ^5.16.0
-        version: 5.16.0
-      eslint-plugin-vue:
-        specifier: ^5.0.0
-        version: 5.2.3(eslint@5.16.0)
-      glob:
-        specifier: ^7.1.6
-        version: 7.2.3
-      less:
-        specifier: ^3.0.4
-        version: 3.13.1
-      vite:
-        specifier: ^5.4.11
-        version: 5.4.11(@types/node@18.19.64)(less@3.13.1)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0)
-      vite-plugin-eslint:
-        specifier: ^1.8.1
-        version: 1.8.1(eslint@5.16.0)(vite@5.4.11(@types/node@18.19.64)(less@3.13.1)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))
-      vite-plugin-html:
-        specifier: ^3.2.2
-        version: 3.2.2(vite@5.4.11(@types/node@18.19.64)(less@3.13.1)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))
-      vite-plugin-static-copy:
-        specifier: ^2.1.0
-        version: 2.1.0(vite@5.4.11(@types/node@18.19.64)(less@3.13.1)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))
-      vite-plugin-vue2:
-        specifier: ^2.0.3
-        version: 2.0.3(babel-core@6.26.3)(ejs@3.1.10)(handlebars@4.7.8)(lodash@4.17.21)(underscore@1.13.7)(vite@5.4.11(@types/node@18.19.64)(less@3.13.1)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))(vue-template-compiler@2.7.16)(vue@2.7.16)
-      vite-svg-loader:
-        specifier: ^5.1.0
-        version: 5.1.0(vue@2.7.16)
-      vue:
-        specifier: ^2.6.14
-        version: 2.7.16
-
   apps/author:
     dependencies:
       '@jx3box/jx3box-common':
@@ -409,109 +321,6 @@ importers:
       vue-template-compiler:
         specifier: ^2.6.10
         version: 2.7.16
-
-  apps/dashboard:
-    dependencies:
-      '@jx3box/jx3box-comment-ui':
-        specifier: ^1.9.9
-        version: 1.9.9(webpack@4.47.0)
-      '@jx3box/jx3box-common':
-        specifier: ^8.4.8
-        version: 8.5.0
-      '@jx3box/jx3box-common-ui':
-        specifier: ^9.0.5
-        version: 9.0.7(webpack@4.47.0)
-      '@jx3box/jx3box-data':
-        specifier: ^3.7.0
-        version: 3.7.0
-      '@jx3box/jx3box-emotion':
-        specifier: ^1.2.8
-        version: 1.2.8
-      '@jx3box/jx3box-facedat':
-        specifier: ^2.6.2
-        version: 2.6.2
-      '@microsoft/signalr':
-        specifier: ^8.0.0
-        version: 8.0.7
-      axios:
-        specifier: ^0.21.1
-        version: 0.21.4
-      core-js:
-        specifier: ^3.4.3
-        version: 3.39.0
-      dompurify:
-        specifier: ^3.0.6
-        version: 3.2.0
-      element-ui:
-        specifier: ^2.15.7
-        version: 2.15.14(vue@2.7.16)
-      js-base64:
-        specifier: ^3.7.1
-        version: 3.7.7
-      localforage:
-        specifier: ^1.7.3
-        version: 1.10.0
-      lodash:
-        specifier: ^4.17.15
-        version: 4.17.21
-      lua-json:
-        specifier: ^1.0.0
-        version: 1.0.1
-      moment:
-        specifier: ^2.29.4
-        version: 2.30.1
-      qs:
-        specifier: ^6.9.4
-        version: 6.13.0
-      sterilizer:
-        specifier: ^0.1.1
-        version: 0.1.1
-      urijs:
-        specifier: ^1.19.2
-        version: 1.19.11
-      vue:
-        specifier: ^2.6.14
-        version: 2.7.16
-      vue-clipboard2:
-        specifier: ^0.3.1
-        version: 0.3.3
-      vue-router:
-        specifier: ^3.1.3
-        version: 3.6.5(vue@2.7.16)
-      vuedraggable:
-        specifier: ^2.24.3
-        version: 2.24.3
-      vuex:
-        specifier: ^3.1.2
-        version: 3.6.2(vue@2.7.16)
-    devDependencies:
-      '@babel/compat-data':
-        specifier: ^7.10.1
-        version: 7.26.2
-      '@babel/plugin-proposal-optional-chaining':
-        specifier: ^7.14.5
-        version: 7.21.0(@babel/core@7.26.0)
-      babel-eslint:
-        specifier: ^10.0.3
-        version: 10.1.0(eslint@5.16.0)
-      cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
-      csslab:
-        specifier: ^4.0.3
-        version: 4.0.4
-      eslint:
-        specifier: ^5.16.0
-        version: 5.16.0
-      eslint-plugin-vue:
-        specifier: ^5.0.0
-        version: 5.2.3(eslint@5.16.0)
-      glob:
-        specifier: ^7.1.6
-        version: 7.2.3
-      less:
-        specifier: ^3.0.4
-        version: 3.13.1
 
   apps/event:
     dependencies:
@@ -1000,100 +809,6 @@ importers:
       less:
         specifier: ^3.0.4
         version: 3.13.1
-
-  apps/pvp:
-    dependencies:
-      '@element-plus/icons-vue':
-        specifier: ^2.1.0
-        version: 2.3.1(vue@3.5.12(typescript@5.6.3))
-      '@jx3box/jx3box-common':
-        specifier: workspace:*
-        version: link:../../packages/jx3box-common
-      '@jx3box/jx3box-data':
-        specifier: workspace:*
-        version: link:../../packages/jx3box-data
-      '@jx3box/jx3box-talent':
-        specifier: workspace:*
-        version: link:../../packages/jx3box-talent
-      '@jx3box/jx3box-vue3-ui':
-        specifier: workspace:*
-        version: link:../../packages/jx3box-vue3-ui
-      '@vueuse/core':
-        specifier: ^9.13.0
-        version: 9.13.0(vue@3.5.12(typescript@5.6.3))
-      '@vueuse/head':
-        specifier: ^0.7.6
-        version: 0.7.13(vue@3.5.12(typescript@5.6.3))
-      axios:
-        specifier: ^1.3.4
-        version: 1.7.7
-      core-js:
-        specifier: ^3.8.3
-        version: 3.39.0
-      dayjs:
-        specifier: ^1.11.7
-        version: 1.11.13
-      element-plus:
-        specifier: ^2.3.0
-        version: 2.8.7(vue@3.5.12(typescript@5.6.3))
-      pinia:
-        specifier: ^2.0.33
-        version: 2.2.6(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))
-      vue:
-        specifier: ^3.2.13
-        version: 3.5.12(typescript@5.6.3)
-      vue-router:
-        specifier: ^4.0.16
-        version: 4.4.5(vue@3.5.12(typescript@5.6.3))
-      vuedraggable:
-        specifier: ^4.1.0
-        version: 4.1.0(vue@3.5.12(typescript@5.6.3))
-    devDependencies:
-      '@babel/core':
-        specifier: ^7.12.16
-        version: 7.26.0
-      '@babel/eslint-parser':
-        specifier: ^7.12.16
-        version: 7.25.9(@babel/core@7.26.0)(eslint@7.32.0)
-      '@babel/plugin-proposal-optional-chaining':
-        specifier: ^7.17.12
-        version: 7.21.0(@babel/core@7.26.0)
-      '@vitejs/plugin-vue':
-        specifier: ^5.1.5
-        version: 5.1.5(vite@5.4.11(@types/node@18.19.64)(less@4.2.0)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))
-      cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
-      csslab:
-        specifier: ^4.0.3
-        version: 4.0.4
-      eslint:
-        specifier: ^7.32.0
-        version: 7.32.0
-      eslint-plugin-vue:
-        specifier: ^8.0.3
-        version: 8.7.1(eslint@7.32.0)
-      husky:
-        specifier: ^8.0.0
-        version: 8.0.3
-      less:
-        specifier: ^4.1.3
-        version: 4.2.0
-      lint-staged:
-        specifier: ^13.0.2
-        version: 13.3.0(enquirer@2.4.1)
-      prettier:
-        specifier: 2.7.1
-        version: 2.7.1
-      sass:
-        specifier: ^1.59.3
-        version: 1.80.7
-      vite:
-        specifier: ^5.4.11
-        version: 5.4.11(@types/node@18.19.64)(less@4.2.0)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0)
-      vite-plugin-static-copy:
-        specifier: ^2.1.0
-        version: 2.1.0(vite@5.4.11(@types/node@18.19.64)(less@4.2.0)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))
 
   apps/pvx:
     dependencies:
@@ -3710,57 +3425,11 @@ packages:
   '@jx3box/jx3box-build-common@0.1.10':
     resolution: {integrity: sha512-NtM1ZnSoW7RXmYNDqquq0m4n7QG4B/NOsSMZcfzFHPbVFJjKDFmJljVSnzAcboAdPUiF/2W60grh6aeUkXLxsA==}
 
-  '@jx3box/jx3box-comment-ui@1.9.9':
-    resolution: {integrity: sha512-6hyZcE/M2wGlyimJF91qCXLtW3R0qhUa9EfU9AEF4CR3O3S25i3LUed0dxKq+8QbmxH304sPd4H+CTxmVs26qA==}
-    engines: {node: '>= 14 < 17'}
-
-  '@jx3box/jx3box-common-ui@8.9.30':
-    resolution: {integrity: sha512-VvnNKx1Jldys19II9CVyIRtPskvIFvVHzxyeG1P3flHW/K5BI0+ZOspz+n08ICmG+2dNDv4zYIb6W85DCIRgcA==}
-
-  '@jx3box/jx3box-common-ui@9.0.7':
-    resolution: {integrity: sha512-4dRu6tJdO12SwdWbqe7PufoxAVj2YQ7cOKhra6wJCM+SlMjrfWe1TVNC+ClH3w37/aK/7uuRREa9zLSR6+UoIg==}
-
-  '@jx3box/jx3box-common@5.9.8':
-    resolution: {integrity: sha512-/Djw6yrGgyRDoFnvaDL/md5zJyBvxwlBCN8AEIaOcuMLyh8yZ0bO5wx68ny+S3QSVYKvkHfDwFav6KJffeJS5w==}
-
-  '@jx3box/jx3box-common@6.8.2':
-    resolution: {integrity: sha512-UC/3mIyL+RzdPMn8artAInszWFZwpv7j3a0meBEuCnymtVXnWAc+DUJ3H15OE8WQ7HOmrPrF16/n+GTveMmhLQ==}
-
-  '@jx3box/jx3box-common@7.9.15':
-    resolution: {integrity: sha512-uAgNZB1U2NwnGId+WfLYvpOhKzNB2ndhZmIJHktOqzKKZh6nL2hrf0DS1fDcXzDGkRH+4O2zhyzJxh0KHAmocw==}
-
-  '@jx3box/jx3box-common@8.5.0':
-    resolution: {integrity: sha512-m3R1ntN9kEmxdB2ECtLtBQ1IB2RXDLUsm7+aR/jHpH0zr+PwOTWj84pBpAhituF/h9hF700TPsu2gRUWBMnP8w==}
-
-  '@jx3box/jx3box-data@3.7.0':
-    resolution: {integrity: sha512-/SxD/D2chKuSEfflBTSKDxLnAYFNGITL91DZF5xlAjAvmRCqJAryCxCrlcHOhCE56lW7zJjDMo4r6qiuMDpbVg==}
-
-  '@jx3box/jx3box-editor@2.2.16':
-    resolution: {integrity: sha512-nircfYczGZIEnLuGjnArh2jwAf7f7a1CufGIkNcNdmHYwgv79x/mOMOXjl8iB/s/kY8T0JSZM5gvlTXyjocL8g==}
-
-  '@jx3box/jx3box-emotion@1.2.8':
-    resolution: {integrity: sha512-vKQf49S4ejnK6tQInmsuD1NN3RxZOC9LMFyrOq3ld+jqyuY3/9Xu19D1bdDEZhy4m/XW+p4uEMg0oXE6es5VXg==}
-
-  '@jx3box/jx3box-facedat@2.6.2':
-    resolution: {integrity: sha512-bwGeUlTNjyTPN6ujlyh3ZV5RB5Os5CsuEr6Me5/FgFVcBhLcnh2HFTY5Enp74NQLp6AnsQd+9egrd0iGyBIcsg==}
-
-  '@jx3box/jx3box-macro@1.0.1':
-    resolution: {integrity: sha512-3s0KBeIXYs/RMc45TWReS4DzFtZVA9ZKLt/L5P7YiU+TbZvPZi3iLK3ehecxmMdpw2wFeu+xnSmi4C6lhr6wSw==}
-
-  '@jx3box/jx3box-talent@1.3.2':
-    resolution: {integrity: sha512-t1AmqoGO6UuTaRO86aw2PoI7lonUACE0kewIEcgsgHFuZKatS8xezCT4ONZ3YVuoEr/whXs/bmlP6cg1ouPvXw==}
-
-  '@jx3box/markdown@0.1.5':
-    resolution: {integrity: sha512-Y79yOgJ93Ibjzpf92KTnxYl4bR2V5dY2wtftUNgtdpntwCJ+g27+1fsGgumLeLR4nlQ1/tM3CzS8NyLpK7Emlw==}
-
   '@jx3box/reporter@0.0.4':
     resolution: {integrity: sha512-CwSf7rkdn4GNhV896rxmxbVju3aTGTIbluDp6cLdJtk5Qii6xzFHvPw2I67ad7qsm3lVqnpkXvIOOhJcfP4PJg==}
 
   '@jx3box/reporter@0.0.5':
     resolution: {integrity: sha512-1H+ORhlRMqIQZRQu+UmSNjcCyXxlryeyimcKw/wh2JmPg5eaXyzDJXTsszVnV2C2vgi3hGVnnZ6JoTsjTl0C6g==}
-
-  '@microsoft/signalr@8.0.7':
-    resolution: {integrity: sha512-PHcdMv8v5hJlBkRHAuKG5trGViQEkPYee36LnJQx4xHOQ5LL4X0nEWIxOp5cCtZ7tu+30quz5V3k0b1YNuc6lw==}
 
   '@mrmlnc/readdir-enhanced@2.2.1':
     resolution: {integrity: sha512-bPHp6Ji8b41szTOcaP63VlnbbO5Ny6dwAATtY6JTjh5N2OLrb5Qk/Th5cRkRQhkWCt+EJsYrNB0MiL+Gpn6e3g==}
@@ -4696,10 +4365,6 @@ packages:
     resolution: {integrity: sha512-6/mh1E2u2YgEsCHdY0Yx5oW+61gZU+1vXaoiHHrpKeuRNNgFvS+/jrwHiQhB5apAf5oB7UB7E19ol2R2LKH8hQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  abort-controller@3.0.0:
-    resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
-    engines: {node: '>=6.5'}
-
   accepts@1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
     engines: {node: '>= 0.6'}
@@ -5090,10 +4755,6 @@ packages:
 
   axios@0.19.2:
     resolution: {integrity: sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==}
-    deprecated: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410
-
-  axios@0.20.0:
-    resolution: {integrity: sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==}
     deprecated: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410
 
   axios@0.21.4:
@@ -5729,15 +5390,8 @@ packages:
   check-types@8.0.3:
     resolution: {integrity: sha512-YpeKZngUmG65rLudJ4taU7VLkOCTMhNl/u4ctNC56LQS/zJTyNH0Lrtwm1tfTsbLlwvlfsA2d1c8vCf/Kh2KwQ==}
 
-  cheerio-select@1.6.0:
-    resolution: {integrity: sha512-eq0GdBvxVFbqWgmCm7M3XGs1I8oLy/nExUnh6oLqmBditPO9AqQJrkslDpMun/hZ0yyTs8L0m85OHp4ho6Qm9g==}
-
   cheerio-select@2.1.0:
     resolution: {integrity: sha512-9v9kG0LvzrlcungtnJtpGNxY+fzECQKhK4EGJX2vByejiMX84MFNQw4UxPJl3bFbTMw+Dfs37XaIkCwTZfLh4g==}
-
-  cheerio@1.0.0-rc.10:
-    resolution: {integrity: sha512-g0J0q/O6mW8z5zxQ3A8E8J1hUgp4SMOvEoW/x84OwyHKe/Zccz83PVT4y5Crcr530FV6NgmKI1qvGTKVl9XXVw==}
-    engines: {node: '>= 6'}
 
   cheerio@1.0.0-rc.12:
     resolution: {integrity: sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==}
@@ -6936,9 +6590,6 @@ packages:
     resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
     engines: {node: '>= 4'}
 
-  dompurify@3.2.0:
-    resolution: {integrity: sha512-AMdOzK44oFWqHEi0wpOqix/fUNY707OmoeFDnbi3Q5I8uOpy21ufUA5cDJPr0bosxrflOVD/H2DMSvuGKJGfmQ==}
-
   domutils@1.7.0:
     resolution: {integrity: sha512-Lgd2XcJ/NjEw+7tFvfKxOzCYKZsdct5lczQ2ZaQY8Djz7pfAD3Gbp8ySJWtreII/vDlMVmxwa6pHmdxIYgttDg==}
 
@@ -7443,10 +7094,6 @@ packages:
     resolution: {integrity: sha512-z7IyloorXvKbFx9Bpie2+vMJKKx1fH1EN5yiTfp8CiLOTptSYy1g8H4yDpGlEdshL1PBiFtBHepF2cNsqeEeFQ==}
     engines: {node: '>=4.0.0'}
 
-  event-target-shim@5.0.1:
-    resolution: {integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==}
-    engines: {node: '>=6'}
-
   eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
 
@@ -7608,9 +7255,6 @@ packages:
 
   fecha@4.2.3:
     resolution: {integrity: sha512-OP2IUU6HeYKJi3i0z4A19kHMQoLVs4Hc+DPqqxI2h/DPZHTm/vjsfC6P0b4jCMy14XizLBqvndQ+UilD7707Jw==}
-
-  fetch-cookie@2.2.0:
-    resolution: {integrity: sha512-h9AgfjURuCgA2+2ISl8GbavpUdR+WGAM2McW/ovn4tVccegp8ZqCKWSBR8uRdM8dDNlx5WdKRWxBYUwteLDCNQ==}
 
   figgy-pudding@3.5.2:
     resolution: {integrity: sha512-0btnI/H8f2pavGMN8w40mlSKOfTK2SVJmBfBeVIj3kNw0swwgzyRq0d5TJVOwodFmtvpPeWPN/MCcfuWF0Ezbw==}
@@ -9780,15 +9424,6 @@ packages:
     resolution: {integrity: sha512-BOb67bWg2dTyax5kdef5WfU3X8xu4wPg+zHzkvls0Q/QpYycIFRLEEIdAx9Wma43DxG6Qzn4illdZoYseKWa4A==}
     engines: {node: '>= 0.4.6'}
 
-  node-fetch@2.7.0:
-    resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
-    engines: {node: 4.x || >=6.0.0}
-    peerDependencies:
-      encoding: ^0.1.0
-    peerDependenciesMeta:
-      encoding:
-        optional: true
-
   node-forge@0.10.0:
     resolution: {integrity: sha512-PPmu8eEeG9saEUvI97fm4OYxXVB6bFvyNTyiUOBichBpFG8A1Ljw3bY62+5oOjDEMHRnd0Y7HQ+x7uzxOzC6JA==}
     engines: {node: '>= 6.0.0'}
@@ -10309,18 +9944,6 @@ packages:
   pify@4.0.1:
     resolution: {integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==}
     engines: {node: '>=6'}
-
-  pinia@2.2.6:
-    resolution: {integrity: sha512-vIsR8JkDN5Ga2vAxqOE2cJj4VtsHnzpR1Fz30kClxlh0yCHfec6uoMeM3e/ddqmwFUejK3NlrcQa/shnpyT4hA==}
-    peerDependencies:
-      '@vue/composition-api': ^1.4.0
-      typescript: '>=4.4.4'
-      vue: ^2.6.14 || ^3.5.11
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-      typescript:
-        optional: true
 
   pinkie-promise@2.0.1:
     resolution: {integrity: sha512-0Gni6D4UcLTbv9c57DfxDGdr41XfgUjqWZu492f0cIGr16zDU06BWP/RAEvOuo7CQ0CNjHaLlM59YJJFm3NWlw==}
@@ -11344,9 +10967,6 @@ packages:
   set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
 
-  set-cookie-parser@2.7.1:
-    resolution: {integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==}
-
   set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
     engines: {node: '>= 0.4'}
@@ -11599,9 +11219,6 @@ packages:
     resolution: {integrity: sha512-ZnWpYnYugiOVEY5GkcuJK1io5V8QmNYChG62gSit9pQVGErXtrKuPC55ITaVSukmMta5qpMU7vqLt2Lnni4f/g==}
     engines: {node: '>=0.10.0'}
 
-  sterilizer@0.0.3:
-    resolution: {integrity: sha512-50Q+XgrHFJmOkY5Fpae6l8UGIANVwLCet8+fX5waBS5b7oTWftATgdSkpRonHxfqm+Obd32WZRiqBEGSOmd9ow==}
-
   sterilizer@0.1.1:
     resolution: {integrity: sha512-pckisxYm6pylFMpaC33FyjWUZiWCH7vE22edoC6Iz/TjHSDWa4Db9TnCk6otMxkjoUluHYFjgXeuUOX5bTUbhg==}
 
@@ -11735,12 +11352,6 @@ packages:
 
   style-loader@0.17.0:
     resolution: {integrity: sha512-qAlOmx16QEUmfy1RJQnHloGzfMKYD2Ky0jyM0M4WqoznPNYtjDDFC2UNkpNEOEMzYsQ0lGIOMObOxhwlCA00sg==}
-
-  style-resources-loader@1.5.0:
-    resolution: {integrity: sha512-fIfyvQ+uvXaCBGGAgfh+9v46ARQB1AWdaop2RpQw0PBVuROsTBqGvx8dj0kxwjGOAyq3vepe4AOK3M6+Q/q2jw==}
-    engines: {node: '>=8.9'}
-    peerDependencies:
-      webpack: ^3.0.0 || ^4.0.0 || ^5.0.0
 
   stylehacks@4.0.3:
     resolution: {integrity: sha512-7GlLk9JwlElY4Y6a/rmbH2MhVlTyVmiJd1PfTCqFaIBEGMYNsrO/v3SeGTdhBThLg4Z+NbOk/qFMwCa+J+3p/g==}
@@ -11982,13 +11593,6 @@ packages:
     resolution: {integrity: sha512-nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==}
     engines: {node: '>=0.8'}
 
-  tough-cookie@4.1.4:
-    resolution: {integrity: sha512-Loo5UUvLD9ScZ6jh8beX1T6sO1w2/MpCRpEP7V280GKMVUQ0Jzar2U3UJPsrdbziLEMMhu3Ujnq//rhiFuIeag==}
-    engines: {node: '>=6'}
-
-  tr46@0.0.3:
-    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
-
   tr46@1.0.1:
     resolution: {integrity: sha512-dTpowEjclQ7Kgx5SdBkqRzVhERQXov8/l9Ft9dVM9fmg0W0KQSVaXX9T4i6twCPNtYiZM53lpSSUAwJbFPOHxA==}
 
@@ -12196,10 +11800,6 @@ packages:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
     engines: {node: '>= 4.0.0'}
 
-  universalify@0.2.0:
-    resolution: {integrity: sha512-CJ1QgKmNg3CwvAv/kOFmtnEN05f0D/cn9QntgNOQlQF9dgvVTHj3t+8JPdjqawCHk7V/KA+fbUqzZ9XWhcqPUg==}
-    engines: {node: '>= 4.0.0'}
-
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
@@ -12308,10 +11908,6 @@ packages:
   uuid@3.4.0:
     resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}
     deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
-    hasBin: true
-
-  uuid@7.0.3:
-    resolution: {integrity: sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==}
     hasBin: true
 
   uuid@8.3.2:
@@ -12552,11 +12148,6 @@ packages:
     peerDependencies:
       vue: ^2
 
-  vue-router@4.4.5:
-    resolution: {integrity: sha512-4fKZygS8cH1yCyuabAXGUAsyi1b2/o/OKgu/RUb+znIYOxPRxdkytJEx+0wGcpBE1pX6vUgh5jwWOKRGvuA/7Q==}
-    peerDependencies:
-      vue: ^3.2.0
-
   vue-runtime-helpers@1.1.2:
     resolution: {integrity: sha512-pZfGp+PW/IXEOyETE09xQHR1CKkR9HfHZdnMD/FVLUNI+HxYTa82evx5WrF6Kz4s82qtqHvMZ8MZpbk2zT2E1Q==}
 
@@ -12636,9 +12227,6 @@ packages:
 
   wcwidth@1.0.1:
     resolution: {integrity: sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==}
-
-  webidl-conversions@3.0.1:
-    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
 
   webidl-conversions@4.0.2:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
@@ -12748,9 +12336,6 @@ packages:
 
   whatwg-mimetype@2.3.0:
     resolution: {integrity: sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==}
-
-  whatwg-url@5.0.0:
-    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
 
   whatwg-url@6.5.0:
     resolution: {integrity: sha512-rhRZRqx/TLJQWUpQ6bmrt2UV4f0HCQ463yQuONJqC6fO2VoEb1pTYddbe59SkYq87aoM5A3bdhMZiUiVws+fzQ==}
@@ -12864,18 +12449,6 @@ packages:
 
   ws@6.2.3:
     resolution: {integrity: sha512-jmTjYU0j60B+vHey6TfR3Z7RD61z/hmxBS3VMSGIrroOWXQEneK1zNuotOUrGyBHQj0yrpsLHPWtigEFd13ndA==}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: ^5.0.2
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
-
-  ws@7.5.10:
-    resolution: {integrity: sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==}
-    engines: {node: '>=8.3.0'}
     peerDependencies:
       bufferutil: ^4.0.1
       utf-8-validate: ^5.0.2
@@ -14304,245 +13877,9 @@ snapshots:
       uuid: 9.0.1
       winston: 3.17.0
 
-  '@jx3box/jx3box-comment-ui@1.9.9(webpack@4.47.0)':
-    dependencies:
-      '@jx3box/jx3box-common': 8.5.0
-      '@jx3box/jx3box-common-ui': 8.9.30(webpack@4.47.0)
-      '@jx3box/jx3box-emotion': 1.2.8
-      core-js: 3.39.0
-      csslab: 4.0.4
-      element-ui: 2.15.14(vue@2.7.16)
-      hevue-img-preview: 5.0.3
-      mitt: 3.0.1
-      style-resources-loader: 1.5.0(webpack@4.47.0)
-      vue: 2.7.16
-      vuex: 3.6.2(vue@2.7.16)
-    transitivePeerDependencies:
-      - debug
-      - supports-color
-      - webpack
-
-  '@jx3box/jx3box-common-ui@8.9.30(webpack@4.47.0)':
-    dependencies:
-      '@jx3box/jx3box-comment-ui': 1.9.9(webpack@4.47.0)
-      '@jx3box/jx3box-common': 8.5.0
-      '@jx3box/jx3box-data': 3.7.0
-      '@jx3box/jx3box-editor': 2.2.16
-      '@jx3box/reporter': 0.0.4
-      axios: 0.26.1
-      dayjs: 1.11.13
-      element-ui: 2.15.14(vue@2.7.16)
-      jquery: 3.7.1
-      lodash: 4.17.21
-      qrcode.vue: 1.7.0(vue@2.7.16)
-      url: 0.11.4
-      vue: 2.7.16
-    transitivePeerDependencies:
-      - debug
-      - supports-color
-      - webpack
-
-  '@jx3box/jx3box-common-ui@9.0.7(webpack@4.47.0)':
-    dependencies:
-      '@jx3box/jx3box-comment-ui': 1.9.9(webpack@4.47.0)
-      '@jx3box/jx3box-common': 8.5.0
-      '@jx3box/jx3box-data': 3.7.0
-      '@jx3box/jx3box-editor': 2.2.16
-      '@jx3box/reporter': 0.0.4
-      axios: 0.26.1
-      dayjs: 1.11.13
-      element-ui: 2.15.14(vue@2.7.16)
-      jquery: 3.7.1
-      lodash: 4.17.21
-      qrcode.vue: 1.7.0(vue@2.7.16)
-      url: 0.11.4
-      vue: 2.7.16
-    transitivePeerDependencies:
-      - debug
-      - supports-color
-      - webpack
-
-  '@jx3box/jx3box-common@5.9.8':
-    dependencies:
-      axios: 0.20.0
-      element-ui: 2.15.14(vue@2.7.16)
-      localforage: 1.10.0
-      moment: 2.30.1
-      vue: 2.7.16
-    transitivePeerDependencies:
-      - debug
-
-  '@jx3box/jx3box-common@6.8.2':
-    dependencies:
-      axios: 0.20.0
-      element-ui: 2.15.14(vue@2.7.16)
-      localforage: 1.10.0
-      moment: 2.30.1
-      vue: 2.7.16
-    transitivePeerDependencies:
-      - debug
-
-  '@jx3box/jx3box-common@7.9.15':
-    dependencies:
-      '@jx3box/reporter': 0.0.5
-      axios: 0.20.0
-      cheerio: 1.0.0-rc.10
-      element-ui: 2.15.14(vue@2.7.16)
-      localforage: 1.10.0
-      moment: 2.30.1
-      uuid: 9.0.1
-      vue: 2.7.16
-    transitivePeerDependencies:
-      - debug
-
-  '@jx3box/jx3box-common@8.5.0':
-    dependencies:
-      '@jx3box/reporter': 0.0.5
-      axios: 1.7.7
-      cheerio: 1.0.0-rc.12
-      dayjs: 1.11.13
-      element-ui: 2.15.14(vue@2.7.16)
-      fingerprintjs2: 2.1.4
-      localforage: 1.10.0
-      uuid: 9.0.1
-      vue: 2.7.16
-    transitivePeerDependencies:
-      - debug
-
-  '@jx3box/jx3box-data@3.7.0': {}
-
-  '@jx3box/jx3box-editor@2.2.16':
-    dependencies:
-      '@jx3box/jx3box-common': 8.5.0
-      '@jx3box/jx3box-data': 3.7.0
-      '@jx3box/jx3box-emotion': 1.2.8
-      '@jx3box/jx3box-macro': 1.0.1
-      '@jx3box/jx3box-talent': 1.3.2
-      '@jx3box/markdown': 0.1.5
-      '@tinymce/tinymce-vue': 3.2.8(vue@2.7.16)
-      axios: 0.19.2
-      core-js: 3.39.0
-      csslab: 4.0.4
-      dayjs: 1.11.13
-      element-ui: 2.15.14(vue@2.7.16)
-      hevue-img-preview: 5.0.3
-      highlight.js: 11.10.0
-      jquery: 3.7.1
-      js-base64: 3.7.7
-      katex: 0.13.24
-      lodash: 4.17.21
-      photoswipe: 4.1.3
-      prismjs: 1.29.0
-      sortablejs: 1.15.3
-      vue: 2.7.16
-      vue-contextmenujs: 1.4.11
-      vue-gallery-slideshow: 1.5.2
-      vue-photoswipe.js: 2.0.23
-      vue-plugin-load-script: 1.3.6
-      vuedraggable: 2.24.3
-      xss: 1.0.15
-    transitivePeerDependencies:
-      - debug
-      - supports-color
-
-  '@jx3box/jx3box-emotion@1.2.8':
-    dependencies:
-      '@jx3box/jx3box-common': 7.9.15
-      '@jx3box/jx3box-data': 3.7.0
-      axios: 1.7.7
-      jquery: 3.7.1
-      lodash: 4.17.21
-    transitivePeerDependencies:
-      - debug
-
-  '@jx3box/jx3box-facedat@2.6.2':
-    dependencies:
-      '@jx3box/jx3box-build-common': 0.1.10
-      '@jx3box/jx3box-common': 8.5.0
-      '@jx3box/jx3box-data': 3.7.0
-      axios: 0.19.2
-      core-js: 3.39.0
-      crc-32: 1.2.2
-      csslab: 4.0.4
-      element-ui: 2.15.14(vue@2.7.16)
-      file-saver: 2.0.5
-      glob: 10.4.5
-      iconv-lite: 0.6.3
-      ini: 2.0.0
-      jquery: 3.7.1
-      lodash: 4.17.21
-      luadata: 1.0.2
-      prismjs: 1.29.0
-      vue: 2.7.16
-    transitivePeerDependencies:
-      - debug
-      - supports-color
-
-  '@jx3box/jx3box-macro@1.0.1':
-    dependencies:
-      '@jx3box/jx3box-common': 5.9.8
-      jquery: 3.7.1
-    transitivePeerDependencies:
-      - debug
-
-  '@jx3box/jx3box-talent@1.3.2':
-    dependencies:
-      '@jx3box/jx3box-build-common': 0.1.10
-      '@jx3box/jx3box-common': 8.5.0
-      '@jx3box/jx3box-data': 3.7.0
-      ansi-escapes: 5.0.0
-      cli-color: 2.0.4
-      jquery: 3.7.1
-      lodash: 4.17.21
-      moment: 2.30.1
-      papaparse: 5.4.1
-      progress: 2.0.3
-    transitivePeerDependencies:
-      - debug
-
-  '@jx3box/markdown@0.1.5':
-    dependencies:
-      '@jx3box/jx3box-common': 6.8.2
-      auto-textarea: 1.4.0
-      github-markdown-css: 2.10.0
-      highlight.js: 11.10.0
-      markdown-it: 10.0.0
-      markdown-it-abbr: 1.0.4
-      markdown-it-container: 3.0.0
-      markdown-it-deflist: 2.1.0
-      markdown-it-emoji: 1.4.0
-      markdown-it-footnote: 3.0.3
-      markdown-it-for-inline: 0.1.1
-      markdown-it-highlightjs-external: 1.0.1
-      markdown-it-images-preview: 1.0.1
-      markdown-it-ins: 2.0.0
-      markdown-it-katex-external: 1.0.0
-      markdown-it-mark: 2.0.0
-      markdown-it-sub: 1.0.0
-      markdown-it-sup: 1.0.0
-      markdown-it-task-lists: 2.1.1
-      markdown-it-toc: 1.1.0
-      vue: 2.7.16
-      xss: 1.0.15
-    transitivePeerDependencies:
-      - debug
-      - supports-color
-
   '@jx3box/reporter@0.0.4': {}
 
   '@jx3box/reporter@0.0.5': {}
-
-  '@microsoft/signalr@8.0.7':
-    dependencies:
-      abort-controller: 3.0.0
-      eventsource: 2.0.2
-      fetch-cookie: 2.2.0
-      node-fetch: 2.7.0
-      ws: 7.5.10
-    transitivePeerDependencies:
-      - bufferutil
-      - encoding
-      - utf-8-validate
 
   '@mrmlnc/readdir-enhanced@2.2.1':
     dependencies:
@@ -15132,11 +14469,6 @@ snapshots:
     dependencies:
       vite: 5.4.11(@types/node@18.19.64)(less@4.2.0)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0)
       vue: 2.7.16
-
-  '@vitejs/plugin-vue@5.1.5(vite@5.4.11(@types/node@18.19.64)(less@4.2.0)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))':
-    dependencies:
-      vite: 5.4.11(@types/node@18.19.64)(less@4.2.0)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0)
-      vue: 3.5.12(typescript@5.6.3)
 
   '@vue/babel-helper-vue-jsx-merge-props@1.4.0': {}
 
@@ -15762,10 +15094,6 @@ snapshots:
 
   abbrev@2.0.0: {}
 
-  abort-controller@3.0.0:
-    dependencies:
-      event-target-shim: 5.0.1
-
   accepts@1.3.8:
     dependencies:
       mime-types: 2.1.35
@@ -16174,12 +15502,6 @@ snapshots:
       follow-redirects: 1.5.10
     transitivePeerDependencies:
       - supports-color
-
-  axios@0.20.0:
-    dependencies:
-      follow-redirects: 1.15.9(debug@3.2.7(supports-color@5.5.0))
-    transitivePeerDependencies:
-      - debug
 
   axios@0.21.4:
     dependencies:
@@ -17349,14 +16671,6 @@ snapshots:
 
   check-types@8.0.3: {}
 
-  cheerio-select@1.6.0:
-    dependencies:
-      css-select: 4.3.0
-      css-what: 6.1.0
-      domelementtype: 2.3.0
-      domhandler: 4.3.1
-      domutils: 2.8.0
-
   cheerio-select@2.1.0:
     dependencies:
       boolbase: 1.0.0
@@ -17365,16 +16679,6 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
       domutils: 3.1.0
-
-  cheerio@1.0.0-rc.10:
-    dependencies:
-      cheerio-select: 1.6.0
-      dom-serializer: 1.4.1
-      domhandler: 4.3.1
-      htmlparser2: 6.1.0
-      parse5: 6.0.1
-      parse5-htmlparser2-tree-adapter: 6.0.1
-      tslib: 2.8.1
 
   cheerio@1.0.0-rc.12:
     dependencies:
@@ -17475,6 +16779,7 @@ snapshots:
   chokidar@4.0.1:
     dependencies:
       readdirp: 4.0.2
+    optional: true
 
   chownr@1.1.4: {}
 
@@ -18548,8 +17853,6 @@ snapshots:
     dependencies:
       domelementtype: 2.3.0
 
-  dompurify@3.2.0: {}
-
   domutils@1.7.0:
     dependencies:
       dom-serializer: 0.2.2
@@ -19357,8 +18660,6 @@ snapshots:
 
   event-pubsub@4.3.0: {}
 
-  event-target-shim@5.0.1: {}
-
   eventemitter3@4.0.7: {}
 
   eventemitter3@5.0.1: {}
@@ -19769,11 +19070,6 @@ snapshots:
       bser: 2.1.1
 
   fecha@4.2.3: {}
-
-  fetch-cookie@2.2.0:
-    dependencies:
-      set-cookie-parser: 2.7.1
-      tough-cookie: 4.1.4
 
   figgy-pudding@3.5.2: {}
 
@@ -20597,7 +19893,8 @@ snapshots:
 
   immediate@3.0.6: {}
 
-  immutable@5.0.2: {}
+  immutable@5.0.2:
+    optional: true
 
   import-cwd@2.1.0:
     dependencies:
@@ -22389,10 +21686,6 @@ snapshots:
       clone: 2.1.2
       lodash: 4.17.21
 
-  node-fetch@2.7.0:
-    dependencies:
-      whatwg-url: 5.0.0
-
   node-forge@0.10.0: {}
 
   node-html-parser@5.4.2:
@@ -22987,14 +22280,6 @@ snapshots:
   pify@3.0.0: {}
 
   pify@4.0.1: {}
-
-  pinia@2.2.6(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)):
-    dependencies:
-      '@vue/devtools-api': 6.6.4
-      vue: 3.5.12(typescript@5.6.3)
-      vue-demi: 0.14.10(vue@3.5.12(typescript@5.6.3))
-    optionalDependencies:
-      typescript: 5.6.3
 
   pinkie-promise@2.0.1:
     dependencies:
@@ -23845,7 +23130,8 @@ snapshots:
     dependencies:
       picomatch: 2.3.1
 
-  readdirp@4.0.2: {}
+  readdirp@4.0.2:
+    optional: true
 
   realpath-native@1.1.0:
     dependencies:
@@ -24222,6 +23508,7 @@ snapshots:
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.0
+    optional: true
 
   sax@1.2.4: {}
 
@@ -24403,8 +23690,6 @@ snapshots:
       - supports-color
 
   set-blocking@2.0.0: {}
-
-  set-cookie-parser@2.7.1: {}
 
   set-function-length@1.2.2:
     dependencies:
@@ -24758,8 +24043,6 @@ snapshots:
 
   stealthy-require@1.1.1: {}
 
-  sterilizer@0.0.3: {}
-
   sterilizer@0.1.1: {}
 
   stream-browserify@2.0.2:
@@ -24906,14 +24189,6 @@ snapshots:
   style-loader@0.17.0:
     dependencies:
       loader-utils: 1.4.2
-
-  style-resources-loader@1.5.0(webpack@4.47.0):
-    dependencies:
-      glob: 7.2.3
-      loader-utils: 2.0.4
-      schema-utils: 2.7.1
-      tslib: 2.8.1
-      webpack: 4.47.0
 
   stylehacks@4.0.3:
     dependencies:
@@ -25209,15 +24484,6 @@ snapshots:
       psl: 1.10.0
       punycode: 2.3.1
 
-  tough-cookie@4.1.4:
-    dependencies:
-      psl: 1.10.0
-      punycode: 2.3.1
-      universalify: 0.2.0
-      url-parse: 1.5.10
-
-  tr46@0.0.3: {}
-
   tr46@1.0.1:
     dependencies:
       punycode: 2.3.1
@@ -25420,8 +24686,6 @@ snapshots:
 
   universalify@0.1.2: {}
 
-  universalify@0.2.0: {}
-
   universalify@2.0.1: {}
 
   unpipe@1.0.0: {}
@@ -25533,8 +24797,6 @@ snapshots:
       base64-arraybuffer: 1.0.2
 
   uuid@3.4.0: {}
-
-  uuid@7.0.3: {}
 
   uuid@8.3.2: {}
 
@@ -26203,11 +25465,6 @@ snapshots:
     dependencies:
       vue: 2.7.16
 
-  vue-router@4.4.5(vue@3.5.12(typescript@5.6.3)):
-    dependencies:
-      '@vue/devtools-api': 6.6.4
-      vue: 3.5.12(typescript@5.6.3)
-
   vue-runtime-helpers@1.1.2: {}
 
   vue-style-loader@4.1.3:
@@ -26336,8 +25593,6 @@ snapshots:
   wcwidth@1.0.1:
     dependencies:
       defaults: 1.0.4
-
-  webidl-conversions@3.0.1: {}
 
   webidl-conversions@4.0.2: {}
 
@@ -26548,11 +25803,6 @@ snapshots:
 
   whatwg-mimetype@2.3.0: {}
 
-  whatwg-url@5.0.0:
-    dependencies:
-      tr46: 0.0.3
-      webidl-conversions: 3.0.1
-
   whatwg-url@6.5.0:
     dependencies:
       lodash.sortby: 4.7.0
@@ -26685,8 +25935,6 @@ snapshots:
   ws@6.2.3:
     dependencies:
       async-limiter: 1.0.1
-
-  ws@7.5.10: {}
 
   xml-name-validator@3.0.0: {}
 
