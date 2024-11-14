@@ -36,7 +36,10 @@
     "build": {
       "dependsOn": [
       ],
-      "cache": true
+      "cache": true,
+      "outputs": [
+        "{workspaceRoot}/dist"
+      ]
     },
     "lint": {
       "dependsOn": [
