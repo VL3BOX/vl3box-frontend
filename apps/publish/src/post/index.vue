@@ -13,6 +13,12 @@
                 >
             </el-tooltip>
         </h1>
+        <el-alert type="warning" v-if="!isAuth">
+            <template #title>
+                <span>应有关单位要求，现在需要进行账号认证后才可执行“发布”操作，</span>
+                【<a href="/dashboard/auth">前往认证</a>】
+            </template>
+        </el-alert>
         <div class="u-nav">
             <el-divider content-position="left">PVE / PVP</el-divider>
             <el-row :gutter="20">
@@ -174,18 +180,32 @@
 <script>
 import User from "@jx3box/jx3box-common/js/user";
 import { getAppIcon } from "@jx3box/jx3box-common/js/utils.js";
+import { getUserInfo } from "@/service/user.js";
 export default {
     name: "index",
     props: [],
     data: function () {
         return {
             isAdmin: User.isAdmin(),
+            profile: {}
         };
     },
-    computed: {},
+    computed: {
+        isAuth() {
+            return !!this.profile.wechat_mp_openid || !!this.profile.wechat_miniprogram_openid || !!this.profile.user_phone
+        }
+    },
     methods: {
         getAppIcon,
+        loadUser() {
+            getUserInfo().then((res) => {
+                this.profile = res?.data?.data;
+            });
+        }
     },
+    mounted() {
+        this.loadUser();
+    }
 };
 </script>
 

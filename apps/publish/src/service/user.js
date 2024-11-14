@@ -13,5 +13,9 @@ function getUserInfoByIds(ids) {
     });
 }
 
+function getUserInfo() {
+    return $cms().get(`/api/cms/user/my/info`);
+}
 
-export { getUserConf, getUserInfoByIds };
+
+export { getUserConf, getUserInfoByIds,getUserInfo };
