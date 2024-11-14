@@ -6,4 +6,3 @@ demo
 dist
 docs
 .husky
-package-lock.json
