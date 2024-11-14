@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "import": "nx import https://github.com/jx3box/$LIB_REPO packages/vi_VN/$LIB_REPO --ref master --depth 1 ",
+    "import": "nx import https://github.com/jx3box/$LIB_REPO packages/$LIB_REPO --ref master --depth 1 ",
     "build": "nx run-many -t build --skip-nx-cache -p index account"
   },
   "private": true,

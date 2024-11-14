@@ -2,7 +2,7 @@
   "name": "dashboard",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/vi_VN/dashboard/src",
+  "sourceRoot": "apps/dashboard/src",
   "// targets": "to see all targets run: nx show project dashboard --web",
   "targets": {}
 }

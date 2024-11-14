@@ -2,7 +2,7 @@
   "name": "tool",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/vi_VN/tool/src",
+  "sourceRoot": "apps/tool/src",
   "// targets": "to see all targets run: nx show project tool --web",
   "targets": {}
 }

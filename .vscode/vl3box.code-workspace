@@ -9,15 +9,15 @@
 		},
 		{
 			"name": "tool",
-			"path": "../apps/vi_VN/tool"
+			"path": "../apps/tool"
 		},
 		{
 			"name": "editor",
-			"path": "../packages/vi_VN/jx3box-editor"
+			"path": "../packages/jx3box-editor"
 		},
 		{
 			"name": "markdown",
-			"path": "../packages/vi_VN/reporter"
+			"path": "../packages/reporter"
 		}
 	],
 	"settings": {}

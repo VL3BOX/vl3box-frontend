@@ -61,14 +61,14 @@ importers:
         specifier: ^2.7.16
         version: 2.7.16
 
-  apps/vi_VN/account:
+  apps/account:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       axios:
         specifier: ^0.19.2
         version: 0.19.2
@@ -149,17 +149,17 @@ importers:
         specifier: ^2.6.14
         version: 2.7.16
 
-  apps/vi_VN/author:
+  apps/author:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       '@jx3box/jx3box-data':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-data
+        version: link:../../../packages/jx3box-data
       axios:
         specifier: ^0.21.1
         version: 0.21.4
@@ -219,26 +219,26 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  apps/vi_VN/bbs:
+  apps/bbs:
     dependencies:
       '@jx3box/jx3box-comment-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-comment-ui
+        version: link:../../../packages/jx3box-comment-ui
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       '@jx3box/jx3box-data':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-data
+        version: link:../../../packages/jx3box-data
       '@jx3box/jx3box-editor':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-editor
+        version: link:../../../packages/jx3box-editor
       '@jx3box/jx3box-emotion':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-emotion
+        version: link:../../../packages/jx3box-emotion
       axios:
         specifier: ^0.21.1
         version: 0.21.4
@@ -316,29 +316,29 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  apps/vi_VN/bps:
+  apps/bps:
     dependencies:
       '@jx3box/jx3box-comment-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-comment-ui
+        version: link:../../../packages/jx3box-comment-ui
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       '@jx3box/jx3box-data':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-data
+        version: link:../../../packages/jx3box-data
       '@jx3box/jx3box-editor':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-editor
+        version: link:../../../packages/jx3box-editor
       '@jx3box/jx3box-talent':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-talent
+        version: link:../../../packages/jx3box-talent
       '@jx3box/jx3box-talent2':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-talent2
+        version: link:../../../packages/jx3box-talent2
       axios:
         specifier: ^0.21.1
         version: 0.21.4
@@ -410,7 +410,7 @@ importers:
         specifier: ^2.6.10
         version: 2.7.16
 
-  apps/vi_VN/dashboard:
+  apps/dashboard:
     dependencies:
       '@jx3box/jx3box-comment-ui':
         specifier: ^1.9.9
@@ -513,14 +513,14 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  apps/vi_VN/event:
+  apps/event:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       axios:
         specifier: ^0.19.2
         version: 0.19.2
@@ -577,26 +577,26 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  apps/vi_VN/fb:
+  apps/fb:
     dependencies:
       '@jx3box/jx3box-bmap':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-bmap
+        version: link:../../../packages/jx3box-bmap
       '@jx3box/jx3box-comment-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-comment-ui
+        version: link:../../../packages/jx3box-comment-ui
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       '@jx3box/jx3box-data':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-data
+        version: link:../../../packages/jx3box-data
       '@jx3box/jx3box-editor':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-editor
+        version: link:../../../packages/jx3box-editor
       axios:
         specifier: ^0.21.1
         version: 0.21.4
@@ -662,32 +662,32 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  apps/vi_VN/index:
+  apps/index:
     dependencies:
       '@antv/g2plot':
         specifier: ^1.1.28
         version: 1.1.28
       '@jx3box/jx3box-bmap':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-bmap
+        version: link:../../../packages/jx3box-bmap
       '@jx3box/jx3box-comment-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-comment-ui
+        version: link:../../../packages/jx3box-comment-ui
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       '@jx3box/jx3box-data':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-data
+        version: link:../../../packages/jx3box-data
       '@jx3box/jx3box-editor':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-editor
+        version: link:../../../packages/jx3box-editor
       '@jx3box/jx3box-emotion':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-emotion
+        version: link:../../../packages/jx3box-emotion
       animate.css:
         specifier: ^4.1.1
         version: 4.1.1
@@ -792,35 +792,35 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0(vue@2.7.16)
 
-  apps/vi_VN/macro:
+  apps/macro:
     dependencies:
       '@jx3box/jx3box-comment-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-comment-ui
+        version: link:../../../packages/jx3box-comment-ui
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       '@jx3box/jx3box-data':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-data
+        version: link:../../../packages/jx3box-data
       '@jx3box/jx3box-dict':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-dict
+        version: link:../../../packages/jx3box-dict
       '@jx3box/jx3box-editor':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-editor
+        version: link:../../../packages/jx3box-editor
       '@jx3box/jx3box-macro':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-macro
+        version: link:../../../packages/jx3box-macro
       '@jx3box/jx3box-talent':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-talent
+        version: link:../../../packages/jx3box-talent
       '@jx3box/jx3box-talent2':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-talent2
+        version: link:../../../packages/jx3box-talent2
       axios:
         specifier: ^0.21.1
         version: 0.21.4
@@ -889,29 +889,29 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  apps/vi_VN/publish:
+  apps/publish:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       '@jx3box/jx3box-data':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-data
+        version: link:../../../packages/jx3box-data
       '@jx3box/jx3box-editor':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-editor
+        version: link:../../../packages/jx3box-editor
       '@jx3box/jx3box-emotion':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-emotion
+        version: link:../../../packages/jx3box-emotion
       '@jx3box/jx3box-facedat':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-facedat
+        version: link:../../../packages/jx3box-facedat
       '@jx3box/jx3box-talent':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-talent
+        version: link:../../../packages/jx3box-talent
       '@vueuse/core':
         specifier: ^10.11.0
         version: 10.11.1(vue@2.7.16)
@@ -1001,23 +1001,23 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  apps/vi_VN/pvp:
+  apps/pvp:
     dependencies:
       '@element-plus/icons-vue':
         specifier: ^2.1.0
         version: 2.3.1(vue@3.5.12(typescript@5.6.3))
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-data':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-data
+        version: link:../../../packages/jx3box-data
       '@jx3box/jx3box-talent':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-talent
+        version: link:../../../packages/jx3box-talent
       '@jx3box/jx3box-vue3-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-vue3-ui
+        version: link:../../../packages/jx3box-vue3-ui
       '@vueuse/core':
         specifier: ^9.13.0
         version: 9.13.0(vue@3.5.12(typescript@5.6.3))
@@ -1095,35 +1095,35 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0(vite@5.4.11(@types/node@18.19.64)(less@4.2.0)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))
 
-  apps/vi_VN/pvx:
+  apps/pvx:
     dependencies:
       '@antv/g2':
         specifier: ^4.1.20
         version: 4.2.11
       '@jx3box/jx3box-comment-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-comment-ui
+        version: link:../../../packages/jx3box-comment-ui
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       '@jx3box/jx3box-data':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-data
+        version: link:../../../packages/jx3box-data
       '@jx3box/jx3box-editor':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-editor
+        version: link:../../../packages/jx3box-editor
       '@jx3box/jx3box-emotion':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-emotion
+        version: link:../../../packages/jx3box-emotion
       '@jx3box/jx3box-facedat':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-facedat
+        version: link:../../../packages/jx3box-facedat
       '@jx3box/jx3box-map':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-map
+        version: link:../../../packages/jx3box-map
       animate.css:
         specifier: ^4.1.1
         version: 4.1.1
@@ -1201,11 +1201,11 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  apps/vi_VN/search:
+  apps/search:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       axios:
         specifier: ^0.19.2
         version: 0.19.2
@@ -1265,14 +1265,14 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  apps/vi_VN/tinymce:
+  apps/tinymce:
     devDependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-editor':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-editor
+        version: link:../../../packages/jx3box-editor
       csslab:
         specifier: ^4.0.3
         version: 4.0.4
@@ -1283,23 +1283,23 @@ importers:
         specifier: ^14.2.0
         version: 14.2.4
 
-  apps/vi_VN/tool:
+  apps/tool:
     dependencies:
       '@jx3box/jx3box-comment-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-comment-ui
+        version: link:../../../packages/jx3box-comment-ui
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       '@jx3box/jx3box-dict':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-dict
+        version: link:../../../packages/jx3box-dict
       '@jx3box/jx3box-editor':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-editor
+        version: link:../../../packages/jx3box-editor
       axios:
         specifier: ^0.19.2
         version: 0.19.2
@@ -1362,14 +1362,14 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  apps/vi_VN/topic:
+  apps/topic:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       axios:
         specifier: ^0.19.2
         version: 0.19.2
@@ -1435,32 +1435,32 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  apps/vi_VN/wiki:
+  apps/wiki:
     dependencies:
       '@antv/g2':
         specifier: ^4.2.10
         version: 4.2.11
       '@jx3box/jx3box-comment-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-comment-ui
+        version: link:../../../packages/jx3box-comment-ui
       '@jx3box/jx3box-common':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common
+        version: link:../../../packages/jx3box-common
       '@jx3box/jx3box-common-ui':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-common-ui
+        version: link:../../../packages/jx3box-common-ui
       '@jx3box/jx3box-data':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-data
+        version: link:../../../packages/jx3box-data
       '@jx3box/jx3box-dict':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-dict
+        version: link:../../../packages/jx3box-dict
       '@jx3box/jx3box-editor':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-editor
+        version: link:../../../packages/jx3box-editor
       '@jx3box/jx3box-map':
         specifier: workspace:*
-        version: link:../../../packages/vi_VN/jx3box-map
+        version: link:../../../packages/jx3box-map
       axios:
         specifier: ^0.21.1
         version: 0.21.4
@@ -1553,7 +1553,7 @@ importers:
         specifier: ^3.0.4
         version: 3.13.1
 
-  packages/vi_VN/jx3box-bmap:
+  packages/jx3box-bmap:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
@@ -1620,7 +1620,7 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0(vue@2.7.16)
 
-  packages/vi_VN/jx3box-build-common:
+  packages/jx3box-build-common:
     dependencies:
       iconv-lite:
         specifier: ^0.6.3
@@ -1653,7 +1653,7 @@ importers:
         specifier: ^3.8.2
         version: 3.17.0
 
-  packages/vi_VN/jx3box-comment-ui:
+  packages/jx3box-comment-ui:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
@@ -1729,7 +1729,7 @@ importers:
         specifier: ^1.0.9
         version: 1.0.15
 
-  packages/vi_VN/jx3box-common:
+  packages/jx3box-common:
     dependencies:
       '@jx3box/reporter':
         specifier: 0.0.5
@@ -1763,7 +1763,7 @@ importers:
         specifier: ^18.7.23
         version: 18.19.64
 
-  packages/vi_VN/jx3box-common-ui:
+  packages/jx3box-common-ui:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
@@ -1851,7 +1851,7 @@ importers:
         specifier: ^1.6.0
         version: 1.6.5
 
-  packages/vi_VN/jx3box-data:
+  packages/jx3box-data:
     devDependencies:
       '@jx3box/jx3box-build-common':
         specifier: workspace:*
@@ -1875,7 +1875,7 @@ importers:
         specifier: ^0.12.7
         version: 0.12.7
 
-  packages/vi_VN/jx3box-dict:
+  packages/jx3box-dict:
     dependencies:
       lodash:
         specifier: ^4.17.21
@@ -1885,7 +1885,7 @@ importers:
         specifier: workspace:*
         version: link:../jx3box-build-common
 
-  packages/vi_VN/jx3box-editor:
+  packages/jx3box-editor:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
@@ -2000,7 +2000,7 @@ importers:
         specifier: ^2.0.3
         version: 2.0.3(babel-core@6.26.3)(ejs@3.1.10)(handlebars@4.7.8)(lodash@4.17.21)(underscore@1.13.7)(vite@5.4.11(@types/node@18.19.64)(less@3.13.1)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))(vue-template-compiler@2.7.16)(vue@2.7.16)
 
-  packages/vi_VN/jx3box-emotion:
+  packages/jx3box-emotion:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
@@ -2018,7 +2018,7 @@ importers:
         specifier: ^4.17.15
         version: 4.17.21
 
-  packages/vi_VN/jx3box-facedat:
+  packages/jx3box-facedat:
     dependencies:
       '@jx3box/jx3box-build-common':
         specifier: workspace:*
@@ -2103,7 +2103,7 @@ importers:
         specifier: ^1.0.0
         version: 1.0.1
 
-  packages/vi_VN/jx3box-macro:
+  packages/jx3box-macro:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
@@ -2119,7 +2119,7 @@ importers:
         specifier: ^3.11.1
         version: 3.13.1
 
-  packages/vi_VN/jx3box-map:
+  packages/jx3box-map:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
@@ -2150,7 +2150,7 @@ importers:
         specifier: ^8.0.3
         version: 8.7.1(eslint@7.32.0)
 
-  packages/vi_VN/jx3box-petmap:
+  packages/jx3box-petmap:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
@@ -2187,7 +2187,7 @@ importers:
         specifier: ^8.0.3
         version: 8.7.1(eslint@7.32.0)
 
-  packages/vi_VN/jx3box-talent:
+  packages/jx3box-talent:
     dependencies:
       '@jx3box/jx3box-build-common':
         specifier: ^0.1.10
@@ -2251,7 +2251,7 @@ importers:
         specifier: ^3.11.1
         version: 3.13.1
 
-  packages/vi_VN/jx3box-talent2:
+  packages/jx3box-talent2:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*
@@ -2312,7 +2312,7 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
 
-  packages/vi_VN/jx3box-vue3-ui:
+  packages/jx3box-vue3-ui:
     dependencies:
       '@element-plus/icons-vue':
         specifier: ^2.1.0
@@ -2430,7 +2430,7 @@ importers:
         specifier: 2.7.1
         version: 2.7.1
 
-  packages/vi_VN/markdown:
+  packages/markdown:
     dependencies:
       '@jx3box/jx3box-common':
         specifier: workspace:*

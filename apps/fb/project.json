@@ -2,7 +2,7 @@
   "name": "fb",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/vi_VN/fb/src",
+  "sourceRoot": "apps/fb/src",
   "// targets": "to see all targets run: nx show project fb --web",
   "targets": {}
 }
