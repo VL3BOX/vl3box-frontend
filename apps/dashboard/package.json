@@ -12,12 +12,12 @@
     "update": "npm install @jx3box/jx3box-common-ui@latest @jx3box/jx3box-common@latest @jx3box/jx3box-data@latest @jx3box/jx3box-comment-ui@latest @jx3box/jx3box-emotion@latest @jx3box/jx3box-facedat@latest"
   },
   "dependencies": {
-    "@jx3box/jx3box-comment-ui": "^1.9.9",
-    "@jx3box/jx3box-common": "^8.4.8",
-    "@jx3box/jx3box-common-ui": "^9.0.5",
-    "@jx3box/jx3box-data": "^3.7.0",
-    "@jx3box/jx3box-emotion": "^1.2.8",
-    "@jx3box/jx3box-facedat": "^2.6.2",
+    "@jx3box/jx3box-comment-ui": "workspace:*",
+    "@jx3box/jx3box-common": "workspace:*",
+    "@jx3box/jx3box-common-ui": "workspace:*",
+    "@jx3box/jx3box-data": "workspace:*",
+    "@jx3box/jx3box-emotion": "workspace:*",
+    "@jx3box/jx3box-facedat": "workspace:*",
     "@microsoft/signalr": "^8.0.0",
     "axios": "^0.21.1",
     "core-js": "^3.4.3",
