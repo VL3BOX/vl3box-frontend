@@ -56,8 +56,8 @@ export default {
         position: absolute;
         right: 20px;
         top:20px;
-        color:#900;
-        border:1px dashed #900;
+        color:#b65b4d;
+        border:1px dashed #8c50f9;
         padding:2px 5px;
         cursor: pointer;
 

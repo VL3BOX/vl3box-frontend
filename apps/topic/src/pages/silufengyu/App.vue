@@ -15,7 +15,7 @@
 import { postStat } from "@jx3box/jx3box-common/js/stat";
 import { __imgPath } from "@jx3box/jx3box-common/data/jx3box.json";
 const isDev = process.env.NODE_ENV === "development";
-const imgPath = isDev ? "/tmp/" :  __imgPath + "topic/silufengyu/"
+const imgPath = isDev ? "/tmp/" :  __imgPath + "topic/silufengyu/"  /* 图片路径 */
 export default {
     name: "App",
     props: [],

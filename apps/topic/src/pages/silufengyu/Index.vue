@@ -1,11 +1,11 @@
 <template>
     <div class="container">
         <!-- 主横幅 -->
-        <section class="banner">
-            <img class="banner__logo" :src="buildImgUrl('bg/banner__title.png')" alt="丝路风语" />
+        <section class="banner slide-in" v-animate="'visible'">
+            <img class="banner__logo hover-scale" :src="buildImgUrl('bg/banner__title.png')" alt="丝路风语" />
         </section>
         <!-- 剧情推进模块 -->
-        <section class="story-progress">
+        <section class="story-progress slide-in" v-animate="'visible'">
             <!-- 包裹图片和叠加文本 -->
             <div class="story-progress__content">
                 <!-- 在图片上叠加的文本 -->
@@ -22,21 +22,14 @@
             <div class="rsc-overview__content m-section">
                 <block-title :order="1"></block-title>
 
-                <ul class="expansion-overview__list">
-                    <li class="expansion-overview__item">
-                        <img :src="buildImgUrl('001/pr1u1.png')" alt="新地图" class="expansion-overview__image" />
-                    </li>
-                    <li class="expansion-overview__item">
-                        <img :src="buildImgUrl('001/pr1u2.png')" alt="新门派" class="expansion-overview__image" />
-                    </li>
-                    <li class="expansion-overview__item">
-                        <img :src="buildImgUrl('001/pr1u3.png')" alt="新副本" class="expansion-overview__image" />
-                    </li>
-                    <li class="expansion-overview__item">
-                        <img :src="buildImgUrl('001/pr1u4.png')" alt="颜值优化" class="expansion-overview__image" />
-                    </li>
-                    <li class="expansion-overview__item">
-                        <img :src="buildImgUrl('001/pr1u5.png')" alt="引擎升级" class="expansion-overview__image" />
+                <ul class="expansion-overview__list" v-animate="'visible'">
+                    <li
+                        class="expansion-overview__item"
+                        v-for="(item, index) in expansionItems"
+                        :key="index"
+                        :style="{ animationDelay: index * 0.2 + 's' }"
+                    >
+                        <img :src="buildImgUrl(item.img)" alt="新地图" class="expansion-overview__image" />
                     </li>
                 </ul>
             </div>
@@ -56,7 +49,7 @@
         <!-- p3 -->
         <section class="new-sec">
             <block-title :order="3" class="block-title3"></block-title>
-            <div class="new-sec_content m-section">
+            <div class="new-sec_content m-section" v-animate="'visible'">
                 <div class="new-sec__text">
                     <h3 class="u-title">段氏</h3>
                     <p class="u-desc">
@@ -64,14 +57,14 @@
                         <span>世第含章远逐鹿 周天风劲予逍遥</span>
                     </p>
                     <div class="new-sec__textP">
-                        <p class="u-desc1">
+                        <p class="u-desc1 u-desc">
                             段氏自春秋时期兴起，跟随历史的步伐南迁，在滇中一带扩张自己的家族势力。为求自保，段氏号召族中弟子习武，在融天岭修建了气势恢宏的大理宫、天龙寺与神剑宫，逐步成为西南豪门。
                         </p>
-                        <p class="u-desc2">
+                        <p class="u-desc2 u-desc">
                             天宝年间，作为南诏第一武林世家的段氏，被迫卷入南诏王与大唐的纷争中，而南诏皇宫一役却让段氏一族的命运有了新的转机。随着南诏皇宫阁罗凤打压中原武林的计划失败，段氏与南诏皇室间的矛盾显露，但这反而使得段氏家族内部的信念开始统一。
                         </p>
-                        <p class="u-desc3">
-                            南诏会武后，段氏家主段慎思，以退为进，宣布退任家主之位，并选擢新任家主，试图用此举将段氏彻底从南诏、吐蕃和大唐之间的斗争中摘除。而原本位于融天岭的大理宫，也迁居至洱海，正式更名为大理山庄。
+                        <p class="u-desc3 u-desc">
+                            南诏会武后，段氏家主段慎思，以退为进，宣布退任家主之位，并选擢新任家主，试图用此举将段氏彻底从南诏、吐蕃和大唐之间的斗争中摘除。而原本位于融天岭的大理宫，也迁居至海，正式更名为大理山庄。
                         </p>
                     </div>
                 </div>
@@ -83,7 +76,7 @@
             <block-title :order="4" class="block-title4"></block-title>
 
             <div class="duanshi__content m-section">
-                <!-- 菜单导航栏 -->
+                <!-- 菜导航栏 -->
                 <ul class="duanshi__nav">
                     <li
                         v-for="item in duanshi"
@@ -166,112 +159,13 @@
 
                 <!-- 图标和小标题列表 -->
                 <ul class="new-season__list">
-                    <!-- TODO:用v-for改写 -->
-                    <li class="new-season__item">
-                        <a href="/macro" target="_blank">
+                    <li v-for="(item, index) in icons" :key="index" class="new-season__item">
+                        <a :href="item.link" target="_blank">
                             <div class="u-icon">
-                                <img :src="buildImgUrl('007/icon/macro.png')" alt="宏库" class="new-season__icon" />
+                                <img :src="buildImgUrl(item.img)" :alt="item.title" class="new-season__icon" />
                             </div>
                             <div class="u-label">
-                                <span class="new-season__label">宏库</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="new-season__item">
-                        <a href="/bps" target="_blank">
-                            <div class="u-icon">
-                                <img :src="buildImgUrl('007/icon/bps.png')" alt="职业" class="new-season__icon" />
-                            </div>
-                            <div class="u-label">
-                                <span class="new-season__label">职业</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="new-season__item">
-                        <a href="/fb" target="_blank">
-                            <div class="u-icon">
-                                <img :src="buildImgUrl('007/icon/fb.png')" alt="副本" class="new-season__icon" />
-                            </div>
-                            <div class="u-label">
-                                <span class="new-season__label">副本</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="new-season__item">
-                        <a href="/team" target="_blank">
-                            <div class="u-icon">
-                                <img :src="buildImgUrl('007/icon/team.png')" alt="团队" class="new-season__icon" />
-                            </div>
-                            <div class="u-label">
-                                <span class="new-season__label">团队</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="new-season__item">
-                        <a href="/battle" target="_blank">
-                            <div class="u-icon">
-                                <img
-                                    :src="buildImgUrl('007/icon/battle.png')"
-                                    alt="战斗分析"
-                                    class="new-season__icon"
-                                />
-                            </div>
-                            <div class="u-label">
-                                <span class="new-season__label">战斗分析</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="new-season__item">
-                        <a href="/jcl" target="_blank">
-                            <div class="u-icon">
-                                <img :src="buildImgUrl('007/icon/jcl.png')" alt="JCL" class="new-season__icon" />
-                            </div>
-                            <div class="u-label">
-                                <span class="new-season__label">JCL</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="new-season__item">
-                        <a href="/pz" target="_blank">
-                            <div class="u-icon">
-                                <img :src="buildImgUrl('007/icon/pz.png')" alt="配装器" class="new-season__icon" />
-                            </div>
-                            <div class="u-label">
-                                <span class="new-season__label">配装器</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="new-season__item">
-                        <a href="/app/database" target="_blank">
-                            <div class="u-icon">
-                                <img
-                                    :src="buildImgUrl('007/icon/database.png')"
-                                    alt="游戏数据"
-                                    class="new-season__icon"
-                                />
-                            </div>
-                            <div class="u-label">
-                                <span class="new-season__label">游戏数据</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="new-season__item">
-                        <a href="/achievement" target="_blank">
-                            <div class="u-icon">
-                                <img :src="buildImgUrl('007/icon/cj.png')" alt="成就" class="new-season__icon" />
-                            </div>
-                            <div class="u-label">
-                                <span class="new-season__label">成就</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="new-season__item">
-                        <a href="/face" target="_blank">
-                            <div class="u-icon">
-                                <img :src="buildImgUrl('007/icon/face 1.png')" alt="捏脸" class="new-season__icon" />
-                            </div>
-                            <div class="u-label">
-                                <span class="new-season__label">捏脸</span>
+                                <span class="new-season__label">{{ item.title }}</span>
                             </div>
                         </a>
                     </li>
@@ -283,11 +177,7 @@
         <section class="visual-enhancement">
             <block-title :order="8" class="visual-enhancement__title"></block-title>
             <div class="visual-enhancement__content m-section">
-                <img
-                    :src="buildImgUrl('008/maincontent.png')"
-                    alt="Top 100 Ranking"
-                    class="u-pic"
-                />
+                <img :src="buildImgUrl('008/maincontent.png')" alt="Top 100 Ranking" class="u-pic" />
             </div>
         </section>
 
@@ -339,12 +229,31 @@ export default {
                     pics: ["004/content/weapon_1.png", "004/content/weapon_2.png", "004/content/weapon_3.png"],
                 },
             ],
+            icons: [
+                { title: "宏库", img: "007/icon/macro.png", link: "/macro" },
+                { title: "职业", img: "007/icon/bps.png", link: "/bps" },
+                { title: "副本", img: "007/icon/fb.png", link: "/fb" },
+                { title: "团队", img: "007/icon/team.png", link: "/team" },
+                { title: "战斗分析", img: "007/icon/battle.png", link: "/battle" },
+                { title: "JCL", img: "007/icon/jcl.png", link: "/jcl" },
+                { title: "配装器", img: "007/icon/pz.png", link: "/pz" },
+                { title: "游戏数据", img: "007/icon/database.png", link: "/app/database" },
+                { title: "成就", img: "007/icon/cj.png", link: "/achievement" },
+                { title: "捏脸", img: "007/icon/face 1.png", link: "/face" },
+            ],
             active: 0,
             timer: null,
             videoList: [],
             video: "",
             boxActive: 0,
             popApplication: [],
+            expansionItems: [
+                { img: "001/pr1u1.png", alt: "新地图" },
+                { img: "001/pr1u2.png", alt: "新门派" },
+                { img: "001/pr1u3.png", alt: "新副本" },
+                { img: "001/pr1u4.png", alt: "颜值优化" },
+                { img: "001/pr1u5.png", alt: "引擎升级" },
+            ],
         };
     },
     computed: {
@@ -369,8 +278,7 @@ export default {
         },
     },
     mounted() {
-        this.init();
-        window.addEventListener("mousemove", this.hanldMask);
+        this.initScrollAnimation();
     },
     methods: {
         buildTabImgUrl(tab) {
@@ -404,6 +312,24 @@ export default {
         },
         getMoreVideos() {
             window.open("https://space.bilibili.com/2066064028");
+        },
+        initScrollAnimation() {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1,
+                }
+            );
+
+            document.querySelectorAll(".slide-in").forEach((el) => {
+                observer.observe(el);
+            });
         },
     },
     directives: {

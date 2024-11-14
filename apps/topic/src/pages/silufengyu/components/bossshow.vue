@@ -137,7 +137,6 @@ export default {
     }
 }
 
-// @kv_silufengyu: "/tmp"; // TODO:临时路径，用于测试
 .boss-show__description {
     width: 800px;
     height: 150px;

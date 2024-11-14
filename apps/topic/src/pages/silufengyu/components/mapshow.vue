@@ -1,6 +1,6 @@
 <template>
     <div class="m-mapshow">
-        <div class="u-mapbox fadeIn" v-for="(item, i) in list" :key="i" ref="mapbox">
+        <div class="u-mapbox" v-for="(item, i) in list" :key="i" ref="mapbox">
             <img :src="buildImageUrl(item)" alt="地图" class="u-pic" />
             <div class="u-textbox">
                 <span class="u-title">{{ item.title }}</span>
@@ -43,19 +43,44 @@ export default {
         buildImageUrl(item) {
             return this.__imgRoot + item.url;
         },
-        slideShow(){
+        slideShow() {
+            // 获取所有图片元素
             const mapbox_list = this.$refs.mapbox;
-            let i = 0;
-            mapbox_list[0].style.display = "block";
+            // 当前显示的图片序号
+            let currentIndex = 0;
+
+            // 显示第一张图片
+            showImage(currentIndex);
+
+            // 每3秒切换一次图片
             setInterval(() => {
-                mapbox_list[i].style.display = "none";
-                if(i === mapbox_list.length - 1){
-                    i = 0;
-                }else{
-                    i++;
-                }
-                mapbox_list[i].style.display = "block";
+                // 隐藏当前图片
+                hideImage(currentIndex);
+
+                // 计算下一张图片的序号
+                currentIndex = currentIndex === mapbox_list.length - 1 ? 0 : currentIndex + 1;
+
+                // 显示下一张图片
+                showImage(currentIndex);
             }, 3000);
+
+            // 显示图片的函数
+            function showImage(index) {
+                mapbox_list[index].style.display = "block";
+                // 短暂延迟后改变透明度，保过渡效果生效
+                setTimeout(() => {
+                    mapbox_list[index].style.opacity = "1";
+                }, 50);
+            }
+
+            // 隐藏图片的函数
+            function hideImage(index) {
+                mapbox_list[index].style.opacity = "0";
+                // 等待淡出动画完成后，将图片隐藏
+                setTimeout(() => {
+                    mapbox_list[index].style.display = "none";
+                }, 300);
+            }
         },
     },
     created: function () {},
@@ -67,15 +92,18 @@ export default {
 
 <style lang="less">
 .m-mapshow {
-    @w:1000px;
-    @h:492px;
+    @w: 1000px;
+    @h: 492px;
     .size(@w,@h);
     .auto(x);
 
-    .u-mapbox{
+    .u-mapbox {
         .size(@w,@h);
         position: absolute;
         display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        transition-behavior: allow-discrete;
     }
 
     .u-pic {
@@ -83,42 +111,45 @@ export default {
         margin-left: auto;
         margin-right: auto;
     }
-    .u-textbox{
+    .u-textbox {
         .size(480px,130px);
-        background-color:#fdf5df;
-        border:1px solid #bb9031;
-        box-shadow:3px 3px 3px rgba(0,0,0,0.3);
+        background-color: #fdf5df;
+        border: 1px solid #bb9031;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
         position: absolute;
-        bottom:33px;
+        bottom: 33px;
 
-        left:50%;
+        left: 50%;
         // margin-left:-240px;
         transform: translateX(-50%);
 
         text-align: center;
-        color: #7A1F17;
+        color: #7a1f17;
     }
 
-    .u-title{
+    .u-title {
         display: block;
         font-weight: 700;
         font-size: 24px;
-        padding:15px 0;
+        padding: 15px 0;
     }
 
-    .u-desc{
+    .u-desc {
         width: 390px;
         display: block;
         .auto(x);
     }
 
-    @keyframes mapFadeIn{
-        from{opacity: 0;}
-        to{opacity: 1;}
-    }
-    .fadeIn{
-        animation: mapFadeIn 0.4s ease-in-out forwards;
-    }
-
+    // @keyframes mapFadeIn {
+    //     from {
+    //         opacity: 0;
+    //     }
+    //     to {
+    //         opacity: 1;
+    //     }
+    // }
+    // .fadeIn {
+    //     animation: mapFadeIn 0.4s ease-in-out forwards;
+    // }
 }
 </style>
