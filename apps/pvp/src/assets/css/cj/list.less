@@ -1,0 +1,171 @@
+// 普通列表
+.m-cj-strategy {
+    background-color: @bgColorDark1;
+}
+.m-strategy-list {
+    background-color: @bgColorDark1;
+    .u-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .u-item {
+        border-bottom: 1px dashed #333;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+        padding: 10px;
+        .pr;
+        .flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    // 标题
+    .u-post {
+        margin: 0;
+        padding: 0;
+        .nobreak;
+        .u-icon {
+            .size(16px);
+            .y(-3px);
+            .mr(5px);
+        }
+        &.isSticky {
+            .u-title::before {
+                content: "🎯";
+                .mr(5px);
+            }
+        }
+        .u-title {
+            color: @colorDark;
+            font-weight: 400;
+            font-size: 14px;
+            &:hover {
+                color: #adaeef;
+                // color: @primary;
+                // box-shadow: 0 1px 0 @primary;
+            }
+        }
+        .fz(15px, 2);
+        font-weight: normal;
+        .lh(2);
+        font-weight: 400;
+    }
+
+    .u-zlp {
+        .fz(12px);
+        color: #adaeef;
+        padding: 2px 5px;
+        border: 1px solid #adaeef;
+        font-style: normal;
+        .r(2px);
+    }
+
+    // 底部
+    .u-misc {
+        .db;
+        .rb(10px, 24px);
+        .x(right);
+        .fz(12px, 20px);
+        color: #999;
+        flex-shrink: 0;
+    }
+
+    .u-author-avatar {
+        .size(20px);
+        .y;
+        .r(50%);
+        .mr(5px);
+    }
+    .u-author-name {
+        .fz(12px, 24px);
+        color: #999;
+        &:hover {
+            color: @pink;
+        }
+    }
+    .u-date {
+        .flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .u-down {
+        i {
+            .size(12px);
+            .y(-1px);
+        }
+    }
+    .u-pipe {
+        margin: 0 5px;
+        color: #999;
+    }
+}
+@media screen and (max-width: @ipad) {
+    .m-strategy-list {
+        .u-banner {
+            .w(100px);
+            .h(55px);
+            padding: 3px;
+            .fr;
+            margin-left: 10px;
+            margin-right: 0;
+        }
+
+        .u-post {
+            white-space: normal;
+            word-break: break-all;
+            .break(2);
+            .fz(14px, 22px);
+        }
+
+        .u-metalist,
+        .u-down,
+        .u-view {
+            .none;
+        }
+        .u-tag {
+            .mb(8px);
+        }
+
+        .u-misc {
+            .ps;
+            .x(left);
+        }
+        .u-author-name {
+            color: #555;
+        }
+    }
+}
+@media screen and (max-width: @phone) {
+    .m-strategy-list {
+        .u-desc {
+            .none;
+        }
+    }
+}
+
+// 为空
+.m-strategy-null {
+    margin-top: 10px;
+}
+
+// 加载更多
+.m-strategy-more {
+    .mb(10px);
+    .w(100%);
+}
+
+// 分页
+.m-strategy-pages {
+    .flex;
+    justify-content: center;
+    margin-top: 20px;
+    overflow-x: auto;
+    text-align: center;
+    .el-pager li.is-active {
+        background-color: @activeColorDark !important;
+    }
+}

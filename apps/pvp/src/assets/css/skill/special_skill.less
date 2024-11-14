@@ -1,0 +1,139 @@
+.m-special-skill {
+    // background: #1a2b22;
+    border-radius: 8px;
+    // color: #fff;
+    margin-top: 20px;
+
+    background-color: #fafbfc;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    font-size: 14px;
+
+    .u-tab-icon {
+        color: @color;
+    }
+    .is-active .u-tab-icon {
+        color: @color-link !important;
+    }
+    .u-tab-icon svg {
+        .pr;
+        top: 3px;
+    }
+}
+
+.m-special-skill__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .pointer;
+
+    font-size: 17px;
+    font-weight: 300;
+    padding: 10px 0;
+    color: #6c645c;
+    margin: 0;
+    font-weight: 500;
+    padding: 10px 15px;
+    background-color: #f5f7fa;
+    border-bottom: 1px solid #eee;
+    position: relative;
+
+    .u-icon {
+        .pointer;
+        &:hover {
+            color: @pink;
+        }
+    }
+
+    .u-special-title {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #3d454d;
+        font-size: 15px;
+    }
+    .u-collapse-icon {
+        .pointer;
+    }
+}
+
+.m-special-skill__content {
+    padding: 10px 20px 20px 20px;
+
+    .el-tabs__item.is-active {
+        border-bottom-color: #f9fafc !important;
+    }
+    .m-collection-header {
+        background-color: #fff;
+    }
+}
+
+.m-collection-header {
+    background-color: #fafbfc;
+    padding: 10px;
+    .r(3px);
+    border: 1px solid @border-hr;
+    .fz(14px,2);
+    white-space: pre-wrap;
+    a:hover {
+        box-shadow: 0 1px 0 @color-link;
+    }
+}
+.m-collection-list {
+    padding: 0;
+    margin: 0;
+
+    .u-item {
+        .db;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .pr;
+        min-height: 48px;
+        padding-left: 60px;
+        &:hover {
+            background-color: @bg-gray;
+        }
+
+        a {
+            .db;
+        }
+        border-bottom: 1px solid #eee;
+    }
+
+    .u-icon {
+        .pa;
+        .lt(0,10px);
+        // .mr(10px);
+        .size(48px);
+    }
+
+    .u-name {
+        .fz(14px);
+        .bold;
+        // .db;
+        .mr(5px);
+    }
+
+    .u-xf {
+        // .db;
+        .fz(12px,2);
+        color: #555;
+        img {
+            .size(16px);
+            .y(-3px);
+        }
+    }
+
+    .u-desc {
+        .db;
+        color: @pink;
+        .fz(13px);
+        .bold;
+    }
+
+    .u-remark {
+        .db;
+        color: #999;
+        .fz(12px,2);
+    }
+}

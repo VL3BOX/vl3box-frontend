@@ -1,0 +1,270 @@
+.m-wiki {
+    .mt(20px);
+}
+
+.m-skill-wiki {
+    background-color: #fafbfc;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    font-size: 14px;
+    .u-trigger {
+        .pointer;
+        .x;
+        font-size: 12px;
+        border-top: 1px dashed #eee;
+        padding-top: 8px;
+        i {
+            .mr(3px);
+        }
+    }
+    .head-title {
+        font-size: 15px;
+        font-weight: 300;
+        padding: 10px 0;
+        color: #6c645c;
+        margin: 0;
+        font-weight: 500;
+        padding: 10px 15px;
+        background-color: #f5f7fa;
+        border-bottom: 1px solid #eee;
+        .pr;
+
+        .u-button {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+        }
+
+        .u-txt {
+            .flex;
+            align-items: center;
+            gap: 5px;
+            color: @color;
+        }
+        .u-skill-ID {
+            font-style: normal;
+            color: #999;
+            font-size: 12px;
+            font-weight: normal;
+        }
+    }
+    .m-wiki-meta {
+        .mb(5px);
+        font-size: 12px;
+
+        .u-meta,
+        .u-label,
+        .u-value {
+            .dbi;
+            vertical-align: middle;
+        }
+
+        .u-meta {
+            .mr(15px);
+
+            &:last-child {
+                .mr(0);
+            }
+
+            @media screen and (max-width: @phone) {
+                .db;
+                .mr(0);
+                .mb(5px);
+
+                &:last-child {
+                    .mb(0);
+                }
+            }
+        }
+
+        .u-label {
+            .mr(10px);
+            padding: 3px 8px;
+            background-color: #f2f2f2;
+            .r(2px);
+            font-style: normal;
+            color: #666;
+        }
+
+        .el-icon-star-on {
+            color: yellowgreen;
+            font-size: 16px;
+        }
+
+        .u-creator {
+            .dbi;
+            .w(24px);
+            .h(24px);
+            .mr(5px);
+            .r(50%);
+            overflow: hidden;
+
+            &:last-child {
+                .mr(0);
+            }
+
+            img {
+                .w(100%);
+                .h(auto);
+            }
+        }
+
+        @media screen and (max-width: @phone) {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .m-panel-body {
+        padding: 15px;
+        line-height: 1.6em;
+        word-break: break-all;
+    }
+}
+.m-wiki-post-empty {
+    // .u-msg-yellow;
+    background-color: @bg-gray;
+    padding: 8px 10px;
+    .r(4px);
+    .x;
+    .s-link {
+        .underline(@color-link);
+    }
+    letter-spacing: 1px;
+    .fz(13px);
+
+    .no_skill_post {
+        .flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+.m-wiki-compatible {
+    .u-msg-yellow;
+    margin: 10px auto;
+    padding: 5px 10px;
+    a {
+        .underline(@color-link);
+    }
+}
+
+.m-wiki-signature {
+    color: #999;
+    .fz(12px,2);
+    border-top: 1px solid #ddd;
+    padding: 5px 15px;
+    .flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .w-thx {
+        transform: scale(0.8);
+        transform-origin: left top;
+        .mt(5px);
+    }
+
+    .u-btn {
+        font-size: 12px;
+    }
+    .u-icon {
+        .mr(5px);
+    }
+}
+@media screen and (max-width: @phone) {
+    .m-wiki-signature {
+        .u-btn {
+            .none;
+        }
+    }
+}
+
+.u-wiki__title {
+    font-size: 17px;
+    font-weight: 300;
+    color: #6c645c;
+    margin: -10px -10px 0;
+    padding: 10px;
+    .pointer;
+    .pr;
+    i {
+        margin-right: 5px;
+    }
+}
+
+.c-wiki-revisions {
+    .u-empty {
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    .m-histories {
+        width: 100%;
+        margin: -5px 0;
+        opacity: 0.8;
+        font-size: 14px;
+        text-align: left;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        th,
+        td {
+            min-width: 100px;
+            padding: 8px 10px;
+            font-weight: normal;
+            line-height: 1.6;
+
+            &:first-child {
+                min-width: 35px;
+            }
+
+            @media screen and (max-width: @phone) {
+                min-width: 35px;
+                padding: 3px;
+                font-size: 12px;
+
+                &:first-child {
+                    min-width: 15px;
+                }
+            }
+        }
+
+        .u-version-link {
+            color: @color-link;
+            .pointer;
+
+            &:hover {
+                box-shadow: 0 1px 0 @color-link;
+            }
+        }
+
+        a {
+            color: @color;
+        }
+
+        th {
+            border-bottom: 2px solid #dddddd;
+        }
+
+        td {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+    }
+}
+
+.w-thx {
+    .u-record-icon {
+        top: 6px !important;
+    }
+    .w-thx-panel {
+        margin-bottom: 0;
+    }
+}
