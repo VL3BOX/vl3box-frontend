@@ -8,23 +8,23 @@
                 }}</el-button>
                 <slot name="guide">
                     <a v-if="type === 'face'" class="u-help" href="/tool/746" target="_blank">
-                        <i class="el-icon-collection"></i> {{ $t('游戏脸型导入导出指南') }}
+                        <i class="el-icon-collection"></i> 游戏脸型导入导出指南
                     </a>
                 </slot>
             </template>
             <template v-else>
                 <div class="u-result">
-                    <el-button class="u-reset" @click="resetData" icon="el-icon-refresh-left">{{ $t('清空重置') }}</el-button>
-                    <el-alert :title="$t('当前文件为：') + filename" type="success" show-icon></el-alert>
+                    <el-button class="u-reset" @click="resetData" icon="el-icon-refresh-left">清空重置</el-button>
+                    <el-alert :title="'当前文件为：' + filename" type="success" show-icon></el-alert>
                 </div>
             </template>
         </div>
         <el-alert
             v-else
             class="u-notsupport"
-            :title="$t('浏览器不支持')"
+            title="浏览器不支持"
             type="warning"
-            :description="$t('你的浏览器太老旧不支持本地读取,请更换chrome或其它现代浏览器')"
+            description="你的浏览器太老旧不支持本地读取,请更换chrome或其它现代浏览器"
             show-icon
         ></el-alert>
     </div>

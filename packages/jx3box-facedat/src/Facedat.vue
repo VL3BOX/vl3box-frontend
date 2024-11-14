@@ -37,7 +37,7 @@
         <!--        label-position="left"-->
         <!--      >-->
         <!--        <el-form-item label="高级">-->
-        <!--          <el-checkbox v-model="clean">{{ $t('清洗模式') }}</el-checkbox>-->
+        <!--          <el-checkbox v-model="clean">清洗模式</el-checkbox>-->
         <!--          <span class="u-warning">-->
         <!--            <i class="el-icon-warning-outline"></i>-->
         <!--            仅保留创建新角色时可用项，如提示非法数据也请尝试开启该模式-->
@@ -48,10 +48,10 @@
         <el-dialog title="数据清洗" custom-class="m-data-clean" :visible.sync="visible" @close="clean = false">
             <div class="m-button">
                 <el-button class="u-btn" type="primary" @click="buildData('std')" icon="el-icon-receiving"
-                    >{{ $t('导出正式服') }}</el-button
+                    >导出正式服</el-button
                 >
                 <el-button class="u-btn" type="warning" @click="buildData('origin')" icon="el-icon-receiving"
-                    >{{ $t('导出怀旧服') }}</el-button
+                    >导出怀旧服</el-button
                 >
             </div>
         </el-dialog>

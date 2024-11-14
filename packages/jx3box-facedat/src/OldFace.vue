@@ -2,11 +2,11 @@
     <div>
         <div class="c-facedat-tab">
             <el-radio-group v-model="active">
-                <el-radio-button class="u-filter" label="eye">{{ $t('眼部轮廓') }}</el-radio-button>
-                <el-radio-button class="u-filter" label="mouth">{{ $t('嘴部轮廓') }}</el-radio-button>
-                <el-radio-button class="u-filter" label="nose">{{ $t('鼻子轮廓') }}</el-radio-button>
-                <el-radio-button class="u-filter" label="face">{{ $t('脸部轮廓') }}</el-radio-button>
-                <el-radio-button class="u-filter" label="decals">{{ $t('贴花') }}</el-radio-button>
+                <el-radio-button class="u-filter" label="eye">眼部轮廓</el-radio-button>
+                <el-radio-button class="u-filter" label="mouth">嘴部轮廓</el-radio-button>
+                <el-radio-button class="u-filter" label="nose">鼻子轮廓</el-radio-button>
+                <el-radio-button class="u-filter" label="face">脸部轮廓</el-radio-button>
+                <el-radio-button class="u-filter" label="decals">贴花</el-radio-button>
             </el-radio-group>
             <slot></slot>
         </div>
@@ -123,13 +123,13 @@
                                 <span
                                     class="u-dflip"
                                     v-if="decalDb.getDecalIsFlip(key, cleandata['tDecal'][key]['nShowID'])"
-                                    >({{ $t('翻转') }})</span
+                                    >(翻转)</span
                                 >
-                                <span class="u-dcolor">({{ $t('颜色') }}:{{ cleandata["tDecal"][key]["nColorID"] }})</span>
+                                <span class="u-dcolor">(颜色:{{ cleandata["tDecal"][key]["nColorID"] }})</span>
                                 <span class="u-free">
                                     <template v-if="decalDb.getDecalIsFree(key, cleandata['tDecal'][key]['nShowID'])">
                                         <i class="el-icon-success"></i>
-                                        {{ $t('新建角色可用') }}</template
+                                        新建角色可用</template
                                     >
                                 </span>
                                 <span
@@ -138,7 +138,7 @@
                                 >
                                     <i class="el-icon-coin"></i>
                                     {{ decalDb.getDecalPrice(key, cleandata["tDecal"][key]["nShowID"]) }}
-                                    {{ $t('通宝') }}
+                                    通宝
                                 </span>
                             </li>
                         </ul>
@@ -147,7 +147,7 @@
                 <div class="c-facedat-group">
                     <ul class="u-decals">
                         <li>
-                            <div class="u-title">{{ $t('装饰物') }}</div>
+                            <div class="u-title">装饰物</div>
 
                             <span class="u-dname"
                                 ><img class="u-pic" :src="decalDb.getDecorationIcon(cleandata['nDecorationID'])" />{{
@@ -159,16 +159,16 @@
                             <span class="u-price" v-if="decalDb.showDecorationPrice(cleandata['nDecorationID'])">
                                 <i class="el-icon-coin"></i>
                                 {{ decalDb.showDecorationPrice(cleandata["nDecorationID"]) }}
-                                {{ $t('通宝') }}
+                                通宝
                             </span>
                         </li>
                     </ul>
                 </div>
                 <div class="c-facedat-group">
                     <ul class="u-decals">
-                        <div class="u-title">{{ $t('总计') }}</div>
+                        <div class="u-title">总计</div>
                         <span class="u-total u-price"
-                            ><i class="el-icon-coin"></i> <b>{{ decalDb.getTotalPrice(cleandata) }}</b> {{ $t(' 通宝') }}</span
+                            ><i class="el-icon-coin"></i> <b>{{ decalDb.getTotalPrice(cleandata) }}</b> 通宝</span
                         >
                     </ul>
                 </div>

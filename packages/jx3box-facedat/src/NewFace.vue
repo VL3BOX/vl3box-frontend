@@ -2,12 +2,12 @@
   <div>
     <div class="c-facedat-tab">
       <el-radio-group v-model="active">
-        <el-radio-button class="u-filter" label="contour">{{ $t('轮廓') }}</el-radio-button>
-        <el-radio-button class="u-filter" label="eyebrow">{{ $t('眉毛') }}</el-radio-button>
-        <el-radio-button class="u-filter" label="eye">{{ $t('眼部') }}</el-radio-button>
-        <el-radio-button class="u-filter" label="nose">{{ $t('鼻子') }}</el-radio-button>
-        <el-radio-button class="u-filter" label="mouth">{{ $t('嘴部') }}</el-radio-button>
-        <el-radio-button class="u-filter" label="decals">{{ $t('妆容') }}</el-radio-button>
+        <el-radio-button class="u-filter" label="contour">轮廓</el-radio-button>
+        <el-radio-button class="u-filter" label="eyebrow">眉毛</el-radio-button>
+        <el-radio-button class="u-filter" label="eye">眼部</el-radio-button>
+        <el-radio-button class="u-filter" label="nose">鼻子</el-radio-button>
+        <el-radio-button class="u-filter" label="mouth">嘴部</el-radio-button>
+        <el-radio-button class="u-filter" label="decals">妆容</el-radio-button>
       </el-radio-group>
       <slot></slot>
     </div>
@@ -416,10 +416,10 @@
         </el-tabs>
         <div class="c-facedat-group">
           <ul class="u-decals">
-            <span class="u-title">{{ $t('总计') }}</span>
+            <span class="u-title">总计</span>
             <span class="u-total u-price"
               ><i class="el-icon-coin"></i>
-              <b>{{ decalDb.getTotalPrice(facedata, true) }}</b> {{ $t(' 通宝') }}</span
+              <b>{{ decalDb.getTotalPrice(facedata, true) }}</b> 通宝</span
             >
           </ul>
         </div>
