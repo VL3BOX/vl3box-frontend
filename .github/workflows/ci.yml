@@ -28,7 +28,8 @@ jobs:
       # - uses: nrwl/nx-set-shas@v4
       # - run: npx nx affected -t build --exclude='@jx3box*' --verbose 
 
-      - run: STATIC_PATH=mirror npx nx run-many -t build -p account author bbs bps dashboard event fb index macro publish pvp pvx search tinymce tool topic wiki --skip-nx-cache --verbose
+      # - run: STATIC_PATH=mirror npx nx run-many -t build -p account author bbs bps dashboard event fb index macro publish pvp pvx search tinymce tool topic wiki --skip-nx-cache --verbose
+      - run: STATIC_PATH=mirror npx nx run-many -t build -p author bbs bps event fb index macro publish pvx search tinymce tool topic wiki --skip-nx-cache --verbose
 
       - run: ls && ls -alh dist
 
@@ -43,3 +44,6 @@ jobs:
             clean: true
             clean-exclude: |
                 **/*.map
+                **/fonts
+                **/tinymce
+                **/jx3box-editor/css
