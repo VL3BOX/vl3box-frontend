@@ -1,0 +1,5 @@
+# git config --global merge.ours.driver true
+apps/**/package.json merge=ours
+apps/**/.gitignore merge=ours
+packages/**/package.json merge=ours
+packages/**/.gitignore merge=ours
