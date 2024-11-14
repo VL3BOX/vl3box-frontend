@@ -9,7 +9,7 @@ packages:
   - "apps/index"
   - "apps/macro"
   - "apps/publish"
-  # - "apps/pvp"
+  - "apps/pvp"
   - "apps/pvx"
   - "apps/search"
   - "apps/tinymce"

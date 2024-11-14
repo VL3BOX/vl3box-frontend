@@ -28,9 +28,7 @@ jobs:
       # - uses: nrwl/nx-set-shas@v4
       # - run: npx nx affected -t build --exclude='@jx3box*' --verbose 
       - run: rm apps/**/public/index.html
-      # - run: STATIC_PATH=mirror npx nx run-many -t build -p account author bbs bps dashboard event fb index macro publish pvp pvx search tinymce tool topic wiki --skip-nx-cache --verbose
-      - run: STATIC_PATH=mirror npx nx run-many -t build -p account author bbs bps dashboard event fb index macro publish pvx search tinymce tool topic wiki
-
+      - run: STATIC_PATH=mirror npx nx run-many -t build -p account author bbs bps dashboard event fb index macro publish pvp pvx search tinymce tool topic wiki --skip-nx-cache --verbose --parallel 4
       - run: ls
 
       - name: Deploy 🚀
