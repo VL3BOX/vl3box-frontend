@@ -1,0 +1,34 @@
+{
+    "bodyMap": {
+        "1": {
+            "label": "成男",
+            "value": "m2"
+        },
+        "2": {
+            "label": "成女",
+            "value": "f2"
+        },
+        "5": {
+            "label": "正太",
+            "value": "m1"
+        },
+        "6": {
+            "label": "萝莉",
+            "value": "f1"
+        }
+    },
+    "bodyFiles": {
+        "LittleBoy": 5,
+        "LittleGirl": 6,
+        "StandardFemale": 2,
+        "StandardMale": 1
+    },
+    "majorMap": {
+        "1": "std",
+        "2": "origin"
+    },
+    "faceSubtype": {
+        "1": "写实",
+        "0": "写意"
+    }
+}
