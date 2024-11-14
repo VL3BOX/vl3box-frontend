@@ -5,7 +5,7 @@
         class="m-petmap-img"
         draggable="false"
         :src="petmap_url"
-        :alt="$t('宠物地图')"
+        alt="宠物地图"
         @click="showDesc = false"
       />
       <map-switch
