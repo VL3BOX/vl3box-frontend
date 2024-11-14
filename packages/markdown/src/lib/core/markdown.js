@@ -9,54 +9,48 @@
  * @Copyright: 2017
  */
 
-import MarkdownIt from 'markdown-it';
-import emoji from 'markdown-it-emoji';
-import sub from 'markdown-it-sub';
-import sup from 'markdown-it-sup';
-import deflist from 'markdown-it-deflist';
-import abbr from 'markdown-it-abbr';
-import footnote from 'markdown-it-footnote';
-import insert from 'markdown-it-ins';
-import mark from 'markdown-it-mark';
-import taskLists from 'markdown-it-task-lists';
-import container from 'markdown-it-container';
+import hljsLangs from './hljs/lang.hljs.js'
 
-import hljsLangs from "../core/hljs/lang.hljs.js"; // Assuming hljsLangs is an imported module
-
-import katex from 'markdown-it-katex-external';
-import miip from 'markdown-it-images-preview';
-
-const markdown_config = {
+/**
+ * Created by zhy on 2017/3/30.
+ */
+// default mode
+var markdown_config = {
     html: true,        // Enable HTML tags in source
-    xhtmlOut: true,    // Use '/' to close single tags (<br />).
-    breaks: true,      // Convert '\n' in paragraphs into <br>
-    langPrefix: 'language-',  // CSS language prefix for fenced blocks
-    linkify: false,    // Auto-link URLs
+    xhtmlOut: true,        // Use '/' to close single tags (<br />).
+    breaks: true,        // Convert '\n' in paragraphs into <br>
+    langPrefix: 'language-',  // CSS language prefix for fenced blocks. Can be
+    linkify: false,        // 自动识别url
     typographer: true,
     quotes: '“”‘’',
     highlight: function (str, lang) {
         if (lang && hljsLangs[lang]) {
-            return '<pre><div class="hljs"><code class="' + lang + '">' + MarkdownIt.utils.escapeHtml(str) + '</code></div></pre>';
+            return '<pre><div class="hljs"><code class="' + lang + '">' + markdown.utils.escapeHtml(str) + '</code></div></pre>';
         }
-        return '<pre><code class="' + lang + '">' + MarkdownIt.utils.escapeHtml(str) + '</code></pre>';
+        return '<pre><code class="' + lang + '">' + markdown.utils.escapeHtml(str) + '</code></pre>';
     }
-};
-// Initialize MarkdownIt with the configuration
-const markdown = new MarkdownIt(markdown_config);
-
-// Use plugins
-markdown
-    .use(emoji)
-    .use(sub)
-    .use(sup)
-    .use(deflist)
-    .use(abbr)
-    .use(footnote)
-    .use(insert)
-    .use(mark)
-    .use(taskLists)
-    .use(container);
-
+}
+var markdown = require('markdown-it')(markdown_config);
+// 表情
+var emoji = require('markdown-it-emoji');
+// 下标
+var sub = require('markdown-it-sub')
+// 上标
+var sup = require('markdown-it-sup')
+// <dl/>
+var deflist = require('markdown-it-deflist')
+// <abbr/>
+var abbr = require('markdown-it-abbr')
+// footnote
+var footnote = require('markdown-it-footnote')
+// insert 带有下划线 样式 ++ ++
+var insert = require('markdown-it-ins')
+// mark
+var mark = require('markdown-it-mark')
+// taskLists
+var taskLists = require('markdown-it-task-lists')
+//
+var container = require('markdown-it-container')
 // add target="_blank" to all link
 var defaultRender = markdown.renderer.rules.link_open || function(tokens, idx, options, env, self) {
     return self.renderToken(tokens, idx, options);
@@ -75,7 +69,8 @@ markdown.renderer.rules.link_open = function (tokens, idx, options, env, self) {
     return defaultRender(tokens, idx, options, env, self);
 };
 // math katex
-
+var katex = require('markdown-it-katex-external');
+var miip = require('markdown-it-images-preview');
 markdown.use(emoji)
     .use(taskLists)
     .use(sup)
