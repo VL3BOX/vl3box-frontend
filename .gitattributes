@@ -1,5 +1,7 @@
 # git config --global merge.ours.driver true
 apps/**/package.json merge=ours
 apps/**/.gitignore merge=ours
+apps/**/babel.config.js merge=ours
 packages/**/package.json merge=ours
 packages/**/.gitignore merge=ours
+packages/**/babel.config.js merge=ours
