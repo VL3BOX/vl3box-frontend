@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - vl3box
+      - vl3box-preview
   pull_request:
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-            branch: gh-pages
+            branch: vl3box-preview
             repository-name: vl3box/vl3box
             folder: dist
             target-folder: static # static/${{ github.event.repository.name }}
