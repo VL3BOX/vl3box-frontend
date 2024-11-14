@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import * as jquery from "jquery";
+import jquery from "jquery";
 import User from "@jx3box/jx3box-common/js/user";
 export default {
     name: "Print",
