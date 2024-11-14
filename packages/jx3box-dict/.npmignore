@@ -4,5 +4,3 @@ docs
 .gitignore
 .npmignore
 test
-raw
-package-lock.json
