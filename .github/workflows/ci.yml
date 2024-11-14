@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - vl3box
+  pull_request:
+
+jobs:
+  main:
+    runs-on: [ubuntu-latest,ubuntu-22.04]
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      # - uses: nrwl/nx-set-shas@v4
+      # - run: npx nx affected -t build --exclude='@jx3box*' --verbose 
+
+      - run: STATIC_PATH=mirror npx nx run-many -t build -p account author bbs bps dashboard event fb index macro publish pvp pvx search tinymce tool topic wiki --skip-nx-cache --verbose
+
+      - run: ls && ls -alh dist
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+            branch: gh-pages
+            repository-name: vl3box/vl3box
+            folder: dist
+            target-folder: static # static/${{ github.event.repository.name }}
+            token: ${{ secrets.GH_REPO_TOKEN }}
+            clean: true
+            clean-exclude: |
+                **/*.map

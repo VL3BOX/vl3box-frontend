@@ -1,0 +1,130 @@
+# [submodule "packages/zh_CN/jx3box-talent"]
+# 	path = packages/zh_CN/jx3box-talent
+# 	url = https://github.com/jx3box/jx3box-talent
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-bmap"]
+# 	path = packages/zh_CN/jx3box-bmap
+# 	url = https://github.com/jx3box/jx3box-bmap
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-comment-ui"]
+# 	path = packages/zh_CN/jx3box-comment-ui
+# 	url = https://github.com/jx3box/jx3box-comment-ui
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-common"]
+# 	path = packages/zh_CN/jx3box-common
+# 	url = https://github.com/jx3box/jx3box-common
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-common-ui"]
+# 	path = packages/zh_CN/jx3box-common-ui
+# 	url = https://github.com/jx3box/jx3box-common-ui
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-data"]
+# 	path = packages/zh_CN/jx3box-data
+# 	url = https://github.com/jx3box/jx3box-data
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-dict"]
+# 	path = packages/zh_CN/jx3box-dict
+# 	url = https://github.com/jx3box/jx3box-dict
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-editor"]
+# 	path = packages/zh_CN/jx3box-editor
+# 	url = https://github.com/jx3box/jx3box-editor
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-emotion"]
+# 	path = packages/zh_CN/jx3box-emotion
+# 	url = https://github.com/jx3box/jx3box-emotion
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-facedat"]
+# 	path = packages/zh_CN/jx3box-facedat
+# 	url = https://github.com/jx3box/jx3box-facedat
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-macro"]
+# 	path = packages/zh_CN/jx3box-macro
+# 	url = https://github.com/jx3box/jx3box-macro
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-map"]
+# 	path = packages/zh_CN/jx3box-map
+# 	url = https://github.com/jx3box/jx3box-map
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-talent2"]
+# 	path = packages/zh_CN/jx3box-talent2
+# 	url = https://github.com/jx3box/jx3box-talent2
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-vue3-ui"]
+# 	path = packages/zh_CN/jx3box-vue3-ui
+# 	url = https://github.com/jx3box/jx3box-vue3-ui
+# 	branch = master
+# [submodule "apps/zh_CN/account"]
+# 	path = apps/zh_CN/account
+# 	url = https://github.com/jx3box/account
+# 	branch = master
+# [submodule "apps/zh_CN/author"]
+# 	path = apps/zh_CN/author
+# 	url = https://github.com/jx3box/author
+# 	branch = master
+# [submodule "apps/zh_CN/bbs"]
+# 	path = apps/zh_CN/bbs
+# 	url = https://github.com/jx3box/bbs
+# 	branch = master
+# [submodule "apps/zh_CN/bps"]
+# 	path = apps/zh_CN/bps
+# 	url = https://github.com/jx3box/bps
+# 	branch = master
+# [submodule "apps/zh_CN/dashboard"]
+# 	path = apps/zh_CN/dashboard
+# 	url = https://github.com/jx3box/dashboard
+# 	branch = master
+# [submodule "apps/zh_CN/fb"]
+# 	path = apps/zh_CN/fb
+# 	url = https://github.com/jx3box/fb
+# 	branch = master
+# [submodule "apps/zh_CN/macro"]
+# 	path = apps/zh_CN/macro
+# 	url = https://github.com/jx3box/macro
+# 	branch = master
+# [submodule "apps/zh_CN/publish"]
+# 	path = apps/zh_CN/publish
+# 	url = https://github.com/jx3box/publish
+# 	branch = master
+# [submodule "apps/zh_CN/pvp"]
+# 	path = apps/zh_CN/pvp
+# 	url = https://github.com/jx3box/pvp
+# 	branch = master
+# [submodule "apps/zh_CN/pvx"]
+# 	path = apps/zh_CN/pvx
+# 	url = https://github.com/jx3box/pvx
+# 	branch = master
+# [submodule "apps/zh_CN/search"]
+# 	path = apps/zh_CN/search
+# 	url = https://github.com/jx3box/search
+# 	branch = master
+# [submodule "apps/zh_CN/tinymce"]
+# 	path = apps/zh_CN/tinymce
+# 	url = https://github.com/jx3box/tinymce
+# 	branch = master
+# [submodule "apps/zh_CN/tool"]
+# 	path = apps/zh_CN/tool
+# 	url = https://github.com/jx3box/tool
+# 	branch = master
+# [submodule "apps/zh_CN/wiki"]
+# 	path = apps/zh_CN/wiki
+# 	url = https://github.com/jx3box/wiki
+# 	branch = master
+# [submodule "apps/zh_CN/event"]
+# 	path = apps/zh_CN/event
+# 	url = https://github.com/jx3box/event
+# 	branch = master
+# [submodule "apps/zh_CN/topic"]
+# 	path = apps/zh_CN/topic
+# 	url = https://github.com/jx3box/topic
+# 	branch = master
+# [submodule "packages/zh_CN/jx3box-petmap"]
+# 	path = packages/zh_CN/jx3box-petmap
+# 	url = https://github.com/jx3box/jx3box-petmap
+# 	branch = main
+# [submodule "apps/zh_CN/index"]
+# 	path = apps/zh_CN/index
+# 	url = https://github.com/jx3box/index
+# 	branch = master
+# 	fetchRecurseSubmodules = false
+# 	update = none

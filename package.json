@@ -1,0 +1,33 @@
+{
+  "name": "@vl3box/frontend",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "import": "nx import https://github.com/jx3box/$LIB_REPO packages/vi_VN/$LIB_REPO --ref master --depth 1 ",
+    "build": "nx run-many -t build --skip-nx-cache -p index account"
+  },
+  "private": true,
+  "devDependencies": {
+    "@nx/eslint-plugin": "20.1.0",
+    "@nx/js": "20.1.0",
+    "@swc-node/register": "^1.10.9",
+    "@swc/core": "^1.5.29",
+    "@swc/helpers": "^0.5.15",
+    "@vitejs/plugin-vue": "5.1.5",
+    "csslab": "^4.0.4",
+    "nx": "20.1.0",
+    "prettier": "^2.6.2",
+    "tslib": "^2.3.0",
+    "typescript": "^5.5.2",
+    "vite": "^5.4.11",
+    "vite-plugin-static-copy": "^2.1.0",
+    "vite-plugin-vue2": "^2.0.3",
+    "vite-require": "^0.2.3",
+    "vue-template-compiler": "^2.7.16"
+  },
+  "dependencies": {
+    "vue": "^2.7.16"
+  },
+  "resolutions": {
+  }
+}

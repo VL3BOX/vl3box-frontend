@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "dist",
+			"path": "../dist"
+		},
+		{
+			"name": "tool",
+			"path": "../apps/vi_VN/tool"
+		},
+		{
+			"name": "editor",
+			"path": "../packages/vi_VN/jx3box-editor"
+		},
+		{
+			"name": "markdown",
+			"path": "../packages/vi_VN/reporter"
+		}
+	],
+	"settings": {}
+}
