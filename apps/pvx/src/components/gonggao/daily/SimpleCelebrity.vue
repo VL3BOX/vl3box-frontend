@@ -26,7 +26,7 @@
 import { getCelebrities } from "@/service/gonggao";
 import dayjs from "@/plugins/day";
 import { sortBy } from "@/utils/index";
-const JX3BOX = require("@jx3box/jx3box-common/data/jx3box.json");
+import JX3BOX from "@jx3box/jx3box-common/data/jx3box.json";
 export default {
     name: "SimpleCelebrity",
     props: {

@@ -46,7 +46,7 @@
 import { getCelebrities } from "@/service/cms";
 import dayjs from "@/utils/day";
 import { sortBy } from "@/utils/index";
-const JX3BOX = require("@jx3box/jx3box-common/data/jx3box.json");
+import JX3BOX from "@jx3box/jx3box-common/data/jx3box.json"
 export default {
     name: "celebrity",
     data: function () {
