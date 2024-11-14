@@ -32,6 +32,7 @@
             <div class="m-qr-content">
                 <img class="u-login-qrcode" src="@/assets/img/connect/loginqrcode.jpg" alt="">
                 <i class="u-tip">打开微信扫一扫，绑定小程序</i>
+                <small class="u-tip-small">绑定之后需要重新登陆方可生效</small>
             </div>
 
             <template #footer>

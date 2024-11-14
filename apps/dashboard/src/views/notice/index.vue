@@ -29,7 +29,7 @@ export default {
             list: [
                 { key: "email", name: "邮箱", component: email },
                 { key: "wechat", name: "微信", component: wechat },
-                { key: "phone", name: "手机", component: phone },
+                // { key: "phone", name: "手机", component: phone },
             ],
         };
     },

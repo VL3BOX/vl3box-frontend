@@ -18,8 +18,8 @@ module.exports = {
                 },
             },
             // NEXT2服务
-            "/api/miscfeedback": {
-                target: "https://next2.jx3box.com",
+            "/api/next2/miscfeedback": {
+                target: "https://dev.next2.jx3box.com",
                 onProxyReq: function (request) {
                     request.setHeader("origin", "");
                 },
@@ -53,7 +53,7 @@ module.exports = {
                 target: "https://next2.jx3box.com",
                 onProxyReq: function (request) {
                     request.setHeader("origin", "");
-                }
+                },
             },
             "/api/comment": {
                 target: "https://next2.jx3box.com",
@@ -68,10 +68,10 @@ module.exports = {
                 },
             },
             "/api/team": {
-                "target": "https://team.jx3box.com",
+                target: "https://team.jx3box.com",
                 onProxyReq: function (request) {
                     request.setHeader("origin", "");
-                }
+                },
             },
             // 商城
             "/api/mall": {
@@ -91,7 +91,7 @@ module.exports = {
         disableHostCheck: true,
     },
 
-    outputDir: process.env["BUILD_MODE"] == "preview" ? path.resolve(__dirname, pkg.name) : 'dist',
+    outputDir: process.env["BUILD_MODE"] == "preview" ? path.resolve(__dirname, pkg.name) : "dist",
 
     //❤️ Multiple pages ~
     pages: {
@@ -146,7 +146,7 @@ module.exports = {
             .rule("images")
             .use("url-loader")
             .loader("url-loader")
-            .tap((options) => Object.assign(options, { limit: 10240, esModule: false}));
+            .tap((options) => Object.assign(options, { limit: 10240, esModule: false }));
 
         //💝 in-line svg imgs ~
         config.module.rule("vue").use("vue-svg-inline-loader").loader("vue-svg-inline-loader");

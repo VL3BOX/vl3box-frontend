@@ -5,8 +5,8 @@ import { $pay, $next, $cms } from "@jx3box/jx3box-common/js/https";
  */
 function leave(password) {
     return $pay().post(`/api/im-sure-leave-jx3box`, {
-        password
-    })
+        password,
+    });
 }
 
 /**
@@ -14,7 +14,7 @@ function leave(password) {
  * @param {*} data
  */
 function feedback(data) {
-    return $next().post(`/api/miscfeedback`, data)
+    return $next().post(`/api/next2/miscfeedback`, data);
 }
 
 /**
@@ -22,9 +22,9 @@ function feedback(data) {
  * @param {*} params 参数
  */
 function getMiscfeedback(params) {
-    return $next().get(`/api/miscfeedback`, {
-        params
-    })
+    return $next().get(`/api/next2/miscfeedback/manager/list`, {
+        params,
+    });
 }
 
 /**
@@ -34,9 +34,9 @@ function getMiscfeedback(params) {
  * @param {*} params.pageSize 分页参数
  */
 function getFeedbackList(params) {
-    return $next().get(`/api/miscfeedback/my/list`, {
-        params
-    })
+    return $next().get(`/api/next2/miscfeedback/my/list`, {
+        params,
+    });
 }
 
 /**
@@ -44,7 +44,11 @@ function getFeedbackList(params) {
  * @param {*} id 反馈id
  */
 function getFeedback(id) {
-    return $next().get(`/api/miscfeedback/${id}`)
+    return $next().get(`/api/next2/miscfeedback/item/${id}`);
+}
+
+function getFeedbackLog(id) {
+    return $next().get(`/api/next2/miscfeedback/item/${id}/history`);
 }
 
 /**
@@ -53,22 +57,44 @@ function getFeedback(id) {
  * @param {*} data 更新数据
  */
 function updateFeedback(id, data) {
-    return $next().patch(`/api/miscfeedback/${id}`, data)
+    return $next().put(`/api/next2/miscfeedback/manager/item/${id}/edit`, data);
 }
 /**
  * 获取反馈assign名单
  */
 function getTeammates() {
-    return $cms().get(`/api/cms/account/teammate`).then((res) => {
-        return res.data.data
-    })
+    return $cms()
+        .get(`/api/cms/account/teammate`)
+        .then((res) => {
+            return res.data.data;
+        });
 }
+
+// 指派
+function assignMiscFeedback(id, data) {
+    return $next().put(`/api/next2/miscfeedback/manager/item/${id}/dispatch`, data);
+}
+
+// 切换工单状态
+function switchMiscFeedback(id, data) {
+    return $next().put(`/api/next2/miscfeedback/manager/item/${id}/status`, data);
+}
+
+// 转交工单
+function transferMiscFeedback(id, data) {
+    return $next().put(`/api/next2/miscfeedback/manager/item/${id}/transfer`, data);
+}
+
 export {
     leave,
     feedback,
     getFeedbackList,
     getFeedback,
     getMiscfeedback,
+    getFeedbackLog,
     updateFeedback,
-    getTeammates
-}
+    getTeammates,
+    assignMiscFeedback,
+    switchMiscFeedback,
+    transferMiscFeedback,
+};

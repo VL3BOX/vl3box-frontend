@@ -32,6 +32,7 @@
                     </div>
                 </el-image>
                 <i class="u-tip">打开微信扫一扫，关注公众号接收通知告警</i>
+                <small class="u-tip-small">关注之后需要重新登陆方可生效</small>
                 <div class="u-bind" v-show="success">
                     <i class="el-icon-success" style="color: #67c23a; margin-right: 5px"> </i>
                     <span class="u-bind-text">绑定成功</span>
@@ -155,6 +156,7 @@ export default {
     justify-content: center;
     align-items: center;
     gap: 10px;
+
 }
 .m-notice-wechat__dialog {
     .m-wechat-content {
@@ -175,6 +177,12 @@ export default {
         .u-error {
             .fz(120px);
         }
+    }
+
+    .u-tip-small {
+        font-size: 13px;
+        color: #F56C6C;
+        font-weight: 600;
     }
 }
 @media screen and (max-width: @phone) {

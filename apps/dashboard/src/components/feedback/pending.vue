@@ -147,6 +147,12 @@ import { concat, isEqual } from "lodash";
 import { __clients } from "@jx3box/jx3box-common/data/jx3box.json";
 export default {
     name: "pendingList",
+    props: {
+        status: {
+            type: Number,
+            default: 1,
+        },
+    },
     data() {
         return {
             data: [],
@@ -156,7 +162,7 @@ export default {
             total: 0,
             filterOptions,
             filters: {
-                status: 1,
+                status: this.status,
                 client: "",
             },
 

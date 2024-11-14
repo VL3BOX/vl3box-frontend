@@ -152,6 +152,7 @@ import { getOrderId } from "@/service/goods";
 import { orderStatus, payStatus } from "../assets/data/mall.json";
 import uc from "@/components/uc";
 import { mallTab } from "@/assets/data/tabs.json";
+import { append } from "domutils/lib/manipulation";
 export default {
     name: "orderDetail",
     components: { uc },

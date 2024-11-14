@@ -17,6 +17,9 @@
                 <el-tab-pane v-if="isTeammate" label="待处理" name="pending" lazy>
                     <pending v-if="active === 'pending'"></pending>
                 </el-tab-pane>
+                <el-tab-pane v-if="isTeammate" label="处理中" name="doing" lazy>
+                    <pending v-if="active === 'doing'" :status="2"></pending>
+                </el-tab-pane>
             </el-tabs>
         </section>
         <aside class="m-feedback-aside">
@@ -83,7 +86,7 @@ export default {
             getMenu("feedback_faq").then((res) => {
                 this.faq = res;
             });
-        }
+        },
     },
 };
 </script>
