@@ -22,7 +22,7 @@
                             >
                                 <a :href="item.path" :target="item.target || '_self'">
                                     <div class="u-nav-icon">
-                                        <!-- <img
+                                        <img
                                             svg-inline
                                             :src="require(`../assets/img/nav/${item.key}.svg`)"
                                             class="u-icon"
@@ -31,7 +31,7 @@
                                             svg-inline
                                             :src="require(`../assets/img/nav/${item.key}2.svg`)"
                                             class="u-icon-hover"
-                                        /> -->
+                                        />
                                     </div>
 
                                     <span class="u-nav-label">{{ item.label }}</span>
