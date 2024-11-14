@@ -1,5 +1,5 @@
 packages:
-  # - "apps/account"
+  - "apps/account"
   - "apps/author"
   - "apps/bbs"
   - "apps/bps"

@@ -61,6 +61,94 @@ importers:
         specifier: ^2.7.16
         version: 2.7.16
 
+  apps/account:
+    dependencies:
+      '@jx3box/jx3box-common':
+        specifier: workspace:*
+        version: link:../../packages/jx3box-common
+      '@jx3box/jx3box-common-ui':
+        specifier: workspace:*
+        version: link:../../packages/jx3box-common-ui
+      axios:
+        specifier: ^0.19.2
+        version: 0.19.2
+      core-js:
+        specifier: ^3.4.3
+        version: 3.39.0
+      csslab:
+        specifier: ^4.0.3
+        version: 4.0.4
+      element-ui:
+        specifier: ^2.13.0
+        version: 2.15.14(vue@2.7.16)
+      lodash:
+        specifier: ^4.17.15
+        version: 4.17.21
+      moment:
+        specifier: ^2.24.0
+        version: 2.30.1
+      register-service-worker:
+        specifier: ^1.6.2
+        version: 1.7.2
+      sterilizer:
+        specifier: 0.0.3
+        version: 0.0.3
+      urijs:
+        specifier: ^1.19.2
+        version: 1.19.11
+      uuid:
+        specifier: ^7.0.3
+        version: 7.0.3
+      vue-router:
+        specifier: ^3.1.3
+        version: 3.6.5(vue@2.7.16)
+      vuex:
+        specifier: ^3.1.2
+        version: 3.6.2(vue@2.7.16)
+    devDependencies:
+      '@babel/plugin-proposal-optional-chaining':
+        specifier: ^7.21.0
+        version: 7.21.0(@babel/core@7.26.0)
+      babel-eslint:
+        specifier: ^10.0.3
+        version: 10.1.0(eslint@5.16.0)
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
+      eslint:
+        specifier: ^5.16.0
+        version: 5.16.0
+      eslint-plugin-vue:
+        specifier: ^5.0.0
+        version: 5.2.3(eslint@5.16.0)
+      glob:
+        specifier: ^7.1.6
+        version: 7.2.3
+      less:
+        specifier: ^3.0.4
+        version: 3.13.1
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.11(@types/node@18.19.64)(less@3.13.1)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0)
+      vite-plugin-eslint:
+        specifier: ^1.8.1
+        version: 1.8.1(eslint@5.16.0)(vite@5.4.11(@types/node@18.19.64)(less@3.13.1)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))
+      vite-plugin-html:
+        specifier: ^3.2.2
+        version: 3.2.2(vite@5.4.11(@types/node@18.19.64)(less@3.13.1)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))
+      vite-plugin-static-copy:
+        specifier: ^2.1.0
+        version: 2.1.0(vite@5.4.11(@types/node@18.19.64)(less@3.13.1)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))
+      vite-plugin-vue2:
+        specifier: ^2.0.3
+        version: 2.0.3(babel-core@6.26.3)(ejs@3.1.10)(handlebars@4.7.8)(lodash@4.17.21)(underscore@1.13.7)(vite@5.4.11(@types/node@18.19.64)(less@3.13.1)(sass@1.80.7)(stylus@0.54.8)(sugarss@0.2.0)(terser@5.36.0))(vue-template-compiler@2.7.16)(vue@2.7.16)
+      vite-svg-loader:
+        specifier: ^5.1.0
+        version: 5.1.0(vue@2.7.16)
+      vue:
+        specifier: ^2.6.14
+        version: 2.7.16
+
   apps/author:
     dependencies:
       '@jx3box/jx3box-common':
@@ -11219,6 +11307,9 @@ packages:
     resolution: {integrity: sha512-ZnWpYnYugiOVEY5GkcuJK1io5V8QmNYChG62gSit9pQVGErXtrKuPC55ITaVSukmMta5qpMU7vqLt2Lnni4f/g==}
     engines: {node: '>=0.10.0'}
 
+  sterilizer@0.0.3:
+    resolution: {integrity: sha512-50Q+XgrHFJmOkY5Fpae6l8UGIANVwLCet8+fX5waBS5b7oTWftATgdSkpRonHxfqm+Obd32WZRiqBEGSOmd9ow==}
+
   sterilizer@0.1.1:
     resolution: {integrity: sha512-pckisxYm6pylFMpaC33FyjWUZiWCH7vE22edoC6Iz/TjHSDWa4Db9TnCk6otMxkjoUluHYFjgXeuUOX5bTUbhg==}
 
@@ -11908,6 +11999,10 @@ packages:
   uuid@3.4.0:
     resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}
     deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+    hasBin: true
+
+  uuid@7.0.3:
+    resolution: {integrity: sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==}
     hasBin: true
 
   uuid@8.3.2:
@@ -24043,6 +24138,8 @@ snapshots:
 
   stealthy-require@1.1.1: {}
 
+  sterilizer@0.0.3: {}
+
   sterilizer@0.1.1: {}
 
   stream-browserify@2.0.2:
@@ -24797,6 +24894,8 @@ snapshots:
       base64-arraybuffer: 1.0.2
 
   uuid@3.4.0: {}
+
+  uuid@7.0.3: {}
 
   uuid@8.3.2: {}
 

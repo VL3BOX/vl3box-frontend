@@ -15,7 +15,7 @@ function getCookie(key) {
     return "";
 }
 
-module.exports = {
+export default {
     get: getCookie,
     set: setCookie,
     del: delCookie,
