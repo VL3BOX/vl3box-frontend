@@ -82,6 +82,12 @@ module.exports = {
                     request.setHeader("origin", "");
                 },
             },
+            "/api/team/battle": {
+                target: "https://team.jx3box.com",
+                onProxyReq: function (request) {
+                    request.setHeader("origin", "");
+                },
+            },
             "/api/team": {
                 target: "https://team.api.jx3box.com",
                 onProxyReq: function (request) {
@@ -107,13 +113,13 @@ module.exports = {
         disableHostCheck: true,
     },
 
-    outputDir: process.env["BUILD_MODE"] == "preview" ? path.resolve(__dirname, pkg.name) : 'dist', // 指定构建输出的目录
+    outputDir: process.env["BUILD_MODE"] == "preview" ? path.resolve(__dirname, pkg.name) : "dist", // 指定构建输出的目录
 
     //❤️ define path for static files ~
     publicPath:
         //FOR Localhost => development
         (process.env.NODE_ENV === "development" && "/") ||
-        process.env.BUILD_MODE == "preview" && `/${pkg.name}/` ||
+        (process.env.BUILD_MODE == "preview" && `/${pkg.name}/`) ||
         //BY relative path
         (process.env.BUILD_MODE === "preview" && `/${pkg.name}/`) ||
         //BY origin
@@ -172,7 +178,7 @@ module.exports = {
             .rule("images")
             .use("url-loader")
             .loader("url-loader")
-            .tap((options) => Object.assign(options, { limit: 10240, esModule: false}));
+            .tap((options) => Object.assign(options, { limit: 10240, esModule: false }));
 
         //💝 in-line svg imgs ~
         config.module.rule("vue").use("vue-svg-inline-loader").loader("vue-svg-inline-loader");
