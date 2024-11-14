@@ -40,7 +40,7 @@ const publicPath = () => {
 };
 
 const root = resolve(__dirname, "src");
-const outDir = resolve(__dirname, `../../../dist/${pkg.name}`);
+const outDir = resolve(__dirname, `../../dist/${pkg.name}`);
 // const outDir = resolve(__dirname, `dist`);
 export default defineConfig({
     base: publicPath(),

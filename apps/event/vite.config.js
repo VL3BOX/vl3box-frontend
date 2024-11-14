@@ -100,7 +100,7 @@ console.log(input)
 }
 
 const root = resolve(__dirname, 'src');
-const outDir = resolve(__dirname, `../../../dist/${pkg.name}`);
+const outDir = resolve(__dirname, `../../dist/${pkg.name}`);
 export default defineConfig({
   base: publicPath(),
   root: root,
