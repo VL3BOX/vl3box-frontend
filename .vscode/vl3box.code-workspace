@@ -8,8 +8,8 @@
 			"path": "../dist"
 		},
 		{
-			"name": "tool",
-			"path": "../apps/tool"
+			"name": "pvx",
+			"path": "../apps/pvx"
 		},
 		{
 			"name": "editor",

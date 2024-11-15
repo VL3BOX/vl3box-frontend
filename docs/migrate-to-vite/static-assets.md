@@ -66,3 +66,8 @@ const imageUrl = new URL('./logo.png', import.meta.url).href
 ```
 
 Note that it doesn't work with SSR
+
+
+### References:
+
+[https://github.com/originjs/webpack-to-vite](https://github.com/originjs/webpack-to-vite)

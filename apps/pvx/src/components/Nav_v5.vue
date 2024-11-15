@@ -24,12 +24,12 @@
                                     <div class="u-nav-icon">
                                         <img
                                             svg-inline
-                                            :src="new URL(`../assets/img/nav/${item.key}.svg`, import.meta.url).href"
+                                            :src="getImg(`${item.key}`)"
                                             class="u-icon"
                                         />
                                         <img
                                             svg-inline
-                                            :src="new URL(`../assets/img/nav/${item.key}2.svg`, import.meta.url).href"
+                                            :src="getImg(`${item.key}2`)"
                                             class="u-icon-hover"
                                         />
                                     </div>
@@ -52,6 +52,8 @@
 </template>
 
 <script>
+import { computed } from 'vue'
+
 import { compact } from "lodash";
 import menus from "@/assets/data/menus.json";
 export default {
@@ -135,6 +137,9 @@ export default {
         },
     },
     methods: {
+        getImg(name) {
+             return new URL(`../assets/img/nav/${name}.svg`, import.meta.url).href;
+        },
         toLeft() {
             this.navStatus = false;
         },
