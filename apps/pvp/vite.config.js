@@ -210,7 +210,6 @@ export default defineConfig({
         alias: {
             "@/": joinPath("src/"),
             "~@": path.resolve(__dirname, "src"),
-            // "@jx3box/jx3box-common": path.resolve(__dirname, "node_modules/@jx3box/jx3box-common"),
         },
         extensions: [".vue", ".mjs", ".js", ".mts", ".ts", ".jsx", ".tsx", ".json"],
     },
@@ -218,12 +217,11 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                additionalData: `@import "${path.resolve(__dirname, '@jx3box/jx3box-common/css/element-plus-override.scss')}";`,
               },
           less: {
             additionalData: `
+                    @import "${path.resolve(__dirname, "./node_modules/@jx3box/jx3box-common/css/common.less")}";
                     @import "${path.resolve(__dirname, "./node_modules/csslab/base.less")}";
-                    @import "${path.resolve(__dirname, "./node_modules/@jx3box/jx3box-common/css/var.less")}";
                     @import "${path.resolve(__dirname, "./src/assets/css/var.less")}";
             `,
           },
@@ -232,7 +230,3 @@ export default defineConfig({
       },
 });
 
-// @import "${path.resolve(
-//   __dirname,
-//   './node_modules/@jx3box/jx3box-common/css/preset.css'
-// )}";
