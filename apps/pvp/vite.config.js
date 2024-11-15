@@ -46,7 +46,11 @@ export default defineConfig({
     base: publicPath(),
     root: root,
     publicDir: "public",
-    build: {
+      build: {
+        cssCodeSplit: true,
+        commonjsOptions: {
+            transformMixedEsModules: true,
+          },
         sourcemap: false, // TODO: Conflict `svg-url-replace`
         cssMinify: false, // TODO: [WARNING] Expected identifier but found "*" [css-syntax-error]
         outDir: outDir,
@@ -115,6 +119,16 @@ export default defineConfig({
             // instead respects the resolved id of the file when generating the HTML asset in the dist folder.
             // This ensures a consistent structure with the way the dev server works.
             name: "change-html-path",
+            configureServer(server) {
+                // Handle HTML file serving in development
+                server.middlewares.use((req, res, next) => {
+                    if (req.url === '/') {
+                        req.url = '/templates/index.html';
+                    }
+                    next();
+                });
+            },
+            // Keep the post-build HTML path handling
             enforce: "post",
             generateBundle(_, bundle) {
                 const htmlFileInSrcFolderPattern = /^templates\/.*\.html$/;
