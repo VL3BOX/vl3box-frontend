@@ -25,8 +25,8 @@
                 >
                     <a :href="item.path" :target="item.target || '_self'">
                         <div class="u-nav-icon">
-                            <img svg-inline :src="require(`../assets/img/nav/${item.key}.svg`)" class="u-icon" />
-                            <img svg-inline :src="require(`../assets/img/nav/${item.key}2.svg`)" class="u-icon-hover" />
+                            <img svg-inline :src="new URL(`../assets/img/nav/${item.key}.svg`, import.meta.url).href" class="u-icon" />
+                            <img svg-inline :src="new URL(`../assets/img/nav/${item.key}2.svg`, import.meta.url).href" class="u-icon-hover" />
                         </div>
 
                         <span>{{ item.label }}</span>

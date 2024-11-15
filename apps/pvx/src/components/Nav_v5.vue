@@ -24,12 +24,12 @@
                                     <div class="u-nav-icon">
                                         <img
                                             svg-inline
-                                            :src="require(`../assets/img/nav/${item.key}.svg`)"
+                                            :src="new URL(`../assets/img/nav/${item.key}.svg`, import.meta.url).href"
                                             class="u-icon"
                                         />
                                         <img
                                             svg-inline
-                                            :src="require(`../assets/img/nav/${item.key}2.svg`)"
+                                            :src="new URL(`../assets/img/nav/${item.key}2.svg`, import.meta.url).href"
                                             class="u-icon-hover"
                                         />
                                     </div>
