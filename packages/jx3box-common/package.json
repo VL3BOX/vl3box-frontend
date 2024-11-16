@@ -8,7 +8,7 @@
         "url": "git+https://github.com/JX3BOX/jx3box-common.git"
     },
     "dependencies": {
-        "@jx3box/reporter": "0.0.5",
+        "@jx3box/reporter": "npm:@vl3box/reporter@0.1.5",
         "axios": "^1.6.8",
         "cheerio": "1.0.0-rc.12",
         "dayjs": "^1.11.10",

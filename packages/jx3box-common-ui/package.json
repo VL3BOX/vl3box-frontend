@@ -24,7 +24,7 @@
         "@jx3box/jx3box-common": "workspace:*",
         "@jx3box/jx3box-data": "workspace:*",
         "@jx3box/jx3box-editor": "workspace:*",
-        "@jx3box/reporter": "0.0.4",
+        "@jx3box/reporter": "npm:@vl3box/reporter@0.1.4",
         "axios": "^0.26.1",
         "dayjs": "^1.11.0",
         "element-ui": "^2.13.2",

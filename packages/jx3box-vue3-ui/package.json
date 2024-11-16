@@ -30,7 +30,7 @@
         "@jx3box/jx3box-emotion": "workspace:*",
         "@jx3box/jx3box-macro": "workspace:*",
         "@jx3box/jx3box-talent": "workspace:*",
-        "@jx3box/reporter": "0.0.4",
+        "@jx3box/reporter": "npm:@vl3box/reporter@0.1.4",
         "@tinymce/tinymce-vue": "^5.1.1",
         "@vueuse/core": "^9.13.0",
         "@vueuse/head": "^0.7.6",
