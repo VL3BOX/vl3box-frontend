@@ -2,8 +2,8 @@
     <div class="m-list-side">
         <!-- 群号 -->
         <RightSideMsg>
-            <em>作者交流群</em> :
-            <strong @click="onQQClick" class="u-link" title="点击复制">
+            <em>Nhóm trao đổi của tác giả</em> :
+            <strong @click="onQQClick" class="u-link" title="Nhấp để sao chép">
                 <a>{{ qq }}</a>
             </strong>
         </RightSideMsg>
@@ -15,9 +15,9 @@
             <h3 class="m-side-title" style="border-bottom: none">
                 <div class="u-title">
                     <img class="u-icon" svg-inline src="@/assets/img/side/docs.svg" />
-                    推荐小册
+                    Đề xuất bộ sưu tập
                 </div>
-                <a class="u-jbsci" href="/event/jbsci" target="_blank"><i class="el-icon-caret-right"></i>JBSCI期刊</a>
+                <a class="u-jbsci" href="/event/jbsci" target="_blank"><i class="el-icon-caret-right"></i>Tạp chí JBSCI</a>
             </h3>
             <el-collapse class="u-groups" v-model="activeDocGroup">
                 <el-collapse-item :title="list.label" :name="list.name" v-for="list in data" :key="list.name">

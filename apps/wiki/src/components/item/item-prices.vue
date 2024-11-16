@@ -2,10 +2,10 @@
     <div class="m-item-prices">
         <table v-if="prices.length" v-loading="priceLoading">
             <tr>
-                <th>物品</th>
-                <th>等级</th>
-                <th>上传时间</th>
-                <th>服务器</th>
+                <th>Vật phẩm</th>
+                <th>Cấp độ</th>
+                <th>Thời gian cập nhật</th>
+                <th>Máy chủ</th>
                 <th style="text-align: right">一口价</th>
             </tr>
             <tr v-for="(price, key) in prices" :key="key">
@@ -30,7 +30,7 @@
             </tr>
         </table>
 
-        <div v-else style="text-align: center">🐖 暂无记录</div>
+        <div v-else style="text-align: center">🐖 Chưa có ghi chép</div>
     </div>
 </template>
 
@@ -71,7 +71,7 @@ export default {
                         return b.timestamp - a.timestamp;
                     });
                 });
-                // 获取物品信息
+                // 获取Vật phẩm信息
                 get_item(this.item_id, this.client).then((data) => {
                     data = data.data;
                     this.item = data.data.item;

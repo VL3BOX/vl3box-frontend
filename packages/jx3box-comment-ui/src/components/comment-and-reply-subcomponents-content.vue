@@ -26,7 +26,7 @@
                         class="u-up"
                         src="../assets/img/heart_1.svg"
                         alt=""
-                    />点赞<span class="u-like-count">{{ likesFormat(hasLikeCount) }}</span></el-button
+                    />Thích<span class="u-like-count">{{ likesFormat(hasLikeCount) }}</span></el-button
                 >
                 <el-button
                     class="u-admin"
@@ -38,7 +38,7 @@
                         class="u-up"
                         src="../assets/img/heart_2.svg"
                         alt=""
-                    />已赞<span class="u-like-count">{{
+                    />Đã thích<span class="u-like-count">{{
                         likesFormat(hasLikeCount)
                     }}</span></el-button
                 >
@@ -48,7 +48,7 @@
                     size="mini"
                     icon="el-icon-chat-round"
                     @click="showForm = !showForm"
-                    >回复</el-button
+                    >Trả lời</el-button
                 >
                 <el-button
                     class="u-admin"
@@ -57,7 +57,7 @@
                     icon="el-icon-delete"
                     size="mini"
                     @click="deleteComment()"
-                    >删除</el-button
+                    >Xóa</el-button
                 >
                 <el-button
                     class="u-admin"
@@ -66,8 +66,8 @@
                     icon="el-icon-attract"
                     v-if="canHide"
                     @click="hideComment()"
-                    title="拉入黑洞后，仅评论者自己独自可见"
-                    >黑洞</el-button
+                    title="Sau khi đưa vào hố đen, chỉ có người bình luận mới nhìn thấy"
+                    >Hố đen</el-button
                 >
                 <el-button
                     class="u-admin"
@@ -76,7 +76,7 @@
                     icon="el-icon-top"
                     size="mini"
                     @click="topComment(true)"
-                    >置顶</el-button
+                    >Ghim</el-button
                 >
                 <el-button
                     class="u-admin"
@@ -85,7 +85,7 @@
                     icon="el-icon-top"
                     size="mini"
                     @click="topComment(false)"
-                    >取消置顶</el-button
+                    >HủyGhim</el-button
                 >
                 <el-button
                     class="u-admin"
@@ -94,7 +94,7 @@
                     icon="el-icon-star-off"
                     size="mini"
                     @click="starComment(true)"
-                    >加精</el-button
+                    >Tăng cường</el-button
                 >
                 <el-button
                     class="u-admin"
@@ -103,9 +103,9 @@
                     icon="el-icon-star-on"
                     size="mini"
                     @click="starComment(false)"
-                    >取消加精</el-button
+                    >HủyTăng cường</el-button
                 >
-                <el-button class="u-admin" v-if="homework && canApprove" type="text" icon="el-icon-document-checked" size="mini" @click="onHomeworkClick">批改作业</el-button>
+                <el-button class="u-admin" v-if="homework && canApprove" type="text" icon="el-icon-document-checked" size="mini" @click="onHomeworkClick">Chấm bài</el-button>
                 <time class="u-date">
                     <i class="el-icon-time"></i>
                     {{ dataFormat(date) }}
@@ -123,9 +123,9 @@
                     <img
                         class="u-icon-filter"
                         src="../assets/img/view.svg"
-                        alt="显示"
+                        alt="Hiển thị"
                     />
-                    显示</el-button
+                    Hiển thị</el-button
                 >
                 <el-button
                     class="u-admin u-filter"
@@ -136,8 +136,8 @@
                     ><img
                         class="u-icon-filter"
                         src="../assets/img/hide.svg"
-                        alt="隐藏"
-                    />隐藏</el-button
+                        alt="Ẩn"
+                    />Ẩn</el-button
                 >
             </div>
         </div>
@@ -181,10 +181,10 @@
                     type="primary"
                     @click="submit()"
                     :disabled="disableSubmitBtn"
-                    >提交</el-button
+                    >Gửi</el-button
                 >
                 <el-button size="mini" type="text" @click="showForm = false"
-                    >收起</el-button
+                    >Thu gọn</el-button
                 >
             </el-form-item>
         </el-form>
@@ -210,8 +210,8 @@ export default {
         "canCancelTop",
         "canApprove",
         "canHide",
-        "isLike", // 是否已点赞
-        "likes", // 点赞数
+        "isLike", // 是否已Thích
+        "likes", // Thích数
         "canSetStar",
         "canCancelStar",
         "attachments",
@@ -279,9 +279,9 @@ export default {
             this.$emit("setWhiteComment", white);
         },
         deleteComment() {
-            this.$confirm("确定删除该评论吗？", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm("Đồng ýXóa该评论吗？", "Nhắc nhở", {
+                confirmButtonText: "Đồng ý",
+                cancelButtonText: "Hủy",
                 type: "warning",
             })
                 .then(() => {
@@ -290,9 +290,9 @@ export default {
                 .catch(() => {});
         },
         hideComment() {
-            this.$confirm("确定隐藏该评论吗？", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm("Đồng ýẨn该评论吗？", "Nhắc nhở", {
+                confirmButtonText: "Đồng ý",
+                cancelButtonText: "Hủy",
                 type: "warning",
             })
                 .then(() => {

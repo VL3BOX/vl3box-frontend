@@ -1,11 +1,11 @@
 <template>
     <div class="w-card m-map-filter">
         <div class="w-card-title">
-            <img src="@/assets/img/baizhan/filter.svg" alt="筛选" />
-            <span>快速选择</span>
+            <img src="@/assets/img/baizhan/filter.svg" alt="Lọc" />
+            <span>Chọn nhanh</span>
         </div>
         <div class="m-skill-search first-section">
-            <el-input v-model="search" placeholder="输入关键词搜索" clearable>
+            <el-input v-model="search" placeholder="Nhập từ khóa để tìm kiếm" clearable>
                 <i slot="prefix" class="el-input__icon el-icon-search"></i>
             </el-input>
         </div>

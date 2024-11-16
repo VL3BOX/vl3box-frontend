@@ -8,7 +8,7 @@
 				backgroundSize: 'cover',
 			}"
 		>
-			我是抬头
+			Tôi ngẩng đầu lên
 		</div>
 		<div
 			:class="`c-letter-content c-letter-content__${data.slug}`"
@@ -32,7 +32,7 @@
 						backgroundPosition: 'bottom center',
 					}"
 				>
-					<p v-for="o in 4" :key="o">明月几时有，把酒问青天。</p>
+					<p v-for="o in 4" :key="o">Trăng sáng khi nào có, nâng chén hỏi trời xanh.</p>
 				</div>
 			</div>
 		</div>

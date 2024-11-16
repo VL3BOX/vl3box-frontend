@@ -36,13 +36,13 @@
                         :src="map"
                         @click="visible = false"
                         @touchstart="visible = false"
-                        alt="世界地图"
+                        alt="Bản đồ thế giới"
                     />
-                    <img class="u-traffic" :src="traffic" alt="交通路线" />
+                    <img class="u-traffic" :src="traffic" alt="Tuyến giao thông" />
                 </div>
             </dragWrap>
 
-            <!-- 世界地图选择弹框 -->
+            <!-- Bản đồ thế giới选择弹框 -->
             <div
                 class="m-select-box"
                 :class="{
@@ -52,7 +52,7 @@
                 <div class="m-select__item">
                     <div class="u-item-title">
                         <img class="u-img" :src="getIcon('newworldmap_03_39')" />
-                        <span class="u-text">周边城镇</span>
+                        <span class="u-text">Các thị trấn xung quanh</span>
                     </div>
                     <div class="m-select-arrow-box" v-if="selectMapCityOptions.maxCurrent">
                         <img
@@ -100,7 +100,7 @@
                 <div class="m-select__item" v-if="selectMap.fb.length">
                     <div class="u-item-title">
                         <img class="u-img" :src="getIcon('newworldmap_03_39')" />
-                        <span class="u-text">周边秘境</span>
+                        <span class="u-text">Các bí cảnh xung quanh</span>
                     </div>
                     <div class="m-select-arrow-box" v-if="selectMapOptions.maxCurrent">
                         <img
@@ -146,7 +146,7 @@
                     </div>
                 </div>
             </div>
-            <!-- 世界地图资源展示 -->
+            <!-- Bản đồ thế giới资源展示 -->
             <div
                 class="m-resource-box"
                 :class="{
@@ -172,9 +172,9 @@
         <div class="m-toolbar">
             <h1 class="m-maps__title">{{ title }}</h1>
             <el-input size="small" v-model="search" clearable>
-                <template slot="prepend">地图</template>
+                <template slot="prepend">Bản đồ</template>
             </el-input>
-            <div class="u-world-map" @click="changeWorldMap">世界地图</div>
+            <div class="u-world-map" @click="changeWorldMap">Bản đồ thế giới</div>
             <div :class="[{ mapId }, 'm-mapList']">
                 <div
                     v-for="item in showList"
@@ -189,20 +189,20 @@
             </div>
         </div>
 
-        <!-- 移动端查看所有地图信息 -->
+        <!-- 移动端查看所有Bản đồ信息 -->
         <div class="m-mobile-layout">
             <div class="m-mobile-header">
                 <h1 class="m-mobile_maps__title">{{ title }}</h1>
                 <div @click="mobileMapListDrawer = true" class="m-drawer_open">
-                    所有地图
+                    所有Bản đồ
                     <i class="el-icon-search el-icon--right"></i>
                 </div>
             </div>
             <div class="m-mobile-toolbar">
-                <el-drawer title="所有地图" :visible.sync="mobileMapListDrawer">
+                <el-drawer title="所有Bản đồ" :visible.sync="mobileMapListDrawer">
                     <div class="m-m-drawer-body">
                         <el-input size="small" v-model="search" clearable>
-                            <template slot="prepend">地图</template>
+                            <template slot="prepend">Bản đồ</template>
                         </el-input>
                         <div
                             class="m-m-drawer-map m-m-item"
@@ -211,7 +211,7 @@
                                 changeWorldMap();
                             "
                         >
-                            世界地图
+                            Bản đồ thế giới
                         </div>
                         <div :class="[{ mapId }, 'm-m-mapList']">
                             <div
@@ -305,7 +305,7 @@ export default {
             return this.search ? this.mapsList.filter((item) => item.MapName.indexOf(this.search) > -1) : this.mapsList;
         },
         title() {
-            return this.mapId ? this.mapsList.filter((item) => item.ID == this.mapId)[0].MapName : "世界地图";
+            return this.mapId ? this.mapsList.filter((item) => item.ID == this.mapId)[0].MapName : "Bản đồ thế giới";
         },
     }, 
     mounted() {
@@ -381,7 +381,7 @@ export default {
             this.natural = result;
         },
         showChild({ szChildCityMaps, szChildCopyMaps, Left, Top }, itemIndex) {
-            // 定位地图位置到当前选择位置
+            // 定位Bản đồ位置到当前选择位置
             if (this.isIpad) {
                 this.scale = { x: 4920 - Left - 2550, y: 3456 - Top - 3150, scale: 1 };
             } else {

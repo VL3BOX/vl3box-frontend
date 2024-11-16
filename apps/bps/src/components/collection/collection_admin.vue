@@ -1,7 +1,7 @@
 <template>
     <el-drawer
         class="c-admin"
-        title="管理面板"
+        title="Bảng quản lý"
         :visible="modelValue"
         :before-close="close"
         :append-to-body="true"
@@ -9,7 +9,7 @@
         :withHeader="false"
     >
         <div class="c-admin-wrapper">
-            <el-divider content-position="left">可见性变更</el-divider>
+            <el-divider content-position="left">Thay đổi khả năng nhìn thấy</el-divider>
             <el-radio-group v-model="visible" size="small" class="c-admin-status">
                 <el-radio-button
                     v-for="(option, key) in visible_options"
@@ -18,15 +18,15 @@
                 >{{ option }}</el-radio-button>
             </el-radio-group>
 
-            <el-divider content-position="left">元信息</el-divider>
+            <el-divider content-position="left">Thông tin metadata</el-divider>
 
             <div class="c-admin-title">
                 <el-input
                     v-model="title"
-                    placeholder="请输入小册标题"
+                    placeholder="Vui lòng nhập tiêu đề cuốn sách nhỏ"
                     class="input-author drawer-item-content"
                 >
-                        <template slot="prepend">标题</template>
+                        <template slot="prepend">Tiêu đề</template>
                 </el-input>
             </div>
 
@@ -34,17 +34,17 @@
                 <div class="c-admin-author">
                     <el-input
                         v-model="post_author"
-                        placeholder="请输入作者uid"
+                        placeholder="Vui lòng nhập UID tác giả"
                         class="input-author drawer-item-content"
                     >
-                        <template slot="prepend">作者</template>
+                        <template slot="prepend">Tác giả</template>
                 </el-input>
                 </div>
             </div>
 
             <div class="c-admin-buttons">
-                <el-button type="primary" @click="submit" :loading="pushing">提交</el-button>
-                <el-button type="plain" @click="close">取消</el-button>
+                <el-button type="primary" @click="submit" :loading="pushing">Gửi</el-button>
+                <el-button type="plain" @click="close">Hủy</el-button>
             </div>
         </div>
     </el-drawer>
@@ -136,7 +136,7 @@ export default {
                 title: this.title,
             }).then(() => {
                 this.$message({
-                    message: "更新成功",
+                    message: "Cập nhật thành công",
                     type: "success",
                 });
                 Bus.$emit("updateCollection");

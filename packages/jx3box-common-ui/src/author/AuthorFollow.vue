@@ -51,7 +51,7 @@ export default {
     },
     computed: {
         btnText() {
-            return this.isFollow ? "已粉" : "关注";
+            return this.isFollow ? "Đã theo dõi" : "Theo dõi";
         },
         btnType() {
             return this.isFollow ? "info" : "warning";
@@ -65,7 +65,7 @@ export default {
                 //     },
                 // },
                 {
-                    label: "取消关注",
+                    label: "Hủy bỏTheo dõi",
                     action: () => {
                         this.unfollow();
                     },
@@ -96,10 +96,10 @@ export default {
             if (num < 10000) {
                 return num === 0 ? "" : num;
             } else {
-                return (num / 10000).toFixed(1) + "万";
+                return (num / 10000).toFixed(1) + "vạn";
             }
         },
-        // 关注
+        // Theo dõi
         follow() {
             if (!this.isLogin) {
                 User.toLogin();
@@ -107,7 +107,7 @@ export default {
             }
             follow(this.uid)
                 .then((res) => {
-                    this.$message.success("关注成功");
+                    this.$message.success("Theo dõi成功");
                     this.isFollow = true;
                     this.loadFans();
                 })
@@ -115,16 +115,16 @@ export default {
                     console.log(err);
                 });
         },
-        // 取消关注
+        // Hủy bỏTheo dõi
         unfollow() {
-            this.$confirm("确定不再关注此人？", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm("Xác nhận不再Theo dõi此人？", "Gợi ý", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy bỏ",
                 type: "warning",
             }).then(() => {
                 unfollow(this.uid)
                     .then((res) => {
-                        this.$message.success("取关成功");
+                        this.$message.success("Bỏ theo dõi thành công");
                         this.isFollow = false;
                         this.loadFans();
                     })

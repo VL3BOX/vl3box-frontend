@@ -23,7 +23,7 @@
             </div>
 
             <!-- 空 -->
-            <el-alert v-else class="m-archive-null" title="没有找到相关条目" type="info" center show-icon></el-alert>
+            <el-alert v-else class="m-archive-null" title="Không tìm thấy mục liên quan" type="info" center show-icon></el-alert>
 
             <!-- 下一页 -->
             <el-button
@@ -33,7 +33,7 @@
                 @click="appendPage"
                 :loading="loading"
                 icon="el-icon-arrow-down"
-                >加载更多</el-button
+                >Tải thêm</el-button
             >
 
             <!-- 分页 -->
@@ -48,27 +48,27 @@
                 @current-change="changePage"
             ></el-pagination>
         </div>
-        <!-- 已登录 -->
+        <!-- 已Đăng nhập -->
         <div class="m-bucket" v-if="isLogin"></div>
 
-        <!-- 未登录 -->
+        <!-- 未Đăng nhập -->
         <div class="m-archive-noright" v-else>
             <div class="u-tip-login el-alert el-alert--warning is-light">
                 <i class="el-alert__icon el-icon-warning"></i>
                 <span>
-                    使用宏收藏夹，请先
-                    <a :href="login_url">登录</a>
+                    Để sử dụng danh sách yêu thích macro, vui lòng
+                    <a :href="login_url">Đăng nhập</a>
                 </span>
             </div>
         </div>
 
         <!-- 快捷查看宏 -->
-        <el-drawer class="m-macro-drawer" title="云端宏" :visible.sync="drawer" :append-to-body="true">
+        <el-drawer class="m-macro-drawer" title="Macro trên đám mây" :visible.sync="drawer" :append-to-body="true">
             <div class="u-box">
                 <h2 class="u-title">{{ drawer_title }}</h2>
                 <macro :ctx="drawer_content" :name="drawer_title" :id="drawer_id" />
                 <a :href="drawer_link" class="u-skip el-button el-button--primary">
-                    <i class="el-icon-copy-document"></i> 查看详情
+                    <i class="el-icon-copy-document"></i> Xem chi tiết
                 </a>
             </div>
         </el-drawer>
@@ -126,7 +126,7 @@ export default {
         publish_link: function () {
             return publishLink(appKey);
         },
-        // 是否显示加载更多
+        // 是否显示Tải thêm
         hasNextPage: function () {
             return this.pages > 1 && this.page < this.total;
         },

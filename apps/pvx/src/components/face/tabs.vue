@@ -5,9 +5,9 @@
                 <el-popover placement="bottom-end" trigger="click" v-model="filterOpen">
                     <div class="m-face-filter m-common-filter">
                         <el-radio-group v-model="is_new_face" v-if="client === 'std'">
-                            <el-radio-button class="u-filter" :label="-1">全部</el-radio-button>
-                            <el-radio-button class="u-filter" :label="1">写实</el-radio-button>
-                            <el-radio-button class="u-filter" :label="0">写意</el-radio-button>
+                            <el-radio-button class="u-filter" :label="-1">Tất cả</el-radio-button>
+                            <el-radio-button class="u-filter" :label="1">Thực tế</el-radio-button>
+                            <el-radio-button class="u-filter" :label="0">Ý tưởng</el-radio-button>
                         </el-radio-group>
                         <p>
                             <el-checkbox-button
@@ -18,21 +18,21 @@
                                 "
                                 :value="star === false && price_type === false && is_unlimited === false"
                                 class="u-filter"
-                                >全部</el-checkbox-button
+                                >Tất cả</el-checkbox-button
                             >
-                            <el-checkbox-button v-model="star" class="u-filter">精选</el-checkbox-button>
-                            <el-checkbox-button v-model="price_type" class="u-filter">免费</el-checkbox-button>
-                            <el-checkbox-button v-model="is_unlimited" class="u-filter">可新建</el-checkbox-button>
+                            <el-checkbox-button v-model="star" class="u-filter">Đề xuất</el-checkbox-button>
+                            <el-checkbox-button v-model="price_type" class="u-filter">Miễn phí</el-checkbox-button>
+                            <el-checkbox-button v-model="is_unlimited" class="u-filter">Khả dụng</el-checkbox-button>
                         </p>
                         <p style="margin-top: 0">
                             <el-radio-group v-model="filter_empty_images">
-                                <el-radio-button class="u-filter" :label="0">全部</el-radio-button>
-                                <el-radio-button class="u-filter" :label="1">有图</el-radio-button>
+                                <el-radio-button class="u-filter" :label="0">Tất cả</el-radio-button>
+                                <el-radio-button class="u-filter" :label="1">Có ảnh</el-radio-button>
                             </el-radio-group>
                         </p>
                         <el-radio-group v-model="code_mode">
-                            <el-radio-button class="u-filter" label="">全部</el-radio-button>
-                            <el-radio-button class="u-filter" :label="1">捏脸码</el-radio-button>
+                            <el-radio-button class="u-filter" label="">Tất cả</el-radio-button>
+                            <el-radio-button class="u-filter" :label="1">Mã khuôn mặt</el-radio-button>
                         </el-radio-group>
                     </div>
                     <img svg-inline src="@/assets/img/filter.svg" slot="reference" />
@@ -42,12 +42,12 @@
         <template v-if="!isMininote" v-slot:append>
             <div class="m-toolbar-item m-toolbar-publish">
                 <a :href="link.data" target="_blank">
-                    <el-button type="primary" size="medium" class="u-analysis"> 数据解析 </el-button>
+                    <el-button type="primary" size="medium" class="u-analysis"> Phân tích dữ liệu </el-button>
                 </a>
                 <a :href="publish_link(link.key)" target="_blank">
                     <div class="u-face-publish">
                         <img svg-inline src="@/assets/img/face/face-publish.svg" class="u-img" />
-                        <span>发布作品</span>
+                        <span>Xuất bản</span>
                     </div>
                 </a>
             </div>
@@ -57,11 +57,11 @@
                 <a :href="publish_link(link.key)" target="_blank">
                     <div class="u-face-publish">
                         <img svg-inline src="@/assets/img/face/face-publish.svg" class="u-img" />
-                        <span>发布作品</span>
+                        <span>Xuất bản</span>
                     </div>
                 </a>
                 <a :href="link.data" target="_blank">
-                    <el-button type="primary" size="medium" class="u-analysis"> 数据解析 </el-button>
+                    <el-button type="primary" size="medium" class="u-analysis"> Phân tích dữ liệu </el-button>
                 </a>
             </div>
         </template>

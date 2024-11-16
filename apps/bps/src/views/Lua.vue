@@ -4,9 +4,9 @@
             <div class="m-lua-index m-lua-box">
                 <div class="u-title">
                     <i class="el-icon-collection-tag"></i>
-                    <span class="u-title-list" @click="showList">文件夹</span>
+                    <span class="u-title-list" @click="showList">Thư mục</span>
                     <el-checkbox class="u-wujie" v-model="isWujie">
-                        无界
+                        Không giới hạn
                     </el-checkbox>
                 </div>
                 <div
@@ -19,10 +19,10 @@
                     <img class="u-typeicon" :src="type | iconURL" /><span>{{ showTypeLabel(type) }}</span>
                 </div>
             </div>
-            <!-- 搜索 -->
+            <!-- Tìm kiếm -->
             <div class="m-lua-search">
-                <el-input placeholder="请输入关键词" v-model="search" class="input-with-select" @change="searchLua">
-                    <span slot="prepend"><i class="el-icon-search"></i> 搜索</span>
+                <el-input placeholder="Vui lòng nhập từ khóa" v-model="search" class="input-with-select" @change="searchLua">
+                    <span slot="prepend"><i class="el-icon-search"></i> Tìm kiếm</span>
                     <el-button slot="append" icon="el-icon-position" @change="searchLua"></el-button>
                 </el-input>
             </div>
@@ -37,9 +37,9 @@
             <div class="m-lua-tree m-lua-box">
                 <div class="u-title">
                     <i class="el-icon-collection-tag"></i>
-                    <span class="u-title-list" @click="showList">文件列表</span>
+                    <span class="u-title-list" @click="showList">Danh sách tệp</span>
                     <span class="u-title-file"><i class="el-icon-arrow-right"></i> {{ file }}</span>
-                    <div class="u-back" @click="showList" v-if="data"><i class="el-icon-caret-left"></i> 返 回</div>
+                    <div class="u-back" @click="showList" v-if="data"><i class="el-icon-caret-left"></i> Quay lại</div>
                 </div>
                 <div class="u-item" v-show="group == current && !data" v-for="(item, group) in map" :key="group">
                     <div
@@ -204,7 +204,7 @@ export default {
             if (this.data) {
                 // this.$notify.error({
                 //     title: "错误",
-                //     message: "请切至指定目录再进行搜索",
+                //     message: "请切至指定目录再进行Tìm kiếm",
                 // });
                 this.data = "";
             }

@@ -3,10 +3,10 @@
         <div class="m-main">
             <template v-if="treasureInfo.team_certificate">
                 <div class="u-title m-hide">{{ treasureInfo.team_certificate.rank_name }}</div>
-                <div class="u-time m-hide">获得时间：{{ treasureInfo.team_certificate.awardtime }}</div>
+                <div class="u-time m-hide">Thời gian nhận được:{{ treasureInfo.team_certificate.awardtime }}</div>
                 <el-image class="u-img" :fit="'contain'" :src="treasureImg" :preview-src-list="[treasureImg]">
                 </el-image>
-                <button @click="print" class="u-btn m-hide el-button el-button--primary">打印证书</button>
+                <button @click="print" class="u-btn m-hide el-button el-button--primary">In chứng nhận</button>
             </template>
 
             <canvas id="canvas" ref="canvas"></canvas>
@@ -71,7 +71,7 @@ export default {
                     element.rank.content = sort_no;
                     element.team.content = teammate;
                     if (element.colonel) {
-                        element.colonel.content = `团长：${leader}`;
+                        element.colonel.content = `Đội trưởng:${leader}`;
                     }
                     if (element.signTime) {
                         element.signTime.content = this.formatTimeString(element.signTime.content, awardtime);
@@ -85,7 +85,7 @@ export default {
                     if (element.qrSubTitle) {
                         element.qrSubTitle.content = rank_name;
                     } else if (element.mapName) {
-                        element.mapName.content = `副本名称：${rank_name}`;
+                        element.mapName.content = `Tên bản sao:${rank_name}`;
                     }
                     this.drawConfig = drawConfig;
                     this.draw();

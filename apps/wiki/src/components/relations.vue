@@ -6,8 +6,8 @@
     >
         <template slot="head-title">
             <i class="el-icon-link"></i>
-            <span>关联成就</span>
-            <em class="u-remark">同BOSS下的其它成就</em>
+            <span>Thành tựu liên quan</span>
+            <em class="u-remark">Các thành tựu khác cùng thuộc BOSS</em>
         </template>
         <template slot="head-actions">
             <el-button
@@ -15,16 +15,16 @@
                 class="u-boss"
                 :class="{ on: show_npc }"
                 @click="show_npc = !show_npc"
-                >BOSS属性参考
+                >Tham khảo thuộc tính BOSS
             </el-button>
         </template>
         <template slot="body">
             <div class="m-section">
                 <div class="u-empty" v-if="!relations || !relations.length">
-                    <span v-if="relations === null">🎉 数据加载中...</span>
-                    <span v-if="relations === false">⚠️ 数据加载异常</span>
+                    <span v-if="relations === null">🎉 Đang tải dữ liệu...</span>
+                    <span v-if="relations === false">⚠️ Lỗi tải dữ liệu</span>
                     <span v-if="relations && !relations.length"
-                        >💧 暂无相关成就</span
+                        >💧 Chưa có thành tựu liên quan</span
                     >
                 </div>
                 <div class="m-relations" v-if="relations && relations.length">
@@ -53,7 +53,7 @@
             <div class="m-section m-bossinfos" v-show="show_npc" v-if="npc">
                 <ul class="m-bossinfo">
                     <li class="u-id">ID:<em></em>{{ npc.ID }}</li>
-                    <li class="u-name">首领:<em></em>{{ npc.Name }}</li>
+                    <li class="u-name">Thủ lĩnh:<em></em>{{ npc.Name }}</li>
                     <li
                         v-for="item in bossInfo.base"
                         :key="item.key"

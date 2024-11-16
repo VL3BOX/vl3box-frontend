@@ -5,11 +5,11 @@
                 <Avatar class="u-author-avatar" :uid="uid" :url="avatar" :size="avatarSize" :frame="avatar_frame" />
                 <div class="u-author-info">
                     <span class="u-name" :style="userDefinedStyle.userName">
-                        <span @click="copyData(data.display_name || '匿名')">{{ data.display_name || "匿名" }}</span
+                        <span @click="copyData(data.display_name || 'Ẩn danh')">{{ data.display_name || "Ẩn danh" }}</span
                         ><span class="u-uid" @click="copyData(data.ID || 0)">（UID : {{ data.ID || 0 }}）</span>
                     </span>
                     <div class="u-tips">
-                        <el-tooltip :content="`当前经验 ${data.experience || 0}`" placement="top">
+                        <el-tooltip :content="`Kinh nghiệm hiện tại ${data.experience || 0}`" placement="top">
                             <span
                                 class="u-level"
                                 :class="'lv-' + level"
@@ -22,9 +22,9 @@
                                 <i class="u-icon vip">{{ vipType }}</i>
                             </a>
                         </el-tooltip>
-                        <el-tooltip content="签约作者" v-if="isSuperAuthor" placement="top">
+                        <el-tooltip content="Tác giả ký hợp đồng" v-if="isSuperAuthor" placement="top">
                             <span class="u-superauthor">
-                                <i class="u-icon superauthor">签约作者</i>
+                                <i class="u-icon superauthor">Tác giả ký hợp đồng</i>
                             </span>
                         </el-tooltip>
                     </div>
@@ -40,10 +40,10 @@
             </div>
             <!-- <div class="m-focus" v-if="!isSelf">
                 <div class="m-btn-box">
-                    <el-button icon="el-icon-plus" class="m-btn u-btn-attention" v-if="!isFollow" @click="follow" size="mini">关注TA</el-button>
+                    <el-button icon="el-icon-plus" class="m-btn u-btn-attention" v-if="!isFollow" @click="follow" size="mini">Theo dõi TA</el-button>
                     <div class="m-btn u-already-attention" v-else >
-                        <el-button class="u-btn" size="mini" @mouseenter.native="attentionText='取消关注'" @mouseleave.native="attentionText='已关注'" @click="unfollow">{{ attentionText }}</el-button>
-                        <el-button class="u-btn u-btn-disabled" size="mini"  :disabled="true">发消息</el-button>
+                        <el-button class="u-btn" size="mini" @mouseenter.native="attentionText='Hủy theo dõi'" @mouseleave.native="attentionText='Đã theo dõi'" @click="unfollow">{{ attentionText }}</el-button>
+                        <el-button class="u-btn u-btn-disabled" size="mini"  :disabled="true">Gửi tin nhắn</el-button>
                     </div>
                 </div>
                 <div class="u-more">
@@ -54,9 +54,9 @@
                         v-model="moreOperate"
                     >
                         <a href="/feedback" target="_blank">
-                            <el-button size="mini" class="u-more-btn">举报</el-button>
+                            <el-button size="mini" class="u-more-btn">Báo cáo</el-button>
                         </a><br>
-                        <el-button size="mini" class="u-more-btn" @click="joinBlacklist">拉黑</el-button>
+                        <el-button size="mini" class="u-more-btn" @click="joinBlacklist">Chặn</el-button>
                         <img src="@/assets/img/more.svg" svg-inline  slot="reference" class="u-more-img"/>
                     </el-popover>
                 </div>
@@ -76,33 +76,33 @@
                                 @click="follow"
                                 size="mini"
                                 :style="userDefinedStyle.btn"
-                                >关注TA</el-button
+                                >Theo dõi TA</el-button
                             >
                             <div class="u-already-attention" v-else>
                                 <el-button
                                     class="u-btn"
                                     size="mini"
-                                    @mouseenter.native="attentionText = '取消关注'"
-                                    @mouseleave.native="attentionText = '已关注'"
+                                    @mouseenter.native="attentionText = 'Hủy theo dõi'"
+                                    @mouseleave.native="attentionText = 'Đã theo dõi'"
                                     @click="unfollow"
                                     >{{ attentionText }}</el-button
                                 >
                                 <a :href="sendLink" target="_blank" v-if="canSendLetter">
                                     <el-button class="u-btn u-send-msg" size="mini" :style="userDefinedStyle.sendMsg"
-                                        >发消息</el-button
+                                        >Gửi tin nhắn</el-button
                                     ></a
                                 >
                                 <el-button class="u-btn u-btn-disabled" size="mini" :disabled="true" v-else
-                                    >发消息</el-button
+                                    >Gửi tin nhắn</el-button
                                 >
                             </div>
                         </div>
                         <div class="u-more" :style="userDefinedStyle.btn">
                             <el-popover placement="bottom-end" trigger="click" width="90" v-model="moreOperatePhone">
                                 <a href="/feedback" target="_blank">
-                                    <el-button size="mini" class="u-more-btn">举报</el-button> </a
+                                    <el-button size="mini" class="u-more-btn">Báo cáo</el-button> </a
                                 ><br />
-                                <el-button size="mini" class="u-more-btn" @click="joinBlacklist">拉黑</el-button>
+                                <el-button size="mini" class="u-more-btn" @click="joinBlacklist">Chặn</el-button>
                                 <img
                                     src="@/assets/img/more.svg"
                                     svg-inline
@@ -119,7 +119,7 @@
                             <i class="u-icon u-icon-join">
                                 <img svg-inline src="../../assets/img/join.svg" />
                             </i>
-                            <span>加入于 {{ data.user_registered | time }}</span>
+                            <span>Gia nhập vào {{ data.user_registered | time }}</span>
                         </div>
                         <div
                             class="u-fans"
@@ -134,7 +134,7 @@
                                     class="u-svg"
                                     :style="userDefinedStyle.fans"
                                 /> </i
-                            >粉丝数 <b>{{ fansNum }}</b>
+                            >Số lượng người theo dõi <b>{{ fansNum }}</b>
                         </div>
                     </div>
                 </div>
@@ -156,36 +156,36 @@
                             @click="follow"
                             size="mini"
                             :style="userDefinedStyle.btn"
-                            >关注TA</el-button
+                            >Theo dõi TA</el-button
                         >
                         <div class="u-already-attention" v-else>
                             <el-button
                                 class="u-btn"
                                 size="mini"
-                                @mouseenter.native="attentionText = '取消关注'"
-                                @mouseleave.native="attentionText = '已关注'"
+                                @mouseenter.native="attentionText = 'Hủy theo dõi'"
+                                @mouseleave.native="attentionText = 'Đã theo dõi'"
                                 @click="unfollow"
                                 >{{ attentionText }}</el-button
                             >
                             <a :href="sendLink" target="_blank" v-if="canSendLetter">
                                 <el-button class="u-btn u-send-msg" size="mini" :style="userDefinedStyle.sendMsg"
-                                    >发消息</el-button
+                                    >Gửi tin nhắn</el-button
                                 ></a
                             >
                             <el-button class="u-btn u-btn-disabled" size="mini" :disabled="true" v-else
-                                >发消息</el-button
+                                >Gửi tin nhắn</el-button
                             >
                         </div>
                     </div>
                     <div class="u-btn-box" v-else>
-                        <el-button type="info" class="u-btn-cancel-deny" @click="handleUnDeny">取消拉黑</el-button>
+                        <el-button type="info" class="u-btn-cancel-deny" @click="handleUnDeny">HủyChặn</el-button>
                     </div>
                     <el-popover placement="bottom-end" trigger="click" width="90" v-model="moreOperate">
                         <a href="/feedback" target="_blank">
-                            <el-button size="mini" class="u-more-btn">举报</el-button> </a
+                            <el-button size="mini" class="u-more-btn">Báo cáo</el-button> </a
                         ><br />
                         <el-button v-if="!hadDeny" size="mini" class="u-more-btn" @click="joinBlacklist"
-                            >拉黑</el-button
+                            >Chặn</el-button
                         >
                         <div class="u-more" :style="userDefinedStyle.btn" slot="reference">
                             <img
@@ -202,7 +202,7 @@
                         <i class="u-icon u-icon-join">
                             <img svg-inline src="../../assets/img/join.svg" />
                         </i>
-                        <span>加入于 {{ data.user_registered | time }}</span>
+                        <span>Gia nhập vào {{ data.user_registered | time }}</span>
                     </div>
                     <div class="u-fans" @click="toFans" :class="isSelf ? 'self' : ''" :style="userDefinedStyle.fans">
                         <i class="u-icon u-icon-fans">
@@ -212,7 +212,7 @@
                                 class="u-svg"
                                 :style="userDefinedStyle.fans"
                             /> </i
-                        >粉丝数 <b>{{ fansNum }}</b>
+                        >Số lượng người theo dõi <b>{{ fansNum }}</b>
                     </div>
                 </div>
 
@@ -278,7 +278,7 @@ export default {
             frames,
             isVIP: false,
             isFollow: false,
-            attentionText: "已关注",
+            attentionText: "Đã theo dõi",
             moreOperate: false,
             moreOperatePhone: false,
             fansNum: 0,
@@ -295,7 +295,7 @@ export default {
             },
             // honor: null, //称号
             canSendLetter: false,
-            //是否拉黑
+            //是否Chặn
             hadDeny: false,
         };
     },
@@ -322,7 +322,7 @@ export default {
             return this.isPRO ? "PRO" : "PRE";
         },
         vipTypeTitle: function () {
-            return this.isPRO ? "专业版会员用户" : "高级版会员用户";
+            return this.isPRO ? "Người dùng chuyên nghiệp" : "Người dùng cao cấp";
         },
         level: function () {
             return User.getLevel(this.data?.experience || 0);
@@ -360,15 +360,15 @@ export default {
             this.$copyText(String(text)).then(
                 function (e) {
                     _this.$notify({
-                        title: "复制成功",
-                        message: "复制内容：" + text,
+                        title: "Sao chép thành công",
+                        message: "Nội dung sao chép:" + text,
                         type: "success",
                     });
                 },
                 function (e) {
                     _this.$notify({
-                        title: "复制失败",
-                        message: "请手动复制",
+                        title: "Sao chép thất bại",
+                        message: "Vui lòng sao chép thủ công",
                         type: "warning",
                     });
                 }
@@ -409,7 +409,7 @@ export default {
             }
             follow(this.uid)
                 .then((res) => {
-                    this.$message.success("关注成功");
+                    this.$message.success("Theo dõi thành công");
                     this.isFollow = true;
                     this.loadFans();
                 })
@@ -417,17 +417,17 @@ export default {
                     console.log(err);
                 });
         },
-        // 取消关注
+        // Hủy theo dõi
         unfollow() {
-            this.$confirm("确定不再关注此人？", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm("Bạn có chắc chắn không muốn theo dõi người này nữa không?", "Gợi ý", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy",
                 type: "warning",
             })
                 .then(() => {
                     unfollow(this.uid)
                         .then((res) => {
-                            this.$message.success("取关成功");
+                            this.$message.success("Hủy theo dõi thành công");
                             this.isFollow = false;
                             this.loadFans();
                         })
@@ -440,12 +440,12 @@ export default {
         showLevelColor: function (level) {
             return __userLevelColor[level];
         },
-        // 格式化粉丝数
+        // 格式化Số lượng người theo dõi
         formatFansNum(num) {
             if (num < 10000) {
                 return num === 0 ? "" : num;
             } else {
-                return (num / 10000).toFixed(1) + "万";
+                return (num / 10000).toFixed(1) + "vạn";
             }
         },
         loadFans() {
@@ -457,18 +457,18 @@ export default {
         getAuthorInfo(v) {
             this.authorInfo = v;
         },
-        //拉黑
+        //Chặn
         joinBlacklist() {
-            this.$confirm("确定要拉黑此人？", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm("Xác nhận要Chặn此人？", "Gợi ý", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy",
                 type: "warning",
             })
                 .then(() => {
                     deny(this.uid)
                         .then(() => {
                             this.hadDeny = true;
-                            this.$message.success("拉黑成功");
+                            this.$message.success("Chặn成功");
                         })
                         .catch((err) => {
                             console.log(err);
@@ -476,12 +476,12 @@ export default {
                 })
                 .catch((_) => {});
         },
-        // 取消拉黑
+        // HủyChặn
         handleUnDeny() {
             undeny(this.uid)
                 .then(() => {
                     this.hadDeny = false;
-                    this.$message.success("操作成功");
+                    this.$message.success("Hoạt động thành công");
                 })
                 .catch((err) => {
                     console.log(err);

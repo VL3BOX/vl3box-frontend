@@ -14,7 +14,7 @@
                 <div class="m-collection-detail-content">
                     <div class="m-collection-detail-header">
                         <header class="m-single-header">
-                            <!-- 标题 -->
+                            <!-- Tiêu đề -->
                             <div class="m-single-title">
                                 <span class="u-title u-sub-block" :href="url" :title="collection.title">
                                     <i class="u-private el-icon-lock" v-if="!collection.public" title="仅自己可见"></i>
@@ -227,7 +227,7 @@ export default {
             $event.preventDefault();
             this.$confirm("确认是否删除该剑三小册？", "提示", {
                 confirmButtonText: "确定",
-                cancelButtonText: "取消",
+                cancelButtonText: "Hủy",
                 type: "warning",
             }).then(() => {
                 removeCollection(collection_id).then((data) => {

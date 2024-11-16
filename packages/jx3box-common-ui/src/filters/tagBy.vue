@@ -3,7 +3,7 @@
         <span class="u-label" @click="toggleFilter">
             <span class="u-current-filter"
                 ><i class="el-icon-collection-tag"></i>
-                {{ current || "全部" }}</span
+                {{ current || "Tất cả" }}</span
             >
             <span class="u-toggle">
                 <i class="el-icon-arrow-down"></i>
@@ -15,7 +15,7 @@
                 class="u-mode u-all"
                 :class="{ on: value === '' }"
                 @click="filter('', '')"
-                ><i class="el-icon-collection-tag"></i> 全部</span
+                ><i class="el-icon-collection-tag"></i> Tất cả</span
             >
             <span
                 v-for="(item, key) in data"

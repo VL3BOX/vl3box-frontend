@@ -13,7 +13,7 @@
             :style="item.color | showHighlight"
             :href="item.ID | postLink"
             :target="target"
-            >{{ item.post_title || "无标题" }}</a
+            >{{ item.post_title || "Không có tiêu đề" }}</a
         >
         <!-- 作者 -->
         <div class="u-misc">

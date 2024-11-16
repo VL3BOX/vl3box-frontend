@@ -18,13 +18,13 @@ export default {
         return {
             count: {},
             countDict: {
-                total: "物品总数",
-                quality_0: "破败物品数",
-                quality_1: "普通物品数",
-                quality_2: "精巧物品数",
-                quality_3: "卓越物品数",
-                quality_4: "珍奇物品数",
-                quality_5: "稀世物品数"
+                total: "Tổng số vật phẩm",
+                quality_0: "Số lượng tàn phẩm",
+                quality_1: "Số lượng thường phẩm",
+                quality_2: "Số lượng tinh phẩm",
+                quality_3: "Số lượng tuyệt phẩm",
+                quality_4: "Số lượng trân kỳ phẩm",
+                quality_5: "Số lượng thần phẩm"
             },
         };
     },
@@ -35,7 +35,7 @@ export default {
     },
     methods: {},
     mounted: function () {
-        // 输出物品总数统计
+        // 输出Tổng số vật phẩm统计
         get_items_count({client: this.client}).then((res) => {
             res = res.data;
             this.count = res.data;

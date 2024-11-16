@@ -1,6 +1,6 @@
 <template>
     <div class="w-creators" v-if="visible">
-        <span class="w-creators-title">联合创作</span>
+        <span class="w-creators-title">Sáng tác hợp tác</span>
         <a
             class="w-creators-super w-creators-item"
             v-if="super_author"
@@ -26,7 +26,7 @@
             </a>
         </div>
         <a class="w-creators-edit" :href="editLink" v-if="isCreator">
-            <i class="el-icon-edit-outline"></i> 编辑当前作品
+            <i class="el-icon-edit-outline"></i> Chỉnh sửa tác phẩm hiện tại
         </a>
     </div>
 </template>
@@ -99,7 +99,7 @@ export default {
                     return !!item;
                 });
 
-                // 将联合创作者传出去
+                // 将Sáng tác hợp tác者传出去
                 this.$emit("load-authors", { super_author, other_authors });
             });
         },

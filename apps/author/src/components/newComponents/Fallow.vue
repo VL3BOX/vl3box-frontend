@@ -34,25 +34,25 @@ export default {
             active: "Face",
             types: [
                 {
-                    label: "捏脸",
+                    label: "Tạo hình khuôn mặt",
                     value: "Face",
                     component: Face,
                     icon:'el-icon-grape'
                 },
                 {
-                    label: "体型",
+                    label: "Thể hình",
                     value: "Body",
                     component: Body,
                     icon:'el-icon-watermelon'
                 },
                 {
-                    label: "试卷",
+                    label: "Bài thi",
                     value: "Paper",
                     component: Paper,
                     icon : 'el-icon-ice-cream-round'
                 },
                 {
-                    label: "题目",
+                    label: "Đề mục",
                     value: "Question",
                     component: Question,
                     icon : 'el-icon-lollipop'

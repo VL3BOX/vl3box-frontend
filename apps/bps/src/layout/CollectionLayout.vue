@@ -2,7 +2,7 @@
     <div>
         <Header></Header>
         <Breadcrumb
-            name="剑三小册"
+            name="Tập sách Kiếm Tam"
             slug="collection"
             root="/collection"
             :publishEnable="true"
@@ -17,7 +17,7 @@
                     icon="el-icon-setting"
                     @click="onAdminClick"
                     v-if="isEditor"
-                >管理</el-button>
+                >Quản lý</el-button>
             </template>
         </Breadcrumb>
         <LeftSidebar :uid="user_id">

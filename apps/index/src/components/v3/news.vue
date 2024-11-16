@@ -7,7 +7,7 @@
                     <i class="u-icon el-icon-message-solid"></i>
                     <!-- <img class="u-icon" svg-inline src="@/assets/img/left/news.svg" /> -->
                     <!-- <svg-icon class-name="u-icon" icon-class="news" /> -->
-                    最新动态
+                    Tin tức
                 </a>
                 <div class="u-mode-list">
                     <span
@@ -19,7 +19,7 @@
                     >
                 </div>
             </div>
-            <a :href="more_link" class="u-more" target="_blank" rel="noopener noreferrer" title="查看全部">
+            <a :href="more_link" class="u-more" target="_blank" rel="noopener noreferrer" title="Xem tất cả">
                 <i class="el-icon-more"></i>
             </a>
         </div>
@@ -48,13 +48,13 @@ export default {
         return {
             mode: "all",
             mode_list: [
-                { label: "全部", value: "all" },
-                { label: "游戏", value: "game" },
-                { label: "技改", value: "skill_change" },
-                { label: "魔盒", value: "box" },
+                { label: "Tất cả", value: "all" },
+                { label: "Trò chơi", value: "game" },
+                { label: "Kỹ thuật", value: "skill_change" },
+                { label: "JX3BOX", value: "box" },
             ],
 
-            // 游戏
+            // Trò chơi
             all_links: {
                 std: "https://jx3.xoyo.com/allnews/",
                 origin: "https://jx3yq.xoyo.com/index/#/latest",
@@ -69,14 +69,14 @@ export default {
             },
             game_data: [],
 
-            // 魔盒
+            // JX3BOX
             box_links: {
                 std: "/notice",
                 origin: "/notice",
             },
             box_data: [],
 
-            // 技改
+            // Kỹ thuật
             skill_change_data: [],
         };
     },

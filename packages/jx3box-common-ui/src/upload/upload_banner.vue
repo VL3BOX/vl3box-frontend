@@ -4,7 +4,7 @@
         <div v-if="data" class="u-upload" :style="uploadStyle">
             <img :src="preview" />
             <i class="u-upload-mask"></i>
-            <i class="u-upload-delete el-icon-delete" title="移除" @click="remove"></i>
+            <i class="u-upload-delete el-icon-delete" title="Loại bỏ" @click="remove"></i>
         </div>
         <div v-else class="u-upload el-upload el-upload--picture-card" @click="select">
             <i class="el-icon-plus"></i>
@@ -31,7 +31,7 @@ export default {
         },
         info: {
             type: String,
-            default: "用于展示tips",
+            default: "Dùng để hiển thị tips",
         },
         size: {
             type: [Array, Number],
@@ -89,7 +89,7 @@ export default {
             const file = this.fileInput.files[0];
             if (!file) return;
             if (file.size > this.maxSize * 1024 * 1024) {
-                this.$message.error("图片大小不能超过" + this.maxSize + "M");
+                this.$message.error("Kích thước ảnh không được vượt quá" + this.maxSize + "M");
                 return;
             }
             const formData = new FormData();
@@ -97,7 +97,7 @@ export default {
             upload(formData).then((res) => {
                 this.data = res.data.data[0];
                 this.$message({
-                    message: "上传成功",
+                    message: "Tải lên thành công",
                     type: "success",
                 });
             });

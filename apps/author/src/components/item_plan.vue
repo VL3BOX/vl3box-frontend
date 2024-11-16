@@ -13,12 +13,12 @@
                         :href="postLink(item.id)"
                         class="u-title"
                         target="_blank"
-                        >{{ item.title || "无标题" }}</a
+                        >{{ item.title || "Không có tiêu đề" }}</a
                     >
                 </p>
             </el-timeline-item>
         </el-timeline>
-        <el-alert v-else title="没有找到相关条目" type="info" show-icon>
+        <el-alert v-else title="Không tìm thấy mục liên quan" type="info" show-icon>
         </el-alert>
 
         <el-pagination
@@ -39,8 +39,8 @@ import { getLink } from "@jx3box/jx3box-common/js/utils";
 import dateFormat from "../utils/dateFormat";
 import { getPlans } from "@/service/helper.js";
 const types = {
-    "1" : '物品清单',
-    "2" : "装备清单"
+    "1" : 'Danh sách vật phẩm',
+    "2" : "Danh sách trang bị"
 }
 export default {
     props: [],

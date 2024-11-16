@@ -2,19 +2,19 @@
     <span class="c-game-price">
         <span v-if="formartPrice(price,'zhuan')">
             {{formartPrice(price,'zhuan')}}
-            <img src="../../assets/img/price/zhuan.png" alt="砖" />
+            <img src="../../assets/img/price/zhuan.png" alt="Gạch" />
         </span>
         <span v-if="formartPrice(price,'jin')">
             {{formartPrice(price,'jin')}}
-            <img src="../../assets/img/price/jin.png" alt="金" />
+            <img src="../../assets/img/price/jin.png" alt="Vàng" />
         </span>
         <span v-if="formartPrice(price,'yin')">
             {{formartPrice(price,'yin')}}
-            <img src="../../assets/img/price/yin.png" alt="银" />
+            <img src="../../assets/img/price/yin.png" alt="Bạc" />
         </span>
         <span v-if="formartPrice(price,'tong')">
             {{formartPrice(price,'tong')}}
-            <img src="../../assets/img/price/tong.png" alt="铜" />
+            <img src="../../assets/img/price/tong.png" alt="Đồng" />
         </span>
     </span>
 </template>

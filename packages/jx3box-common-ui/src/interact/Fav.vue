@@ -1,7 +1,7 @@
 <template>
     <el-button class="w-fav" size="mini" type="primary" @click="doFav">
         <i :class="favorite ? 'el-icon-star-on' : 'el-icon-star-off'"></i>
-        <span>{{ favorite ? "取消收藏" : "收藏" }}</span>
+        <span>{{ favorite ? "Bỏ theo dõi" : "Theo dõi" }}</span>
     </el-button>
 </template>
 
@@ -44,7 +44,7 @@ export default {
             if (err.response && err.response.data && err.response.data.code) {
                 this.$message.error(`[${err.response.data.code}] ${err.response.data.msg}`);
             } else {
-                this.$message.error(typeof err === "string" ? err : "网络请求异常");
+                this.$message.error(typeof err === "string" ? err : "Lỗi mạng");
             }
             console.log(err);
         },

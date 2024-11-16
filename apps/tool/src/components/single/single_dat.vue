@@ -1,7 +1,7 @@
 <template>
     <singlebox :post="post" :stat="stat" v-loading="loading" @extendUpdate="updateExtend" :postType="appKey">
         <div class="u-meta u-sub-block" slot="single-header">
-            <em class="u-label">类型</em>
+            <em class="u-label">Loại</em>
             <span class="u-value">{{ post_subtype }}</span>
         </div>
 
@@ -18,14 +18,14 @@
                             v-if="isAuthor || isEditor"
                             :href="'https://pull.j3cx.com/api/dbm/feed?key=' + post.author + '&_no_cache'"
                             target="_blank"
-                            title="默认存在1分钟缓存，如需要即时生效请点击此按钮"
+                            title="Mặc định có bộ nhớ đệm trong 1 phút, nếu cần hiệu lực ngay lập tức, vui lòng nhấp vào nút này"
                         >
-                            <i class="el-icon-video-play"></i> 云端同步刷新
+                            <i class="el-icon-video-play"></i> Đồng bộ đám mây và làm mới
                         </a>
                         <span class="u-desc">{{ feed.desc }}</span>
                         <a class="u-down el-button el-button--default el-button--small is-plain" :href="feed.file | showDown" target="_blank">
                             <i class="el-icon-download"></i>
-                            <span>本地下载</span>
+                            <span>Tải xuống cục bộ</span>
                         </a>
                     </div>
                     <div class="u-data" v-if="i != 0 && feed.status">
@@ -43,14 +43,14 @@
                             v-if="isAuthor || isEditor"
                             :href="'https://pull.j3cx.com/api/dbm/feed?key=' + post.author + '-' + feed.name + '&_no_cache'"
                             target="_blank"
-                            title="默认存在1分钟缓存，如需要即时生效请点击此按钮"
+                            title="Mặc định có bộ nhớ đệm trong 1 phút, nếu cần hiệu lực ngay lập tức, vui lòng nhấp vào nút này"
                         >
-                            <i class="el-icon-video-play"></i> 云端同步刷新
+                            <i class="el-icon-video-play"></i> Đồng bộ đám mây và làm mới
                         </a>
                         <span class="u-desc">{{ feed.desc }}</span>
                         <a class="u-down el-button el-button--default el-button--small is-plain" :href="feed.file | showDown" target="_blank">
                             <i class="el-icon-download"></i>
-                            <span>本地下载</span>
+                            <span>Tải xuống cục bộ</span>
                         </a>
                     </div>
                     <div class="u-data" v-if="!feed.status && cansee">
@@ -68,14 +68,14 @@
                             v-if="isAuthor || isEditor"
                             :href="'https://pull.j3cx.com/api/dbm/feed?key=' + post.author + '-' + feed.name + '&_no_cache'"
                             target="_blank"
-                            title="默认存在1分钟缓存，如需要即时生效请点击此按钮"
+                            title="Mặc định có bộ nhớ đệm trong 1 phút, nếu cần hiệu lực ngay lập tức, vui lòng nhấp vào nút này"
                         >
-                            <i class="el-icon-video-play"></i> 云端同步刷新
+                            <i class="el-icon-video-play"></i> Đồng bộ đám mây và làm mới
                         </a>
                         <span class="u-desc">{{ feed.desc }}</span>
                         <a class="u-down el-button el-button--default el-button--small is-plain" :href="feed.file | showDown" target="_blank">
                             <i class="el-icon-download"></i>
-                            <span>本地下载</span>
+                            <span>Tải xuống cục bộ</span>
                         </a>
                     </div>
                 </div>
@@ -98,11 +98,11 @@
                 </div>
             </div>
             <div class="u-subtype-other" v-else-if="subtype != 1">
-                <span class="u-typename">数据类型：{{ post_subtype }}</span>
+                <span class="u-typename">数据Loại：{{ post_subtype }}</span>
                 <a class="u-download el-button el-button--primary el-button--small" :href="meta.down | showDown" target="_blank" v-if="meta.down">
                     <i class="el-icon-download"></i>
-                    <span class="u-long">默认数据下载</span>
-                    <span class="u-short">下载</span>
+                    <span class="u-long">Tải dữ liệu mặc định</span>
+                    <span class="u-short">Tải về</span>
                 </a>
             </div>
         </div>

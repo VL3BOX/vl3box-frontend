@@ -3,7 +3,7 @@
  * @Date: 2022-07-11 00:14:36
  * @LastEditors: X3ZvaWQ
  * @LastEditTime: 2022-07-12 14:52:23
- * @Description: 数值奖励的图标组件，如成就、侠义值等
+ * @Description: 数值奖励的Biểu tượng组件，如Thành tích、侠义值等
 -->
 <template>
     <a
@@ -14,8 +14,8 @@
         :target="id ? '_blank' : '_self'"
     >
         <div class="u-reward-icon">
-            <img class="u-icon-bg" :src="backgroundUrl" alt="图标背景" />
-            <img v-if="icon == null" class="u-icon-img" :src="pointImgUrl" alt="图标" />
+            <img class="u-icon-bg" :src="backgroundUrl" alt="Nền biểu tượng" />
+            <img v-if="icon == null" class="u-icon-img" :src="pointImgUrl" alt="Biểu tượng" />
         </div>
         <div class="u-reward-desc">{{ displayName }}<br />{{ value }}</div>
     </a>
@@ -61,18 +61,18 @@ export default {
     computed: {
         displayName: function () {
             let map = {
-                titlePoint: "战阶积分",
-                prestige: "威名点",
-                vigor: "精力",
-                justice: "侠行点",
-                train: "修为",
-                tongFund: "帮会资金",
-                tongResource: "载具资源",
-                achievement: "成就",
-                skill: "技能",
+                titlePoint: "Điểm chiến giai",
+                prestige: "Điểm danh vọng",
+                vigor: "Tinh lực",
+                justice: "Điểm hiệp hành",
+                train: "Tu luyện",
+                tongFund: "Bang hội kim",
+                tongResource: "Tài nguyên phương tiện",
+                achievement: "Thành tích",
+                skill: "Kỹ năng",
             };
             if (map[this.type]) return map[this.type];
-            else return "未知奖励";
+            else return "Phần thưởng không xác định";
         },
         backgroundUrl: function () {
             if (this.icon) {

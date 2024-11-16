@@ -1,43 +1,43 @@
 <template>
     <app-layout slug="macroeditor" className="m-macroeditor">
         <h1 class="m-macroeditor-title">
-            智能宏编辑器
+            Trình chỉnh sửa macro thông minh
             <a href="/tool/265" target="_blank" class="u-help el-button el-button--success is-plain el-button--mini">
-                <i class="el-icon-s-management"></i> 宏语法参考手册
+                <i class="el-icon-s-management"></i> Sổ tay tham khảo cú pháp macro
             </a>
         </h1>
         <div class="m-editor">
             <el-row>
                 <el-col :span="12">
                     <div class="m-col m-col-left">
-                        <h2 class="u-subtitle"><img class svg-inline src="@/assets/img/macro/cube1.svg" />快捷插入</h2>
+                        <h2 class="u-subtitle"><img class svg-inline src="@/assets/img/macro/cube1.svg" />Chèn nhanh</h2>
                         <el-form class="u-cmds" ref="form" :model="form" label-width="80px">
-                            <el-form-item label="释放方式">
+                            <el-form-item label="Cách giải phóng">
                                 <el-radio-group v-model="castType">
-                                    <el-radio label="cast">释放(cast)</el-radio>
-                                    <el-radio label="fcast">强制施放(fcast)</el-radio>
+                                    <el-radio label="cast">Giải phóng(cast)</el-radio>
+                                    <el-radio label="fcast">Thi triển bắt buộc(fcast)</el-radio>
                                 </el-radio-group>
                             </el-form-item>
-                            <el-form-item label="技能名">
+                            <el-form-item label="Tên kỹ năng">
                                 <el-input v-model="skill"></el-input>
                             </el-form-item>
-                            <el-form-item label="条件释放">
+                            <el-form-item label="条件Giải phóng">
                                 <el-switch v-model="isConditional"></el-switch>
                                 <template v-if="isConditional && conditions.length > 2">
                                     <span class="btn-help">
                                         <!-- <el-tooltip
-                                        content="点击查看实际逻辑关系"
+                                        content="Nhấn để xem mối quan hệ logic thực tế"
                                         placement="right"
                                         effect="light"
                                         :manual="true"
                                         :value="true"
                                     >
                                         <el-link :underline="false" @click="showRealLogic" style="font-size: 24px;">
-                                            💡点击查看实际逻辑关系
+                                            💡Nhấn để xem mối quan hệ logic thực tế
                                         </el-link>
                       </el-tooltip>-->
                                         <el-button plain icon="el-icon-info" @click="showRealLogic"
-                                            >点击查看实际逻辑关系</el-button
+                                            >Nhấn để xem mối quan hệ logic thực tế</el-button
                                         >
                                     </span>
                                     <el-alert
@@ -45,14 +45,14 @@
                                         type="warning"
                                     ></el-alert>
                                     <el-dialog
-                                        title="实际逻辑"
+                                        title="Logic thực tế"
                                         :visible.sync="logicDialogVisible"
                                         :width="Math.min(640, this.windowInnerWidth * 0.9) + 'px'"
                                     >
                                         <span>{{ logicDialog }}</span>
                                         <span slot="footer" class="dialog-footer">
                                             <el-button type="primary" @click="logicDialogVisible = false"
-                                                >确 定</el-button
+                                                >Xác nhận</el-button
                                             >
                                         </span>
                                     </el-dialog>
@@ -67,8 +67,8 @@
                                     <template v-if="index >= 1">
                                         <el-form-item label>
                                             <el-radio-group v-model="condition.logic">
-                                                <el-radio label="&amp;">并且(and)</el-radio>
-                                                <el-radio label="|">或(or)</el-radio>
+                                                <el-radio label="&amp;">Và(and)</el-radio>
+                                                <el-radio label="|">Hoặc(or)</el-radio>
                                             </el-radio-group>
                                         </el-form-item>
                                     </template>
@@ -76,50 +76,50 @@
                                         <el-col :span="16">
                                             <el-select
                                                 v-model="condition.name"
-                                                placeholder="判断项目"
+                                                placeholder="Các mục điều kiện"
                                                 @change="onConditionChange(index)"
                                             >
-                                                <el-option label="自身有增减益效果" value="buff"></el-option>
-                                                <el-option label="自身有增减益效果层数" value="buff_level"></el-option>
-                                                <el-option label="目标有增减益效果" value="tbuff"></el-option>
-                                                <el-option label="目标有增减益效果层数" value="tbuff_level"></el-option>
-                                                <el-option label="自身增减益效果持续时间" value="bufftime"></el-option>
-                                                <el-option label="目标增减益效果持续时间" value="tbufftime"></el-option>
-                                                <el-option label="自身不存在某增减益效果" value="nobuff"></el-option>
-                                                <el-option label="目标不存在某增减益效果" value="tnobuff"></el-option>
+                                                <el-option label="Bản thân có hiệu ứng tăng giảm" value="buff"></el-option>
+                                                <el-option label="Bản thân có hiệu ứng tăng giảm层数" value="buff_level"></el-option>
+                                                <el-option label="Mục tiêu có hiệu ứng tăng giảm" value="tbuff"></el-option>
+                                                <el-option label="Mục tiêu có hiệu ứng tăng giảm层数" value="tbuff_level"></el-option>
+                                                <el-option label="Thời gian hiệu lực của hiệu ứng tăng giảm bản thân" value="bufftime"></el-option>
+                                                <el-option label="Thời gian hiệu lực của hiệu ứng tăng giảm mục tiêu" value="tbufftime"></el-option>
+                                                <el-option label="Bản thân không có hiệu ứng tăng giảm nào đó" value="nobuff"></el-option>
+                                                <el-option label="Mục tiêu không có hiệu ứng tăng giảm nào đó" value="tnobuff"></el-option>
                                                 <el-option label="目标NPC强度等级" value="npclevel"></el-option>
-                                                <el-option label="生命值和最大血量的比值" value="life"></el-option>
-                                                <el-option label="内力值和最大内力值的比值" value="mana"></el-option>
-                                                <el-option label="剑气/尘身刀气/战意/怒气值" value="rage"></el-option>
+                                                <el-option label="Tỷ lệ giữa điểm số sức khỏe và máu tối đa" value="life"></el-option>
+                                                <el-option label="Tỷ lệ giữa điểm nội lực và nội lực tối đa" value="mana"></el-option>
+                                                <el-option label="Giá trị kiếm khí / khí đao / ý chiến / giận dữ" value="rage"></el-option>
                                                 <el-option
-                                                    label="纯阳气点/少林禅那/七秀剑舞值"
+                                                    label="Điểm khí thuần dương / Thiền pháp Thiếu Lâm / Giá trị vũ điệu kiếm Bảy Hoa"
                                                     value="qidian"
                                                 ></el-option>
-                                                <el-option label="神机/竹雾刀气/格挡值" value="energy"></el-option>
-                                                <el-option label="日灵/金屏刀气值" value="sun"></el-option>
-                                                <el-option label="月魂值" value="moon"></el-option>
-                                                <el-option label="满日状态" value="sun_power"></el-option>
-                                                <el-option label="满月状态" value="moon_power"></el-option>
+                                                <el-option label="Giá trị cơ khí thần / khí đao sương tre / giá trị chặn" value="energy"></el-option>
+                                                <el-option label="Giá trị linh hồn mặt trời / khí đao màn vàng" value="sun"></el-option>
+                                                <el-option label="Giá trị Nguyệt hồn" value="moon"></el-option>
+                                                <el-option label="Trạng thái Mãn Nhật" value="sun_power"></el-option>
+                                                <el-option label="Trạng thái Mãn Nguyệt" value="moon_power"></el-option>
                                                 <el-option
-                                                    label="充能技能的当前充能层数"
+                                                    label="Số lớp tích năng của kỹ năng đang được nạp"
                                                     value="skill_energy"
                                                 ></el-option>
                                                 <el-option label="存在某技能/奇穴ID" value="skill"></el-option>
                                                 <el-option label="不存在某技能/奇穴ID" value="noskill"></el-option>
                                                 <el-option
-                                                    label="该宏最后一次释放的技能"
+                                                    label="该宏最后一次Giải phóng的技能"
                                                     value="last_skill"
                                                 ></el-option>
-                                                <el-option label="周围3尺以内敌人数量" value="nearby_enemy"></el-option>
-                                                <el-option label="技能调息完成" value="skill_notin_cd"></el-option>
-                                                <el-option label="药性点数" value="yaoxing"></el-option>
+                                                <el-option label="Số lượng kẻ địch trong phạm vi 3 thước" value="nearby_enemy"></el-option>
+                                                <el-option label="Kỹ năng đã hồi xong" value="skill_notin_cd"></el-option>
+                                                <el-option label="Điểm dược tính" value="yaoxing"></el-option>
                                             </el-select>
                                             <el-row :gutter="2">
                                                 <el-col
                                                     :span="10"
                                                     v-if="needsConditionParams.subname.includes(condition.name)"
                                                 >
-                                                    <el-input v-model="condition.subname" placeholder="名称"></el-input>
+                                                    <el-input v-model="condition.subname" placeholder="Tên"></el-input>
                                                 </el-col>
                                                 <el-col
                                                     :span="7"
@@ -149,7 +149,7 @@
                                                     :span="7"
                                                     v-if="needsConditionParams.value.includes(condition.name)"
                                                 >
-                                                    <el-input v-model="condition.value" placeholder="值"></el-input>
+                                                    <el-input v-model="condition.value" placeholder="Giá trị"></el-input>
                                                 </el-col>
                                             </el-row>
                                         </el-col>
@@ -178,20 +178,20 @@
                         </el-form>
                         <div class="u-submit">
                             <el-button type="primary" icon="el-icon-right" class="u-btn" @click="insertLine"
-                                >插入</el-button
+                                >Chèn</el-button
                             >
                         </div>
                     </div>
                 </el-col>
                 <el-col :span="12">
                     <div class="m-col m-col-right">
-                        <h2 class="u-subtitle"><img class svg-inline src="@/assets/img/macro/cube2.svg" />宏编辑区</h2>
-                        <p class="u-tips">按下Tab键即可自动联想补全</p>
+                        <h2 class="u-subtitle"><img class svg-inline src="@/assets/img/macro/cube2.svg" />Khu vực chỉnh sửa macro</h2>
+                        <p class="u-tips">Nhấn phím Tab để tự động hoàn thành</p>
                         <codemirror v-model="code" :options="cmOptions" @input="onCmCodeChange" ref="cmEditor" />
                         <div class="u-count">
                             <b :class="{ warning: code.length > maxCodeLength }">{{ code.length }}</b>
                             / {{maxCodeLength}}
-                            <em>（还可写 {{ maxCodeLength - code.length }} 字）</em>
+                            <em>(Còn lại {{ maxCodeLength - code.length }} chữ)</em>
                         </div>
                     </div>
                 </el-col>
@@ -287,26 +287,26 @@ export default {
                 buff_level: "增减益效果层数",
                 nobuff: "不存在某增减益效果",
                 bufftime: "增减益效果持续时间",
-                life: "生命值和最大血量的比值",
-                mana: "内力值和最大内力值的比值",
-                rage: "剑气/尘身刀气/战意/怒气值",
+                life: "Tỷ lệ giữa điểm số sức khỏe và máu tối đa",
+                mana: "Tỷ lệ giữa điểm nội lực và nội lực tối đa",
+                rage: "Giá trị kiếm khí / khí đao / ý chiến / giận dữ",
                 qidian: "纯阳气点",
-                energy: "神机/竹雾刀气/格挡值",
-                sun: "日灵/金屏刀气值",
-                moon: "月魂值",
-                sun_power: "满日状态",
-                moon_power: "满月状态",
-                skill_energy: "充能技能的当前充能层数",
+                energy: "Giá trị cơ khí thần / khí đao sương tre / giá trị chặn",
+                sun: "Giá trị linh hồn mặt trời / khí đao màn vàng",
+                moon: "Giá trị Nguyệt hồn",
+                sun_power: "Trạng thái Mãn Nhật",
+                moon_power: "Trạng thái Mãn Nguyệt",
+                skill_energy: "Số lớp tích năng của kỹ năng đang được nạp",
                 skill: "存在某技能/奇穴ID",
                 noskill: "不存在某技能/奇穴ID",
-                last_skill: "该宏最后一次释放的技能",
+                last_skill: "该宏最后一次Giải phóng的技能",
                 npclevel: "目标NPC强度等级",
-                nearby_enemy: "自身周围3尺以内敌人数量",
-                skill_notin_cd: "技能调息完成",
-                tbuff: "目标有增减益效果",
-                tbuff_level: "目标有增减益效果层数",
-                tnobuff: "目标不存在某增减益效果",
-                tbufftime: "目标增减益效果持续时间",
+                nearby_enemy: "自身Số lượng kẻ địch trong phạm vi 3 thước",
+                skill_notin_cd: "Kỹ năng đã hồi xong",
+                tbuff: "Mục tiêu có hiệu ứng tăng giảm",
+                tbuff_level: "Mục tiêu có hiệu ứng tăng giảm层数",
+                tnobuff: "Mục tiêu không có hiệu ứng tăng giảm nào đó",
+                tbufftime: "Thời gian hiệu lực của hiệu ứng tăng giảm mục tiêu",
             },
             logicDialogVisible: false,
             logicDialog: "",
@@ -403,11 +403,11 @@ export default {
                     let condition = this.conditions[i];
                     if (i === this.conditions.length - 1) {
                         allConditions +=
-                            // condition.logic === "&" ? " 并且 " : " 或 ";
+                            // condition.logic === "&" ? " Và " : " Hoặc ";
                             condition.logic === "&" ? " & " : " | ";
                     } else if (i !== 0) {
                         allConditions +=
-                            // condition.logic === "&" ? " 并且（" : " 或（";
+                            // condition.logic === "&" ? " Và（" : " Hoặc（";
                             condition.logic === "&" ? " &（" : " |（";
                     }
                     // allConditions += this.conditionValueName[condition.name];

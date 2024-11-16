@@ -1,7 +1,7 @@
 <template>
     <el-drawer
         class="c-admin c-community-admin"
-        title="管理面板"
+        title="Bảng điều khiển quản lý"
         :visible.sync="modelValue"
         :before-close="close"
         :append-to-body="true"
@@ -9,11 +9,11 @@
         :withHeader="false"
     >
         <div class="c-admin-wrapper c-community-wrapper">
-            <el-divider content-position="left">信息设置</el-divider>
+            <el-divider content-position="left">Cài đặt thông tin</el-divider>
             <div class="c-admin-extend">
                 <div class="u-condition u-map u-title-condition">
                     <span class="u-prepend el-input-group__prepend">
-                        <el-select v-model="form.category" filterable placeholder="请选择">
+                        <el-select v-model="form.category" filterable placeholder="Vui lòng chọn">
                             <el-option
                                 v-for="item in categoryList"
                                 :value="item.name"
@@ -23,14 +23,14 @@
                             </el-option>
                         </el-select>
                     </span>
-                    <el-input v-model="form.title" placeholder="请输入标题" class="input-author drawer-item-content">
+                    <el-input v-model="form.title" placeholder="Vui lòng nhập tiêu đề" class="input-author drawer-item-content">
                     </el-input>
                 </div>
             </div>
             <!-- <div class="c-admin-extend">
                 <div class="u-condition u-map">
                     <span class="u-prepend el-input-group__prepend">分类</span>
-                    <el-select v-model="form.category" filterable placeholder="请选择">
+                    <el-select v-model="form.category" filterable placeholder="Vui lòng chọn">
                         <el-option v-for="item in categoryList" :value="item.name" :label="item.name" :key="item.name">
                         </el-option>
                     </el-select>
@@ -38,14 +38,14 @@
             </div> -->
             <div class="c-admin-extend m-community-tag">
                 <div class="u-condition u-map">
-                    <span class="u-prepend el-input-group__prepend">标签</span>
+                    <span class="u-prepend el-input-group__prepend">Thẻ</span>
                     <el-select
                         v-model="form.tags"
                         multiple
                         filterable
                         allow-create
                         default-first-option
-                        placeholder="请选择"
+                        placeholder="Vui lòng chọn"
                         clearable
                         @change="onTagChange"
                     >
@@ -60,7 +60,7 @@
                             <el-color-picker v-model="item.color" :predefine="color_options"></el-color-picker>
                         </div>
                     </template>
-                    <el-alert title="暂未设置标签" v-else type="info" show-icon :closable="false"></el-alert>
+                    <el-alert title="暂未设置Thẻ" v-else type="info" show-icon :closable="false"></el-alert>
                 </div>
             </div>
             <div class="c-admin-extend">
@@ -68,11 +68,11 @@
                     <div>
                         <el-input
                             v-model="form.user_id"
-                            placeholder="请输入作者ID"
+                            placeholder="Vui lòng nhập ID tác giả"
                             class="input-author drawer-item-content"
                         >
                             <template #prepend>
-                                <span class="u-keyword">作者ID</span>
+                                <span class="u-keyword">ID tác giả</span>
                             </template>
                             <template #append>
                                 <a class="m-user" :href="authorLink(userInfo.ID)" target="_blank">
@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <el-divider content-position="left">封面海报</el-divider>
+            <el-divider content-position="left">Ảnh bìa</el-divider>
             <div class="c-admin-banner">
                 <el-upload
                     class="c-admin-upload el-upload--picture-card"
@@ -99,29 +99,29 @@
                     <i class="el-icon-plus"></i>
                 </el-upload>
                 <el-input class="u-banner" v-model="post_banner">
-                    <span slot="prepend">海报地址</span>
+                    <span slot="prepend">Địa chỉ ảnh bìa</span>
                     <span slot="append">
-                        <span class="u-btn" @click="removeBanner"> <i class="el-icon-circle-close"></i> 移除海报 </span>
+                        <span class="u-btn" @click="removeBanner"> <i class="el-icon-circle-close"></i> Gỡ bỏ ảnh bìa </span>
                     </span>
                 </el-input>
             </div>
 
-            <el-divider content-position="left">高亮置顶</el-divider>
+            <el-divider content-position="left">Nổi bật và ghim</el-divider>
 
             <p class="c-admin-space">
-                <span class="c-admin-label">置顶：</span>
+                <span class="c-admin-label">Ghim:</span>
                 <el-checkbox-group v-model="topStatus" class="c-admin-status" size="small">
-                    <el-checkbox label="is_top">全局置顶</el-checkbox>
-                    <el-checkbox label="is_category_top">版内置顶</el-checkbox>
+                    <el-checkbox label="is_top">Ghim toàn cục</el-checkbox>
+                    <el-checkbox label="is_category_top">Ghim trong khu vực</el-checkbox>
                 </el-checkbox-group>
             </p>
             <p class="c-admin-space">
-                <span class="c-admin-label">精选：</span>
+                <span class="c-admin-label">Chọn lọc:</span>
                 <el-switch v-model="form.is_star" :active-value="1" :inactive-value="0" />
             </p>
 
             <p class="c-admin-space">
-                <span class="c-admin-label">高亮：</span>
+                <span class="c-admin-label">Nổi bật:</span>
                 <el-switch v-model="form.is_hight" :active-value="1" :inactive-value="0" />
                 <span v-show="showColors">
                     <el-color-picker
@@ -131,21 +131,21 @@
                         size="mini"
                     ></el-color-picker>
                     <span class="c-admin-highlight-preview" :style="{ color: color }" style="margin-right: 10px">
-                        预览高亮效果
+                        Xem trước hiệu ứng nổi bật
                     </span>
                 </span>
             </p>
 
             <div class="c-community-buttons">
                 <div class="c-community-buttons_left">
-                    <el-button type="danger" class="u-delete" size="small" icon="el-icon-delete" @click="deleteTopic">删除帖子</el-button>
+                    <el-button type="danger" class="u-delete" size="small" icon="el-icon-delete" @click="deleteTopic">Xóa bài viết</el-button>
                     <el-button type="warning" class="u-check" size="small" icon="el-icon-refresh-left" @click="handleCheck"
-                        >转为待审核</el-button
+                        >Chuyển thành chờ xét duyệt</el-button
                     >
                 </div>
                 <div class="c-community-buttons_right">
                     <el-button type="primary" size="small" @click="submit" :loading="pushing">提交</el-button>
-                    <el-button type="plain" size="small" @click="close">取消</el-button>
+                    <el-button type="plain" size="small" @click="close">Hủy bỏ</el-button>
                 </div>
             </div>
         </div>
@@ -250,18 +250,18 @@ export default {
         handleCheck() {
             const id = this.post.id;
             if (!id) {
-                this.$message.error("ID不存在!");
+                this.$message.error("ID không tồn tại!");
                 return;
             }
-            this.$confirm(`此操作将该数据转为【待审核】状态, 是否继续?`, "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm(`此操作将该数据转为【待审核】状态, 是否继续?`, "Gợi ý", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy bỏ",
                 type: "warning",
             }).then(() => {
                 auditTopic(id, "wait").then(() => {
                     this.$message({
                         type: "success",
-                        message: "操作成功!",
+                        message: "Hành động thành công!",
                     });
                     this.$emit("update:modelValue", false);
                     window.location.href = "/community";
@@ -271,7 +271,7 @@ export default {
         async submit() {
             const id = this.post.id;
             if (!id) {
-                this.$message.error("ID不存在!");
+                this.$message.error("ID không tồn tại!");
                 return;
             }
 
@@ -301,7 +301,7 @@ export default {
             Promise.all(promises).then(() => {
                 this.$message({
                     type: "success",
-                    message: "操作成功!",
+                    message: "Hành động thành công!",
                 });
                 this.$emit("update:modelValue", false);
                 location.reload();
@@ -334,18 +334,18 @@ export default {
         deleteTopic() {
             const id = this.post.id;
             if (!id) {
-                this.$message.error("ID不存在!");
+                this.$message.error("ID không tồn tại!");
                 return;
             }
-            this.$confirm("此操作将【删除】该数据, 是否继续?", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm("此操作将【删除】该数据, 是否继续?", "Gợi ý", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy bỏ",
                 type: "warning",
             }).then(() => {
                 deleteTopic(id).then(() => {
                     this.$message({
                         type: "success",
-                        message: "删除成功!",
+                        message: "Xóa thành công!",
                     });
                     this.$emit("update:modelValue", false);
                     window.location.href = "/community";
@@ -400,7 +400,7 @@ export default {
             this.post_banner = res.data[0];
         },
         uploadFail: function (err, file, fileList) {
-            this.$message.error("上传失败");
+            this.$message.error("Tải lên không thành công");
             console.log(err);
         },
         removeBanner: function () {

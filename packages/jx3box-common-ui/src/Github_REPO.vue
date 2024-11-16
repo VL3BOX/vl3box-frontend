@@ -35,7 +35,7 @@
         </div>
         <div class="u-more">
             <a class="u-report" :href="issue_url" target="_blank"
-                >提建议 | 发现Bug</a
+                >Đề xuất | Phát hiện BUG|Đề xuất | Phát hiện BUG</a
             >
             <a class="u-join" :href="html_url" target="_blank">+ Contribute</a>
         </div>

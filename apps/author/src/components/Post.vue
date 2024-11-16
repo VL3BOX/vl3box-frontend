@@ -13,13 +13,13 @@
                     <h2 class="u-post">
                         <!-- 标题文字 -->
                         <a class="u-title" :href="postLink(item.post_type, item.ID, item.client)" target="_blank">{{
-                            item.post_title || "无标题"
+                            item.post_title || "Không có tiêu đề"
                         }}</a>
                     </h2>
 
                     <!-- 字段 -->
                     <div class="u-content u-desc">
-                        {{ item.post_excerpt || item.post_title || "这个作者很懒,什么都没有留下" }}
+                        {{ item.post_excerpt || item.post_title || "Tác giả này rất lười, không để lại bất cứ điều gì" }}
                     </div>
 
                     <!-- 作者 -->

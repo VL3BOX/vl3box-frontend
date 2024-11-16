@@ -1,6 +1,6 @@
 <template>
     <div class="c-author-msg">
-        <img src="../../assets/img/author/msg.svg" svg-inline title="短消息" />
+        <img src="../../assets/img/author/msg.svg" svg-inline title="Tin nhắn ngắn" />
     </div>
 </template>
 

@@ -27,21 +27,21 @@ export default {
             list: {
                 terms: [
                     {
-                        title: "用户协议",
+                        title: "Thỏa thuận người dùng",
                         type: "license",
                     },
                     {
-                        title: "隐私政策",
+                        title: "Chính sách bảo mật",
                         type: "privacy",
                     },
                 ],
                 creation: [
                     {
-                        title: "创作公约",
+                        title: "Hiệp ước sáng tác",
                         type: "treaty",
                     },
                     {
-                        title: "创作激励",
+                        title: "Khuyến khích sáng tác",
                         type: "incentives",
                     },
                 ],

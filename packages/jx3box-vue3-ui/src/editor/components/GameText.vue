@@ -138,9 +138,9 @@ export default {
                     }
                     let time = interval / 16;
                     if (time > 60) {
-                        time = Math.floor(time / 60) + "分钟";
+                        time = Math.floor(time / 60) + "phút";
                     } else {
-                        time = time + "秒";
+                        time = time + "giây";
                     }
                     this.html = this.html.replace(replace, escape(time));
                     continue;
@@ -187,7 +187,7 @@ export default {
                     let enchant_id = replaceMap[replace];
                     let enchant = this.getResource("enchant", enchant_id);
                     let time = enchant.Time;
-                    if (time) time = `，持续${parseInt(time) / 60}分钟。`;
+                    if (time) time = `, kéo dài${parseInt(time) / 60}phút.`;
                     let result = `${enchant.AttriName}${time ? time : ""}`;
                     this.html = this.html.replace(replace, result);
                 } catch (e) {

@@ -11,7 +11,7 @@
         <PublicNotice bckey="pet_ac" />
         <template v-if="luckyList.length > 0 && !showAllList">
             <div class="m-pet-title u-type u-lucky-title">
-                <div class="u-title">今日福缘</div>
+                <div class="u-title">Phúc duyên hôm nay</div>
             </div>
             <div class="m-lucky-list">
                 <luckyItem v-for="item in luckyList" :key="item.id" :item="item"></luckyItem>
@@ -21,7 +21,7 @@
             <div v-for="(item, index) in list_type" :key="'l' + index">
                 <div class="m-pet-title u-type" v-if="item.list.length > 0">
                     <div class="u-title">{{ item.name }}</div>
-                    <div class="u-all" @click="setActive(item.class)">查看全部</div>
+                    <div class="u-all" @click="setActive(item.class)">Xem tất cả</div>
                 </div>
                 <div class="m-pet-list">
                     <pet-item v-for="pet in item.list" :key="pet.id" :petObject="pet" />
@@ -42,7 +42,7 @@
                 @click="appendPage"
                 :loading="loading"
                 icon="el-icon-arrow-down"
-                >加载更多</el-button
+                >Tải thêm</el-button
             >
             <el-pagination
                 class="m-archive-pages"
@@ -57,7 +57,7 @@
         <el-alert
             v-if="isNoRes()"
             class="m-archive-null"
-            title="没有找到相关宠物"
+            title="Không tìm thấy thú cưng liên quan"
             type="info"
             center
             show-icon
@@ -107,25 +107,25 @@ export default {
                 {
                     class: 1,
                     type: 1,
-                    name: "水族",
+                    name: "Thủy tộc",
                     list: [],
                 },
                 {
                     class: 2,
                     type: 2,
-                    name: "禽鸟",
+                    name: "Cầm điểu",
                     list: [],
                 },
                 {
                     class: 3,
                     type: 3,
-                    name: "走兽",
+                    name: "Tẩu thú",
                     list: [],
                 },
                 {
                     class: 4,
                     type: 4,
-                    name: "机关",
+                    name: "Cơ quan",
                     list: [],
                 },
             ],
@@ -195,7 +195,7 @@ export default {
         },
         getTypeName() {
             let type = this.Type.filter((item) => item.class == this.active);
-            return type[0].name || "所有种类";
+            return type[0].name || "Tất cả các loại";
         },
         getPetListInit() {
             if (!this.params.Class) {

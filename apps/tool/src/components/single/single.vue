@@ -1,8 +1,8 @@
 <template>
     <singlebox :post="post" :stat="stat" v-loading="loading" @extendUpdate="updateExtend">
-        <!-- 头部子类型 -->
+        <!-- 头部子Loại -->
         <div class="u-meta u-sub-block" slot="single-header">
-            <em class="u-label">类型</em>
+            <em class="u-label">Loại</em>
             <span class="u-value">
                 {{ post_subtype }}
             </span>

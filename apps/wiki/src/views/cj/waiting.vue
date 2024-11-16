@@ -1,7 +1,7 @@
 <template>
     <div class="m-waiting-view">
-        <el-alert class="u-waiting-alert" v-if="old" title="所有成就都已经有了各自的攻略，以下是一些比较老旧的成就攻略" type="success"></el-alert>
-        <span class="u-list-empty" v-if="isEmpty">👻 暂无记录</span>
+        <el-alert class="u-waiting-alert" v-if="old" title="Tất cả thành tựu đều đã có chiến lược riêng, dưới đây là một số chiến lược thành tựu cũ" type="success"></el-alert>
+        <span class="u-list-empty" v-if="isEmpty">👻 Chưa có ghi chép</span>
         <Achievements :achievements="achievements" />
         <el-pagination
             background

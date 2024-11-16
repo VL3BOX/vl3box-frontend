@@ -15,10 +15,10 @@
         <el-row v-if="data.length >= 3 || showPager">
             <el-col :span="4">
                 <el-button type="text" v-show="showPager" @click="showLess()"
-                    >收起</el-button
+                    >Thu gọn</el-button
                 >
                 <el-button type="text" v-show="!showPager" @click="showMore()"
-                    >查看更多</el-button
+                    >Xem thêm</el-button
                 >
             </el-col>
             <el-col :span="20" class="c-comment-reply-pages">

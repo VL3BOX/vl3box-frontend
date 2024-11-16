@@ -1,19 +1,19 @@
 <template>
     <div class="c-combo m-resource-combo">
         <el-tabs v-model="activeName" type="card" class="m-skill-tabs">
-            <el-tab-pane label="门派武学" name="special">
+            <el-tab-pane label="Võ học môn phái" name="special">
                 <template #label>
                     <div class="u-tab-label">
                         <i class="el-icon-s-order"></i>
-                        <b>门派武学</b>
+                        <b>Võ học môn phái</b>
                     </div>
                 </template>
             </el-tab-pane>
-            <el-tab-pane label="全部技能" name="all">
+            <el-tab-pane label="Tất cả kỹ năng" name="all">
                 <template #label>
                     <div class="u-tab-label">
                         <i class="el-icon-menu"></i>
-                        <b>全部技能</b>
+                        <b>Tất cả kỹ năng</b>
                     </div>
                 </template>
             </el-tab-pane>
@@ -22,7 +22,7 @@
             <div class="m-select-content">
                 <div v-show="activeName === 'all'">
                     <div v-if="total && done" class="m-resource-count">
-                        <i class="el-icon-s-data"></i> 共找到 <b>{{ total }}</b> 条记录
+                        <i class="el-icon-s-data"></i> Tìm thấy tổng cộng <b>{{ total }}</b> bản ghi
                     </div>
                     <ul class="m-resource-list">
                         <li v-for="(o, i) in skill" class="u-item" :key="i" @click="selectSkill(o, i)" ref="skill">
@@ -39,11 +39,11 @@
                             </span>
                         </li>
                     </ul>
-                    <el-alert v-if="!skill.length && done" title="没有找到相关条目" type="info" show-icon></el-alert>
+                    <el-alert v-if="!skill.length && done" title="Không tìm thấy mục liên quan" type="info" show-icon></el-alert>
 
                     <template v-if="multipage">
                         <!-- 下一页 -->
-                        <el-button class="m-archive-more" :class="{ show: hasNextPage }" type="primary" icon="el-icon-arrow-down" @click="appendPage">加载更多</el-button>
+                        <el-button class="m-archive-more" :class="{ show: hasNextPage }" type="primary" icon="el-icon-arrow-down" @click="appendPage">Tải thêm</el-button>
                         <!-- 分页 -->
                         <el-pagination
                             class="m-archive-pages"
@@ -57,14 +57,14 @@
                         ></el-pagination>
                     </template>
 
-                    <div class="m-database-tip" v-show="isBlank">❤ 请输入搜索条件查询</div>
+                    <div class="m-database-tip" v-show="isBlank">❤ Vui lòng nhập điều kiện tìm kiếm</div>
                 </div>
                 <skill-martial v-show="activeName === 'special'" :client="client" :subtype="subtype" @selectSkill="selectSkill"></skill-martial>
             </div>
 
             <div class="c-combo-content__right">
-                <!-- 已选技能 -->
-                <el-divider>已选技能
+                <!-- Kỹ năng đã chọn -->
+                <el-divider>Kỹ năng đã chọn
                     <!-- <el-checkbox v-model="sort" border size="small">开启排序</el-checkbox> -->
                 </el-divider>
                 <div class="m-selected-skills">
@@ -78,35 +78,35 @@
                                 <span class="u-name" :class="{ 'u-name_underline': skill.underline }" :title="skill.Name">{{ skill.Name }}</span>
                                 <span class="u-note" :title="skill.n" :style="itemStyle(skill)">{{ skill.n }}</span>
                             </div>
-                            <i class="u-remove-icon" :class="skill.iconSize ? `u-remove-icon_${skill.iconSize}` : ''" title="移除" @click="removeSelected(index)"><i class="el-icon-close"></i></i>
+                            <i class="u-remove-icon" :class="skill.iconSize ? `u-remove-icon_${skill.iconSize}` : ''" title="Gỡ bỏ" @click="removeSelected(index)"><i class="el-icon-close"></i></i>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <el-dialog :visible.sync="showRemark" width="600px" append-to-body v-draggable class="c-large-dialog" title="设置备注">
+        <el-dialog :visible.sync="showRemark" width="600px" append-to-body v-draggable class="c-large-dialog" title="Cài đặt ghi chú">
             <el-form label-position="left" label-width="80px">
-                <el-form-item label="备注">
-                    <el-input placeholder="输入备注" v-model="form.n"></el-input>
+                <el-form-item label="Ghi chú">
+                    <el-input placeholder="输入Ghi chú" v-model="form.n"></el-input>
                 </el-form-item>
-                <el-form-item label="文字颜色">
+                <el-form-item label="Màu chữ">
                     <el-color-picker v-model="form.c" :predefine="predefineColors" show-alpha></el-color-picker>
                 </el-form-item>
-                <el-form-item label="文字大小">
+                <el-form-item label="Kích thước chữ">
                     <el-input v-model="form.fz"></el-input>
                 </el-form-item>
-                <el-form-item label="文字粗细">
+                <el-form-item label="Độ dày chữ">
                     <el-select v-model="form.fw">
                         <el-option v-for="i in 9" :key="i" :value="i * 100" :label="i * 100"></el-option>
                     </el-select>
                 </el-form-item>
-                <el-form-item label="预览">
-                    <span :style="nStyle">{{ form.n || '示例文字' }}</span>
+                <el-form-item label="Xem trước">
+                    <span :style="nStyle">{{ form.n || 'Chữ mẫu' }}</span>
                 </el-form-item>
             </el-form>
             <span slot="footer" class="dialog-footer">
-				<el-button @click="showRemark = false">取 消</el-button>
-				<el-button type="primary" @click="confirm">确 定
+				<el-button @click="showRemark = false">Hủy bỏ</el-button>
+				<el-button type="primary" @click="confirm">Xác nhận
 				</el-button>
 			</span>
         </el-dialog>
@@ -305,14 +305,14 @@ export default {
             this.$contextmenu({
                 items: [
                     {
-                        label: !skill?.WithoutGcd ? "设置为无GCD技能" : "设置为有GCD技能",
+                        label: !skill?.WithoutGcd ? "Đặt thành kỹ năng không có GCD" : "Đặt thành kỹ năng có GCD",
                         onClick: () => {
                             this.$set(skill, "WithoutGcd", !skill.WithoutGcd);
                         },
                         icon: !skill?.WithoutGcd ? "el-icon-check" : "el-icon-close",
                     },
                     {
-                        label: "图标大小",
+                        label: "Kích thước biểu tượng",
                         children: [
                             {
                                 label: "小",
@@ -329,13 +329,13 @@ export default {
                         ],
                     },
                     {
-                        label: skill.underline ? "取消下划线" : "设置下划线",
+                        label: skill.underline ? "Hủy gạch chân" : "Đặt gạch chân",
                         onClick: () => {
                             this.$set(skill, "underline", !skill.underline);
                         },
                     },
                     {
-                        label: "备注",
+                        label: "Ghi chú",
                         onClick: () => {
                             this.showRemark = true;
                             this.currentSkill = skill

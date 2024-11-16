@@ -30,7 +30,7 @@
         <el-collapse class="m-history" v-if="history && history.length" v-model="collapse">
             <el-collapse-item name="history">
                 <section class="m-calendar-history">
-                    <span class="u-title">✨ 那年今日</span>
+                    <span class="u-title">✨ Ngày này năm ấy</span>
                     <el-carousel
                         indicator-position="none"
                         :autoplay="true"

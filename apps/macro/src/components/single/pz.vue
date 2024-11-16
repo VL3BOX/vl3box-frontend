@@ -2,7 +2,7 @@
     <div class="m-pz" v-if="data">
         <el-tabs v-model="key" type="card">
             <el-tab-pane :label="item.name" :name="item.key" v-for="item in data" :key="item.id" :lazy="true">
-                <a class="u-pz-link" target="_blank" :href="url"> <i class="el-icon-link"></i> 点击查看配装详情 </a>
+                <a class="u-pz-link" target="_blank" :href="url"> <i class="el-icon-link"></i> Nhấp để xem chi tiết trang bị </a>
                 <div class="m-pz-container">
                     <iframe
                         v-if="name === item.name"
@@ -41,7 +41,7 @@ export default {
                         arr.push({
                             id: item.id,
                             key: String(i),
-                            name: item.name || "未命名",
+                            name: item.name || "Chưa đặt tên",
                         });
                     }
                 });

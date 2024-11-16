@@ -3,25 +3,25 @@
         <div class="m-wiki-post-panel" v-if="wiki && wiki.post">
             <WikiPanel :wiki-post="wiki" :showQR="false">
                 <template slot="head-title">
-                    <span class="u-txt">技能百科</span>
+                    <span class="u-txt">Bách khoa kỹ năng</span>
                 </template>
                 <template slot="head-actions">
                     <a class="el-button el-button--primary" :href="publish_url(`skill/${id}`)" target="_blank">
                         <i class="el-icon-edit"></i>
-                        <span>完善技能百科</span>
+                        <span>完善Bách khoa kỹ năng</span>
                     </a>
                 </template>
                 <template slot="body">
                     <Article :content="wiki.post.content" />
                     <div class="m-wiki-signature">
                         <i class="el-icon-edit"></i>
-                        本次修订由 <b>{{ user_name }}</b> 提交于{{ updated_at }}
+                        Lần sửa đổi này được thực hiện bởi <b>{{ user_name }}</b> Gửi vào{{ updated_at }}
                     </div>
                 </template>
             </WikiPanel>
 
             <!-- <details class="m-wiki-detail"> -->
-                <!-- <summary class="u-wiki__title"><i class="el-icon-info"></i>更多信息</summary> -->
+                <!-- <summary class="u-wiki__title"><i class="el-icon-info"></i>Thêm thông tin</summary> -->
                 <!-- 历史版本 -->
                 <!-- <WikiRevisions type="skill" :source-id="id" /> -->
 
@@ -31,8 +31,8 @@
         </div>
         <div class="m-wiki-post-empty" v-if="is_empty">
             <i class="el-icon-s-opportunity"></i>
-            <span>暂无百科，我要</span>
-            <a class="s-link" :href="publish_url(`skill/${id}`)">完善百科</a>
+            <span>Chưa có bách khoa, tôi muốn</span>
+            <a class="s-link" :href="publish_url(`skill/${id}`)">Hoàn thiện bách khoa</a>
         </div>
     </div>
 </template>

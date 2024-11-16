@@ -45,7 +45,7 @@
                             </span>
                         </li>
                     </template>
-                    <el-alert v-else show-icon type="warning" title="该资料片暂无技改详解" :closable="false"></el-alert>
+                    <el-alert v-else show-icon type="warning" title="Tài liệu mở rộng này chưa có giải thích chi tiết về kỹ thuật" :closable="false"></el-alert>
                 </ul>
             </div>
             <el-pagination
@@ -124,7 +124,7 @@ export default {
             return getThumbnail(`${JX3BOX.__imgPath}image/zlp/${zlp}.png`, [180, 86]);
         },
         nl2br(str) {
-            return str ? str.replace(/[\r\n]/g, "<br>") : "暂无描述";
+            return str ? str.replace(/[\r\n]/g, "<br>") : "Chưa có mô tả";
         },
         async showDetail(item) {
             if (item.showSub) {

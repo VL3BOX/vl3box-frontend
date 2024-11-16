@@ -2,7 +2,7 @@
     <div class="c-author-medals" v-if="ready">
         <div class="u-label">
             <img svg-inline src="../../assets/img/leftsidebar/medal.svg" />
-            <span>作者荣誉</span>
+            <span>Danh hiệu tác giả</span>
         </div>
         <div class="u-medals" v-if="medals && medals.length">
             <el-tooltip

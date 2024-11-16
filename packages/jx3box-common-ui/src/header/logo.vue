@@ -1,7 +1,7 @@
 <template>
-    <div class="c-header-logo" @click="toggleBox($event)" title="点击展开魔盒矩阵">
+    <div class="c-header-logo" @click="toggleBox($event)" title="Nhấn để mở rộng Ma hạp ứng dụng">
         <i class="u-pic" id="c-header-logo"><img svg-inline src="../../assets/img/header/logo.svg" /></i>
-        <span class="u-txt" :class="{ on: isIndex }" href="/">魔盒</span>
+        <span class="u-txt" :class="{ on: isIndex }" href="/">Ma hạp</span>
     </div>
 </template>
 

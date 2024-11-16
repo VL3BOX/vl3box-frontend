@@ -1,7 +1,7 @@
 <template>
     <div class="m-index-rec" v-if="data && data.length">
         <h5 class="u-title">
-            <span><i class="el-icon-star-off"></i>当前版本编辑推荐</span>
+            <span><i class="el-icon-star-off"></i>Đề xuất của biên tập viên cho phiên bản hiện tại</span>
         </h5>
         <div class="u-ac" v-html="ac"></div>
         <el-row>

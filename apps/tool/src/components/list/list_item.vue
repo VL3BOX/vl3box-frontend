@@ -12,7 +12,7 @@
 
             <!-- 标题文字 -->
             <a class="u-title" :style="showHighlight(item.color)" :href="postLink(item.ID)" :target="target">{{
-                item.post_title || "无标题"
+                item.post_title || "Không có tiêu đề"
             }}</a>
 
             <!-- 角标 -->
@@ -21,14 +21,14 @@
             </span>
 
             <span class="u-push" v-if="hasPermission">
-                <time v-if="showPushDate" class="u-push__time" :class="{'is-recent': isRecent()}">{{ pushDate }} 已推送</time>
-                <el-button class="u-push__btn" size="mini" type="warning" @click="onPush" icon="el-icon-s-promotion">推送</el-button>
+                <time v-if="showPushDate" class="u-push__time" :class="{'is-recent': isRecent()}">{{ pushDate }} Đã được gửi</time>
+                <el-button class="u-push__btn" size="mini" type="warning" @click="onPush" icon="el-icon-s-promotion">Gửi</el-button>
             </span>
         </h2>
 
         <!-- 字段 -->
         <div class="u-content u-desc">
-            {{ item.post_excerpt || item.post_title || "这个作者很懒,什么都没有留下" }}
+            {{ item.post_excerpt || item.post_title || "Tác giả này rất lười, không để lại gì cả" }}
         </div>
 
         <!-- 作者 -->

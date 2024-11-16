@@ -1,8 +1,8 @@
 <template>
     <div class="m-fb-npc" v-loading="loading">
-        <el-input class="m-npc-search" placeholder="请输入NPC名称或ID" v-model.trim.lazy="search" @change="loadData" :disabled="onlyboss">
-            <template slot="prepend"><i class="el-icon-search"></i> 搜索</template>
-            <el-switch class="u-switch u-onlyboss" slot="append" v-model="onlyboss" active-color="#13ce66" inactive-text="只看首领" @change="loadData"></el-switch>
+        <el-input class="m-npc-search" placeholder="Vui lòng nhập tên hoặc ID NPC" v-model.trim.lazy="search" @change="loadData" :disabled="onlyboss">
+            <template slot="prepend"><i class="el-icon-search"></i> Tìm kiếm</template>
+            <el-switch class="u-switch u-onlyboss" slot="append" v-model="onlyboss" active-color="#13ce66" inactive-text="Chỉ xem boss" @change="loadData"></el-switch>
         </el-input>
         <div class="m-filter-group" v-if="onlyboss">
             <el-radio-group v-model="mapid" size="medium">
@@ -38,7 +38,7 @@
                             {{ npc._Notation }}
                         </span>-->
                         <span class="u-intensity" v-if="npc.Intensity">
-                            强度
+                            Cường độ
                             <em>Intensity</em>
                             {{ npc.Intensity }}
                         </span>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="u-primary">
                     <div class="u-life">
-                        <b>血量</b>
+                        <b>Máu</b>
                         <em>MaxLife</em>
                         <i class="u-range">
                             <strong
@@ -58,7 +58,7 @@
                         </i>
                     </div>
                     <div class="u-mana">
-                        <b>内力</b>
+                        <b>Nội lực</b>
                         <em>MaxMana</em>
                         <i class="u-range">
                             <strong
@@ -70,32 +70,32 @@
                         </i>
                     </div>
                     <div class="u-speed" v-if="npc.RunSpeed || npc.WalkSpeed">
-                        <b>跑速</b>
+                        <b>Tốc độ chạy</b>
                         <em>RunSpeed</em>
                         {{ npc.RunSpeed || npc.WalkSpeed }}
                     </div>
                     <div class="u-touch" v-if="npc.TouchRange">
-                        <b>范围</b>
+                        <b>Phạm vi</b>
                         <em>TouchRange</em>
                         {{ npc.TouchRange }}
                     </div>
                     <div class="u-sense" v-if="npc.Sense">
-                        <b>识破</b>
+                        <b>Nhận diện</b>
                         <em>Sense</em>
                         {{ npc.Sense }}
                     </div>
                     <div class="u-dodge" v-if="npc.Dodge">
-                        <b>闪避</b>
+                        <b>Tránh né</b>
                         <em>Dodge</em>
                         {{ npc.Dodge }}
                     </div>
                     <div class="u-dodge" v-if="npc.Parry">
-                        <b>招架</b>
+                        <b>Đỡ đòn</b>
                         <em>Parry</em>
                         {{ npc.ParryValue }}
                     </div>
                     <div class="u-shield">
-                        <b>防御</b>
+                        <b>Phòng ngự</b>
                         <em>Shield</em>
                         <!-- <span class="u-sitem">
                             <span
@@ -109,41 +109,41 @@
                         </span>-->
                         <!-- <template v-if="isAdmin"> -->
                         <span class="u-sitem">
-                            外功防御
+                            外功Phòng ngự
                             <em>PhysicsShieldBase</em>
                             <span class="u-value">{{ ~~npc.PhysicsShieldBase }}</span>
                         </span>
                         <span class="u-sitem">
-                            混元防御
+                            混元Phòng ngự
                             <em>NeutralMagicDefence</em>
                             <span class="u-value">{{ ~~npc.NeutralMagicDefence }}</span>
                         </span>
                         <span class="u-sitem">
-                            阳性防御
+                            阳性Phòng ngự
                             <em>SolarMagicDefence</em>
                             <span class="u-value">{{ ~~npc.SolarMagicDefence }}</span>
                         </span>
                         <span class="u-sitem">
-                            阴性防御
+                            阴性Phòng ngự
                             <em>LunarMagicDefence</em>
                             <span class="u-value">{{ ~~npc.LunarMagicDefence }}</span>
                         </span>
                         <span class="u-sitem">
-                            毒性防御
+                            毒性Phòng ngự
                             <em>PoisonMagicDefence</em>
                             <span class="u-value">{{ ~~npc.PoisonMagicDefence }}</span>
                         </span>
                         <!-- </template> -->
                     </div>
                     <div class="u-critical">
-                        <b>会心</b>
+                        <b>Bạo kích</b>
                         <em>Critical</em>
                         <span class="u-sitem" v-if="client == 'std'">
-                            外攻会心
+                            外攻Bạo kích
                             <span class="u-value">{{ showCritical(~~npc.PhysicsCriticalStrike, ~~npc.Level) }}</span>
                         </span>
                         <span class="u-sitem" v-if="client == 'std'">
-                            内攻会心
+                            内攻Bạo kích
                             <span class="u-value">{{
                                 showCritical(~~npc.NeutralCriticalStrike || ~~npc.NeutralCriticalStrike || ~~npc.SolarCriticalStrike || ~~npc.LunarCriticalStrike, ~~npc.Level)
                             }}</span>
@@ -151,61 +151,61 @@
                         <!-- <span class="u-sitem">（即T御劲需求，具体以BOSS主要攻击类型为主）</span> -->
                         <!-- <template v-if="isAdmin"> -->
                         <span class="u-sitem">
-                            外功会心
+                            外功Bạo kích
                             <em>PhysicsCriticalStrike</em>
                             <span class="u-value">{{ ~~npc.PhysicsCriticalStrike }}</span>
                         </span>
                         <span class="u-sitem">
-                            混元会心
+                            混元Bạo kích
                             <em>NeutralCriticalStrike</em>
                             <span class="u-value">{{ ~~npc.NeutralCriticalStrike }}</span>
                         </span>
                         <span class="u-sitem">
-                            阳性会心
+                            阳性Bạo kích
                             <em>SolarCriticalStrike</em>
                             <span class="u-value">{{ ~~npc.SolarCriticalStrike }}</span>
                         </span>
                         <span class="u-sitem">
-                            阴性会心
+                            阴性Bạo kích
                             <em>LunarCriticalStrike</em>
                             <span class="u-value">{{ ~~npc.LunarCriticalStrike }}</span>
                         </span>
                         <span class="u-sitem">
-                            毒性会心
+                            毒性Bạo kích
                             <em>PoisonCriticalStrike</em>
                             <span class="u-value">{{ ~~npc.PoisonCriticalStrike }}</span>
                         </span>
                         <!-- </template> -->
                     </div>
                     <div class="u-attack" v-if="isOrigin">
-                        <b>命中</b>
+                        <b>Trúng đích</b>
                         <em>Attack</em>
                         <!-- <span class="u-sitem">
                             <span class="u-value">{{~~npc.PhysicsAttackHit}}</span>
                         </span>-->
                         <!-- <template v-if="isAdmin"> -->
                         <span class="u-sitem">
-                            外功命中
+                            外功Trúng đích
                             <em>PhysicsAttackHit</em>
                             <span class="u-value">{{ ~~npc.PhysicsAttackHit }}</span>
                         </span>
                         <span class="u-sitem">
-                            混元命中
+                            混元Trúng đích
                             <em>NeutralMagicHit</em>
                             <span class="u-value">{{ ~~npc.NeutralMagicHit }}</span>
                         </span>
                         <span class="u-sitem">
-                            阳性命中
+                            阳性Trúng đích
                             <em>SolarMagicHit</em>
                             <span class="u-value">{{ ~~npc.SolarMagicHit }}</span>
                         </span>
                         <span class="u-sitem">
-                            阴性命中
+                            阴性Trúng đích
                             <em>LunarMagicHit</em>
                             <span class="u-value">{{ ~~npc.LunarMagicHit }}</span>
                         </span>
                         <span class="u-sitem">
-                            毒性命中
+                            毒性Trúng đích
                             <em>PoisonMagicHit</em>
                             <span class="u-value">{{ ~~npc.PoisonMagicHit }}</span>
                         </span>
@@ -246,9 +246,9 @@
                 </div>-->
             </li>
         </ul>
-        <el-alert v-else class="m-archive-null" type="info" center show-icon> 该副本没有找到相关条目，全图搜索请前往<a href="/app/database" target="_blank">[剑三数据库]</a>应用 </el-alert>
+        <el-alert v-else class="m-archive-null" type="info" center show-icon> 该副本没有找到相关条目，全图Tìm kiếm请前往<a href="/app/database" target="_blank">[剑三数据库]</a>Ứng dụng </el-alert>
         <template v-if="!onlyboss">
-            <el-button class="m-archive-more" :class="{ show: hasNextPage }" type="primary" :loading="loading" @click="appendPage(++page)">加载更多</el-button>
+            <el-button class="m-archive-more" :class="{ show: hasNextPage }" type="primary" :loading="loading" @click="appendPage(++page)">Tải thêm</el-button>
             <el-pagination
                 class="m-archive-pages"
                 background
@@ -424,7 +424,7 @@ export default {
             });
         },
         showDefence: function(val, level) {
-            // 等级 lv 防御shield 防御系数shieldx5.091【赛季维护】 属性因子y205 等级常数lvn18800
+            // 等级 lv Phòng ngựshield Phòng ngự系数shieldx5.091【赛季维护】 属性因子y205 等级常数lvn18800
             // =FLOOR((shield/(shield+(shieldx*(y*lv-lvn)))*1024),1)/1024
             // =shield/(shield+(shieldx*(y*lv-lvn))))
             // return (
@@ -438,7 +438,7 @@ export default {
             }
         },
         showCritical: function(val, level) {
-            // 会心CriticalStrike 全局常数x3750【等级维护】会心CriticalStrikex
+            // Bạo kíchCriticalStrike 全局常数x3750【等级维护】Bạo kíchCriticalStrikex
             // =ROUND(CriticalStrike/x/CriticalStrikex,3)
             // return ((val / 3750 / 9.53) * 100).toFixed(2) + "%";
             if (level) {

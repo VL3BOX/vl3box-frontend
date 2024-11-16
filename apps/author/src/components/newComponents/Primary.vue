@@ -3,13 +3,13 @@
         <!--粉丝团-->
         <AuthorFans :uid="Number(uid)" class="m-common-box m-fans"></AuthorFans>
         <div class="m-common-box m-user-bio">
-            <div class="u-label"><i class="el-icon-edit"></i><span>TA的签名</span></div>
+            <div class="u-label"><i class="el-icon-edit"></i><span>Chữ ký của TA</span></div>
             <div class="u-userBio">
-                {{ data.user_bio || "这个人太懒了~没有写签名。" }}
+                {{ data.user_bio || "Thiếu hiệp này quá lười, không viết chữ ký." }}
             </div>
         </div>
         <div class="m-common-box m-links" v-if="data != '' && (data.weibo_id || data.github_id || data.tv_id)">
-            <div class="u-label"><i class="el-icon-user"></i><span>TA的信息</span></div>
+            <div class="u-label"><i class="el-icon-user"></i><span>Thông tin của TA</span></div>
             <AuthorLink class="u-links-box" :uid="uid" :data="data" />
         </div>
         <!--他的荣誉-->

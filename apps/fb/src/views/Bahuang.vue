@@ -1,19 +1,19 @@
 <template>
     <app-layout slug="bhhj">
         <div class="m-bahuang">
-            <h1 class="m-bahuang-title">八荒衡鉴模拟器</h1>
+            <h1 class="m-bahuang-title">Mô phỏng Bát Hoang Hành Giám</h1>
             <div class="u-my-scheme">
                 <el-button type="primary" @click="updateDrawer(true)" icon="el-icon-setting" size="small">
-                    我的预设
+                    Cài đặt của tôi
                 </el-button>
             </div>
             <!--盒子左中右分栏-->
             <div class="m-bahuang-box" v-loading="loading">
                 <div class="m-bahuang-left">
                     <el-tabs v-model="activeTabName" type="card">
-                        <el-tab-pane label="秘术" name="arcane" />
-                        <el-tab-pane label="秘技" name="cheats" />
-                        <el-tab-pane label="绝学" name="stunt" />
+                        <el-tab-pane label="Bí thuật" name="arcane" />
+                        <el-tab-pane label="Bí kỹ" name="cheats" />
+                        <el-tab-pane label="Cực học" name="stunt" />
                     </el-tabs>
                     <div class="m-tab-box">
                         <div class="u-box">
@@ -39,11 +39,11 @@
                     />
                 </div>
                 <!--<div class="m-bahuang-right" v-if="isLogin">-->
-                <!--<el-button type="primary" @click="schemeDrawer = true" icon="el-icon-setting" size="small">我的预设</el-button>-->
+                <!--<el-button type="primary" @click="schemeDrawer = true" icon="el-icon-setting" size="small">Cài đặt của tôi</el-button>-->
                 <!--</div>-->
             </div>
         </div>
-        <!--预设方案抽屉-->
+        <!--Phương án cài đặt抽屉-->
         <drawer :drawer="schemeDrawer" @update-drawer="updateDrawer" @use="useScheme($event)"></drawer>
         <!--保存方案弹窗-->
         <el-dialog
@@ -53,16 +53,16 @@
             :close-on-click-modal="false"
         >
             <el-form :model="schemeForm">
-                <el-form-item label="方案名称">
+                <el-form-item label="Tên phương án">
                     <el-input v-model="schemeForm.title" autocomplete="off"></el-input>
                 </el-form-item>
-                <el-form-item label="方案描述">
+                <el-form-item label="Mô tả phương án">
                     <el-input v-model="schemeForm.desc" autocomplete="off" type="textarea"></el-input>
                 </el-form-item>
             </el-form>
             <div slot="footer">
-                <el-button @click="reload">取 消</el-button>
-                <el-button type="primary" @click="saveScheme">保 存</el-button>
+                <el-button @click="reload">Hủy bỏ</el-button>
+                <el-button type="primary" @click="saveScheme">Lưu</el-button>
             </div>
         </el-dialog>
     </app-layout>
@@ -103,12 +103,12 @@ export default {
                 cittaArr: [],
                 citta: null,
             }, //选择集合
-            //秘术右侧激活数量
+            //Bí thuật右侧激活数量
             rightArcaneNum: 0,
             schemeList: [],
             schemeDrawer: false,
             dialogFormVisible: false,
-            title: "预设方案",
+            title: "Phương án cài đặt",
             isEdit: false,
             schemeForm: {
                 title: "",
@@ -191,10 +191,10 @@ export default {
          * 左侧模块图标点击事件处理
          * @param item 图标信息
          * @param i 图标下标
-         * @param typeName 图标所属模块 arcane 1秘术 cheats 2秘技 stunt 3绝学
+         * @param typeName 图标所属模块 arcane 1Bí thuật cheats 2Bí kỹ stunt 3Cực học
          */
         leftIconClick(item, i, typeName) {
-            // 秘术最多选择12个，秘技4个，绝学1个
+            // Bí thuật最多选择12个，Bí kỹ4个，Cực học1个
             let json = {
                 info: item,
                 index: i,
@@ -212,13 +212,13 @@ export default {
                     break;
             }
             if (type === 1) {
-                //先判断是否取消，若为取消需移除
+                //先判断是否Hủy bỏ，若为Hủy bỏ需移除
                 if (item.select) {
                     this.iconRemove(i, type);
                 } else {
                     if (this.selectOptions.arcane.length === 12) {
                         this.$message({
-                            message: "秘术选择最多12个现已达上限！",
+                            message: "Bí thuật选择最多12个现已达上限！",
                             type: "warning",
                         });
                         return;
@@ -237,7 +237,7 @@ export default {
                 } else {
                     if (this.selectOptions.cheats.length === 4) {
                         this.$message({
-                            message: "秘技选择最多4个现已达上限！",
+                            message: "Bí kỹ选择最多4个现已达上限！",
                             type: "warning",
                         });
                         return;
@@ -245,7 +245,7 @@ export default {
                     this.selectOptions.cheats.push(json);
                 }
             } else if (type === 3) {
-                // stunt,绝学只有1个 替换模式
+                // stunt,Cực học只有1个 替换模式
                 if (item.select) {
                     this.selectOptions.stunt = [];
                 } else {
@@ -300,7 +300,7 @@ export default {
         rightSkill(e) {
             if (!e.info.select_r && this.rightArcaneNum === 6) {
                 this.$message({
-                    message: "秘术最多可激活6个！",
+                    message: "Bí thuật最多可激活6个！",
                     type: "warning",
                 });
                 return;
@@ -341,10 +341,10 @@ export default {
                 stunt: s.stunt,
                 citta: s.citta,
             };
-            this.title = "预设方案";
+            this.title = "Phương án cài đặt";
             //处理数据，根据type判断是保存还是另存
             if (e.type === 1 && this.isEdit) {
-                this.title = "编辑方案";
+                this.title = "Chỉnh sửa phương án";
                 this.$set(this.schemeForm, "id", this.editForm.id);
                 this.$set(this.schemeForm, "title", this.editForm.title);
                 this.$set(this.schemeForm, "desc", this.editForm.desc);
@@ -359,7 +359,7 @@ export default {
                 putBh(this.schemeForm.id, this.schemeForm).then((data) => {
                     this.reload();
                     this.$message({
-                        message: "编辑成功",
+                        message: "Chỉnh sửa thành công",
                         type: "success",
                     });
                 });
@@ -367,7 +367,7 @@ export default {
                 savebh(this.schemeForm).then((data) => {
                     this.reload();
                     this.$message({
-                        message: "保存成功",
+                        message: "Lưu thành công",
                         type: "success",
                     });
                 });
@@ -377,13 +377,13 @@ export default {
             if (this.isLogin) {
                 this.schemeDrawer = val;
             } else {
-                this.$alert("请先登录", "提示");
+                this.$alert("Vui lòng đăng nhập trước", "Gợi ý");
             }
         },
         useScheme(item) {
-            this.$confirm("确认使用该方案，操作会覆盖当前?", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm("Xác nhận sử dụng phương án này, thao tác sẽ ghi đè lên hiện tại??", "Gợi ý", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy bỏ",
                 type: "warning",
             })
                 .then(() => {
@@ -392,8 +392,8 @@ export default {
                         .then((data) => {
                             this.$notify({
                                 type: "success",
-                                title: "成功",
-                                message: "方案设置成功",
+                                title: "Thành công",
+                                message: "方案设置Thành công",
                             });
                             this.rightLoading = false;
                             this.isEdit = true;

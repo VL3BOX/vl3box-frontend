@@ -30,12 +30,12 @@ export default {
             active: "Question",
             types: [
                 {
-                    label: "题目",
+                    label: "Đề mục",
                     value: "Question",
                     component: Question
                 },
                 {
-                    label: "试卷",
+                    label: "Bài thi",
                     value: "Paper",
                     component: Paper
                 },

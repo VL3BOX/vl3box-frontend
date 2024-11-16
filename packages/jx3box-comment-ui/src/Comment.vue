@@ -11,17 +11,17 @@
                                 src="./assets/img/homework.svg"
                                 alt=""
                             />
-                            <span>作业模式</span>
+                            <span>Chế độ làm việc</span>
                         </div>
                     </template>
-                    <span class="u-label">排序模式：</span>
+                    <span class="u-label">Chế độ sắp xếp:</span>
                     <el-radio-group
                         v-model="isDesc"
                         @change="changeOrder"
                         size="mini"
                     >
-                        <el-radio-button label="DESC">最后靠前</el-radio-button>
-                        <el-radio-button label="ASC">最早靠前</el-radio-button>
+                        <el-radio-button label="DESC">Mới nhất</el-radio-button>
+                        <el-radio-button label="ASC">Cũ nhất</el-radio-button>
                     </el-radio-group>
                 </div>
                 <div class="u-op">
@@ -29,7 +29,7 @@
                         class="c-comment-panel-likes"
                         v-model="orderByLikes"
                         @change="changeOrderByLikes"
-                        active-text="获赞靠前"
+                        active-text="Nhiều lượt thích nhất"
                     >
                     </el-switch>
                     <el-switch
@@ -37,8 +37,8 @@
                         v-model="openWhiteList"
                         @change="changeWhiteList"
                         v-if="commentPower.is_author || commentPower.is_editor"
-                        active-text="开启过滤"
-                        title="开启过滤后，仅设为显示的评论可被其他人所见"
+                        active-text="Bộ lọc"
+                        title="Bộ lọc后，仅设为显示的评论可被其他人所见"
                     >
                     </el-switch>
                 </div>
@@ -258,7 +258,7 @@ export default {
                 .then(() => {
                     this.$notify({
                         title: "",
-                        message: "删除成功!",
+                        message: "Xóa thành công!",
                         type: "success",
                         duration: 3000,
                         position: "bottom-right",
@@ -272,7 +272,7 @@ export default {
                 .then(() => {
                     this.$notify({
                         title: "",
-                        message: "操作成功!",
+                        message: "Thao tác thành công!",
                         type: "success",
                         duration: 3000,
                         position: "bottom-right",
@@ -306,7 +306,7 @@ export default {
                 .then((responseJSON) => {
                     if (responseJSON && ~~responseJSON.code > 0) {
                         this.$notify({
-                            title: "评论失败",
+                            title: "Bình luận thất bại",
                             message: responseJSON.msg || "",
                             type: "error",
                             duration: 3000,
@@ -316,7 +316,7 @@ export default {
                     }
                     this.$notify({
                         title: "",
-                        message: "评论成功!",
+                        message: "Bình luận thành công!",
                         type: "success",
                         duration: 3000,
                         position: "bottom-right",

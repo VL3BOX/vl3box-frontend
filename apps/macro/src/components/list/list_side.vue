@@ -2,8 +2,8 @@
     <div class="m-list-side">
         <!-- 群号 -->
         <RightSideMsg>
-            <em>宏作者交流群</em> :
-            <strong @click="onQQClick" class="u-link" title="点击复制">
+            <em>Nhóm tác giả macro</em> :
+            <strong @click="onQQClick" class="u-link" title="Nhấn để sao chép">
                 <a>{{ qq }}</a>
             </strong>
         </RightSideMsg>
@@ -16,11 +16,11 @@
             <h3 class="m-side-title" style="border-bottom: none;">
                 <div class="u-title">
                     <img class="u-icon" svg-inline src="@/assets/img/side/docs.svg" />
-                    帮助文档
+                    Tài liệu hướng dẫn
                 </div>
             </h3>
             <el-collapse class="u-groups" v-model="activeDocGroup">
-                <el-collapse-item title="入门帮助" name="newbie">
+                <el-collapse-item title="Hỗ trợ nhập môn" name="newbie">
                     <div class="u-docs">
                         <a v-for="(item, i) in macro_newbie" :key="i" class="u-doc" :href="item.link" target="_blank">
                             <i class="el-icon-collection"></i>
@@ -28,7 +28,7 @@
                         </a>
                     </div>
                 </el-collapse-item>
-                <el-collapse-item title="发布指南" name="senior">
+                <el-collapse-item title="Hướng dẫn đăng bài" name="senior">
                     <div class="u-docs">
                         <a v-for="(item, i) in macro_senior" :key="i" class="u-doc" :href="item.link" target="_blank">
                             <i class="el-icon-collection"></i>
@@ -36,7 +36,7 @@
                         </a>
                     </div>
                 </el-collapse-item>
-                <el-collapse-item title="辅助工具" name="tools">
+                <el-collapse-item title="Công cụ hỗ trợ" name="tools">
                     <div class="u-docs">
                         <a v-for="(item, i) in macro_tools" :key="i" class="u-doc" :href="item.link" target="_blank">
                             <i class="el-icon-collection"></i>

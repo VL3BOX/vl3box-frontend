@@ -3,10 +3,10 @@
         <template v-if="isMininote" v-slot:tool>
             <div class="m-toolbar-item">
                 <el-select v-model="mapId" :class="{ active: mapId }" filterable class="u-select" clearable>
-                    <el-option label="全部地图" value=""></el-option>
+                    <el-option label="Tất cả" value=""></el-option>
                     <el-option v-for="item in mapList" :key="item.value" :label="item.label" :value="item.value">
                     </el-option>
-                    <template #prefix> 地图 </template>
+                    <template #prefix> Địa điểm </template>
                 </el-select>
                 <el-select v-model="petSource" :class="{ active: petSource }" filterable class="u-select" clearable>
                     <el-option
@@ -16,17 +16,17 @@
                         :value="item.source"
                     >
                     </el-option>
-                    <template #prefix> 来源 </template>
+                    <template #prefix> Nguồn </template>
                 </el-select>
             </div>
         </template>
         <template v-if="!isMininote" v-slot:append>
             <div class="m-toolbar-item">
                 <el-select v-model="mapId" :class="{ active: mapId }" filterable class="u-select" clearable>
-                    <el-option label="全部地图" value=""></el-option>
+                    <el-option label="Tất cả" value=""></el-option>
                     <el-option v-for="item in mapList" :key="item.value" :label="item.label" :value="item.value">
                     </el-option>
-                    <template #prefix> 地图 </template>
+                    <template #prefix> Địa điểm </template>
                 </el-select>
                 <el-select v-model="petSource" :class="{ active: petSource }" filterable class="u-select" clearable>
                     <el-option
@@ -36,7 +36,7 @@
                         :value="item.source"
                     >
                     </el-option>
-                    <template #prefix> 来源 </template>
+                    <template #prefix> Nguồn </template>
                 </el-select>
             </div>
         </template>

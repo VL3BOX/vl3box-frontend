@@ -2,10 +2,10 @@
     <div class="m-servers m-sideblock">
         <div class="m-servers-header m-sideblock-header">
             <div class="u-left">
-                <i class="u-icon el-icon-s-platform"></i><a class="u-title" href="/pvg/gonggao/server" target="_blank">开服状态</a>
+                <i class="u-icon el-icon-s-platform"></i><a class="u-title" href="/pvg/gonggao/server" target="_blank">Trạng thái máy chủ</a>
             </div>
             <div class="u-right">
-                <a href="/pvg/gonggao/server" class="u-more" title="查看更多" target="_blank"><i class="el-icon-more"></i></a>
+                <a href="/pvg/gonggao/server" class="u-more" title="Xem tất cả" target="_blank"><i class="el-icon-more"></i></a>
             </div>
         </div>
         <div class="m-servers-content">

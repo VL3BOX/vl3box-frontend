@@ -2,15 +2,15 @@
     <div class="m-archive-box" v-loading="loading">
         <!-- 搜索 -->
         <div class="m-archive-search" slot="search-before">
-            <a :href="publish_link" class="u-publish el-button el-button--primary">+ 发布作品</a>
+            <a :href="publish_link" class="u-publish el-button el-button--primary">+ Đăng tác phẩm</a>
             <el-input
-                placeholder="请输入搜索内容"
+                placeholder="Vui lòng nhập nội dung tìm kiếm"
                 v-model.trim.lazy="search"
                 clearable
                 @clear="onSearch"
                 @keydown.native.enter="onSearch"
             >
-                <span slot="prepend"><i class="el-icon-search"></i> 关键词</span>
+                <span slot="prepend"><i class="el-icon-search"></i> Từ khóa</span>
                 <template #append>
                     <el-button icon="el-icon-position" @click="onSearch"></el-button>
                 </template>
@@ -35,7 +35,7 @@
         </div>
 
         <!-- 空 -->
-        <el-alert v-else class="m-archive-null" title="没有找到相关条目" type="info" center show-icon></el-alert>
+        <el-alert v-else class="m-archive-null" title="Không tìm thấy mục liên quan" type="info" center show-icon></el-alert>
 
         <!-- 下一页 -->
         <el-button
@@ -45,7 +45,7 @@
             @click="appendPage"
             :loading="loading"
             icon="el-icon-arrow-down"
-            >加载更多</el-button
+            >Tải thêm</el-button
         >
 
         <!-- 分页 -->
@@ -103,7 +103,7 @@ export default {
         publish_link: function () {
             return publishLink(appKey);
         },
-        // 是否显示加载更多
+        // 是否显示Tải thêm
         hasNextPage: function () {
             return this.pages > 1 && this.page < this.total;
         },

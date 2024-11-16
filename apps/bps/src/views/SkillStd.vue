@@ -1,7 +1,7 @@
 <template>
     <div class="v-skill" v-loading="loading">
         <el-tabs v-model="active" type="card" @tab-click="changeType">
-            <el-tab-pane label="技能" name="skill">
+            <el-tab-pane label="Kỹ năng" name="skill">
                 <div class="m-skill-box" v-if="skill && xf != '通用'">
                     <div class="m-skill-kungfu" v-for="(kungfu, i) in skill" :key="i">
                         <h4 class="u-title">{{ kungfu.remark }}</h4>
@@ -11,10 +11,10 @@
                     </div>
                 </div>
                 <div class="m-skill-null" v-else>
-                    <el-alert title="该心法技能数据暂缺，请通过侧边栏切换心法" type="info" show-icon></el-alert>
+                    <el-alert title="该心法Kỹ năng数据暂缺，请通过侧边栏切换心法" type="info" show-icon></el-alert>
                 </div>
             </el-tab-pane>
-            <el-tab-pane label="奇穴" name="talent">
+            <el-tab-pane label="Kỳ huyệt" name="talent">
                 <div class="m-skill-box" v-if="talent && xf != '通用'">
                     <div class="m-skill-talent" v-for="(talent, i) in talent" :key="i">
                         <el-divider class="u-title" content-position="left">
@@ -32,10 +32,10 @@
                     </div>
                 </div>
                 <div class="m-skill-null" v-else>
-                    <el-alert title="该心法奇穴数据暂缺，请通过侧边栏切换心法" type="info" show-icon></el-alert>
+                    <el-alert title="该心法Kỳ huyệt数据暂缺，请通过侧边栏切换心法" type="info" show-icon></el-alert>
                 </div>
             </el-tab-pane>
-            <el-tab-pane label="阵法" name="zhenfa">
+            <el-tab-pane label="Trận pháp" name="zhenfa">
                 <div class="m-skill-box" v-if="zhenfa && xf != '通用'">
                     <div class="m-skill-zhenfa" v-if="zhenfa">
                         <i class="u-pic">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="m-skill-null" v-else>
-                    <el-alert title="该心法阵法数据暂缺，请通过侧边栏切换心法" type="info" show-icon></el-alert>
+                    <el-alert title="该心法Trận pháp数据暂缺，请通过侧边栏切换心法" type="info" show-icon></el-alert>
                 </div>
             </el-tab-pane>
         </el-tabs>

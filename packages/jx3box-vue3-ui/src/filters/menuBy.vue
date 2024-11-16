@@ -9,7 +9,7 @@
             </span>
             <template #dropdown>
                 <el-dropdown-menu>
-                    <el-dropdown-item @click="filter('')">{{ "全部" }}</el-dropdown-item>
+                    <el-dropdown-item @click="filter('')">{{ "Tất cả" }}</el-dropdown-item>
                     <el-dropdown-item v-for="(item, key) in data" :key="key" @click="filter(key)">{{
                         item
                     }}</el-dropdown-item>
@@ -34,7 +34,7 @@ export default {
             return this.data[this.value];
         },
         deftext: function () {
-            return this.placeholder || "筛选";
+            return this.placeholder || "Sàng lọc";
         },
     },
     methods: {

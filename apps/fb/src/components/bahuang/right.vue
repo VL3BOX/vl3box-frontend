@@ -1,10 +1,10 @@
 <template>
     <div class="m-bahuang-rightBox">
         <div class="u-bahuang-r-title">
-            <span>心决</span>
+            <span>Tâm quyết</span>
             <div class="m-bahuang-r-citta">
                 <div class="u-bahuang-citta">
-                    <el-select v-model="selectOptions.citta" placeholder="请选择门派" @change="cittaChange">
+                    <el-select v-model="selectOptions.citta" placeholder="Vui lòng chọn môn phái" @change="cittaChange">
                         <el-option
                             v-for="item in selectOptions.cittaArr"
                             :key="item.value"
@@ -15,10 +15,10 @@
                 </div>
             </div>
         </div>
-        <!--    心决-->
+        <!--    Tâm quyết-->
 
-        <!--    心决效果-->
-        <span class="u-tips" v-show="!cittaEffect"> 尚未选择 </span>
+        <!--    Tâm quyết效果-->
+        <span class="u-tips" v-show="!cittaEffect"> Chưa chọn </span>
         <div class="m-citta" v-show="cittaEffect.length > 0">
             <div class="m-citta-box" v-for="(item, i) in cittaEffect" :key="'xj' + i">
                 <img class="u-bahuang-img" :src="item.IconID | skillIcon(item.IconID)" />
@@ -28,15 +28,15 @@
                 </div>
             </div>
         </div>
-        <!--秘术-->
+        <!--Bí thuật-->
         <div class="u-bahuang-r-title">
-            秘术<br />
-            <span class="u-tip">(左键选择激活，右键可删除秘术)</span>
+            Bí thuật<br />
+            <span class="u-tip">(左键选择激活，右键可删除Bí thuật)</span>
         </div>
-        <!--    秘术区域-->
+        <!--    Bí thuật区域-->
         <div class="m-bahuang-r-arcane" :class="isLogin ? 'm-r-arcane-box' : ''">
-            <!--       秘术展示-->
-            <span class="u-tips" v-show="selectOptions.arcane.length === 0"> 尚未选择 </span>
+            <!--       Bí thuật展示-->
+            <span class="u-tips" v-show="selectOptions.arcane.length === 0"> Chưa chọn </span>
             <div
                 class="u-skill"
                 v-for="(item, i) in selectOptions.arcane"
@@ -53,8 +53,8 @@
                 <span>{{ item.info.Name }}</span>
             </div>
         </div>
-        <!--    激活秘术信息展示区域-->
-        <div class="u-bahuang-r-title">已激活秘术</div>
+        <!--    激活Bí thuật信息展示区域-->
+        <div class="u-bahuang-r-title">已激活Bí thuật</div>
         <div class="m-arcane-active">
             <div
                 v-for="(item, i) in selectOptions.arcane"
@@ -69,14 +69,14 @@
                 </div>
             </div>
         </div>
-        <!--    秘技4个-->
+        <!--    Bí kỹ4个-->
         <div class="u-bahuang-r-title">
-            秘技
+            Bí kỹ
             <br />
-            <span class="u-tip">(右键可删除秘技)</span>
+            <span class="u-tip">(右键可删除Bí kỹ)</span>
         </div>
         <div class="m-bahuang-r-cheats">
-            <span class="u-tips" v-show="selectOptions.cheats.length === 0"> 尚未选择 </span>
+            <span class="u-tips" v-show="selectOptions.cheats.length === 0"> Chưa chọn </span>
             <div
                 class="u-bahuang-cheats"
                 v-for="(item, i) in selectOptions.cheats"
@@ -87,10 +87,10 @@
             </div>
         </div>
 
-        <!--    绝技1个-->
-        <div class="u-bahuang-r-title">绝技</div>
+        <!--    Tuyệt kỹ1个-->
+        <div class="u-bahuang-r-title">Tuyệt kỹ</div>
         <div class="m-bahuang-r-stunt">
-            <span class="u-tips" v-show="selectOptions.stunt.length === 0"> 尚未选择 </span>
+            <span class="u-tips" v-show="selectOptions.stunt.length === 0"> Chưa chọn </span>
             <skill
                 v-for="(item, i) in selectOptions.stunt"
                 :key="'s' + i"
@@ -102,7 +102,7 @@
         </div>
         <div class="m-btn">
             <el-button class="u-btn" type="primary" icon="el-icon-document-add" v-if="isLogin" @click="saveScheme(1)"
-                >保存为预设</el-button
+                >Lưu thành cài đặt sẵn</el-button
             >
             <el-button
                 class="u-btn"
@@ -110,7 +110,7 @@
                 icon="el-icon-document-add"
                 v-if="isLogin && isEdit"
                 @click="saveScheme(2)"
-                >另存为</el-button
+                >Lưu thành</el-button
             >
         </div>
     </div>
@@ -193,7 +193,7 @@ export default {
         },
         /**
          * 保存
-         * @param type 1 保存 2编辑状态另存为
+         * @param type 1 保存 2编辑状态Lưu thành
          */
         saveScheme(type) {
             this.$emit("saveScheme", { type: type });

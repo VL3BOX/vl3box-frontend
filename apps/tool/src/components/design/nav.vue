@@ -25,27 +25,27 @@ export default {
             menu: [
                 {
                     icon: "el-icon-grape",
-                    name: "剑三图标库",
+                    name: "Thư viện biểu tượng Kiếm Tam",
                     routeName: "icon"
                 },
                 {
                     icon: "el-icon-orange",
-                    name: "剑三表情包",
+                    name: "Gói biểu cảm Kiếm Tam",
                     routeName: "emotion"
                 },
                 {
                     icon: "el-icon-map-location",
-                    name: "剑三地图库",
+                    name: "Thư viện bản đồ Kiếm Tam",
                     routeName: "map"
                 },
                 {
                     icon: "el-icon-cherry",
-                    name: "魔盒矢量库",
+                    name: "Thư viện hình vector Magic Box",
                     routeName: "vector"
                 },
                 {
                     icon: "el-icon-watermelon",
-                    name: "魔盒壁纸库",
+                    name: "Thư viện hình nền Magic Box",
                     routeName: "wallpaper"
                 },
             ],

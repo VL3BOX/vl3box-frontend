@@ -9,8 +9,8 @@
                     <el-form label-position="top">
                         <el-form-item>
                             <div slot="label">
-                                <span>技能时间(秒)</span>
-                                <el-tooltip content="表示技能正读条时间，或持续性伤害技能的每跳时间，或引导读条的每跳时间" placement="top">
+                                <span>Thời gian kỹ năng(秒)</span>
+                                <el-tooltip content="Biểu thị thời gian đọc thanh kỹ năng chính, hoặc thời gian mỗi lần của kỹ năng gây sát thương liên tục, hoặc thời gian mỗi lần của kỹ năng dẫn đường" placement="top">
                                     <i class="el-icon-info m-info-icon"></i>
                                 </el-tooltip>
                             </div>
@@ -20,8 +20,8 @@
                         </el-form-item>
                         <el-form-item>
                             <div slot="label">
-                                <span>跳数</span>
-                                <el-tooltip content="表示相应技能跳数，正读条为 1 跳，引导读条为造成伤害的次数" placement="top">
+                                <span>Số lần nhảy</span>
+                                <el-tooltip content="表示相应技能Số lần nhảy，正读条为 1 跳，引导读条为造成伤害的次数" placement="top">
                                     <i class="el-icon-info m-info-icon"></i>
                                 </el-tooltip>
                             </div>
@@ -31,10 +31,10 @@
                         </el-form-item>
                     </el-form>
                 </el-card>
-                <el-card header="额外加速奇穴" class="m-extra-box">
+                <el-card header="Kỳ huyệt tăng tốc bổ sung" class="m-extra-box">
                     <el-form label-position="top">
-                        <el-form-item label="选择可以额外提供加速的奇穴">
-                            <!-- <p>选择可以额外提供加速的奇穴</p> -->
+                        <el-form-item label="Chọn kỳ huyệt có thể cung cấp thêm tốc độ">
+                            <!-- <p>Chọn kỳ huyệt có thể cung cấp thêm tốc độ</p> -->
                             <el-radio-group v-model="hasteInfo.extra">
                                 <el-radio v-for="item in extraHasteList" :key="item.name" :label="item.name"
                                     v-show="item.label != 2">{{
@@ -43,10 +43,10 @@
                         </el-form-item>
                     </el-form>
                 </el-card>
-                <el-card header="额外加速奇穴" class="m-extra-box">
+                <el-card header="Kỳ huyệt tăng tốc bổ sung" class="m-extra-box">
                     <el-form label-position="top">
-                        <el-form-item label="选择可以额外提供突破上限的加速的奇穴">
-                            <!-- <p>选择可以额外提供突破上限的加速的奇穴</p> -->
+                        <el-form-item label="Chọn kỳ huyệt có thể cung cấp thêm tốc độ vượt qua giới hạn">
+                            <!-- <p>Chọn kỳ huyệt có thể cung cấp thêm tốc độ vượt qua giới hạn</p> -->
                             <el-radio-group v-model="hasteInfo.uExtra">
                                 <el-radio v-for="item in extraHasteList" :key="item.name" :label="item.name"
                                     v-show="item.label != 1">{{
@@ -57,7 +57,7 @@
                 </el-card>
             </el-col>
             <el-col :lg="16" :md="12" :sm="24">
-                <el-card header="计算结果">
+                <el-card header="Kết quả tính toán">
                     <el-table :data="tableData">
                         <template>
                             <el-table-column v-for="header in tableHeader" :key="header.value" :label="header.label"
@@ -67,7 +67,7 @@
                 </el-card>
             </el-col>
         </el-row>
-        <div class="m-haste-copyright"><i class="el-icon-info"></i> 本应用基于胖叔叔加速宝典应用拓展维护更新</div>
+        <div class="m-haste-copyright"><i class="el-icon-info"></i> Ứng dụng này dựa trên bản mở rộng và cập nhật của ứng dụng Sổ tay tăng tốc của Bàn thúc thúc</div>
     </div>
 </template>
 
@@ -82,8 +82,8 @@ export default {
             hasteInfo: {
                 skillTime: 1.5,
                 hitTimes: 1,
-                extra: '无',
-                uExtra: "无",
+                extra: 'Không',
+                uExtra: "Không",
             },
             hasteCof: 11.695 * (450 * 120 - 45750) / 100,
             //等级改系数
@@ -103,15 +103,15 @@ export default {
                 //value: "nowFrame",
                 //},
                 {
-                    label: "所需加速率",
+                    label: "Tốc độ tăng tốc yêu cầu",
                     value: "percentage",
                 },
                 {
-                    label: "最终加速率",
+                    label: "Tốc độ tăng tốc cuối cùng",
                     value: "uPercentage",
                 },
                 {
-                    label: "所需加速等级",
+                    label: "Cấp độ tăng tốc yêu cầu",
                     value: "level",
                     align: "right",
                 },
@@ -171,9 +171,9 @@ export default {
                 // 乱动概率卡死浏览器
                 if (uNowFrame > 0) {
                     //if (nowFrame > 0 && surplusNowFrame > 0) {    --120级废弃
-                    if (!hasteCalcResult.some((r) => r.uNowFrame == uNowFrame)) // nowFrame无重复
+                    if (!hasteCalcResult.some((r) => r.uNowFrame == uNowFrame)) // nowFrameKhông重复
                         result.duration = uNowTime;
-                    //if (!hasteCalcResult.some((r) => r.surplusNowFrame == surplusNowFrame)) // surplusNowFrame无重复
+                    //if (!hasteCalcResult.some((r) => r.surplusNowFrame == surplusNowFrame)) // surplusNowFrameKhông重复
                     //    result.surplus = nowSurplusTime;
                     if (result.duration || result.surplus)
                         hasteCalcResult.push(result);
@@ -188,7 +188,7 @@ export default {
                 this.hasteInfo.skillTime = 0.5;
             }
             this.hasteInfo.skillTime = this.ToEven(currentVal);
-            //技能时间
+            //Thời gian kỹ năng
         },
         handleHitTimesChange: function (currentVal, OldVal) {
             if (!currentVal) {
@@ -198,7 +198,7 @@ export default {
             //技能频率
         },
         setCof: function () {
-            this.hasteCof = prompt("加速系数更新为？（看不懂请不要乱动）", this.hasteCof) ?? this.hasteCof;
+            this.hasteCof = prompt("Hệ số tăng tốc cập nhật thành? (Nếu không hiểu, xin đừng thay đổi)", this.hasteCof) ?? this.hasteCof;
         },
         ToEven: function (inputNumber) {
             //回调帧数避免出现奇怪的不存在的技能时长 每帧间隔0.0625 限制上下键的step即可，剩下的交给四舍六入

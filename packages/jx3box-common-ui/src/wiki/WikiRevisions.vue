@@ -2,21 +2,21 @@
     <WikiPanel class="c-wiki-revisions" scene="detail">
         <template slot="head-title">
             <i class="el-icon-time"></i>
-            <span>历史版本</span>
+            <span>Phiên bản lịch sử</span>
         </template>
         <template slot="body">
             <div class="m-revisions-panel">
                 <div class="u-empty" v-if="!versions || !versions.length">
-                    <span v-if="versions === null">🎉 数据加载中...</span>
-                    <span v-if="versions === false">⚠️ 数据加载异常</span>
-                    <span v-if="versions && !versions.length">💧 暂无数据</span>
+                    <span v-if="versions === null">🎉 Đang tải dữ liệu...</span>
+                    <span v-if="versions === false">⚠️ Lỗi tải dữ liệu</span>
+                    <span v-if="versions && !versions.length">💧 Chưa có dữ liệu</span>
                 </div>
                 <table v-if="versions && versions.length" class="m-histories">
                     <tr>
-                        <th>版本</th>
-                        <th>更新时间</th>
-                        <th>贡献者</th>
-                        <th>修订说明</th>
+                        <th>Phiên bản</th>
+                        <th>Thời gian cập nhật</th>
+                        <th>Người đóng góp</th>
+                        <th>Mô tả sửa đổi</th>
                     </tr>
                     <tr class="history" v-for="(ver, key) in versions" :key="key">
                         <td>

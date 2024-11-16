@@ -23,7 +23,7 @@
                 <slot name="filter"></slot>
                 <div class="u-search">
                     <el-input
-                        placeholder="请输入搜索内容"
+                        placeholder="Nhập nội dung tìm kiếm"
                         v-model="title"
                         suffix-icon="el-icon-search"
                         class="u-search-input"

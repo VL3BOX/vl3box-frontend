@@ -1,13 +1,13 @@
 <template>
     <tr>
-        <td>美人图</td>
+        <td>Mỹ nhân đồ</td>
         <td :title="server">
             {{ server }}
         </td>
         <td>
-            <el-tooltip class="item" effect="dark" :content="(meirentu && meirentu.desc) || '无'" placement="bottom">
+            <el-tooltip class="item" effect="dark" :content="(meirentu && meirentu.desc) || 'Không'" placement="bottom">
                 <div>
-                    {{ (meirentu && meirentu.name) || "今日暂无画像" }}
+                    {{ (meirentu && meirentu.name) || "Hôm nay tạm thời chưa có chân dung" }}
                 </div>
             </el-tooltip>
         </td>
@@ -46,7 +46,7 @@ export default {
         },
     },
     methods: {
-        // 获取美人图
+        // 获取Mỹ nhân đồ
         loadMeirentu() {
             getMeirentu(this.server).then((res) => {
                 this.meirentu = res.data.data;

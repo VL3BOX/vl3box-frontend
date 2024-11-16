@@ -1,45 +1,45 @@
 <template>
     <el-dialog class="m-skill-dialog" :visible.sync="show" :title="title" :before-close="close">
         <el-form class="m-skill-form" ref="form" :model="form" :rules="rules" label-width="100px">
-            <el-form-item label="技能等级" prop="level">
-                <el-select v-model="form.level" placeholder="请选择技能重数" style="width: 100%">
-                    <el-option v-for="item in maxLevel" :key="item" :value="item" :label="`第 ${item} 重`"></el-option>
+            <el-form-item label="Cấp độ kỹ năng" prop="level">
+                <el-select v-model="form.level" placeholder="Vui lòng chọn số lần kỹ năng" style="width: 100%">
+                    <el-option v-for="item in maxLevel" :key="item" :value="item" :label="`Thứ ${item} Lần`"></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="技能CD" prop="cooldown" style="width: 100%">
-                <el-select v-model="form.cooldown" placeholder="请选择技能CD">
-                    <el-option :value="60" label="三级 - 60秒"></el-option>
-                    <el-option :value="30" label="二级 - 30秒"></el-option>
-                    <el-option :value="10" label="一级 - 10秒"></el-option>
-                    <el-option :value="0" label="被动技能"></el-option>
+            <el-form-item label="Thời gian hồi kỹ năng" prop="cooldown" style="width: 100%">
+                <el-select v-model="form.cooldown" placeholder="请选择Thời gian hồi kỹ năng">
+                    <el-option :value="60" label="Cấp 3 - 60 giây"></el-option>
+                    <el-option :value="30" label="Cấp 2 - 30 giây"></el-option>
+                    <el-option :value="10" label="Cấp 1 - 10 giây"></el-option>
+                    <el-option :value="0" label="Kỹ năng bị động"></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="伤害" prop="damage">
-                <el-input v-model="form.damage" placeholder="请填写伤害数值" />
+            <el-form-item label="Sát thương" prop="damage">
+                <el-input v-model="form.damage" placeholder="请填写Sát thương数值" />
             </el-form-item>
-            <el-form-item label="精力消耗" prop="cost_vigor">
-                <el-input v-model="form.cost_vigor" placeholder="请填写精力消耗" />
+            <el-form-item label="Tiêu hao tinh lực" prop="cost_vigor">
+                <el-input v-model="form.cost_vigor" placeholder="请填写Tiêu hao tinh lực" />
             </el-form-item>
-            <el-form-item label="耐力消耗" prop="cost_endurance">
-                <el-input v-model="form.cost_endurance" placeholder="请填写耐力消耗" />
+            <el-form-item label="Tiêu hao nội lực" prop="cost_endurance">
+                <el-input v-model="form.cost_endurance" placeholder="请填写Tiêu hao nội lực" />
             </el-form-item>
-            <el-form-item label="精力打击" prop="hit_vigor">
-                <el-input v-model="form.hit_vigor" placeholder="请填写精力打击" />
+            <el-form-item label="Đòn đánh tinh lực" prop="hit_vigor">
+                <el-input v-model="form.hit_vigor" placeholder="请填写Đòn đánh tinh lực" />
             </el-form-item>
-            <el-form-item label="耐力打击" prop="hit_endurance">
-                <el-input v-model="form.hit_endurance" placeholder="请填写耐力打击" />
+            <el-form-item label="Đòn đánh nội lực" prop="hit_endurance">
+                <el-input v-model="form.hit_endurance" placeholder="请填写Đòn đánh nội lực" />
             </el-form-item>
-            <el-form-item label="攻略链接" prop="link">
-                <el-input v-model="form.link" placeholder="请填写攻略链接" />
+            <el-form-item label="Liên kết hướng dẫn" prop="link">
+                <el-input v-model="form.link" placeholder="请填写Liên kết hướng dẫn" />
             </el-form-item>
-            <el-form-item label="备注" prop="remarks">
-                <el-input type="textarea" v-model="form.remarks" placeholder="请填写备注" />
+            <el-form-item label="Ghi chú" prop="remarks">
+                <el-input type="textarea" v-model="form.remarks" placeholder="请填写Ghi chú" />
             </el-form-item>
         </el-form>
         <template #footer>
             <span class="dialog-footer">
-                <el-button @click="close">取消</el-button>
-                <el-button type="primary" :loading="loading" @click="submitForm()">确定</el-button>
+                <el-button @click="close">Hủy</el-button>
+                <el-button type="primary" :loading="loading" @click="submitForm()">Xác nhận定</el-button>
             </span>
         </template>
     </el-dialog>

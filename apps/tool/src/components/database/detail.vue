@@ -1,7 +1,7 @@
 <template>
     <div class="m-database-detail">
         <div class="u-top-bar">
-            <el-button @click="goBack" icon="el-icon-arrow-left" plain>返回</el-button>
+            <el-button @click="goBack" icon="el-icon-arrow-left" plain>Quay lại</el-button>
             <div class="m-detail-title">{{ type.toUpperCase() }} - {{ title }}</div>
         </div>
         <component
@@ -12,9 +12,9 @@
             :type="type"
             :ref-count="refCount"
         ></component>
-        <!-- 引用的元数据 -->
+        <!-- Siêu dữ liệu trích dẫn -->
         <template v-if="dbm_items && dbm_items.length">
-            <el-divider content-position="left"><i class="el-icon-chat-line-square"></i> 引用的元数据</el-divider>
+            <el-divider content-position="left"><i class="el-icon-chat-line-square"></i> Siêu dữ liệu trích dẫn</el-divider>
             <div class="m-dbm-item-list" v-loading="dbm_items_loading">
                 <dbm-item v-for="(item, index) in dbm_items" :item="item" :key="index"></dbm-item>
                 <el-pagination
@@ -30,8 +30,8 @@
                 </el-pagination>
             </div>
         </template>
-        <!-- 评论组件 -->
-        <el-divider content-position="left"><i class="el-icon-chat-line-square"></i> 评论</el-divider>
+        <!-- Nhận xét组件 -->
+        <el-divider content-position="left"><i class="el-icon-chat-line-square"></i> Nhận xét</el-divider>
         <Comment class="m-comment" :id="id" :category="type" />
     </div>
 </template>

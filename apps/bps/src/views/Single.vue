@@ -3,14 +3,14 @@
         <singlebox :post="post" :stat="stat" v-loading="loading" @extendUpdate="updateExtend">
             <template slot="single-header">
                 <div class="u-meta u-sub-block">
-                    <em class="u-label">心法</em>
+                    <em class="u-label">Tâm pháp</em>
                     <span class="u-value">
                         <img class="u-icon-xf" :src="xficon(xficon_id)" :alt="xf" />
                         {{ xf }}
                     </span>
                 </div>
                 <div class="u-meta u-sub-block">
-                    <em class="u-label">资料片</em>
+                    <em class="u-label">Tài liệu mở rộng</em>
                     <span class="u-value">{{ zlp }}</span>
                 </div>
             </template>
@@ -42,7 +42,7 @@ export default {
     },
     computed: {
         post_subtype: function () {
-            return this?.post?.post_subtype || "其它";
+            return this?.post?.post_subtype || "Khác";
         },
         id: function () {
             return this.$route.params.id;
@@ -54,7 +54,7 @@ export default {
 			return this.xf && xfmap[this.xf]?.id;
 		},
         zlp: function () {
-			return this.post?.zlp || "未知";
+			return this.post?.zlp || "Không xác định";
 		},
     },
     methods: {

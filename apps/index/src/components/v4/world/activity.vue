@@ -1,7 +1,7 @@
 <template>
     <div class="m-world-daily-new">
         <template v-if="weekActivities.length">
-            <el-divider content-position="left">周常</el-divider>
+            <el-divider content-position="left">Hàng tuần</el-divider>
             <div class="m-daily-content">
                 <div class="u-table-body">
                     <div class="u-row" v-for="(item, i) in weekActivities" :key="i">
@@ -21,7 +21,7 @@
             </div>
         </template>
         <template v-if="todayActivities.length">
-            <el-divider content-position="left">活动&nbsp;·&nbsp;{{ dailyToday }}</el-divider>
+            <el-divider content-position="left">Hoạt động&nbsp;·&nbsp;{{ dailyToday }}</el-divider>
             <div class="m-daily-content">
                 <div class="u-table-body">
                     <div class="u-row" v-for="(item, i) in todayActivities" :key="i">
@@ -74,7 +74,7 @@ export default {
             const keys = dailyKeys.filter((item) => item.type === 2).map((item) => item.key);
             return this.activities.filter((item) => keys.includes(item.key) && item.val);
         },
-        // 今日活动
+        // 今日Hoạt động
         todayActivities() {
             const keys = dailyKeys.filter((item) => item.type === 3).map((item) => item.key);
             return this.activities.filter(

@@ -2,7 +2,7 @@
     <div class="m-resource-combo">
         <div class="m-combo-list">
             <div v-if="total && done" class="m-resource-count">
-                <i class="el-icon-s-data"></i> 共找到 <b>{{ total }}</b> 条记录
+                <i class="el-icon-s-data"></i> Tìm thấy tổng cộng <b>{{ total }}</b> bản ghi
             </div>
             <ul class="m-resource-list">
                 <li
@@ -31,7 +31,7 @@
             </ul>
             <el-alert
                 v-if="!skill.length && done"
-                title="没有找到相关条目"
+                title="Không tìm thấy mục liên quan"
                 type="info"
                 show-icon
             ></el-alert>
@@ -44,7 +44,7 @@
                     type="primary"
                     icon="el-icon-arrow-down"
                     @click="appendPage"
-                    >加载更多</el-button
+                    >Tải thêm</el-button
                 >
                 <!-- 分页 -->
                 <el-pagination
@@ -60,11 +60,11 @@
             </template>
 
             <div class="m-database-tip" v-show="isBlank">
-                ❤ 请输入搜索条件查询
+                ❤ Vui lòng nhập điều kiện tìm kiếm
             </div>
         </div>
 
-        <el-divider>已选技能</el-divider>
+        <el-divider>Kỹ năng đã chọn</el-divider>
         <div class="m-selected-skills">
             <ul class="m-skills-list">
                 <li
@@ -84,7 +84,7 @@
                         </i>
                         <i
                             class="u-remove-icon"
-                            title="移除"
+                            title="Gỡ bỏ"
                             @click="removeSelected(index)"
                             ><i class="el-icon-close"></i
                         ></i>
@@ -223,7 +223,7 @@ export default {
             this.$contextmenu({
                 items: [
                     {
-                        label: !skill?.WithoutGcd ? "设置为无GCD技能" : "设置为有GCD技能",
+                        label: !skill?.WithoutGcd ? "Đặt thành kỹ năng không có GCD" : "Đặt thành kỹ năng có GCD",
                         onClick: () => {
                             this.$set(skill, "WithoutGcd", !skill.WithoutGcd);
                         },

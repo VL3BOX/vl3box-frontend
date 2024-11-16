@@ -34,7 +34,7 @@
                     </div>
                     <!-- 原料 -->
                     <div class="m-item-required" v-if="requiredList.length">
-                        <span class="u-label">制作原料</span>
+                        <span class="u-label">Nguyên liệu chế tạo</span>
                         <router-link
                             class="u-item"
                             v-for="item in requiredList"
@@ -46,84 +46,84 @@
                             <span class="u-count">{{ item._count }}</span>
                         </router-link>
                     </div>
-                    <!-- 其余属性 -->
+                    <!-- 其余Thuộc tính -->
                     <ul class="m-other-fields">
                         <li class="m-other-field">
-                            <span class="u-label">拾取绑定</span>
+                            <span class="u-label">Nhặt sẽ khóa</span>
                             <span class="u-value">{{ item_bind(source.BindType) }}</span>
                         </li>
                         <li class="m-other-field">
-                            <span class="u-label">可否交易</span>
-                            <span class="u-value">{{ source.CanTrade ? "✔️ 可以" : "❌ 不可以" }}</span>
+                            <span class="u-label">Có thể giao dịch</span>
+                            <span class="u-value">{{ source.CanTrade ? "✔️ Có" : "❌ 不Có" }}</span>
                         </li>
                         <li>
-                            <span class="u-label">回购价格</span>
+                            <span class="u-label">Giá mua lại</span>
                             <GamePrice class="u-value" :price="source.Price" v-if="source.Price" />
                             <span class="u-value" v-else>-</span>
                         </li>
                         <!-- <li v-if="source.Level">
-							<span class="u-label">品质等级</span>
+							<span class="u-label">Cấp chất lượng</span>
 							<span class="u-value" v-text="source.Level"></span>
 						</li> -->
                         <!-- <li class="m-other-field">
-							<span class="u-label">品质</span>
+							<span class="u-label">Chất lượng</span>
 							<span class="u-value" v-html="`<span style='color:${item_color(source.Quality)}'>${item_quality(source.Quality)}</span>`"></span>
 						</li> -->
 
                         <li class="m-other-field">
-                            <span class="u-label">可否堆叠</span>
-                            <span class="u-value">{{ source.CanStack ? "✔️ 可以" : "❌ 不可以" }}</span>
+                            <span class="u-label">Có thể chồng</span>
+                            <span class="u-value">{{ source.CanStack ? "✔️ Có" : "❌ 不Có" }}</span>
                         </li>
                         <li v-if="source.MaxExistAmount > 0">
-                            <span class="u-label">最大拥有数</span>
+                            <span class="u-label">Số lượng tối đa</span>
                             <span class="u-value">{{ source.MaxExistAmount }}</span>
                         </li>
                         <li v-if="source.MaxExistTime > 0">
-                            <span class="u-label">限时有效</span>
+                            <span class="u-label">Hạn sử dụng</span>
                             <span class="u-value">{{ showDuration(source.MaxExistTime) }}</span>
                         </li>
 
                         <!-- <li v-if="source.BelongSchool">
-							<span class="u-label">门派</span>
+							<span class="u-label">Môn phái</span>
 							<span class="u-value">{{source.BelongSchool}}</span>
 						</li>
 						<li v-if="source.MagicKind">
-							<span class="u-label">心法</span>
+							<span class="u-label">Tâm pháp</span>
 							<span class="u-value">{{source.MagicKind}}</span>
 						</li>
 						<li v-if="source.MagicType">
-							<span class="u-label">属性</span>
+							<span class="u-label">Thuộc tính</span>
 							<span class="u-value">{{source.MagicType}}</span>
 						</li> -->
                         <li v-if="source.GetType">
-                            <span class="u-label">获得途径</span>
+                            <span class="u-label">Cách thu được</span>
                             <span class="u-value">{{ source.GetType }}</span>
                         </li>
                         <li v-if="source.CanChangeMagic">
-                            <span class="u-label">可否附魔</span>
-                            <span class="u-value">✔️ 可以</span>
+                            <span class="u-label">Có thể phù phép</span>
+                            <span class="u-value">✔️ Có</span>
                         </li>
                         <li v-if="source.CanExterior">
-                            <span class="u-label">可否收集</span>
-                            <span class="u-value">✔️ 可以</span>
+                            <span class="u-label">Có thể thu thập</span>
+                            <span class="u-value">✔️ Có</span>
                         </li>
                         <li v-if="source.CanSetColor">
-                            <span class="u-label">可否染色</span>
-                            <span class="u-value">✔️ 可以</span>
+                            <span class="u-label">Có thể nhuộm màu</span>
+                            <span class="u-value">✔️ Có</span>
                         </li>
                         <li class="m-other-field">
-                            <span class="u-label">可否分解</span>
-                            <span class="u-value">{{ source.CanApart ? "✔️ 可以" : "❌ 不可以" }}</span>
+                            <span class="u-label">Có thể phân rã</span>
+                            <span class="u-value">{{ source.CanApart ? "✔️ Có" : "❌ 不Có" }}</span>
                         </li>
                         <li class="m-other-field">
-                            <span class="u-label">可否摧毁</span>
+                            <span class="u-label">Có thể phá hủy</span>
                             <span class="u-value">{{
-                                source.CanDestroy || source.CanDestroy === null ? "✔️ 可以" : "❌ 不可以"
+                                source.CanDestroy || source.CanDestroy === null ? "✔️ Có" : "❌ 不Có"
                             }}</span>
                         </li>
                         <!-- <li v-if="source.CanShared">
-							<span class="u-label">可否分享</span>
-							<span class="u-value" v-text="'可以分享'"></span>
+							<span class="u-label">Có thể chia sẻ</span>
+							<span class="u-value" v-text="'Có分享'"></span>
 						</li> -->
 
                         <!-- <li v-if="source.Requires && source.Requires[100]">
@@ -135,7 +135,7 @@
                         </li>-->
 
                         <!-- <li v-if="source.AucGenre >= 1 && source.AucGenre <= 3">
-							<span class="u-label">耐久度</span>
+							<span class="u-label">Độ bền</span>
 							<span class="u-value" v-text="`${source.MaxDurability}/${source.MaxDurability}`"></span>
 						</li> -->
                         <!--<li class="m-field">
@@ -148,7 +148,7 @@
                         </li>-->
 
                         <!-- <li v-if="source.CanConsume">
-							<span class="u-label">消耗品</span>
+							<span class="u-label">Tiêu hao phẩm</span>
 							<span class="u-value" v-text="'是'"></span>
 						</li> -->
                     </ul>
@@ -158,13 +158,13 @@
 
         <div class="m-tabs" v-if="showPrice">
             <div class="m-price-server">
-                <i class="el-icon-s-shop"></i> 全服价格
+                <i class="el-icon-s-shop"></i> Giá cả toàn server
                 <el-select
                     v-if="activeTab === 'item-price-chart' || activeTab === 'item-prices'"
                     filterable
                     class="u-server"
                     v-model="server"
-                    placeholder="请选择服务器"
+                    placeholder="Vui lòng chọn server"
                     size="mini"
                 >
                     <el-option v-for="(serve, i) in servers" :key="i" :label="serve" :value="serve"></el-option>
@@ -172,10 +172,10 @@
             </div>
 
             <el-tabs v-model="activeTab" type="border-card" @tab-click="active_tab_handle" v-loading="loading">
-                <el-tab-pane label="📈 价格波动" name="item-price-chart" v-if="source && source.BindType != 3">
+                <el-tab-pane label="📈 Biến động giá" name="item-price-chart" v-if="source && source.BindType != 3">
                     <item-price-chart ref="item_price_chart" :item_id="source.id" :server="server" />
                 </el-tab-pane>
-                <el-tab-pane label="💰 近期价格" name="item-prices" v-if="source && source.BindType != 3" lazy>
+                <el-tab-pane label="💰 Giá gần đây" name="item-prices" v-if="source && source.BindType != 3" lazy>
                     <item-prices ref="item_prices" :item_id="source.id" :server="server" />
                 </el-tab-pane>
                 <!-- <el-tab-pane label="📜 相关物品清单" name="relation-plans" lazy>
@@ -189,26 +189,26 @@
             <WikiPanel :wiki-post="wiki_post">
                 <template slot="head-title">
                     <img class="u-icon" svg-inline src="@/assets/img/item.svg" />
-                    <span class="u-txt">物品攻略</span>
+                    <span class="u-txt">Chiến lược vật phẩm</span>
                 </template>
                 <template slot="head-actions">
                     <a class="el-button el-button--primary" :href="publish_url(`item/${id}`)">
                         <i class="el-icon-edit"></i>
-                        <span>完善物品攻略</span>
+                        <span>完善Chiến lược vật phẩm</span>
                     </a>
                 </template>
                 <template slot="body">
                     <div class="m-wiki-compatible" v-if="compatible">
-                        <i class="el-icon-warning-outline"></i> 暂无缘起攻略，以下为重制攻略，仅作参考，<a
+                        <i class="el-icon-warning-outline"></i> Chưa có chiến lược khởi đầu, dưới đây là chiến lược tái tạo, chỉ mang tính chất tham khảo,<a
                             class="s-link"
                             :href="publish_url(`item/${id}`)"
-                            >参与修订</a
+                            >Tham gia chỉnh sửa</a
                         >。
                     </div>
                     <Article :content="wiki_post.post.content" />
                     <div class="m-wiki-signature">
                         <i class="el-icon-edit"></i>
-                        本次修订由 <b>{{ user_name }}</b> 提交于{{ updated_at }}
+                        Chỉnh sửa lần này bởi <b>{{ user_name }}</b> Nộp vào{{ updated_at }}
                     </div>
                 </template>
             </WikiPanel>
@@ -221,7 +221,7 @@
                 <WikiPanel>
                     <template slot="head-title">
                         <i class="el-icon-coin"></i>
-                        <span class="u-txt">参与打赏</span>
+                        <span class="u-txt">Tham gia đóng góp</span>
                     </template>
                     <template slot="body">
                         <Thx
@@ -247,8 +247,8 @@
         </div>
         <div class="m-wiki-post-empty" v-else>
             <i class="el-icon-s-opportunity"></i>
-            <span>暂无攻略，我要</span>
-            <a class="s-link" :href="publish_url(`item/${id}`)">完善攻略</a>
+            <span>Chưa có chiến lược, tôi muốn</span>
+            <a class="s-link" :href="publish_url(`item/${id}`)">Hoàn thiện chiến lược</a>
         </div>
     </div>
 </template>

@@ -2,14 +2,14 @@
     <WikiPanel class="c-wiki-comments" scene="detail">
         <template slot="head-title">
             <i class="el-icon-chat-line-round"></i>
-            <span>百科评论</span>
+            <span>Bình luận bách khoa</span>
         </template>
         <template slot="body">
             <div class="m-comments-panel" v-loading="loading">
                 <div class="u-empty" v-if="!comments || !comments.length">
-                    <span v-if="comments === null">🎉 数据加载中...</span>
-                    <span v-if="comments === false">⚠️ 数据加载异常</span>
-                    <span v-if="comments && !comments.length">💧 暂无评论</span>
+                    <span v-if="comments === null">🎉 Đang tải dữ liệu...</span>
+                    <span v-if="comments === false">⚠️ Lỗi tải dữ liệu</span>
+                    <span v-if="comments && !comments.length">💧 Chưa có bình luận</span>
                 </div>
                 <!-- 递归评论组件 -->
                 <Comment :comments="comments" :source-id="sourceId" />
@@ -23,20 +23,20 @@
                     layout="prev, pager, next, total"
                     @current-change="handleCurrentChange"
                 ></el-pagination>
-                <!-- 回复表单 -->
+                <!-- Trả lời表单 -->
                 <div id="m-reply-form" class="m-reply-form">
                     <h4 class="u-title">
                         <i class="el-icon-chat-dot-round"></i>
-                        <span>回复</span>
+                        <span>Trả lời</span>
                     </h4>
                     <textarea class="u-reply-content" v-model="reply_form.content"></textarea>
                     <div class="u-author">
-                        <span>昵称：</span>
+                        <span>Biệt danh:</span>
                         <input v-model="reply_form.user_nickname" type="text" />
                     </div>
                     <el-button type="primary" class="u-submit" @click="create_comment(reply_form)">
                         <i class="el-icon-check"></i>
-                        <span>提交</span>
+                        <span>Gửi</span>
                     </el-button>
                 </div>
             </div>
@@ -125,7 +125,7 @@ export default {
             // 校验评论内容
             if (!form.content) {
                 this.$message({
-                    message: "请先填写评论内容再尝试提交",
+                    message: "请先填写评论内容再尝试Gửi",
                     type: "warning",
                 });
                 return;
@@ -144,7 +144,7 @@ export default {
                     res = res.data;
                     form.content = "";
                     this.$message({
-                        message: "提交成功，请等待审核",
+                        message: "Gửi成功，请等待审核",
                         type: "success",
                     });
                 })

@@ -11,14 +11,14 @@
                     {{ visibleTxt(item.visible) }}
                 </span>
                 <span class="u-draft" v-if="item.post_status == 'draft'">
-                    <i class="el-icon-edit-outline"></i> 草稿
+                    <i class="el-icon-edit-outline"></i> Bản thảo
                 </span>
             </template>
             <!-- 资料片 -->
             <span class="u-label u-zlp" v-if="item.zlp">{{ item.zlp }}</span>
-            <span class="u-label u-zlp u-wujie" v-if="item.is_wujie">无界</span>
+            <span class="u-label u-zlp u-wujie" v-if="item.is_wujie">Không giới hạn</span>
             <!-- 繁体标识 -->
-            <span class="u-label u-lang" v-if="item.lang == 'tr'">繁體</span>
+            <span class="u-label u-lang" v-if="item.lang == 'tr'">Phồn thể</span>
             <!-- 标题文字 -->
             <a
                 class="u-title"
@@ -31,7 +31,7 @@
                     },
                     caller: 'macro_index_click',
                 }"
-                >{{ item.post_title || "无标题" }}</a
+                >{{ item.post_title || "Không tiêu đề" }}</a
             >
 
             <!-- 角标 -->
@@ -40,8 +40,8 @@
             </span>
 
             <span class="u-push" v-if="hasPermission">
-                <time v-if="showPushDate" class="u-push__time" :class="{'is-recent': isRecent()}">{{ pushDate }} 已推送</time>
-                <el-button class="u-push__btn" size="mini" type="warning" @click="onPush" icon="el-icon-s-promotion">推送</el-button>
+                <time v-if="showPushDate" class="u-push__time" :class="{'is-recent': isRecent()}">{{ pushDate }} Đã đẩy lên</time>
+                <el-button class="u-push__btn" size="mini" type="warning" @click="onPush" icon="el-icon-s-promotion">Đẩy lên</el-button>
             </span>
         </h2>
 
@@ -53,9 +53,9 @@
             >
                 <li class="u-macro" v-for="(m, i) in item.post_meta.data" :key="i">
                     <img class="u-macro-icon" :src="iconLink(m.icon)" />
-                    <el-tooltip effect="dark" :content="'点击快捷查看 · ' + m.name" placement="top-start">
+                    <el-tooltip effect="dark" :content="'Nhấp để xem nhanh ·' + m.name" placement="top-start">
                         <span class="u-macro-name" @click="loadMacro(item.author, m, item.ID)">{{
-                            m.name || "未命名"
+                            m.name || "Chưa đặt tên"
                         }}</span>
                     </el-tooltip>
                 </li>
@@ -67,7 +67,7 @@
             <!-- 作者 -->
             <div class="u-author">
                 <a class="u-author-name" :href="authorLink(item.post_author)" target="_blank">{{
-                    (item.author_info && item.author_info.display_name) || item.author || "匿名"
+                    (item.author_info && item.author_info.display_name) || item.author || "Ẩn danh"
                 }}</a>
             </div>
             <span class="u-date">
@@ -139,7 +139,7 @@ export default {
             return showAvatar(userinfo?.user_avatar);
         },
         showNickname: function (userinfo) {
-            return userinfo?.display_name || "匿名";
+            return userinfo?.display_name || "Ẩn danh";
         },
         dateFormat: function (gmt) {
             return showDate(new Date(gmt));

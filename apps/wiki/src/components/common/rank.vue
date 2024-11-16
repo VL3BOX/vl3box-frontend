@@ -2,7 +2,7 @@
     <div class="m-wiki-rank">
         <h2 class="m-title">
             <img class="u-icon" svg-inline src="@/assets/img/cj/rank.svg" />
-            <span class="u-text">排行榜</span>
+            <span class="u-text">Bảng xếp hạng</span>
         </h2>
         <el-tabs v-model="activeTab">
             <el-tab-pane :label="tab.label" :name="tab.name" v-for="tab in tabs" :key="tab.name">
@@ -41,23 +41,23 @@ export default {
             tabs: [
                 {
                     name: "achievement",
-                    label: "成就",
+                    label: "Thành tựu",
                 },
                 {
                     name: "item",
-                    label: "物品",
+                    label: "Vật phẩm",
                 },
                 {
                     name: "quest",
-                    label: "任务",
+                    label: "Nhiệm vụ",
                 },
                 {
                     name: "knowledge",
-                    label: "通识",
+                    label: "Thông thức",
                 },
                 {
                     name: "skill",
-                    label: "技能",
+                    label: "Kỹ năng",
                 },
             ],
         };

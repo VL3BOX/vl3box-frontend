@@ -3,24 +3,24 @@
         <el-tabs v-model="map_id" type="card" v-if="data && data.length">
             <el-tab-pane v-for="item in data" :label="item.Layer3Name" :key="item.MapID" :name="String(item.MapID)">
                 <div class="m-story-basic">
-                    <el-divider content-position="left">基本信息</el-divider>
+                    <el-divider content-position="left">Thông tin cơ bản</el-divider>
                     <el-descriptions :column="3" border>
-                        <el-descriptions-item label="名称">{{ item.OtherName }}</el-descriptions-item>
-                        <el-descriptions-item label="地图ID">{{ item.MapID }}</el-descriptions-item>
-                        <el-descriptions-item label="资料片"
+                        <el-descriptions-item label="Tên">{{ item.OtherName }}</el-descriptions-item>
+                        <el-descriptions-item label="ID bản đồ">{{ item.MapID }}</el-descriptions-item>
+                        <el-descriptions-item label="Bản mở rộng"
                             >Level.{{ item.DivideLevel }}／{{ item.DivideName }}／{{
                                 item.VersionName
                             }}</el-descriptions-item
                         >
-                        <el-descriptions-item label="最低等级要求">{{ item.MinLevel }}</el-descriptions-item>
-                        <el-descriptions-item label="入口" :span="2">{{ item.EnterWay }}</el-descriptions-item>
-                        <el-descriptions-item label="简介">{{
+                        <el-descriptions-item label="Yêu cầu cấp độ tối thiểu">{{ item.MinLevel }}</el-descriptions-item>
+                        <el-descriptions-item label="Lối vào" :span="2">{{ item.EnterWay }}</el-descriptions-item>
+                        <el-descriptions-item label="Giới thiệu">{{
                             formatIntroduction(item.Introduction)
                         }}</el-descriptions-item>
                     </el-descriptions>
                 </div>
                 <div class="m-story-boss">
-                    <el-divider content-position="left">首领传说</el-divider>
+                    <el-divider content-position="left">Truyền thuyết thủ lĩnh</el-divider>
                     <div class="u-list" v-if="boss_list && boss_list.length">
                         <div class="u-boss" v-for="(boss, i) in boss_list" :key="i">
                             <h5 class="u-name">
@@ -36,7 +36,7 @@
                                 size="mini"
                                 icon="el-icon-key"
                                 >{{
-                                    !skill_list[boss.NPCID] ? "查看技能" : skill_status[boss.NPCID] ? "收起" : "展开"
+                                    !skill_list[boss.NPCID] ? "Xem kỹ năng" : skill_status[boss.NPCID] ? "Thu gọn" : "Mở rộng"
                                 }}</el-button
                             >
                             <div class="u-boss-skills" v-show="skill_status[boss.NPCID]">
@@ -47,18 +47,18 @@
                                     </div>
                                 </template>
                                 <div class="u-skill-null" v-else>
-                                    <i class="el-icon-warning-outline"></i> 没有相关信息
+                                    <i class="el-icon-warning-outline"></i> Không có thông tin liên quan
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </el-tab-pane>
-            <el-tab-pane :label="'副本地图'">
+            <el-tab-pane :label="'Bản đồ phó bản'">
                 <fb-map></fb-map>
             </el-tab-pane>
         </el-tabs>
-        <el-alert title="未找到相关信息" type="info" show-icon v-else></el-alert>
+        <el-alert title="Không tìm thấy thông tin liên quan" type="info" show-icon v-else></el-alert>
     </div>
 </template>
 
@@ -104,7 +104,7 @@ export default {
             getInfo(this.fb, this.client)
                 .then((res) => {
                     this.data = res?.data || [];
-                    const length = this.data.length; // 副本地图的tab name为tabs的index
+                    const length = this.data.length; // Bản đồ phó bản的tab name为tabs的index
                     this.map_id = !isFbMapTab ? String(this.data?.[0]?.["MapID"]) : length + "";
                 })
                 .finally(() => {

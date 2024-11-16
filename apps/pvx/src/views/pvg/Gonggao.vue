@@ -18,37 +18,37 @@ export default {
             tabs: [
                 {
                     value: "daily",
-                    label: "速览",
+                    label: "Tổng quan",
                 },
                 {
                     value: "calendar",
-                    label: "日历",
+                    label: "Lịch sự kiện",
                 },
                 {
                     value: "server",
-                    label: "开服状态",
+                    label: "Trạng thái máy chủ",
                 },
             ],
             serverList: [],
             heatStateArr: [
                 {
                     value: "6",
-                    label: "良好",
+                    label: "Ổn định",
                     class: "is-open",
                 },
                 {
                     value: "7",
-                    label: "繁忙",
+                    label: "Đông đúc",
                     class: "is-busy",
                 },
                 {
                     value: "8",
-                    label: "爆满",
+                    label: "Quá tải",
                     class: "is-full-load",
                 },
                 {
                     value: "3",
-                    label: "维护",
+                    label: "Bảo trì",
                     class: "is-close",
                 },
             ],

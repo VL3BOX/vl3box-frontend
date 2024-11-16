@@ -2,7 +2,7 @@
     <div>
         <Header></Header>
         <Breadcrumb
-            name="云端宏"
+            name="Macro đám mây"
             slug="macro"
             root="/macro"
             :publishEnable="true"

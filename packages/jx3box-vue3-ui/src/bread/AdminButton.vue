@@ -6,7 +6,7 @@
         :size="button_size"
         icon="Setting"
         @click="toggleAdminPanel"
-        >管理</el-button
+        >Quản lý</el-button
     >
 </template>
 

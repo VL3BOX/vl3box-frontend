@@ -8,7 +8,7 @@
                 <i class="u-point"><img src="@/assets/img/point.png" />{{ item.Point }}</i>
             </a>
         </div>
-        <el-alert v-else class="m-archive-null" title="没有找到相关条目" type="info" center show-icon> </el-alert>
+        <el-alert v-else class="m-archive-null" title="Không tìm thấy mục liên quan" type="info" center show-icon> </el-alert>
         <el-pagination
             class="m-archive-pages"
             background

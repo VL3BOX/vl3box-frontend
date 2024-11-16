@@ -7,25 +7,25 @@
                 <span class="u-name">{{ data.Name }}</span>
                 <div class="u-rt-tags">
                     <span v-if="refCount" class="u-ref-count">
-                        <i class="el-icon-connection"></i> 引用指数 {{ refCount }}</span
+                        <i class="el-icon-connection"></i> Chỉ số trích dẫn {{ refCount }}</span
                     >
                     <el-tag size="small" @click.stop="copy('ID')">
                         <i class="el-icon-document-copy u-copy"></i>
-                        <span class="u-id" title="点击快速复制">ID:{{ data.ID }}</span>
+                        <span class="u-id" title="Nhấn để sao chép nhanh">ID:{{ data.ID }}</span>
                     </el-tag>
                 </div>
             </div>
             <div class="u-primary u-primary__doodad">
                 <span class="u-doodad-prop">
-                    <em>地图</em>
+                    <em>Bản đồ</em>
                     {{ data.MapName }}
                 </span>
                 <span class="u-doodad-prop">
-                    <em>说明</em>
+                    <em>Giải thích</em>
                     {{ data.BarText }}
                 </span>
                 <span class="u-doodad-prop" v-if="data.Kind">
-                    <em>类型</em>
+                    <em>Loại</em>
                     {{ data.Kind }}
                 </span>
             </div>
@@ -36,8 +36,8 @@
                 @click="toggleProps"
             >
                 <i class="el-icon-view"></i>
-                <span v-if="showProps">收起属性</span>
-                <span v-else>查看属性</span>
+                <span v-if="showProps">Thu gọn thuộc tính</span>
+                <span v-else>Xem thuộc tính</span>
             </el-button>
         </div>
         <!-- 项目详情，仅在单页展示 -->
@@ -62,7 +62,7 @@
                     plain
                     @click="star('doodad', data.ID)"
                 >
-                    收藏数据
+                    Lưu dữ liệu
                 </el-button>
                 <el-button
                     v-else-if="isLogin"
@@ -71,7 +71,7 @@
                     plain
                     @click="cancelStar"
                 >
-                    取消收藏
+                    Hủy lưu
                 </el-button>
                 <el-button
                     class="u-button u-to-dbm"
@@ -79,7 +79,7 @@
                     plain
                     @click="toDbm('doodad', data.ID, data.Level)"
                 >
-                    在线构建
+                    Xây dựng trực tuyến
                 </el-button>
             </div>
         </template>

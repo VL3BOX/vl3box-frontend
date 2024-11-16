@@ -17,7 +17,7 @@
                         v-text="comment.user_nickname"
                     ></a>
                     <template v-if="comment.parent_id">
-                        <span>&nbsp;回复&nbsp;</span>
+                        <span>&nbsp;Trả lời&nbsp;</span>
                         <a
                             class="u-nickname"
                             :href="
@@ -33,7 +33,7 @@
                 <p class="u-content" v-html="comment.content"></p>
                 <!-- 其他 -->
                 <div class="m-reply">
-                    <!-- 展开、收起 -->
+                    <!-- 展开、Thu gọn -->
                     <el-button
                         type="default"
                         v-if="comment.reply_form && comment.reply_form.show"
@@ -43,7 +43,7 @@
                         "
                     >
                         <i class="el-icon-arrow-up"></i>
-                        <span>收起</span>
+                        <span>Thu gọn</span>
                     </el-button>
                     <el-button
                         type="primary"
@@ -55,7 +55,7 @@
                         "
                     >
                         <i class="el-icon-chat-dot-round"></i>
-                        <span>回复</span>
+                        <span>Trả lời</span>
                     </el-button>
                     <!-- 更新时间 -->
                     <span
@@ -63,14 +63,14 @@
                         v-text="ts2str(comment.updated)"
                     ></span>
                 </div>
-                <!-- 评论回复表单 -->
+                <!-- 评论Trả lời表单 -->
                 <div class="m-reply-form" v-if="comment.reply_form && comment.reply_form.show">
                     <textarea
                         class="u-reply-content"
                         v-model="comment.reply_form.content"
                     ></textarea>
                     <div class="u-author">
-                        <span>昵称：</span>
+                        <span>Biệt danh:</span>
                         <input
                             v-model="comment.reply_form.user_nickname"
                             type="text"
@@ -82,7 +82,7 @@
                         @click="create_comment(comment.reply_form, comment.id)"
                     >
                         <i class="el-icon-check"></i>
-                        <span>提交</span>
+                        <span>Gửi</span>
                     </el-button>
                 </div>
             </div>
@@ -109,7 +109,7 @@ export default {
             if (!app.create_comment) app = app.$parent;
             if (!app.create_comment) {
                 this.$message({
-                    message: "发布评论异常，请联系管理员",
+                    message: "Có lỗi khi đăng bình luận, vui lòng liên hệ quản trị viên",
                     type: "warning",
                 });
                 return;

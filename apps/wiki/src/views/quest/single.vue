@@ -39,14 +39,14 @@
                 <span class="u-title-id"> (ID:{{ quest.id }})</span>
             </p>
             <div class="u-tag-list">
-                <el-tag v-show="quest.canShare"><img src="@/assets/img/quest/player-63.png" alt="" />可分享任务</el-tag>
+                <el-tag v-show="quest.canShare"><img src="@/assets/img/quest/player-63.png" alt="" />Nhiệm vụ có thể chia sẻ</el-tag>
                 <el-tag v-show="quest.canAssist"
-                    ><img src="@/assets/img/quest/player-62.png" alt="" />可协助任务</el-tag
+                    ><img src="@/assets/img/quest/player-62.png" alt="" />Nhiệm vụ có thể hỗ trợ</el-tag
                 >
             </div>
             <div class="u-endpoint__warpper">
                 <p class="u-endpoint" v-show="quest.start">
-                    <span class="u-endpoint-label"><i class="el-icon-video-play"></i> 任务起点: </span>
+                    <span class="u-endpoint-label"><i class="el-icon-video-play"></i> Điểm bắt đầu nhiệm vụ: </span>
                     <span>{{ quest.start.mapName }}</span>
                     <span class="u-endpoint-separate"> - </span>
                     <item-icon
@@ -55,7 +55,7 @@
                         :item_id="quest.start.id"
                         :size="28"
                     ></item-icon>
-                    <span v-else>{{ quest.start.name || "未知" }}</span>
+                    <span v-else>{{ quest.start.name || "Không xác định" }}</span>
                     <span class="u-endpoint-id"
                         >({{ quest.start.type | pointType }}ID: {{ quest.start.id | idFilter }})</span
                     >
@@ -67,7 +67,7 @@
                     ></point-filter>
                 </p>
                 <p class="u-endpoint">
-                    <span class="u-endpoint-label"><i class="el-icon-remove-outline"></i> 任务终点: </span>
+                    <span class="u-endpoint-label"><i class="el-icon-remove-outline"></i> Điểm kết thúc nhiệm vụ: </span>
                     <span>{{ quest.end.mapName }}</span>
                     <span class="u-endpoint-separate"> - </span>
                     <item-icon
@@ -76,7 +76,7 @@
                         :item_id="quest.end.id"
                         :size="28"
                     ></item-icon>
-                    <span v-else>{{ quest.end.name || "未知" }}</span>
+                    <span v-else>{{ quest.end.name || "Không xác định" }}</span>
                     <span class="u-endpoint-id"
                         >({{ quest.end.type | pointType }}ID: {{ quest.end.id | idFilter }})</span
                     >
@@ -89,13 +89,13 @@
                 </p>
             </div>
             <div class="u-target" v-show="targetDesc">
-                <p class="u-subtitle">▶ 任务目标</p>
+                <p class="u-subtitle">▶ Mục tiêu nhiệm vụ</p>
                 <p v-html="targetDesc"></p>
                 <template v-if="quest.killNpcs && quest.killNpcs.length > 0">
                     <div class="u-target-sub" v-for="(killNpc, i) in quest.killNpcs" :key="i">
-                        <span>击杀</span>
+                        <span>Tiêu diệt</span>
                         <span>{{ killNpc.name }}</span>
-                        <el-tooltip v-if="killNpc.share" content="该目标可共享击杀" placement="top">
+                        <el-tooltip v-if="killNpc.share" content="该目标可共享Tiêu diệt" placement="top">
                             <img src="@/assets/img/quest/target-15.png" alt="" />
                         </el-tooltip>
                         <span> x {{ killNpc.amount }}</span>
@@ -109,7 +109,7 @@
                 </template>
                 <template v-if="quest.needItems && quest.needItems.length > 0">
                     <div class="u-target-sub" v-for="(needItem, i) in quest.needItems" :key="i">
-                        <span>收集</span>
+                        <span>Thu thập</span>
                         <item-icon :item_id="needItem.id" :has_title="true" :size="28"></item-icon>
                         <span>x {{ needItem.amount }}</span>
                         <point-filter
@@ -131,11 +131,11 @@
                 </div>
             </div>
             <div class="u-desc" v-show="questDesc">
-                <p class="u-subtitle">▶ 任务描述</p>
+                <p class="u-subtitle">▶ Mô tả nhiệm vụ</p>
                 <p v-html="questDesc"></p>
             </div>
             <div class="u-offer" v-if="quest.offerItems">
-                <p class="u-subtitle">▶ 提供物品</p>
+                <p class="u-subtitle">▶ Cung cấp vật phẩm</p>
                 <div class="u-offer-list">
                     <item-icon
                         v-for="item in quest.offerItems"
@@ -146,7 +146,7 @@
                 </div>
             </div>
             <div class="u-reward" v-show="showReward">
-                <p class="u-subtitle">▶ 任务奖励</p>
+                <p class="u-subtitle">▶ Phần thưởng nhiệm vụ</p>
                 <div class="u-reward-list">
                     <reward-item v-for="(reward, i) in quest.rewards" :key="i" :reward="reward"></reward-item>
                 </div>
@@ -156,12 +156,12 @@
         <div>
             <Notice></Notice>
             <el-tabs v-model="activeTab" @tab-click="handleTabClick">
-                <el-tab-pane label="任务文案" v-if="showDialog" name="dialog">
+                <el-tab-pane label="Văn bản nhiệm vụ" v-if="showDialog" name="dialog">
                     <div class="u-quest-dialog">
                         <quest-dialog :desc="quest.desc"></quest-dialog>
                     </div>
                 </el-tab-pane>
-                <el-tab-pane label="任务地图" v-if="showMap" name="map">
+                <el-tab-pane label="Bản đồ nhiệm vụ" v-if="showMap" name="map">
                     <div class="u-quest-map">
                         <quest-map ref="map" :points="points" :filter="point_filter" :questType="quest.questType">
                         </quest-map>
@@ -173,26 +173,26 @@
             <WikiPanel :wiki-post="wiki_post">
                 <template slot="head-title">
                     <img class="u-icon" svg-inline :src="icon" />
-                    <span class="u-txt">任务攻略</span>
+                    <span class="u-txt">Hướng dẫn nhiệm vụ</span>
                 </template>
                 <template slot="head-actions">
                     <a class="el-button el-button--primary" :href="publish_url(`quest/${id}`)">
                         <i class="el-icon-edit"></i>
-                        <span>完善任务攻略</span>
+                        <span>完善Hướng dẫn nhiệm vụ</span>
                     </a>
                 </template>
                 <template slot="body">
                     <div class="m-wiki-compatible" v-if="compatible">
-                        <i class="el-icon-warning-outline"></i> 暂无缘起攻略，以下为重制攻略，仅作参考，<a
+                        <i class="el-icon-warning-outline"></i> Hiện chưa có hướng dẫn ban đầu, dưới đây là hướng dẫn tái chế, chỉ mang tính tham khảo,<a
                             class="s-link"
                             :href="publish_url(`quest/${id}`)"
-                            >参与修订</a
+                            >Tham gia chỉnh sửa</a
                         >。
                     </div>
                     <Article :content="wiki_post.post.content" />
                     <div class="m-wiki-signature">
                         <i class="el-icon-edit"></i>
-                        本次修订由 <b>{{ user_name }}</b> 提交于{{ updated_at }}
+                        Lần chỉnh sửa này được thực hiện bởi <b>{{ user_name }}</b> Gửi vào{{ updated_at }}
                     </div>
                 </template>
             </WikiPanel>
@@ -205,7 +205,7 @@
                 <WikiPanel>
                     <template slot="head-title">
                         <i class="el-icon-coin"></i>
-                        <span>参与打赏</span>
+                        <span>Tham gia đánh giá</span>
                     </template>
                     <template slot="body">
                         <Thx
@@ -231,8 +231,8 @@
         </div>
         <div class="m-wiki-post-empty" v-else>
             <i class="el-icon-s-opportunity"></i>
-            <span>暂无攻略，我要</span>
-            <a class="s-link" :href="publish_url(`quest/${id}`)">完善攻略</a>
+            <span>Hiện chưa có hướng dẫn, tôi muốn</span>
+            <a class="s-link" :href="publish_url(`quest/${id}`)">Hoàn thiện hướng dẫn</a>
         </div>
     </div>
 </template>
@@ -520,8 +520,8 @@ export default {
     filters: {
         pointType: (value) => {
             if (value === "npc") return "NPC";
-            else if (value === "doodad") return "交互物品";
-            else if (value === "item") return "物品";
+            else if (value === "doodad") return "Vật phẩm tương tác";
+            else if (value === "item") return "Vật phẩm";
             else return "";
         },
         idFilter: (id) => {

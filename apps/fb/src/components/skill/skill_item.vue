@@ -23,12 +23,12 @@
                 <template v-if="AdvancedMode">
                     <a v-if="skill.origin_name" :href="skill.origin_id | getDBlink" target="_blank">
                         <i class="el-icon-connection"></i>
-                        {{ skill.origin_name || "未知" }}
+                        {{ skill.origin_name || "Không xác định" }}
                     </a>
 
                     <!-- 技能特性 -->
-                    <em v-if="skill.isPenetration">(穿透)</em>
-                    <em v-if="skill.isPuncture">(穿刺)</em>
+                    <em v-if="skill.isPenetration">(Xuyên thấu)</em>
+                    <em v-if="skill.isPuncture">(Xuyên giáp)</em>
                 </template>
             </span>
 
@@ -36,7 +36,7 @@
             <template v-if="AdvancedMode">
                 <div class="u-damage" v-if="skill.tSkillData.length">
                     <span class="u-label">
-                        伤害值
+                        Giá trị sát thương
                         <!-- <em>nDamageBase</em> -->
                     </span>
                     <span class="u-data-group" v-for="(g, i) in skill.tSkillData" :key="i">
@@ -134,15 +134,15 @@ export default {
     methods: {
         onCopy: function (val) {
             this.$notify({
-                title: "复制成功",
-                message: "复制内容 : " + val.text,
+                title: "Sao chép thành công",
+                message: "Nội dung sao chép:" + val.text,
                 type: "success",
             });
         },
         onError: function () {
             this.$notify.error({
-                title: "复制失败",
-                message: "请手动复制",
+                title: "Sao chép thất bại",
+                message: "Vui lòng sao chép thủ công",
             });
         },
     },

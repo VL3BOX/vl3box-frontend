@@ -7,7 +7,7 @@
                 maxlength="300"
                 show-word-limit
                 v-model="newComment.content"
-                placeholder="参与讨论..."
+                placeholder="Tham gia thảo luận..."
                 :id="inputId"
             ></el-input>
             <div class="c-comment-tools">
@@ -20,8 +20,8 @@
                 </Emotion>
                 <quickReply @reply="onQuickReply"></quickReply>
                 <div class="c-comment-secret">
-                    <el-checkbox class="u-secret" v-model="is_secret" border size="small">悄悄话
-                        <el-tooltip class="item" effect="dark" content="勾选悄悄话后仅作者和你可见，并且不可再变更状态" placement="top">
+                    <el-checkbox class="u-secret" v-model="is_secret" border size="small">Lời thì thầm
+                        <el-tooltip class="item" effect="dark" content="勾选Lời thì thầm后仅作者和你可见，并且不可再变更状态" placement="top">
                             <el-icon><InfoFilled></InfoFilled></el-icon> </el-tooltip></el-checkbox>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                     @click="onSubmit"
                     class="u-publish"
                     :disabled="disableSubmitBtn"
-                    >发表评论</el-button
+                    >Viết bình luận</el-button
                 >
             </div>
         </el-form-item>

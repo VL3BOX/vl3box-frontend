@@ -1,6 +1,6 @@
 <template>
     <div class="jinmai yutang" style>
-        <h3>任脉</h3>
+        <h3>Nhâm mạch</h3>
         <div v-for="(item, index) in jingmai" :key="index" :class="'ap ap' + item.id">
             <em :class="'level' + item.nowLevel"></em>
             <a
@@ -24,20 +24,20 @@ export default {
     data() {
         return {
             jingmai: [
-                { name: "任脉·玉堂", id: 77, lnLevel: 1 },
-                { name: "任脉·紫宫", id: 78, lnLevel: 1 },
-                { name: "任脉·华盖", id: 79, lnLevel: 1 },
-                { name: "任脉·璇玑", id: 80, lnLevel: 1 },
-                { name: "任脉·龈交", id: 81, lnLevel: 1 },
-                { name: "任脉·天突", id: 82, lnLevel: 1 },
-                { name: "任脉·廉泉", id: 83, lnLevel: 1 },
-                { name: "任脉·兑端", id: 84, lnLevel: 1 },
-                { name: "任脉·承浆", id: 85, lnLevel: 0 },
-                { name: "任脉·水沟", id: 86, lnLevel: 2 },
-                { name: "任脉·素髎", id: 87, lnLevel: 2 },
-                { name: "任脉·神庭", id: 88, lnLevel: 2 },
-                { name: "任脉·上星", id: 89, lnLevel: 2 },
-                { name: "任脉·前顶", id: 90, lnLevel: 0 },
+                { name: "Nhâm mạch·玉堂", id: 77, lnLevel: 1 },
+                { name: "Nhâm mạch·紫宫", id: 78, lnLevel: 1 },
+                { name: "Nhâm mạch·华盖", id: 79, lnLevel: 1 },
+                { name: "Nhâm mạch·璇玑", id: 80, lnLevel: 1 },
+                { name: "Nhâm mạch·龈交", id: 81, lnLevel: 1 },
+                { name: "Nhâm mạch·天突", id: 82, lnLevel: 1 },
+                { name: "Nhâm mạch·廉泉", id: 83, lnLevel: 1 },
+                { name: "Nhâm mạch·兑端", id: 84, lnLevel: 1 },
+                { name: "Nhâm mạch·承浆", id: 85, lnLevel: 0 },
+                { name: "Nhâm mạch·水沟", id: 86, lnLevel: 2 },
+                { name: "Nhâm mạch·素髎", id: 87, lnLevel: 2 },
+                { name: "Nhâm mạch·神庭", id: 88, lnLevel: 2 },
+                { name: "Nhâm mạch·上星", id: 89, lnLevel: 2 },
+                { name: "Nhâm mạch·前顶", id: 90, lnLevel: 0 },
             ],
             mouseData: {},
             hover: "",

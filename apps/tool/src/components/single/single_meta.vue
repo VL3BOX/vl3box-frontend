@@ -25,7 +25,7 @@
                         v-show="item.file"
                     >
                         <i class="el-icon-link"></i>
-                        <span>前往下载</span>
+                        <span>Đi tới trang tải xuống</span>
                     </a>
                 </template>
             </div>
@@ -35,8 +35,8 @@
             <div class="m-single-notice">
                 <div class="m-notice-header">
                     <i class="el-icon-warning"></i>
-                    <span class="u-header">特别说明</span>
-                    <a class="u-report" :href="feedback" target="_blank">快捷举报</a>
+                    <span class="u-header">Lưu ý đặc biệt</span>
+                    <a class="u-report" :href="feedback" target="_blank">Báo cáo nhanh</a>
                 </div>
                 <div class="m-description">
                     <div class="m-content" v-html="nl2br(content)">

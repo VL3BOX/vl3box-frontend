@@ -12,7 +12,7 @@
                     <div class="u-boss-info">
                         <img class="u-boss-avatar" :src="current.avatar" />
                         <div class="u-name-info">
-                            <div class="u-label">{{ isImportant ? "精英首领" : "首领" }}</div>
+                            <div class="u-label">{{ isImportant ? "Thủ lĩnh tinh anh" : "Thủ lĩnh" }}</div>
                             <div class="u-name">{{ topic }}</div>
                         </div>
                     </div>
@@ -23,8 +23,8 @@
         </div>
         <div class="m-boss-raider" :class="!topic && 'no-boss'">
             <div class="u-header">
-                <div class="u-title">相关攻略</div>
-                <a :href="getLink()" target="_blank">查看全部</a>
+                <div class="u-title">Hướng dẫn liên quan</div>
+                <a :href="getLink()" target="_blank">Xem tất cả</a>
             </div>
             <BossRaider></BossRaider>
         </div>

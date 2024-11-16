@@ -30,11 +30,11 @@
             <div class="u-other">
                 <span
                     class="u-attr"
-                    v-text="achievement.post ? '修订时间：' + ts2str(achievement.post.updated) : ''"
+                    v-text="achievement.post ? 'Thời gian sửa đổi:' + ts2str(achievement.post.updated) : ''"
                 ></span>
                 <span
                     class="u-attr"
-                    v-text="achievement.post ? '综合难度：' + star(achievement.post.level) : ''"
+                    v-text="achievement.post ? 'Độ khó tổng hợp:' + star(achievement.post.level) : ''"
                 ></span>
                 <template v-if="isLogin && isVirtual">
                     <el-button
@@ -45,7 +45,7 @@
                         icon="el-icon-check"
                         @click.stop="finishVirtual()"
                     >
-                        设为完成
+                        Đánh dấu hoàn thành
                     </el-button>
                     <el-button
                         v-else
@@ -55,7 +55,7 @@
                         icon="el-icon-close"
                         @click.stop="cancelVirtual()"
                     >
-                        取消完成
+                        Hủy bỏ hoàn thành
                     </el-button>
                 </template>
                 <Fav
@@ -93,8 +93,8 @@
         </div>
         <div class="u-footer">
             <div v-if="achievement.Prefix || achievement.Postfix" class="u-ch">
-                <div v-if="achievement.PrefixName" v-text="'称号前缀：' + achievement.PrefixName"></div>
-                <div v-if="achievement.PostfixName" v-text="'称号后缀：' + achievement.PostfixName"></div>
+                <div v-if="achievement.PrefixName" v-text="'Tiền tố danh hiệu:' + achievement.PrefixName"></div>
+                <div v-if="achievement.PostfixName" v-text="'Hậu tố danh hiệu:' + achievement.PostfixName"></div>
             </div>
             <el-row v-if="achievement.SubAchievementList" class="u-subs" :gutter="30">
                 <el-col
@@ -135,8 +135,8 @@
                         }"
                     >
                         <div class="u-status">
-                            <span v-if="hadCompleted(series_achievement.ID)" class="u-check">已完成</span>
-                            <span v-else class="u-close">待完成</span>
+                            <span v-if="hadCompleted(series_achievement.ID)" class="u-check">Đã hoàn thành</span>
+                            <span v-else class="u-close">Chưa hoàn thành</span>
                         </div>
                         <img class="u-icon" :src="icon_url(series_achievement.IconID)" />
                         <div class="detail">
@@ -149,16 +149,16 @@
                             v-if="!hadCompleted(series_achievement.ID)"
                             class="item"
                             effect="dark"
-                            content="设为完成"
+                            content="Đánh dấu hoàn thành"
                             placement="bottom"
                         >
                             <i
-                                title="设为完成"
+                                title="Đánh dấu hoàn thành"
                                 class="u-icon el-icon-check"
                                 @click.stop="finishVirtual(series_achievement.ID)"
                             ></i>
                         </el-tooltip>
-                        <el-tooltip v-else class="item" effect="dark" content="取消完成" placement="bottom">
+                        <el-tooltip v-else class="item" effect="dark" content="Hủy bỏ hoàn thành" placement="bottom">
                             <i class="u-icon el-icon-close" @click.stop="cancelVirtual(series_achievement.ID)"></i>
                         </el-tooltip>
                     </div>
@@ -239,9 +239,9 @@ export default {
                     }
                 });
                 const len = list.length;
-                return this.completed ? "已完成" : `待完成(${num}/${len})`;
+                return this.completed ? "Đã hoàn thành" : `Chưa hoàn thành(${num}/${len})`;
             }
-            return this.completed ? "已完成" : "待完成";
+            return this.completed ? "Đã hoàn thành" : "Chưa hoàn thành";
         },
         isLogin() {
             return User.isLogin();
@@ -282,9 +282,9 @@ export default {
                     }
                 });
                 const len = list.length;
-                return this.completedVirtual ? "已完成" : `待完成(${num}/${len})`;
+                return this.completedVirtual ? "Đã hoàn thành" : `Chưa hoàn thành(${num}/${len})`;
             }
-            return this.completedVirtual ? "已完成" : "待完成";
+            return this.completedVirtual ? "Đã hoàn thành" : "Chưa hoàn thành";
         },
     },
     watch: {
@@ -328,8 +328,8 @@ export default {
             }
             console.log(this.currentRole);
             if (!this.currentRole || this.currentRole.jx3id !== 0) {
-                this.$alert("请先在侧边栏选择虚拟角色", "警告", {
-                    confirmButtonText: "确定",
+                this.$alert("Vui lòng chọn nhân vật ảo trong thanh bên trước", "Cảnh báo", {
+                    confirmButtonText: "Xác nhận",
                 });
                 return;
             }
@@ -342,8 +342,8 @@ export default {
             };
             setVirtualRoleAchievements(data).then((res) => {
                 this.$notify({
-                    title: "操作成功",
-                    message: "已将该成就标记为已完成",
+                    title: "Thao tác thành công",
+                    message: "已将该成就标记为Đã hoàn thành",
                     type: "success",
                 });
                 let list = this.achievementsVirtual;
@@ -361,15 +361,15 @@ export default {
                 this.$store.commit("SET_STATE", { key: "achievementsVirtual", value: list });
             });
         },
-        // 取消完成
+        // Hủy bỏ hoàn thành
         cancelVirtual(virtualId) {
             if (!this.isLogin) {
                 User.toLogin();
             }
 
             if (!this.currentRole || this.currentRole.jx3id) {
-                this.$alert("请先在侧边栏选择虚拟角色", "警告", {
-                    confirmButtonText: "确定",
+                this.$alert("Vui lòng chọn nhân vật ảo trong thanh bên trước", "Cảnh báo", {
+                    confirmButtonText: "Xác nhận",
                 });
                 return;
             }
@@ -383,8 +383,8 @@ export default {
             };
             cancelVirtualRoleAchievements(data).then((res) => {
                 this.$notify({
-                    title: "操作成功",
-                    message: "已将该成就标记为待完成",
+                    title: "Thao tác thành công",
+                    message: "已将该成就标记为Chưa hoàn thành",
                     type: "success",
                 });
                 let list = this.achievementsVirtual;

@@ -34,14 +34,14 @@
                                     class="u-platform"
                                     v-if="group.platform == 'QQ'"
                                     size="mini"
-                                    v-text="`${group.platform}群`"
+                                    v-text="`${group.platform}Nhóm`"
                                 ></el-tag>
                                 <el-tag
                                     class="u-platform"
                                     v-if="group.platform == 'YY'"
                                     size="mini"
                                     type="info"
-                                    v-text="`${group.platform}群`"
+                                    v-text="`${group.platform}Nhóm`"
                                 ></el-tag>
                                 <el-tag
                                     class="u-number"
@@ -59,7 +59,7 @@
                 </ul>
             </el-collapse-item>
         </el-collapse>
-        <div v-else class="u-groups-empty">暂无相关群组</div>
+        <div v-else class="u-groups-empty">暂无相关Nhóm组</div>
     </div>
 </template>
 
@@ -75,17 +75,17 @@ export default {
     },
     methods: {
         copy_success() {
-            this.$notify({ title: "复制成功", type: "success" });
+            this.$notify({ title: "Sao chép thành công", type: "success" });
         },
         copy_error() {
-            this.$notify({ title: "浏览器不支持", type: "error" });
+            this.$notify({ title: "Trình duyệt không hỗ trợ", type: "error" });
         },
         kungfu_color(val) {
             return xfmap[val] ? xfmap[val]["color"] : "";
         },
     },
     mounted: function () {
-        // 获取群组
+        // 获取Nhóm组
         get_groups("bps", { order_by: "school", group_by: "school" }).then(
             (data) => {
                 data = data.data;

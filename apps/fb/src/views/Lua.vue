@@ -1,8 +1,8 @@
 <template>
     <div class="v-lua" v-loading="loading" v-if="isSuperAuthor">
         <div class="m-lua-search">
-            <el-input placeholder="请输入关键词" v-model.trim.lazy="search" class="input-with-select" @change="searchLua">
-                <span slot="prepend"><i class="el-icon-search"></i> 搜索</span>
+            <el-input placeholder="Vui lòng nhập từ khóa" v-model.trim.lazy="search" class="input-with-select" @change="searchLua">
+                <span slot="prepend"><i class="el-icon-search"></i> Tìm kiếm</span>
                 <el-button slot="append" icon="el-icon-position" @change="searchLua"></el-button>
             </el-input>
         </div>
@@ -17,9 +17,9 @@
         <div class="m-lua-tree m-lua-box">
             <div class="u-title">
                 <i class="el-icon-collection-tag"></i>
-                <span class="u-title-list" @click="showList">文件列表</span>
+                <span class="u-title-list" @click="showList">Danh sách tệp</span>
                 <span class="u-title-file"><i class="el-icon-arrow-right"></i> {{ file }}</span>
-                <div class="u-back" @click="showList" v-if="data"><i class="el-icon-caret-left"></i> 返 回</div>
+                <div class="u-back" @click="showList" v-if="data"><i class="el-icon-caret-left"></i> Trở lại</div>
             </div>
             <div class="u-item" v-show="!data" v-for="item in map" :key="item">
                 <template v-if="!item.includes('/') && client == 'std'">

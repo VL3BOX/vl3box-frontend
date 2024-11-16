@@ -1,8 +1,8 @@
 <template>
     <div>
-        <el-input placeholder="点击自动复制" v-model="code" @click="copy(code)">
+        <el-input placeholder="Nhấp để sao chép tự động" v-model="code" @click="copy(code)">
             <template slot="prepend">{{ config.desc + "·" + config.name }}</template>
-            <template slot="append">点击复制</template>
+            <template slot="append">Nhấp để sao chép</template>
         </el-input>
     </div>
 </template>
@@ -27,7 +27,7 @@ export default {
     },
     methods: {
         copy: function(val) {
-            copy(val, { success_message: "奇穴编码复制成功" });
+            copy(val, { success_message: "Sao chép mã kỳ huyệt thành công" });
         },
     },
     mounted: function() {},

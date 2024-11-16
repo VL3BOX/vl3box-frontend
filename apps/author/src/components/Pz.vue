@@ -7,12 +7,12 @@
                     <!-- 标题 -->
                     <h2 class="u-post">
                         <!-- 标题文字 -->
-                        <a :href="postLink(item.id, item.client)" class="u-title" target="_blank">{{ item.title || "无标题" }}</a>
+                        <a :href="postLink(item.id, item.client)" class="u-title" target="_blank">{{ item.title || "Không có tiêu đề" }}</a>
                     </h2>
                     <!-- 字段 -->
                     <div class="u-content u-desc">
                         <i :class="item.client" class="u-client">{{ item.client | clientLabel }}</i>
-                        {{ item.desc || "这个配装没有任何描述" }}
+                        {{ item.desc || "Trang bị này không có mô tả nào" }}
                     </div>
 
                     <!-- 作者 -->
@@ -105,7 +105,7 @@ export default {
             return showAvatar(userinfo?.user_avatar);
         },
         showNickname : function (userinfo){
-            return userinfo?.display_name || '匿名'
+            return userinfo?.display_name || 'Ẩn danh'
         },
         clientLabel: function(val) {
             val = val || "std";

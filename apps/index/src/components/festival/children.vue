@@ -5,10 +5,10 @@
                 <img
                     :class="`children-card__img animation ${show ? '' : 'fadeInUp'}`"
                     :src="`${imgLink}children2024/bg.png`"
-                    alt="六一儿童节"
+                    alt="Quốc tế thiếu nhi"
                 />
                 <div :class="`u-img animation ${show ? '' : 'fadeInDown'}`">
-                    <img class="children-card__open" :src="`${imgLink}children2024/button.png`" alt="六一儿童节" />
+                    <img class="children-card__open" :src="`${imgLink}children2024/button.png`" alt="Quốc tế thiếu nhi" />
                 </div>
             </template>
             <div v-else @click.stop="close">
@@ -16,13 +16,13 @@
                     class="children-card__img animation"
                     :class="show ? 'flipInY' : ''"
                     :src="`${imgLink}children2024/bg2.png`"
-                    alt="六一儿童节"
+                    alt="Quốc tế thiếu nhi"
                 />
                 <img
                     class="animation children-card__content"
                     :class="show ? 'flipInY' : ''"
                     :src="`${imgLink}children2024/${fontCount || 6}.png`"
-                    alt="六一儿童节"
+                    alt="Quốc tế thiếu nhi"
                 />
             </div>
         </div>

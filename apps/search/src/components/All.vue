@@ -1,7 +1,7 @@
 <template>
 	<div class="m-search_all" v-loading="loading">
 		<div class="m-filter" :class="{ show }">
-			<el-divider class="m-filter-folder" content-position="left" @click="changeShow">筛选 <i :class="show ? 'el-icon-caret-bottom' : 'el-icon-caret-top'"></i></el-divider>
+			<el-divider class="m-filter-folder" content-position="left" @click="changeShow">Lọc <i :class="show ? 'el-icon-caret-bottom' : 'el-icon-caret-top'"></i></el-divider>
 			<div class="m-filter-box" v-for="(item, i) in search" :key="i" v-show="show">
 				<span class="u-label">{{ item.label }}</span>
 				<el-checkbox-group class="u-group" v-model="item.list">
@@ -17,7 +17,7 @@
 				<div class="u-info">
 					<a class="u-title" :href="resultLink(item)" target="_blank">
 						<i class="u-client" v-if="item.client" :class="`i-client-${item.client}`">{{ clientKey(item.client) }}</i>
-						<span class="u-text">{{ item.title ||item.content || "无标题" }}</span>
+						<span class="u-text">{{ item.title ||item.content || "Không có tiêu đề" }}</span>
 					</a>
 					<span class="u-link">
 						<span class="u-date">{{ item.updated_at }}</span> @ {{ item.author }}
@@ -26,8 +26,8 @@
 				<el-image class="u-img" :src="resolveImagePath(item.convert_image)" fit="cover" v-if="item.convert_image" :preview-src-list="[resolveImagePath(item.convert_image)]"></el-image>
 			</li>
 		</ul>
-		<el-alert v-else class="m-archive-null" title="没有找到相关条目" type="info" center show-icon> </el-alert>
-		<el-button class="m-archive-more" type="primary" :class="{ show: hasNextPage }" :loading="loading" @click="appendPage(++page)" icon="el-icon-arrow-down">加载更多</el-button>
+		<el-alert v-else class="m-archive-null" title="Không tìm thấy mục liên quan" type="info" center show-icon> </el-alert>
+		<el-button class="m-archive-more" type="primary" :class="{ show: hasNextPage }" :loading="loading" @click="appendPage(++page)" icon="el-icon-arrow-down">Tải thêm</el-button>
 		<el-pagination class="m-archive-pages" layout="prev, pager, next" background hide-on-single-page :page-size.sync="per" :total="total" :current-page.sync="page" @current-change="changePage"> </el-pagination>
 		<el-backtop :bottom="40" :right="20"></el-backtop>
 	</div>
@@ -53,19 +53,19 @@ export default {
 			show: true,
 			search: {
 				filter_name: {
-					label: "来源",
+					label: "Nguồn",
 					list: [],
 				},
 				filter_client: {
-					label: "客户端",
+					label: "Client",
 					list: [],
 				},
 				filter_author: {
-					label: "作者",
+					label: "Tác giả",
 					list: [],
 				},
 				// filter_category: {
-				// label: "分类",
+				// label: "Phân loại",
 				// list: [],
 				// },
 			},

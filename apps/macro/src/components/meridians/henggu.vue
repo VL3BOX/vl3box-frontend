@@ -1,6 +1,6 @@
 <template>
     <div class="jinmai henggu" style>
-        <h3>冲脉</h3>
+        <h3>Xung mạch</h3>
         <div v-for="(item, index) in jingmai" :key="index" :class="'ap ap' + item.id">
             <em :class="'level' + item.nowLevel"></em>
             <a
@@ -24,14 +24,14 @@ export default {
     data() {
         return {
             jingmai: [
-                { name: "冲脉·横骨", id: 164, lnLevel: 2 },
-                { name: "冲脉·气穴", id: 159, lnLevel: 1 },
-                { name: "冲脉·盲俞", id: 162, lnLevel: 1 },
-                { name: "冲脉·四满", id: 160, lnLevel: 1 },
-                { name: "冲脉·中注", id: 161, lnLevel: 1 },
-                { name: "冲脉·石关", id: 157, lnLevel: 3 },
-                { name: "冲脉·通谷", id: 166, lnLevel: 3 },
-                { name: "冲脉·关门", id: 168, lnLevel: 0 },
+                { name: "Xung mạch·横骨", id: 164, lnLevel: 2 },
+                { name: "Xung mạch·气穴", id: 159, lnLevel: 1 },
+                { name: "Xung mạch·盲俞", id: 162, lnLevel: 1 },
+                { name: "Xung mạch·四满", id: 160, lnLevel: 1 },
+                { name: "Xung mạch·中注", id: 161, lnLevel: 1 },
+                { name: "Xung mạch·石关", id: 157, lnLevel: 3 },
+                { name: "Xung mạch·通谷", id: 166, lnLevel: 3 },
+                { name: "Xung mạch·关门", id: 168, lnLevel: 0 },
             ],
             mouseData: {},
             hover: "",

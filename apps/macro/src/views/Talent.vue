@@ -2,17 +2,17 @@
     <app-layout slug="talent">
         <div class="m-talent">
             <div class="m-talent-header">
-                <h1 class="m-talent-title">奇穴模拟器</h1>
+                <h1 class="m-talent-title">Mô phỏng kỳ huyệt</h1>
                 <div class="m-talent-panel">
                     <el-radio-group v-model="finalClient">
                         <el-radio-button label="std">旗舰</el-radio-button>
                         <el-radio-button label="wujie">无界</el-radio-button>
                     </el-radio-group>
                     <div class="m-talent-version">
-                        <span class="u-label">选择版本</span>
+                        <span class="u-label">Chọn phiên bản</span>
                         <el-select
                             v-model="version"
-                            placeholder="请选择游戏版本"
+                            placeholder="Vui lòng chọn phiên bản trò chơi"
                             @change="reload"
                             popper-class="m-talent__pop"
                         >
@@ -30,39 +30,39 @@
                         </el-select>
                     </div>
                     <div class="u-toolbar" v-if="isLogin">
-                        <!-- <el-button plain @click="showList = false" icon="el-icon-refresh-left" size="small" v-if="showList">返回</el-button> -->
-                        <!-- <el-button type="primary" @click="showList = true" icon="el-icon-setting" size="small" v-else>我的预设</el-button> -->
+                        <!-- <el-button plain @click="showList = false" icon="el-icon-refresh-left" size="small" v-if="showList">Quay lại</el-button> -->
+                        <!-- <el-button type="primary" @click="showList = true" icon="el-icon-setting" size="small" v-else>Cài đặt sẵn của tôi</el-button> -->
                         <el-button type="primary" @click="drawer = true" icon="el-icon-setting" size="small"
-                            >我的预设</el-button
+                            >Cài đặt sẵn của tôi</el-button
                         >
                     </div>
                 </div>
             </div>
             <div class="m-talent-wrapper">
-                <h2 class="m-talent-subtitle">选择心法</h2>
+                <h2 class="m-talent-subtitle">Chọn tâm pháp</h2>
                 <div class="m-talent-xf">
                     <el-radio v-for="(item, i) in xfMaps" v-model="xf" :label="item.name" :key="i" @change="reload">
                         <img class="u-pic" :src="xficon(item.id)" :alt="item.name" />
                         <span class="u-txt">{{ item.name }}</span>
                     </el-radio>
                 </div>
-                <h2 class="m-talent-subtitle">配置奇穴</h2>
+                <h2 class="m-talent-subtitle">Cấu hình kỳ huyệt</h2>
                 <div class="qx-container"></div>
-                <h2 class="m-talent-subtitle">奇穴编码</h2>
+                <h2 class="m-talent-subtitle">Mã kỳ huyệt</h2>
                 <div class="m-talent-code">
-                    <el-input placeholder="粘贴编码亦可自动解析奇穴" v-model="code" @change="parseSchema">
+                    <el-input placeholder="Dán mã cũng có thể tự động phân tích kỳ huyệt" v-model="code" @change="parseSchema">
                         <span slot="prepend" @click="copy(code)" class="u-copy">
                             <i class="el-icon-document-copy"></i>
-                            点击复制
+                            Nhấp để sao chép
                         </span>
                     </el-input>
                 </div>
                 <div class="m-talent-code" v-if="isEditor">
-                    <h2 class="m-talent-subtitle">配装编码</h2>
-                    <el-input placeholder="配装器编码" v-model="pzcode">
+                    <h2 class="m-talent-subtitle">Mã trang bị</h2>
+                    <el-input placeholder="Mã bộ trang bị" v-model="pzcode">
                         <span slot="prepend" @click="copy(pzcode)" class="u-copy">
                             <i class="el-icon-document-copy"></i>
-                            点击复制
+                            Nhấp để sao chép
                         </span>
                     </el-input>
                 </div>
@@ -80,7 +80,7 @@
                         class="u-btn"
                         @click="saveAs"
                         plain
-                        >另存为</el-button
+                        >Lưu thành</el-button
                     >
                 </div>
             </div>
@@ -192,7 +192,7 @@ export default {
         },
         copy: function (val) {
             if (!val) return;
-            copy(val, { success_message: "复制奇穴编码成功" });
+            copy(val, { success_message: "复制Mã kỳ huyệt成功" });
         },
 
         // 预设方案
@@ -201,7 +201,7 @@ export default {
                 this.$notify({
                     type: "warning",
                     title: "提醒",
-                    message: "暂未选择心法，请先选择心法",
+                    message: "暂未Chọn tâm pháp，请先Chọn tâm pháp",
                 });
                 return;
             }
@@ -242,7 +242,7 @@ export default {
             }
         },
         saveAs: function () {
-            this.$prompt("方案另存为", "提示", {
+            this.$prompt("方案Lưu thành", "提示", {
                 confirmButtonText: "确定",
                 cancelButtonText: "取消",
                 inputErrorMessage: "输入不能为空",

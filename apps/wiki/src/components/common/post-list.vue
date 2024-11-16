@@ -2,7 +2,7 @@
     <WikiPanel :border-none="true">
         <template slot="head-title">
             <i class="el-icon-collection"></i>
-            <span>最近攻略</span>
+            <span>Hướng dẫn gần đây</span>
         </template>
         <template slot="body">
             <el-row class="m-posts">

@@ -2,8 +2,8 @@
     <div class="m-list-side">
         <!-- 群号 -->
         <RightSideMsg>
-            <em>全服团长交流群</em> :
-            <strong @click="onQQClick" class="u-link" title="点击复制">
+            <em>Nhóm trò chuyện trưởng đoàn toàn máy chủ</em> :
+            <strong @click="onQQClick" class="u-link" title="Nhấn để sao chép">
                 <a>{{ qq }}</a>
             </strong>
         </RightSideMsg>

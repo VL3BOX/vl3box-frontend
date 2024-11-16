@@ -3,17 +3,17 @@
         <div class="m-archive-box" v-loading="loading">
             <!-- 搜索 -->
             <div class="m-archive-search" slot="search-before">
-                <a :href="publish_link" class="u-publish el-button el-button--primary">+ 发布作品</a>
-                <el-input placeholder="请输入搜索内容" v-model.trim.lazy="search" clearable @clear="onSearch" @keydown.native.enter="onSearch">
+                <a :href="publish_link" class="u-publish el-button el-button--primary">+ Đăng tác phẩm</a>
+                <el-input placeholder="Vui lòng nhập nội dung tìm kiếm" v-model.trim.lazy="search" clearable @clear="onSearch" @keydown.native.enter="onSearch">
                     <span slot="prepend">
                         <template v-if="client=='std' && isPhone">
                             <el-select v-model="is_wujie">
-                                <el-option label="电脑" :value="0"></el-option>
-                                <el-option label="手机" :value="1"></el-option>
+                                <el-option label="Máy tính" :value="0"></el-option>
+                                <el-option label="Điện thoại di động" :value="1"></el-option>
                             </el-select>
                         </template>
                         <template v-else>
-                            <i class="el-icon-search"></i> <span class="u-search">关键词</span>
+                            <i class="el-icon-search"></i> <span class="u-search">Từ khóa</span>
                         </template>
                     </span>
                     <el-button slot="append" icon="el-icon-position" class="u-btn" @click="onSearch"></el-button>
@@ -26,8 +26,8 @@
                     <!-- 版本过滤 -->
                     <clientBy @filter="filterImperceptibly" :type="client" :showWujie="false"></clientBy>
 
-                    <!-- 类型过滤 -->
-                    <markBy @filter="filterMeta" :marks="pv_types" type="tag" placeholder="类型"></markBy>
+                    <!-- Loại过滤 -->
+                    <markBy @filter="filterMeta" :marks="pv_types" type="tag" placeholder="Loại"></markBy>
 
                     <!-- 角标过滤 -->
                     <markBy @filter="filterMeta"></markBy>
@@ -36,7 +36,7 @@
                     <!-- 主题过滤 -->
                     <topicBy v-model="topic" :topics="topics" />
                     <!-- 无界筛选 -->
-                    <el-checkbox v-model="is_wujie" class="u-wujie-filter" :true-label="1" :false-label="0">只看无界</el-checkbox>
+                    <el-checkbox v-model="is_wujie" class="u-wujie-filter" :true-label="1" :false-label="0">Chỉ xem không giới hạn</el-checkbox>
                 </div>
                 <div class="m-filter--right">
                     <!-- 排序过滤 -->
@@ -55,7 +55,7 @@
             </div>
 
             <!-- 空 -->
-            <el-alert v-else class="m-archive-null" title="没有找到相关条目" type="info" center show-icon></el-alert>
+            <el-alert v-else class="m-archive-null" title="Không tìm thấy mục liên quan" type="info" center show-icon></el-alert>
 
             <!-- 下一页 -->
             <el-button
@@ -65,7 +65,7 @@
                 @click="appendPage"
                 :loading="loading"
                 icon="el-icon-arrow-down"
-                >加载更多</el-button
+                >Tải thêm</el-button
             >
 
             <!-- 分页 -->
@@ -138,7 +138,7 @@ export default {
         publish_link: function () {
             return publishLink(appKey);
         },
-        // 是否显示加载更多
+        // 是否显示Tải thêm
         hasNextPage: function () {
             return this.pages > 1 && this.page < this.total;
         },

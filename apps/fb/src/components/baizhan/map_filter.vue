@@ -1,10 +1,10 @@
 <template>
     <div class="w-card m-map-filter">
         <div class="w-card-title">
-            <img src="@/assets/img/baizhan/filter.svg" alt="筛选" />
-            <span>筛选</span>
+            <img src="@/assets/img/baizhan/filter.svg" alt="Lọc" />
+            <span>Lọc</span>
         </div>
-        <div class="m-section-title m-two-title first-section">常用</div>
+        <div class="m-section-title m-two-title first-section">Thường dùng</div>
         <div class="m-filter-list">
             <div
                 class="u-filter"
@@ -17,7 +17,7 @@
                 {{ normal.label }}
             </div>
         </div>
-        <div class="m-section-title">特殊效果</div>
+        <div class="m-section-title">Hiệu ứng đặc biệt</div>
         <div class="m-filter-list">
             <div
                 class="u-filter"
@@ -30,7 +30,7 @@
                 {{ effect.text }}
             </div>
         </div>
-        <div class="m-section-title m-two-title">首领</div>
+        <div class="m-section-title m-two-title">Thủ lĩnh</div>
         <div class="m-filter-list">
             <div
                 class="u-filter"
@@ -58,15 +58,15 @@ export default {
         return {
             tabs: [
                 {
-                    label: "百战地图",
+                    label: "Bản đồ bách chiến",
                     value: "map",
                 },
                 {
-                    label: "技能列表",
+                    label: "Danh sách kỹ năng",
                     value: "skill",
                 },
                 {
-                    label: "首领信息",
+                    label: "Thủ lĩnh信息",
                     value: "boss",
                 },
             ],
@@ -75,7 +75,7 @@ export default {
             effectsFilter,
             normalList: [
                 {
-                    label: "特殊效果 & 精英首领",
+                    label: "Hiệu ứng đặc biệt & 精英Thủ lĩnh",
                     value: "init",
                 },
             ],

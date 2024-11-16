@@ -17,7 +17,7 @@
                                 v-for="size in item.sizes"
                                 :key="size"
                                 target="_blank"
-                                title="点击查看原图"
+                                title="Nhấn để xem ảnh gốc"
                                 >{{ format(size) }}</a
                             >
                         </div>

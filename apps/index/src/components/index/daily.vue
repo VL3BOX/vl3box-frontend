@@ -1,20 +1,20 @@
 <template>
     <div class="m-daily m-sideblock">
         <div class="m-daily-header m-sideblock-header" :style="{backgroundImage:bg}">
-            <div class="u-time">{{ year }}年{{ month }}月{{ date }}日</div>
+            <div class="u-time">{{ year }}/{{ month }}/{{ date }}/</div>
             <img class="u-wechat" src="../../assets/img/right/qrcode.png" alt />
             <div class="u-list">
                 <span class="u-weibo u-item">
                     <img svg-inline src="../../assets/img/weibo.svg" />
-                    <em>官方微博：</em>
+                    <em>Weibo：</em>
                     <a href="https://weibo.com/jx3box" target="_blank">
-                        <b>JX3BOX魔盒</b>
+                        <b>JX3BOX</b>
                     </a>
                 </span>
                 <span class="u-weixin u-item">
                     <img svg-inline src="../../assets/img/wechat.svg" />
-                    <em>微信公众号：</em>
-                    <b>剑三魔盒</b>
+                    <em>WeChat：</em>
+                    <b>JX3BOX</b>
                 </span>
             </div>
         </div>
@@ -49,7 +49,7 @@
                         <td>
                             <el-tooltip class="item" effect="dark" :content="(meirentu && meirentu.desc) || '无'" placement="bottom">
                                 <div>
-                                    {{ (meirentu && meirentu.name) || "今日暂无画像" }}
+                                    {{ (meirentu && meirentu.name) || "今/暂无画像" }}
                                 </div>
                             </el-tooltip>
                         </td>

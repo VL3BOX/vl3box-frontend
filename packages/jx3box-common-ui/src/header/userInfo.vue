@@ -5,13 +5,13 @@
             <template v-if="isPhone">
                 <ul class="u-menu u-pop-content">
                     <li>
-                        <a href="/dashboard">个人中心</a>
+                        <a href="/dashboard">Trung tâm cá nhân</a>
                     </li>
                     <li>
-                        <a :href="url.msg">消息中心</a>
+                        <a :href="url.msg">Trung tâm tin nhắn</a>
                     </li>
                     <li>
-                        <a :href="url.publish">发布中心</a>
+                        <a :href="url.publish">Trung tâm đăng bài</a>
                     </li>
                     <hr />
                     <li v-for="item in userPanel" :key="item.label">
@@ -29,7 +29,7 @@
                         </li>
                     </template>
                     <li>
-                        <a @click="logout">退出登录</a>
+                        <a @click="logout">Đăng xuất</a>
                     </li>
                 </ul>
             </template>
@@ -45,45 +45,45 @@
                                     :src="super_author_icon"
                                     class="u-superauthor-profile"
                                     alt="superauthor"
-                                    title="签约作者"
+                                    title="Tác giả ký hợp đồng"
                                     :class="{ off: !isSuperAuthor }"
                             /></a>
                             <a
                                 class="u-vip"
                                 href="/vip/premium?from=header_usermenu"
                                 target="_blank"
-                                title="专业版账号"
+                                title="Tài khoản phiên bản chuyên nghiệp"
                             >
                                 <i class="i-icon-vip" :class="{ on: isPRO }">{{ vipType }}</i>
-                                <span class="u-expire" v-if="isPRO">（有效期至：{{ pro_expire_date }}）</span>
+                                <span class="u-expire" v-if="isPRO">（Hiệu lực đến:{{ pro_expire_date }}）</span>
                             </a>
                         </div>
                         <div class="u-id">
                             <span
-                                >魔盒UID：<b>{{ user.ID }}</b></span
+                                >UID Hộp Ma:<b>{{ user.ID }}</b></span
                             >
                             <i class="el-icon-document-copy u-copy" @click.stop="copyText(user.ID)"></i>
                         </div>
                     </div>
 
                     <el-button-group class="u-actions">
-                        <a class="el-button el-button--default is-plain" href="/dashboard">个人中心</a>
+                        <a class="el-button el-button--default is-plain" href="/dashboard">Trung tâm cá nhân</a>
                         <a class="el-button el-button--default is-plain" @click="changeAlternate">切换马甲</a>
-                        <a class="el-button el-button--default is-plain" href="/dashboard/frame">主题风格</a>
+                        <a class="el-button el-button--default is-plain" href="/dashboard/frame">Phong cách chủ đề</a>
                     </el-button-group>
 
                     <div class="u-other">
-                        <a href="/dashboard/role" class="u-item"><i class="el-icon-user"></i>角色管理 </a>
-                        <a href="/dashboard/fav" class="u-item"><i class="el-icon-star-off"></i>收藏订阅 </a>
+                        <a href="/dashboard/role" class="u-item"><i class="el-icon-user"></i>Quản lý vai trò </a>
+                        <a href="/dashboard/fav" class="u-item"><i class="el-icon-star-off"></i>Danh sách yêu thích và đăng ký </a>
                         <a href="/dashboard/purchases" class="u-item"
-                            ><i class="el-icon-shopping-cart-2"></i>已购资源
+                            ><i class="el-icon-shopping-cart-2"></i>Tài nguyên đã mua
                         </a>
-                        <a href="/dashboard/mall" class="u-item"><i class="el-icon-shopping-bag-1"></i>订单中心 </a>
+                        <a href="/dashboard/mall" class="u-item"><i class="el-icon-shopping-bag-1"></i>Trung tâm đơn hàng </a>
                         <hr />
-                        <a href="/dashboard/feedback" class="u-item"><i class="el-icon-phone-outline"></i>反馈帮助 </a>
+                        <a href="/dashboard/feedback" class="u-item"><i class="el-icon-phone-outline"></i>Phản hồi và trợ giúp </a>
                         <hr />
                         <div class="u-logout">
-                            <el-button @click="logout" size="small" plain>退出登录</el-button>
+                            <el-button @click="logout" size="small" plain>Đăng xuất</el-button>
                         </div>
                     </div>
                 </div>
@@ -180,8 +180,8 @@ export default {
                 .then(() => {
                     if (mute) return;
                     this.$notify({
-                        title: "成功",
-                        message: "登出成功",
+                        title: "Thành công",
+                        message: "登出Thành công",
                         type: "success",
                         duration: 1000,
                     });
@@ -191,7 +191,7 @@ export default {
                 });
         },
         showUserName: function (val) {
-            return val || "匿名";
+            return val || "Ẩn danh";
         },
         loadMyInfo: function () {
             getMyInfo()

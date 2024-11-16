@@ -9,7 +9,7 @@
         >
             <div class="c-jx3box-reply-pop__content">
                 <el-icon class="u-close" @click="closePop"><Close></Close></el-icon>
-                <div class="u-title">快捷回复</div>
+                <div class="u-title">Trả lời nhanh</div>
                 <div class="m-reply-list">
                     <div
                         class="m-reply-list__item"

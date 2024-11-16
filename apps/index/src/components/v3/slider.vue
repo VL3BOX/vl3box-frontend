@@ -9,7 +9,7 @@
                         target="_blank"
                         @mouseenter="addAni('tv', 'animate__flash')"
                         @mouseleave="resetAni('tv')"
-                        ><i :class="ani.tv"></i>魔盒电视台</a
+                        ><i :class="ani.tv"></i>Truyền hình</a
                     >
                     <mini-bread class="u-tv-notice" name="index_events" />
                 </div>
@@ -21,7 +21,7 @@
                         @mouseenter="addAni('douyin', 'animate__rotateIn')"
                         @mouseleave="resetAni('douyin')"
                     >
-                        <img svg-inline src="@/assets/img/tv/douyin.svg" :class="ani.douyin" />剑网3魔盒
+                        <img svg-inline src="@/assets/img/tv/douyin.svg" :class="ani.douyin" />JX3BOX
                     </a>
                     <a
                         class="u-tv-weibo u-tv-link"
@@ -30,7 +30,7 @@
                         @mouseenter="addAni('weibo', 'animate__rubberBand')"
                         @mouseleave="resetAni('weibo')"
                     >
-                        <img svg-inline src="@/assets/img/tv/weibo.svg" :class="ani.weibo" />剑网3魔盒
+                        <img svg-inline src="@/assets/img/tv/weibo.svg" :class="ani.weibo" />JX3BOX
                     </a>
                     <a
                         class="u-tv-bilibili u-tv-link"
@@ -39,7 +39,7 @@
                         @mouseenter="addAni('bilibili', 'animate__swing')"
                         @mouseleave="resetAni('bilibili')"
                     >
-                        <img svg-inline src="@/assets/img/tv/bilibili.svg" :class="ani.bilibili" />剑网3魔盒
+                        <img svg-inline src="@/assets/img/tv/bilibili.svg" :class="ani.bilibili" />JX3BOX
                     </a>
                 </div>
             </div>

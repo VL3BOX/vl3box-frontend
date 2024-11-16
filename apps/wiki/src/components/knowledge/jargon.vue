@@ -1,8 +1,8 @@
 <template>
     <div class="m-knowledge-panel">
         <div class="m-title">
-            <span class="u-title-left"> <i class="el-icon-postcard"></i><span> 术语大全</span> </span>
-            <router-link class="u-more" to="/type/jargon">查看更多 &raquo;</router-link>
+            <span class="u-title-left"> <i class="el-icon-postcard"></i><span> Tổng hợp thuật ngữ</span> </span>
+            <router-link class="u-more" to="/type/jargon">Xem thêm &raquo;</router-link>
         </div>
         <div class="m-panel m-jargon">
             <div v-for="(item, index) in list" :key="index" class="u-jargon">

@@ -8,7 +8,7 @@
                 <!-- <AuthorGift :uid="uid" /> -->
                 <el-button class="u-btn" size="mini" @click="onMessage">
                     <img class="u-msg-icon" svg-inline :src="src" />
-                    私信
+                    Thư riêng
                 </el-button>
             </div>
             <!-- <AuthorMsg :uid="uid" /> -->

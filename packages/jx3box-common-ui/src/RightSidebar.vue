@@ -8,7 +8,7 @@
                 class="c-sidebar-right-toggle"
                 :class="!isOpen && 'close-sidebar-right'"
                 @click="toggleRightSide"
-                :title="isOpen ? '收起侧边栏' : '打开侧边栏'"
+                :title="isOpen ? 'Thu gọn thanh bên' : 'Mở rộng thanh bên'"
             >
                 <span v-show="!isOpen"><i class="el-icon-arrow-left"></i></span>
                 <span v-show="isOpen"><i class="el-icon-arrow-right"></i></span>

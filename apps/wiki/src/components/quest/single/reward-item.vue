@@ -1,10 +1,10 @@
 <template>
     <div class="reward-item" :class="classes" v-if="display">
         <!-- 金钱 -->
-        <template v-if="reward.type == 'money'"> 获得金钱：<game-price :price="reward.count"></game-price> </template>
-        <template v-else-if="reward.type == 'exp'"> 获得阅历：{{ reward.count }} </template>
+        <template v-if="reward.type == 'money'"> Nhận tiền:<game-price :price="reward.count"></game-price> </template>
+        <template v-else-if="reward.type == 'exp'"> Nhận kinh nghiệm:{{ reward.count }} </template>
         <template v-else-if="reward.type == 'affect'">
-            获得声望：{{ reward.force }}（{{ reward.count | affectNumber }}）
+            Nhận danh vọng:{{ reward.force }}（{{ reward.count | affectNumber }}）
         </template>
         <point-reward v-else-if="reward.type == 'titlePoint'" :type="'titlePoint'" :value="`x ${reward.count}`">
         </point-reward>
@@ -94,12 +94,12 @@ export default {
         item_group_tips: (award) => {
             if (award.all) {
                 if (award.bySchool) {
-                    return "你将获得以下全部道具（根据门派）：";
+                    return "Bạn sẽ nhận được tất cả các vật phẩm sau đây (theo môn phái):";
                 } else {
-                    return "你将获得以下全部道具：";
+                    return "Bạn sẽ nhận được tất cả các vật phẩm sau đây:";
                 }
             } else {
-                return "你可以在以下道具中选择一种：";
+                return "Bạn có thể chọn một trong các vật phẩm sau:";
             }
         },
     },

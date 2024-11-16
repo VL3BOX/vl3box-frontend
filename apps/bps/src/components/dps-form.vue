@@ -1,10 +1,10 @@
 <template>
     <el-dialog custom-class="m-dps-form" :visible="modelValue" @close="close" append-to-body :title="title">
         <el-form :model="form" :rules="rules" label-position="left" label-width="80px" ref="form">
-            <el-form-item label="心法" prop="mount">
+            <el-form-item label="Tâm pháp" prop="mount">
                 <el-select
                     v-model="form.mount"
-                    placeholder="请选择心法"
+                    placeholder="请选择Tâm pháp"
                     style="width: 100%"
                     popper-class="m-mount-select"
                     filterable
@@ -22,10 +22,10 @@
                     </el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="关联作品" prop="url">
+            <el-form-item label="Tác phẩm liên quan" prop="url">
                 <el-select
                     v-model="form.url"
-                    placeholder="输入关键词进行搜索"
+                    placeholder="Nhập từ khóa để tìm kiếm"
                     style="width: 100%"
                     filterable
                     :filter-method="loadData"
@@ -39,8 +39,8 @@
                     ></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="客户端" prop="client">
-                <el-select v-model="form.client" placeholder="请选择客户端" style="width: 100%">
+            <el-form-item label="Khách hàng" prop="client">
+                <el-select v-model="form.client" placeholder="请选择Khách hàng" style="width: 100%">
                     <el-option
                         v-for="item in options.client_filters"
                         :key="item.value"
@@ -49,8 +49,8 @@
                     ></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="类型" prop="type">
-                <el-select v-model="form.type" placeholder="请选择类型" style="width: 100%">
+            <el-form-item label="Loại" prop="type">
+                <el-select v-model="form.type" placeholder="请选择Loại" style="width: 100%">
                     <el-option
                         v-for="item in options.type_filters"
                         :key="item.value"
@@ -59,15 +59,15 @@
                     ></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="贡献者" prop="contributors">
-                <el-input v-model="form.contributors" placeholder="请输入除自己外的其余贡献者魔盒UID，用半角逗号,隔开"></el-input>
+            <el-form-item label="Người đóng góp" prop="contributors">
+                <el-input v-model="form.contributors" placeholder="请输入除自己外的其余Người đóng góp魔盒UID，用半角逗号,隔开"></el-input>
             </el-form-item>
-            <el-form-item label="备注" prop="remark">
-                <el-input v-model="form.remark" placeholder="（非必填）"></el-input>
+            <el-form-item label="Ghi chú" prop="remark">
+                <el-input v-model="form.remark" placeholder="(Không bắt buộc)"></el-input>
             </el-form-item>
             <el-form-item>
-                <el-button type="primary" @click="submit">提交</el-button>
-                <el-button @click="close">取消</el-button>
+                <el-button type="primary" @click="submit">Gửi</el-button>
+                <el-button @click="close">Hủy</el-button>
             </el-form-item>
         </el-form>
     </el-dialog>
@@ -109,11 +109,11 @@ export default {
                 remark: "",
             },
             rules: {
-                mount: [{ required: true, message: "请选择心法", trigger: "blur" }],
-                name: [{ required: true, message: "请输入名称", trigger: "blur" }],
-                url: [{ required: true, message: "请输入链接", trigger: "blur" }],
-                client: [{ required: true, message: "请选择客户端", trigger: "blur" }],
-                type: [{ required: true, message: "请选择类型", trigger: "blur" }],
+                mount: [{ required: true, message: "请选择Tâm pháp", trigger: "blur" }],
+                name: [{ required: true, message: "Vui lòng nhập tên", trigger: "blur" }],
+                url: [{ required: true, message: "Vui lòng nhập liên kết", trigger: "blur" }],
+                client: [{ required: true, message: "请选择Khách hàng", trigger: "blur" }],
+                type: [{ required: true, message: "请选择Loại", trigger: "blur" }],
             },
 
             list: [],
@@ -125,7 +125,7 @@ export default {
             return this.$store.state.client;
         },
         title() {
-            return this.data ? "编辑计算器申请" : "新增计算器申请";
+            return this.data ? "Yêu cầu chỉnh sửa máy tính" : "Yêu cầu thêm máy tính";
         }
     },
     mounted() {
@@ -178,7 +178,7 @@ export default {
                     this.saveLoading = true;
                     const fn = this.data ? updateDpsRegistry(this.data.id, this.form) : addDpsRegistry(this.form);
                     fn.then((res) => {
-                            this.$message.success("提交成功");
+                            this.$message.success("Gửi成功");
                             this.close();
                         })
                         .finally(() => {

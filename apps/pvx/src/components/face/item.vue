@@ -10,14 +10,14 @@
         <div class="m-tags">
             <div class="m-tag-left">
                 <template v-if="client === 'std'">
-                    <i class="u-tag u-tag--type u-new-face" v-if="item.is_new_face">写实</i>
-                    <i class="u-tag u-tag--type" v-else>写意</i>
+                    <i class="u-tag u-tag--type u-new-face" v-if="item.is_new_face">thực tế</i>
+                    <i class="u-tag u-tag--type" v-else>ý tưởng</i>
                 </template>
-                <i class="u-tag u-tag--new" v-if="!!item.is_unlimited">可新建</i>
+                <i class="u-tag u-tag--new" v-if="!!item.is_unlimited">khả dụng</i>
             </div>
 
             <i class="u-tag u-tag--star" v-if="!!item.star">
-                <img :src="require('@/assets/img/face/star.svg')" alt="" />推荐
+                <img :src="require('@/assets/img/face/star.svg')" alt="" />đề xuất
             </i>
             <i class="u-tag u-tag--pay" v-if="!!~~item.price_type && !!item.price_count">
                 <img :src="require('@/assets/img/face/coin.svg')" alt="" />{{ item.price_count }}
@@ -28,7 +28,7 @@
             <div class="u-title">{{ item.title }}</div>
             <div class="m-author" @click.stop="onAuthorClick">
                 <el-image class="u-avatar" :src="showAvatar(item.user_avatar)" :alt="author" />
-                <span class="u-name"> {{ item.author_name || "匿名" }} </span>
+                <span class="u-name"> {{ item.author_name || "ẩn danh" }} </span>
             </div>
         </div>
     </a>
@@ -45,14 +45,14 @@ export default {
         return {
             markmap: {
                 newbie: "热门",
-                advanced: "推荐",
+                advanced: "đề xuất",
                 recommended: "精选",
             },
         };
     },
     computed: {
         author: function () {
-            return this.item.display_name || "匿名";
+            return this.item.display_name || "ẩn danh";
         },
         imgLink: function () {
             return this.item.images?.[0] || __imgPath + "image/face/null2.png";

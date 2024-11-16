@@ -1,7 +1,7 @@
 <template>
     <div class="m-world-block m-celebrity-wrap">
         <el-divider content-position="left">
-            名望
+            Danh vọng
             <template v-if="type === '2'"> &nbsp;·&nbsp;河西瀚漠 </template>
             &nbsp;·&nbsp;
             <el-select v-model="type" @change="typeChange">
@@ -11,9 +11,9 @@
         <div class="m-celebrity-content">
             <div class="u-table-header">
                 <div class="u-row">
-                    <div class="u-item">时间</div>
-                    <div class="u-item">地点</div>
-                    <div class="u-item">阶段</div>
+                    <div class="u-item">Thời gian</div>
+                    <div class="u-item">Địa điểm</div>
+                    <div class="u-item">Giai đoạn</div>
                 </div>
             </div>
             <div v-if="list.length" class="u-table-body">
@@ -27,7 +27,7 @@
                             <span>{{ item.timeFormat }}</span>
                         </div>
                         <div class="u-item" v-if="type === '1'">
-                            <template v-if="item.oldKey === 'y8'"> 特殊事件 · </template>
+                            <template v-if="item.oldKey === 'y8'"> Đặc thù sự kiện · </template>
                             {{ item.site }}
                         </div>
                         <div class="u-item" v-else-if="item.key === 'p3'">{{ item.site }}</div>
@@ -66,11 +66,11 @@ export default {
                     value: "2",
                 },
                 {
-                    label: "云从社",
+                    label: "Vân Tòng Xã",
                     value: "1",
                 },
                 {
-                    label: "楚天社",
+                    label: "Sở Thiên Xã",
                     value: "0",
                 },
             ],
@@ -114,7 +114,7 @@ export default {
             const formatM = m.toString().padStart(2, "00");
             return `${h}:${formatM}`.padStart(5, "00:00");
         },
-        // 处理楚天社
+        // 处理Sở Thiên Xã
         getChu(date) {
             const currentKey = "c" + (date.h % 2 === 0 ? "0" : "1") + (date.m < 30 ? "0" : "1");
             const isEqualMinute = this.celebrityList.findIndex((item) => {
@@ -122,7 +122,7 @@ export default {
             });
             let index = 0;
             if (isEqualMinute !== -1) {
-                // 包含当前时间
+                // 包含当前Thời gian
                 index = isEqualMinute;
             } else {
                 // 不包含
@@ -147,7 +147,7 @@ export default {
                 newList = [].concat(list);
             }
             this.list = newList.map((item) => {
-                // 当前时间
+                // 当前Thời gian
                 let h = this.currentDate.h;
                 // "双数整点 c00 双数半点 c01 单数整点 c10 单数半点 c11" "烂柯山 晟江 百溪 楚州"
                 // 烂柯山 晟江/烂柯山 晟江 不变
@@ -165,7 +165,7 @@ export default {
                 return item;
             });
         },
-        // 处理云从社
+        // 处理Vân Tòng Xã
         getYun(date) {
             // console.log(date.h + ":" + date.m);
             // 循环事件
@@ -176,7 +176,7 @@ export default {
             });
             let index = 0;
             if (isEqualMinute !== -1) {
-                // 包含当前时间
+                // 包含当前Thời gian
                 index = isEqualMinute;
             } else {
                 // 不包含
@@ -201,7 +201,7 @@ export default {
                 newList = [].concat(list);
             }
             const circleNumList = newList.map((item) => {
-                // 当前时间
+                // 当前Thời gian
                 let h = this.currentDate.h;
                 if (currentKey !== item.key) {
                     h = h + 1;
@@ -253,7 +253,7 @@ export default {
         // 处理披风会
         getPi(date) {
             // 3小时循环事件
-            // 当前时间
+            // 当前Thời gian
             const currentH = date.h % 3;
             const preH = currentH === 0 ? 2 : currentH - 1;
             const nextH = currentH === 2 ? 0 : currentH + 1;
@@ -276,7 +276,7 @@ export default {
                     index = circleList.length - 1;
                 }
             }
-            // 当前小时的第一项， 且当前时间大于当前项的时间时取上一小时的最后一项
+            // 当前小时的第一项， 且当前Thời gian大于当前项的Thời gian时取上一小时的最后一项
             let list =
                 index === 0 && circleList[0].time > date.m
                     ? [preList[preList.length - 1]].concat(circleList.slice(0, this.showNum - 1))
@@ -288,7 +288,7 @@ export default {
                 newList = [].concat(list);
             }
             const circleNumList = newList.map((item) => {
-                // 当前时间
+                // 当前Thời gian
                 let h = this.currentDate.h;
                 if (Number(item.hour) === preH) {
                     h = h - 1;

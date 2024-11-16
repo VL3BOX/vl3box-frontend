@@ -6,11 +6,11 @@
             class="c-admin-button u-admin"
             :size="buttonSize"
             @click="show = true"
-            >管理</el-button
+            >Quản lý</el-button
         >
         <el-drawer
             class="c-admin"
-            title="管理主题"
+            title="Quản lý主题"
             :visible.sync="show"
             :before-close="close"
             :append-to-body="true"
@@ -18,22 +18,22 @@
             :withHeader="false"
         >
             <div class="c-admin-wrapper" v-loading="loading">
-                <el-divider content-position="left">主题管理</el-divider>
+                <el-divider content-position="left">主题Quản lý</el-divider>
                 <div class="m-bucket-list" v-if="list && list.length">
                     <div v-for="item in list" :key="item.id" class="m-bucket-item">
                         <el-tag size="medium" :type="item.status ? '' : 'info'">{{ item.name }}</el-tag>
                         <div class="m-bucket-op">
-                            <el-button :type="item.status ? 'warning' : 'success'" plain size="mini" class="u-op-btn" :icon="item.status ? 'el-icon-download' : 'el-icon-upload2'" @click="update(item.id, item.status)">{{ item.status ? '下架' : '上架' }}</el-button>
-                            <el-button @click="edit(item)" plain size="mini" icon="el-icon-edit">修改</el-button>
-                            <el-button type="info" plain size="mini" class="u-op-btn" icon="el-icon-delete" @click="del(item.id)">删除</el-button>
+                            <el-button :type="item.status ? 'warning' : 'success'" plain size="mini" class="u-op-btn" :icon="item.status ? 'el-icon-download' : 'el-icon-upload2'" @click="update(item.id, item.status)">{{ item.status ? 'Gỡ xuống' : 'Đưa lên' }}</el-button>
+                            <el-button @click="edit(item)" plain size="mini" icon="el-icon-edit">Sửa đổi</el-button>
+                            <el-button type="info" plain size="mini" class="u-op-btn" icon="el-icon-delete" @click="del(item.id)">Xóa</el-button>
                         </div>
                     </div>
                 </div>
-                <el-empty v-else description="暂无主题"></el-empty>
+                <el-empty v-else description="Chưa có chủ đề"></el-empty>
 
                 <div class="c-admin-buttons">
-                    <el-button type="success" @click="add" icon="el-icon-plus">新增</el-button>
-                    <!-- <el-button type="plain" @click="close" icon="el-icon-close">关闭</el-button> -->
+                    <el-button type="success" @click="add" icon="el-icon-plus">Thêm mới</el-button>
+                    <!-- <el-button type="plain" @click="close" icon="el-icon-close">Đóng</el-button> -->
                 </div>
             </div>
         </el-drawer>
@@ -91,16 +91,16 @@ export default {
                 });
         },
         del(id) {
-            this.$confirm("此操作将删除该主题, 是否继续?", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm("此操作将Xóa该主题, 是否继续?", "Gợi ý", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy bỏ",
                 type: "warning",
             })
                 .then(() => {
                     deleteTopicBucket(id).then((res) => {
                         this.$message({
                             type: "success",
-                            message: "删除成功!",
+                            message: "Xóa成功!",
                         });
                         this.loadData();
                     });
@@ -114,17 +114,17 @@ export default {
             updateTopicBucket(id, params).then((res) => {
                 this.$message({
                     type: "success",
-                    message: "更新成功!",
+                    message: "Cập nhật thành công!",
                 });
                 this.loadData();
             });
         },
         add() {
-            this.$prompt("请输入主题名称", "新增主题", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$prompt("Vui lòng nhập tên chủ đề", "Thêm mới主题", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy bỏ",
                 inputPattern: /\S+/,
-                inputErrorMessage: "主题名称不能为空",
+                inputErrorMessage: "Tên chủ đề không được để trống",
             })
                 .then(({ value }) => {
                     const data = {
@@ -142,11 +142,11 @@ export default {
                 .catch(() => {});
         },
         edit(item) {
-            this.$prompt("请输入主题名称", "修改主题", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$prompt("Vui lòng nhập tên chủ đề", "Sửa đổi主题", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy bỏ",
                 inputPattern: /\S+/,
-                inputErrorMessage: "主题名称不能为空",
+                inputErrorMessage: "Tên chủ đề không được để trống",
                 inputValue: item.name,
             })
                 .then(({ value }) => {
@@ -156,7 +156,7 @@ export default {
                     updateTopicBucket(item.id, data).then((res) => {
                         this.$message({
                             type: "success",
-                            message: "修改成功!",
+                            message: "Sửa đổi成功!",
                         });
                         this.loadData();
                     });

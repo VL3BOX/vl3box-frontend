@@ -2,11 +2,11 @@
     <div class="m-cj-index">
         <Items :items="items">
             <template slot="empty-message">
-                <span>👻 暂无记录</span>
+                <span>👻 Chưa có ghi chép</span>
                 <template v-if="$route.query.auc_genre || $route.query.auc_sub_type_id">
-                    <span>，在</span>
+                    <span>tại</span>
                     <span class="u-research" @click="clean_type">
-                        <b>全部分类下搜索</b>
+                        <b>Tìm kiếm trong tất cả các phân loại</b>
                     </span>
                 </template>
             </template>

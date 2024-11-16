@@ -2,7 +2,7 @@
     <div class="w-filter-order" :class="{ on: visible }">
         <span class="u-label" @click="toggleFilter">
             <span class="u-current-order"
-                >排序 : {{ current || "最后更新" }}</span
+                >Sắp xếp : {{ current || "Cập nhật mới nhất" }}</span
             >
             <span class="u-toggle">
                 <i class="el-icon-arrow-down"></i>
@@ -14,13 +14,13 @@
                 class="u-mode u-update"
                 :class="{ on: order == 'update' }"
                 @click="filter('update')"
-                ><i class="el-icon-refresh"></i> 最后更新</span
+                ><i class="el-icon-refresh"></i> Cập nhật mới nhất</span
             >
             <span
                 class="u-mode u-podate"
                 :class="{ on: order == 'podate' }"
                 @click="filter('podate')"
-                ><i class="el-icon-sort"></i> 最早发布</span
+                ><i class="el-icon-sort"></i> Phát hành sớm nhất</span
             >
             <slot></slot>
         </span>
@@ -29,11 +29,11 @@
 
 <script>
 const order_map = {
-    update: "最后更新",
-    podate: "最早发布",
-    favs: "收藏最多",
-    likes: "点赞最多",
-    downs: "下载最多",
+    update: "Cập nhật mới nhất",
+    podate: "Phát hành sớm nhất",
+    favs: "Yêu thích nhất",
+    likes: "Nhiều lượt thích nhất",
+    downs: "Tải về nhiều nhất",
 };
 export default {
     name: "orderBy",

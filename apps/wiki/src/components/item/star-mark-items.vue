@@ -3,16 +3,16 @@
         <template slot="head-title">
             <div class="u-title">
                 <i class="el-icon-shopping-bag-1"></i>
-                <span>交易趋势</span>
+                <span>Xu hướng giao dịch</span>
             </div>
-            <el-select class="u-server" v-model="server" placeholder="请选择服务器" size="mini">
+            <el-select class="u-server" v-model="server" placeholder="Vui lòng chọn máy chủ" size="mini">
                 <el-option v-for="serve in servers" :key="serve" :label="serve" :value="serve"></el-option>
             </el-select>
         </template>
         <template slot="head-actions">
             <el-input
                 class="u-search"
-                placeholder="搜索.."
+                placeholder="Tìm kiếm..."
                 v-model="search"
                 size="mini"
                 @keyup.enter.native="goItemPage"
@@ -45,22 +45,22 @@
                                         :class="item | showItemTrendingClass"
                                     >{{item | showItemTrending}}</span>
                                     <template v-if="item.sub_days_0_price">
-                                        <span>今日：</span>
+                                        <span>Hôm nay:</span>
                                         <GamePrice :price="item.sub_days_0_price" />
                                     </template>
                                     <template
                                         v-else-if="!item.sub_days_0_price && item.sub_days_1_price"
                                     >
-                                        <span>昨日：</span>
+                                        <span>Hôm qua:</span>
                                         <GamePrice :price="item.sub_days_1_price" />
                                     </template>
                                     <template
                                         v-else-if="!item.sub_days_0_price && !item.sub_days_1_price && item.sub_days_2_price"
                                     >
-                                        <span>前日：</span>
+                                        <span>Ngày hôm trước:</span>
                                         <GamePrice :price="item.sub_days_2_price" />
                                     </template>
-                                    <span v-else>暂无价目</span>
+                                    <span v-else>Chưa có giá</span>
                                 </span>
                             </div>
                         </router-link>
@@ -113,7 +113,7 @@
                                                 >
                                                     <GamePrice :price="item.sub_days_2_price" />
                                                 </template>
-                                                <span v-else>暂无价目</span>
+                                                <span v-else>Chưa có giá</span>
                                             </span>
                                         </div>
                                     </a>

@@ -28,7 +28,7 @@
                         <div></div>
                     </template>
                     <template v-slot:action>
-                        <div @click="setActive(item.value)">查看全部</div>
+                        <div @click="setActive(item.value)">Xem tất cả</div>
                     </template>
                     <template v-slot="{ item }">
                         <faceItem :key="item.id" :item="item" :reporter="{ aggregate: listId(list) }" />
@@ -55,7 +55,7 @@
                 @click="appendPage"
                 :loading="loading"
                 icon="el-icon-arrow-down"
-                >加载更多</el-button
+                >Xem thêm</el-button
             >
             <el-pagination
                 class="m-archive-pages"
@@ -132,8 +132,8 @@ export default {
             return pages > 1 && this.page < pages;
         },
         alertTitle: function () {
-            if (this.title) return "没找到对应的捏脸，请重新选择条件或关键词搜索";
-            return "没有找到相关的捏脸";
+            if (this.title) return "Không tìm thấy tạo hình khuôn mặt tương ứng, vui lòng chọn lại điều kiện hoặc tìm kiếm từ khóa";
+            return "Không tìm thấy tạo hình khuôn mặt liên quan";
         },
         subList() {
             if (!this.active) return null;

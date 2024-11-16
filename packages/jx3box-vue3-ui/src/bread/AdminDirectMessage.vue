@@ -5,7 +5,7 @@
         v-if="isEditor"
     >
         <el-icon><Message></Message></el-icon>
-        <span>私信</span>
+        <span>Tin nhắn riêng</span>
     </a>
 </template>
 
@@ -39,13 +39,13 @@ export default {
     },
     methods: {
         onButtonClick() {
-            this.$prompt("请输入私信内容", "管理私信", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
-                inputPlaceholder: "请输入私信内容",
+            this.$prompt("请输入Tin nhắn riêng内容", "管理Tin nhắn riêng", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy bỏ",
+                inputPlaceholder: "请输入Tin nhắn riêng内容",
                 inputValidator: (value) => {
                     if (!value) {
-                        return "请输入私信内容";
+                        return "请输入Tin nhắn riêng内容";
                     }
                 },
                 beforeClose: (action, instance, done) => {
@@ -54,12 +54,12 @@ export default {
                             source_id: this.sourceId,
                             source_type: this.sourceType,
                             user_id: this.userId,
-                            content: "运营通知：" + instance.inputValue,
+                            content: "Thông báo quản lý:" + instance.inputValue,
                             type: "system",
                             subtype: "admin_message"
                         };
                         sendMessage(data).then(() => {
-                            this.$message.success("私信成功");
+                            this.$message.success("Tin nhắn riêng成功");
                             done();
                         })
                     } else {

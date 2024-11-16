@@ -3,7 +3,7 @@
         <el-divider content-position="left">家园</el-divider>
         <div class="m-furniture-list">
             <div class="m-furniture-item">
-                <div class="u-title">园宅会赛·本期</div>
+                <div class="u-title">Viên trạch hội tái - Bản kỳ</div>
                 <div class="u-item">
                     <div>加分属性</div>
                     <div class="u-furniture">
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="m-furniture-item">
-                <div class="u-title">园宅会赛·下期</div>
+                <div class="u-title">Viên trạch hội tái - Hạ kỳ</div>
                 <div class="u-item">
                     <div>加分属性</div>
                     <div class="u-furniture">

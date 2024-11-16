@@ -1,18 +1,18 @@
-<!-- 数据库版本的组件 -->
+<!-- Phiên bản cơ sở dữ liệu的组件 -->
 <template>
     <div class="m-database m-sideblock">
         <div class="m-database-header m-sideblock-header">
             <div class="u-left">
-                <i class="u-icon el-icon-s-grid"></i><a class="u-title" href="/app/database" target="_blank">数据库版本</a>
+                <i class="u-icon el-icon-s-grid"></i><a class="u-title" href="/app/database" target="_blank">Phiên bản cơ sở dữ liệu</a>
             </div>
             <div class="u-right">
-                <a href="/app/database" class="u-more" title="访问数据库" target="_blank"
+                <a href="/app/database" class="u-more" title="Truy cập cơ sở dữ liệu" target="_blank"
                     ><i class="el-icon-more"></i
                 ></a>
             </div>
         </div>
         <div class="m-database-content">
-            <div class="u-empty" v-if="version.length == 0">数据加载中...</div>
+            <div class="u-empty" v-if="version.length == 0">Đang tải dữ liệu...</div>
             <div class="u-list">
                 <el-tooltip placement="top" v-for="_type in all_types" :key="_type" :enterable="true">
                     <div slot="content" class="m-database-content__popover">

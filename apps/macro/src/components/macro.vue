@@ -9,7 +9,7 @@
                     plain
                     size="mini"
                     @click="copy(copytext)"
-                    >复制宏内容</el-button
+                    >Sao chép nội dung macro</el-button
                 >
                 <el-button
                     icon="el-icon-refresh"
@@ -20,7 +20,7 @@
                     class="u-macro-panel-translate"
                 >
                     <span v-if="status">轉換為繁體</span>
-                    <span v-else>转换为简体</span>
+                    <span v-else>Chuyển đổi sang chữ giản thể</span>
                 </el-button>
                 <el-button
                     class="u-macro-panel-copyname"
@@ -29,16 +29,16 @@
                     type="primary"
                     size="mini"
                     @click="copy(copyname, 'cloud')"
-                    >复制云端宏</el-button
+                    >Sao chép macro đám mây</el-button
                 >
                 <a
                     class="u-macro-panel-test el-button el-button--mini is-plain"
                     v-if="isSuperAdmin || isAuthor"
                     :href="'https://pull.j3cx.com/api/macro/query?name=' + testname + '&_no_cache'"
                     target="_blank"
-                    title="默认存在1分钟缓存，如需要即时生效请点击此按钮"
+                    title="Mặc định có bộ nhớ cache 1 phút, nếu cần hiệu lực ngay lập tức vui lòng nhấn nút này"
                 >
-                    <i class="el-icon-video-play"></i> 云端同步刷新
+                    <i class="el-icon-video-play"></i> Đồng bộ đám mây làm mới
                 </a>
                 <!-- <el-checkbox
                     v-if="isLogin"
@@ -49,18 +49,18 @@
                     :true-label="1"
                     :false-label="0"
                     @change="onAuthThxChange"
-                    >自动感谢</el-checkbox
+                    >Tự động cảm ơn</el-checkbox
                 > -->
             </div>
             <div class="u-count">
-                字数：
+                Số lượng từ:
                 <b>{{ count }}</b>
             </div>
         </template>
         <!-- 宏是空的的时候会直接显示上一个不够合理 -->
         <template v-else>
             <el-alert type="warning" show-icon :closable="false">
-                <div class="u-empty-text" slot="title">Σ(ﾟдﾟlll)&nbsp;&nbsp;&nbsp;糟糕，这个宏是空的！</div>
+                <div class="u-empty-text" slot="title">Σ(ﾟдﾟlll)&nbsp;&nbsp;&nbsp;Ôi không, macro này trống rỗng!</div>
             </el-alert>
         </template>
     </div>
@@ -139,7 +139,7 @@ export default {
     },
     methods: {
         copy: function (text, type = "") {
-            copy(text, { success_message: "复制宏成功" }).then(() => {
+            copy(text, { success_message: "Sao chép macro thành công" }).then(() => {
                 reportNow({
                     caller: type ? "macro_copy_cloud" : "macro_copy",
                     data: {

@@ -39,8 +39,8 @@
         </div>
         <div class="w-thx-copyright">
             &copy;
-            所有原创作品，著作权归作者所有，所有未经授权的非署名转载或抄袭将有权追究法律责任，所有法律事务由专聘律师代理。<br />
-            签约作者独家特约稿件，及所有魔盒官方评分作品用户一经兑现则视为有偿付费稿件，所有商业稿件的转载引用需同时征得魔盒平台授权。
+            Tất cả các tác phẩm gốc đều thuộc quyền sở hữu của tác giả. Mọi hành vi sao chép hoặc xuất bản không có sự cho phép và không ghi tên sẽ bị truy cứu trách nhiệm pháp lý. Tất cả các vấn đề pháp lý sẽ được đại diện bởi luật sư chuyên trách.<br />
+            Các bài viết đặc biệt và độc quyền của tác giả ký hợp đồng, cũng như các tác phẩm được đánh giá bởi Magic Box, khi được thực hiện sẽ được coi là bài viết có trả phí. Việc sao chép hoặc trích dẫn bất kỳ bài viết thương mại nào đều cần phải được sự cho phép của nền tảng Magic Box.
         </div>
 </div>
 </template>

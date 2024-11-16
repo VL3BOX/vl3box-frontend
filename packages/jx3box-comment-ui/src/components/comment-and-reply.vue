@@ -16,7 +16,7 @@
                         type="primary"
                         target="_blank"
                         :href="userHref"
-                        >{{ username || "人字榜800线无名小侠" }}</el-link
+                        >{{ username || "Danh sách nhân vật, 800 dòng, hiệp khách vô danh" }}</el-link
                     >
                     <span
                         class="u-boxcoin"
@@ -28,17 +28,17 @@
                             src="../assets/img/like4.png"
                             alt=""
                         />
-                        卷面分：<span class="u-boxcoin-num">{{ total }}</span
+                        Điểm số trang:<span class="u-boxcoin-num">{{ total }}</span
                         ><i class="el-icon-coin"></i>
                     </span>
                     <span class="u-mark u-top" v-if="item.is_top"
-                        ><i class="el-icon-download"></i>置顶</span
+                        ><i class="el-icon-download"></i>Ghim lên đầu</span
                     >
                     <span class="u-mark u-star" v-if="item.is_star"
-                        ><i class="el-icon-star-off"></i>精华</span
+                        ><i class="el-icon-star-off"></i>Tinh hoa</span
                     >
                     <span class="u-mark u-secret" v-if="item.is_secret"
-                        ><i class="el-icon-cherry"></i>悄悄话</span
+                        ><i class="el-icon-cherry"></i>Lời thì thầm</span
                     >
                 </div>
                 <ContentOfCommentAndReply
@@ -252,7 +252,7 @@ export default {
                 .then(() => {
                     this.$notify({
                         title: "",
-                        message: "评论成功!",
+                        message: "Bình luận thành công!",
                         type: "success",
                         duration: 3000,
                         position: "bottom-right",
@@ -267,7 +267,7 @@ export default {
                 .then(() => {
                     this.$notify({
                         title: "",
-                        message: "删除成功!",
+                        message: "Xóa thành công!",
                         type: "success",
                         duration: 3000,
                         position: "bottom-right",

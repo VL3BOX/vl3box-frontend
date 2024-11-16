@@ -30,19 +30,19 @@ export default {
             active: "Pz",
             types: [
                 {
-                    label: "配装",
+                    label: "Trang bị",
                     value: "Pz",
                     component: Pz,
                     icon: "el-icon-sugar",
                 },
                 {
-                    label: "战斗",
+                    label: "Chiến đấu",
                     value: "Battle",
                     component: Battle,
                     icon: "el-icon-ice-cream",
                 },
                 {
-                    label: "插件",
+                    label: "Plugin",
                     value: "DBM",
                     component: DBM,
                     icon: "el-icon-cold-drink",

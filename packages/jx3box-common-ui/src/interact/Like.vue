@@ -1,7 +1,7 @@
 <template>
     <div v-if="mode == 'heart'" class="w-like-heart" @click="blast">
         <span class="w-heart" ref="likeheart"></span>
-        <span class="u-text">{{ txt || "喜欢" }}</span>
+        <span class="u-text">{{ txt || "Thích" }}</span>
         <span class="u-count" v-if="showCount">{{ total }}</span>
     </div>
     <el-button v-else class="w-like" size="mini" type="primary" @click="doLike">
@@ -11,7 +11,7 @@
         <i v-else class="u-heart">
             <img svg-inline src="../../assets/img/widget/heart2.svg" />
         </i>
-        <span>喜欢</span>
+        <span>Thích</span>
     </el-button>
 </template>
 

@@ -1,17 +1,17 @@
 <template>
     <AppLayout>
         <div class="m-dps" v-loading="loading">
-            <!-- 搜索 -->
+            <!-- Tìm kiếm -->
             <div class="m-dps-search">
-                <el-button class="u-publish" type="primary" @click="onApply" :disabled="disabled">+ 提交计算器</el-button>
+                <el-button class="u-publish" type="primary" @click="onApply" :disabled="disabled">+ Gửi máy tính</el-button>
                 <el-input
                     v-model.trim.lazy="search"
-                    placeholder="请输入关键词.."
+                    placeholder="Vui lòng nhập từ khóa.."
                     clearable
                     @clear="onSearch"
                     @keydown.native.enter="onSearch"
                 >
-                    <template #prepend> <i class="el-icon-search"></i> 搜索 </template>
+                    <template #prepend> <i class="el-icon-search"></i> Tìm kiếm </template>
                     <template #append>
                         <el-button icon="el-icon-position" @click="onSearch"></el-button>
                     </template>
@@ -22,11 +22,11 @@
                 <el-table
                     class="m-dps-table"
                     :data="list"
-                    empty-text="没有找到对应的DPS计算器，请重新搜索"
+                    empty-text="没有找到对应的DPS计算器，请重新Tìm kiếm"
                     @cell-click="openLink"
                 >
                     <el-table-column
-                        label="心法"
+                        label="Tâm pháp"
                         :filters="options.mount_filters"
                         :filter-method="filterMatchValue"
                         column-key="mount"
@@ -42,17 +42,17 @@
                         </template>
                     </el-table-column>
 
-                    <el-table-column label="名称" prop="name" sortable min-width="300">
+                    <el-table-column label="Tên" prop="name" sortable min-width="300">
                         <template slot-scope="scope">
                             <span class="u-client" :class="'i-client-' + scope.row.client">{{
                                 showClientLabel(scope.row.client)
                             }}</span>
-                            <i class="u-star" v-if="scope.row.star">★ 编辑推荐</i>
+                            <i class="u-star" v-if="scope.row.star">★ Đề xuất của biên tập viên</i>
                             <a class="u-name" :href="scope.row.url" target="_blank">{{ scope.row.name }}</a>
                         </template>
                     </el-table-column>
 
-                    <el-table-column label="作者" prop="user" sortable min-width="180">
+                    <el-table-column label="Tác giả" prop="user" sortable min-width="180">
                         <template slot-scope="scope" v-if="scope.row.user">
                             <a class="u-user" :href="authorLink(scope.row.user.ID)" target="_blank" @click.stop="">
                                 <img class="u-img" :src="showAvatar(scope.row.user.user_avatar)" />
@@ -73,7 +73,7 @@
                     </el-table-column>
 
                     <el-table-column
-                        label="计算器类型"
+                        label="Loại máy tính"
                         :filters="options.type_filters"
                         :filter-method="filterMatchValue"
                         :filter-multiple="true"
@@ -92,13 +92,13 @@
                                     size="mini"
                                     icon="el-icon-edit"
                                     type="primary"
-                                    >编辑</el-button
+                                    >Chỉnh sửa</el-button
                                 >
                             </div>
                         </template>
                     </el-table-column>
 
-                    <el-table-column label="更新时间" prop="post_modified" min-width="160">
+                    <el-table-column label="Thời gian cập nhật" prop="post_modified" min-width="160">
                         <template slot-scope="scope">
                             <span>{{ showTime(scope.row.post_modified) }}</span>
                         </template>
@@ -233,7 +233,7 @@ export default {
         getTypeIcon: function (val) {
             return require(`@/assets/img/dps/${val}.svg`);
         },
-        // 编辑
+        // Chỉnh sửa
         onEditRow(row) {
             this.selectedRow = row;
             this.showDpsForm = true;

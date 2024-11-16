@@ -8,11 +8,11 @@
             :disabled="isSelf || !status"
             :title="btnTitle"
             plain
-            >赠礼</el-button
+            >Quà tặng</el-button
         >
 
         <el-dialog
-            title="赠礼"
+            title="Quà tặng"
             :visible.sync="visible"
             :append-to-body="true"
             class="c-author-gift-dialog"
@@ -20,27 +20,27 @@
         >
             <div class="u-content">
                 <div class="u-left">
-                    <em class="u-label">🌟 金箔</em>
+                    <em class="u-label">🌟 Vàng lá</em>
                     <b>{{ left }}</b>
-                    <a class="u-charge" :href="chargeLink" target="_blank">[充值]</a>
+                    <a class="u-charge" :href="chargeLink" target="_blank">[Nạp tiền]</a>
                 </div>
                 <div class="u-list">
-                    <em class="u-label">❤️ 赠送</em>
+                    <em class="u-label">❤️ Tặng</em>
                     <div class="u-points">
                         <el-radio-group v-model="count">
                             <el-radio :label="item" v-for="item in fitPoints" :key="item" border>
                                 <b>{{ item }}</b
-                                >金箔
+                                >Vàng lá
                             </el-radio>
                         </el-radio-group>
                     </div>
                 </div>
                 <div class="u-msg">
-                    <em class="u-label">📝 寄语</em>
+                    <em class="u-label">📝 Lời nhắn</em>
                     <div class="u-input">
                         <el-input
                             v-model="remark"
-                            placeholder="请输入寄语（必填）"
+                            placeholder="请输入Lời nhắn（必填）"
                             :minlength="2"
                             :maxlength="30"
                             show-word-limit
@@ -49,9 +49,9 @@
                 </div>
             </div>
             <span slot="footer" class="dialog-footer">
-                <el-button @click="visible = false">取 消</el-button>
+                <el-button @click="visible = false">Hủy bỏ</el-button>
                 <el-button type="primary" @click="submit" :disabled="!ready || loading" :loading="loading"
-                    >确 定</el-button
+                    >Xác nhận</el-button
                 >
             </span>
         </el-dialog>
@@ -76,7 +76,7 @@ export default {
             chargeLink: "/vip/cny?redirect=" + location.href,
 
             count: 0, //打赏数量
-            remark: "辛苦，感谢！",
+            remark: "Công việc vất vả, cảm ơn!",
         };
     },
     computed: {
@@ -87,7 +87,7 @@ export default {
             return this.uid == this.user.uid;
         },
         ready: function () {
-            // 不能赠送给自己
+            // 不能Tặng给自己
             // 余额足够
             // 打赏额度不能为空
             // 必须填写赠言
@@ -95,9 +95,9 @@ export default {
         },
         btnTitle: function () {
             if (this.isSelf) {
-                return "不能给自己赠送礼物";
+                return "不能给自己Tặng礼物";
             } else if (!this.status) {
-                return "作者没有开启接受礼物";
+                return "Tác giả chưa mở chức năng nhận quà";
             }
             return "";
         },
@@ -130,7 +130,7 @@ export default {
                 // 状态轮询
                 const loading = this.$loading({
                     lock: true,
-                    text: "正在处理中",
+                    text: "Đang được xử lý",
                     spinner: "el-icon-loading",
                     background: "rgba(255, 255, 255, 0.8)",
                 });
@@ -153,14 +153,14 @@ export default {
                                 this.visible = false;
                                 this.loading = false;
                                 this.$message({
-                                    message: "赠送成功",
+                                    message: "Tặng成功",
                                     type: "success",
                                 });
 
                                 // 结算与重置
                                 this.left = this.left - this.count;
                                 this.count = 100;
-                                this.remark = "辛苦，感谢！";
+                                this.remark = "Công việc vất vả, cảm ơn!";
                             } else {
                                 console.info(`[AUTHOR.CNY]重新轮询`);
                             }
@@ -179,13 +179,13 @@ export default {
                         // 关闭加载状态 & 消息提醒
                         this.visible = false;
                         this.loading = false;
-                        this.$message("交易繁忙，请稍后再试");
+                        this.$message("Giao dịch bận, vui lòng thử lại sau");
                     }
                 }, 1000);
             });
         },
         load: function () {
-            // 加载用户是否接受赠送与当前用户余额，仅当打开时执行一次
+            // 加载用户是否接受Tặng与当前用户余额，仅当打开时执行一次
             User.isLogin() &&
                 checkGiftStatus(this.uid).then((res) => {
                     this.left = res.data.data.cny || 0; // 当前登录用户的余额

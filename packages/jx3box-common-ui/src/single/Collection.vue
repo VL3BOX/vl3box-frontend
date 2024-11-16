@@ -1,7 +1,7 @@
 <template>
     <div class="w-collection" v-if="list && list.length">
         <div class="w-collection-title" @click="handleShow" :class="{ on: visible }">
-            <span> <i class="el-icon-notebook-1"></i> 该作品已被收录至作者的剑三小册 </span>
+            <span> <i class="el-icon-notebook-1"></i> Tác phẩm này đã được đưa vào bộ sưu tập của tác giả về Kiếm Tam </span>
             <a @click.stop :href="collectionLink(id)" target="_blank">《{{ title }}》</a>
         </div>
         <transition name="fade">

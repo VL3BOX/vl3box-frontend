@@ -1,14 +1,14 @@
 <template>
     <div class="p-price-new">
         <div class="m-price-title">
-            <div class="u-title">📈 价格波动</div>
+            <div class="u-title">📈 Biến động giá</div>
             <div class="m-server">
-                <i class="el-icon-s-shop"></i> 服务器
+                <i class="el-icon-s-shop"></i> Máy chủ
                 <el-select
                     class="u-server"
                     style="width: 120px"
                     v-model="server"
-                    placeholder="请选择服务器"
+                    placeholder="请选择Máy chủ"
                     size="small"
                 >
                     <el-option v-for="serve in servers" :key="serve" :label="serve" :value="serve"></el-option>
@@ -20,7 +20,7 @@
         </div>
 
         <div class="m-price-title">
-            <div class="u-title">💰 近期价格</div>
+            <div class="u-title">💰 Giá gần đây</div>
         </div>
         <div class="m-price-content">
             <item-prices :item_id="sourceId" :server="server" />

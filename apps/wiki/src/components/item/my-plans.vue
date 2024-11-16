@@ -3,10 +3,10 @@
         <div class="m-my-item-plans">
             <h3 class="c-sidebar-right-title">
                 <i class="u-icon u-icon-mycollection"><img svg-inline src="@/assets/img/plan.svg" /></i>
-                <span>我的清单</span>
+                <span>Danh sách của tôi</span>
                 <a class="fr el-button el-button--success el-button--mini" @click="onAddPlan" v-if="isLogin">
                     <i class="el-icon-document-add"></i>
-                    <span>创建</span>
+                    <span>Tạo</span>
                 </a>
             </h3>
             <template v-if="isLogin">
@@ -26,12 +26,12 @@
                         </h5>
                         <!-- <div class="u-misc">
                             <div class="u-delete" @click.stop="delete_plan($event, plan.id)">
-                                <i class="el-icon-delete " title="删除"></i>
+                                <i class="el-icon-delete " title="Xóa"></i>
                             </div>
                             <div class="u-edit" @click.stop="edit_plan($event, plan.id)">
-                                <i class="el-icon-edit " title="编辑"></i>
+                                <i class="el-icon-edit " title="Chỉnh sửa"></i>
                             </div>
-                            <span class="u-updated">编辑于{{ date_format(plan.updated) }}</span>
+                            <span class="u-updated">Chỉnh sửa于{{ date_format(plan.updated) }}</span>
                         </div> -->
                     </router-link>
                     <el-pagination
@@ -46,10 +46,10 @@
                         :current-page.sync="page"
                     ></el-pagination>
                 </template>
-                <div v-else class="u-tip"><i class="el-icon-warning-outline"></i> 暂无物品清单记录</div>
+                <div v-else class="u-tip"><i class="el-icon-warning-outline"></i> Chưa có ghi chép danh sách vật phẩm</div>
             </template>
             <template v-else
-                ><div class="u-tip"><i class="el-icon-warning-outline"></i> 请先进行登录</div></template
+                ><div class="u-tip"><i class="el-icon-warning-outline"></i> Vui lòng đăng nhập</div></template
             >
         </div>
     </div>
@@ -108,13 +108,13 @@ export default {
             });
         },
         onAddPlan() {
-            this.$prompt("请输入清单名称", "创建清单", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
-                inputPlaceholder: "请输入清单名称",
+            this.$prompt("Vui lòng nhập tên danh sách", "Tạo清单", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy bỏ",
+                inputPlaceholder: "Vui lòng nhập tên danh sách",
                 inputValidator: (value) => {
                     if (!value) {
-                        return "请输入清单名称";
+                        return "Vui lòng nhập tên danh sách";
                     }
                 },
                 callback: (action, instance) => {
@@ -128,7 +128,7 @@ export default {
                         }
                         addMyPlan(data).then((res) => {
                             this.$message({
-                                message: "创建成功",
+                                message: "Tạo成功",
                                 type: "success",
                             });
                             this.data.unshift(res.data.data);

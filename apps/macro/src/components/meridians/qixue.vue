@@ -1,6 +1,6 @@
 <template>
     <div class="jinmai qixue" style>
-        <h3>经外奇穴</h3>
+        <h3>Kinh ngoại kỳ huyệt</h3>
         <div v-for="(item, index) in jingmai" :key="index" :class="'ap ap' + item.id">
             <em :class="'level' + item.nowLevel"></em>
             <a

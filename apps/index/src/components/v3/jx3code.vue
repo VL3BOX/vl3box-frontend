@@ -3,7 +3,7 @@
         <div class="m-jx3code-header m-sideblock-header">
             <div class="u-left">
                 <span class="u-title"
-                    ><img class="u-icon" svg-inline src="@/assets/img/left/coupon.svg" />今日福利</span
+                    ><img class="u-icon" svg-inline src="@/assets/img/left/coupon.svg" />Phúc lợi hôm nay</span
                 >
             </div>
             <div class="u-right">
@@ -48,7 +48,7 @@ export default {
         copy(text) {
             navigator.clipboard.writeText(text);
             this.$message({
-                message: "复制成功",
+                message: "Sao chép thành công",
                 type: "success",
             });
         },

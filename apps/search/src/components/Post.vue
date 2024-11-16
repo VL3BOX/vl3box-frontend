@@ -4,7 +4,7 @@
             <li class="u-item" v-for="(item, i) in data" :key="'item-' + i">
                 <a class="u-title" v-bind:href="item | formatURL" target="_blank"
                     ><i class="u-client" :class="showClientCls(item.client)">{{ item.client | formatClient }}</i
-                    ><span class="u-text">{{ item.post_title || "无标题" }}</span></a
+                    ><span class="u-text">{{ item.post_title || "Không có tiêu đề" }}</span></a
                 >
                 <span class="u-link"
                     ><time class="u-date">{{ (item.post_modified || item.post_date) | formatDate }} @ {{ getAuthorName(item) }}</time><span class="u-type">{{ item.post_type | formatType }}</span></span
@@ -12,8 +12,8 @@
                 <!-- <span class="u-desc">{{ item.post_content | formatContent }}</span> -->
             </li>
         </ul>
-        <el-alert v-else class="m-archive-null" title="没有找到相关条目" type="info" center show-icon> </el-alert>
-        <el-button class="m-archive-more" type="primary" :class="{ show: hasNextPage }" :loading="loading" @click="appendPage(++page)" icon="el-icon-arrow-down">加载更多</el-button>
+        <el-alert v-else class="m-archive-null" title="Không tìm thấy mục liên quan" type="info" center show-icon> </el-alert>
+        <el-button class="m-archive-more" type="primary" :class="{ show: hasNextPage }" :loading="loading" @click="appendPage(++page)" icon="el-icon-arrow-down">Tải thêm</el-button>
         <el-pagination class="m-archive-pages" layout="prev, pager, next" background hide-on-single-page :page-size.sync="per" :total="total" :current-page.sync="page" @current-change="changePage">
         </el-pagination>
     </div>

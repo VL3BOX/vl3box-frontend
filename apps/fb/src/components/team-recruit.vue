@@ -5,8 +5,8 @@
                 class="u-icon"
                 svg-inline
                 src="@/assets/img/puzzle.svg"
-            />团队招募
-            <a class="u-more" href="/team" target="_blank">查看更多 &raquo;</a>
+            />Tuyển dụng đoàn đội
+            <a class="u-more" href="/team" target="_blank">Xem thêm &raquo;</a>
         </h3>
         <ul>
             <li v-for="(item, i) in teams" :key="i">

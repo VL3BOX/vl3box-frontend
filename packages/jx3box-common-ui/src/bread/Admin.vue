@@ -1,7 +1,7 @@
 <template>
     <el-drawer
         class="c-admin"
-        title="管理面板"
+        title="Bảng điều khiển quản lý"
         :visible.sync="dialog_visible"
         :before-close="close"
         :append-to-body="true"
@@ -11,7 +11,7 @@
     >
         <div class="c-admin-wrapper">
             <!-- <template v-if="isAdmin"> -->
-            <el-divider content-position="left">状态变更</el-divider>
+            <el-divider content-position="left">Thay đổi trạng thái</el-divider>
             <el-radio-group v-model="post_status" class="c-admin-status" size="small">
                 <el-radio-button v-for="(option, key) in status_options" :label="key" :key="key">{{
                     option
@@ -19,21 +19,21 @@
             </el-radio-group>
             <!-- </template> -->
 
-            <el-divider content-position="left">可见性变更</el-divider>
+            <el-divider content-position="left">Thay đổi khả năng hiển thị</el-divider>
             <el-radio-group v-model="visible" class="c-admin-status" size="small">
                 <el-radio-button v-for="(option, key) in visible_options" :label="key" :key="key">{{
                     option
                 }}</el-radio-button>
             </el-radio-group>
 
-            <el-divider content-position="left">推荐角标</el-divider>
+            <el-divider content-position="left">Dấu hiệu đề xuất</el-divider>
             <el-checkbox-group v-model="mark" class="c-admin-mark" size="small">
                 <el-checkbox v-for="(option, key) in mark_options" :label="key" :key="key">{{ option }}</el-checkbox>
             </el-checkbox-group>
 
-            <el-divider content-position="left">高亮置顶</el-divider>
-            <el-checkbox class="c-admin-highlight-checkbox" v-model="isSticky">置顶</el-checkbox>
-            <el-checkbox class="c-admin-highlight-checkbox" v-model="isHighlight">开启高亮</el-checkbox>
+            <el-divider content-position="left">Nổi bật và ghim lên đầu</el-divider>
+            <el-checkbox class="c-admin-highlight-checkbox" v-model="isSticky">Ghim lên đầu</el-checkbox>
+            <el-checkbox class="c-admin-highlight-checkbox" v-model="isHighlight">Bật nổi bật</el-checkbox>
             <template v-if="isHighlight">
                 <el-color-picker
                     class="c-admin-highlight-block"
@@ -42,14 +42,14 @@
                     size="mini"
                 ></el-color-picker>
                 <span class="c-admin-highlight-preview" :style="{ color: color }" style="margin-right: 10px"
-                    >预览高亮效果</span
+                    >Xem trước hiệu ứng nổi bật</span
                 >
             </template>
             <el-checkbox class="c-admin-highlight-checkbox" v-model="isStar" :true-label="1" :false-label="0"
-                >精选</el-checkbox
+                >Chọn lọc</el-checkbox
             >
 
-            <el-divider content-position="left">封面海报</el-divider>
+            <el-divider content-position="left">Áo bìa poster</el-divider>
             <div class="c-admin-banner">
                 <el-upload
                     class="c-admin-upload el-upload--picture-card"
@@ -63,24 +63,24 @@
                     <i class="el-icon-plus"></i>
                 </el-upload>
                 <el-input class="u-banner" v-model="post_banner">
-                    <span slot="prepend">海报地址</span>
+                    <span slot="prepend">Địa chỉ poster</span>
                     <span slot="append">
-                        <span class="u-btn" @click="removeBanner"> <i class="el-icon-circle-close"></i> 移除海报 </span>
+                        <span class="u-btn" @click="removeBanner"> <i class="el-icon-circle-close"></i> Xóa hình ảnh bìa </span>
                     </span>
                 </el-input>
             </div>
 
-            <el-divider content-position="left">元信息</el-divider>
+            <el-divider content-position="left">Thông tin metadata</el-divider>
             <div class="c-admin-info">
                 <div class="w-select c-admin-type">
                     <el-select
                         v-model="post_type"
-                        placeholder="请选择板块"
+                        placeholder="Vui lòng chọn mục"
                         style="width: 100%"
                         class="u-select drawer-item-content"
                         :disabled="appDisabled"
                     >
-                        <span slot="prepend">板块</span>
+                        <span slot="prepend">Mục</span>
                         <el-option
                             v-for="type in type_options"
                             :key="type.value"
@@ -90,9 +90,9 @@
                     </el-select>
                 </div>
                 <div class="c-admin-author">
-                    <el-input v-model="post_author" placeholder="请输入作者ID" class="input-author drawer-item-content">
+                    <el-input v-model="post_author" placeholder="Vui lòng nhập ID tác giả" class="input-author drawer-item-content">
                         <template #prepend>
-                            <span class="u-keyword">作者ID</span>
+                            <span class="u-keyword">ID tác giả</span>
                         </template>
                     </el-input>
                 </div>
@@ -100,23 +100,23 @@
 
             <div class="c-admin-extend" v-if="showExtend">
                 <div class="u-condition u-map" v-if="subtypeMap && Object.keys(subtypeMap)">
-                    <span class="u-prepend el-input-group__prepend">类型</span>
-                    <el-select v-model="post_subtype" filterable placeholder="请选择" clearable>
+                    <span class="u-prepend el-input-group__prepend">Loại</span>
+                    <el-select v-model="post_subtype" filterable placeholder="Vui lòng chọn" clearable>
                         <el-option v-for="(label, value) in subtypeMap" :value="value" :label="label" :key="value">
                         </el-option>
                     </el-select>
                 </div>
                 <div class="u-condition u-map">
-                    <span class="u-prepend el-input-group__prepend">主题</span>
-                    <el-select v-model="topics" filterable placeholder="请选择" clearable multiple collapse-tags>
+                    <span class="u-prepend el-input-group__prepend">Chủ đề</span>
+                    <el-select v-model="topics" filterable placeholder="Vui lòng chọn" clearable multiple collapse-tags>
                         <el-option v-for="value in tags" :value="value" :label="value" :key="value"> </el-option>
                     </el-select>
                 </div>
             </div>
 
             <div class="c-admin-buttons">
-                <el-button type="primary" @click="submit" :loading="pushing">提交</el-button>
-                <el-button type="plain" @click="close">取消</el-button>
+                <el-button type="primary" @click="submit" :loading="pushing">Gửi</el-button>
+                <el-button type="plain" @click="close">Hủy</el-button>
             </div>
         </div>
     </el-drawer>
@@ -150,7 +150,7 @@ export default {
             type: [Number, String],
             default: 0,
         },
-        // 是否禁止板块选择
+        // 是否禁止Mục选择
         appDisabled: {
             type: Boolean,
             default: false,
@@ -185,10 +185,10 @@ export default {
             // 状态
             post_status: "publish",
             status_options: {
-                publish: "默认",
-                draft: "草稿",
-                pending: "待审核",
-                dustbin: "删除",
+                publish: "Mặc định",
+                draft: "Bản nháp",
+                pending: "Chờ duyệt",
+                dustbin: "Xóa",
             },
             visible: "0",
             visible_options: __visibleMap,
@@ -208,7 +208,7 @@ export default {
                 "rgb(142,46,255)",
             ],
 
-            // 置顶
+            // Ghim lên đầu
             isSticky: false,
             sticky: 0,
             isStar: 0,
@@ -218,7 +218,7 @@ export default {
             banner_preview: "",
             post_banner: "",
 
-            // 类型
+            // Loại
             post_type: "",
             type_options: [],
             post_subtype: "",
@@ -268,7 +268,7 @@ export default {
         checkChannel: function () {
             this.channel = location.pathname.split("/")[1];
         },
-        // 加载类型选项
+        // 加载Loại选项
         initTypeOptions: function () {
             let types = [];
             for (let key in __postType) {
@@ -285,7 +285,7 @@ export default {
             this.post_banner = res.data?.[0] || "";
         },
         uploadFail: function (err, file, fileList) {
-            this.$message.error("上传失败");
+            this.$message.error("Tải lên không thành công");
             console.log(err);
         },
         removeBanner: function () {
@@ -322,7 +322,7 @@ export default {
                 this.pulled = true;
             });
         },
-        // 提交
+        // Gửi
         submit: function () {
             this.pushing = true;
             this.push();
@@ -336,7 +336,7 @@ export default {
                         data: this.data,
                     });
                     this.$message({
-                        message: "设置成功",
+                        message: "Cài đặt thành công",
                         type: "success",
                     });
                 })
@@ -385,7 +385,7 @@ export default {
         Bus.$on("toggleAdminPanel", (data) => {
             this.dialog_visible = !this.dialog_visible;
             this.checkPostID();
-            // 文章类型的加载
+            // 文章Loại的加载
             if (this.pid && this.hasRight) {
                 this.pull();
             }

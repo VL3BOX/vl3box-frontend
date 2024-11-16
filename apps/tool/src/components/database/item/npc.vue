@@ -20,20 +20,20 @@
                         {{ data.MapName }}
                     </span>
                     <span class="u-intensity" v-if="data.Intensity">
-                        <span>强度</span>
+                        <span>Cường độ</span>
                         <span>{{ data.Intensity }}</span>
                     </span>
                 </div>
                 <div>
                     <span v-if="refCount" class="u-ref-count">
-                        <i class="el-icon-connection"></i> 引用指数 {{ refCount }}</span
+                        <i class="el-icon-connection"></i> Chỉ số trích dẫn {{ refCount }}</span
                     >
                     <Mark
                         class="u-id"
                         BGL="#333"
                         :value="'ID:' + data.ID"
                         :key="data.ID"
-                        title="点击快速复制"
+                        title="Nhấn để sao chép nhanh"
                         @click.native.stop="copy('ID')"
                     />
                 </div>
@@ -41,132 +41,132 @@
             <div class="u-primary">
                 <div class="u-life">
                     <img class="u-desc-icon u-desc-icon-life" svg-inline src="@/assets/img/database/energy.svg" />
-                    <b>血量</b>
+                    <b>Máu (Huyết lượng)</b>
                     <em>MaxLife</em>
                     <strong>{{ data.MaxLife }}</strong>
                 </div>
                 <div class="u-mana">
                     <img class="u-desc-icon u-desc-icon-mana" svg-inline src="@/assets/img/database/energy.svg" />
-                    <b>内力</b>
+                    <b>Nội lực</b>
                     <em>MaxMana</em>
                     <strong>{{ data.MaxMana }}</strong>
                 </div>
                 <div class="u-speed" v-if="data.RunSpeed || data.WalkSpeed">
                     <img class="u-desc-icon u-desc-icon-speed" svg-inline src="@/assets/img/database/speed.svg" />
-                    <b>跑速</b>
+                    <b>Tốc độ chạy</b>
                     <em>RunSpeed</em>
                     <strong>{{ data.RunSpeed || data.WalkSpeed }}</strong>
                 </div>
                 <div class="u-touch" v-if="data.TouchRange">
                     <img class="u-desc-icon u-desc-icon-touch" svg-inline src="@/assets/img/database/radar.svg" />
-                    <b>范围</b>
+                    <b>Phạm vi</b>
                     <em>TouchRange</em>
                     <strong>{{ data.TouchRange }}</strong>
                 </div>
                 <div class="u-sense" v-if="data.Sense">
                     <img class="u-desc-icon u-desc-icon-sense" svg-inline src="@/assets/img/database/sight.svg" />
-                    <b>识破</b>
+                    <b>Nhận diện (Thức phá)</b>
                     <em>Sense</em>
                     <strong>{{ data.Sense }}</strong>
                 </div>
                 <div class="u-dodge" v-if="data.Dodge">
                     <img class="u-desc-icon u-desc-icon-dodge" svg-inline src="@/assets/img/database/miss.svg" />
-                    <b>闪避</b>
+                    <b>Tránh né (Thiểm tỵ)</b>
                     <em>Dodge</em>
                     <strong>{{ data.Dodge }}</strong>
                 </div>
                 <div class="u-dodge" v-if="data.Parry">
                     <img class="u-desc-icon u-desc-icon-dodge" svg-inline src="@/assets/img/database/miss.svg" />
-                    <b>招架</b>
+                    <b>Đỡ đòn (Chiêu giá)</b>
                     <em>Parry</em>
                     <strong>{{ data.ParryValue }}</strong>
                 </div>
                 <div class="u-shield">
                     <img class="u-desc-icon u-desc-icon-shield" svg-inline src="@/assets/img/database/shield.svg" />
-                    <b>防御</b>
+                    <b>Phòng ngự</b>
                     <em>Shield</em>
                     <span class="u-prop-item">
-                        外功防御
+                        外功Phòng ngự
                         <em>PhysicsShieldBase</em>
                         <span class="u-value">{{ ~~data.PhysicsShieldBase }}</span>
                     </span>
                     <span class="u-prop-item">
-                        混元防御
+                        混元Phòng ngự
                         <em>NeutralMagicDefence</em>
                         <span class="u-value">{{ ~~data.NeutralMagicDefence }}</span>
                     </span>
                     <span class="u-prop-item">
-                        阳性防御
+                        阳性Phòng ngự
                         <em>SolarMagicDefence</em>
                         <span class="u-value">{{ ~~data.SolarMagicDefence }}</span>
                     </span>
                     <span class="u-prop-item">
-                        阴性防御
+                        阴性Phòng ngự
                         <em>LunarMagicDefence</em>
                         <span class="u-value">{{ ~~data.LunarMagicDefence }}</span>
                     </span>
                     <span class="u-prop-item">
-                        毒性防御
+                        毒性Phòng ngự
                         <em>PoisonMagicDefence</em>
                         <span class="u-value">{{ ~~data.PoisonMagicDefence }}</span>
                     </span>
                 </div>
                 <div class="u-critical">
                     <img class="u-desc-icon u-desc-icon-attack" svg-inline src="@/assets/img/database/attack.svg" />
-                    <b>会心</b>
+                    <b>Bạo kích (Hội tâm)</b>
                     <em>Critical</em>
                     <span class="u-prop-item">
-                        外功会心
+                        外功Bạo kích (Hội tâm)
                         <em>PhysicsCriticalStrike</em>
                         <span class="u-value">{{ ~~data.PhysicsCriticalStrike }}</span>
                     </span>
                     <span class="u-prop-item">
-                        混元会心
+                        混元Bạo kích (Hội tâm)
                         <em>NeutralCriticalStrike</em>
                         <span class="u-value">{{ ~~data.NeutralCriticalStrike }}</span>
                     </span>
                     <span class="u-prop-item">
-                        阳性会心
+                        阳性Bạo kích (Hội tâm)
                         <em>SolarCriticalStrike</em>
                         <span class="u-value">{{ ~~data.SolarCriticalStrike }}</span>
                     </span>
                     <span class="u-prop-item">
-                        阴性会心
+                        阴性Bạo kích (Hội tâm)
                         <em>LunarCriticalStrike</em>
                         <span class="u-value">{{ ~~data.LunarCriticalStrike }}</span>
                     </span>
                     <span class="u-prop-item">
-                        毒性会心
+                        毒性Bạo kích (Hội tâm)
                         <em>PoisonCriticalStrike</em>
                         <span class="u-value">{{ ~~data.PoisonCriticalStrike }}</span>
                     </span>
                 </div>
                 <div class="u-attack">
                     <img class="u-desc-icon u-desc-icon-attack" svg-inline src="@/assets/img/database/target.svg" />
-                    <b>命中</b>
+                    <b>Trúng đích (Mệnh trung)</b>
                     <em>Attack</em>
                     <span class="u-prop-item">
-                        外功命中
+                        外功Trúng đích (Mệnh trung)
                         <em>PhysicsAttackHit</em>
                         <span class="u-value">{{ ~~data.PhysicsAttackHit }}</span>
                     </span>
                     <span class="u-prop-item">
-                        混元命中
+                        混元Trúng đích (Mệnh trung)
                         <em>NeutralMagicHit</em>
                         <span class="u-value">{{ ~~data.NeutralMagicHit }}</span>
                     </span>
                     <span class="u-prop-item">
-                        阳性命中
+                        阳性Trúng đích (Mệnh trung)
                         <em>SolarMagicHit</em>
                         <span class="u-value">{{ ~~data.SolarMagicHit }}</span>
                     </span>
                     <span class="u-prop-item">
-                        阴性命中
+                        阴性Trúng đích (Mệnh trung)
                         <em>LunarMagicHit</em>
                         <span class="u-value">{{ ~~data.LunarMagicHit }}</span>
                     </span>
                     <span class="u-prop-item">
-                        毒性命中
+                        毒性Trúng đích (Mệnh trung)
                         <em>PoisonMagicHit</em>
                         <span class="u-value">{{ ~~data.PoisonMagicHit }}</span>
                     </span>
@@ -179,8 +179,8 @@
                 @click="toggleProps"
             >
                 <i class="el-icon-view"></i>
-                <span v-if="showProps">收起属性</span>
-                <span v-else>查看属性</span>
+                <span v-if="showProps">Thu gọn thuộc tính</span>
+                <span v-else>Xem thuộc tính</span>
             </el-button>
         </div>
         <!-- 项目详情，仅在单页展示 -->
@@ -206,7 +206,7 @@
                     plain
                     @click="star('npc', data.ID)"
                 >
-                    收藏数据
+                    Lưu dữ liệu
                 </el-button>
                 <el-button
                     v-else-if="isLogin"
@@ -215,7 +215,7 @@
                     plain
                     @click="cancelStar"
                 >
-                    取消收藏
+                    Hủy lưu
                 </el-button>
                 <el-button
                     class="u-button u-to-dbm"
@@ -223,7 +223,7 @@
                     plain
                     @click="toDbm('npc', data.ID, data.Level)"
                 >
-                    在线构建
+                    Xây dựng trực tuyến
                 </el-button>
             </div>
         </template>

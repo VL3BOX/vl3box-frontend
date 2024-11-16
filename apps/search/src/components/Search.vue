@@ -1,12 +1,12 @@
 <template>
 	<div class="m-search">
-		<el-input placeholder="请输入内容" v-model="q" class="input-with-select" @change="search" clearable>
-			<el-select v-model="type" slot="prepend" placeholder="请选择" class="m-search-type">
-				<el-option label="全部" value="all">全部</el-option>
-				<el-option label="作品" value="post">作品</el-option>
-				<el-option label="百科" value="wiki">百科</el-option>
-				<el-option label="用户" value="author">用户</el-option>
-				<el-option label="谷歌" value="google">Google</el-option>
+		<el-input placeholder="Vui lòng nhập nội dung" v-model="q" class="input-with-select" @change="search" clearable>
+			<el-select v-model="type" slot="prepend" placeholder="Vui lòng chọn" class="m-search-type">
+				<el-option label="Tất cả" value="all">Tất cả</el-option>
+				<el-option label="Tác phẩm" value="post">Tác phẩm</el-option>
+				<el-option label="Bách khoa" value="wiki">Bách khoa</el-option>
+				<el-option label="Người dùng" value="author">Người dùng</el-option>
+				<el-option label="Google" value="google">Google</el-option>
 			</el-select>
 			<el-button slot="append" icon="el-icon-search"></el-button>
 		</el-input>

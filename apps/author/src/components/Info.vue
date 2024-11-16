@@ -5,7 +5,7 @@
             size="mini"
             icon="el-icon-warning-outline"
             @click="report"
-            >举报</el-button
+            >Báo cáo</el-button
         >
         <el-button
             type="danger"
@@ -13,7 +13,7 @@
             icon="el-icon-turn-off-microphone"
             @click="check(true)"
             v-if="!status"
-            >禁言</el-button
+            >cấm phát ngôn</el-button
         >
         <el-button
             type="success"
@@ -21,10 +21,10 @@
             icon="el-icon-microphone"
             @click="check(false)"
             v-else
-            >解除禁言</el-button
+            >gỡ bỏ cấm phát ngôn</el-button
         >
         <el-dialog
-            title="操作"
+            title="Thao tác"
             :visible.sync="dialogVisible"
             width="30%"
             :append-to-body="true"
@@ -32,18 +32,18 @@
             :close-on-click-modal="false"
         >
             <div>
-                <p>请填写禁言/解除禁言原因</p>
+                <p>Vui lòng điền lý do cấm phát ngôn/gỡ bỏ cấm phát ngôn</p>
                 <el-input
                     v-model="reason"
-                    placeholder="请输入内容"
+                    placeholder="Vui lòng nhập nội dung"
                     :maxlength="30"
                     :show-word-limit="true"
                 ></el-input>
             </div>
             <span slot="footer" class="dialog-footer">
-                <el-button @click="dialogVisible = false">取 消</el-button>
+                <el-button @click="dialogVisible = false">Hủy</el-button>
                 <el-button type="primary" @click="confirmCheck"
-                    >确 定</el-button
+                    >Xác nhận</el-button
                 >
             </span>
         </el-dialog>
@@ -84,9 +84,9 @@ export default {
             this.dialogVisible = true;
         },
         confirmCheck: function() {
-            let tip = this.status ? "解除禁言" : "禁言";
-            this.$alert(`确定${tip}${this.name}吗？`, "消息", {
-                confirmButtonText: "确定",
+            let tip = this.status ? "gỡ bỏ cấm phát ngôn" : "cấm phát ngôn";
+            this.$alert(`Xác nhận${tip}${this.name}không?`, "Tin nhắn", {
+                confirmButtonText: "Xác nhận",
                 callback: (action) => {
                     if (action == "confirm") {
                         // 旧版server
@@ -107,7 +107,7 @@ export default {
         },
         next: function() {
             this.$message({
-                message: "操作成功",
+                message: "Thao tác成功",
                 type: "success",
             });
             this.reason = "";

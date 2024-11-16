@@ -1,9 +1,9 @@
 <template>
     <div class="m-list-nav">
         <h5 class="u-title">
-            心法导航
+            Hướng dẫn tâm pháp
             <router-link class="u-more" :to="{ query: { subtype: '' } }"
-                >全部心法<i class="el-icon-arrow-right"></i
+                >Tất cả<i class="el-icon-arrow-right"></i
             ></router-link>
         </h5>
         <ul class="m-macro-nav u-list">
@@ -17,26 +17,26 @@
             </li>
         </ul>
 
-        <h5 class="u-title">在线应用</h5>
+        <h5 class="u-title">Ứng dụng trực tuyến</h5>
         <div class="m-nav-group">
             <a href="/pz" target="_blank">
                 <img class="u-icon" :src="getAppIcon('pz', true)" />
-                <span>配装模拟器</span>
+                <span>Mô phỏng trang bị</span>
                 <em>Assembly Simulator</em>
             </a>
             <a href="/macro/talent" target="_blank" v-if="client == 'std'">
                 <img class="u-icon" :src="getAppIcon('talent', true)" />
-                <span>奇穴模拟器</span>
+                <span>Mô phỏng kỳ huyệt</span>
                 <em>Talent Simulator</em>
             </a>
             <a href="/macro/talent2" target="_blank" v-else>
                 <img class="u-icon" :src="getAppIcon('talent', true)" />
-                <span>镇派模拟器</span>
+                <span>Mô phỏng trấn phái</span>
                 <em>Talent Simulator</em>
             </a>
             <a href="/macro/macroeditor" target="_blank">
                 <img class="u-icon" :src="getAppIcon('macroeditor', true)" />
-                <span>云宏编辑器</span>
+                <span>Chỉnh sửa macro trực tuyến</span>
                 <em>Macro Editor</em>
             </a>
         </div>
@@ -54,7 +54,7 @@ export default {
             return this.$store.state.client;
         },
         xfmaps() {
-            delete xfmap["山居剑意"];
+            delete xfmap["Sơn Cư Kiếm Ý"];
             return xfmap;
         },
     },

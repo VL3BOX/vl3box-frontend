@@ -2,10 +2,10 @@
     <el-dialog class="m-wiki-diff-dialog" :visible.sync="show" :title="title" :before-close="close" width="80%">
         <div class="m-contents">
             <div class="m-versions">
-                <el-select v-model="version" placeholder="版本选择" style="width: 100%" clearable>
+                <el-select v-model="version" placeholder="Lựa chọn phiên bản" style="width: 100%" clearable>
                     <el-option v-for="item in list" :label="item.version" :value="item.id" :key="item.id"></el-option>
                 </el-select>
-                <el-select v-model="version1" placeholder="版本选择" style="width: 100%" clearable>
+                <el-select v-model="version1" placeholder="Lựa chọn phiên bản" style="width: 100%" clearable>
                     <el-option v-for="item in list" :label="item.version" :value="item.id" :key="item.id"></el-option>
                 </el-select>
             </div>
@@ -22,7 +22,7 @@
         </div>
         <template #footer>
             <span class="dialog-footer">
-                <el-button size="small" @click="close">关闭</el-button>
+                <el-button size="small" @click="close">Đóng</el-button>
             </span>
         </template>
     </el-dialog>
@@ -53,7 +53,7 @@ export default {
     },
     computed: {
         title() {
-            return "版本对比";
+            return "So sánh phiên bản";
         },
         filename() {
             const data = this.list.find((item) => item.id === this.version);

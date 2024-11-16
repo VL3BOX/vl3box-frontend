@@ -2,8 +2,8 @@
     <div class="m-list-side">
         <!-- 群号 -->
         <RightSideMsg>
-            <em>全服团长交流群</em> :
-            <strong @click="onQQClick" class="u-link" title="点击复制">
+            <em>Nhóm trò chuyện trưởng đoàn toàn máy chủ</em> :
+            <strong @click="onQQClick" class="u-link" title="Nhấn để sao chép">
                 <a>{{ qq }}</a>
             </strong>
         </RightSideMsg>
@@ -11,10 +11,10 @@
             <div class="m-header">
                 <a href="javascript:;" @click="toMap">
                     <img src="@/assets/img/baizhan/baizhan_purple.svg" svg-inline />
-                    <span class="u-title">百战异闻录</span>
+                    <span class="u-title">Ghi chép chiến trận bách chiến</span>
                 </a>
             </div>
-            <div class="u-time">最后更新时间: {{ update_time }}</div>
+            <div class="u-time">Thời gian cập nhật cuối cùng: {{ update_time }}</div>
             <BMap mode="list"></BMap>
             <!-- <div class="u-tabs" v-if="maps.length">
                 <div

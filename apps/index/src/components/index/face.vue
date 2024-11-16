@@ -2,10 +2,10 @@
     <div class="m-face m-sideblock">
         <div class="m-face-header m-sideblock-header">
             <div class="u-left">
-                <i class="u-icon el-icon-camera-solid"></i> <a class="u-title" href="/face" target="_blank">最新捏脸</a>
+                <i class="u-icon el-icon-camera-solid"></i> <a class="u-title" href="/face" target="_blank">Khuôn mặt mới nhất</a>
             </div>
             <div class="u-right">
-                <a href="/face" class="u-more" target="_blank" rel="noopener noreferrer" title="查看全部">
+                <a href="/face" class="u-more" target="_blank" rel="noopener noreferrer" title="Xem tất cả">
                     <i class="el-icon-more"></i>
                 </a>
             </div>

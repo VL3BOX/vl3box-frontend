@@ -30,7 +30,7 @@ export default {
     },
     methods: {
         copy: function (val) {
-            copy(val, { success_title: "云端宏复制成功" });
+            copy(val, { success_title: "Sao chép macro đám mây thành công" });
             this.autoLike();
         },
         autoLike: function () {

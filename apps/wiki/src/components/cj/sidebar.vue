@@ -6,7 +6,7 @@
                     v-if="!isVirtual && !isSync"
                     class="item"
                     effect="dark"
-                    content="请先在游戏中同步成就"
+                    content="Vui lòng đồng bộ thành tựu trong game trước"
                     placement="top"
                 >
                     <a href="/tool/74559" target="_blank"><i class="el-icon-warning-outline"></i></a>
@@ -15,7 +15,7 @@
                     v-else
                     class="item"
                     effect="dark"
-                    content="虚拟角色即为魔盒账号本身，可自定义进度"
+                    content="虚拟Nhân vật即为魔盒账号本身，可自定义进度"
                     placement="top"
                 >
                     <a href="/tool/74559" target="_blank"><i class="el-icon-warning-outline"></i></a>
@@ -27,7 +27,7 @@
             <el-option v-for="type in menu_types" :key="type.value" :label="type.label" :value="type.value"></el-option>
         </el-select>
         <div v-if="currentRole" class="m-filters">
-            <el-checkbox v-model="uncompleted" label="只看未完成" border size="mini"></el-checkbox>
+            <el-checkbox v-model="uncompleted" label="Chỉ xem chưa hoàn thành" border size="mini"></el-checkbox>
             <div class="u-total" v-if="[1, 2].includes(sidebar.general)">
                 <!-- numTotal -->
                 <b class="u-completed-num">{{ uncompleted ? achievementTotal - completedNum : completedNum }}</b>
@@ -83,9 +83,9 @@ export default {
             menus: [],
             old_node: null,
             menu_types: [
-                { value: 1, label: "常规成就" },
-                { value: 2, label: "五甲成就" },
-                { value: 3, label: "其他板块" },
+                { value: 1, label: "Thành tựu thường" },
+                { value: 2, label: "Thành tựu Ngũ Giáp" },
+                { value: 3, label: "Các phần khác" },
             ],
 
             roleList: [],
@@ -124,7 +124,7 @@ export default {
             return this.$store.state.achievementsVirtual;
         },
         isVirtual() {
-            // 是否是虚拟角色 - 魔盒账号
+            // 是否是虚拟Nhân vật - 魔盒账号
             return !this.currentRole?.jx3id;
         },
         completedNum({ menus, achievementsVirtual, achievements }) {
@@ -184,7 +184,7 @@ export default {
                     this.loadRoleAchievements(jx3id);
                 } else {
                     if (jx3id === 0) {
-                        // 虚拟角色
+                        // 虚拟Nhân vật
                         this.loadVirtualAchievements();
                     }
                     this.$store.commit("SET_STATE", { key: "achievements", value: [], isSession: true });
@@ -210,7 +210,7 @@ export default {
     },
     methods: {
         getLastAchievement(achievements = []) {
-            // 游戏角色
+            // 游戏Nhân vật
             // 比如传功，只取最后一个传功100次的ID作为是否完成的依据
             return achievements.map((achievement) => {
                 if (Array.isArray(achievement)) {
@@ -300,11 +300,11 @@ export default {
 
             if (general == 3) {
                 that.menus = [
-                    { name: "最新成就", id: "newest", router: "newest" },
-                    { name: "待攻略成就", id: "waiting", router: "waiting" },
+                    { name: "Thành tựu mới nhất", id: "newest", router: "newest" },
+                    { name: "Thành tựu chờ hướng dẫn", id: "waiting", router: "waiting" },
                     // { name: "绝版成就", id: "out_print", router: "out_print" },
-                    { name: "奇遇成就", id: "adventure", router: "adventure" },
-                    { name: "珍奇成就", id: "rare", router: "rare" },
+                    { name: "Thành tựu kỳ ngộ", id: "adventure", router: "adventure" },
+                    { name: "Thành tựu quý hiếm", id: "rare", router: "rare" },
                 ];
                 return;
             }
@@ -316,7 +316,7 @@ export default {
             //     return;
             // }
             // if (general === 5) {
-            //     that.menus = [{ name: "奇遇成就", id: "adventure", router: "adventure" }];
+            //     that.menus = [{ name: "Thành tựu kỳ ngộ", id: "adventure", router: "adventure" }];
             //     that.$router.push({ name: 'adventure' })
             //     // that.$refs.tree.setCurrentKey('adventure')
             //     return;
@@ -399,7 +399,7 @@ export default {
                 this.loadVirtualAchievements();
             }
         },
-        // 获取角色成就状态
+        // 获取Nhân vật成就状态
         loadRoleAchievements(jx3id) {
             getRoleGameAchievements(jx3id).then((res) => {
                 const achievements = res.data?.data?.achievements || "";
@@ -410,7 +410,7 @@ export default {
             });
         },
         showSchoolIcon,
-        // 获取虚拟角色成就列表
+        // 获取虚拟Nhân vật成就列表
         loadVirtualAchievements() {
             if (!this.currentRole || this.currentRole.jx3id) return;
             getVirtualRoleAchievements().then((res) => {

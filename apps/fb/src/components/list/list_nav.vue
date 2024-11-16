@@ -14,14 +14,14 @@
                 <!-- 下拉框 -->
                 <el-select
                     v-model="search"
-                    placeholder="选择副本"
+                    placeholder="Chọn phó bản"
                     clearable
                     filterable
                     @change="changeFb"
                     class="u-fb-select"
                     size="small"
                 >
-                    <el-option label="全部" value=""></el-option>
+                    <el-option label="Tất cả" value=""></el-option>
                     <hr class="u-divider" />
                     <el-option-group
                         v-for="(group, key) in map"
@@ -41,7 +41,7 @@
             <div class="m-nav-info__meta">
                 <el-select
                     v-model="mode"
-                    placeholder="全部模式"
+                    placeholder="Tất cả模式"
                     size="small"
                     clearable
                     popper-append-to-body
@@ -52,7 +52,7 @@
                 </el-select>
                 <el-select
                     v-model="boss"
-                    placeholder="全部首领"
+                    placeholder="Tất cả首领"
                     size="small"
                     clearable
                     popper-append-to-body
@@ -71,40 +71,40 @@
         </div>
 
         <div class="m-nav-app">
-            <h5 class="u-title">在线应用</h5>
+            <h5 class="u-title">Ứng dụng trực tuyến</h5>
             <a href="/fb/bahuang" target="_blank" v-if="client == 'origin'">
                 <img class="u-icon" :src="getAppIcon('bhhj')" />
-                <span>八荒衡鉴</span>
+                <span>Bát Hoang Hành Giám</span>
                 <em>Ba Huang</em>
             </a>
             <a href="/fb/baizhan" target="_blank" v-if="client == 'std'">
                 <img class="u-icon" :src="getAppIcon('bhhj')" />
-                <span>百战查询</span>
+                <span>Tra cứu Bách Chiến</span>
                 <em>Bai Zhan</em>
             </a>
             <a href="/dbm/pkg/list" target="_blank">
                 <img class="u-icon" :src="getAppIcon('dbm')" />
-                <span>数据下载</span>
+                <span>Tải dữ liệu</span>
                 <em>DBM Data Builder</em>
             </a>
             <a href="/battle" target="_blank">
                 <img class="u-icon" :src="getAppIcon('battle')" />
-                <span>战斗统计</span>
+                <span>Thống kê chiến đấu</span>
                 <em>Battle Statistics</em>
             </a>
             <a href="/jcl" target="_blank">
                 <img class="u-icon" :src="getAppIcon('jcl')" />
-                <span>日志分析</span>
+                <span>Phân tích nhật ký</span>
                 <em>JX3 Combat Log</em>
             </a>
             <a href="/team" target="_blank">
                 <img class="u-icon" :src="getAppIcon('team')" />
-                <span>团队平台</span>
+                <span>Nền tảng đội nhóm</span>
                 <em>Team Platform</em>
             </a>
             <a href="/rank" target="_blank">
                 <img class="u-icon" :src="getAppIcon('jdt')" />
-                <span>秘境百强</span>
+                <span>Bách cường Mật Cảnh</span>
                 <em>JX3 Dungeon Top100</em>
             </a>
         </div>

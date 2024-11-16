@@ -8,13 +8,13 @@
     <div class="m-joke">
         <a class="u-label" href="/joke" target="_blank">
             <img class="u-icon" :src="icon" />
-            <span class="u-text">今日骚话</span>
+            <span class="u-text">Chuyện phiếm hôm nay</span>
         </a>
         <div class="u-content">
             <el-carousel height="20px" direction="vertical" :autoplay="true">
                 <el-carousel-item v-for="(item, i) in data" :key="i">
                     <a class="u-item" :href="getLink(item.id)" target="_blank">
-                        <span class="u-author">{{ item.author || "匿名" }}：</span>
+                        <span class="u-author">{{ item.author || "Ẩn danh" }}：</span>
                         <span class="u-joke" v-if="item.html" v-html="item.html"></span>
                         <span class="u-joke" v-else>{{ item.content }}</span>
                     </a>

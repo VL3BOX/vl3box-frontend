@@ -3,7 +3,7 @@
         <div class="nav-logo-wrap">
             <router-link to="/">
                 <img class="u-logo" svg-inline fill="white" src="@/assets/img/logo.svg" />
-                <span class="about-title">关于我们</span>
+                <span class="about-title">Về chúng tôi</span>
             </router-link>
         </div>
         <ul class="sub-nav-list" :class="{ 'is-open': isOpen }">

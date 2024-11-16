@@ -3,7 +3,7 @@
         <WikiPanel :border-none="true">
             <template slot="head-title">
                 <i class="el-icon-location-information"></i>
-                <span>便捷入口</span>
+                <span>Điều hướng nhanh</span>
             </template>
             <template slot="head-actions">
                 <!-- <a class="u-more" target="_blank" :href="feedback">反馈建议 &raquo;</a> -->
@@ -13,7 +13,7 @@
                     <li class="qlink">
                         <a style="background-color: #fe7979" target="_blank" href="/tool/18151/">
                             <i class="el-icon-trophy"></i>
-                            <span>游戏内看百科</span>
+                            <span>Xem bách khoa trong game</span>
                         </a>
                     </li>
                     <li class="qlink">
@@ -29,25 +29,25 @@
                             }"
                         >
                             <i class="el-icon-sugar"></i>
-                            <span>五行石合成</span>
+                            <span>Tổng hợp Ngũ hành thạch</span>
                         </router-link>
                     </li>
                     <li class="qlink">
                         <a target="_blank" href="/pvg/manufacture">
                             <i class="el-icon-grape"></i>
-                            <span>技艺助手</span>
+                            <span>Trợ lý kỹ năng</span>
                         </a>
                     </li>
                     <li class="qlink">
                         <a target="_blank" href="/pvg/price">
                             <i class="el-icon-watermelon"></i>
-                            <span>价格走势</span>
+                            <span>Xu hướng giá cả</span>
                         </a>
                     </li>
                     <li class="qlink">
                         <a href="/item/plan_list">
                             <i class="el-icon-cherry"></i>
-                            <span>物品清单</span>
+                            <span>Danh sách vật phẩm</span>
                         </a>
                     </li>
                 </ul>
@@ -57,7 +57,7 @@
         <WikiPanel :border-none="true">
             <template slot="head-title">
                 <i class="el-icon-notebook-1"></i>
-                <span>最新物品</span>
+                <span>Vật phẩm mới nhất</span>
             </template>
             <!-- <template slot="head-actions">
                 <a href="pvg/item_price" target="_blank" class="u-more">查看更多 &raquo;</a>
@@ -94,14 +94,14 @@
                         </el-row>
                     </el-carousel-item>
                 </el-carousel>
-                <div v-else style="text-align: center">😂 暂无物品清单</div>
+                <div v-else style="text-align: center">😂 暂无Danh sách vật phẩm</div>
             </template>
         </WikiPanel>
 
         <WikiPanel :border-none="true">
             <template slot="head-title">
                 <i class="el-icon-notebook-1"></i>
-                <span>最热物品</span>
+                <span>Vật phẩm phổ biến nhất</span>
             </template>
             <!-- <template slot="head-actions">
                 <router-link :to="{ name: 'plan_list' }" class="u-more">查看更多 &raquo;</router-link>
@@ -138,14 +138,14 @@
                         </el-row>
                     </el-carousel-item>
                 </el-carousel>
-                <div v-else style="text-align: center">😂 暂无物品清单</div>
+                <div v-else style="text-align: center">😂 暂无Danh sách vật phẩm</div>
             </template>
         </WikiPanel>
 
         <WikiPanel :border-none="true">
             <template slot="head-title">
                 <i class="el-icon-collection"></i>
-                <span>最新攻略</span>
+                <span>Hướng dẫn mới nhất</span>
             </template>
             <template slot="body">
                 <div class="wiki-post-list" v-if="newest_posts.length">
@@ -169,7 +169,7 @@
                                         <span v-text="post.title"></span>
                                     </router-link>
                                 </div>
-                                <div class="u-level" v-text="'综合难度：' + star(post.level)"></div>
+                                <div class="u-level" v-text="'Độ khó tổng hợp:' + star(post.level)"></div>
                                 <div class="u-remark" v-if="post.remark" v-text="'📑 ' + post.remark"></div>
                             </div>
                             <div class="m-user">
@@ -199,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-                <div v-else style="text-align: center">😂 暂无攻略</div>
+                <div v-else style="text-align: center">😂 Chưa có hướng dẫn</div>
             </template>
         </WikiPanel>
     </div>
@@ -287,11 +287,11 @@ export default {
                 this.newest_posts = [];
             }
         );
-        // 获取最新物品
+        // 获取Vật phẩm mới nhất
         get_newest_items({ client: this.client }).then((res) => {
             this.new_plans = chunk(res.data, 3);
         });
-        // 获取最热物品，先调stat接口获得物品ID之后调用node的items接口
+        // 获取Vật phẩm phổ biến nhất，先调stat接口获得物品ID之后调用node的items接口
         getStatRank("item", "views", 15)
             .then((res) => {
                 let ids = res.data

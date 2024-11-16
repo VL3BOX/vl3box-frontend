@@ -2,7 +2,7 @@
     <singlebox :post="post" :stat="stat" v-loading="loading" @extendUpdate="updateExtend">
         <!-- 子类型 -->
         <div class="u-meta u-sub-block" slot="single-header">
-            <em class="u-label">副本</em>
+            <em class="u-label">Phó bản</em>
             <span class="u-value">
                 {{ post_subtype }}
             </span>
@@ -30,7 +30,7 @@ export default {
     },
     computed: {
         post_subtype: function() {
-            return this.post?.post_subtype || "其它";
+            return this.post?.post_subtype || "Khác";
         },
     },
     methods : {

@@ -15,7 +15,7 @@
                         target="_blank"
                         >{{ questName(post.title) }}</router-link
                     >
-                    <div class="u-quest-level" v-text="'综合难度：' + star(post.level)"></div>
+                    <div class="u-quest-level" v-text="'Độ khó tổng hợp:' + star(post.level)"></div>
                     <div class="u-post-remark" v-if="post.remark" v-text="'📑 ' + post.remark"></div>
                 </div>
                 <div class="u-post-user">
@@ -89,7 +89,7 @@ export default {
         },
         ellipsis,
         questName(name) {
-            return name || "未知任务";
+            return name || "Nhiệm vụ chưa biết";
         },
     },
 };

@@ -3,10 +3,10 @@
         <div class="m-face-header m-sideblock-header">
             <div class="u-left">
                 <i class="u-icon el-icon-camera-solid"></i>
-                <span class="u-title">妆造推荐</span>
+                <span class="u-title">Khuyến nghị</span>
             </div>
             <div class="u-right">
-                <a :href="more_link" class="u-more" target="_blank" rel="noopener noreferrer" title="查看全部">
+                <a :href="more_link" class="u-more" target="_blank" rel="noopener noreferrer" title="Xem tất cả">
                     <i class="el-icon-more"></i>
                 </a>
             </div>

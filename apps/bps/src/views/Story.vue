@@ -1,9 +1,9 @@
 <template>
     <div class="v-story" v-loading="loading">
         <el-tabs v-show="isSchool" v-model="active" type="card" @tab-click="loadData">
-            <el-tab-pane label="门派背景" name="introduction"></el-tab-pane>
-            <el-tab-pane label="门派事记" name="history"></el-tab-pane>
-            <el-tab-pane label="门派人物" name="person"></el-tab-pane>
+            <el-tab-pane label="Bối cảnh môn phái" name="introduction"></el-tab-pane>
+            <el-tab-pane label="Sự kiện môn phái" name="history"></el-tab-pane>
+            <el-tab-pane label="Nhân vật môn phái" name="person"></el-tab-pane>
         </el-tabs>
 
         <div class="m-bps-story">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </template>
-            <el-alert v-else title="没有相关资料" type="info" show-icon></el-alert>
+            <el-alert v-else title="Không có tài liệu liên quan" type="info" show-icon></el-alert>
         </div>
     </div>
 </template>
@@ -69,7 +69,7 @@ export default {
                     // console.log(res.data.data);
                     let data = res.data.data;
                     if (data) {
-                        // 门派背景
+                        // Bối cảnh môn phái
                         if (this.active == "introduction") {
                             data.descs.sort((a, b) => {
                                 return a.part - b.part;

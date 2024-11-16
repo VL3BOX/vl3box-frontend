@@ -2,13 +2,13 @@
     <div class="c-author-fans" v-if="list && list.length">
         <div class="u-label">
             <img svg-inline src="../../assets/img/leftsidebar/fans.svg" />
-            <span>粉丝榜</span>
+            <span>Danh sách người hâm mộ</span>
         </div>
         <div class="f-avatar">
             <el-tooltip
                 class="item"
                 effect="dark"
-                :content="'累计打赏' + item.money.toString() + '金箔'"
+                :content="'Tổng số tiền thưởng' + item.money.toString() + 'Vàng lá'"
                 placement="top"
                 v-for="item in list"
                 :key="item.pay_user_id"
@@ -23,7 +23,7 @@
                 <span class="f-avatar-num" v-else>+{{ total - MAX_LENGTH }}</span>
             </el-avatar>
         </div>
-        <div class="f-bottom">本赛季共 {{ total }} 人为TA赠礼</div>
+        <div class="f-bottom">Tổng cộng mùa này {{ total }} Quà tặng cho TA</div>
     </div>
 </template>
 

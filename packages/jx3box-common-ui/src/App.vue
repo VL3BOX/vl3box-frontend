@@ -2,7 +2,7 @@
     <div class="container-page">
         <Header></Header>
         <Breadcrumb
-            name="频道名称"
+            name="Tên kênh"
             slug="slug"
             root="/slug"
             :publishEnable="true"
@@ -26,13 +26,13 @@
         <Main :withoutLeft="false" :withoutRight="false" style="padding:20px;">
             <el-tabs v-model="tab" type="card">
 
-                <el-tab-pane label="通用组件" name="widget">
+                <el-tab-pane label="Thành phần chung" name="widget">
                     <!-- <PostHeader :post="post" /> -->
                     <!-- <Creators :postId="30432" style="margin-bottom: 10px" /> -->
                     <!-- <Collection :id="59" :defaultVisible="true" /> -->
-                    <UserPop title="添加用户" v-model="visible" @confirm="addUser" />
-                    <el-button @click="visible = true">用户POP</el-button>
-                    <el-button @click="homeworkVisible=true">作业组件</el-button>
+                    <UserPop title="Thêm người dùng" v-model="visible" @confirm="addUser" />
+                    <el-button @click="visible = true">POP người dùng</el-button>
+                    <el-button @click="homeworkVisible=true">Thành phần công việc</el-button>
                     <!-- :postId="23865" -->
                     <!-- <Thx
                         postType="bps"
@@ -46,9 +46,9 @@
                     <Like mode="heart" :count="100" :showCount="true" />
                     <Down :count="100" :showCount="true" />
                     <Mark label="KEY" value="VALUE" BGL="#000" BGR="#F39" />
-                    <Fav post-id="90" post-type="jx3dat" post-title="jx3dat测试标题" />
+                    <Fav post-id="90" post-type="jx3dat" post-title="Tiêu đề kiểm tra jx3dat" />
                     <Feed post-id="90" post-type="jx3dat" />
-                    <Print title="传入标题" />
+                    <Print title="Truyền tiêu đề" />
                     <QRcode />
                     <Sharing />
 
@@ -75,33 +75,33 @@
                     <!-- <AuthorMedal :author-id="8"></AuthorMedal> -->
                 </el-tab-pane>
 
-                <el-tab-pane label="CMS作品" name="post">
+                <el-tab-pane label="Tác phẩm CMS" name="post">
                     <el-radio-group v-model="post_id">
-                        <el-radio label="41346">临时测试</el-radio>
+                        <el-radio label="41346">Kiểm tra tạm thời</el-radio>
                         <el-radio label="35605">Markdown</el-radio>
-                        <el-radio label="32035">仅小册</el-radio>
-                        <el-radio label="30017">仅联合创作者</el-radio>
-                        <el-radio label="30582">小册和联合创作者</el-radio>
-                        <el-radio label="31129">无小册和联合创作者</el-radio>
+                        <el-radio label="32035">Chỉ sách nhỏ</el-radio>
+                        <el-radio label="30017">Chỉ cộng tác viên liên kết</el-radio>
+                        <el-radio label="30582">Sách nhỏ và cộng tác viên liên kết</el-radio>
+                        <el-radio label="31129">无Sách nhỏ và cộng tác viên liên kết</el-radio>
                     </el-radio-group>
                     <singlebox :post="post" @extendUpdate="updateExtend" />
                 </el-tab-pane>
 
-                <el-tab-pane label="百科组件" name="wiki">
+                <el-tab-pane label="Thành phần bách khoa" name="wiki">
                     <WikiPanel :wiki-post="wikiPost">
                         <template slot="head-title">
                             <i class="el-icon-location-information"></i>
-                            <span class="u-title">通识正文</span>
+                            <span class="u-title">Nội dung kiến thức phổ thông</span>
                         </template>
                         <template slot="head-actions">
                             <a class="el-button el-button--primary u-publish">
                                 <i class="el-icon-edit"></i>
                                 <span>完善百科通识</span>
                             </a>
-                            <span class="u-more">查看更多</span>
+                            <span class="u-more">Xem thêm</span>
                         </template>
                         <template slot="body"
-                            >正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容</template
+                            >Nội dung chínhNội dung chínhNội dung chínhNội dung chínhNội dung chínhNội dung chínhNội dung chínhNội dung chínhNội dung chính</template
                         >
                     </WikiPanel>
                     <hr />
@@ -113,7 +113,7 @@
                     <hr />
                 </el-tab-pane>
 
-                <el-tab-pane label="头像" name="avatar">
+                <el-tab-pane label="Ảnh đại diện" name="avatar">
                     <el-radio-group v-model="avatar_size" style="margin-bottom:10px;">
                         <el-radio label="xxs">xxs-36/48</el-radio>
                         <el-radio label="xs">xs-48/68</el-radio>
@@ -278,7 +278,7 @@ export default {
             avatar_size: "xl",
 
             upload: "",
-            text: `<Text>text="使用：<BUFF 3222 1 desc>，持续<BUFF 3222 1 time>。\\\n" font=105 </text><Text>text="红豆沙做馅儿，精致细腻的广式月饼。" font=100 </text><Text>text="使用：能在唐门套装供应商处换取如下装备。\\\n" font=105 </text><Text>text="[燕云·重泉靴]" name="iteminfolink" eventid=513 script="this.nVersion=0 this.dwTabType=7 this.dwIndex=35244 this.OnItemLButtonDown=function() OnItemLinkDown(this) end" font=100 r=255 g=40 b=255 </text><Text>text="，" font=105 </text><Text>text="[燕云·铭松靴]" name="iteminfolink" eventid=513 script="this.nVersion=0 this.dwTabType=7 this.dwIndex=35245 this.OnItemLButtonDown=function() OnItemLinkDown(this) end" font=100 r=255 g=40 b=255 </text><Text>text="。" font=100 </text>`,
+            text: `<Text>text="使用：<BUFF 3222 1 desc>，持续<BUFF 3222 1 time>。\\\n" font=105 </text><Text>text="Nhân đậu đỏ, bánh trung thu Quảng Đông tinh xảo và mịn màng." font=100 </text><Text>text="使用：能在唐门套装供应商处换取如下装备。\\\n" font=105 </text><Text>text="[燕云·重泉靴]" name="iteminfolink" eventid=513 script="this.nVersion=0 this.dwTabType=7 this.dwIndex=35244 this.OnItemLButtonDown=function() OnItemLinkDown(this) end" font=100 r=255 g=40 b=255 </text><Text>text="，" font=105 </text><Text>text="[燕云·铭松靴]" name="iteminfolink" eventid=513 script="this.nVersion=0 this.dwTabType=7 this.dwIndex=35245 this.OnItemLButtonDown=function() OnItemLinkDown(this) end" font=100 r=255 g=40 b=255 </text><Text>text="。" font=100 </text>`,
 
             post_topics: post_topics['pve'],
             tag2: '',

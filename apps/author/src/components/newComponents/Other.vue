@@ -39,47 +39,47 @@ export default {
             active: "Topic",
             types: [
                 {
-                    label: "帖子",
+                    label: "Bài viết",
                     value: "Topic",
                     component: Topic,
                     icon: "el-icon-collection",
                 },
                 {
-                    label: "回帖",
+                    label: "Trả lời",
                     value: "Reply",
                     component: Reply,
                     icon: "el-icon-tickets",
                 },
                 {
-                    label: "小册",
+                    label: "Bộ sưu tập",
                     value: "Collection",
                     component: Collection,
                     icon: "el-icon-orange",
                 },
                 // {
-                //     label: "试卷",
+                //     label: "Bài thi",
                 //     value: "Paper",
                 //     component: Paper
                 // },
                 // {
-                //     label: "题目",
+                //     label: "Đề mục",
                 //     value: "Question",
                 //     component: Question
                 // },
                 {
-                    label: "铭牌",
+                    label: "Biển tên",
                     value: "Namespace",
                     component: Namespace,
                     icon: "el-icon-pear",
                 },
                 {
-                    label: "趣图",
+                    label: "Thú đồ",
                     value: "Emotions",
                     component: Emotions,
                     icon: "el-icon-cherry",
                 },
                 {
-                    label: "骚话",
+                    label: "Chuyện phiếm",
                     value: "Jokes",
                     component: Jokes,
                     icon: "el-icon-apple",

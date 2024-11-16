@@ -4,12 +4,12 @@
         :width="isPhone ? '95%' : '600px'"
         :visible="modelValue"
         @close="close"
-        title="迁移至论坛"
+        title="Chuyển đến diễn đàn"
         append-to-body
     >
         <el-form :model="form" ref="form" :rules="rules" :label-position="isPhone ? 'top' : 'left'" label-width="80px">
-            <el-form-item label="分类" prop="category">
-                <el-select v-model="form.category" placeholder="请选择帖子分类" style="width: 100%" filterable>
+            <el-form-item label="Danh mục" prop="category">
+                <el-select v-model="form.category" placeholder="请选择帖子Danh mục" style="width: 100%" filterable>
                     <el-option
                         v-for="item in categoryList"
                         :key="item.id"
@@ -18,12 +18,12 @@
                     ></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="简介">
-                <el-input type="textarea" :rows="5" placeholder="请输入内容" v-model="form.introduction"> </el-input>
+            <el-form-item label="Giới thiệu">
+                <el-input type="textarea" :rows="5" placeholder="Vui lòng nhập nội dung" v-model="form.introduction"> </el-input>
             </el-form-item>
         </el-form>
 
-        <el-divider content-position="left">附图</el-divider>
+        <el-divider content-position="left">Hình ảnh đính kèm</el-divider>
         <div class="u-imgs">
             <div :class="`u-imgs-item`" v-for="(item, i) in form.extra_images" :key="i">
                 <el-image :src="item" fit="cover" style="width: 148px; height: 148px" />
@@ -33,13 +33,13 @@
         <el-divider content-position="left"></el-divider>
 
         <div class="u_r_box">
-            <el-popover placement="top" trigger="manual" size="mini" content="请确认此操作不可逆" v-model="visible">
-                <el-checkbox slot="reference" v-model="checked">我已确认此操作不可逆</el-checkbox>
+            <el-popover placement="top" trigger="manual" size="mini" content="Vui lòng xác nhận rằng hành động này không thể hoàn tác" v-model="visible">
+                <el-checkbox slot="reference" v-model="checked">Tôi đã xác nhận rằng hành động này không thể hoàn tác</el-checkbox>
             </el-popover>
         </div>
         <template #footer>
-            <el-button @click="close">取 消</el-button>
-            <el-button type="primary" @click="onConfirm" :disabled="!checked">确 定</el-button>
+            <el-button @click="close">Hủy bỏ</el-button>
+            <el-button type="primary" @click="onConfirm" :disabled="!checked">Xác nhận</el-button>
         </template>
     </el-dialog>
 </template>
@@ -79,7 +79,7 @@ export default {
             categoryList: [],
             isPhone: window.innerWidth < 768,
             rules: {
-                category: [{ required: true, message: "请选择分类", trigger: "blur" }],
+                category: [{ required: true, message: "请选择Danh mục", trigger: "blur" }],
             },
         };
     },
@@ -113,11 +113,11 @@ export default {
         },
         onConfirm() {
             if (!this.post?.ID) {
-                this.$message.error("文章ID不存在!");
+                this.$message.error("ID bài viết không tồn tại");
                 return;
             }
             if (!this.form.category) {
-                this.$message.error("请选择分类!");
+                this.$message.error("请选择Danh mục!");
                 return;
             }
             if (!this.checked) {
@@ -128,7 +128,7 @@ export default {
             this.$refs.form?.validate((valid) => {
                 if (valid) {
                     recoverTopicFromPosts(this.form).then(() => {
-                        this.$message.success("操作成功");
+                        this.$message.success("Thao tác thành công");
                         this.close();
                         this.clearForm();
                     });

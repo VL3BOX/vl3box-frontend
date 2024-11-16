@@ -1,6 +1,6 @@
 <template>
     <el-popover popper-class="w-plans" placement="bottom" trigger="click" v-model="visible" width="300">
-        <el-input class="m-input" v-model.lazy="search" placeholder="请输入清单关键字" size="large" prefix-icon="el-icon-search"></el-input>
+        <el-input class="m-input" v-model.lazy="search" placeholder="Vui lòng nhập từ khóa danh sách" size="large" prefix-icon="el-icon-search"></el-input>
         <div class="m-list" v-if="list && list.length">
             <div class="u-list" v-for="(item, index) in list" :key="index">
                 <div class="u-title" @click="showRelation(item, index)">
@@ -10,13 +10,13 @@
                 <template v-if="relation_index == index && item.relation">
                     <div class="u-child" v-for="(plan, k) in item.relation" :key="k" @click="addToPlan(item, k)">
                         <i class="el-icon-arrow-right"></i>
-                        <span>{{ plan.title || "子清单" + (k + 1) }}</span>
+                        <span>{{ plan.title || "Danh sách con" + (k + 1) }}</span>
                     </div>
                 </template>
             </div>
         </div>
         <div v-else class="m-list">
-            <el-alert title="暂无清单" type="info" center show-icon :closable="false"> </el-alert>
+            <el-alert title="Chưa có danh sách" type="info" center show-icon :closable="false"> </el-alert>
         </div>
         <el-pagination
             class="m-pagination"
@@ -31,19 +31,19 @@
         ></el-pagination>
 
         <el-popover popper-class="w-add-plans" placement="top" width="160" trigger="click" v-model="add">
-            <el-input class="u-input" v-model="new_plan" placeholder="请输入新清单名称"></el-input>
+            <el-input class="u-input" v-model="new_plan" placeholder="Vui lòng nhập tên danh sách mới"></el-input>
             <div style="text-align: right; margin: 0">
-                <el-button size="mini" type="text" @click="add = false">取消</el-button>
-                <el-button type="primary" size="mini" @click="createPlan">确定</el-button>
+                <el-button size="mini" type="text" @click="add = false">Hủy bỏ</el-button>
+                <el-button type="primary" size="mini" @click="createPlan">Xác nhận</el-button>
             </div>
             <div class="m-create" slot="reference">
-                <!-- <a href="/publish/#/item_plan" target="_blank" class="el-button"><i class="el-icon-document-add"></i> 创建新清单</a> -->
-                <span class="el-button"><i class="el-icon-document-add"></i> 创建新清单</span>
+                <!-- <a href="/publish/#/item_plan" target="_blank" class="el-button"><i class="el-icon-document-add"></i> Tạo danh sách mới</a> -->
+                <span class="el-button"><i class="el-icon-document-add"></i> Tạo danh sách mới</span>
             </div>
         </el-popover>
 
         <el-button size="mini" type="success" slot="reference" @click="openPlans"
-            ><i class="u-el-icon el-icon-shopping-cart-full"></i> 加入清单</el-button
+            ><i class="u-el-icon el-icon-shopping-cart-full"></i> Thêm vào danh sách</el-button
         >
     </el-popover>
 </template>
@@ -119,21 +119,21 @@ export default {
             });
             return plan_items.includes(this.item_id);
         },
-        // 显示子清单
+        // 显示Danh sách con
         showRelation(item, index) {
             if (this.relation_index == index) return (this.relation_index = -1);
             this.relation_index = index;
             if (!item.relation?.length) {
                 item.relation = [];
                 item.relation.push({
-                    title: "子清单",
+                    title: "Danh sách con",
                     data: [],
                 });
             }
         },
         // 加入物品清单
         addToPlan(item, k) {
-            // 加到对应的子清单
+            // 加到对应的Danh sách con
             item.relation[k].data.push({
                 id: this.item_id,
                 count: 1,
@@ -155,13 +155,13 @@ export default {
                     this.relation_index = -1;
                 });
         },
-        // 创建新清单
+        // Tạo danh sách mới
         createPlan() {
             let data = {
                 title: this.new_plan,
                 relation: [
                     {
-                        title: "子清单",
+                        title: "Danh sách con",
                         data: [{ id: this.item_id, count: 1 }],
                     },
                 ],
@@ -173,8 +173,8 @@ export default {
             addMyPlan(data)
                 .then(() => {
                     this.$notify({
-                        title: "新增清单成功",
-                        message: "新增清单成功，物品已添加",
+                        title: "Thêm danh sách thành công",
+                        message: "Thêm danh sách thành công，物品已添加",
                         type: "success",
                     });
                 })

@@ -2,16 +2,16 @@
     <div class="c-resource c-resource__jx3box">
         <!-- 上传触发按钮 -->
         <el-button class="u-switch" type="primary" @click="openDialog" :disabled="!enable">
-            <img class="u-icon" svg-inline :src="boxIcon" />魔盒资源
+            <img class="u-icon" svg-inline :src="boxIcon" />Tài nguyên Hộp Ma
         </el-button>
 
         <!-- 弹出界面 -->
-        <el-dialog class="c-large-dialog" title="魔盒资源库" v-model="dialogVisible">
+        <el-dialog class="c-large-dialog" title="Tài nguyên Hộp Ma库" v-model="dialogVisible">
             <div class="c-resource-content" v-loading="loading">
                 <div class="m-database-search">
                     <el-radio-group class="u-client" v-model="comboClient" @change="search" v-if="type === 'combo'">
                         <el-radio-button label="std">剑三</el-radio-button>
-                        <el-radio-button label="origin">缘起</el-radio-button>
+                        <el-radio-button label="origin">Duyên khởi</el-radio-button>
                     </el-radio-group>
                     <el-input
                         class="u-input"
@@ -20,24 +20,24 @@
                         @change="search"
                         @keyup.enter="search"
                     >
-                        <template #prepend>关键词</template>
+                        <template #prepend>Từ khóa</template>
                         <template #append>
-                            <el-switch v-model="strict" active-text="精确匹配"></el-switch>
+                            <el-switch v-model="strict" active-text="Khớp chính xác"></el-switch>
                         </template>
                     </el-input>
                 </div>
 
                 <el-tabs class="m-database-tabs" v-model="type" type="card" @tab-change="changeType">
-                    <el-tab-pane label="魔盒用户" name="authors">
+                    <el-tab-pane label="Người dùng Hộp Ma" name="authors">
                         <template #label>
                             <span class="u-tab-label">
                                 <el-icon style="margin-right: 5px"><Avatar></Avatar> </el-icon>
-                                <b>用户</b>
+                                <b>Người dùng</b>
                                 <i class="u-lv-box">Lv2+</i>
                             </span>
                         </template>
                         <p v-if="total && done" class="m-resource-count">
-                            <el-icon><Histogram /></el-icon> 共找到 <b>{{ total }}</b> 条记录
+                            <el-icon><Histogram /></el-icon> Tìm thấy tổng cộng <b>{{ total }}</b> bản ghi
                         </p>
                         <ul class="m-resource-list">
                             <li
@@ -66,21 +66,21 @@
                         </ul>
                         <el-alert
                             v-if="!authors.length && done"
-                            title="没有找到相关条目"
+                            title="Không tìm thấy mục liên quan"
                             type="info"
                             show-icon
                         ></el-alert>
                     </el-tab-pane>
-                    <el-tab-pane label="剑三趣图" name="emotions">
+                    <el-tab-pane label="Hình ảnh thú vị Kiếm Tam" name="emotions">
                         <template #label>
                             <span class="u-tab-label">
                                 <el-icon style="margin-right: 5px"><Sugar /></el-icon>
-                                <b>趣图</b>
+                                <b>Hình ảnh thú vị</b>
                             </span>
                         </template>
 
                         <p v-if="total && done" class="m-resource-count">
-                            <el-icon><Histogram /></el-icon> 共找到 <b>{{ total }}</b> 条记录
+                            <el-icon><Histogram /></el-icon> Tìm thấy tổng cộng <b>{{ total }}</b> bản ghi
                         </p>
                         <ul class="m-resource-emotion">
                             <li
@@ -96,16 +96,16 @@
                         </ul>
                         <el-alert
                             v-if="!emotions.length && done"
-                            title="没有找到相关条目"
+                            title="Không tìm thấy mục liên quan"
                             type="info"
                             show-icon
                         ></el-alert>
                     </el-tab-pane>
-                    <!-- <el-tab-pane label="连招" name="combo">
+                    <!-- <el-tab-pane label="Liên chiêu" name="combo">
                         <template #label>
                             <span class="u-tab-label">
                                 <el-icon style="margin-right: 5px"><Lollipop /></el-icon>
-                                <b>连招</b>
+                                <b>Liên chiêu</b>
                             </span>
                         </template>
                         <ComboVue :query="query" ref="combo" :client="comboClient" :strict="strict"></ComboVue>
@@ -120,7 +120,7 @@
                         type="primary"
                         icon="ArrowDown"
                         @click="appendPage"
-                        >加载更多</el-button
+                        >Tải thêm</el-button
                     >
                     <!-- 分页 -->
                     <el-pagination
@@ -135,13 +135,13 @@
                     ></el-pagination>
                 </template>
 
-                <div class="m-database-tip" v-show="isBlank && type !== 'combo'">❤ 请输入搜索条件查询</div>
+                <div class="m-database-tip" v-show="isBlank && type !== 'combo'">❤ Vui lòng nhập điều kiện tìm kiếm</div>
             </div>
 
             <!-- 插入按钮 -->
             <template #footer>
                 <span class="dialog-footer">
-                    <el-button @click="dialogVisible = false">取 消</el-button>
+                    <el-button @click="dialogVisible = false">Lấy 消</el-button>
                     <el-button type="primary" @click="insert">
                         {{ buttonTXT }}
                     </el-button>
@@ -206,7 +206,7 @@ export default {
             pages: 1,
 
             placeholderTexts: {
-                authors: "请输入 ID 或 名称",
+                authors: "Vui lòng nhập ID hoặc tên",
             },
         };
     },
@@ -358,10 +358,10 @@ export default {
                         this.dialogVisible = false;
                         this.selectedAuthor = {};
                     } else {
-                        this.$message.warning("请选择一个用户");
+                        this.$message.warning("请选择一个Người dùng");
                     }
                 } else {
-                    this.$alert("您的等级不足或无权限（Lv2以上可用）", "消息");
+                    this.$alert("Cấp độ của bạn không đủ hoặc không có quyền (chỉ có sẵn từ cấp 2 trở lên)", "Tin nhắn");
                 }
             } else {
                 if (this.type === "combo") {

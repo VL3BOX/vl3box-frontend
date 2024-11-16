@@ -1,7 +1,7 @@
 <template>
     <div class="m-about-text" :class="'m-about-' + type" v-loading="loading">
         <div class="m-about-meta">
-            <a :href="'/notice/' + id" target="_blank" v-if="isSuperAdmin">编辑</a>
+            <a :href="'/notice/' + id" target="_blank" v-if="isSuperAdmin">Biên tập</a>
         </div>
         <div v-html="data"></div>
     </div>

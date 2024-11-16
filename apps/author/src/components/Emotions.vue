@@ -111,17 +111,17 @@ export default {
             var weekC = diffValue/week;
             var monthC = diffValue/month;
             if(monthC >= 1 && monthC <= 12){
-                result = " " + parseInt(monthC) + "月前"
+                result = " " + parseInt(monthC) + "vài tháng trước"
             }else if(weekC >= 1 && weekC <= 3){
-                result = " " + parseInt(weekC) + "周前"
+                result = " " + parseInt(weekC) + "vài tuần trước"
             }else if(dayC >= 1 && dayC <= 6){
-                result = " " + parseInt(dayC) + "天前"
+                result = " " + parseInt(dayC) + "vài ngày trước"
             }else if(hourC >= 1 && hourC <= 23){
-                result = " " + parseInt(hourC) + "小时前"
+                result = " " + parseInt(hourC) + "vài giờ trước"
             }else if(minC >= 1 && minC <= 59){
-                result =" " + parseInt(minC) + "分钟前"
+                result =" " + parseInt(minC) + "vài phút trước"
             }else if(diffValue >= 0 && diffValue <= minute){
-                result = "刚刚"
+                result = "vừa mới"
             }else {
                 let datetime = new Date();
                 datetime.setTime(new Date(date));

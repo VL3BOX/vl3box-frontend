@@ -1,5 +1,5 @@
 <template>
-    <el-dialog :visible="modelValue" @close="onClose" title="打赏记录" width="1002px">
+    <el-dialog :visible="modelValue" @close="onClose" title="Ghi chép khen thưởng" width="1002px">
         <boxcoin-records :postType="postType" :postId="postId" :postClient="client" mode="normal"></boxcoin-records>
     </el-dialog>
 </template>

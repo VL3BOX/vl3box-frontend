@@ -3,7 +3,7 @@
         <!-- 标题 -->
         <div class="m-single-title">
             <span class="u-title u-sub-block" :href="url" :title="title">
-                <i class="u-original" v-if="isOriginal">原创</i>
+                <i class="u-original" v-if="isOriginal">Tác phẩm gốc</i>
                 <i class="u-private" v-if="post.post_status != 'publish' || !!~~post.visible">
                     <i
                         class="el-icon-lock"
@@ -16,7 +16,7 @@
                 <template v-if="titleExtra">
                     <span class="u-client" :class="'i-client-' + client">{{ showClientLabel(client) }}</span>
                     <span class="u-client u-zlp" v-if="zlp">{{ zlp }}</span>
-                    <span class="u-client i-client-wujie" v-if="is_wujie">无界</span>
+                    <span class="u-client i-client-wujie" v-if="is_wujie">Vô giới</span>
                 </template>
             </span>
         </div>
@@ -42,13 +42,13 @@
 
             <!-- 客户端 -->
             <div class="u-meta u-sub-block">
-                <em class="u-label">适用客户端</em>
+                <em class="u-label">Ứng dụng phù hợp</em>
                 <span class="u-value u-client" :class="'i-client-' + client">{{ showClientLabel(client) }}</span>
-                <span class="u-value u-client i-client-wujie" v-if="is_wujie">无界</span>
+                <span class="u-value u-client i-client-wujie" v-if="is_wujie">Vô giới</span>
             </div>
 
             <!-- 发布日期 -->
-            <span class="u-podate u-sub-block" :title="'发布日期:' + post_time">
+            <span class="u-podate u-sub-block" :title="'Ngày phát hành:' + post_time">
                 <i class="u-icon-podate">
                     <img svg-inline src="../../assets/img/single/podate.svg" />
                 </i>
@@ -56,7 +56,7 @@
             </span>
 
             <!-- 最后更新 -->
-            <span class="u-modate u-sub-block" :title="'最后更新:' + update_time">
+            <span class="u-modate u-sub-block" :title="'Cập nhật lần cuối:' + update_time">
                 <i class="u-icon-modate">
                     <img svg-inline src="../../assets/img/single/modate.svg" />
                 </i>
@@ -69,15 +69,15 @@
                 {{ views }}
             </span>
 
-            <span class="u-word-count u-sub-block" v-if="wordCount" title="累计字数">
+            <span class="u-word-count u-sub-block" v-if="wordCount" title="Tổng số từ">
                 <i class="el-icon-sunny"></i>
                 {{ wordCount }}
             </span>
 
-            <!-- 编辑 -->
+            <!-- Chỉnh sửa -->
             <a class="u-edit u-sub-block" :href="edit_link" v-if="canEdit">
                 <i class="u-icon-edit el-icon-edit-outline"></i>
-                <span>编辑</span>
+                <span>Chỉnh sửa</span>
             </a>
         </div>
     </header>
@@ -105,13 +105,13 @@ export default {
             return !!~~this.post?.original;
         },
         title: function () {
-            return this.post?.post_title || "无标题";
+            return this.post?.post_title || "Không tiêu đề";
         },
         author_link: function () {
             return authorLink(this.post?.post_author);
         },
         author_name: function () {
-            return this.post?.author_info?.display_name || "匿名";
+            return this.post?.author_info?.display_name || "Ẩn danh";
         },
         post_date: function () {
             return showDate(new Date(this.post?.post_date));

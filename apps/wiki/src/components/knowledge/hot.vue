@@ -4,7 +4,7 @@
 			<span class="u-title-left">
 				<i :class="icon"></i><span> {{ title }}</span>
 			</span>
-			<router-link v-if="link" class="u-title-right" to="link">查看更多 &raquo;</router-link>
+			<router-link v-if="link" class="u-title-right" to="link">Xem thêm &raquo;</router-link>
 		</div>
 		<div class="m-panel">
 			<el-carousel height="66" direction="vertical" indicator-position="none" v-if="list.length">
@@ -20,7 +20,7 @@
 					</router-link>
 				</el-carousel-item>
 			</el-carousel>
-			<div v-else>😂 暂无热门事件</div>
+			<div v-else>😂 Chưa có sự kiện hot</div>
 		</div>
 	</div>
 </template>
@@ -42,7 +42,7 @@ export default {
 			return this.data?.icon || "el-icon-collection";
 		},
 		title() {
-			return this.data?.title || "热门剧情";
+			return this.data?.title || "Cốt truyện hot";
 		},
 		link() {
 			return this.data?.link || "";

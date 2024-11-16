@@ -2,7 +2,7 @@
 	<footer class="m-footer">
 		&copy;
 		<a :href="homepage" target="_blank">JX3BOX.COM</a>
-		<a class="u-feedback" :href="feedback" target="_blank">❤ 反馈建议</a>
+		<a class="u-feedback" :href="feedback" target="_blank">❤ Góp ý và đề xuất</a>
 	</footer>
 </template>
 

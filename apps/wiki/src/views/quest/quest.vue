@@ -1,6 +1,6 @@
 <template>
     <DefaultLayout
-        name="任务百科"
+        name="Bách khoa nhiệm vụ"
         slug="quest"
         root="/quest"
         without-right
@@ -16,28 +16,28 @@
         <div class="m-search-wrap">
             <Search :placeholder="placeholder" @search="search">
                 <div>
-                    <el-tooltip content="查看任务链需要键入完整任务名或任务ID哦" placement="top">
-                        <el-checkbox v-model="chain">查看任务链</el-checkbox>
+                    <el-tooltip content="Để xem chuỗi nhiệm vụ, bạn cần nhập tên nhiệm vụ đầy đủ hoặc ID nhiệm vụ." placement="top">
+                        <el-checkbox v-model="chain">Xem chuỗi nhiệm vụ</el-checkbox>
                     </el-tooltip>
                     <el-tooltip class="u-tips" effect="dark" placement="bottom">
                         <div slot="content">
-                            <span>※ 支持任务名称精确或模糊搜索</span> <br />
-                            <span>※ 支持任务相关物品名称精确搜索</span> <br />
-                            <span>※ 支持成就名称精确搜索</span> <br />
+                            <span>※ Hỗ trợ tìm kiếm nhiệm vụ theo tên chính xác hoặc mơ hồ</span> <br />
+                            <span>※ Hỗ trợ tìm kiếm tên đồ vật liên quan đến nhiệm vụ chính xác</span> <br />
+                            <span>※ Hỗ trợ tìm kiếm tên thành tựu chính xác</span> <br />
                         </div>
                         <el-button type="text" icon="el-icon-question"></el-button>
                     </el-tooltip>
                 </div>
             </Search>
             <el-popover popper-class="u-player-setting-popover" placement="top" width="160" v-model="settingVisible">
-                <el-input v-model="playerName" placeholder="称呼" @input="handlePlayerInfoChange" size="mini"
-                    ><template #prepend>称呼</template></el-input
+                <el-input v-model="playerName" placeholder="Danh xưng" @input="handlePlayerInfoChange" size="mini"
+                    ><template #prepend>Danh xưng</template></el-input
                 >
-                <el-input v-model="playerBody" placeholder="体型" @input="handlePlayerInfoChange" size="mini"
-                    ><template #prepend>体型</template></el-input
+                <el-input v-model="playerBody" placeholder="Thể hình" @input="handlePlayerInfoChange" size="mini"
+                    ><template #prepend>Thể hình</template></el-input
                 >
                 <div style="text-align: right; margin: 0">
-                    <el-button type="primary" size="mini" @click="settingVisible = false">确定</el-button>
+                    <el-button type="primary" size="mini" @click="settingVisible = false">Xác nhận</el-button>
                 </div>
                 <div class="u-player" slot="reference">
                     <span class="u-player-name">{{ playerName }}</span
@@ -63,7 +63,7 @@ export default {
     components: { QuestNav, CommonNav, DefaultLayout, Search },
     data() {
         return {
-            placeholder: "输入任务关键字（可包括中括号），「回车」进行搜索",
+            placeholder: "Nhập từ khóa nhiệm vụ (có thể bao gồm ngoặc vuông),「Enter」để tìm kiếm",
             chain: false,
             settingVisible: false,
             playerName: "侠士",

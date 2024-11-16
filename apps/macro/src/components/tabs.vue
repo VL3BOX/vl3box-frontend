@@ -1,38 +1,38 @@
 <template>
     <el-tabs class="m-tabs" v-model="view" @tab-click="changeView">
-        <el-tab-pane label="云端宏" name="index">
+        <el-tab-pane label="Macro trên đám mây" name="index">
             <span slot="label">
                 <i class="el-icon-collection"></i>
-                <b>云端宏</b>
-                <em class="u-new">轻松同步</em>
+                <b>Macro trên đám mây</b>
+                <em class="u-new">Đồng bộ dễ dàng</em>
             </span>
         </el-tab-pane>
-        <el-tab-pane label="我的宏仓库" name="bucket">
+        <el-tab-pane label="Kho macro của tôi" name="bucket">
             <span slot="label" class="u-label">
                 <i class="el-icon-receiving"></i>
-                <b>个人宏仓库</b>
+                <b>Kho macro cá nhân</b>
                 <!-- <em class="u-pop" v-if="isLogin">{{ count }}</em> -->
-                <!-- <em class="u-ready" v-else>私人专属</em> -->
+                <!-- <em class="u-ready" v-else>Riêng tư</em> -->
             </span>
         </el-tab-pane>
-        <el-tab-pane label="我收藏的宏" name="fav">
+        <el-tab-pane label="Macro tôi đã lưu" name="fav">
             <span slot="label" class="u-label">
                 <i class="el-icon-star-off"></i>
-                <b>宏收藏夹</b>
+                <b>Danh sách macro yêu thích</b>
             </span>
         </el-tab-pane>
-        <el-tab-pane label="亲友分享的宏" name="landspace">
+        <el-tab-pane label="Macro được bạn bè chia sẻ" name="landspace">
             <span slot="label" class="u-label">
                 <i class="el-icon-sugar"></i>
-                <b>亲友的宏</b>
+                <b>Macro của bạn bè</b>
             </span>
         </el-tab-pane>
-        <el-tab-pane label="排行榜" name="rank">
+        <el-tab-pane label="Bảng xếp hạng" name="rank">
             <span slot="label">
                 <i class="el-icon-data-analysis"></i>
-                <b>排行榜</b>
-                <!-- <em class="u-new">全新上线</em> -->
-                <!-- <em class="u-ready">即将推出</em> -->
+                <b>Bảng xếp hạng</b>
+                <!-- <em class="u-new">Mới ra mắt</em> -->
+                <!-- <em class="u-ready">Sắp ra mắt</em> -->
             </span>
         </el-tab-pane>
     </el-tabs>

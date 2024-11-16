@@ -7,7 +7,7 @@
                 </el-tooltip>
             </template>
         </role-select>
-        <el-input class="u-keyword" size="small" v-model="keyword" placeholder="输入关键字"> </el-input>
+        <el-input class="u-keyword" size="small" v-model="keyword" placeholder="Nhập từ khóa"> </el-input>
         <div v-if="role" class="m-filters">
             <el-checkbox v-model="uncompleted" label="只看未完成" border size="mini"></el-checkbox>
             <div class="u-total">

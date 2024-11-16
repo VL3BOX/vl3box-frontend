@@ -1,7 +1,7 @@
 <template>
     <el-form ref="form" class="c-comment-subbox">
         <div class="u-subbox-label">
-            回复
+            Trả lời
             <el-link type="primary" target="_blank" :href="userHref"
                 >＠{{ username }}</el-link
             >
@@ -12,7 +12,7 @@
                 type="textarea"
                 v-model="content"
                 :id="'id' + inputId"
-                placeholder="输入回复..."
+                placeholder="输入Trả lời..."
             ></el-input>
         </el-form-item>
         <el-form-item>
@@ -41,10 +41,10 @@
                 type="primary"
                 @click="submintReply()"
                 :disabled="disableSubmitBtn"
-                >提交</el-button
+                >Gửi</el-button
             >
             <el-button size="mini" type="text" @click="hideForm()"
-                >收起</el-button
+                >Thu gọn</el-button
             >
         </el-form-item>
     </el-form>

@@ -17,12 +17,12 @@
                                 <div>
                                     【{{ item.label }}】
                                     <span class="u-tips">
-                                        共<b>{{ item.total }} </b>本{{ item.label }}
+                                        tổng cộng<b>{{ item.total }} </b>quyển{{ item.label }}
                                     </span>
                                 </div>
                             </template>
                             <template v-slot:action>
-                                <div @click="clickTabs(item.id)" v-if="item.id !== 8">查看全部</div>
+                                <div @click="clickTabs(item.id)" v-if="item.id !== 8">Xem tất cả</div>
                             </template>
                             <template v-slot="{ item }">
                                 <BookCard :item="item" :reporter="{ aggregate: listId(list) }" @click="setItem(item)" />
@@ -79,7 +79,7 @@
                         @click="appendPage"
                         :loading="loading"
                         icon="el-icon-arrow-down"
-                        >加载更多</el-button
+                        >Xem thêm</el-button
                     >
                     <el-pagination
                         class="m-archive-pages"
@@ -127,7 +127,7 @@ export default {
             list: [
                 {
                     id: 8,
-                    label: "最近阅读",
+                    label: "Đọc gần đây",
                     page: 1,
                     pages: 1,
                     total: 0,
@@ -135,7 +135,7 @@ export default {
                 },
                 {
                     id: 11,
-                    label: "杂集",
+                    label: "Tạp văn",
                     page: 1,
                     pages: 1,
                     total: 0,
@@ -143,7 +143,7 @@ export default {
                 },
                 {
                     id: 10,
-                    label: "道学",
+                    label: "Đạo học",
                     page: 1,
                     pages: 1,
                     total: 0,
@@ -151,7 +151,7 @@ export default {
                 },
                 {
                     id: 9,
-                    label: "佛学",
+                    label: "Phật học",
                     page: 1,
                     pages: 1,
                     total: 0,
@@ -167,11 +167,11 @@ export default {
             showTypes: [
                 {
                     value: "list",
-                    label: "列表",
+                    label: "Danh sách",
                 },
                 {
                     value: "card",
-                    label: "卡片",
+                    label: "Thẻ",
                 },
             ],
             showType: "card",
@@ -188,7 +188,7 @@ export default {
                     item.value = item.id;
                     return item;
                 });
-            return [{ id: 0, value: -1, name: "全部", label: "全部" }, ..._list];
+            return [{ id: 0, value: -1, name: "Tất cả", label: "Tất cả" }, ..._list];
         },
         ...mapState(["recentReadList"]),
         client() {

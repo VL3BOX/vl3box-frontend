@@ -1,8 +1,8 @@
 <template>
     <div class="m-knowledge-panel">
         <div class="m-title">
-            <span class="u-text"><i class="el-icon-orange"></i><span> 玩法指南</span></span>
-            <router-link class="u-more" to="/type/game">查看更多 &raquo;</router-link>
+            <span class="u-text"><i class="el-icon-orange"></i><span> Hướng dẫn cách chơi</span></span>
+            <router-link class="u-more" to="/type/game">Xem thêm &raquo;</router-link>
         </div>
         <div class="m-guide m-panel">
             <div v-for="(item, index) in data" :key="index" class="u-guide">
@@ -32,7 +32,7 @@ export default {
     computed: {},
     watch: {},
     methods: {
-        // 获取玩法指南
+        // 获取Hướng dẫn cách chơi
         getGuideData() {
             getMenuGroups({ key: ["guide-pve", "guide-pvx", "guide-pvp"].join(",") }).then((res) => {
                 this.data = res.reduce((acc, cur) => {

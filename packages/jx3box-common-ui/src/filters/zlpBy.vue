@@ -4,14 +4,14 @@
             <span class="el-dropdown-link">
                 <span class="u-menu-label">
                     <i class="el-icon-s-operation"></i>
-                    {{ value ? value : '资料片' }}
+                    {{ value ? value : 'Gói dữ liệu' }}
                 </span>
                 <i class="el-icon-arrow-down el-icon--right"></i>
             </span>
             <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item @click.native="filter('')">
                     {{
-                    "全部"
+                    "Tất cả"
                     }}
                 </el-dropdown-item>
                 <el-dropdown-item

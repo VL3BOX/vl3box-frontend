@@ -1,33 +1,33 @@
 <template>
 	<div class="c-resource c-resource__jx3box">
 		<!-- 上传触发按钮 -->
-		<el-button class="u-switch" type="primary" @click="openDialog" :disabled="!enable"> <img class="u-icon" svg-inline :src="boxIcon" />魔盒资源 </el-button>
+		<el-button class="u-switch" type="primary" @click="openDialog" :disabled="!enable"> <img class="u-icon" svg-inline :src="boxIcon" />Tài nguyên Hộp Ma </el-button>
 
 		<!-- 弹出界面 -->
-		<el-dialog v-draggable class="c-large-dialog" title="魔盒资源库" :visible.sync="dialogVisible">
+		<el-dialog v-draggable class="c-large-dialog" title="Tài nguyên Hộp Ma库" :visible.sync="dialogVisible">
 			<div class="c-resource-content" v-loading="loading">
 				<div class="m-database-search">
 					<el-radio-group class="u-client" v-model="comboClient" @change="search" v-if="type === 'combo'">
-						<el-radio-button label="std">重制</el-radio-button>
-						<el-radio-button label="origin">缘起</el-radio-button>
+						<el-radio-button label="std">Trọng chế</el-radio-button>
+						<el-radio-button label="origin">Duyên khởi</el-radio-button>
 					</el-radio-group>
 					<el-input class="u-input" :placeholder="placeholderText" v-model="query" @change="search" @keyup.enter.native="search">
-						<template slot="prepend">关键词</template>
+						<template slot="prepend">Từ khóa</template>
 						<template slot="append">
-							<el-switch v-model="strict" active-text="精确匹配"></el-switch>
+							<el-switch v-model="strict" active-text="Khớp chính xác"></el-switch>
 						</template>
 					</el-input>
 				</div>
 
 				<el-tabs class="m-database-tabs" v-model="type" type="card" @tab-click="changeType">
-					<el-tab-pane label="魔盒用户" name="authors">
+					<el-tab-pane label="Người dùng Hộp Ma" name="authors">
 						<span slot="label" class="u-tab-label">
 							<i class="el-icon-s-custom" style="margin-right: 5px"></i>
-							<b>用户</b>
+							<b>Người dùng</b>
 							<i class="u-lv-box">Lv2+</i>
 						</span>
 						<p v-if="total && done" class="m-resource-count">
-							<i class="el-icon-s-data"></i> 共找到 <b>{{ total }}</b> 条记录
+							<i class="el-icon-s-data"></i> Tìm thấy tổng cộng <b>{{ total }}</b> bản ghi
 						</p>
 						<ul class="m-resource-list">
 							<li v-for="(o, i) in authors" class="u-item" :key="i" :class="{ on: !!o.isSelected }" @click="selectAuthor(o, i)" ref="author">
@@ -43,57 +43,57 @@
 								</span>
 							</li>
 						</ul>
-						<el-alert v-if="!authors.length && done" title="没有找到相关条目" type="info" show-icon></el-alert>
+						<el-alert v-if="!authors.length && done" title="Không tìm thấy mục liên quan" type="info" show-icon></el-alert>
 					</el-tab-pane>
-					<el-tab-pane label="连招" name="combo">
+					<el-tab-pane label="Liên chiêu" name="combo">
 						<span slot="label" class="u-tab-label">
 							<i class="el-icon-lollipop" style="margin-right: 5px"></i>
-							<b>连招</b>
+							<b>Liên chiêu</b>
 						</span>
 						<ComboVue :query="query" ref="combo" :client="comboClient" :strict="strict" :subtype="subtype"></ComboVue>
 					</el-tab-pane>
-					<el-tab-pane label="剑三趣图" name="emotions">
+					<el-tab-pane label="Hình ảnh thú vị Kiếm Tam" name="emotions">
 						<span slot="label" class="u-tab-label">
 							<i class="el-icon-sugar" style="margin-right: 5px"></i>
-							<b>趣图</b>
+							<b>Hình ảnh thú vị</b>
 						</span>
 						<p v-if="total && done" class="m-resource-count">
-							<i class="el-icon-s-data"></i> 共找到 <b>{{ total }}</b> 条记录
+							<i class="el-icon-s-data"></i> Tìm thấy tổng cộng <b>{{ total }}</b> bản ghi
 						</p>
 						<ul class="m-resource-emotion">
 							<li v-for="o in emotions" class="u-item" :key="o.id" :class="{ on: !!o.isSelected }" @click="selectEmotion(o)" ref="emotion">
 								<img class="e-jx3-emotion" :src="resolveImagePath(o.url)" :alt="query" />
 							</li>
 						</ul>
-						<el-alert v-if="!emotions.length && done" title="没有找到相关条目" type="info" show-icon></el-alert>
+						<el-alert v-if="!emotions.length && done" title="Không tìm thấy mục liên quan" type="info" show-icon></el-alert>
 					</el-tab-pane>
-					<el-tab-pane label="信纸" name="letter">
+					<el-tab-pane label="Giấy viết thư" name="letter">
 						<span slot="label" class="u-tab-label">
 							<i class="el-icon-coffee-cup" style="margin-right: 5px"></i>
-							<b>信纸</b>
+							<b>Giấy viết thư</b>
 						</span>
 						<div class="m-letter-list">
 							<div class="m-letter" :class="{ active: !!o.isSelected }" v-for="o in filterLetter" :key="o.id" @click="selectLetter(o)">
 								<LetterPaper :data="o" />
 							</div>
 						</div>
-						<el-alert v-if="!letter.length && done" title="没有找到相关条目" type="info" show-icon></el-alert>
+						<el-alert v-if="!letter.length && done" title="Không tìm thấy mục liên quan" type="info" show-icon></el-alert>
 					</el-tab-pane>
 				</el-tabs>
 
 				<template v-if="multipage && type !== 'combo'">
 				<!-- 下一页 -->
-				<el-button class="m-archive-more" :class="{ show: hasNextPage }" type="primary" icon="el-icon-arrow-down" @click="appendPage">加载更多</el-button>
+				<el-button class="m-archive-more" :class="{ show: hasNextPage }" type="primary" icon="el-icon-arrow-down" @click="appendPage">Tải thêm</el-button>
 					<!-- 分页 -->
 					<el-pagination class="m-archive-pages" background layout="total, prev, pager, next,jumper" :hide-on-single-page="true" :page-size="per" :total="total" :current-page.sync="page" @current-change="changePage"></el-pagination>
 				</template>
 
-				<div class="m-database-tip" v-show="isBlank && type !== 'combo'">❤ 请输入搜索条件查询</div>
+				<div class="m-database-tip" v-show="isBlank && type !== 'combo'">❤ Vui lòng nhập điều kiện tìm kiếm</div>
 			</div>
 
 			<!-- 插入按钮 -->
 			<span slot="footer" class="dialog-footer">
-				<el-button @click="dialogVisible = false">取 消</el-button>
+				<el-button @click="dialogVisible = false">Lấy 消</el-button>
 				<el-button type="primary" @click="insert">
 					{{ buttonTXT }}
 				</el-button>
@@ -163,7 +163,7 @@ export default {
 			pages: 1,
 
 			placeholderTexts: {
-				authors: "请输入 ID 或 名称",
+				authors: "Vui lòng nhập ID hoặc tên",
 			},
 		};
 	},
@@ -334,10 +334,10 @@ export default {
 						this.dialogVisible = false;
 						this.selectedAuthor = {};
 					} else {
-						this.$message.warning("请选择一个用户");
+						this.$message.warning("请选择一个Người dùng");
 					}
 				} else {
-					this.$alert("您的等级不足或无权限（Lv2以上可用）", "消息");
+					this.$alert("Cấp độ của bạn không đủ hoặc không có quyền (chỉ có sẵn từ cấp 2 trở lên)", "Tin nhắn");
 				}
 			} else {
 				if (this.type === "combo") {
@@ -366,7 +366,7 @@ export default {
 			o.isSelected = true;
 			this.html = `<a data-type="emotion" class="e-jx3-emotion w-jx3-element" data-id="${o.id}" target="_blank" href="/emotion/${o.id}"><img class="e-jx3-emotion-img" data-type="emotion" data-id="${o.id}" style="width:180px;" src="${o.url}" alt="${o.id}"/></a>`;
 		},
-		// 信纸
+		// Giấy viết thư
 		selectLetter(o) {
 			this.resetItems();
 			o.isSelected = true;

@@ -5,17 +5,17 @@
                 class="u-platform-option"
                 :class="{ 'is-select': platform == 1 }"
                 @click="platform = 1"
-                >旗舰端</div
+                >Phiên bản kỳ hạm</div
             >
             <div
                 class="u-platform-option"
                 :class="{ 'is-select': platform == 2 }"
                 @click="platform = 2"
-                >无界端</div
+                >Phiên bản vô giới</div
             >
         </div>
         <div class="u-skill-list">
-            <!-- 旗舰端技能列表 -->
+            <!-- Phiên bản kỳ hạm技能列表 -->
             <template v-if="platform == 1">
                 <div
                     v-for="kungfu in kungfus"
@@ -50,12 +50,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- 奇穴技能 -->
+                <!-- Kỹ năng kỳ huyệt -->
                 <div
                     class="m-martial-skill"
                     v-if="talentSkills && talentSkills.length">
                     <div class="u-title">
-                        <span class="u-title-name">奇穴技能</span>
+                        <span class="u-title-name">Kỹ năng kỳ huyệt</span>
                         <img
                             src="../../assets/img/skillset.png"
                             class="u-title-img"
@@ -79,10 +79,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- 江湖轻功 -->
+                <!-- Khinh công giang hồ -->
                 <div class="m-martial-skill">
                     <div class="u-title">
-                        <span class="u-title-name">江湖轻功</span>
+                        <span class="u-title-name">Khinh công giang hồ</span>
                         <img
                             src="../../assets/img/skillset.png"
                             class="u-title-img"
@@ -107,12 +107,12 @@
                     </div>
                 </div>
             </template>
-            <!-- 无界端技能列表 -->
+            <!-- Phiên bản vô giới技能列表 -->
             <template v-else-if="platform == 2">
-                <!-- 门派技能 -->
+                <!-- Kỹ năng môn phái -->
                 <div class="m-martial-skill" v-if="wujie_data.mount.length">
                     <div class="u-title">
-                        <span class="u-title-name">门派技能</span>
+                        <span class="u-title-name">Kỹ năng môn phái</span>
                         <img
                             src="../../assets/img/skillset.png"
                             class="u-title-img"
@@ -138,10 +138,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- 通用技能 -->
+                <!-- Kỹ năng thông dụng -->
                 <div class="m-martial-skill">
                     <div class="u-title">
-                        <span class="u-title-name">通用技能</span>
+                        <span class="u-title-name">Kỹ năng thông dụng</span>
                         <img
                             src="../../assets/img/skillset.png"
                             class="u-title-img"
@@ -246,7 +246,7 @@ export default {
             // 后撤、蹑云逐月、扶摇直上、凌霄揽胜、瑶台枕鹤、迎风回浪
             return [9007, 9003, 9002, 9005, 9006, 9004];
         },
-        // 门派技能数据
+        // Kỹ năng môn phái数据
         kungfusSkills: function () {
             const obj = {};
             Object.entries(this.kungfumap[this.mountId]["skills"]).forEach(
@@ -261,7 +261,7 @@ export default {
             );
             return obj;
         },
-        // 门派技能套路id
+        // Kỹ năng môn phái套路id
         kungfus: function () {
             return this.kungfumap[this.mountId]["kungfus"];
         },

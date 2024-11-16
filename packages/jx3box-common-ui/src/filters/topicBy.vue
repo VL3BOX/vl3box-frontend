@@ -58,27 +58,27 @@ export default {
     data() {
         return {
             visible: false,
-            value: "全部",
+            value: "Tất cả",
         };
     },
     computed: {
         activeText() {
             const { value } = this;
-            return value === "全部" ? this.label : value;
+            return value === "Tất cả" ? this.label : value;
         },
         computedTopics() {
-            return ["全部", ...this.topics];
+            return ["Tất cả", ...this.topics];
         },
     },
     watch: {
         modelValue: {
             immediate: true,
             handler(val) {
-                this.value = val === "" ? "全部" : val;
+                this.value = val === "" ? "Tất cả" : val;
             },
         },
         value(val) {
-            if (val === "全部") val = "";
+            if (val === "Tất cả") val = "";
             this.$emit("update:modelValue", val);
         },
     },

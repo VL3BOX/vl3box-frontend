@@ -1,6 +1,6 @@
 <template>
     <div class="m-newest-view">
-        <span class="u-list-empty" v-if="isEmpty">👻 暂无记录</span>
+        <span class="u-list-empty" v-if="isEmpty">👻 Chưa có ghi chép</span>
         <Achievements :achievements="achievements" />
         <el-pagination
             background

@@ -1,104 +1,104 @@
 <template>
     <el-tabs class="m-tabs" v-model="view" @tab-click="changeView">
-        <el-tab-pane label="职业攻略" name="index">
+        <el-tab-pane label="Chiến lược nghề nghiệp" name="index">
             <span slot="label">
                 <i class="el-icon-collection"></i>
-                <b>职业攻略</b>
-                <!-- <em class="u-secret">权威白皮书</em> -->
+                <b>Chiến lược nghề nghiệp</b>
+                <!-- <em class="u-secret">Sách trắng uy tín</em> -->
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="精品区" name="highlights">
+        <el-tab-pane label="Khu vực chất lượng cao" name="highlights">
             <span slot="label">
                 <i class="el-icon-star-off"></i>
-                <b>精品区</b>
-                <em class="u-secret">优质作品</em>
+                <b>Khu vực chất lượng cao</b>
+                <em class="u-secret">Tác phẩm chất lượng</em>
             </span>
         </el-tab-pane>
 
-        <!-- <el-tab-pane label="技能系数" name="skill">
+        <!-- <el-tab-pane label="Hệ số kỹ năng" name="skill">
             <span slot="label">
                 <i class="el-icon-key"></i>
-                <b>技能系数</b>
+                <b>Hệ số kỹ năng</b>
             </span>
         </el-tab-pane> -->
 
         <el-tab-pane label="技能/Buff数据库" name="raw">
             <span slot="label">
                 <i class="el-icon-reading"></i>
-                <b>技能大全</b>
-                <!-- <em class="u-ready">签约</em> -->
+                <b>Tổng hợp kỹ năng</b>
+                <!-- <em class="u-ready">Ký hợp đồng</em> -->
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="秘籍大全" name="recipe">
+        <el-tab-pane label="Tổng hợp bí kíp" name="recipe">
             <span slot="label">
                 <i class="el-icon-magic-stick"></i>
-                <b>秘籍大全</b>
+                <b>Tổng hợp bí kíp</b>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="技能合集" name="kungfu">
+        <el-tab-pane label="Tập hợp kỹ năng" name="kungfu">
             <span slot="label">
                 <i class="el-icon-notebook-1"></i>
-                <b>技能合集</b>
+                <b>Tập hợp kỹ năng</b>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="技改历史" name="changelog">
+        <el-tab-pane label="Lịch sử sửa đổi kỹ thuật" name="changelog">
             <span slot="label">
                 <i class="el-icon-news"></i>
-                <b>技改历史</b>
+                <b>Lịch sử sửa đổi kỹ thuật</b>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="急速阈值" name="haste">
+        <el-tab-pane label="Ngưỡng cấp tốc" name="haste">
             <span slot="label">
                 <i class="el-icon-stopwatch"></i>
-                <b>急速阈值</b>
+                <b>Ngưỡng cấp tốc</b>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="DPS计算器" name="dps">
+        <el-tab-pane label="Máy tính DPS" name="dps">
             <span slot="label">
                 <i class="el-icon-cpu"></i>
-                <b>DPS计算器</b>
+                <b>Máy tính DPS</b>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="门派天梯" name="ladder" v-if="client == 'std'">
+        <el-tab-pane label="Bảng xếp hạng môn phái" name="ladder" v-if="client == 'std'">
             <span slot="label">
                 <i class="el-icon-s-data"></i>
-                <b>门派天梯</b>
+                <b>Bảng xếp hạng môn phái</b>
             </span>
         </el-tab-pane>
 
-        <!-- <el-tab-pane label="作品小册" name="collection">
+        <!-- <el-tab-pane label="Bộ sưu tập tác phẩm" name="collection">
             <span slot="label">
                 <i class="el-icon-paperclip"></i>
-                <b>作品小册</b>
+                <b>Bộ sưu tập tác phẩm</b>
             </span>
         </el-tab-pane> -->
 
-        <el-tab-pane label="源码解析" name="lua" v-if="isSuperAuthor">
+        <el-tab-pane label="Phân tích mã nguồn" name="lua" v-if="isSuperAuthor">
             <span slot="label">
                 <i class="el-icon-full-screen"></i>
-                <b>源码分析</b>
-                <em class="u-ready">签约</em>
+                <b>Phân tích mã nguồn</b>
+                <em class="u-ready">Ký hợp đồng</em>
             </span>
         </el-tab-pane>
 
-        <!-- <el-tab-pane label="门派群组" name="group" v-if="client == 'std'">
+        <!-- <el-tab-pane label="Nhóm môn phái" name="group" v-if="client == 'std'">
             <span slot="label">
                 <i class="el-icon-headset"></i>
-                <b>门派群组</b>
+                <b>Nhóm môn phái</b>
             </span>
         </el-tab-pane> -->
 
-        <!-- <el-tab-pane label="背景故事" name="story">
+        <!-- <el-tab-pane label="Câu chuyện nền" name="story">
             <span slot="label">
                 <i class="el-icon-film"></i>
-                <b>背景故事</b>
+                <b>Câu chuyện nền</b>
             </span>
         </el-tab-pane> -->
     </el-tabs>

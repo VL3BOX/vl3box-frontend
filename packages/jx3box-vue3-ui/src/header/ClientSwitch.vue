@@ -25,13 +25,13 @@ export default {
             clientThink: false,
             clients: [
                 {
-                    name: "剑三",
+                    name: "Kiếm Tam",
                     client: "std",
                     from: "origin.jx3box.com",
                     to: "www.jx3box.com",
                 },
                 {
-                    name: "缘起",
+                    name: "Duyên khởi",
                     client: "origin",
                     to: "origin.jx3box.com",
                     from: "www.jx3box.com",

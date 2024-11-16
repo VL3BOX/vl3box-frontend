@@ -1,72 +1,72 @@
 <template>
     <el-tabs class="m-fb-tabs" v-model="view" @tab-click="changeView">
-        <el-tab-pane label="副本攻略" name="index">
+        <el-tab-pane label="Hướng dẫn phó bản" name="index">
             <span slot="label">
                 <i class="el-icon-collection"></i>
-                <b>副本攻略</b>
-                <em class="u-secret">开荒首发</em>
+                <b>Hướng dẫn phó bản</b>
+                <em class="u-secret">Khai phá đầu tiên</em>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="副本掉落" name="drop">
+        <el-tab-pane label="Vật phẩm rơi trong phó bản" name="drop">
             <span slot="label">
                 <i class="el-icon-present"></i>
-                <b>副本掉落</b>
+                <b>Vật phẩm rơi trong phó bản</b>
                 <!-- <em class="u-new">最新同步</em> -->
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="瑰石列表" name="gem">
+        <el-tab-pane label="Danh sách ngọc quý" name="gem">
             <span slot="label">
                 <i class="el-icon-cherry"></i>
-                <b>瑰石列表</b>
+                <b>Danh sách ngọc quý</b>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="副本成就" name="cj">
+        <el-tab-pane label="Thành tựu phó bản" name="cj">
             <span slot="label">
                 <i class="el-icon-medal"></i>
-                <b>副本成就</b>
+                <b>Thành tựu phó bản</b>
                 <!-- <em class="u-new">最新同步</em> -->
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="秘境传说" name="story">
+        <el-tab-pane label="Truyền thuyết bí cảnh" name="story">
             <span slot="label">
                 <i class="el-icon-film"></i>
-                <b>秘境传说</b>
+                <b>Truyền thuyết bí cảnh</b>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="首领数据" name="npc">
+        <el-tab-pane label="Dữ liệu thủ lĩnh" name="npc">
             <span slot="label">
                 <i class="el-icon-aim"></i>
-                <b>首领数据</b>
+                <b>Dữ liệu thủ lĩnh</b>
                 <!-- <em class="u-secret">重磅独家</em> -->
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="特殊机制" name="attr">
+        <el-tab-pane label="Cơ chế đặc biệt" name="attr">
             <span slot="label">
                 <i class="el-icon-help"></i>
-                <b>高阶技巧</b>
+                <b>Kỹ thuật cao cấp</b>
                 <!-- <em class="u-new">全新上线</em> -->
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="技能数据" name="skill" v-if="isSuperAuthor && client == 'std'">
+        <el-tab-pane label="Dữ liệu kỹ năng" name="skill" v-if="isSuperAuthor && client == 'std'">
             <span slot="label">
                 <i class="el-icon-key"></i>
-                <b>技能数据</b>
-                <em class="u-ready">签约</em>
+                <b>Dữ liệu kỹ năng</b>
+                <em class="u-ready">Ký kết</em>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="源码分析" name="lua" v-if="isEditor">
+        <el-tab-pane label="Phân tích mã nguồn" name="lua" v-if="isEditor">
             <span slot="label">
                 <i class="el-icon-full-screen"></i>
-                <b>源码分析</b>
-                <em class="u-ready">签约</em>
+                <b>Phân tích mã nguồn</b>
+                <em class="u-ready">Ký kết</em>
             </span>
         </el-tab-pane>
 

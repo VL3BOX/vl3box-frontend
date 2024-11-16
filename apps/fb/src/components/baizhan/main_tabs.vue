@@ -15,11 +15,11 @@
         <div class="u-map-info" v-if="activeTab === 'map'">
             <div class="u-map-title">
                 <img class="u-title-icon" src="@/assets/img/baizhan/tabs/map_active.svg" alt="" />
-                <span>{{ activeTab === "map" ? "地图" : "数据" }}信息</span>
+                <span>{{ activeTab === "map" ? "Bản đồ" : "Dữ liệu" }}Thông tin</span>
             </div>
-            <div class="u-map-update">更新时间：{{ update_time }}</div>
+            <div class="u-map-update">Cập nhật thời gian：{{ update_time }}</div>
             <div class="u-map-duration">
-                <span>持续时间：{{ duration.start }} ~ {{ duration.end }}</span>
+                <span>Thời gian duy trì：{{ duration.start }} ~ {{ duration.end }}</span>
                 <a
                     v-if="activeTab === 'map'"
                     class="u-download"
@@ -27,7 +27,7 @@
                     @click.prevent="toDownImg"
                 >
                     <img src="@/assets/img/baizhan/export.svg" svg-inline />
-                    <span>{{ downLoading ? "导出中..." : "导出图片" }}</span>
+                    <span>{{ downLoading ? "Đang xuất..." : "Xuất ảnh" }}</span>
                 </a>
             </div>
         </div>
@@ -47,19 +47,19 @@ export default {
         return {
             tabs: [
                 {
-                    label: "百战地图",
+                    label: "百战Bản đồ",
                     value: "map",
                     icon: require("@/assets/img/baizhan/tabs/map.svg"),
                     icon_active: require("@/assets/img/baizhan/tabs/map_active.svg"),
                 },
                 {
-                    label: "技能列表",
+                    label: "Danh sách kỹ năng",
                     value: "skill",
                     icon: require("@/assets/img/baizhan/tabs/skill.svg"),
                     icon_active: require("@/assets/img/baizhan/tabs/skill_active.svg"),
                 },
                 {
-                    label: "首领数据",
+                    label: "首领Dữ liệu",
                     value: "boss",
                     icon: require("@/assets/img/baizhan/tabs/boss.svg"),
                     icon_active: require("@/assets/img/baizhan/tabs/boss_active.svg"),

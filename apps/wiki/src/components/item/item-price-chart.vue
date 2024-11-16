@@ -23,7 +23,7 @@
         </el-row>
 
         <div v-show="!hidden" id="m-item-price-chart" />
-        <div v-show="!logs.length" style="text-align: center">🐖 暂无记录</div>
+        <div v-show="!logs.length" style="text-align: center">🐖 Chưa có ghi chép</div>
     </div>
 </template>
 

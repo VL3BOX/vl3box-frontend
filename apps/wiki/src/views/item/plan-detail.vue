@@ -2,7 +2,7 @@
     <div class="v-plan-view" v-loading="loading">
         <!-- 返回 & 收藏 -->
         <!-- <div class="m-plan-navigation">
-			<el-button class="u-goback" size="medium" icon="el-icon-arrow-left" @click="goBack" plain>返回列表</el-button>
+			<el-button class="u-goback" size="medium" icon="el-icon-arrow-left" @click="goBack" plain>Trở về danh sách</el-button>
 		</div> -->
         <!-- 内容展示 -->
         <WikiPanel class="m-plan-content" :wiki-post="plan" :showQR="false">
@@ -11,14 +11,14 @@
                 <i class="el-icon-tickets"></i>
                 <span class="u-plan-title"> {{ plan.title }} </span>
             </template>
-            <!-- 编辑 & 删除 & 收藏 -->
+            <!-- Chỉnh sửa & Xóa & 收藏 -->
             <template slot="head-actions">
                 <template v-if="isAuthor || isEditor">
                     <el-button type="primary" icon="el-icon-edit" size="mini" plain @click="editPlan(plan.id)"
-                        >编辑</el-button
+                        >Chỉnh sửa</el-button
                     >
                     <el-button type="info" icon="el-icon-delete" size="mini" plain @click="deletePlan(plan.id)"
-                        >删除</el-button
+                        >Xóa</el-button
                     >
                 </template>
                 <!-- <Fav post-type="item_plan" :post-id="plan.id" :post-title="plan && plan.title" /> -->
@@ -28,9 +28,9 @@
                 <!-- 内容备注 -->
                 <div class="m-description m-border">
                     <div class="u-title">
-                        <span>简介</span>
+                        <span>Giới thiệu</span>
                     </div>
-                    <div class="u-desc">{{ plan.description || "作者很懒什么也没写 😜" }}</div>
+                    <div class="u-desc">{{ plan.description || "Tác giả lười biếng không viết gì cả 😜" }}</div>
                     <span class="u-user">
                         <img
                             class="u-avatar"
@@ -38,10 +38,10 @@
                             :alt="getUserInfo(plan, 'display_name')"
                         />
                         <a class="u-name" :href="authorLink(plan.user_id)">{{
-                            getUserInfo(plan, "display_name") || "匿名"
+                            getUserInfo(plan, "display_name") || "Ẩn danh"
                         }}</a>
                         <span class="u-time"
-                            >最后更新于 <i class="el-icon-time"></i>{{ date_format(plan.updated) }}</span
+                            >Cập nhật lần cuối vào <i class="el-icon-time"></i>{{ date_format(plan.updated) }}</span
                         >
                     </span>
                 </div>
@@ -83,7 +83,7 @@
                                         :item="eq"
                                     />
                                 </div>
-                                <div v-else class="u-equip-null">- 暂无物品 -</div>
+                                <div v-else class="u-equip-null">- Chưa có vật phẩm -</div>
                             </div>
                         </div>
                     </div>
@@ -118,24 +118,24 @@ export default {
             default_avatar,
             equipList: [
                 [
-                    { title: "melee_weapon", label: "武器", AucGenre: 1, list: [] },
-                    { title: "range_weapon", label: "暗器", AucGenre: 2, list: [] },
+                    { title: "melee_weapon", label: "Vũ khí", AucGenre: 1, list: [] },
+                    { title: "range_weapon", label: "Ám khí", AucGenre: 2, list: [] },
                 ],
                 [
-                    { title: "helm", label: "帽子", AucGenre: 3, AucSubType: 2, list: [] },
-                    { title: "chest", label: "上衣", AucGenre: 3, AucSubType: 1, list: [] },
-                    { title: "waist", label: "腰带", AucGenre: 3, AucSubType: 3, list: [] },
+                    { title: "helm", label: "Mạo tử", AucGenre: 3, AucSubType: 2, list: [] },
+                    { title: "chest", label: "Thượng y", AucGenre: 3, AucSubType: 1, list: [] },
+                    { title: "waist", label: "Yêu đới", AucGenre: 3, AucSubType: 3, list: [] },
                 ],
                 [
-                    { title: "bangle", label: "护腕", AucGenre: 3, AucSubType: 6, list: [] },
-                    { title: "pants", label: "下装", AucGenre: 3, AucSubType: 4, list: [] },
-                    { title: "boots", label: "鞋子", AucGenre: 3, AucSubType: 5, list: [] },
+                    { title: "bangle", label: "Hộ oản", AucGenre: 3, AucSubType: 6, list: [] },
+                    { title: "pants", label: "Hạ trang", AucGenre: 3, AucSubType: 4, list: [] },
+                    { title: "boots", label: "Hài tử", AucGenre: 3, AucSubType: 5, list: [] },
                 ],
                 [
-                    { title: "amulet", label: "项链", AucGenre: 4, AucSubType: 1, list: [] },
-                    { title: "pendant", label: "腰坠", AucGenre: 4, AucSubType: 3, list: [] },
-                    { title: "ring_1", label: "戒指", AucGenre: 4, AucSubType: 2, list: [] },
-                    { title: "ring_2", label: "戒指", AucGenre: 4, AucSubType: 2, list: [] },
+                    { title: "amulet", label: "Hạng liên", AucGenre: 4, AucSubType: 1, list: [] },
+                    { title: "pendant", label: "Yêu trụy", AucGenre: 4, AucSubType: 3, list: [] },
+                    { title: "ring_1", label: "Giới chỉ", AucGenre: 4, AucSubType: 2, list: [] },
+                    { title: "ring_2", label: "Giới chỉ", AucGenre: 4, AucSubType: 2, list: [] },
                 ],
             ],
         };
@@ -175,7 +175,7 @@ export default {
             let _user = User.getInfo();
             if (_user.uid == user_id) this.isAuthor = true;
         },
-        // 返回列表
+        // Trở về danh sách
         goBack() {
             history.length ? this.$router.go(-1) : this.$router.push({ name: "plan_list" });
         },
@@ -278,19 +278,19 @@ export default {
             obj = this.equipItem(obj);
             this.plan.relation = obj;
         },
-        // 编辑清单
+        // Chỉnh sửa清单
         editPlan(plan_id) {
             this.$router.push({ name: "plan_edit", params: { plan_id } });
         },
-        // 删除清单
+        // Xóa清单
         deletePlan(plan_id) {
-            this.$confirm("确认是否删除该物品清单？", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm("确认是否Xóa该物品清单？", "Nhắc nhở", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy bỏ",
                 type: "warning",
             }).then(() => {
                 delItemPlan(plan_id).then((res) => {
-                    this.$message.success("删除成功");
+                    this.$message.success("Xóa成功");
                     bus.emit("plan_list_refresh");
                     this.$router.push({ name: "plan_list" });
                 });

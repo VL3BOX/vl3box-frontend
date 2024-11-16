@@ -26,7 +26,7 @@ export default {
     },
     computed: {
         favContent() {
-            return this.favorite ? "已收藏" : "收藏";
+            return this.favorite ? "Đã được yêu thích" : "Yêu thích";
         },
         starIcon() {
             return this.isOld ? require("../../assets/img/widget/star.svg") : __cdn + "design/vector/icon/collect.svg"

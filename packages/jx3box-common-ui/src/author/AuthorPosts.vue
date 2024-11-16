@@ -3,7 +3,7 @@
         <div class="u-label">
             <!-- <i class="el-icon-notebook-2"></i> -->
             <img svg-inline src="../../assets/img/leftsidebar/post.svg" />
-            <span>最新作品</span>
+            <span>Tác phẩm mới nhất</span>
             <a :href="uid | authorLink" class="u-more" target="_blank"
                 ><img svg-inline src="../../assets/img/leftsidebar/more.svg"
             /></a>
@@ -14,7 +14,7 @@
                 <a class="u-item" :href="url(item.ID, item.post_type)" target="_blank">
                     <span>
                         <img svg-inline src="../../assets/img/leftsidebar/arrow.svg" class="u-icon" />
-                        {{ item.post_title || item.post_type + "/无标题" }}
+                        {{ item.post_title || item.post_type + "/Không có tiêu đề" }}
                     </span>
                 </a>
             </li>

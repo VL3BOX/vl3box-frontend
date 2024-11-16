@@ -4,19 +4,19 @@
             <Avatar class="u-avatar" :uid="uid" :url="data.user_avatar" size="s" :frame="data.user_avatar_frame" />
             <div class="u-info">
                 <div class="u-name">
-                    <el-tooltip class="item" effect="dark" content="签约作者" placement="top" v-if="isSuperAuthor">
+                    <el-tooltip class="item" effect="dark" content="Tác giả ký hợp đồng" placement="top" v-if="isSuperAuthor">
                         <a class="u-superauthor" href="/about/superauthor" target="_blank">
                             <img :src="super_author_icon" alt="superauthor" />
                         </a>
                     </el-tooltip>
                     <a class="u-displayname" :href="authorLink(uid)" target="_blank">
-                        {{ data.display_name || "未知" }}
+                        {{ data.display_name || "Không xác định" }}
                     </a>
                 </div>
                 <div class="u-extend">
                     <el-tooltip class="item" effect="dark" placement="top">
                         <template #content>
-                            <span class="u-tips">经验值：{{ data.experience }}</span>
+                            <span class="u-tips">Kinh nghiệm:{{ data.experience }}</span>
                         </template>
                         <a
                             class="u-level"
@@ -75,7 +75,7 @@ export default {
             return this.data?.is_pro ? "PRO" : "PRE";
         },
         vipTypeTitle: function () {
-            return this.data?.is_pro ? "专业版会员" : "高级版会员";
+            return this.data?.is_pro ? "Thành viên chuyên nghiệp" : "Thành viên cao cấp";
         },
         isVip: function () {
             return this.data?.is_pro || this.data?.is_pre;

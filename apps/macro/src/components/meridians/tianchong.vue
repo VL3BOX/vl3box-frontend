@@ -1,6 +1,6 @@
 <template>
     <div class="jinmai tianchong" style>
-        <h3>带脉</h3>
+        <h3>Đới mạch</h3>
         <div v-for="(item, index) in jingmai" :key="index" :class="'ap ap' + item.id">
             <em :class="'level' + item.nowLevel"></em>
             <a
@@ -24,11 +24,11 @@ export default {
     data() {
         return {
             jingmai: [
-                { name: "带脉·天冲", id: 126, lnLevel: 3 },
-                { name: "带脉·目窗", id: 120, lnLevel: 2 },
-                { name: "带脉·承灵", id: 128, lnLevel: 3 },
-                { name: "带脉·光明", id: 153, lnLevel: 1 },
-                { name: "带脉·悬钟", id: 155, lnLevel: 0 },
+                { name: "Đới mạch·天冲", id: 126, lnLevel: 3 },
+                { name: "Đới mạch·目窗", id: 120, lnLevel: 2 },
+                { name: "Đới mạch·承灵", id: 128, lnLevel: 3 },
+                { name: "Đới mạch·光明", id: 153, lnLevel: 1 },
+                { name: "Đới mạch·悬钟", id: 155, lnLevel: 0 },
             ],
             mouseData: {},
             hover: "",

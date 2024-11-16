@@ -3,8 +3,8 @@
         <Avatar class="m-author-avatar" :uid="uid" :url="avatar" size="l" :frame="avatar_frame" />
         <div class="m-author-info">
             <span class="u-name">
-                {{ data.display_name || "匿名" }}
-                <el-tooltip content="签约作者" v-if="isSuperAuthor" placement="top">
+                {{ data.display_name || "Ẩn danh" }}
+                <el-tooltip content="Tác giả kí hợp đồng" v-if="isSuperAuthor" placement="top">
                     <span class="u-superauthor">
                         <img :src="super_author_icon" alt="superauthor" />
                     </span>
@@ -12,7 +12,7 @@
             </span>
             <div>
                 <span class="u-uid">UID : {{ data.ID || 0 }}</span>
-                <el-tooltip :content="`当前经验 ${data.experience || 0}`" placement="top">
+                <el-tooltip :content="`Kinh nghiệm hiện tại ${data.experience || 0}`" placement="top">
                     <span class="u-level" :class="'lv-' + level" :style="{backgroundColor:showLevelColor(level)}">Lv.{{ level }}</span>
                 </el-tooltip>
                 <el-tooltip :content="vipTypeTitle" v-if="isPRO || isVIP" placement="top">
@@ -25,7 +25,7 @@
                 <i class="u-icon u-icon-join">
                     <img svg-inline src="../assets/img/join.svg" />
                 </i>
-                <span>加入于 {{ data.user_registered | time }}</span>
+                <span>Gia nhập vào {{ data.user_registered | time }}</span>
             </span>
             <div class="u-medals" v-if="medals && medals.length">
                 <medal :medals="medals" :showIcon="showMedalIcon"></medal>
@@ -62,9 +62,9 @@
                     </el-col>
                     <el-col :span="6">
                         <div>
-                            <span v-if="data.tuilan_id" class="u-tuilan" title="推栏ID">
+                            <span v-if="data.tuilan_id" class="u-tuilan" title="ID Khuôn khổ">
                                 <img src="../assets/img/tuilan.png" />
-                                推栏ID：{{ data.tuilan_id }}
+                                ID Khuôn khổ：{{ data.tuilan_id }}
                             </span>
                         </div>
                     </el-col>
@@ -72,7 +72,7 @@
                         <div>
                             <a v-if="data.tv_type && data.tv_id" class="u-tv" :href="tv_link" target="_blank">
                                 <img :src="tv_img" />
-                                直播间：{{ data.tv_id }}
+                                Phòng trực tiếp:{{ data.tv_id }}
                             </a>
                         </div>
                     </el-col>
@@ -151,7 +151,7 @@ export default {
             return this.isPRO ? "PRO" : "PRE";
         },
         vipTypeTitle: function () {
-            return this.isPRO ? "专业版会员用户" : "高级版会员用户";
+            return this.isPRO ? "Người dùng chuyên nghiệp" : "Người dùng cao cấp";
         },
         super_author_icon: function () {
             return __imgPath + "image/user/" + "superauthor.svg";

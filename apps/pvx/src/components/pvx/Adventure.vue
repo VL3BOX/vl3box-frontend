@@ -2,7 +2,7 @@
     <div class="c-pvx-block m-adventures">
         <div class="u-header">
             <div class="u-title">{{ title }}</div>
-            <a class="u-more" href="/adventure">查看更多</a>
+            <a class="u-more" href="/adventure">Xem thêm</a>
         </div>
         <div class="u-tabs">
             <div
@@ -48,16 +48,16 @@ export default {
             tabActive: "perfect",
             tabs: [
                 {
-                    label: "绝世奇遇",
+                    label: "Kỳ ngộ tuyệt thế",
                     value: "perfect",
                 },
 
                 {
-                    label: "普通奇遇",
+                    label: "Kỳ ngộ thông thường",
                     value: "normal",
                 },
                 {
-                    label: "宠物奇遇",
+                    label: "Kỳ ngộ thú cưng",
                     value: "pet",
                 },
             ],

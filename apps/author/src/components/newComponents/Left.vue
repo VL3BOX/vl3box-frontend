@@ -2,7 +2,7 @@
     <div class="m-author-info">
         <div class="m-top">
             <div class="u-title">
-                TA的作品
+                Tác phẩm của TA
             </div>
             <el-tabs class="m-tabs" v-model="active" stretch>
                 <el-tab-pane v-for="item in types" :key="item.value" :label="item.label" :name="item.value" :lazy="true">
@@ -48,27 +48,27 @@ export default {
             active: "Post",
             types: [
                 {
-                    label: "作品",
+                    label: "Tác phẩm",
                     value: "Post",
                     component: Post,
                 },
                 {
-                    label: "百科",
+                    label: "Bách khoa",
                     value: "Wiki",
                     component: Wiki,
                 },
                 {
-                    label: "数据",
+                    label: "Dữ liệu",
                     value: "Data",
                     component: Data,
                 },
                 {
-                    label: "休闲",
+                    label: "Giải trí",
                     value: "Fallow",
                     component: Fallow,
                 },
                 {
-                    label: "其他",
+                    label: "Khác",
                     value: "Other",
                     component: Other,
                 }

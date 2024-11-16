@@ -1,7 +1,7 @@
 <template>
     <div ref="bookSingleWrap" class="book-single-wrapper m-single-wrapper">
         <div class="back-wrap">
-            <el-button @click="goBack">返回列表</el-button>
+            <el-button @click="goBack">Trở về</el-button>
         </div>
         <div v-if="book" class="book-single-content" v-loading="loading">
             <div class="book-header">
@@ -12,23 +12,23 @@
                 <div class="book-info">
                     <p class="u-subtitle">
                         <img svg-inline src="@/assets/img/book/book-info.svg" />
-                        <span>书籍信息</span>
+                        <span>Thông tin sách</span>
                     </p>
                     <div class="u-book-info">
                         <div v-if="!['其它', '碑铭'].includes(getOrigin(book))" class="u-item book-origin">
-                            来源：
+                            Nguồn:
                             <el-tooltip placement="top" popper-class="book-notice-tooltip">
                                 <div slot="content">
-                                    <template v-if="getOrigin(book).indexOf('秘境') > -1">
-                                        <div class="u-detail-item">秘境</div>
+                                    <template v-if="getOrigin(book).indexOf('Bí cảnh') > -1">
+                                        <div class="u-detail-item">Bí cảnh</div>
                                         <div class="book-fb" v-html="getBossOrigin(book)"></div>
                                     </template>
-                                    <template v-if="getOrigin(book).indexOf('商店') > -1">
-                                        <div class="u-detail-item">商店</div>
+                                    <template v-if="getOrigin(book).indexOf('Cửa hàng') > -1">
+                                        <div class="u-detail-item">Cửa hàng</div>
                                         <div class="book-shop" v-html="getShopOrigin(book)"></div>
                                     </template>
-                                    <template v-if="getOrigin(book).indexOf('任务') > -1">
-                                        <div class="u-detail-item">任务</div>
+                                    <template v-if="getOrigin(book).indexOf('Nhiệm vụ') > -1">
+                                        <div class="u-detail-item">Nhiệm vụ</div>
                                         <div class="book-quest">
                                             <div
                                                 class="quest-item"
@@ -46,36 +46,36 @@
                             </el-tooltip>
                         </div>
                         <div v-else class="u-info-item">
-                            来源：<span v-if="getOrigin(book) === '碑铭'" class="book-special"
+                            Nguồn:<span v-if="getOrigin(book) === '碑铭'" class="book-special"
                                 >{{ getOrigin(book) }}
                                 <a
                                     class="look-site"
                                     href="javascript:;"
                                     v-if="bookMapSite.length"
                                     @click="dialogVisible = true"
-                                    >查看位置</a
+                                    >Xem vị trí</a
                                 >
                             </span>
                             <!-- 其它 -->
                             <span v-else>{{ getOrigin(book) }}</span>
                         </div>
                         <div class="u-info-item">
-                            所属套书：{{ "【" + getProfessionType(book.ExtendProfessionID1) + "】" + book.BookName }}
+                            Bộ sách thuộc:{{ "【" + getProfessionType(book.ExtendProfessionID1) + "】" + book.BookName }}
                         </div>
-                        <div class="u-info-item">阅读等级：{{ book.RequireLevel }}</div>
+                        <div class="u-info-item">Cấp độ đọc:{{ book.RequireLevel }}</div>
                     </div>
                     <template v-if="book.copy && book.copy.ID">
                         <p class="u-subtitle">
                             <img svg-inline src="@/assets/img/book/request.svg" />
-                            <span>抄录要求</span>
+                            <span>Yêu cầu sao chép</span>
                         </p>
                         <div class="u-book-info">
                             <div class="u-info-item">
-                                <span>角色等级：</span>
+                                <span>Cấp độ nhân vật:</span>
                                 <span>{{ book.copy.RequirePlayerLevel }}</span>
                             </div>
                             <div class="u-info-item">
-                                <span>阅读等级：</span>
+                                <span>Cấp độ đọc:</span>
                                 <span>{{ book.copy.RequireLevel }}</span>
                             </div>
                             <div class="u-info-item">
@@ -83,11 +83,11 @@
                                 <span>{{ book.copy.RequireLevelExt }}</span>
                             </div>
                             <div class="u-info-item">
-                                <span>精力消耗：</span>
+                                <span>Tiêu hao tinh lực:</span>
                                 <span>{{ book.copy.CostVigor }}</span>
                             </div>
                             <div v-if="book.copyList.length" class="u-info-item">
-                                <span>所需材料：</span>
+                                <span>Nguyên liệu cần thiết:</span>
                                 <item-icon
                                     v-for="meterial in book.copyList"
                                     :key="meterial.item_id"
@@ -121,21 +121,21 @@
                         <div v-if="arrowShow" class="buttons" :class="isVertical ? 'vertical' : 'row'">
                             <div class="left" :class="noMore && 'disabled'" @click="toMore">
                                 <i :class="isVertical ? 'el-icon-arrow-left' : 'el-icon-arrow-down'"></i>
-                                <!-- <span>继续</span> -->
+                                <!-- <span>Tiếp tục</span> -->
                             </div>
                             <div class="right" :class="noBack && 'disabled'" @click="toBack">
-                                <!-- <span>返回</span> -->
+                                <!-- <span>Trở về</span> -->
                                 <i :class="isVertical ? 'el-icon-arrow-right' : 'el-icon-arrow-up'"></i>
                             </div>
                         </div>
-                        <div class="switch" @click="toSwitch">{{ isVertical ? "古风" : "现代" }}</div>
+                        <div class="switch" @click="toSwitch">{{ isVertical ? "Cổ phong" : "Hiện đại" }}</div>
                     </template>
                 </div>
             </div>
             <!-- 套书列表 -->
             <div v-if="bookList.length" class="m-book-list" v-loading="listLoading">
                 <div class="u-title">
-                    <span class="title">套书·{{ book.BookName }}</span>
+                    <span class="title">Bộ sách·{{ book.BookName }}</span>
                     <a
                         v-if="book.AchievementID"
                         class="book-achievement"
@@ -144,7 +144,7 @@
                     >
                         <!-- [{{ book.achievement ? book.achievement.Name : "" }}] -->
                         <i class="el-icon-warning"></i>
-                        <span>该套书有成就</span>
+                        <span>Bộ sách này có thành tựu</span>
                     </a>
                 </div>
                 <div class="book-list-wrapper">
@@ -153,10 +153,10 @@
                     </div>
                 </div>
             </div>
-            <!-- 碑铭信息 -->
+            <!-- Thông tin bia sách -->
             <!-- <div v-if="bookMapSite.length" class="m-book-map">
                 <div class="u-title">
-                    <span class="u-txt">碑铭信息</span>
+                    <span class="u-txt">Thông tin bia sách</span>
                 </div>
                 <jx3box-map
                     class="u-content"
@@ -165,11 +165,11 @@
                 ></jx3box-map>
             </div> -->
         </div>
-        <!-- 包含攻略、评论、历史版本、点赞等 书籍，宠物等物品为item, 声望成就等为achievement -->
-        <pvx-user :id="id" name="书籍" type="item"></pvx-user>
-        <!-- 碑铭信息 -->
+        <!-- 包含攻略、评论、历史版本、点赞等 Sách，宠物等物品为item, 声望成就等为achievement -->
+        <pvx-user :id="id" name="Sách" type="item"></pvx-user>
+        <!-- Thông tin bia sách -->
         <el-dialog
-            title="碑铭位置"
+            title="Vị trí bia sách"
             :visible.sync="dialogVisible"
             :width="isPhone() ? '90%' : '38%'"
             center
@@ -216,7 +216,7 @@ export default {
         return {
             compatible: false,
             is_empty: true,
-            // 是否古风
+            // 是否Cổ phong
             isVertical: true,
             arrowShow: false,
             book: {
@@ -233,7 +233,7 @@ export default {
             dialogVisible: false,
             // 是否还有更多
             noMore: false,
-            // 是否还可以返回
+            // 是否还可以Trở về
             noBack: true,
         };
     },
@@ -248,7 +248,7 @@ export default {
             const isVertical = this.isVertical;
             const bookWrap = this.$refs.bookWrap;
             if (isVertical) {
-                // 当前为古风
+                // 当前为Cổ phong
                 const sW = bookWrap.scrollWidth;
                 const sLeft = bookWrap.scrollLeft;
                 const cW = bookWrap.clientWidth;
@@ -266,7 +266,7 @@ export default {
                     this.noBack = false;
                 }
             } else {
-                // 当前为现代
+                // 当前为Hiện đại
                 const sH = bookWrap.scrollHeight;
                 const sTop = bookWrap.scrollTop;
                 const cH = bookWrap.clientHeight;
@@ -289,7 +289,7 @@ export default {
             const isVertical = this.isVertical;
             const bookWrap = this.$refs.bookWrap;
             if (isVertical) {
-                // 当前为古风
+                // 当前为Cổ phong
                 const sLeft = bookWrap.scrollLeft;
                 const cW = bookWrap.clientWidth;
                 const step = Math.ceil(cW / 4);
@@ -306,7 +306,7 @@ export default {
                     this.noMore = false;
                 }
             } else {
-                // 当前为现代
+                // 当前为Hiện đại
                 const sTop = bookWrap.scrollTop;
                 const cH = bookWrap.clientHeight;
                 const step = Math.ceil(cH / 2);
@@ -392,13 +392,13 @@ export default {
                 orgin = orgin + (orgin ? "/" : "") + (this.bookMapInfo[tempId] ? "碑铭" : "其它");
             }
             if (ShopNames) {
-                orgin = orgin + (orgin ? "/" : "") + "商店";
+                orgin = orgin + (orgin ? "/" : "") + "Cửa hàng";
             }
             if (drops.length) {
-                orgin = orgin + (orgin ? "/" : "") + "秘境";
+                orgin = orgin + (orgin ? "/" : "") + "Bí cảnh";
             }
             if (quests) {
-                orgin = orgin + (orgin ? "/" : "") + "任务";
+                orgin = orgin + (orgin ? "/" : "") + "Nhiệm vụ";
             }
             if (!orgin) {
                 orgin = "其它";
@@ -448,7 +448,7 @@ export default {
                         ExtendProfessionID1: data.ExtendProfessionID1,
                     };
                     this.$store.dispatch("setRecentReadList", recentBook);
-                    // 保存当前书籍类型
+                    // 保存当前Sách类型
                     this.$store.dispatch("setCurrentBookType", data.ExtendProfessionID1);
                     // 获取套书列表
                     this.getBookList(data.BookName);

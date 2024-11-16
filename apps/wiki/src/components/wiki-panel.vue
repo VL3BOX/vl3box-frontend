@@ -21,9 +21,9 @@
             <slot name="body-before"></slot>
             <slot name="meta">
                 <div class="m-wiki-metas" v-if="wikiPost && wikiPost.post">
-                    <!-- 参与贡献 -->
+                    <!-- Tham gia đóng góp -->
                     <div class="u-meta" v-if="wikiPost.users && wikiPost.users.length">
-                        <em class="u-label">参与贡献</em>
+                        <em class="u-label">Tham gia đóng góp</em>
                         <a
                             class="u-value u-creator"
                             v-for="(user, key) in wikiPost.users"
@@ -34,21 +34,21 @@
                             <img :src="thumbnail_url(user.avatar)" :alt="user.nickname" :title="user.nickname" />
                         </a>
                     </div>
-                    <!-- 综合难度 -->
+                    <!-- Độ khó tổng hợp -->
                     <div class="u-meta" v-if="wikiPost.post && wikiPost.post.level">
-                        <em class="u-label">综合难度</em>
+                        <em class="u-label">Độ khó tổng hợp</em>
                         <span class="u-value">
                             <i class="el-icon-star-on" v-for="i in wikiPost.post.level" :key="i"></i>
                         </span>
                     </div>
-                    <!-- 热度 -->
+                    <!-- Độ hot -->
                     <div class="u-meta" v-if="stat">
-                        <em class="u-label">热度</em>
+                        <em class="u-label">Độ hot</em>
                         <span class="u-value" v-text="stat.views"></span>
                     </div>
-                    <!-- 更新时间 -->
+                    <!-- Thời gian cập nhật -->
                     <div class="u-meta" v-if="wikiPost.post && wikiPost.post.updated">
-                        <em class="u-label">更新时间</em>
+                        <em class="u-label">Thời gian cập nhật</em>
                         <span class="u-value" v-text="ts2str(wikiPost.post.updated)"></span>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ export default {
             immediate: true,
             handler() {
                 if (!this.wikiPost) return;
-                // 获取热度信息
+                // 获取Độ hot信息
                 if (this.wikiPost.type && this.wikiPost.source_id) {
                     let type = this.wikiPost.type;
                     if (type === "achievement") type = "cj";

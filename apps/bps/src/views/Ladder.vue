@@ -4,10 +4,10 @@
             <div class="m-ladder-header">
                 <h3 class="m-ladder-title">
                     <span class="u-title">
-                        <img class="u-icon" svg-inline src="../assets/img/side/rank.svg" /> 门派天梯榜
+                        <img class="u-icon" svg-inline src="../assets/img/side/rank.svg" /> Bảng xếp hạng môn phái
                         <span class="u-dot">·</span>
                     </span>
-                    <el-select v-model="zlp" placeholder="请选择">
+                    <el-select v-model="zlp" placeholder="Vui lòng chọn">
                         <el-option
                             v-for="item in zlps"
                             :key="item.key"
@@ -19,19 +19,19 @@
                 <div class="m-ladder-desc" v-html="description"></div>
                 <div class="m-ladder-filter">
                     <el-radio-group class="u-filter-rank" v-model="filter" size="medium">
-                        <el-radio-button label="全部"></el-radio-button>
-                        <el-radio-button label="只显示最低"></el-radio-button>
-                        <el-radio-button label="只显示最高"></el-radio-button>
+                        <el-radio-button label="Tất cả"></el-radio-button>
+                        <el-radio-button label="Chỉ hiển thị mức thấp nhất"></el-radio-button>
+                        <el-radio-button label="Chỉ hiển thị mức cao nhất"></el-radio-button>
                     </el-radio-group>
-                    <el-select class="u-filter-school" v-model="school" placeholder="只看门派">
+                    <el-select class="u-filter-school" v-model="school" placeholder="Chỉ xem môn phái">
                         <el-option
                             v-for="(school_name, school_id) in schoolmap"
                             :key="school_id"
-                            :label="~~school_id ? school_name : '全部'"
+                            :label="~~school_id ? school_name : 'Tất cả'"
                             :value="school_id"
                         >
                             <img :src="showSchoolIcon(school_id)" class="u-school-icon" />
-                            <span class="u-school-name">{{ ~~school_id ? school_name : "全部" }}</span>
+                            <span class="u-school-name">{{ ~~school_id ? school_name : "Tất cả" }}</span>
                             <!-- <span class="u-school-name">{{school_name}}</span> -->
                         </el-option>
                     </el-select>
@@ -142,7 +142,7 @@ export default {
             data: [],
 
             // 过滤
-            filter: "全部",
+            filter: "Tất cả",
             school: "",
             schoolmap,
 
@@ -193,9 +193,9 @@ export default {
         isVisible: function (item) {
             // rank可视过滤
             let filter_visible = true;
-            if (this.filter == "只显示最低") {
+            if (this.filter == "Chỉ hiển thị mức thấp nhất") {
                 filter_visible = !~~item.icon;
-            } else if (this.filter == "只显示最高") {
+            } else if (this.filter == "Chỉ hiển thị mức cao nhất") {
                 filter_visible = item.icon == 4;
             }
 

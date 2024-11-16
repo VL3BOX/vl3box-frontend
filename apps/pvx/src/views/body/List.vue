@@ -26,7 +26,7 @@
                         <div>{{ item.label + "体型" }}</div>
                     </template>
                     <template v-slot:action>
-                        <div @click="setActive(item.value)">查看全部</div>
+                        <div @click="setActive(item.value)">Xem tất cả</div>
                     </template>
                     <template v-slot="{ item }">
                         <bodyItem :key="item.id" :item="item" :reporter="{ aggregate: listId(list) }" />
@@ -53,7 +53,7 @@
                 @click="appendPage"
                 :loading="loading"
                 icon="el-icon-arrow-down"
-                >加载更多</el-button
+                >Xem thêm</el-button
             >
             <el-pagination
                 class="m-archive-pages"
@@ -129,8 +129,8 @@ export default {
             return pages > 1 && this.page < pages;
         },
         alertTitle: function () {
-            if (this.title) return "没找到对应的体型，请重新选择条件或关键词搜索";
-            return "没有找到相关的体型";
+            if (this.title) return "Không tìm thấy hình thể tương ứng, vui lòng chọn lại điều kiện hoặc tìm kiếm bằng từ khóa khác";
+            return "Không tìm thấy hình thể liên quan";
         },
         subList() {
             if (!this.active) return null;

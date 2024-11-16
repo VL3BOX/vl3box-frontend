@@ -9,7 +9,7 @@
             @cell-mouse-enter="onMouse"
             @row-click="onClick"
         >
-            <el-table-column label="技能" min-width="150">
+            <el-table-column label="Kỹ năng" min-width="150">
                 <template #default="{ row: skill }">
                     <div class="u-skill-cell">
                         <!--  <div class="u-skill-img" :class="`u-skill-icon__${skill.nColor}`">
@@ -20,24 +20,24 @@
                     </div>
                 </template>
             </el-table-column>
-            <el-table-column v-if="!isIpad()" prop="szBossName" label="首领" sortable min-width="150">
+            <el-table-column v-if="!isIpad()" prop="szBossName" label="Thủ lĩnh" sortable min-width="150">
                 <template #default="{ row }">
                     {{ row.szBossName || "-" }}
                 </template>
             </el-table-column>
-            <el-table-column v-if="!isIpad()" prop="nCost" label="占用" sortable min-width="150">
+            <el-table-column v-if="!isIpad()" prop="nCost" label="Chiếm dụng" sortable min-width="150">
                 <template #default="{ row: skill }">
                     <div class="u-points">
                         <img v-for="point in skill.nCost" :key="point" :src="`${__imgRoot}baizhan_6.png`" />
                     </div>
                 </template>
             </el-table-column>
-            <el-table-column v-if="!isIpad()" prop="nColor" label="破绽" sortable min-width="150">
+            <el-table-column v-if="!isIpad()" prop="nColor" label="Sơ hở" sortable min-width="150">
                 <template #default="{ row }">
                     {{ getColor(row.nColor) }}
                 </template>
             </el-table-column>
-            <el-table-column prop="szType" label="效果" min-width="150">
+            <el-table-column prop="szType" label="Hiệu quả" min-width="150">
                 <template #default="{ row }">
                     <div class="u-types">
                         <div class="u-type" v-for="item in getType(row.szType)" :key="item" v-html="item"></div>
@@ -46,7 +46,7 @@
             </el-table-column>
             <el-table-column v-if="!isNoteBook()" min-width="150">
                 <template #default="{ row }">
-                    <div class="u-detail-btn" @click="toDetail(row.dwInSkillID)">详细数据</div>
+                    <div class="u-detail-btn" @click="toDetail(row.dwInSkillID)">Dữ liệu chi tiết</div>
                 </template>
             </el-table-column>
         </el-table>
@@ -134,7 +134,7 @@ export default {
                 : [];
             const len = arr.length;
             if (len > 2) {
-                return [arr[0], `其他 <b>${arr.length - 1}</b> 个效果`];
+                return [arr[0], `其他 <b>${arr.length - 1}</b> 个Hiệu quả`];
             }
             return arr;
         },

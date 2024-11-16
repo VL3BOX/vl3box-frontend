@@ -2,9 +2,9 @@
     <div class="m-single-side">
         <PostTopic v-if="id" type="macro" :id="~~id" />
         <div class="m-single-macroindex">
-            <!-- 云端宏 -->
+            <!-- Macro đám mây -->
             <h2 class="m-cloud-name">
-                云端宏
+                Macro đám mây
                 <a class="u-help" href="/tool/18152" target="_blank"> <i class="el-icon-question"></i>如何使用? </a>
             </h2>
             <div class="m-single-meta" v-if="data.length">
@@ -53,7 +53,7 @@ export default {
             return this.$store.state.post?.post_meta?.data || [];
         },
         subtype: function() {
-            return this.$store.state.post?.post_subtype || "通用";
+            return this.$store.state.post?.post_subtype || "Chung";
         },
         author : function (){
             return this.$store.state.post?.author_info?.display_name || this.$store.state.post?.author

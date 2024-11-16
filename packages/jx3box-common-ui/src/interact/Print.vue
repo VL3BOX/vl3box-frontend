@@ -1,7 +1,7 @@
 <template>
     <div class="w-print" @click="doPrint">
         <i class="u-icon el-icon-printer"></i>
-        <span class="u-text">打印 | 保存PDF</span>
+        <span class="u-text">In | Lưu PDF|In | Lưu PDF</span>
     </div>
 </template>
 
@@ -45,8 +45,8 @@ export default {
                     window.print();
                 } else {
                     this.$notify.error({
-                        title: "错误",
-                        message: "请先阅读完全文以加载所有图片",
+                        title: "Lỗi",
+                        message: "Vui lòng đọc hết nội dung để tải tất cả hình ảnh",
                     });
                     // window.scrollTo(0, document.body.clientHeight);
                 }

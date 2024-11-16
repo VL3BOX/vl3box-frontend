@@ -1,8 +1,8 @@
 <template>
     <div class="m-team-act-mini">
         <h3 class="m-act-title">
-            <span class="u-title"> <img class="u-icon" svg-inline :src="getAppIcon('team')" /> 团队招募 </span>
-            <a class="u-more" href="/team" target="_blank">查看更多<i class="el-icon-d-arrow-right"></i></a>
+            <span class="u-title"> <img class="u-icon" svg-inline :src="getAppIcon('team')" /> Tuyển thành viên đội </span>
+            <a class="u-more" href="/team" target="_blank">Xem thêm<i class="el-icon-d-arrow-right"></i></a>
         </h3>
         <!-- <el-radio-group v-model="tab" size="small" class="m-tab" plain>
             <el-radio-button label="团队"></el-radio-button>

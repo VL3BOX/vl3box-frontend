@@ -4,7 +4,7 @@
             <img class="u-pic" svg-inline src="../assets/img/logo.svg" />
         </a>
         <hr />
-        <p>搜索中心</p>
+        <p>Trung tâm tìm kiếm</p>
     </header>
 </template>
 

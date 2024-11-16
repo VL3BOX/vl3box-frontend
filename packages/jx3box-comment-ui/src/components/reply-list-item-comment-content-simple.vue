@@ -2,7 +2,7 @@
     <div class="u-reply">
         <div class="u-reply-content">
             <span class="u-reply-label" v-if="replyForUserId != 0">
-                回复
+                Trả lời
                 <el-link type="primary" target="_blank" :href="userHref"
                     >@{{ replyForUsername }}</el-link
                 >
@@ -32,7 +32,7 @@
                     class="u-up"
                     src="../assets/img/heart_1.svg"
                     alt=""
-                />点赞<span class="u-like-count">{{
+                />Thích<span class="u-like-count">{{
                     likesFormat(hasLikeCount)
                 }}</span></el-button
             >
@@ -46,7 +46,7 @@
                     class="u-up"
                     src="../assets/img/heart_2.svg"
                     alt=""
-                />已赞<span class="u-like-count">{{
+                />Đã thích<span class="u-like-count">{{
                     likesFormat(hasLikeCount)
                 }}</span></el-button
             >
@@ -57,7 +57,7 @@
                 icon="el-icon-chat-line-round"
                 size="mini"
                 @click="showReplyForReplyInput()"
-                >回复</el-button
+                >Trả lời</el-button
             >
             <el-button
                 class="u-admin"
@@ -66,7 +66,7 @@
                 icon="el-icon-delete"
                 size="mini"
                 @click="deleteComment()"
-                >删除</el-button
+                >Xóa</el-button
             >
             <el-button
                 class="u-admin"
@@ -75,9 +75,9 @@
                 icon="el-icon-attract"
                 v-if="canHide"
                 @click="hideComment()"
-                title="拉入黑洞后，仅评论者自己独自可见"
+                title="Sau khi đưa vào hố đen, chỉ có người bình luận mới nhìn thấy"
             >
-                黑洞</el-button
+                Hố đen</el-button
             >
             <time class="u-date">
                 <i class="el-icon-time"></i>
@@ -103,8 +103,8 @@ export default {
         "canDelete",
         "canHide",
         "canReply",
-        "isLike", // 是否已点赞
-        "likes", // 点赞数
+        "isLike", // 是否已Thích
+        "likes", // Thích数
         "userHref",
         "replyForUsername",
         "replyForUserId",
@@ -160,9 +160,9 @@ export default {
             this.$emit("setLikeComment", setLike);
         },
         deleteComment() {
-            this.$confirm("确定删除该评论吗？", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm("Đồng ýXóa该评论吗？", "Nhắc nhở", {
+                confirmButtonText: "Đồng ý",
+                cancelButtonText: "Hủy",
                 type: "warning",
             })
                 .then(() => {
@@ -171,9 +171,9 @@ export default {
                 .catch(() => {});
         },
         hideComment() {
-            this.$confirm("确定隐藏该评论吗？", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm("Bạn có chắc chắn muốn ẩn bình luận này không?", "Nhắc nhở", {
+                confirmButtonText: "Đồng ý",
+                cancelButtonText: "Hủy",
                 type: "warning",
             })
                 .then(() => {

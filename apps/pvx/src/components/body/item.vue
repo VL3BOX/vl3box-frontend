@@ -18,17 +18,17 @@
                 </div>
             </el-image>
             <div class="m-mark-left">
-                <i class="u-mark u-mark--star" v-if="!!item.star">编辑推荐</i>
-                <i class="u-mark u-mark--new" v-if="!!item.is_unlimited">可新建</i>
+                <i class="u-mark u-mark--star" v-if="!!item.star">Đề cử</i>
+                <i class="u-mark u-mark--new" v-if="!!item.is_unlimited">Khả dụng</i>
             </div>
-            <i class="u-mark u-mark--pay" v-if="!!~~item.price_type && !!item.price_count">付费</i>
+            <i class="u-mark u-mark--pay" v-if="!!~~item.price_type && !!item.price_count">Trả phí</i>
         </div>
 
         <div class="m-op">
             <div class="u-title">{{ item.title }}</div>
             <div class="m-author" @click.stop="onAuthorClick">
                 <img class="u-avatar" :src="showAvatar(item.user_avatar)" :alt="author" />
-                <span class="u-name"> {{ item.author_name || "匿名" }} </span>
+                <span class="u-name"> {{ item.author_name || "Ẩn danh" }} </span>
             </div>
         </div>
     </a>
@@ -42,15 +42,15 @@ export default {
     data: function () {
         return {
             markmap: {
-                newbie: "热门",
-                advanced: "推荐",
-                recommended: "精选",
+                newbie: "Phổ biến",
+                advanced: "Đề xuất",
+                recommended: "Chọn lọc",
             },
         };
     },
     computed: {
         author: function () {
-            return this.item.display_name || "匿名";
+            return this.item.display_name || "Ẩn danh";
         },
         imgLink: function () {
             return this.item.images?.[0];

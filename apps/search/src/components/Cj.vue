@@ -8,8 +8,8 @@
 				<i class="u-point"><img src="../assets/img/point.png" />{{ item.Point }}</i>
 			</a>
 		</ul>
-		<el-alert v-else class="m-archive-null" title="没有找到相关条目" type="info" center show-icon> </el-alert>
-		<el-button class="m-archive-more" type="primary" :class="{ show: hasNextPage }" :loading="loading" @click="appendPage(++page)" icon="el-icon-arrow-down">加载更多</el-button>
+		<el-alert v-else class="m-archive-null" title="Không tìm thấy mục liên quan" type="info" center show-icon> </el-alert>
+		<el-button class="m-archive-more" type="primary" :class="{ show: hasNextPage }" :loading="loading" @click="appendPage(++page)" icon="el-icon-arrow-down">Tải thêm</el-button>
 		<el-pagination class="m-archive-pages" layout="prev, pager, next" background hide-on-single-page :page-size.sync="per" :total="total" :current-page.sync="page" @current-change="changePage"> </el-pagination>
 	</div>
 </template>

@@ -1,8 +1,8 @@
 <template>
     <div class="m-map-raiders">
         <div class="m-header">
-            <div class="u-title">相关攻略</div>
-            <a :href="getLink()" target="_blank">查看全部</a>
+            <div class="u-title">Hướng dẫn liên quan</div>
+            <a :href="getLink()" target="_blank">Xem tất cả</a>
         </div>
         <div class="m-raider-list" v-loading="loading" v-if="data && data.length">
             <list-item
@@ -13,7 +13,7 @@
             />
         </div>
         <!-- 空 -->
-        <div class="u-no-data" v-else>暂无攻略</div>
+        <div class="u-no-data" v-else>Chưa có hướng dẫn</div>
     </div>
 </template>
 

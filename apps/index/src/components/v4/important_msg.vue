@@ -1,10 +1,10 @@
 <template>
     <div :class="['m-important-msg', { hasMsg: html != '' && !show }]">
         <div class="m-msg-box">
-            <span class="u-title">重要通知</span>
+            <span class="u-title">Thông báo quan trọng</span>
             <div class="u-content" v-html="html"></div>
             <div class="u-button">
-                <el-button @click="confirm" icon="el-icon-thumb" plain size="small">确定收到</el-button>
+                <el-button @click="confirm" icon="el-icon-thumb" plain size="small">Xác nhận đã nhận</el-button>
             </div>
         </div>
     </div>

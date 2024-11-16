@@ -1,10 +1,10 @@
 <template>
     <AppLayout>
         <div class="m-recipe" v-loading="loading">
-            <!-- 搜索 -->
+            <!-- Tìm kiếm -->
             <div class="m-recipe-search">
-                <el-input v-model.trim.lazy="search" placeholder="请输入关键词.." clearable @clear="onSearch" @keydown.native.enter="onSearch">
-                    <template #prepend> <i class="el-icon-search"></i> 搜索 </template>
+                <el-input v-model.trim.lazy="search" placeholder="Vui lòng nhập từ khóa.." clearable @clear="onSearch" @keydown.native.enter="onSearch">
+                    <template #prepend> <i class="el-icon-search"></i> Tìm kiếm </template>
                     <template #append>
                         <el-button icon="el-icon-position" @click="onSearch"></el-button>
                     </template>
@@ -36,12 +36,12 @@
                     </el-table-column>
                     <el-table-column
                         prop="SkillName"
-                        label="技能名称"
+                        label="Tên kỹ năng"
                         width="120"
                         :filters="skills"
                         :filter-method="filterHandler"
                     ></el-table-column>
-                    <el-table-column prop="name" label="秘籍名称" sortable width="300">
+                    <el-table-column prop="name" label="Tên bí kíp" sortable width="300">
                         <template slot-scope="scope">
                             <span :href="getItemLink(scope.row.RecipeName)" class="u-link">
                                 <img :src="iconLink(scope.row.IconID)" class="u-icon" />
@@ -51,12 +51,12 @@
                             </span>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="Desc" label="秘籍描述" sortable>
+                    <el-table-column prop="Desc" label="Mô tả bí kíp" sortable>
                         <template slot-scope="scope">
                             <span class="u-desc">{{ scope.row.Desc }}</span>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="exam_print" label="消耗" width="100" sortable>
+                    <el-table-column prop="exam_print" label="Tiêu hao" width="100" sortable>
                         <template slot-scope="scope">
                             <template v-if="scope.row.ExamPrint && !scope.row.TrainValue">
                                 <span class="u-points">
@@ -78,7 +78,7 @@
                             </template>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="tasks" label="任务来源">
+                    <el-table-column prop="tasks" label="Nguồn nhiệm vụ">
                         <template slot-scope="scope">
                             <a
                                 v-for="task in scope.row.tasks"
@@ -91,7 +91,7 @@
                             </a>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="books" label="书籍来源">
+                    <el-table-column prop="books" label="Nguồn sách">
                         <template slot-scope="scope">
                             <a
                                 v-for="book in scope.row.books"
@@ -104,7 +104,7 @@
                             </a>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="doodad_template_id" label="碑铭来源">
+                    <el-table-column prop="doodad_template_id" label="Nguồn bia ký">
                         <template slot-scope="scope">
                             <a
                                 v-for="doodad in scope.row.doodad_template_id"
@@ -117,15 +117,15 @@
                             </a>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="_remark" label="备注">
+                    <el-table-column prop="_remark" label="Ghi chú">
                         <template slot-scope="scope">
                             <span>{{ scope.row._remark }}</span>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="RecipeName" label="百科">
+                    <el-table-column prop="RecipeName" label="Bách khoa">
                         <template slot-scope="scope">
                             <a :href="getItemWiki(scope.row.RecipeName)" class="u-link" target="_blank" @click.stop
-                                >查看百科&raquo;</a
+                                >查看Bách khoa&raquo;</a
                             >
                         </template>
                     </el-table-column>
@@ -195,7 +195,7 @@ export default {
                     !item.RecipeName.includes("复制")
                 );
             });
-            // 补全技能名称与武功套路
+            // 补全Tên kỹ năng与武功套路
             clean_list = clean_list.map((item) => {
                 let re = /《(.*?)·(.*?)》/;
                 let name = item.RecipeName.match(re);

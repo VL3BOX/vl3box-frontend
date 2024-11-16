@@ -1,10 +1,10 @@
 <template>
 	<div class="v-plan-list" v-loading="loading">
 		<!-- 头部 - 标题&搜索 -->
-		<div class="m-plan-title">物品清单</div>
+		<div class="m-plan-title">Danh sách vật phẩm</div>
 		<div class="m-plan-search">
-			<el-input placeholder="请输入搜索内容" v-model="search">
-				<span slot="prepend">关键词</span>
+			<el-input placeholder="Vui lòng nhập nội dung tìm kiếm" v-model="search">
+				<span slot="prepend">Từ khóa</span>
 				<el-button slot="append" icon="el-icon-search"></el-button>
 			</el-input>
 		</div>
@@ -18,13 +18,13 @@
 						<span class="u-desc" v-if="plan.description">{{ plan.description }}</span>
 						<span class="u-user">
 							<img class="u-avatar" :src="showAvatar(getUserInfo(plan, 'user_avatar'))" :alt="getUserInfo(plan, 'user_avatar')" />
-							<a class="u-name" :href="authorLink(plan.user_id)">{{ getUserInfo(plan, "display_name") || "匿名" }}</a>
+							<a class="u-name" :href="authorLink(plan.user_id)">{{ getUserInfo(plan, "display_name") || "Ẩn danh" }}</a>
 							<span class="u-time"><i class="el-icon-time"></i>{{ date_format(plan.updated) }}</span>
 						</span>
 					</div>
 				</router-link>
 			</template>
-			<el-alert v-else center title="📋 没有对应的物品清单" type="info" :closable="false"></el-alert>
+			<el-alert v-else center title="📋 没有对应的Danh sách vật phẩm" type="info" :closable="false"></el-alert>
 		</div>
 		<el-pagination class="m-archive-pages" background layout="total, prev, pager, next, jumper" :hide-on-single-page="true" :page-size="per" :total="total" :current-page.sync="page"></el-pagination>
 	</div>

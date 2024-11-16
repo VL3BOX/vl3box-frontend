@@ -10,7 +10,7 @@
                     </span>
                     <span class="desc">{{ item.remark }}</span>
                     <div class="hover-detail">
-                        <div class="u-desc" v-html="item.desc || '暂无介绍'"></div>
+                        <div class="u-desc" v-html="item.desc || 'Chưa có giới thiệu'"></div>
                     </div>
                 </div>
             </a>
@@ -28,11 +28,11 @@ export default {
         return {
             data: [],
             duty: {
-                production: "产品",
-                designer: "设计",
-                mp: "运营",
-                developer: "开发",
-                editor: "编审",
+                production: "Sản phẩm",
+                designer: "Thiết kế",
+                mp: "Vận hành",
+                developer: "Phát triển",
+                editor: "Biên tập",
             },
         };
     },

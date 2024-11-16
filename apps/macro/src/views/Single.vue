@@ -2,19 +2,19 @@
     <singlebox :post="post" :stat="stat" v-loading="loading" @extendUpdate="updateExtend">
         <template slot="single-header">
             <div class="u-meta u-sub-block">
-                <em class="u-label">心法</em>
+                <em class="u-label">Tâm pháp</em>
                 <span class="u-value">
                     <img class="u-icon-xf" :src="xficon(xficon_id)" :alt="xf" />
                     {{ xf }}
                 </span>
             </div>
             <div class="u-meta u-sub-block">
-                <em class="u-label">资料片</em>
+                <em class="u-label">Dữ liệu mở rộng</em>
                 <span class="u-value">{{ zlp }}</span>
             </div>
         </template>
 
-        <!-- 宏内容 -->
+        <!-- Macro内容 -->
         <div class="m-single-macro" v-if="visible">
             <el-tabs v-model="active" type="card">
                 <el-tab-pane v-for="(item, i) in data" :key="i" :name="i + ''">
@@ -25,9 +25,9 @@
                         <img class="u-icon" :src="iconURL(item.icon)" />
                         <b>{{ item.name }}</b>
                     </span>
-                    <!-- 宏 -->
+                    <!-- Macro -->
                     <template v-if="!post.is_wujie">
-                        <el-divider content-position="left" v-if="item.macro">宏</el-divider>
+                        <el-divider content-position="left" v-if="item.macro">Macro</el-divider>
                         <div class="u-usage" v-if="item.desc">{{ item.desc }}</div>
                         <div class="u-macro macro-box" :class="{ withUsage: item.desc }" v-if="item.macro">
                             <macro
@@ -40,7 +40,7 @@
                         </div>
                     </template>
                     <template v-else>
-                        <el-divider content-position="left" v-if="item.sq && item.sq.length">武学序列</el-divider>
+                        <el-divider content-position="left" v-if="item.sq && item.sq.length">Chuỗi võ học</el-divider>
                         <div class="u-usage" v-if="item.desc">{{ item.desc }}</div>
                         <div class="u-macro macro-box" :class="{ withUsage: item.desc }" v-if="item.sq && item.sq.length">
                             <ul class="m-skills-list">
@@ -53,9 +53,9 @@
                             </ul>
                         </div>
                     </template>
-                    <!-- 奇穴 镇派 -->
+                    <!-- Kỳ huyệt Trấn phái -->
                     <template v-if="item.talent">
-                        <el-divider content-position="left">{{ client === "origin" ? "镇派" : "奇穴" }}</el-divider>
+                        <el-divider content-position="left">{{ client === "origin" ? "Trấn phái" : "Kỳ huyệt" }}</el-divider>
                         <div class="m-single-talent-container">
                             <template v-if="client === 'origin'">
                                 <render-talent :talent-code="item.talent"></render-talent>
@@ -69,7 +69,7 @@
                                 plain
                                 size="mini"
                                 @click="copy(item.talent)"
-                                >复制{{ client === "origin" ? "镇派" : "奇穴" }}编码</el-button
+                                >Sao chép{{ client === "origin" ? "Trấn phái" : "Kỳ huyệt" }}Mã hóa</el-button
                             >
                             <el-button
                                 v-if="client !== 'origin'"
@@ -78,7 +78,7 @@
                                 plain
                                 size="mini"
                                 @click="copy(getTalentTXT(i))"
-                                >复制奇穴文字</el-button
+                                >Sao chépKỳ huyệt文字</el-button
                             >
                             <el-button
                                 v-if="client !== 'origin'"
@@ -87,18 +87,18 @@
                                 plain
                                 size="mini"
                                 @click="copy(getTalentSQ(item.talent))"
-                                >复制奇穴序列</el-button
+                                >Sao chépKỳ huyệt序列</el-button
                             >
                         </div>
                     </template>
-                    <!-- 急速 -->
-                    <el-divider content-position="left" v-if="item.speed">急速</el-divider>
+                    <!-- Cấp tốc -->
+                    <el-divider content-position="left" v-if="item.speed">Cấp tốc</el-divider>
                     <div class="u-speed" v-if="item.speed">{{ item.speed }}</div>
                 </el-tab-pane>
             </el-tabs>
-            <!-- 配装 -->
+            <!-- Trang bị -->
             <template v-if="hasPz">
-                <el-divider content-position="left">配装</el-divider>
+                <el-divider content-position="left">Trang bị</el-divider>
                 <div class="u-equipbox">
                     <!-- <Equip :id="item.equip" v-if="item.equip_type == 'jx3box'" /> -->
                     <pz class="m-macro-pz" :raw="pz"></pz>
@@ -163,7 +163,7 @@ export default {
             return this.xf && xfmap[this.xf]?.id;
         },
         zlp: function () {
-            return this.post?.zlp || "未知";
+            return this.post?.zlp || "Không rõ";
         },
         visible: function () {
             return this.post?._check;
@@ -259,8 +259,8 @@ export default {
                                         });
                                     } catch (e) {
                                         this.$notify.error({
-                                            title: "错误",
-                                            message: "奇穴编码解析失败",
+                                            title: "Lỗi",
+                                            message: "Kỳ huyệtMã hóa解析失败",
                                             position: "bottom-right",
                                         });
                                     }

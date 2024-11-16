@@ -35,7 +35,7 @@ export default {
                     disabled: false,
                 },
                 {
-                    name: "剑网3缘起",
+                    name: "剑网3Duyên khởi",
                     img: __imgPath + "image/xsj/jx3yq.png",
                     key: "jx3origin",
                     path: "origin.jx3box.com",

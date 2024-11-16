@@ -1,12 +1,12 @@
 <template>
     <div v-if="daily.length" class="m-world-daily">
-        <el-divider content-position="left">日常</el-divider>
+        <el-divider content-position="left">Nhật thường</el-divider>
         <div class="m-daily-content">
             <div class="u-table-header">
                 <div class="u-row">
-                    <div class="u-item">活动</div>
-                    <div class="u-item">区服</div>
-                    <div class="u-item">项目</div>
+                    <div class="u-item">Hoạt động</div>
+                    <div class="u-item">Khu vực</div>
+                    <div class="u-item">Hạng mục</div>
                 </div>
             </div>
             <div class="u-table-body">
@@ -38,7 +38,7 @@ export default {
     },
     computed: {
         date() {
-            // 当7点以前，请求前面一天的日常 当7~24点，请求当天的日常
+            // 当7点以前，请求前面一天的Nhật thường 当7~24点，请求当天的Nhật thường
             const hour = dayjs.tz().get("hours");
             return 0 <= hour && hour < 7
                 ? dayjs.tz().subtract(1, "day").format("YYYY-MM-DD")

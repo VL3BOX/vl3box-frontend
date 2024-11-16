@@ -39,7 +39,7 @@
         </div>
         <span class="u-close" @click="closeBox($event)">
             <i class="el-icon-upload2"></i>
-            <span>收起</span>
+            <span>Thu gọn</span>
         </span>
     </div>
 </template>

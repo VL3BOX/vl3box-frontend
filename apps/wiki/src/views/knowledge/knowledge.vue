@@ -1,6 +1,6 @@
 <template>
     <DefaultLayout
-        name="通识百科"
+        name="Kiến thức phổ thông"
         slug="knowledge"
         root="/knowledge"
         without-right

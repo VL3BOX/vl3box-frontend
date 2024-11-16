@@ -9,7 +9,7 @@
             </span>
             <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item @click.native="filter('')">{{
-                    "全部"
+                    "Tất cả"
                 }}</el-dropdown-item>
                 <el-dropdown-item
                     v-for="(item, key) in marks"
@@ -24,10 +24,10 @@
 
 <script>
 const default_marks = {
-    newbie: "新手易用",
-    advanced: "进阶推荐",
-    recommended: "编辑精选",
-    geek: "骨灰必备",
+    newbie: "Tân thủ",
+    advanced: "Nâng cao",
+    recommended: "Đề xuất",
+    geek: "Cao thủ",
 };
 export default {
     name: "markBy",
@@ -56,7 +56,7 @@ export default {
             return this.marks[this.mark];
         },
         deftext: function() {
-            return this.placeholder || "精选";
+            return this.placeholder || "Chọn lọc";
         },
     },
     methods: {

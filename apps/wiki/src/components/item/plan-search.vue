@@ -5,7 +5,7 @@
     >
         <div class="m-return">
             <el-button class="u-return-btn" @click="return_handle"
-                >返回</el-button
+                >Trở lại</el-button
             >
         </div>
         <div class="m-search">
@@ -13,7 +13,7 @@
                 class="u-search-input"
                 v-model="keyword"
                 @keydown.enter.native="search_handle"
-                placeholder="输入物品清单名称「回车」进行搜索"
+                placeholder="Nhập tên danh mục, “Enter” để tìm kiếm"
             >
                 <span slot="prepend">关键词</span>
                 <el-button
@@ -22,7 +22,7 @@
                     type="primary"
                     plain
                     @click="search_handle"
-                    >搜索</el-button
+                    >Tìm kiếm</el-button
                 >
             </el-input>
         </div>

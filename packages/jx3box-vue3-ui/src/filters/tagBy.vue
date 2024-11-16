@@ -5,7 +5,7 @@
                 ><el-icon>
                     <collection-tag />
                 </el-icon>
-                {{ current || "全部" }}</span
+                {{ current || "Tất cả" }}</span
             >
             <span class="u-toggle">
                 <el-icon class="el-icon-arrow-down">
@@ -21,7 +21,7 @@
                 ><el-icon>
                     <collection-tag />
                 </el-icon>
-                全部</span
+                Tất cả</span
             >
             <span
                 v-for="(item, key) in data"

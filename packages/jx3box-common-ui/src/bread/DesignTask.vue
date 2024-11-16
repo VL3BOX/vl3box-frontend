@@ -1,50 +1,50 @@
 <template>
-    <el-dialog custom-class="m-design-task" :width="isPhone ? '95%' : '600px'" :visible="modelValue" @close="close" title="快捷推送" append-to-body>
+    <el-dialog custom-class="m-design-task" :width="isPhone ? '95%' : '600px'" :visible="modelValue" @close="close" title="Gửi nhanh" append-to-body>
         <el-form :model="form" ref="form" :rules="rules" :label-position="isPhone ? 'top' : 'left'" label-width="80px">
-            <el-form-item label="标题" prop="title">
-                <el-input v-model="form.title" placeholder="请输入标题"></el-input>
+            <el-form-item label="Tiêu đề" prop="title">
+                <el-input v-model="form.title" placeholder="请输入Tiêu đề"></el-input>
             </el-form-item>
-            <el-form-item label="类型" prop="type">
-                <el-select v-model="form.type" placeholder="请选择类型" style="width:100%;" filterable>
+            <el-form-item label="Loại" prop="type">
+                <el-select v-model="form.type" placeholder="请选择Loại" style="width:100%;" filterable>
                     <el-option v-for="item in config" :key="item.id" :label="item.label" :value="item.name"></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="版本">
+            <el-form-item label="Phiên bản">
                 <el-radio-group v-model="form.version">
                     <el-radio-button v-for="(label, key) in versions" :key="key" :label="key">{{ label }}</el-radio-button>
                 </el-radio-group>
             </el-form-item>
-            <el-form-item label="备注">
-                <el-input v-model="form.remark" placeholder="请输入备注"></el-input>
+            <el-form-item label="Ghi chú">
+                <el-input v-model="form.remark" placeholder="请输入Ghi chú"></el-input>
             </el-form-item>
-            <el-form-item label="星级" class="m-star-line">
+            <el-form-item label="Sao" class="m-star-line">
                 <el-rate v-model="form.star" :colors="colors"></el-rate>
             </el-form-item>
         </el-form>
 
         <el-divider content-position="left">
-            近期推送
+            Gửi gần đây
         </el-divider>
         <template v-if="logs && logs.length">
             <el-table :data="logs" border size="small" max-height="300px">
-                <el-table-column label="推送时间" prop="push_at" align="center">
+                <el-table-column label="Thời gian gửi" prop="push_at" align="center">
                     <template #default="{row}">
                         {{ formatTime(row.push_at) }}
                     </template>
                 </el-table-column>
-                <el-table-column label="推送人" prop="pusher.display_name" align="center"></el-table-column>
-                <el-table-column label="星级" prop="star" align="center">
+                <el-table-column label="Người gửi" prop="pusher.display_name" align="center"></el-table-column>
+                <el-table-column label="Sao" prop="star" align="center">
                     <template #default="{row}">
                         <el-rate v-model="row.star" disabled :colors="colors"></el-rate>
                     </template>
                 </el-table-column>
-                <el-table-column label="备注" prop="remark" align="center"></el-table-column>
+                <el-table-column label="Ghi chú" prop="remark" align="center"></el-table-column>
             </el-table>
         </template>
-        <el-alert v-else title="当前文章暂无历史推送" type="info" show-icon :closable="false"></el-alert>
+        <el-alert v-else title="Bài viết hiện tại không có gửi lịch sử" type="info" show-icon :closable="false"></el-alert>
         <template #footer>
-            <el-button @click="close">取 消</el-button>
-            <el-button type="primary" @click="onConfirm">确 定</el-button>
+            <el-button @click="close">Hủy</el-button>
+            <el-button type="primary" @click="onConfirm">Xác nhận</el-button>
         </template>
     </el-dialog>
 </template>
@@ -90,18 +90,18 @@ export default {
             isEditor: User.isEditor(),
 
             versions: {
-                "std": "剑三",
-                "origin": "缘起",
-                "wujie": "无界",
-                "test": "体服"
+                "std": "Kiếm Tam",
+                "origin": "Duyên khởi",
+                "wujie": "Vô giới",
+                "test": "Thí nghiệm"
             },
 
             rules: {
                 title: [
-                    { required: true, message: "请输入标题", trigger: "blur"}
+                    { required: true, message: "请输入Tiêu đề", trigger: "blur"}
                 ],
                 type: [
-                    { required: true, message: "请选择类型", trigger: "change"}
+                    { required: true, message: "请选择Loại", trigger: "change"}
                 ]
             }
         }
@@ -155,7 +155,7 @@ export default {
             data.flow = 0;
 
             createDesignTask(data).then(() => {
-                this.$message.success("提交成功");
+                this.$message.success("Gửi thành công");
                 this.close();
             })
         },

@@ -1,4 +1,4 @@
-<!-- 江湖模块 包含开服、日常、周常、买卖入口等 -->
+<!-- 江湖模块 包含开服、Nhật thường、周常、买卖入口等 -->
 <template>
     <div class="m-world m-sideblock" v-if="isStd">
         <div class="m-world-header m-sideblock-header">
@@ -10,7 +10,7 @@
                     </a>
                 </el-tooltip> -->
                 <i class="u-icon el-icon-s-flag"></i>
-                <a class="u-title" href="/pvg/gonggao/daily" target="_blank">江湖快报</a>
+                <a class="u-title" href="/pvg/gonggao/daily" target="_blank">Giang hồ khoái báo</a>
                 <!-- <div class="u-mode-list">
                     <span
                         :class="`u-mode u-mode-${mode} ${item.value == mode ? 'is-active' : ''}`"
@@ -33,7 +33,7 @@
         <div class="m-world-content m-sideblock-list">
             <!-- 开服监控 -->
             <!-- <servers v-if="is_first" v-loading="serverLoading" :list="serverList"></servers> -->
-            <!-- 其它 日常 名望 休闲 -->
+            <!-- 其它 Nhật thường Danh vọng Hưu nhàn -->
             <div class="other-list" v-if="client == 'std'">
                 <celebrity></celebrity>
                 <daily></daily>
@@ -73,17 +73,17 @@ export default {
             mode_list: [
                 {
                     value: "celebrity",
-                    label: "名望",
+                    label: "Danh vọng",
                     link: "/calendar",
                 },
                 {
                     value: "daily",
-                    label: "日常",
+                    label: "Nhật thường",
                     link: "/calendar",
                 },
                 {
                     value: "leisure",
-                    label: "休闲",
+                    label: "Hưu nhàn",
                     link: "/calendar",
                 },
             ],

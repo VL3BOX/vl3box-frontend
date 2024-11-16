@@ -2,7 +2,7 @@
     <div class="container-page">
         <Header></Header>
         <breadcrumb
-            name="频道名称"
+            name="Tên kênh"
             slug="slug"
             root="/slug"
             :publishEnable="true"

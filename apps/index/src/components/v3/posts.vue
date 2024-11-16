@@ -3,11 +3,11 @@
         <div class="m-guide-header m-sideblock-header">
             <div class="u-left">
                 <i class="u-icon el-icon-s-management"></i>
-                <span class="u-title">最新作品</span>
+                <span class="u-title">Mới nhất tác phẩm</span>
                 <mini-bread class="u-bread" name="index_topics" />
             </div>
             <div class="u-right">
-                <a :href="more_link" class="u-more" target="_blank" rel="noopener noreferrer" title="查看全部">
+                <a :href="more_link" class="u-more" target="_blank" rel="noopener noreferrer" title="Xem tất cả">
                     <i class="el-icon-more"></i>
                 </a>
             </div>
@@ -16,7 +16,7 @@
             <div class="m-v2-post-header">
                 <el-tabs v-model="type">
                     <el-tab-pane name="all">
-                        <span slot="label">全部</span>
+                        <span slot="label">Tất cả</span>
                     </el-tab-pane>
                     <el-tab-pane
                         :label="item.label"
@@ -54,7 +54,7 @@
                             <span class="u-type" target="_blank">{{ formatTypeName(item.post_type) }}</span>
                             ／
                             <span class="u-author" :href="authorLink(item.post_author)" target="_blank">{{
-                                (item.author_info && item.author_info.display_name) || "匿名"
+                                (item.author_info && item.author_info.display_name) || "Ẩn danh"
                             }}</span>
                             <span class="u-date">
                                 <i class="el-icon-refresh"></i>
@@ -63,7 +63,7 @@
                         </div>
                         <span class="u-title">
                             <i class="el-icon-reading"></i>
-                            {{ item.post_title || "无标题" }}
+                            {{ item.post_title || "Không tiêu đề" }}
                         </span>
                     </a>
                 </div>
@@ -89,7 +89,7 @@
                             <span class="u-type" target="_blank">{{ formatTypeName(item.type) }}</span>
                             ／
                             <span class="u-author" :href="authorLink(item.user_id)" target="_blank">{{
-                                item.user_nickname || "匿名"
+                                item.user_nickname || "Ẩn danh"
                             }}</span>
                             <span class="u-date">
                                 <i class="el-icon-refresh"></i>
@@ -98,7 +98,7 @@
                         </div>
                         <span class="u-title">
                             <i class="el-icon-reading"></i>
-                            {{ item.title || "无标题" }}
+                            {{ item.title || "Không tiêu đề" }}
                         </span>
                     </a>
                 </div>
@@ -124,7 +124,7 @@
                             <span class="u-type" target="_blank">{{ formatOtherTypeName(item.type) }}</span>
                             ／
                             <span class="u-author" :href="authorLink(item.user_id)" target="_blank">{{
-                                item.user_nickname || "匿名"
+                                item.user_nickname || "Ẩn danh"
                             }}</span>
                             <span class="u-date">
                                 <i class="el-icon-refresh"></i>
@@ -133,7 +133,7 @@
                         </div>
                         <span class="u-title">
                             <i class="el-icon-reading"></i>
-                            {{ item.title || "无标题" }}
+                            {{ item.title || "Không tiêu đề" }}
                         </span>
                     </a>
                 </div>
@@ -148,7 +148,7 @@
                         },
                         caller: 'index_lastest_artwork_more',
                     }"
-                    >查看更多&raquo;</a
+                    >Xem thêm&raquo;</a
                 >
             </div>
         </div>
@@ -175,39 +175,39 @@ export default {
             length: 7,
             links: [
                 {
-                    label: "宏库",
+                    label: "Macro",
                     slug: "macro",
                 },
                 {
-                    label: "职业",
+                    label: "Môn phái",
                     slug: "bps",
                 },
                 {
-                    label: "竞技",
+                    label: "Đối kháng",
                     slug: "pvp",
                 },
                 {
-                    label: "副本",
+                    label: "Phó bản",
                     slug: "fb",
                 },
                 {
-                    label: "工具",
+                    label: "Công cụ",
                     slug: "tool",
                 },
                 {
-                    label: "成就",
+                    label: "Thành tựu",
                     slug: "achievement",
                 },
                 {
-                    label: "物品",
+                    label: "Vật phẩm",
                     slug: "item",
                 },
                 {
-                    label: "任务",
+                    label: "Nhiệm vụ",
                     slug: "quest",
                 },
                 {
-                    label: "通识",
+                    label: "Thông thức",
                     slug: "knowledge",
                 },
                 {

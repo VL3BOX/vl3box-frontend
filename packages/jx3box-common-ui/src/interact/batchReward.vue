@@ -1,8 +1,8 @@
 <template>
   <div class="w-boxcoin-user">
-      <el-button @click="openBoxcoinPop" type="primary" size="mini">批量打赏</el-button>
+      <el-button @click="openBoxcoinPop" type="primary" size="mini">Tặng thưởng hàng loạt</el-button>
       <el-dialog
-          title="品鉴评分"
+          title="Đánh giá phẩm"
           :visible.sync="visible"
           custom-class="w-boxcoin-pop"
           :close-on-click-modal="false"
@@ -10,8 +10,8 @@
       >
           <div class="w-boxcoin-admin-content">
               <div class="u-left">
-                  <em class="u-label">本月状态</em>
-                  已用<b>{{ this.used }}</b> 剩余<b>{{ this.left }}</b> 总计<b>{{ this.total }}</b>
+                  <em class="u-label">Tình trạng tháng này</em>
+                  Đã sử dụng<b>{{ this.used }}</b> Còn lại<b>{{ this.left }}</b> Tổng cộng<b>{{ this.total }}</b>
                   <el-progress
                       :percentage="this.total ? 100 - (this.used * 100 / this.total) : 0"
                       :stroke-width="15"
@@ -19,36 +19,36 @@
                   ></el-progress>
               </div>
               <div class="u-list">
-                  <em class="u-label">❤️ 品鉴</em>
+                  <em class="u-label">❤️ Phẩm</em>
                   <Contributors v-if="authors && authors.length" :authors="authors" @chosen="handleChosen" />
                   <div class="u-points">
                       <el-radio-group v-model="count">
                           <el-radio :label="item" v-for="item in fitPoints" :key="item" border>
                               <b>{{ item }}</b
-                              >盒币
+                              >Hộp tiền
                           </el-radio>
                       </el-radio-group>
                   </div>
               </div>
               <div class="u-msg">
-                  <em class="u-label">📝 寄语</em>
+                  <em class="u-label">📝 Lời nhắn</em>
                   <div class="u-input">
                       <el-input
                           v-model="remark"
-                          placeholder="请输入寄语（必填）"
+                          placeholder="请输入Lời nhắn（必填）"
                           :minlength="2"
                           :maxlength="30"
                           show-word-limit
                       ></el-input>
                       <el-button :disabled="fetchingCurrentRelease" @click="insertCurrentRelease"
-                          >插入当前版本</el-button
+                          >Chèn phiên bản hiện tại</el-button
                       >
                   </div>
               </div>
           </div>
           <span slot="footer" class="dialog-footer">
-              <el-button @click="visible = false">取 消</el-button>
-              <el-button type="primary" @click="submit" :disabled="!ready || submitting">确 定</el-button>
+              <el-button @click="visible = false">Hủy bỏ</el-button>
+              <el-button type="primary" @click="submit" :disabled="!ready || submitting">Xác nhận</el-button>
           </span>
       </el-dialog>
   </div>

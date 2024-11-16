@@ -12,7 +12,7 @@
         <div class="u-name">
             <span>{{ item.Desc }}</span>
         </div>
-        <div class="u-path" :class="getOrigin(item) !== '其它' && 'special'">
+        <div class="u-path" :class="getOrigin(item) !== 'Khác' && 'special'">
             <span>{{ getOrigin(item) }}</span>
         </div>
     </div>
@@ -52,7 +52,7 @@ export default {
             const quests = item?.Quests;
             let orgin = "";
             if (tempId) {
-                orgin = orgin + (orgin ? "/" : "") + (this.bookMapInfo[tempId] ? "碑铭" : "其它");
+                orgin = orgin + (orgin ? "/" : "") + (this.bookMapInfo[tempId] ? "碑铭" : "Khác");
             }
             if (ShopNames) {
                 orgin = orgin + (orgin ? "/" : "") + "商店";
@@ -64,7 +64,7 @@ export default {
                 orgin = orgin + (orgin ? "/" : "") + "任务";
             }
             if (!orgin) {
-                orgin = "其它";
+                orgin = "Khác";
             }
             return orgin;
         },

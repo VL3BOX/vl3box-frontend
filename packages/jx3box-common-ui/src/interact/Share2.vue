@@ -8,12 +8,12 @@
                         class="u-share2-item"
                         :key="shareItem.key"
                         @click="share(shareItem.key)"
-                        title="分享"
+                        title="Chia sẻ"
                     >
                         <img class="u-share-icon" svg-inline :src="shareItem.img" :alt="shareItem.name">
                         <div class="u-share2-name">{{ shareItem.name }}</div>
                     </div>
-                    <!-- <p class="tip">将文章链接贴</p> -->
+                    <!-- <p class="tip">Dán liên kết bài viết</p> -->
                 </div>
                 <div class="u-share2-wechat">
                     <qrcode-vue
@@ -22,16 +22,16 @@
                         :size="75"
                         level="H"
                     ></qrcode-vue>
-                    <span>微信扫一扫分享</span>
+                    <span>微信扫一扫Chia sẻ</span>
                 </div>
             </div>
 
             <div slot="reference">
-                <el-tooltip class="item" effect="dark" content="分享" placement="top">
+                <el-tooltip class="item" effect="dark" content="Chia sẻ" placement="top">
                     <div v-if="simple">
                         <img class="u-icon u-simple-icon" svg-inline :src="iconPath" />
                         <!-- <i class="el-icon-position"></i> -->
-                        <span class="u-text">分享</span>
+                        <span class="u-text">Chia sẻ</span>
                     </div>
                     <img
                         v-else

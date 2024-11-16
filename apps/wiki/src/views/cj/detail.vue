@@ -7,27 +7,27 @@
             <WikiPanel :wiki-post="wiki_post">
                 <template slot="head-title">
                     <img class="u-icon" svg-inline src="@/assets/img/cj/achievement.svg" />
-                    <span class="u-txt">成就攻略</span>
+                    <span class="u-txt">Chiến lược thành tựu</span>
                 </template>
                 <template slot="head-actions">
                     <a class="el-button el-button--primary" :href="publish_url(`achievement/${id}`)">
                         <i class="el-icon-edit"></i>
-                        <span>完善成就攻略</span>
+                        <span>完善Chiến lược thành tựu</span>
                     </a>
                 </template>
                 <template slot="body">
                     <!-- <Notice></Notice> -->
                     <div class="m-wiki-compatible" v-if="compatible">
-                        <i class="el-icon-warning-outline"></i> 暂无缘起攻略，以下为重制攻略，仅作参考，<a
+                        <i class="el-icon-warning-outline"></i> Chưa có chiến lược khởi đầu, dưới đây là chiến lược tái tạo, chỉ mang tính chất tham khảo,<a
                             class="s-link"
                             :href="publish_url(`achievement/${id}`)"
-                            >参与修订</a
+                            >Tham gia chỉnh sửa</a
                         >。
                     </div>
                     <Article :content="wiki_post.post.content" />
                     <div class="m-wiki-signature">
                         <i class="el-icon-edit"></i>
-                        本次修订由 <b>{{ user_name }}</b> 提交于{{ updated_at }}
+                        Chỉnh sửa lần này bởi <b>{{ user_name }}</b> Nộp vào{{ updated_at }}
                     </div>
                 </template>
             </WikiPanel>
@@ -42,7 +42,7 @@
                 <WikiPanel>
                     <template slot="head-title">
                         <i class="el-icon-coin"></i>
-                        <span class="u-txt">参与打赏</span>
+                        <span class="u-txt">Tham gia đóng góp</span>
                     </template>
                     <template slot="body">
                         <Thx
@@ -68,8 +68,8 @@
         </div>
         <div class="m-wiki-post-empty" v-if="is_empty">
             <i class="el-icon-s-opportunity"></i>
-            <span>暂无攻略，我要</span>
-            <a class="s-link" :href="publish_url(`achievement/${id}`)">完善攻略</a>
+            <span>Chưa có chiến lược, tôi muốn</span>
+            <a class="s-link" :href="publish_url(`achievement/${id}`)">Hoàn thiện chiến lược</a>
         </div>
     </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
     <div class="m-knowledge-panel">
         <div class="m-title">
-            <span class="u-title-left"><i class="el-icon-location-information"></i><span> 便捷入口</span></span>
+            <span class="u-title-left"><i class="el-icon-location-information"></i><span> Điều hướng nhanh</span></span>
             <!-- <a class="u-title-right" target="_blank" :href="feedback">反馈建议 &raquo;</a> -->
         </div>
         <div class="m-entry m-panel">
@@ -22,22 +22,22 @@ export default {
             list: [
                 {
                     link: "/cj",
-                    name: "成就百科",
+                    name: "Bách khoa thành tựu",
                     icon: "el-icon-medal",
                 },
                 {
                     link: "/item",
-                    name: "物品百科",
+                    name: "Bách khoa vật phẩm",
                     icon: "el-icon-apple",
                 },
                 {
                     link: "#/pet",
-                    name: "宠物百科",
+                    name: "Bách khoa sủng vật",
                     icon: "el-icon-pear",
                 },
                 {
                     link: "/quest",
-                    name: "任务百科",
+                    name: "Bách khoa nhiệm vụ",
                     icon: "el-icon-discover",
                 },
             ],

@@ -1,6 +1,6 @@
 <template>
     <div class="p-map" v-loading="loading" ref="container">
-        <el-button class="u-phone-download" icon="el-icon-download" @click="exportToImage">下载</el-button>
+        <el-button class="u-phone-download" icon="el-icon-download" @click="exportToImage">Tải xuống</el-button>
         <div class="m-boss-list" :class="list.length % 2 ? 'is-odd' : 'is-even'" ref="map" @click="cancelClick">
             <!-- <el-button class="u-download" icon="el-icon-download" @click="exportToImage"></el-button> -->
             <div
@@ -253,12 +253,12 @@ export default {
                         // 创建一个虚拟链接
                         const link = document.createElement("a");
                         link.href = newCanvas.toDataURL(); // 将 Canvas 转换为 Data URL
-                        link.download = `魔盒百战${this.duration.start}至${this.duration.end}.png`; // 下载文件的名称
+                        link.download = `魔盒百战${this.duration.start}至${this.duration.end}.png`; // Tải xuống文件的名称
 
                         link.addEventListener("click", () => {
                             setTimeout(() => {
                                 URL.revokeObjectURL(link.href); // 删除链接的资源
-                            }, 100); // 延迟删除以确保下载完成
+                            }, 100); // 延迟删除以确保Tải xuống完成
 
                             link.removeEventListener("click", () => {}); // 移除事件监听器
                             document.body.removeChild(link);

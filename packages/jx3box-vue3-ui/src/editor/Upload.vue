@@ -8,9 +8,9 @@
 
         <!-- 弹出界面 -->
         <el-dialog class="c-large-dialog" title="上传" v-model="dialogVisible" @close="closeUpload">
-            <!-- 清空按钮 -->
+            <!-- Xóa hết按钮 -->
             <el-button class="u-upload-clear" plain size="small" @click="clear"
-                ><el-icon><Delete /></el-icon>清空</el-button
+                ><el-icon><Delete /></el-icon>Xóa hết</el-button
             >
 
             <!-- 限制提示 -->
@@ -63,7 +63,7 @@
             <!-- 插入按钮 -->
             <template #footer>
                 <span class="dialog-footer">
-                    <el-button @click="closeUpload">取 消</el-button>
+                    <el-button @click="closeUpload">Hủy bỏ</el-button>
                     <el-button type="primary" @click="insert">
                         {{ buttonTXT }}
                     </el-button>
@@ -117,8 +117,8 @@ export default {
             dialogVisible: false,
             tip:
                 this.desc ||
-                `一次最多同时上传${this.max}个文件（单个文件不超过${this.sizeLimit}M），格式限常见的图片、文档、数据表及压缩包`,
-            btn_txt: this.text || "上传附件",
+                `Mỗi lần có thể tải lên tối đa${this.max}tệp (mỗi tệp không vượt quá${this.sizeLimit}MB), chỉ chấp nhận các định dạng hình ảnh, tài liệu, bảng dữ liệu và tệp nén thông thường`,
+            btn_txt: this.text || "Tải lên tệp đính kèm",
 
             fileList: [],
             selectedCount: 0,
@@ -143,7 +143,7 @@ export default {
     },
     computed: {
         buttonTXT: function () {
-            return this.selectedCount ? "插 入" : "确 定";
+            return this.selectedCount ? "Chèn" : "Xác nhận";
         },
     },
     methods: {

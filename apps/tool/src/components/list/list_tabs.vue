@@ -1,47 +1,47 @@
 <template>
     <el-tabs class="m-tabs" v-model="view" @tab-click="changeView">
-        <el-tab-pane label="全部资源" name="all">
+        <el-tab-pane label="Tất cả tài nguyên" name="all">
             <span slot="label">
                 <img class="u-icon-img" src="@/assets/img/nav/all.png" alt="">
-                <b>全部资源</b>
+                <b>Tất cả tài nguyên</b>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="工具资源" name="index">
+        <el-tab-pane label="Tài nguyên công cụ" name="index">
             <span slot="label">
                 <img class="u-icon-img" src="@/assets/img/nav/tool.png" alt="">
-                <b>工具资源</b>
-                <!-- <em class="u-secret">权威白皮书</em> -->
+                <b>Tài nguyên công cụ</b>
+                <!-- <em class="u-secret">Sách trắng uy tín</em> -->
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="插件数据" name="jx3dat">
+        <el-tab-pane label="Dữ liệu plugin" name="jx3dat">
             <span slot="label">
                 <img class="u-icon-img" src="@/assets/img/nav/data.png" alt="">
-                <b>插件数据</b>
-                <!-- <em class="u-secret">优质作品</em> -->
+                <b>Dữ liệu plugin</b>
+                <!-- <em class="u-secret">Tác phẩm chất lượng cao</em> -->
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="学习笔札" name="game">
+        <el-tab-pane label="Ghi chú học tập" name="game">
             <span slot="label">
                 <img class="u-icon-img" src="@/assets/img/nav/code.png" alt="">
-                <b>学习笔札</b>
+                <b>Ghi chú học tập</b>
                 <!-- <em class="u-ready">签约</em> -->
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="魔盒文档" name="api">
+        <el-tab-pane label="Tài liệu Magic Box" name="api">
             <span slot="label">
                 <img class="u-icon-img" src="@/assets/img/nav/api.png" alt="">
-                <b>魔盒文档</b>
+                <b>Tài liệu Magic Box</b>
             </span>
         </el-tab-pane>
 
-        <!-- <el-tab-pane label="魔盒助手" name="desktop">
+        <!-- <el-tab-pane label="Trợ lý Magic Box" name="desktop">
             <span slot="label">
                 <i class="el-icon-notebook-1"></i>
-                <b>魔盒助手</b>
+                <b>Trợ lý Magic Box</b>
             </span>
         </el-tab-pane> -->
     </el-tabs>

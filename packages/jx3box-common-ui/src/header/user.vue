@@ -27,9 +27,9 @@
         </template>
         <template v-else>
             <div class="c-header-login">
-                <a class="u-register u-default" :href="register_url">注册</a>
+                <a class="u-register u-default" :href="register_url">Đăng ký</a>
                 <em>|</em>
-                <a class="u-login u-default" :href="login_url">登录</a>
+                <a class="u-login u-default" :href="login_url">Đăng nhập</a>
             </div>
         </template>
     </div>
@@ -65,7 +65,7 @@ export default {
     data: function () {
         return {
             // 是否折叠
-            // 登录信息
+            // Đăng nhập信息
             user: User.getInfo(),
             isLogin: User.isLogin(),
 
@@ -103,7 +103,7 @@ export default {
                             .then((res) => {
                                 let msg = this.$message({
                                     type: "success",
-                                    message: "签到成功",
+                                    message: "Đăng ký thành công",
                                     customClass: "c-header-signin",
                                     duration: 0,
                                 });
@@ -140,7 +140,7 @@ export default {
             }
         },
 
-        // 退出登录
+        // 退出Đăng nhập
         logout: function () {
             this.isLogin = false;
         },

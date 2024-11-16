@@ -1,11 +1,11 @@
 <template>
     <div class="w-card m-skill-filter">
         <div class="w-card-title">
-            <img src="@/assets/img/baizhan/filter.svg" alt="筛选" />
-            <span>筛选</span>
+            <img src="@/assets/img/baizhan/filter.svg" alt="Lọc" />
+            <span>Lọc</span>
         </div>
         <div class="m-skill-search first-section">
-            <el-input v-model="name" placeholder="请输入技能名称" clearable>
+            <el-input v-model="name" placeholder="Vui lòng nhập tên kỹ năng" clearable>
                 <i slot="prefix" class="el-input__icon el-icon-search"></i>
             </el-input>
             <div class="m-selects">
@@ -35,7 +35,7 @@
                 </el-select>
             </div>
         </div>
-        <!-- <div class="m-section-title m-two-title">效果</div>
+        <!-- <div class="m-section-title m-two-title">Hiệu quả</div>
         <div class="m-filter-list">
             <div
                 class="u-filter"
@@ -48,7 +48,7 @@
                 {{ type.name }}
             </div>
         </div>
-        <div class="m-section-title m-two-title">颜色</div>
+        <div class="m-section-title m-two-title">Màu sắc</div>
         <div class="m-filter-list">
             <div
                 class="u-filter"
@@ -61,7 +61,7 @@
                 {{ color.name }}
             </div>
         </div>
-        <div class="m-section-title m-two-title">消耗</div>
+        <div class="m-section-title m-two-title">Tiêu hao</div>
         <div class="m-filter-list">
             <div
                 class="u-filter"
@@ -74,7 +74,7 @@
                 {{ cost.name }}
             </div>
         </div> -->
-        <div class="m-section-title m-two-title">首领</div>
+        <div class="m-section-title m-two-title">Thủ lĩnh</div>
         <div class="m-filter-list">
             <div
                 class="u-filter"
@@ -102,7 +102,7 @@ export default {
             currentType: 0,
             currentColor: 0,
             currentCost: 0,
-            currentBossName: "全部首领",
+            currentBossName: "全部Thủ lĩnh",
         };
     },
     computed: {
@@ -121,12 +121,12 @@ export default {
         bossNames() {
             return [
                 ...this.$store.getters["baizhan/bossNames"].map((item) => {
-                    if (item === "精英首领") {
-                        item = "全部首领";
+                    if (item === "精英Thủ lĩnh") {
+                        item = "全部Thủ lĩnh";
                     }
                     return item;
                 }),
-                "未知",
+                "Không xác định",
             ];
         },
         params() {
@@ -135,7 +135,7 @@ export default {
                 cost: this.currentCost,
                 type: this.currentType,
                 name: this.name,
-                bossName: this.currentBossName === "全部首领" ? "" : this.currentBossName,
+                bossName: this.currentBossName === "全部Thủ lĩnh" ? "" : this.currentBossName,
             };
         },
     },

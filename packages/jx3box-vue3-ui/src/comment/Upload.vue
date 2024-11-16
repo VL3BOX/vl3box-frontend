@@ -19,8 +19,8 @@
             <el-icon><Plus></Plus></el-icon>
             <template #tip>
                 <div class="el-upload__tip">
-                    最多上传 {{ maxCount }} 张
-                    {{ acceptedExtensions.join(" / ").toUpperCase() }} 格式图片，单张图片不能超过
+                    Tối đa tải lên{{ maxCount }} 张
+                    {{ acceptedExtensions.join(" / ").toUpperCase() }}, mỗi hình không được vượt quá
                     {{ maxSize / 1024 / 1024 }} MB
                 </div>
             </template>
@@ -55,7 +55,7 @@ export default {
         onExceed() {
             this.$notify({
                 title: "",
-                message: `最多上传 ${this.maxCount} 张图片！`,
+                message: `Tối đa tải lên${this.maxCount} hình ảnh!`,
                 type: "error",
                 duration: 3000,
                 position: "bottom-right",
@@ -66,7 +66,7 @@ export default {
                 if (file.size > this.maxSize) {
                     this.$notify({
                         title: "",
-                        message: `单张图片大小不能超过 ${this.maxSize / 1024 / 1024} MB！`,
+                        message: `Kích thước hình ảnh không được vượt quá ${this.maxSize / 1024 / 1024} MB！`,
                         type: "error",
                         duration: 3000,
                         position: "bottom-right",
@@ -95,7 +95,7 @@ export default {
         onError() {
             this.$notify({
                 title: "",
-                message: "图片上传失败!",
+                message: "Tải lên hình ảnh thất bại!",
                 type: "error",
                 duration: 3000,
                 position: "bottom-right",

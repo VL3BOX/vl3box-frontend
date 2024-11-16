@@ -44,7 +44,7 @@
             <div class="u-btn" v-else @mouseenter="toRight">
                 <div class="u-btn-item">
                     <img class="u-icon" src="@/assets/img/nav/op.svg" svg-inline />
-                    <div>菜<br />单</div>
+                    <div>Danh<br />sách</div>
                 </div>
             </div>
         </div>

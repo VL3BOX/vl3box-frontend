@@ -7,7 +7,7 @@
                     <!-- 标题 -->
                     <h2 class="u-jokes">
                         <!-- 标题文字 -->
-                        <a :href="postLink(item.id)" class="u-title" target="_blank">{{ item.content || "无标题" }}</a>
+                        <a :href="postLink(item.id)" class="u-title" target="_blank">{{ item.content || "Không có tiêu đề" }}</a>
                     </h2>
 
                     <!-- 作者 -->

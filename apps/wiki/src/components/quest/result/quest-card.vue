@@ -3,7 +3,7 @@
         <div class="u-map">{{ quest.map }}</div>
         <div class="u-name">
             <span class="u-name-title">
-                <el-tooltip v-if="quest.questType == 'act'" :content="`该任务是活动任务`" placement="top">
+                <el-tooltip v-if="quest.questType == 'act'" :content="`Nhiệm vụ này là nhiệm vụ sự kiện`" placement="top">
                     <img class="u-name-type" src="@/assets/img/quest/quest_logo_purple.png" />
                 </el-tooltip>
                 <el-tooltip v-else-if="quest.questType == 'repeat'" :content="`该任务可重复完成`" placement="top">
@@ -12,7 +12,7 @@
                 <span class="u-name-text" :style="questNameColor">{{ quest.name }}</span>
                 <el-tooltip
                     v-if="quest.schoolName"
-                    :content="`该任务仅 ${quest.schoolName} 门派可接取`"
+                    :content="`Nhiệm vụ này chỉ ${quest.schoolName} Có thể nhận bởi môn phái`"
                     placement="top"
                 >
                     <img class="u-name-school" :src="schoolIcon(quest.schoolName)" alt="" />
@@ -171,16 +171,16 @@ export default {
             let rewards = this.quest.reward.filter((i) => i.type != "item_group");
             let textRewards = [];
             let rewardName = {
-                money: "金钱",
-                exp: "阅历",
-                justice: "侠行点",
-                prestige: "威名点",
-                tongFund: "帮会资金",
-                vigor: "精力",
-                tongResource: "载具资源",
-                affect: "声望",
-                achievement: "成就",
-                train: "修为",
+                money: "Kim tiền",
+                exp: "Kinh nghiệm",
+                justice: "Điểm hiệp hành",
+                prestige: "Điểm danh vọng",
+                tongFund: "Bang hội tư kim",
+                vigor: "Tinh lực",
+                tongResource: "Tài nguyên phương tiện",
+                affect: "Danh vọng",
+                achievement: "Thành tựu",
+                train: "Tu vi",
             };
             for (let r of rewards) {
                 let data = r.count;

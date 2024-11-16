@@ -1,6 +1,6 @@
 <template>
     <el-drawer :visible.sync="visible" :append-to-body="true" class="m-talent-drawer">
-        <h3 class="u-talent-title" slot="title">我的预设方案</h3>
+        <h3 class="u-talent-title" slot="title">Kế hoạch đã đặt của tôi</h3>
         <div class="m-talent-my">
             <div class="m-talent-list" v-loading="loading">
                 <ul v-if="list && list.length">
@@ -8,18 +8,18 @@
                         <span class="u-name" v-if="!item.edit">
                             <i class="u-icon el-icon-tickets"></i>
                             <span>{{ item.name }}</span>
-                            <i v-if="!isEditing" class="u-edit el-icon-edit" title="修改名称" @click="edit(item)"></i>
+                            <i v-if="!isEditing" class="u-edit el-icon-edit" title="Sửa đổi tên" @click="edit(item)"></i>
                         </span>
                         <div v-if="item.edit">
                             <el-input v-model="currentShemaName" size="mini" class="u-shema-name"></el-input>
-                            <el-button type="text" @click="put">保存</el-button>
-                            <el-button type="text" @click="item.edit = false">取消</el-button>
+                            <el-button type="text" @click="put">Lưu</el-button>
+                            <el-button type="text" @click="item.edit = false">Hủy</el-button>
                         </div>
                         <el-button-group>
-                            <el-tooltip effect="dark" content="使用" placement="top">
+                            <el-tooltip effect="dark" content="Sử dụng" placement="top">
                                 <el-button size="mini" icon="el-icon-position" @click="use(item)"></el-button>
                             </el-tooltip>
-                            <el-tooltip effect="dark" content="删除" placement="top">
+                            <el-tooltip effect="dark" content="Xóa" placement="top">
                                 <el-button size="mini" icon="el-icon-delete" @click="del(item)"></el-button>
                             </el-tooltip>
                         </el-button-group>
@@ -27,7 +27,7 @@
 
                     <el-pagination class="u-list-pagination" background hide-on-single-page layout="prev,pager,next,->,total" :total="total" :page-size="per" :current-page.sync="page"></el-pagination>
                 </ul>
-                <el-alert v-else title="当前没有任何预设方案" type="info" show-icon></el-alert>
+                <el-alert v-else title="Hiện tại không có kế hoạch đã đặt nào" type="info" show-icon></el-alert>
             </div>
         </div>
     </el-drawer>
@@ -105,8 +105,8 @@ export default {
             }).then(() => {
                 this.$notify({
                     type: "success",
-                    title: "成功",
-                    message: "修改成功",
+                    title: "Thành công",
+                    message: "修改Thành công",
                 });
                 this.currentSchema.name = this.currentShemaName;
                 this.currentSchema.edit = false;
@@ -116,16 +116,16 @@ export default {
             });
         },
         del: function(item) {
-            this.$confirm(`确认删除预设方案[${item.name}]？`, "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
+            this.$confirm(`确认Xóa预设方案[${item.name}]？`, "Thông báo", {
+                confirmButtonText: "Xác nhận",
+                cancelButtonText: "Hủy",
                 type: "warning",
             }).then(() => {
                 removeTalent(item.id).then(() => {
                     this.$notify({
                         type: "success",
-                        title: "成功",
-                        message: "预设方案删除成功",
+                        title: "Thành công",
+                        message: "预设方案XóaThành công",
                     });
 
                     this.loadList();

@@ -1,6 +1,6 @@
 <template>
     <div class="w-like2" :class="{ disabled: !status }" @click="addLike" v-if="ready">
-        <el-tooltip effect="dark" content="点赞" placement="top-start">
+        <el-tooltip effect="dark" content="Thích" placement="top-start">
             <div>
                 <img class="u-icon" svg-inline :src="iconPath" />
                 <span class="u-count" v-if="count">{{ count }}</span>
@@ -38,7 +38,7 @@ export default {
                 this.count = res.data.likes || 0;
             });
         },
-        // 点赞
+        // Thích
         addLike: function () {
             if (!this.ready) return;
             this.count++;

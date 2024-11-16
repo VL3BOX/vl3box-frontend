@@ -2,7 +2,7 @@
     <div class="w-filter-client">
         <ul>
             <li class="u-client" :class="{on: client == ''}" @click="filter('')">
-                全部
+                Tất cả
             </li>
             <li
                 class="u-client"
@@ -17,8 +17,8 @@
 
 <script>
 const _clients = {
-    std: "剑三",
-    origin: "缘起",
+    std: "Kiếm Tam",
+    origin: "Duyên khởi",
 };
 export default {
     name: "clientBy",

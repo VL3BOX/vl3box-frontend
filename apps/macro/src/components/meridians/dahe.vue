@@ -1,6 +1,6 @@
 <template>
   <div class="jinmai dahe" style="">
-        <h3>冲脉</h3>
+        <h3>Xung mạch</h3>
         <div v-for="(item, index) in jingmai" :key="index" :class="'ap ap' + item.id">
             <em :class="'level' + item.nowLevel"></em>
             <a href="javascript:void(0)"
@@ -23,11 +23,11 @@ export default {
     data(){
         return {
             jingmai: [
-                {name: '冲脉·大赫', id: 163, lnLevel: 3},
-                {name: '冲脉·商曲', id: 158, lnLevel: 2},
-                {name: '冲脉·阴都', id: 165, lnLevel: 1},
-                {name: '冲脉·幽门', id: 167, lnLevel: 1},
-                {name: '冲脉·太乙', id: 169, lnLevel: 0},
+                {name: 'Xung mạch·大赫', id: 163, lnLevel: 3},
+                {name: 'Xung mạch·商曲', id: 158, lnLevel: 2},
+                {name: 'Xung mạch·阴都', id: 165, lnLevel: 1},
+                {name: 'Xung mạch·幽门', id: 167, lnLevel: 1},
+                {name: 'Xung mạch·太乙', id: 169, lnLevel: 0},
             ],
             mouseData: {},
             hover: ''

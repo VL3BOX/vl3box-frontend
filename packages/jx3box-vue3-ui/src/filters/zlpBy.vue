@@ -4,7 +4,7 @@
             <span class="el-dropdown-link">
                 <span class="u-menu-label">
                     <el-icon> <operation /> </el-icon>
-                    {{ value ? value : "资料片" }}
+                    {{ value ? value : "Bản cập nhật" }}
                     <el-icon>
                         <arrow-down />
                     </el-icon>
@@ -13,7 +13,7 @@
             <template #dropdown>
                 <el-dropdown-menu>
                     <el-dropdown-item @click="filter('')">
-                        {{ "全部" }}
+                        {{ "Tất cả" }}
                     </el-dropdown-item>
                     <el-dropdown-item v-for="item in data" :key="item" @click="filter(item)">{{
                         item

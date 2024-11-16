@@ -1,8 +1,8 @@
 <template>
     <div class="p-baizhan-comment">
         <div class="m-header">
-            <div class="u-title">讨论评价</div>
-            <a :href="getLink" target="_blank">攻略</a>
+            <div class="u-title">Thảo luận và đánh giá</div>
+            <a :href="getLink" target="_blank">Chiến lược</a>
         </div>
     </div>
 </template>

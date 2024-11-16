@@ -5,7 +5,7 @@
                 <i class="u-icon u-icon-mycollection">
                     <img svg-inline src="@/assets/img/my.svg" />
                 </i>
-                <span>收藏物品</span>
+                <span>Vật phẩm sưu tầm</span>
             </h3>
             <div class="m-items-my-list">
                 <div class="u-list" v-if="data && data.length">
@@ -31,7 +31,7 @@
                     ><i class="el-icon-arrow-left"></i> <i class="el-icon-more"></i> <i class="el-icon-arrow-right"></i
                 ></a> -->
             </div>
-            <div v-if="isLogin && !data.length" class="u-tip"><i class="el-icon-warning-outline"></i> 暂无收藏物品</div>
+            <div v-if="isLogin && !data.length" class="u-tip"><i class="el-icon-warning-outline"></i> 暂无Vật phẩm sưu tầm</div>
         </div>
     </div>
 </template>

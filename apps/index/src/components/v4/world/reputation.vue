@@ -1,8 +1,8 @@
 <template>
     <div v-if="reputationList.length" class="m-world-block m-world-furniture">
-        <el-divider content-position="left">家园声望</el-divider>
+        <el-divider content-position="left">Danh vọng gia viên</el-divider>
         <div class="m-furniture-item">
-            <!-- <div class="u-title">家园声望</div> -->
+            <!-- <div class="u-title">Danh vọng gia viên</div> -->
             <div class="m-reputation">
                 <a
                     class="u-reputation-item"
@@ -68,7 +68,7 @@ export default {
         getItemLink(id) {
             return `/item/view/${id}`;
         },
-        // 家园声望
+        // Danh vọng gia viên
         loadReputation() {
             const cache = sessionStorage.getItem(`index_reputation_items`);
             if (cache) {

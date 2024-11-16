@@ -2,7 +2,7 @@
     <div>
         <Header></Header>
         <Breadcrumb
-            name="职业专栏"
+            name="Chuyên mục chức nghiệp"
             slug="bps"
             root="/bps"
             :publishEnable="true"

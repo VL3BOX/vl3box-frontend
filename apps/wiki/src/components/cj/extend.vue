@@ -7,8 +7,8 @@
         <div class="m-group">
             <h2 class="m-title">
                 <img class="u-icon" svg-inline src="@/assets/img/cj/puzzle.svg" />
-                <span class="u-text">各区服成就群</span>
-                <a class="u-show-message" target="_blank" href="https://www.jx3box.com/tool/13659/">申请展示 »</a>
+                <span class="u-text">Các nhóm thành tựu</span>
+                <a class="u-show-message" target="_blank" href="https://www.jx3box.com/tool/13659/">Đăng ký hiển thị »</a>
             </h2>
             <div class="m-group-content">
                 <!-- <el-tree

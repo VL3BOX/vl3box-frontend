@@ -1,13 +1,13 @@
 <template>
     <div class="p-face-single" v-loading="loading" ref="singleRef">
         <div class="m-navigation">
-            <div class="u-goback" @click="goBack">返回列表</div>
+            <div class="u-goback" @click="goBack">Trở về danh sách</div>
 
             <div class="m-face-btn-box">
                 <a :href="publish_link" target="_blank">
                     <div class="u-face-publish">
                         <img svg-inline src="@/assets/img/face/face-publish.svg" class="u-img" />
-                        <span>发布作品</span>
+                        <span>Phát hành</span>
                     </div>
                 </a>
                 <a href="/os/#/omp/pvx/facedata" target="_blank">
@@ -24,8 +24,8 @@
         <div class="m-header">
             <div class="m-header-info">
                 <h2>
-                    {{ post.title || "无标题" }}
-                    <el-tag class="u-status" v-if="post.status != 1" effect="dark" type="danger">已下架</el-tag>
+                    {{ post.title || "Không标题" }}
+                    <el-tag class="u-status" v-if="post.status != 1" effect="dark" type="danger">Đã gỡ xuống</el-tag>
                 </h2>
                 <div class="u-author">
                     <img class="u-avatar" :src="showAvatar(post.user_avatar)" :alt="post.user_avatar_frame" />
@@ -39,13 +39,13 @@
                     <time class="u-time">{{ post.updated_at }}</time>
                     <a class="u-edit" v-if="canEdit" :href="editLink('face', post.id)" target="_blank">
                         <i class="el-icon-edit-outline u-edit-icon"></i>
-                        编辑
+                        Chỉnh sửa
                     </a>
                 </div>
                 <div class="u-meta">
-                    <i class="u-mark" v-if="!!post.star">★ 编辑推荐</i>
-                    <i class="u-fr" v-if="!!post.is_fr">首发</i>
-                    <i class="u-original" v-if="!!post.original">原创</i>
+                    <i class="u-mark" v-if="!!post.star">★ Chỉnh sửa推荐</i>
+                    <i class="u-fr" v-if="!!post.is_fr">Phát hành đầu tiên</i>
+                    <i class="u-original" v-if="!!post.original">Nguyên tác</i>
                     <i class="u-client" :class="post.client || 'std'">{{ showClientLabel(post.client) }}</i>
                     <i
                         class="u-is-new-face"
@@ -66,7 +66,7 @@
                 <!-- 动态改为当前图片 -->
                 <div v-if="previewSrcList.length === 0" class="u-no-pic">
                     <i class="el-icon-picture-outline"></i>
-                    <span>该脸型数据暂无图片</span>
+                    <span>该脸型数据暂Không图片</span>
                 </div>
                 <template v-else>
                     <div class="u-bg-wrap">
@@ -103,9 +103,9 @@
                         @click="facePay()"
                         v-if="post.price_type && post.price_type != 0 && !has_buy"
                     >
-                        <div class="u-price" v-if="post.price_type == 1">售价：{{ post.price_count }} 盒币</div>
-                        <div class="u-price" v-if="post.price_type == 2">售价：{{ post.price_count }} 金箔</div>
-                        <div class="u-buy"><img :src="require('@/assets/img/face/shopcart.svg')" alt="" />购买</div>
+                        <div class="u-price" v-if="post.price_type == 1">Giá bán:{{ post.price_count }} xu</div>
+                        <div class="u-price" v-if="post.price_type == 2">Giá bán:{{ post.price_count }} kim</div>
+                        <div class="u-buy"><img :src="require('@/assets/img/face/shopcart.svg')" alt="" />Mua</div>
                     </div>
                     <template v-else>
                         <div
@@ -115,12 +115,12 @@
                             @click="copy(post.code)"
                         >
                             <div class="u-buy">
-                                <img :src="require('@/assets/img/face/bxs_copy.svg')" alt="" />复制捏脸码
+                                <img :src="require('@/assets/img/face/bxs_copy.svg')" alt="" />Sao chép mã mặt
                             </div>
                         </div>
                         <div class="m-face-buy-btn" v-else @click="downloadAll">
                             <div class="u-buy">
-                                <img :src="require('@/assets/img/face/download.svg')" alt="" />下载数据
+                                <img :src="require('@/assets/img/face/download.svg')" alt="" />Tải xuống数据
                             </div>
                         </div>
                     </template>
@@ -128,25 +128,25 @@
                     <div class="u-face__code" v-if="post.code_mode">
                         {{ post.code }}
                     </div>
-                    <div class="u-update-time">更新时间： {{ post.updated_at }}</div>
+                    <div class="u-update-time">Thời gian cập nhật: {{ post.updated_at }}</div>
                     <img class="u-box-img" :src="require('@/assets/img/face/face_stroke.svg')" />
                 </div>
                 <div class="m-face-tips" v-if="post.game_price">
                     <img :src="require('@/assets/img/face/info.svg')" alt="" />
-                    <div class="u-tips-left">该数据含游戏内收费项目，总计约</div>
-                    <div class="u-tips-right">{{ post.game_price }}通宝</div>
+                    <div class="u-tips-left">Dữ liệu này chứa các mục tính phí trong game, tổng cộng khoảng</div>
+                    <div class="u-tips-right">{{ post.game_price }}thông bảo</div>
                 </div>
                 <div class="u-face-desc-tab">
                     <span
                         @click="rightShow = 'desc'"
                         :style="rightShow === 'data' ? 'color: #c2c5c7;cursor: pointer;' : ''"
-                        >说明</span
+                        >Giải thích</span
                     >
                     <span
                         @click="rightShow = 'data'"
                         v-if="downFileList && downFileList.length"
                         :style="rightShow === 'desc' ? 'color: #c2c5c7;cursor: pointer;' : ''"
-                        >数据列表</span
+                        >Danh sách dữ liệu</span
                     >
                 </div>
                 <div
@@ -161,23 +161,23 @@
                             <div class="u-info">
                                 <span class="u-label"> {{ item.name }} </span>
                                 <span class="u-label">
-                                    备注 ： <em>{{ item.describe || "无" }}</em>
+                                    备注 ： <em>{{ item.describe || "Không" }}</em>
                                 </span>
                             </div>
-                            <a class="u-action" href="" @click.prevent="getDownUrl(item.uuid, item.name)">下载</a>
+                            <a class="u-action" href="" @click.prevent="getDownUrl(item.uuid, item.name)">Tải xuống</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="m-face-head" v-if="topic_info">
                     <img :src="require('@/assets/img/face/cup.svg')" alt="" />
-                    该脸型于{{ topic_info.created_at }}荣登头条
+                    Mặt này đã{{ topic_info.created_at }}Lên trang đầu
                 </div>
             </div>
         </div>
         <!-- 数据区 -->
         <div class="m-single-data" v-if="!post.code_mode">
-            <span class="m-single-data-title">独家数据分析</span>
+            <span class="m-single-data-title">Phân tích dữ liệu</span>
             <facedata v-if="has_buy && facedata" :data="faceAllData" :lock="true" type="face" />
             <div class="m-single-buy-box" v-else>
                 <div
@@ -185,19 +185,19 @@
                     @click="facePay()"
                     v-if="post.price_type && post.price_type != 0 && !has_buy"
                 >
-                    <div class="u-price" v-if="post.price_type == 1">售价：{{ post.price_count }} 盒币</div>
-                    <div class="u-price" v-if="post.price_type == 2">售价：{{ post.price_count }} 金箔</div>
-                    <div class="u-buy"><img :src="require('@/assets/img/face/shopcart.svg')" alt="" />购买</div>
+                    <div class="u-price" v-if="post.price_type == 1">Giá bán:{{ post.price_count }} xu</div>
+                    <div class="u-price" v-if="post.price_type == 2">Giá bán:{{ post.price_count }} kim</div>
+                    <div class="u-buy"><img :src="require('@/assets/img/face/shopcart.svg')" alt="" />Mua</div>
                 </div>
-                <div class="u-face-buy-tip">数据分析将在购买后解锁</div>
+                <div class="u-face-buy-tip">Phân tích dữ liệu sẽ được mở khóa sau khi mua</div>
             </div>
         </div>
         <div class="m-face-download" v-if="has_buy && facedata">
             <div class="m-face-buy-btn" @click="downloadAll">
-                <div class="u-buy"><img :src="require('@/assets/img/face/download.svg')" alt="" />下载数据</div>
+                <div class="u-buy"><img :src="require('@/assets/img/face/download.svg')" alt="" />Tải xuống数据</div>
             </div>
         </div>
-        <div class="u-about-author">关于作者</div>
+        <div class="u-about-author">Về tác giả</div>
         <authorItem :uid="post.user_id" />
         <div class="m-random-list">
             <div class="u-list m-single-content-box m-author-faces" v-if="randomList.length">
@@ -209,7 +209,7 @@
             class="m-thx m-single-content-box"
             :postId="id"
             postType="face"
-            :postTitle="post.title || '无标题'"
+            :postTitle="post.title || 'Không标题'"
             :userId="post.user_id"
             :adminBoxcoinEnable="post.status == 1"
             :userBoxcoinEnable="post.status == 1"
@@ -217,7 +217,7 @@
         />
         <!-- 评论 -->
         <div class="m-comments m-single-content-box">
-            <el-divider content-position="left">讨论</el-divider>
+            <el-divider content-position="left">Thảo luận</el-divider>
             <Comment :id="id" category="face" />
         </div>
     </div>
@@ -270,7 +270,7 @@ export default {
             search: "", //搜索值
             post: {},
             stat: {},
-            has_buy: false, //是否购买
+            has_buy: false, //是否Mua
             client_map: __clients,
             downFileList: [],
             downloadParams: {
@@ -335,7 +335,7 @@ export default {
             return this.isStar ? "取消精选" : "精选";
         },
         topicText() {
-            return this.topic_info ? `${dayjs.tz(this.topic_info.created_at).format("YYYY年MM月DD日")}荣登头条` : "";
+            return this.topic_info ? `${dayjs.tz(this.topic_info.created_at).format("YYYY年MM月DD日")}Lên trang đầu` : "";
         },
         tvLink() {
             return __Root + "index/tv";
@@ -513,7 +513,7 @@ export default {
                 User.toLogin();
                 return;
             }
-            this.$confirm("确认购买此捏脸？", "提示", {
+            this.$confirm("确认Mua此捏脸？", "提示", {
                 confirmButtonText: "确定",
                 cancelButtonText: "取消",
                 type: "warning",
@@ -564,11 +564,11 @@ export default {
             if (pay_status == 1) {
                 this.payBtnLoading = false;
                 clearInterval(setIntervalId);
-                //购买成功后需要重载数据，拉取下载列表
+                //Mua成功后需要重载数据，拉取Tải xuống列表
                 this.getData();
                 this.$notify.success({
                     title: "成功",
-                    message: "购买成功",
+                    message: "Mua成功",
                 });
             } else if (pay_status == 2) {
                 this.payBtnLoading = false;

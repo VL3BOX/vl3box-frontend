@@ -1,6 +1,6 @@
 <template>
     <div class="m-world-block m-world-pet">
-        <el-divider content-position="left">宠物</el-divider>
+        <el-divider content-position="left">Sủng vật</el-divider>
         <div class="m-pet">
             <a
                 class="u-item"
@@ -52,7 +52,7 @@ export default {
     },
     methods: {
         iconLink,
-        // 获取福缘宠物
+        // 获取福缘Sủng vật
         loadPetLucky: function () {
             getPetLucky().then((res) => {
                 let data = res.data.std;
@@ -63,7 +63,7 @@ export default {
                 });
             });
         },
-        // 前往宠物单页
+        // 前往Sủng vật单页
         getPetLink(id) {
             return `/pet/${id}`;
         },

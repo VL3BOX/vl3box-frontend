@@ -1,36 +1,36 @@
 <template>
     <div class="p-plan-edit">
-        <h3 class="u-plan-header">编辑清单</h3>
+        <h3 class="u-plan-header">Chỉnh sửa danh sách</h3>
         <el-form class="u-form" label-position="left" label-width="80px">
-            <!-- 清单名称 -->
-            <el-form-item label="标题">
+            <!-- Danh sách名称 -->
+            <el-form-item label="Tiêu đề">
                 <el-input
                     v-model="data.title"
-                    placeholder="请输入物品清单的标题"
+                    placeholder="请输入物品Danh sách的Tiêu đề"
                     maxlength="20"
                     show-word-limit
                 ></el-input>
             </el-form-item>
-            <el-form-item label="可见性">
-                <el-radio v-model="data.public" :label="1">公开</el-radio>
-                <el-radio v-model="data.public" :label="0">私有</el-radio>
+            <el-form-item label="Hiển thị">
+                <el-radio v-model="data.public" :label="1">Công khai</el-radio>
+                <el-radio v-model="data.public" :label="0">Riêng tư</el-radio>
             </el-form-item>
-            <!-- 清单描述 -->
-            <el-form-item label="描述">
+            <!-- Danh sáchMô tả -->
+            <el-form-item label="Mô tả">
                 <el-input
                     type="textarea"
                     :rows="3"
                     v-model="data.description"
-                    placeholder="简单说明一下你的物品清单"
+                    placeholder="Mô tả ngắn gọn về danh sách vật phẩm của bạn"
                     :maxlength="2000"
                     show-word-limit
                 ></el-input>
             </el-form-item>
-            <!-- 清单类型 -->
-            <el-form-item label="清单">
+            <!-- Danh sách类型 -->
+            <el-form-item label="Danh sách">
                 <!-- <el-radio-group v-model="data.type" size="medium" @change="resetPages"> -->
-                <!-- <el-radio-button label="1">道具清单</el-radio-button> -->
-                <!-- <el-radio-button label="2">装备清单</el-radio-button> -->
+                <!-- <el-radio-button label="1">道具Danh sách</el-radio-button> -->
+                <!-- <el-radio-button label="2">装备Danh sách</el-radio-button> -->
                 <!-- </el-radio-group> -->
                 <el-button
                     class="u-add-plan"
@@ -39,16 +39,16 @@
                     @click="addRelation"
                     type="primary"
                     plain
-                    >新增分组</el-button
+                    >Thêm nhóm mới</el-button
                 >
             </el-form-item>
-            <!-- 制作清单 -->
+            <!-- 制作Danh sách -->
             <el-form-item label="">
                 <div class="m-plan-list">
                     <div class="u-list-search">
                         <el-input
                             class="u-title"
-                            placeholder="请输入物品名称"
+                            placeholder="Vui lòng nhập tên vật phẩm"
                             prefix-icon="el-icon-search"
                             v-model.lazy.trim="keyword"
                             clearable
@@ -69,7 +69,7 @@
                             </draggable>
                         </template>
 
-                        <el-empty description="输入物品名称进行搜索" :image-size="200" v-else></el-empty>
+                        <el-empty description="Nhập tên vật phẩm để tìm kiếm" :image-size="200" v-else></el-empty>
 
                         <el-pagination
                             small
@@ -94,7 +94,7 @@
                                 <el-input
                                     class="u-title"
                                     type="text"
-                                    placeholder="子清单标题（选填）"
+                                    placeholder="子Danh sáchTiêu đề（选填）"
                                     v-model="relation.title"
                                     maxlength="20"
                                     show-word-limit
@@ -113,12 +113,12 @@
                                         >
                                             <ItemIcon :item_id="item.id" :has_title="true" />
                                             <div class="u-count">
-                                                <span>数量：</span>
+                                                <span>Số lượng:</span>
                                                 <el-input-number
                                                     size="mini"
                                                     v-model.number="item.count"
                                                     :min="1"
-                                                    label="数字"
+                                                    label="Số"
                                                 ></el-input-number>
                                             </div>
                                             <i
@@ -127,7 +127,7 @@
                                             ></i>
                                         </div>
                                     </template>
-                                    <div class="u-normal" v-else>拖拽所需道具到此处</div>
+                                    <div class="u-normal" v-else>Kéo và thả vật phẩm cần thiết vào đây</div>
                                 </draggable>
                             </div>
                         </el-col>
@@ -141,7 +141,7 @@
                     type="primary"
                     @click="submit"
                     :loading="loading"
-                    >保存</el-button
+                    >Lưu</el-button
                 >
             </el-form-item>
         </el-form>
@@ -222,16 +222,16 @@ export default {
                 this.loadItems();
             }
         },
-        // 清单
+        // Danh sách
         // ===================================
-        // 新增清单
+        // 新增Danh sách
         addRelation() {
             this.data.relation.unshift({
                 title: "",
                 data: [],
             });
         },
-        // 装备清单的移动
+        // 装备Danh sách的移动
         moveHandle(e) {
             if (e.to.classList.contains("u-item-drag")) return;
             let AucGenre = e.to.getAttribute("data-AucGenre");
@@ -247,7 +247,7 @@ export default {
             updatePlan(this.id, _data)
                 .then(() => {
                     this.$message({
-                        message: "提交成功",
+                        message: "Gửi thành công",
                         type: "success",
                     });
                     this.$router.push({ name: "plan_view", params: { plan_id: this.id } });
@@ -257,7 +257,7 @@ export default {
                 });
         },
 
-        // 获取清单数据
+        // 获取Danh sách数据
         loadData() {
             getItemPlanID(this.id).then((res) => {
                 this.data = this.extractID(res);

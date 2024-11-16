@@ -3,11 +3,11 @@
         <div class="m-guide-header m-sideblock-header">
             <div class="u-left">
                 <i class="u-icon el-icon-s-comment"></i>
-                <span class="u-title">最新讨论</span>
+                <span class="u-title">Thảo luận mới nhất</span>
                 <mini-bread class="u-bread" name="index_topics" />
             </div>
             <div class="u-right">
-                <a :href="more_link" class="u-more" target="_blank" rel="noopener noreferrer" title="查看全部">
+                <a :href="more_link" class="u-more" target="_blank" rel="noopener noreferrer" title="Xem tất cả">
                     <i class="el-icon-more"></i>
                 </a>
             </div>
@@ -16,7 +16,7 @@
             <div class="m-v2-post-header">
                 <el-tabs v-model="category">
                     <el-tab-pane name="all">
-                        <span slot="label">全部</span>
+                        <span slot="label">Tất cả</span>
                     </el-tab-pane>
                     <el-tab-pane
                         :label="item.name"
@@ -54,7 +54,7 @@
                             <span class="u-type" target="_blank">{{ item.category }}</span>
                             ／
                             <span class="u-author" :href="authorLink(item.user_id)" target="_blank">{{
-                                item.user_name || "匿名"
+                                item.user_name || "Ẩn danh"
                             }}</span>
                             <span class="u-date">
                                 <i class="el-icon-refresh"></i>
@@ -78,7 +78,7 @@
                         },
                         caller: 'index_lastest_artwork_more',
                     }"
-                    >查看更多&raquo;</a
+                    >Xem thêm&raquo;</a
                 >
             </div>
         </div>
@@ -150,7 +150,7 @@ export default {
                             // 创建一个正则表达式来匹配<img>标签
                             var imgTagRegex = /<img[^>]*>/g;
                             // 使用正则表达式替换掉<img>标签
-                            var text = item.content.replace(imgTagRegex, "[图片]");
+                            var text = item.content.replace(imgTagRegex, "[[Hình ảnh][Hình ảnh]]");
 
                             // 加载表情包（回帖会有表情包）
                             const ins = new JX3_EMOTION(text);
@@ -160,7 +160,7 @@ export default {
                                 type: "reply",
                                 created_at: item.latest_reply_at,
                                 category: item.topic.category,
-                                content: content || "无内容",
+                                content: content || "Không có nội dung",
                                 user_name: item.ext_user_info.display_name,
                                 user_id: item.ext_user_info.user_id,
                                 avatar: item.ext_user_info.avatar,
@@ -176,7 +176,7 @@ export default {
                             created_at: item.latest_reply_at || item.created_at,
                             type: "topic",
                             category: item.category,
-                            content: item.title || "无内容",
+                            content: item.title || "Không có nội dung",
                             user_name: item.ext_user_info.display_name,
                             user_id: item.ext_user_info.user_id,
                             avatar: item.ext_user_info.avatar,

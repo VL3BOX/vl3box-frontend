@@ -1,6 +1,6 @@
 <template>
     <div class="c-header-panel c-header-vip" id="c-header-vip">
-        <el-tooltip effect="dark" content="会员中心" placement="bottom" popper-class="c-header-tooltip">
+        <el-tooltip effect="dark" content="Trung tâm thành viên" placement="bottom" popper-class="c-header-tooltip">
             <a class="u-post u-vip" href="/vip/premium">
                 <i class="u-icon u-icon-msg">
                     <i class="u-pop" style="display: none" v-show="pop"></i>
@@ -28,7 +28,7 @@ export default {
         async init() {
             /**
              * 1. 用户第一次进入页面时，没有记录，则显示，并记录到meta
-             * 2. 用户第二次进入页面，此时meta有记录，但是用户并未进入会员中心，则显示
+             * 2. 用户第二次进入页面，此时meta有记录，但是用户并未进入Trung tâm thành viên，则显示
              */
             let meta = null
             if (User.isLogin()) {

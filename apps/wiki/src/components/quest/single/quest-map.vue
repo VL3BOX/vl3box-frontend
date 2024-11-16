@@ -3,7 +3,7 @@
         <el-carousel :autoplay="false" :arrow="showArrow" ref="carousel" :height="`${height}px`">
             <el-carousel-item v-for="(ps, mapId) in points" :key="mapId">
                 <div class="u-map__container" :style="containerSize">
-                    <img class="u-map-img" :src="mapImgUrl(mapId)" draggable="false" alt="任务地图图片" />
+                    <img class="u-map-img" :src="mapImgUrl(mapId)" draggable="false" alt="Hình ảnh bản đồ nhiệm vụ" />
                     <div class="u-map-tool">
                         <p class="u-map-name">{{ mapName(mapId) }}</p>
                     </div>
@@ -107,7 +107,7 @@ export default {
             if (this.mapScales[`${id}`]) {
                 return this.mapScales[`${id}`][0]["Name"];
             } else {
-                return "未知地图";
+                return "Bản đồ chưa biết";
             }
         },
         pointStyle(Coordinates, MapId) {
@@ -154,24 +154,24 @@ export default {
     filters: {
         pointType(type) {
             let map = {
-                Start: "任务开始点",
-                End: "任务结束点",
-                KillNpc: "击杀怪物",
-                NeedItem: "需要物品",
+                Start: "Điểm bắt đầu nhiệm vụ",
+                End: "Điểm kết thúc nhiệm vụ",
+                KillNpc: "Tiêu diệt quái vật",
+                NeedItem: "Cần vật phẩm",
             };
             if (map[type]) return map[type];
-            else if (type.startsWith("State")) return type.replace("State", "进度");
-            else if (type.startsWith("KillNpc")) return type.replace("KillNpc", "击杀怪物");
-            else if (type.startsWith("NeedItem")) return type.replace("NeedItem", "需要物品");
-            else return "其它";
+            else if (type.startsWith("State")) return type.replace("State", "Tiến độ");
+            else if (type.startsWith("KillNpc")) return type.replace("KillNpc", "Tiêu diệt quái vật");
+            else if (type.startsWith("NeedItem")) return type.replace("NeedItem", "Cần vật phẩm");
+            else return "Khác";
         },
         objectType(value) {
             let map = {
                 npc: "NPC",
-                point: "坐标",
-                doodad: "交互物品",
+                point: "Tọa độ",
+                doodad: "Vật phẩm tương tác",
             };
-            return map[value] ?? "其他";
+            return map[value] ?? "Khác";
         },
         coordinates(value) {
             return `(${value[0]},${value[1]},${value[2]})`;

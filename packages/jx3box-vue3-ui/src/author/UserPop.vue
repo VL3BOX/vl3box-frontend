@@ -12,14 +12,14 @@
         <div class="u-input">
             <el-input
                 v-model.trim.lazy="search"
-                placeholder="请输入用户 UID 或者昵称进行搜索"
+                placeholder="Vui lòng nhập UID hoặc biệt danh của người dùng để tìm kiếm"
                 @keydown.enter="onSearch"
             >
                 <template #prepend>
                     <el-icon><Search /></el-icon>
                 </template>
             </el-input>
-            <el-button class="u-search-btn" type="primary" @click="onSearch" :disabled="!search">搜索</el-button>
+            <el-button class="u-search-btn" type="primary" @click="onSearch" :disabled="!search">Tìm kiếm</el-button>
         </div>
         <div class="u-preview" v-loading="loading">
             <template v-if="searched && status">
@@ -32,14 +32,14 @@
                 <img class="u-avatar" :src="showAvatar('')" />
                 <span class="u-name">-</span>
                 <div class="u-empty">
-                    <el-icon><Warning /></el-icon>{{ searched ? "未找到匹配项" : "请输入搜索条件" }}
+                    <el-icon><Warning /></el-icon>{{ searched ? "Không tìm thấy mục khớp" : "请输入Tìm kiếm条件" }}
                 </div>
             </template>
         </div>
         <template #footer>
             <div class="dialog-footer">
-                <el-button @click="cancel">取 消</el-button>
-                <el-button type="primary" @click="confirm">确 定</el-button>
+                <el-button @click="cancel">Hủy bỏ</el-button>
+                <el-button type="primary" @click="confirm">Xác nhận</el-button>
             </div>
         </template>
     </el-dialog>
@@ -84,8 +84,8 @@ export default {
                 this.visible = false;
                 this.$emit("confirm", this.userdata);
             } else {
-                this.$alert("用户不存在 或 UID不正确", "提醒", {
-                    confirmButtonText: "确定",
+                this.$alert("Người dùng không tồn tại hoặc UID không chính xác", "Nhắc nhở", {
+                    confirmButtonText: "Xác nhận",
                 });
             }
         },

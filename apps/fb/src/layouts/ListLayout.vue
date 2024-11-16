@@ -2,7 +2,7 @@
     <div>
         <Header></Header>
         <Breadcrumb
-            name="副本专栏"
+            name="Chuyên mục phó bản"
             slug="fb"
             root="/fb"
             :publishEnable="true"

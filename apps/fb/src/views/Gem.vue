@@ -1,7 +1,7 @@
 <template>
     <div class="m-fb-gem" v-loading="loading">
-        <el-input class="m-gem-search" placeholder="请输入关键词" v-model.trim.lazy="search" clearable @clear="onSearch" @keydown.native.enter="onSearch">
-            <span slot="prepend"><i class="el-icon-search"></i> 搜索</span>
+        <el-input class="m-gem-search" placeholder="Vui lòng nhập từ khóa" v-model.trim.lazy="search" clearable @clear="onSearch" @keydown.native.enter="onSearch">
+            <span slot="prepend"><i class="el-icon-search"></i> Tìm kiếm</span>
             <el-button slot="append" icon="el-icon-position" @click="onSearch"></el-button>
         </el-input>
 
@@ -30,7 +30,7 @@
                 <span class="u-id">UUID:{{ item.UiID }}</span>
             </div>
         </div>
-        <el-alert v-else class="m-archive-null" title="没有找到相关条目" type="info" center show-icon> </el-alert>
+        <el-alert v-else class="m-archive-null" title="Không tìm thấy mục liên quan" type="info" center show-icon> </el-alert>
         <el-button
             class="m-archive-more"
             :class="{ show: hasNextPage }"
@@ -39,7 +39,7 @@
             @click="appendPage(++page)"
             icon="el-icon-arrow-down"
             v-show="hasNextPage"
-            >加载更多</el-button
+            >Tải thêm</el-button
         >
         <el-pagination
             class="m-archive-pages"
@@ -148,15 +148,15 @@ export default {
         getLink,
         onCopy: function () {
             this.$notify({
-                title: "复制成功",
-                message: "复制物品名称成功",
+                title: "Sao chép thành công",
+                message: "Sao chép tên vật phẩm thành công",
                 type: "success",
             });
         },
         onCopyError: function () {
             this.$notify.error({
-                title: "复制失败",
-                message: "请手动复制",
+                title: "Sao chép thất bại",
+                message: "Vui lòng sao chép thủ công",
             });
         },
     },

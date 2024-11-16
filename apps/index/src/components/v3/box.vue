@@ -3,7 +3,7 @@
         <div class="m-sideblock-header">
             <div class="u-left">
                 <i class="u-icon el-icon-menu"></i>
-                <a class="u-title" href="/app" target="_blank">魔盒矩阵</a>
+                <a class="u-title" href="/app" target="_blank">Điều hướng ứng dụng</a>
                 <mini-bread class="u-bread" name="index_notification" />
             </div>
         </div>
@@ -48,19 +48,19 @@
                         <span class="u-control">
                             <i
                                 class="u-break el-icon-scissors"
-                                title="换行"
+                                title="Hàng mới"
                                 :class="{ on: isLF(item) }"
                                 @click.prevent="cut(item.uuid)"
                             ></i>
                             <i
                                 class="u-hide el-icon-delete"
-                                title="隐藏"
+                                title="Ẩn"
                                 v-if="canSee(item.uuid)"
                                 @click.prevent="hideIt(item.uuid)"
                             ></i>
                             <i
                                 class="u-show el-icon-view"
-                                title="显示"
+                                title="Hiển thị"
                                 v-if="!canSee(item.uuid)"
                                 @click.prevent="showIt(item.uuid)"
                             ></i>
@@ -73,10 +73,10 @@
         <!-- </div> -->
         <div class="m-box-op">
             <el-button plain class="u-reset" size="mini" icon="el-icon-refresh-left" v-if="defined" @click="reset"
-                >恢复默认</el-button
+                >Khôi phục mặc định</el-button
             >
             <el-button plain class="u-reset" size="mini" icon="el-icon-download" @click="downBoxSetting" v-if="isLogin"
-                >重新同步</el-button
+                >Đồng bộ lại</el-button
             >
             <el-button
                 plain
@@ -85,10 +85,10 @@
                 icon="el-icon-setting"
                 @click="active"
                 v-if="!!options.disabled"
-                >自定义</el-button
+                >Tùy chỉnh</el-button
             >
             <el-button plain class="u-custom" size="mini" icon="el-icon-check" @click="save" v-if="!options.disabled"
-                >保存</el-button
+                >Lưu</el-button
             >
         </div>
     </div>
@@ -132,7 +132,7 @@ export default {
             default_lf: [],
             default_order: [],
 
-            // 自定义
+            // Tùy chỉnh
             order: [],
             hide: [],
             lf: [],
@@ -249,7 +249,7 @@ export default {
                 } else {
                     this.$notify({
                         title: "消息",
-                        message: "服务器上没有保存相关设置",
+                        message: "服务器上没有Lưu相关设置",
                         type: "info",
                     });
                 }
@@ -301,7 +301,7 @@ export default {
             if (this.defined) {
                 // 本地
                 localStorage.setItem(KEY, this.setting);
-                // 远程,如果是登录用户还需要远程保存
+                // 远程,如果是登录用户还需要远程Lưu
                 if (this.isLogin) {
                     setMeta(KEY, this.setting);
                 }
@@ -330,7 +330,7 @@ export default {
 
                         this.$notify({
                             title: "成功",
-                            message: "魔盒矩阵已重置为默认状态",
+                            message: "Điều hướng ứng dụng已重置为默认状态",
                             type: "success",
                         });
                     }

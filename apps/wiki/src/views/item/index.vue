@@ -1,6 +1,6 @@
 <template>
     <DefaultLayout
-        name="物品百科"
+        name="Bách khoa vật phẩm"
         slug="item"
         root="/item"
         :publishEnable="true"
@@ -19,7 +19,7 @@
             <template #filter>
                 <el-popover placement="bottom-end" trigger="click" popper-class="m-search-filter-popper">
                     <div class="m-search-filter">
-                        <el-select v-model="filter.BindType" filterable clearable placeholder="绑定类型">
+                        <el-select v-model="filter.BindType" filterable clearable placeholder="Loại trói buộc">
                             <el-option
                                 v-for="item in enums.BindType"
                                 :key="item.value"
@@ -28,30 +28,30 @@
                             >
                             </el-option>
                         </el-select>
-                        <el-select v-model="filter.BelongSchool" filterable clearable placeholder="所属门派">
+                        <el-select v-model="filter.BelongSchool" filterable clearable placeholder="Môn phái thuộc về">
                             <el-option v-for="item in enums.BelongSchool" :key="item" :label="item" :value="item">
                             </el-option>
                         </el-select>
-                        <el-select v-model="filter.MagicKind" filterable clearable placeholder="白字类型">
+                        <el-select v-model="filter.MagicKind" filterable clearable placeholder="Loại trắng">
                             <el-option v-for="item in enums.MagicKind" :key="item" :label="item" :value="item">
                             </el-option>
                         </el-select>
-                        <el-select v-model="filter.MagicType" filterable clearable placeholder="绿字类型">
+                        <el-select v-model="filter.MagicType" filterable clearable placeholder="Loại xanh">
                             <el-option v-for="item in enums.MagicType" :key="item" :label="item" :value="item">
                             </el-option>
                         </el-select>
-                        <el-select v-model="filter.GetType" filterable clearable placeholder="获取方式">
+                        <el-select v-model="filter.GetType" filterable clearable placeholder="Cách thu thập">
                             <el-option v-for="item in enums.GetType" :key="item" :label="item" :value="item">
                             </el-option>
                         </el-select>
-                        <el-select v-model="filter.TypeLabel" filterable clearable placeholder="物品类型">
+                        <el-select v-model="filter.TypeLabel" filterable clearable placeholder="Loại vật phẩm">
                             <el-option v-for="item in enums.TypeLabel" :key="item" :label="item" :value="item">
                             </el-option>
                         </el-select>
                         <div class="u-filter-level">
-                            <el-input v-model="filter.MinLevel" placeholder="最低品质"></el-input>
+                            <el-input v-model="filter.MinLevel" placeholder="Phẩm chất thấp nhất"></el-input>
                             <span>~</span>
-                            <el-input v-model="filter.MaxLevel" placeholder="最高品质"></el-input>
+                            <el-input v-model="filter.MaxLevel" placeholder="Phẩm chất cao nhất"></el-input>
                         </div>
                     </div>
                     <el-button slot="reference" class="u-search-more" type="primary" plain>
@@ -84,7 +84,7 @@ export default {
     components: { DefaultLayout, ItemBreadcrumb, Sidebar, Extend, Search, CommonNav },
     data() {
         return {
-            placeholder: "输入物品名称（可适配中括号形式）/物品描述「回车」进行搜索",
+            placeholder: "Nhập tên đồ vật (có thể sử dụng dạng ngoặc vuông) / mô tả đồ vật「Enter」để tìm kiếm",
 
             filter: {
                 BindType: null,
@@ -194,15 +194,15 @@ export default {
             this.enums = data;
             this.enums.BindType = [
                 {
-                    label: "不绑定",
+                    label: "Không khóa khi nhặt",
                     value: 1,
                 },
                 {
-                    label: "装备后绑定",
+                    label: "Khóa sau khi trang bị",
                     value: 2,
                 },
                 {
-                    label: "拾取后绑定",
+                    label: "Khóa sau khi nhặt",
                     value: 3,
                 },
             ];

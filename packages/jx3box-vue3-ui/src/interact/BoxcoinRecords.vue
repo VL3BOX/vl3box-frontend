@@ -6,19 +6,19 @@
                     <span class="u-meta u-action">
                         <el-icon><Trophy /></el-icon>
                     </span>
-                    <span class="u-meta u-user">参与打赏</span>
-                    <span class="u-meta u-user">收益作者</span>
-                    <span class="u-meta u-count">盒币</span>
-                    <span class="u-meta u-remark">寄语</span>
+                    <span class="u-meta u-user">Tham gia thưởng</span>
+                    <span class="u-meta u-user">Tác giả nhận thu nhập</span>
+                    <span class="u-meta u-count">Hộp tiền</span>
+                    <span class="u-meta u-remark">Lời nhắn</span>
                     <time class="u-meta u-time"></time>
                 </li>
                 <li v-for="(item, i) in list" :key="i" class="u-item u-body">
                     <span class="u-meta u-action">
                         <template v-if="item.is_user_gift">
-                            <i title="打赏"><img class svg-inline src="../../assets/img/widget/gift.svg" /></i>
+                            <i title="Thưởng"><img class svg-inline src="../../assets/img/widget/gift.svg" /></i>
                         </template>
                         <template v-else>
-                            <i title="品鉴"><img class svg-inline src="../../assets/img/widget/admin_gift.svg" /></i>
+                            <i title="Đánh giá"><img class svg-inline src="../../assets/img/widget/admin_gift.svg" /></i>
                         </template>
                     </span>
                     <a class="u-meta u-user" :href="authorLink(item.operate_user_id)" target="_blank">
@@ -37,7 +37,7 @@
                     <time class="u-meta u-time">{{ showTime(item.created_at) }}</time>
                     <span class="u-client" v-if="isSuperAdmin">{{ item.client }}</span>
                     <span class="u-delete" v-if="isSuperAdmin" @click="recovery(item, i)">
-                        <i class="Delete"></i>撤销
+                        <i class="Delete"></i>Hủy bỏ
                     </span>
                 </li>
             </ul>
@@ -122,13 +122,13 @@ export default {
             });
         },
         recovery: function (item, i) {
-            this.$alert("是否确定撤销该评分？", "确认", {
-                confirmButtonText: "确定",
+            this.$alert("是否Đồng ýHủy bỏ该评分？", "Xác nhận", {
+                confirmButtonText: "Đồng ý",
                 callback: (action) => {
                     if (action == "confirm") {
                         recoveryBoxcoin(item.id).then(() => {
                             this.$message({
-                                message: "撤销成功",
+                                message: "Hủy bỏ成功",
                                 type: "success",
                             });
                             this.list.splice(i, 1);

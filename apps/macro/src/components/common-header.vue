@@ -1,9 +1,9 @@
 <template>
     <div class="c-macro__header">
         <div class="m-archive-search" slot="search-before">
-            <a :href="publish_link" class="u-publish el-button el-button--primary">+ 发布作品</a>
-            <el-input placeholder="请输入搜索内容" v-model.trim.lazy="search" clearable @clear="onSearch" @keydown.native.enter="onSearch">
-                <span slot="prepend"><i class="el-icon-search"></i> <span class="u-search">关键词</span></span>
+            <a :href="publish_link" class="u-publish el-button el-button--primary">+ Đăng tác phẩm</a>
+            <el-input placeholder="Nhập nội dung tìm kiếm" v-model.trim.lazy="search" clearable @clear="onSearch" @keydown.native.enter="onSearch">
+                <span slot="prepend"><i class="el-icon-search"></i> <span class="u-search">Từ khóa</span></span>
                 <el-button slot="append" icon="el-icon-position" class="u-btn" @click="onSearch"></el-button>
             </el-input>
         </div>
@@ -15,12 +15,12 @@
                 <clientBy @filter="filterImperceptibly" :type="client"></clientBy>
                 <!-- 角标过滤 -->
                 <markBy @filter="filterMeta"></markBy>
-                <!-- 语言过滤 -->
-                <menuBy @filter="filterMeta" :data="langs" type="lang" placeholder="语言"></menuBy>
+                <!-- Ngôn ngữ过滤 -->
+                <menuBy @filter="filterMeta" :data="langs" type="lang" placeholder="Ngôn ngữ"></menuBy>
                 <!-- 资料片过滤 -->
                 <zlpBy @filter="filterMeta" type="zlp" :client="client"></zlpBy>
                 <!-- 无界筛选 -->
-                <el-checkbox v-model="is_wujie" class="u-wujie-filter" :true-label="1" :false-label="0" @change="onWujieChange">只看无界</el-checkbox>
+                <el-checkbox v-model="is_wujie" class="u-wujie-filter" :true-label="1" :false-label="0" @change="onWujieChange">Chỉ xem không giới hạn</el-checkbox>
             </div>
             <div class="m-filter--right">
                 <!-- 排序过滤 -->

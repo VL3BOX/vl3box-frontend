@@ -7,7 +7,7 @@
                 <AuthorRss style="margin-right: 8px" :uid="uid" :data="data" />
                 <!-- <AuthorGift :uid="uid" /> -->
                 <el-button class="u-btn" @click="onMessage"><img class="u-msg-icon" svg-inline :src="src" />
-                    私信</el-button>
+                    Thư riêng</el-button>
             </div>
             <!-- <AuthorMsg :uid="uid" /> -->
             <AuthorLink class="u-block u-links" :uid="uid" :data="data" />

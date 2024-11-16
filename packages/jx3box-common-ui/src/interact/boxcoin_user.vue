@@ -1,37 +1,37 @@
 <template>
     <div class="w-boxcoin-user" v-if="allowBoxcoin">
-        <el-tooltip effect="dark" content="投币" placement="top-start">
+        <el-tooltip effect="dark" content="Bỏ xu" placement="top-start">
             <div class="w-boxcoin-block" @click="openBoxcoinPop">
                 <img class="u-icon" svg-inline :src="iconPath" />
                 <span class="u-count" v-if="boxcoin">{{boxcoin}}</span>
             </div>
         </el-tooltip>
-        <el-dialog title="投币打赏" :visible.sync="visible" custom-class="w-boxcoin-pop" append-to-body :close-on-click-modal="false">
+        <el-dialog title="Bỏ xuThưởng" :visible.sync="visible" custom-class="w-boxcoin-pop" append-to-body :close-on-click-modal="false">
             <div class="w-boxcoin-user-content">
                 <div class="u-left">
-                    <em class="u-label">当前拥有盒币</em>
+                    <em class="u-label">Số hộp xu hiện có</em>
                     <b>{{left}}</b>
                     <!-- <a class="u-charge" :href="chargeLink" target="_blank">[充值]</a> -->
                 </div>
                 <div class="u-list">
-                    <em class="u-label">❤️ 打赏</em>
+                    <em class="u-label">❤️ Thưởng</em>
                     <Contributors v-if="authors && authors.length" :authors="authors" @chosen="handleChosen" />
                     <div class="u-points">
                         <el-radio-group v-model="count">
                             <el-radio :label="item" v-for="item in fitPoints" :key="item" border>
-                                <b>{{item}}</b>盒币
+                                <b>{{item}}</b>Hộp xu
                             </el-radio>
-                            <el-radio label="custom" border>自定义</el-radio>
-                            <el-input v-model="amount" v-show="count === 'custom'" placeholder="输入自定义数量"></el-input>
+                            <el-radio label="custom" border>Tùy chỉnh</el-radio>
+                            <el-input v-model="amount" v-show="count === 'custom'" placeholder="输入Tùy chỉnh数量"></el-input>
                         </el-radio-group>
                     </div>
                 </div>
                 <div class="u-msg">
-                    <em class="u-label">📝 寄语</em>
+                    <em class="u-label">📝 Gửi lời nhắn</em>
                     <div class="u-input">
                         <el-input
                             v-model="remark"
-                            placeholder="请输入寄语（必填）"
+                            placeholder="请输入Gửi lời nhắn（必填）"
                             :minlength="2"
                             :maxlength="30"
                             show-word-limit
@@ -40,8 +40,8 @@
                 </div>
             </div>
             <span slot="footer" class="dialog-footer">
-                <el-button @click="visible = false">取 消</el-button>
-                <el-button type="primary" @click="submit" :disabled="!ready">确 定</el-button>
+                <el-button @click="visible = false">Hủy</el-button>
+                <el-button type="primary" @click="submit" :disabled="!ready">Xác nhận</el-button>
             </span>
         </el-dialog>
     </div>
@@ -64,7 +64,7 @@ export default {
             visible: false,
 
             count: 0,
-            remark: "辛苦了，谢谢大大！",
+            remark: "Cảm ơn bạn đã vất vả!",
             amount: "",
 
             left : this.own,
@@ -120,7 +120,7 @@ export default {
                 User.toLogin();
             }
         },
-        // 选择要打赏的对象
+        // 选择要Thưởng的对象
         handleChosen(userId) {
             this.chosen = userId
         },
@@ -137,7 +137,7 @@ export default {
             })
                 .then((res) => {
                     this.$message({
-                        message: "操作成功",
+                        message: "Hoạt động thành công",
                         type: "success",
                     });
                     return res.data.data

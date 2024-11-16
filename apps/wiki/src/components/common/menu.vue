@@ -21,19 +21,19 @@ export default {
         return {
             menus: [
                 {
-                    label: "成就",
+                    label: "Thành tựu",
                     value: "cj",
                 },
                 {
-                    label: "物品",
+                    label: "Vật phẩm",
                     value: "item",
                 },
                 {
-                    label: "任务",
+                    label: "Nhiệm vụ",
                     value: "quest",
                 },
                 {
-                    label: "通识",
+                    label: "Kiến thức chung",
                     value: "knowledge",
                 },
             ],

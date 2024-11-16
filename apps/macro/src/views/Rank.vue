@@ -15,7 +15,7 @@
                         <span class="u-order">{{ scope.$index + 1 }}</span>
                     </template>
                 </el-table-column>
-                <el-table-column prop="downloadStr" label="云端宏" sortable>
+                <el-table-column prop="downloadStr" label="Macro đám mây" sortable>
                     <template slot-scope="scope">
                         <div class="u-cell-feed">
                             <img class="u-icon-xf" :src="xficon(scope.row.xf)" />
@@ -35,19 +35,19 @@
                         </div>
                     </template>
                 </el-table-column>
-                <el-table-column prop="value.7days" label="7天" sortable width="100">
+                <el-table-column prop="value.7days" label="7 ngày" sortable width="100">
                     <template slot-scope="scope">{{ scope.row.value["7days"] }}</template>
                 </el-table-column>
-                <el-table-column prop="value.30days" label="30天" sortable width="100">
+                <el-table-column prop="value.30days" label="30 ngày" sortable width="100">
                     <template slot-scope="scope">{{ scope.row.value["30days"] }}</template>
                 </el-table-column>
-                <el-table-column prop="value.yesterday" label="昨日" sortable width="100">
+                <el-table-column prop="value.yesterday" label="Hôm qua" sortable width="100">
                     <template slot-scope="scope">{{ scope.row.value["yesterday"] }}</template>
                 </el-table-column>
-                <el-table-column prop="value.before2" label="前日" sortable width="100">
+                <el-table-column prop="value.before2" label="Hôm kia" sortable width="100">
                     <template slot-scope="scope">{{ scope.row.value["before2"] }}</template>
                 </el-table-column>
-                <el-table-column prop="trending" label="趋势" :formatter="trending" width="100">
+                <el-table-column prop="trending" label="Xu hướng" :formatter="trending" width="100">
                     <template slot-scope="scope">
                         <i class="el-icon-top u-trending" v-if="trending(scope.row) > 0">
                             {{ (trending(scope.row) * 100).toFixed(2) + "%" }}
@@ -74,7 +74,7 @@
                         <span class="u-order">{{ scope.$index + 1 }}</span>
                     </template>
                 </el-table-column>
-                <el-table-column prop="downloadStr" label="云端宏" sortable>
+                <el-table-column prop="downloadStr" label="Macro đám mây" sortable>
                     <template slot-scope="scope">
                         <img class="u-icon-xf" v-if="scope.row" :src="xficon(scope.row.xf)" />
                         <a
@@ -91,11 +91,11 @@
                         >
                     </template>
                 </el-table-column>
-                <el-table-column prop="7days" label="7天" sortable width="100"></el-table-column>
-                <el-table-column prop="30days" label="30天" sortable width="100"></el-table-column>
-                <el-table-column prop="yesterday" label="昨日" sortable width="100"></el-table-column>
-                <el-table-column prop="before2" label="前日" sortable width="100"></el-table-column>
-                <el-table-column prop="trending" label="趋势" :formatter="trending" width="100">
+                <el-table-column prop="7days" label="7 ngày" sortable width="100"></el-table-column>
+                <el-table-column prop="30days" label="30 ngày" sortable width="100"></el-table-column>
+                <el-table-column prop="yesterday" label="Hôm qua" sortable width="100"></el-table-column>
+                <el-table-column prop="before2" label="Hôm kia" sortable width="100"></el-table-column>
+                <el-table-column prop="trending" label="Xu hướng" :formatter="trending" width="100">
                     <template slot-scope="scope">
                         <i class="el-icon-top u-trending" v-if="trending(scope.row) > 0">
                             {{ (trending(scope.row) * 100).toFixed(2) + "%" }}

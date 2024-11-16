@@ -1,9 +1,9 @@
 <template>
     <div class="m-list-nav">
         <h5 class="u-title">
-            心法导航
+            Điều hướng tâm pháp
             <router-link class="u-more" :to="{ query: { subtype: '' } }"
-                >全部心法<i class="el-icon-arrow-right"></i
+                >Tất cả tâm pháp<i class="el-icon-arrow-right"></i
             ></router-link>
         </h5>
         <ul class="m-bps-nav u-list">
@@ -33,21 +33,21 @@
             </li>
         </ul>
 
-        <h5 class="u-title">在线应用</h5>
+        <h5 class="u-title">Ứng dụng trực tuyến</h5>
         <div class="m-nav-group">
             <!-- <a href="/pz" target="_blank">
                 <img class="u-icon" :src="getAppIcon('pz', true)" />
-                <span>配装模拟器</span>
+                <span>Máy mô phỏng trang bị</span>
                 <em>Assembly Simulator</em>
             </a> -->
             <a href="/bps/haste" target="_blank">
                 <img class="u-icon" :src="getAppIcon('haste')" />
-                <span>加速阈值</span>
+                <span>Ngưỡng cấp tốc</span>
                 <em>Haste</em>
             </a>
             <a href="/bps/dps" target="_blank">
                 <img class="u-icon" :src="getAppIcon('dps')" />
-                <span>DPS计算器</span>
+                <span>Máy tính DPS</span>
                 <em>DPS</em>
             </a>
         </div>
