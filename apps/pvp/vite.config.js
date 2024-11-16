@@ -220,9 +220,9 @@ export default defineConfig({
               },
           less: {
             additionalData: `
-                    @import "${path.resolve(__dirname, "./node_modules/@jx3box/jx3box-common/css/common.less")}";
-                    @import "${path.resolve(__dirname, "./node_modules/csslab/base.less")}";
-                    @import "${path.resolve(__dirname, "./src/assets/css/var.less")}";
+                @import "${path.resolve(__dirname, "./node_modules/@jx3box/jx3box-common/css/common.less")}";
+                @import "${path.resolve(__dirname, "./node_modules/csslab/base.less")}";
+                @import "${path.resolve(__dirname, "./src/assets/css/var.less")}";
             `,
           },
           
