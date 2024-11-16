@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 basePath=__dirname + '/data'
-function loadTranslations(locale) {
-  const filePath = path.join(__dirname, `${locale}.apps.json`);
+function loadTranslations(locale, type) {
+  const filePath = path.join(__dirname, `${locale}.${type}.json`);
   try {
     const rawData = fs.readFileSync(filePath, 'utf8');
     return JSON.parse(rawData);
@@ -25,8 +25,6 @@ function replaceI18nInFile(key, filePath, translations) {
     for (const [key, value] of Object.entries(fileTranslations)) {
       const regex = new RegExp(key, 'g');
       content = content.replace(regex, value);
-    //   console.log(content)
-    //   process.exit(0)
     }
 
     // Write the modified content back to the file
@@ -37,16 +35,14 @@ function replaceI18nInFile(key, filePath, translations) {
   }
 }
 
-function processFiles(locale) {
-  const translations = loadTranslations(locale);
+function processFiles(locale,type) {
+  const translations = loadTranslations(locale,type);
 
   // Get the list of files from the keys of the translations object
   const files = Object.keys(translations);
 
   files.forEach(file => {
-    const fullPath = path.join('./apps', file);
-    // console.log(fullPath)
-    // return
+    const fullPath = path.join(`./${type}`, file);
     if (fs.existsSync(fullPath)) {
       replaceI18nInFile(file, fullPath, translations);
     } else {
@@ -56,4 +52,5 @@ function processFiles(locale) {
 }
 
 // Run the script
-processFiles('vi_VN');
+processFiles('vi_VN','apps');
+processFiles('vi_VN','packages');
